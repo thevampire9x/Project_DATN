@@ -1,0 +1,403 @@
+﻿CHƯƠNG 1: MỞ ĐẦU
+1.1. Lý do chọn đề tài
+      Ngày nay, ngành công nghiệp game đang ngày càng phát triển cao hơn với
+với những “gã khổng lồ” như EA, Blizzard,… và mỗi sản phẩn giống như một tác
+phẩm nghệ thuật của bộ môn nghệ thuật thứ tám của thế giới. Để làm ra một tựa game hay, “siêu phẩm” thì không thể thiếu đó là một công cụ hỗ làm game đa nền tảng – thứ giúp biến các giấc mơ của nhà làm game trở thành hiện thực. Và Unity là một trong những công cụ làm game hàng đầu hiện nay, vậy hãy thử xem với Unity chúng ta sẽ tạo ra một “con” game như thế nào.
+1.2.  Mục tiêu của đề tài
+- Kiến Thức:
+    + 	Kiến thức về lập trình game trên Unity;
+    + 	Kiến thức về ngôn ngữ lập trình C#;
+    + 	Kiến thức về thiết kế giao diện;
+    + 	Kiến thức về tư duy thiết kế;
++ 	Giao diện hiển thị đúng theo sản phẩm làm ra. Giao diện thân thiện dễ dàng     thao tác
+   -	Kĩ Năng:
+          + 	Code được trên nền tảng unity
+          + 	Hiểu và code được bằng ngôn ngữ lập trình C#
+          + 	Đầu óc tư duy thiết kế giao diện và nội dung game
+          + 	Hiểu về tâm lý người chơi cần gì và phải làm gì
+   -	Sản Phẩm:
+          + 	Cuốn báo cáo 
+          +	 	Source Code Game Black Moon trên Unity
+1.3.  Nội dung thực hiện
+- Kiến thức về Unity, ngôn ngữ lập trình C#
+- Thiết kế các biểu đồ cho từng phần
+- Yêu cầu về triển khai: phân tích thiết kế hệ thống, sau đó tiến hành thiết kế giao diện, tiến hành code và thực hiện test 
+- Trình bãy rõ ràng từng mục và ghi các danh mục một cách đầy đủ
+1.4. Phương pháp tiếp cận
+	Tìm hiểu từ các tài liệu và kinh nghiệm thực tế, Youtube, …
+1.5. Giới hạn,  phạm vi và môi trường phát triển đề tài
+- Môi trường phần cứng
+o CPU: Pentium IV 3.0 GHz hoặc cao hơn
+o RAM: tối thiểu 4GB
+o HDD: dung lượng tối thiểu trống 4GB
+- Môi trường phần mềm
+o Hệ điều hành: Windows 7 hoặc cao hơn
+o .Net Framework: máy phải cài .Net Framework 6.1.0 trở lên
+- Giới hạn và phạm vi đề tài
+o ứng dụng được phát triển trên nền tảng Unity và được code bằng ngôn ngữ lập trình C#
+- Công cụ phát triển: visual studio 2015 trở lên, Unity
+CHƯƠNG 2: TỔNG QUAN VỀ UNITY ENGINE VÀ KHÔNG GIAN 2D, 3D
+2.1. Khái niệm Unity
+	Unity là một “cross- flatform game engine” tạm hiểu là công cụ phát triển game đa nền tảng được phát triển bởi Unity Technologies. Game engine này được sử dụng để phát trển game trên PC, consoles, thiết bị di động và trên websites.
+
+    Hình 2. 1 Unity Engine
+2.2. Tổng quan về Unity
+2.2.1 Tại sao cần sử dụng Web Framework
+
+    Hình 2. 2 Tại sao nên sử dụng UnityEngine
+
+- Chức năng cốt lõi đa dạng bao gồm: cung cấp công cụ dựng hình (kết xuất đồ họa) cho các hình ảnh 2D hoặc 3D, công cụ vật lý (tính toán và phát hiện va chạm), âm thanh, mã nguồn, hình ảnh động, trí tuệ nhân tạo, phân luồng, tạo dòng dữ liệu xử lý, quản lý bộ nhớ, dựng ảnh đồ thị và kết nối mạng. Nhờ có các engine mà công việc làm game trở nên ít tốn kém và đơn giản hơn.
+- Hỗ trợ đa nền tảng: Một trong các thế mạnh của Unity3D chính là khả năng hỗ trợ gần như toàn bộ các nền tảng hiện có bao gồm: PlayStation 3, Xbox 360, Wii U, iOS, Android, Windows, Blackberry 10, OS X, Linux, trình duyệt Web và cả Flash. Nói cách khác, chỉ với một gói engine, các studio có thể làm game cho bất kỳ hệ điều hành nào và dễ dàng convert chúng sang những hệ điều hành khác nhau. Đồng thời, đây cũng là giải pháp cho các game online đa nền tảng – có thể chơi đồng thời trên nhiều hệ điều hành, phần cứng khác nhau như Web, PC, Mobile, Tablet….
+
+
+    Hình 2. 3 Unity hỗ trợ đa nền tảng
+
+- Dễ sử dụng: Unity3D được built trong một môi trường phát triển tích hợp, cung cấp một hệ thống toàn diện cho các lập trình viên, từ soạn thảo mã nguồn, xây dựng công cụ tự động hóa đến trình sửa lỗi. Do được hướng đến đồng thời cả lập trình viên không chuyên và studio chuyên nghiệp, nên Unity3D khá dễ sử dụng. Hơn nữa, đây là một trong những engine phổ biến nhất trên thế giới, người dùng có thể dễ dàng tìm kiếm kinh nghiệm sử dụng của “tiền bối” trên các forum công nghệ.
+- Tính kinh tế cao: Unity Technologies hiện cung cấp bản miễn phí engine Unity3D cho người dùng cá nhân và các doanh nghiệp có doanh thu dưới 100.000 USD/năm. Với bản Pro, người dùng phải trả 1.500 USD/năm – một con số rất khiêm tốn so với những gì engine này mang lại.
+2.3. Các thành phần trong Unity Engine
+
+    Hình 2. 4 Các thành phần trong Unity
+• Cửa sổ Sences
+- Phần này phần hiển thị các đối tượng trong scenes một cách trực quan, có thể lựa chọn các đối tượng, kéo thả, phóng to, thu nhỏ, xoay các đối tượng ...
+- Phần này có để thiết lập một số thông số như hiển thị ánh sáng, âm anh, cách nhìn 2D hay 3D ... -Khung nhìn Scene là nơi bố trí các Game Object như cây cối, cảnh quan, enemy, player, camera, … trong game. Sự bố trí hoạt cảnh là một trong những chức năng quan trọng nhất của Unity.
+
+    Hình 2. 5 Các Scene trong một project
+• Cửa sổ Hierarchy
+• Tab hierarchy là nơi hiển thị các Game Object trong Sences hiện hành. Khi các đối tượng được thêm hoặc xóa trong Sences, tương ứng với các đối tượng đó trong cửa sổ Hierarchy.
+• Tương tự trong tab Project, Hierarchy cũng có một thanh tìm kiếm giúp quản lý và thao tác với các Game Object hiệu quả hơn đặc biệt là với các dự án lớn.
+
+    Hình 2. 6 Cửa sổ Hierarchy
+•  Cửa sổ Game
+• Đây là mạn hình demo Game, là góc nhìn từ camera trong game.
+• Thanh công cụ trong cửa sổ game cung cấp các tùy chỉnh về độ phân giải man hình, thông số (stats), gizmos, tùy chọn bật tắt các component...
+
+    Hình 2. 7 Cửa sổ Demo Game
+• Cửa sổ Project
+• Đây là cửa sổ explorer của Unity, hiển thị thông tin của tất cả các tài nguyên (Assets) trong game của bạn.
+• Cột bên trái hiển thị assets và các mục yêu thích dưới dạng cây thư mục tương tự như Windows Explorer. Khi click vào một nhánh trên cây thư mục thì toàn bộ nội dung của nhánh đó sẽ được hiển thị ở khung bên phải. Ta có thể tạo ra các thư mục mới bằng cách Right click -> Create -> Folder hoặc nhấn vào nút Create ở góc trên bên trái cửa sổ Project và chọn Folder. Các tài nguyên trong game cũng có thể được tạo ra bằng cách này.
+• Phía trên cây thư mục là mục Favorites, giúp chúng ta truy cập nhanh vào những tài nguyên thường sử dụng. Chúng ta có thể đưa các tài nguyên vào Favorites bằng thao tác kéo thả.
+• Đường dẫn của thư mục tài nguyên hiện tại. Chúng ta có thể dễ dàng tiếp cận các thư mục con hoặc thư mục gốc bằng cách click chuột vào mũi tên hoặc tên thư mục.
+
+    Hình 2. 8 Cửa sổ Project
+•  Cửa sổ Inspector
+
+    Hình 2. 9 Cửa sổ Inspector
+• Cửa sổ Inspector hiển thị chi tiết các thông tin về Game Object đang làm việc, kể cả những component được đính kèm và thuộc tính của nó. Bạn có thể điều chỉnh, thiết lập mọi thông số và chức năng của Game Object thông qua cửa sổ Inspector.
+• Mọi thuộc tính thể hiện trong Inspector đều có thể dễ dàng tuỳ chỉnh trực tiếp mà không cần thông qua một kịch bản định trước. Tuy nhiên Scripting API cung cấp một số lượng nhiều và đầy đủ hơn do giao diện Inspector là có giới hạn.
+• Các thiết lập của từng component được đặt trong menu. Các bạn có thể click chuột phải, hoặc chọn icon hình bánh răng nhỏ để xuất hiện menu.
+• Ngoài ra Inspector cũng thể hiện mọi thông số Import Setting của asset đang làm việc như hiển thị mã nguồn của Script, các thông số animation, …
+2.4. Các khái niệm cơ bản trong Unity Engine
+• GameObject
+    Hình 2. 10 Game Object
+Một đối tượng cụ thể trong game gọi là một game object, có thể là nhân vật, đồ vật nào đó. Ví dụ: cây cối, xe cộ, nhà cửa, người...
+• Component
+Một GameObject sẽ có nhiều thành phần cấu tạo nên nó như là hình ảnh (sprite render), tập hợp các hành động (animator), thành phần xử lý va chạm (collision), tính toán vật lý (physical), mã điều khiển (script), các thành phần khác... mỗi thứ như vậy gọi là một component của GameObject.
+•  Sprite
+Là một hình ảnh 2D của một game object có thể là hình ảnh đầy đủ, hoặc có thể là một bộ phận nào đó.
+
+    Hình 2. 11 Sprite Sheet
+• Animation
+Là tập một hình ảnh động dựa trên sự thay đổi liên tục của nhiều sprite khác nhau.
+
+    Hình 2. 12 Mecanim Animation System
+• Key Frame
+Key Frame hay Frame là một trạng thái của một animation. Có thể được tạo nên từ 1 sprite hay nhiều sprite khác nhau.
+• Prefabs
+Là một khái niệm trong Unity, dùng để sử dụng lại các đối tượng giống nhau có trong game mà chỉ cần khởi tạo lại các giá trị vị trí, tỉ lệ biến dạng và góc quay từ môt đối tượng ban đầu. Ví dụ: Các đối tượng là đồng tiên trong game Mario đều có xử lý giống nhau, nên ta chỉ việc tạo ra một đối tượng ban đầu, các đồng tiền còn lại sẽ sử dụng prefabs. Hoặc khi ta lát gạch cho một cái nền nhà, các viên gạch cũng được sử dụng là prefabs.
+• Sounds
+Âm thanh trong game.
+•  Script
+Script là tập tin chứa các đoạn mã nguồn, dùng để khởi tạo và xử lý các đối tượng trong game. Trong Unity có thể dùng C#, Java Script, BOO để lập trình Script.
+
+    Hình 2. 13 Scripting trong Unity
+• Scenes
+Quản lý tất cả các đối tượng trong một màn chơi của game.
+• Assets
+Bao gồm tất cả những gì phục vụ cho dự án game như sprite, animation, sound, script, scenes…
+• Camera
+
+    Hình 2. 14 Physical camera trong Unity
+Là một game object đặc biệt trong scene, dùng để xác định tầm nhìn, quansát các đối tượng khác trong game.
+• Transform
+Là 3 phép biến đổi tịnh tiến, quay theo các trục, và phóng to thu nhỏ một đối tượng
+2.5. Ưu và nhược điểm của Unity Engine
+
+    Hình 2. 15 The State of the Game Developers Nation
+• Ưu điểm
+• Unity có một cồng đồng rất lớn về asset và plugin – trong đó có rất nhiều resources free và có nhiều thứ rất đáng bỏ tiền
+• Unity có bộ công cụ rất trực quan và editor có thể mở rộng bằng plugins
+• Unity hỗ trợ rất nhiều định dạng asset khác nhau và có thể tự động chuyển đổi đến định dạng phù hợp nhất với nền tảng thích hợp
+• Unity hỗ trợ nhiều nền tảng: di động, desktop, web và console
+• Việc triển khai đến các nền tảng khác nhau cũng khá dễ quản lý
+• Bạn có thể dễ dàng xây dựng một game 3D mà không cần cấu hình quá phức tạp
+• Unity bản free có hầu hết những tính năng quan trọng nhất
+• Unity bản trả phí phù hợp với các developer chuyên nghiệp
+
+    Hình 2. 16 Một tựa game sử dụng Unity Engine
+• Nhược điểm
+• Việc hợp tác rất khó khăn. Unity sử dụng một server asset rất hiệu quả để hỗ trợ các đội phát triển phần mềm hợp tác với nhau. Tuy nhiên nếu bạn không sử dụng nó thì việc chia sẽ code và asset giữa các thành viên trong team có thể gây ra những vấn đề nghiêm trọng. Lựa chọn tốt nhất là sử dụng một số công cụ quản lý resource bên ngoài nhưng có một vài binary file không thể merge được với nhau và việc cập nhật asset có thể gây nên một số vấn đề trong scenes, mất kết nối đến script và các đối tượng khác
+• Hiệu năng chưa thật sự ấn tượng cho đến khi Unity 5 ra mắt. Unity 5 đã chạy hầu hết trên một luồng duy nhất và hầu như không sử dụng thêm 1 nhân phụ nào trên các thiết bị di động. Bộ biên dịch chưa được tối ưu tốt cho các bộ xử lý ARM trên hầu hết các thiết bị di động. Để giải quyết vấn đề này thì Unity đã quyết định transpile (source-to-source compiler) sang C++ và sử dụng LLVM để tối ưu được nhiều hơn thay vì giải quyết vấn đề này trực tiếp trên các phiên bản sau này
+• Mã nguồn của engine không được công bố kể cả cho những người dùng chấp nhận trả tiền. Điều đó có nghĩa là nếu bạn gặp một bug với engine bạn phải chờ Unity fix chúng trong các bản tiếp theo. Điều này có thể gây nên những vấn đề nghiêm trọng với project của bạn
+2.6. Một số thống kê về Unity Engine
+• Tính đến quý 3 năm 2016 đã có 5 tỉ lượt download game và ứng dụng được phát triển bởi Unity
+• 2,4 tỉ thiết bị di động đã từng tải ít nhất 1 ứng dụng bởi unity.
+• Trong top 1000 game Mobiles miễn phí thì số lượng game tạo ra bởi Unity chiếm tới 34%
+
+    Hình 2. 17 Top 1000 free mobile game 
+• Số lượng người dùng (gamer) của Unity đạt tới con số 770 triệu, trong khi đó số người thường xuyên sử dụng Twitter là 310 triệu người.
+• Sự thay đổi trong cách thức chơi game của người chơi hay nói cách khác là xu hướng mọi người tập trung vào game trên di động nhiều hơn.
+
+    Hình 2. 18 Video game market revenue worldwide
+
+CHƯƠNG 3: Ứng Dụng Game Phát Triển Trên Unity
+3.1. 	Phân tích cốt truyện
+   3.1.1 Cốt truyện
+•  Cốt truyện
+➢ Bối Cảnh:
+- Sống trong một quốc gia hùng mạnh và quy củ với lịch sử quân sự huy hoàng, người dân Demacia luôn coi trọng những giá trị về công lý, danh dự và bổn phận, cùng niềm tự hào mãnh liệt về di sản văn hóa của họ. Nhưng, mặc cho những nguyên tắc cao quý ấy, đất nước phần lớn còn tự cung tự cấp này ngày một trở nên thủ cựu và tách biệt trong vài thế kỷ gần đầy. Hiện tại, Demacia đang gặp biến cố. Thủ phủ của nó, Đại Đô Demacia, được thành lập như một nơi ẩn náu khỏi phép thuật sau cơn ác mộng Chiến Tranh Cổ Ngữ, và được xây nên từ kháng ma thạch—một loại đá trắng lạ kỳ có thể hút năng lượng ma thuật. Chính từ nơi đó, hoàng tộc đã bảo vệ các thành phố và làng mạc bên ngoài, những nông trại, rừng cây, và núi non giàu tài nguyên khoáng sản. Tuy nhiên, sau cái chết đột ngột của Vua Jarvan III, các gia tộc khác chưa chấp thuận người kế vị duy nhất của ông, Thái tử Jarvan, lên nối ngôi. Những người cư trú bên ngoài cánh cổng canh gác nghiêm ngặt càng ngày càng bị nghi ngờ, và nhiều đồng minh cũ bắt đầu tìm kiếm sự bảo hộ ở nơi khác trong thời đại nhiễu nhương này. Có kẻ dám đồn đại rằng thời hoàng kim của Demacia đã qua đi, và trừ khi người dân nơi đây chịu thích nghi với thế giới luôn biến đổi—điều mà đa số đều tin là bất khả—còn không vương quốc suy tàn là điều không thể tránh khỏi. Và tất cả kháng ma thạch cũng không bảo vệ Demacia khỏi chính nó. Và rồi một ngày nọ tại vùng đất Demacia bỗng xuất hiện vô số quái vật từ vùng biên giới tràn vào vương quốc. Dọc đường đi chùng tàn sát tất cả nhưng sinh vật sống trên đường để làm thức ăn, khắp nơi tràn đều tràn ngập lũ quái vật, những tiếng kêu thảm thiết, tiếng khóc ai oán từ những con người hay sinh vật bị sát hại cũng như những con người bị mất nhà mất cửa mất người thân. Là một cư dân của 1 vùng hẻo lánh tại Demacia nhưng ngôi làng của John không may mắn bị lũ quỷ càn quét qua và chỉ còn cậu sống sót vì khi đó cậu đang đi chở hàng vào thị trấn của vương quốc. Quá đau buồn và phẫn nộ trước sự ra đi của người thân và mọi người trong làng John đã đăng ký tham gia vào cuộc thảo phạt lũ quái vật do quốc vương ban bố! Với tài nghệ săn bắn, kiếm thuật, sức khỏe thiêm bẩm của mình cậu sẽ đối mặt với lũ quỷ ra sao mời quý vị trải nghiệm trong game Black Moon…
+- GamePlay: 
+- Người chơi đóng vai John, trên hành trình chinh phạt lũ quái vật. Người chơi sẽ phải vượt qua rất nhiều thử thách trên hành trình của mình và đối mặt với lũ orc, troll... và Chúa Quỷ.
+	3.1.2 Phân tích thiết kế đồ họa	
+- Nhân Vật: John: Damage 30, health 100, tốc độ di chuyển tối đa 4
+- Quái và các chướng ngại vật:
+o Bẫy và chướng ngại vật : Vực thẳm, đất xụt
+o Monster: Attacking 10, health 40, tốc độ di chuyển tối đa 3. Tấn công và bám đuổi theo Player, hút máu nhân vật khi chạm vào
+- Màn chơi:
+o Level 1: Người chơi đóng vai John bắt đầu di chuyển tới các vùng đất của map, người chơi cần phải vượt qua các trướng ngại vật như các Monter lv1, Orc, Troll, nhảy, chạy và ăn các coin vàng để tích lũy điểm cho mình. Nếu người chơi không vượt qua các trướng ngại vật thì số coin ăn được sẽ không được cộng thêm.
+o Level 2: Cũng giống như các thử thách ở level 1 nhưng các chướng ngại vật sẽ có độ khó cao hơn và bắt đầu xuất hiện những bẫy, và monster hơn. Đòi hỏi người chơi phải khéo léo vượt qua các thử thách.
+o Level 3: Ở level này người chơi phải đối mặt với nhiều thử thách hơn, map sẽ có boss mạnh nhất từ đầu game và chướng ngại vật hơn, chúng hung hăng và sẽ mạnh mẽ hơn những màn trước khiến người chơi và thật bình tĩnh, xử lý khôn khéo để có thể vượt qua màn này.
+3.2 Thực hiện và triển khai 
+3.2.1 Thiết kế Maps	
+- Map gồm có :
+1. Rừng Rậm Chết Chóc
+* Map đầu tiên, bối cảnh trong rừng
+* Quái vật: xác sống
+* Vực thẳm: hố sâu, vực thẳm
+* Mức độ: Dễ
+* Nhiệm vụ: Thu thập Coin, tiêu diệt quái vật và qua màn
+2. Thung Lũng Tuyết Băng Giá
+* Bối cảnh trong vùng lãnh địa tuyết bao phủ
+* Bẫy: Hố sâu, vực thẳm
+* Quái vật: Orc, Troll 
+* Vực thẳm: hố sâu, vực thẳm
+* Mức độ: Trung Bình
+* Nhiệm vụ: Thu thập Coin, tiêu diệt quái vật và qua màn
+3. Lãnh địa bóng đêm
+* Bối cảnh ở lãnh địa của boss TUSK
+* Bẫy: Lưỡi cưa, bẫy gai
+* Quái vật: monster lv 1, orc, troll, Boss “TUSK”
+* Mức độ: Khó
+* Boss: High Orc TUSK
+* Nhiệm vụ: Giết quái, boss và kết thúc
+
+3.2.2 Thiết kế Animations Player & Boss
+- Thiết kế Animation của Player gồm:
+• Đứng yên
+• Chạy
+• Nhảy
+• Tấn công
+• Dùng Skill
+• Rơi tự do
+• Bị thương
+• Chết
+- Thiết kế Animation cho quái vật và Boss :
+• Đứng yên
+• Đi bộ
+• Tấn công
+• Bị thương
+• Chết
+- Thêm Collider cho các Animation để tạo tương tác với các Object khác trong Game.
+- Tạo  tương tác giữa các Animation bằng các Transdition trong cửa sổ Animator.
+- Thêm các điều kiện cho Animator.
+3.2.3 Thiết kế hệ thống UI
+- Thiết kế UI Menu tạm dừng
+- Thiết kế UI Player.
+3.2.4 Thiết kế kịch bản và hành động	
+  - Thiết lập tương tác giữa các hành động cho Player gồm: 
+• Đứng yên
+• Chạy
+• Nhảy
+• Tấn công
+• Chết
+  - Thiết lập phạm vi tấn công và điểm phóng ra của Skill cho Player.
+  - Thiết lập các chỉ số cho Player: 
+• Máu
+• Lực nhảy
+• Tốc độ
+• Trọng lượng
+  - Thiết kế kịch bản tương tự đối với kẻ thù và Boss.
+  - Thiết kế kịch bản cho hệ thống nhiệm vụ trong Game theo từng Map
+
+3.3. 	Các yêu cầu chính của hệ thống
+Trò chơi được mô tả như sau:
+   - Người chơi có thể chọn chơi tiếp, chơi mới
+   - Nếu chọn chơi mới, người chơi sẽ trở về vị trí ban đầu, mọi thông số trở về mặc định. 
+   - Vượt các màn chơi lần lượt theo cốt truyện, đồng thời đem về lượng lớn tiền xu.
+
+Hoạt động trò chơi cần đạt được những mục tiêu sau:
+- Phải có chức năng chơi tiếp.
+- Phải có chức năng chơi mới.
+- Phải có chức năng điều khiển nhân vật.
+- Chức năng ăn đồng xu vàng và item.
+- Phải có chức năng tiếp tế.
+3.4  	Thiết kế giao diện game
+3.4.1 Giao diện chính: 
+	- 	Chức năng : 	+ Start Game 
+				+ Xem Điểm
+				+ Hướng dẫn
+				+ Thoát Game
+	-            Button : 	+ Start Game
+				+ High Score
+				+ Option
+				+ Quit
+	
+    Hình 3. 1 Giao diện khởi đầu Game
+3.4.2  Giao diện High Score
+ 
+    Hình 3. 2 Giao diện High Score
+
+3.4.3  Giao diện Option
+ 
+    Hình 3. 3 Giao diện Option
+3.4.4  Giao diện Màn chơi 1
+
+      
+Hình 22: Giao diện màn chơi 1
+
+3.4.5  Giao diện màn chơi 2
+    
+    Hình 3. 4 Giao diện màn chơi 2
+3.4.6  Giao diện màn chơi 3 ( màn cuối )
+
+    
+    Hình 3. 5 Giao diện màn chơi 3
+    
+3.4.7  Giao diện hình ảnh Player và Monster
+	-	Player : 	
+                
+    Hình 3. 6 Player
+
+	
+
+      -	Monster :
+      
+    Hình 3. 7 Monster lv1
+      
+                                        
+    Hình 3. 8 Orc
+
+                                          
+    Hình 3. 9 Troll
+      
+      
+      
+    Hình 3. 10 Boss “TUSK”
+      
+3.4.8   Trang bị vũ khí của Player
+	-  Sword : 
+
+    Hình 3. 11 Trang bị  Sword
+
+	-  Fireball : 
+
+    Hình 3. 12 Skill Fireball
+
+
+3.5  	Code một số class quan trọng trong game
+
+    Hình 3. 13 Class Attack của Player và các phần liên quan
+
+
+    Hình 3. 14 Class Health và Mana trong game
+
+
+    Hình 3. 15 Class tính điểm
+
+
+3.6  	Phân tích biểu đồ
+3.6.1 	Biểu đồ use-case Tổng quát:
+
+    Hình 3. 16 Biểu đồ use-case tổng quát
+
+3.6.2	Biểu đồ lớp
+
+    Hình 3. 17 Biểu đồ lớp
+3.6.3 	Biểu đồ tuần tự load màn chơi
+
+
+
+
+
+
+
+
+     Hình 3. 18 Biểu đồ tuần tự load màn chơi
+CHƯƠNG 4:  KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN
+   Sau nhiều ngày suy nghĩ kĩ để chọn đề tài tốt nghiệp, cuối cùng em cũng đã chọn được đề tài làm game 2d trên Unity Game Black Moon.
+   Bước đầu tìm hiểu về Unity và Game Engine em gặp rất nhiều khó khăn trong việc tìm tài liệu và xây dự ng ý tưởng game vì tài liệ u về unity đa phần bằng tiếng anh, nhưng sau khoảng 1 tháng cố gắng tìm tòi, học hỏi các bạn đi trước thì em cũng đã làm cho mình được 1 game gần hoàn chỉ nh để phục vụ cho đề tài tốt nghiệp. Trong thời gian làm đề tài em cũng có một số những vấn đề đạt được và chưa đạt được.
+Đạt Được
+- Hiểu được cấu trúc, cách thức hoạt động, cách thức phát triển ứng dụng trên Unity
+- Nâng cao kiến thức lập trình và tiếng anh chuyên ngành thông qua những  tài liệu về Unity bằng tiếng anh
+- Tổ chức load các màn tương ứng thông qua các button
+- Xây dựng các chức năng như điểm, máu, màn chơi.. thông qua ngôn ngữ lập trình C# trên MonoDevelop
+- Tạo âm thanh cho cho trò chơi và 1 số chức năng khác.
+   Ngoài những thứ đặt được thì em còn rất nhiều những vấn đề chưa đạt được.
+   Chưa Đạt Được
+­ Do kiến thức của em về Unity còn hạn hẹp nên các chức năng trong game còn nghèo nàn
+­ Chưa xây dự ng được hoàn chỉnh 1 game như mong muốn
+­ Các Script trong Unity tổ chức chưa thực sự rõ ràng
+­ Sắp xếp nhân vật và màn chơi chưa được logic
+
+Thuận Lợi
+­ Vận dụng được các kiến thứ c mà em đã học trong trường để làm đồ án này
+­ Được sự chỉ dạy tậ n tình củ a thầy và các bạn
+
+­ Tài liệu rất nhiều trên Internet
+Khó Khăn
+­ Unity là một môi trường lập trình mới đối với em nên khi bắt tay vào làm thì em không biết làm từ đâu và cảm thấy bỡ ngỡ
+Kinh Nghiệm Rút Ra
+­ Phải biết sắp xếp thời gian 1 cách hợp lý nế u không sẽ gặp rất nhiều khó khăn
+­ Làm việc phải tập trung mới có thể hoàn thành tốt được
+Hướng Phát Triển
+­ Tối ưu hóa để game có thể chạy nhanh hơn
+
+­ Tăng thêm màn chơi để người chơi có nhiề u lựa chọn
+
+­ Thêm vũ khí, trang bị, nâng cấp trang bị và vũ khí
+
+­ Cung cấp thêm công cụ để người chơi có thể chọn và chỉnh sửa tạo riêng cho mình nhữ ng nhân vật, hiệu ứng âm thanh….
+
+­ Cải thiện trí thông minh của Monster
+
+
+
+
+
+
+
+
+
+
+
+
+TÀI LIỆU THAM KHẢOx
+[1]. Giáo trính môn Chuyên đề 1: Lập trình Android cơ bản, Bộ môn CNPM, Trường ĐHSPKTHY.
+[2]. Giáo trính môn Chuyên đề 2: Lập trình đa phương tiện trên Android, Bộ môn CNPM, Trường ĐHSPKTHY.
+[3]. Giáo trính môn Chuyên đề 3: Lập trình dịch vụ mạng trên Android, Bộ môn CNPM, Trường ĐHSPKTHY.
+[4]. Giáo trính môn Chuyên đề 4: Lập trình GAME trên UNITY, Bộ môn CNPM, Trường ĐHSPKTHY.
+[5]. Giáo trính môn lập trình hướng đối tượng với Java, Bộ môn CNPM, Trường ĐHSPKTHY.
+[6]. Giáo trính môn phân tích thiết kế phần mềm, Bộ môn CNPM, Trường ĐHSPKTHY.
+[7]. Giáo trính môn phân tích thiết kế hướng đối tượng với UML, Bộ môn CNPM, Trường ĐHSPKTHY.
+[8]. Ed Burnette, Hello, Android Introducing Google’s Mobile Development Platform, The Pragmatic Bookshelf, 2010.
+[9]. Marziah Karch, Android for Work Productivity for Professional, Press, 2010.
+[10]. J.F. DiMarzio, Android A Programmer’s Guide, The McGraw-Hill Companies, 2008.
+[11]. Chris Haseman, Android Essentials, Apress, 2008.
+[12]. Sams, Android Application Development, Lauren Darcey and Shane Conder, 2010.
+[13]. stackoverflow.com, https://stackoverflow.com
+      
+Đồ án tốt nghiệp: Xây dựng ứng dụng Game Black Moon
+    
+
+9
+
+

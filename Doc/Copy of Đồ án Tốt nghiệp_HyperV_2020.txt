@@ -1,0 +1,446 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+      Ngày nay, nền kinh tế đang trên đà tăng trưởng mạnh. Cùng với nó là sự tiến bộ vượt bậc của nền khoa học công nghệ, đặc biệt là công nghệ thông tin. Máy tính đã giúp con người rất nhiều từ tối ưu hóa công việc, giảm thời gian làm việc tăng năng suất và mang lại hiệu quả cao. Với tình hình phát triển hiện này của các tổ chức, doanh nghiệp cần một hoặc nhiều máy chủ để chạy các ứng dụng cho toàn thể các doanh nghiệp mà các máy tính để bàn không hề được thiết kế để làm các công việc đó.
+      Những máy chủ có chức năng riêng biệt và có một số yêu cầu đặc biệt chúng không thể chạy cùng nhau trên một hệ điều hành. Việc chạy nhiều Server riêng lẻ kéo thêm nhiều chi phí đầu tư cho các máy chủ vật lý. Trên thực tế các máy chủ không hoàn toàn tận dụng tối đa tài nguyên mà chỉ sử dụng một phần, còn một phần tài nguyên bỏ phí gây ra lãng phí và những khoản đầu tư không đáng có. Công nghệ ảo hóa được tạo ra để giải quyết bài toán này. Nó không chỉ tốt ưu hóa phần cứng của máy chủ mà còn làm giảm tối đa việc đầu tư vào các máy chủ vật lý.
+      Máy chủ thực ra cũng là một máy tính nhưng có cấu hình, tính năng và các chức năng lớn hơn hẳn các máy tính thông thường. Nó dùng làm trung tâm liên kết các máy tính và các thiết bị mạng trong một cơ quan, tổ chức lại với nhau. Máy chủ là một trung tâm dữ liệu nơi lưu giữ và chia sẻ dữ liệu, và các dữ liệu này luôn sẵn sàng đối với người dùng hợp lệ được phép truy cập vào nó. Nói chung máy chủ là một máy tính mà nó cung cấp các dịch vụ đang chạy trên nó cho nhiều máy tính khác. Thế nhưng thực tế cho ta thấy rằng các máy chủ sử dụng rất ít tài nguyên phần cứng của nó, chỉ từ 10% đến 30% cho một loại dịch vụ và phần tài nguyên còn lại thì không dùng đến, do vậy sinh ra lãng phí. Vì vậy nhu cầu thực tế là làm sao có thể tận dụng các phần tài nguyên còn lại đó một cách hiệu quả. Trong đồ án này em sẽ trình bày về giải pháp công nghệ ảo hóa Hyper-V để giải quyết vấn đề này.
+1.2 Mục tiêu của đề tài
+       Với việc người sử dụng Internet bùng nổ thì việc làm tăng khả năng xử lý của Server là vấn đề cần thiết để đảm bảo các tương tác. Đến một thời điểm nào đó Server sẽ không thể đáp ứng được số lượng các yêu cầu đồng thời và các giải pháp được đưa ra là thay thế hoặc nâng cấp Server hiện tại bằng Server khác có cấu hình mạnh hơn khả năng xử lý cao hơn. Với đề tài này ta cần thực hiện tìm hiểu và xây dựng giải pháp ảo hóa Hyper-V trên Windows Server để đảm bảo khả năng hoạt động của hệ thống Server một cách hoàn hảo nhất. Tạo ra một mô hình hệ thống ổn định đáp ứng được số lượng lớn các yêu cầu vào hệ thống.
+1.3 Giới hạn và phạm vi của đề tài
+      Xây dựng hệ thống hoạt động cho trường Đại học Sư phạm Kỹ thuật Hưng Yên.
+      Đề tài được thực hiện trên máy chủ được cài đặt hệ điều hành Windows Server 2016.
+1.4 Nội dung thực hiện
+      Thực hiện tìm hiểu về nền tảng ảo hóa máy chủ.
+      Đưa ra giải pháp ảo hóa Hyper-V.
+      Thực hiện triển khai thử nghiệm hệ thống Failover Cluster trên Windows Server 2016 Hyper- V.
+      Tiến hành xây dựng một hệ thống hoàn thiện.
+1.5 Phương pháp tiếp cận
+      Khảo sát hệ thống mạng doanh nghiệp đang sử dụng để đưa ra giải pháp.
+      Nghiên cứu cách thức hoạt động của hệ thống.
+      Tham khảo các hệ thống đã được triển khai ở các doanh nghiệp khác.
+      Tìm hiểu thêm về những nội dung liên quan khác trên các nguồn tư liệu khác.
+CHƯƠNG 2: XÂY DỰNG GIẢI PHÁP ẢO HÓA HYPER-V
+2.1 Tổng quan về ảo hóa
+      Lĩnh vực ảo hóa hiện đang nóng, nhiều nền tảng ảo hóa mới xuất hiện, có cả giải pháp phần mềm và phần cứng, ảo hóa từ vi xử lý đến cả hạ tầng công nghệ thông tin. Cộng đồng công nghệ thông tin nói chung đang háo hức với công nghệ này vì những lợi ích mà nó mang lại. Công nghệ “ảo hóa” đã không còn xa lạ với thực tế đời thường kể từ khi VMware giới thiệu sản phẩm VMware Workstation đầu tiên vào năm 1999. Sản phẩm này ban đầu được thiết kế để hỗ trợ việc phát triển và kiểm tra phần mềm và đã trở nên phổ biến nhờ khả năng tạo những máy tính “ảo” chạy đồng thời nhiều hệ điều hành khác nhau trên cùng một máy tính “thực” (khác với chế độ “khởi động kép” máy tính được cài nhiều HĐH và có thể chọn lúc khởi động nhưng mỗi lúc chỉ làm việc được với 1 HĐH). Là một phương pháp cho phép nhiều hệ điều hành cùng chạy trên một máy tính vật lý.
+      VMware, được EMC (hãng chuyên về lĩnh vực lưu trữ) mua lại vào tháng 12 năm 2003, đã mở rộng tầm hoạt động từ PC đến máy chủ và hiện hãng vẫn giữ vai trò thống lĩnh thị trường ảo hóa nhưng không độc tôn mà phải cạnh tranh với các sản phẩm nguồn mở Xen, Virtualization Engine 2.0 của IBM, Virtual Server của Microsoft, Virtuozzo của SWSoft và Virtual Iron Software. Và “ảo hóa” cũng không còn bó hẹp trong một lĩnh vực mà mở rộng cho toàn bộ hạ tầng công nghệ thông tin, từ phần cứng vi xử lý cho đến hệ thống máy chủ và cả hệ thống mạng.
+2.1.1 Khái niệm ảo hóa
+      Ảo hóa là bước chuyển trung gian từ phần cứng vật lý sang phần cứng ảo và nó đang trở thành một trong những xu hướng phát triển lớn tiếp theo trong nghành công nghiệp IT. Hiện nay đã có nhiều lựa chọn ảo hóa hơn trong nhiều từng lĩnh vực cho các chuyên gia công nghệ thông tin lựa chọn, như các ứng dụng mã nguồn mở của Virtual Iron, hay Hyper-V của Microsoft và các sản phẩm mới của Vmware. Có thể nói công nghệ ảo hóa là một công nghệ được thiết kế để tạo ra một phiên bản ảo từ thiết bị lưu trữ, một thiết bị mạng cho đến một hệ điều hành. Mục đích của công nghệ ảo hóa là đơn giản hóa việc quản lý nhưng lại đạt hiệu quả cao hơn về khả năng, tốc độ làm việc cũng như nâng cao khả năng mở rộng hệ thống.
+2.1.2 Các thức hoạt động của ảo hóa
+      Ảo hóa là một phần mềm riêng biệt bao gồm hệ điều hành và ứng dụng bên trong. Bởi vì mỗi máy chủ ảo là độc lập và riêng biệt, nên nhiều máy ảo có thể chạy đồng thời trên cùng một máy chủ. Có các lớp mỏng phần mềm gọi là Hypervisor tách riêng các máy ảo từ host và các máy ảo được cấp phát tài nguyên tự động theo nhu cầu sử dụng. Cấu trúc này giúp cân bằng khả năng điện toán.
+      Nhiều ứng dụng chạy trên cùng một server, mỗi máy ảo được lập trình trên máy chủ, do đó nhiều ứng dụng và các hệ điều hành có thể cùng lúc chạy trên một Host.
+      Tối đa hóa công suất sử dụng và tối thiếu hóa Server: Mỗi máy chủ vật lý được sử dụng với đầy đủ công suất, cho phép giảm đáng kể chi phí nhờ sử dụng tối đa Server.
+      Cấp phát tài nguyên và ứng dụng nhanh chóng, dễ dàng. Máy ảo được triển khai từ một file chứa đầy đủ phần mềm với cơ chế đơn giản là copy và paste. Điều này mang đến sự đơn giản, nhanh chóng và linh hoạt chưa từng có cho việc quản lý và cung cấp hạ tầng Công nghệ Thông tin. Máy ảo thậm chí có thể di chuyển sang một Server vật lý khác trong khi vẫn đang chạy, hoạt động bình thường. Doanh nghiệp có thể ảo hóa những ứng dụng quan trọng của doanh nghiệp để nâng cao hiệu suất, sự ổn định, khả năng mở rộng và giảm thiểu chi phí.
+2.2 Phân loại ảo hóa
+2.2.1 Ảo hóa Server
+      Một máy chủ riêng ảo tiếng anh Virtual Private Server hay máy chủ ảo hoá là một phương pháp phân vùng một máy chủ vật lý thành máy tính nhiều máy chủ ảo, mỗi máy chủ đã có khả năng của riêng của mình chạy trên máy tính dành riêng. Mỗi máy chủ ảo riêng của nó có thể chạy full-fledged hệ điều hành, và mỗi máy chủ độc lập có thể được khởi động lại. Lợi thế của việc ảo hóa máy chủ:
+- Tiết kiệm được chi phí đầu tư máy chủ ban đầu.
+- Hoạt động hoàn toàn như một máy chủ riêng.
+- Có thể dùng máy chủ ảo hóa cài đặt các ứng dụng khác tùy theo như cầu của doanh nghiệp
+- Bảo trì sửa chữa nâng cấp nhanh chóng và dễ dàng.
+- Dễ dàng nâng cấp tài nguyên RAM, HDD, băng thông khi cần thiết.
+- Có thể cài lại HĐH từ 5-10 phút.
+- Không lãng phí tài nguyên.
+2.2.2 Ảo hóa Storage
+      Hiện nay các nhà lưu trữ cung cấp đã được cung cấp giải pháp lưu trữ hiệu suất cao cho khách hàng của họ trong một thời gian lâu dài. Trong hình thức cơ bản nhất của nó, lưu trữ ảo hóa tồn tại trong việc ta lắp ráp ổ đĩa vật lý nhiều thành một thực thể duy nhất được trình bày để các máy chủ lưu trữ và chạy hệ điều hành chẳng hạn như triển khai RAID. Điều này có thể được coi là ảo bởi vì tất cả các ổ đĩa được sử dụng và tương tác với như một ổ đĩa logic duy nhất, mặc dù bao gồm hai hoặc nhiều ổ đĩa trong.
+      Một công nghệ ảo hoá lưu trữ mà khá đình đám mà ta biết đến SAN (storeage area network – lưu trữ qua mạng). SAN là một mạng được thiết kế cho việc thêm các thiết bị lưu trữ cho máy chủ một cách dễ dàng như: Disk Aray Controllers, hay Tape Libraries.
+      Với những ưu điểm nổi trội SAN đã trở thành một giải pháp rất tốt cho lưu trữ thông tin cho doanh nghiệp hay tổ chức. SAN cho phép kết nối từ xa tới các thiết bị lưu trữ trên mạng như: Disks và Tape drivers. Các thiết bị lưu trữ trên mạng, hay các ứng dụng chạy trên đó được thể hiện trên máy chủ như một thiết bị của máy chủ.
+      Có hai sự khác nhau cơ bản trong các thành phần của SAN:
+      Mạng (network) có tác dụng truyền thông tin giữa thiết bị lưu trữ và hệ thống máy tính. Một SAN bao gồm một cấu trúc truyền tin, nó cung cấp kết nối vật lý, và quản lý các lớp, tổ chức các kết nối, các thiết bị lưu trữ, và hệ thống máy tính sao cho dữ liệu truyền trên đó với tốc độ cao và tính bảo mật. Giới hạn của SAN thường được nhận biết với dịch vụ Block I/O đúng hơn là với dịch vụ File Access.
+      Một hệ thống lưu trữ bao gồm các thiết bị lưu trữ, hệ thống máy tính, hay các ứng dụng chạy trên nó, và một phần rất quan trọng là các phần mềm điều khiển, quá trình truyền thông tin qua mạng.
+2.2.3 Ảo hóa Network
+      Các thành phần mạng trong cơ sở hạ tầng mạng như Switch, Card mạng, được ảo hoá một cách linh động. Switch ảo cho phép các máy ảo trên cùng một máy chủ có thể giao tiếp với nhau bằng cách sử dụng các giao thức tương tự mà như trên thiết bị chuyển mạch vật lý mà không cần phần cứng bổ sung. Chúng cũng hỗ trợ VLAN tương thích với việc triển khai VLAN theo tiêu chuẩn từ nhà cung cấp khác, chẳng hạn như Cisco. Một máy ảo có thể có nhiều card mạng ảo, việc tạo các card mạng ảo nầy rất đơn giản và không giới hạn số card mạng tạo ra.Ta có thể nối các máy ảo này lại với nhau bằng một Switch ảo. Điều đặc biệt quan trọng, tốc độ truyền giữa các máy ảo này với nhau thông qua các switch ảo được truyền với tốt độ rất cao theo chuẩn GIGABYTE (1GB), dẫn đến việc đồng bộ giữa các máy ảo với nhau diễn ra rất nhanh.
+2.2.4 Ảo hóa Application
+      Ảo hóa ứng dụng là giải pháp tiến đến công nghệ "điện toán đám mây" cho phép bạn sử dụng phần mềm của công ty mà không cần phải cài vài phần mềm này vào bất cứ máy tính con nào. 
+      Giải pháp ảo hóa ứng dụng cho doanh nghiệp những lợi ích nổi trội như:
+      Tất cả các máy tính đều có thể sử dụng phần mềm ảo như đang cài trên máy tính của mình mà không phải lo về cấu hình. Tốc độ phần mềm luôn ổn định và không phụ thuộc vào cấu hình từng máy. Các máy tính con luôn ở trong tình trạng sạch và chạy nhanh hơn. Loại  bỏ hoàn toàn việc phải sửa lỗi phần mềm do virus, spyware hoặc do người dùng sơ ý.
+      Cho phép sử dụng phần mềm mà không phải quan tâm đến hệ điều hành bạn đang sử dụng. Bạn có thể phân phối phần mềm 1 cách linh động này đến 1 số cá nhân hoặc nhóm có nhu cầu sử dụng thay vì cài vào tất cả mọi máy như cách phổ thông. Việc phân phối hoặc gỡ bỏ phần mềm ra các máy tính có thể diễn ra chỉ trong vòng chỉ vài giây thay vì hàng tuần nếu như công ty các bạn có hàng chục máy tính. Thông tin luôn luôn được lưu trữ an toàn ở Server trung tâm thay vì có thể phân tán ra từng máy con. Cho dù bạn ở bất cứ nơi nào (tại 1 máy tính khác, tại nhà hay thậm chí ở internet cafe), việc truy nhập và sử dụng phần mềm của doanh nghiệp trở nên dễ dàng qua 1 hệ thống bảo mật hiện đại nhất.
+      Ảo hóa ứng dụng là giải pháp cho phép sử dụng và quản lý phần mềm doanh nghiệp 1 cách hiệu quả hệ thống. Tiết kiệm tối đa chi phí bảo trì, hỗ trợ kỹ thuật và quản lý từng máy tính.
+2.3 Lợi ích của ảo hóa
+      Việc sử dụng công nghệ ảo hóa làm giảm số lượng máy chủ vật lý, giảm lượng điện năng tiêu thụ, tiết kiệm được chi phí cho việc bảo trì phần cứng, nâng cao hiệu quả công việc. Ngoài ra ta còn có thể dễ dàng mở rộng hệ thống khi có nhu cầu, triển khai máy chủ mới nhanh, tận dụng tài nguyên hiện có: vì mỗi máy ảo đơn giản chỉ là một tệp tin hoặc thư mục, ta có thể tạo ra máy chủ mới bằng cách sao chép từ một file máy chủ ảo hiện tại và cấu hình lại, chọn máy chủ vật lý còn dư tài nguyên để đưa máy ảo mới lên. Ta cũng có chuyển các máy ảo sang một môi trường cách ly một cách dễ dàng nên ta có thể thử nghiệm chương trình, nâng cấp hệ thống ứng dụng mà không sợ ảnh hưởng đến tính ổn định của hệ thống hiện tại, đồng thời cho phép quản trị viên có thể sử dụng một lúc nhiều hệ điều hành khác nhau.
+      Với công cụ quản lý tập trung vCenter Server, ta sẽ theo dõi được máy chủ nào đang quá tải, từ đó sẽ áp dụng chính sách là tăng tài nguyên về CPU, Ram, ổ cứng cho máy chủ áo đó hoặc di chuyển máy chủ ảo đang quá tải đó sang máy chủ vật lý có cấu hình mạnh hơn, có nhiều tài nguyên nhàn dỗi hơn để chạy. Toàn bộ quá trình trên có thể được thực hiện mà không cần tắt máy ảo đó.
+      Khi sự cố xảy ra đối với máy ảo bị nhiễm virus, lỗi hệ điều hành thì việc khắc phục đơn giản chỉ là phục hồi lại file vmdk của máy ảo đã được backup và chạy lại máy ảo một cách bình thường.
+      Khi có sự cố đối với máy chủ vật lý, sẽ được di chuyển sang máy chủ vật lý khác với HA Cluster.
+2.4 Nhược điểm của ảo hóa
+      Đáng lưu ý nhất là vấn đề lưu trữ dữ liệu. Thông thường, mỗi máy ảo chỉ sử dụng một file vmdk (file này có thể được chia nhỏ tùy theo cách cài đặt) để lưu lại toàn bộ dữ liệu trong máy ảo và một số file nhỏ khác để lưu cấu hình máy ảo. Do đó nếu một trong số những tệp tin bị lỗi hoặc bị mất mà chưa được backup thì có thể xem như máy ảo đã bị hư hoàn toàn và không thể phục hồi. Ngoài ra nếu máy chủ có cấu hình phần cứng thấp nhưng lại có một máy ảo sử dụng quá nhiều tài nguyên hoặc chạy quá nhiều máy ảo thì sẽ làm chậm toàn bộ hệ thống bao gồm các máy ảo và các ứng dụng chạy trên máy ảo. Đồng thời do một hoặc vài máy chủ phải đảm nhận nhiều máy ảo chạy trên nó nên nếu máy chủ gặp trục trặc, sự cố thì các máy ảo cũng sẽ bị ảnh hưởng theo.Còn ở góc độ bảo mật, nếu hacker nắm được quyền điều khiển một máy chủ vật lý chứa các máy ảo thì hacker có thể kiểm soát được tất cả các máy ảo trong nó.
+2.5 Công nghệ ảo hóa Vmware ESX server
+      Vmware được mọi người biết đến như là một nhà cung cấp các sản phẩm ảo hóa hàng đầu thế giới. Các giải pháp công nghệ và ảo hóa Vmware đã trở thành chuẩn trong ứng dụng doang nghiệp. Năm 1999 Vmware giới thiệu sản phẩm vmware workstation. Sản phẩm này ban đầu được thiết kế để hỗ trợ việc phát triển và kiểm tra phần mềm và đã trở nên phổ biến nhờ khả năng tạo những máy tính ảo chạy đông thời nhiều hệ điều hành khác nhau trên cùng một máy tính thực khác với chế độ khởi động kép là những máy tính được cài nhiều hệ điều hành và có thể chọn lúc khởi động nhưng mối lúc chỉ làm việc được với một hệ điều hành.
+      Các máy chủ ESX cung cấp, phân phối và chia sẻ các tài nguyên hệ thống một cách linh hoạt đặc biệt là vì ESX là một hệ điều hành máy chủ nên có thể cung cấp cho các máy ảo khả năng tương tác cao nhất với phần cứng cũng như tài nguyên hệ thống. Vì thế nên các máy ảo có thể đạt hiệu suất làm việc cao nhất. Ngoài hiệu suất thì độ tin cậy của sản phầm ESX Server được người dùng đánh giá cao.
+2.6 Công nghệ ảo hóa Hyper-V
+2.6.1 Giới thiệu Hyper-V
+      Hyper-V chính là công nghệ ảo hóa thế hệ mới dựa trên Hypervisor, khai thác phần cứng Server 64-bit thế hệ mới. Người dùng (chủ yếu là doang nghiệp) không cần phải mua thêm phần mềm để khai thác các tính năng ảo hóa. Kiến trúc mới Hyper-V cho phép các nhóm phát triển nội bộ và các nhà phát triển phần mềm của hãng thứ ba cải tiến công nghệ này và các công cụ. Với Hyper-V, Microsoft cung cấp một nền tảng ảo hóa mạnh và linh hoạt, có thể đáp ứng nhu cầu ảo hóa mọi cấp độ cho môi trường doang nghiệp. Hyper-V có 3 phiên bản Windows Server 2008 64-bit là Standard (một máy ảo), Enterprise (4 máy ảo) và Datacenter (không giới hạn số lượng máy ảo). Tuy nhiên nó hỗ trợ hệ điều hành khách trên cả 32-bit và 64-bit.
+2.6.2 Các chức năng chính của Hyper-V
+      Hyper-V cung cấp cơ sở hạ tầng phần mềm và các công cụ quản lý cơ bản mà bạn có thể sử dụng để tạo ra và quản lý một môi trường điện toán máy chủ ảo hóa. Môi trường ảo này có thể được sử dụng để giải quyết một loạt các mục tiêu kinh doanh nhằm nâng cao hiệu quả và giảm chi phí. Một môi trường máy chủ ảo hóa có thể giúp doanh nghiệp: Giảm chi phí vận hành và duy trì các máy chủ vật lý bằng cách tăng sử dụng phần cứng của bạn. Bạn có thể giảm số lượng phần cứng cần thiết để chạy khối lượng công việc máy chủ của bạn. Tăng cường phát triển và hiệu quả kiểm tra bằng cách giảm số lượng thời gian cần thiết để thiết lập phần cứng và phần mềm và tái tạo môi trường kiểm tra.
+      Cải thiện tính sẵn sàng phục mà không cần sử dụng nhiều máy tính vật lý như bạn sẽ cần trong một cấu hình chuyển đổi dự phòng mà chỉ sử dụng máy tính vật lý. 
+           
+
+
+Những điểm nổi bật của Hyper-V:
+- Broad Operating System Support: khả năng hỗ trợ đa dạng các hệ điều hành của máy trạm khác nhau bao gồm cả 32 bit lẫn 64 bit và đa dạng về nền tảng máy chủ như Windows, Linux…
+- Hardware Assisted Virtualization: yêu cầu cao về hệ thống phải có hỗ trợ         Intel-VT hoặc AMD-V khi triển khai.
+- Symmetric Multiproccessor Support: hỗ trợ 4 bộ vi xử lý cho một môi trường máy ảo từ đó tận dụng được lợi thế nhiều luồng ứng dụng được xử lý trên một máy ảo.
+- Virtual Machine Snapshots: cho phép chụp lại cấu hình và tình trạng của một máy ảo ở bất kỳ thời điểm nào, cung cấp khả năng khôi phục lại các Snapshot hiện hành nào đó chỉ vài giây. Giúp cho việc khôi phục lại hiện trạng ban đầu của các máy trạm khi bị lỗi một cách nhanh chóng, không tốn nhiều thời gian. Chức năng Snapshot  Hyper-V được thiết kế đặc biệt để kiểm tra và phát triển môi trường, không phải trong cấu trúc làm việc.
+- Hot adding and hot removal of storage: với tính năng này thì có thể tách riêng phần mềm chạy trên một phần cứng, dễ dàng triển khai và quản lý. Với sự linh hoạt này thì khả năng mở rộng cũng như giảm bớt được việc lưu trữ tách biệt các máy ảo. Với Windows Server 2008 R2 Hyper-V, đã thêm khả năng thêm và xóa các đĩa cứng ảo từ một máy ảo khi nó vẫn trong tình trạng hoạt động.
+- Dynamic Memory : trong phiên bản Windows Server 2008 R2 SP1 có một tính năng mới được gọi là Dynamic Memory dành cho máy chủ Hyper-V cho phép quản lý tự động các yêu cầu về bộ nhớ ảo trong Hyper-V Server. Cluster Share Volumes được thực hiện cho độ sẵn sàn cao trong giải pháp Failover Clustering.
+2.6.3 Kiến trúc Hyper-V
+      Hyper-V gồm 3 thành phần chính: Hypervisor, ngăn ảo hóa và mô hình I/O (nhập/xuất) ảo hóa mới. Hypervisor là lớp phần mềm rất nhỏ hiện diện ngay trên bộ xử lý theo công nghệ Intel-V hay AMD-V, có vai trò tạo các “partition” (phân vùng) mà thực thể ảo sẽ chạy trong đó.
+      Một partition là một đơn vị cách ly về mặt luận lý và có thể chứa một hệ điều hành làm việc trong đó. Luôn có ít nhất 1 partition gốc chứa Windows Server 2008 và ngăn ảo hóa, có quyền truy cập trực tiếp các thiết bị phần cứng.
+      Partition gốc tiếp theo có thể sinh các partition con (được gọi là máy ảo) để chạy các hệ điều hành khách. Một partition co cũng có thể sinh tiếp các partition con của mình.
+      Máy ảo không có quyền truy cập đến bộ xử lý vật lý, mà chỉ “nhìn thấy” bộ xử lý được Hypervisor cấp cho. Máy ảo cũng chỉ sử dụng được thiết bị ảo, mọi yêu cầu đến thiết bị ảo sẽ được chuyển qua VMBus đến thiết bị ở partition cha. Thông tin hồi đáp cũng được chuyển qua VMBus. Nếu thiết bị ở partition cha cũng là thiết bị ảo, nó sẽ được chuyển tiếp cho đến khi gặp được thiết bị thực ở partition gốc. Toàn bộ tiến trình trong suốt đối với hệ điều hành khách.
+      Hyper-V được tích hợp sẵn trong hệ điều hành Windows Server, và Hypervisor móc trực tiếp đến các luồng xử lý của bộ xử lý, nhờ vậy việc vận hành ảo hóa hiệu quả hơn so với kiến trúc ảo hóa trước đây.
+2.6.4 Lợi ích của Hyper-V
+      Ngoài lợi ích mà công nghệ ảo hóa mang lại đó là tiết kiệm chi phí và tận dụng tối đa nguồn tài nguyên máy chủ, công nghệ ảo hóa Hyper-V còn mang đến nhiều lợi ích hơn nữa cho người sử dụng:
+- Giảm chi phí phần cứng và vận hành đến 50%
+- Triển khai nhanh chóng, dễ dàng, tự động quản lý các tài nguyên trên máy chủ và các máy chủ ảo tối ưu hơn.
+- Quản lý hạ tầng bằng cách quản lý tập trung giúp đơn giản hóa đi rất nhiều.
+- Quản lý tài nguyên máy chủ một cách tự động hóa.
+- Khi thực hiện các nhiệm vụ bảo trì thông thường: nâng cấp phần cứng, cập nhật hệ điều hành… không cần phải ngưng hệ thống.
+- Khi gặp lỗi sẽ tự động khởi động lại.
+- Thời gian phục hồi nhanh do dễ dàng sao chép.
+2.6.5 Hạn chế
+      Các chương trình phụ thuộc vào phần cứng cụ thể sẽ không hoạt động tốt trong máy ảo. Ví dụ: trò chơi hoặc ứng dụng yêu cầu xử lý với GPU có thể không hoạt động tốt. Ngoài ra, các ứng dụng dựa trên các bộ đếm thời gian phụ 10ms như các ứng dụng mix nhạc trực tiếp hoặc thời gian chính xác cao có thể gặp sự cố khi chạy trên máy ảo.
+      Ngoài ra, nếu bạn đã bật Hyper-V, các ứng dụng có độ trễ, độ nhạy cao, độ trễ này cũng có thể gặp sự cố khi chạy trên máy chủ. Điều này là do ảo hóa được kích hoạt, hệ điều hành máy chủ cũng chạy trên lớp ảo hóa Hyper-V, giống như hệ điều hành khách làm.
+      Tuy nhiên, không giống như khách, hệ điều hành máy chủ đặc biệt ở chỗ nó có quyền truy cập trực tiếp vào tất cả phần cứng, có nghĩa là các ứng dụng có yêu cầu phần cứng đặc biệt vẫn có thể chạy mà không có sự cố trong hệ điều hành chủ.  
+2.7 Tính sẵn sàng cao (High Availability)
+      Là các nhóm máy tính hỗ trợ các ứng dụng máy chủ có thể được sử dụng một cách đáng tin cậy với thời gian ngừng hoạt động tối thiểu. High Availability là một đặc tính của hệ thống nhằm mục đích đảm bảo mức hiệu suất hoạt động đã thỏa thuận, thường là thời gian hoạt động trong thời gian cao hơn bình thường.
+2.7.1 Nguyên lý hoạt động
+      Các cụm HA thường sử dụng kết nối mạng riêng nhịp tim được sử dụng để theo dõi tình trạng và tình trạng của từng nút trong cụm. Một điều kiện tinh tế nhưng nghiêm trọng mà tất cả các phần mềm phân cụm phải có khả năng xử lý là chia khả năng lưu trữ dữ liệu, khi tất cả các liên kết riêng bị hỏng đồng thời, nhưng các nút cụm vẫn đang chạy. Nếu điều đó xảy ra, mỗi nút trong cụm có thể quyết định nhầm rằng mọi nút khác đã bị hỏng và cố gắng khởi động các dịch vụ mà các nút khác vẫn đang chạy. Có các phiên bản dịch vụ trùng lặp có thể gây ra hỏng dữ liệu trên bộ nhớ chia sẻ.
+      Các cụm HA cũng thường sử dụng lưu trữ sao lưu trên một thiết bị lưu trữ dự phòng để tránh trường hợp này. Một thiết bị lưu trữ dự phòng không thể được chia sẻ giữa hai nửa của cụm phân tách, do đó trong trường hợp tất cả các thành viên của cụm không thể liên lạc với nhau hoặc nếu một thành viên không thể truy cập vào thiết bị lưu trữ dự phòng thì nó không thể hoạt động.
+      
+    Hình 2.1: Nguyên lý hoạt động của HA
+2.7.2 Độ tin cậy
+      Các cụm HA thường sử dụng tất cả các kỹ thuật có sẵn để làm cho các hệ thống riêng lẻ và cơ sở hạ tầng dùng chung đáng tin cậy nhất có thể. Bao gồm các:
+- Phản chiếu đĩa để lỗi đĩa bên trong không dẫn đến sự cố hệ thống. 
+- Kết nối mạng dự phòng để lỗi cáp, chuyển đổi hoặc giao diện mạng không dẫn đến mất mạng.
+- Các kết nối mạng vùng lưu trữ dự phòng sao cho các lỗi cáp, chuyển đổi hoặc giao diện đơn lẻ không dẫn đến mất kết nối với bộ lưu trữ.
+- Đầu vào điện dự phòng trên các mạch khác nhau, thường là cả hai hoặc tất cả được bảo vệ bởi các đơn vị cung cấp điện liên tục và các đơn vị cung cấp điện dự phòng, do đó việc cấp nguồn đơn, cáp, UPS hoặc mất điện không dẫn đến mất điện cho hệ thống.
+      Các tính năng này giúp giảm thiểu khả năng chuyển đổi dự phòng giữa các hệ thống sẽ được yêu cầu. Trong một chuyển đổi dự phòng như vậy, dịch vụ được cung cấp không có sẵn trong ít nhất một thời gian, vì vậy các biện pháp để tránh chuyển đổi dự phòng được ưu tiên.
+2.8 Cân bằng tải
+      Là một phương pháp phân phối khối lượng tải trên nhiều máy tính hoặc một cụm máy tính để có thể sử dụng tối ưu các nguồn lực, tối đa hóa thông lượng, giảm thời gian đáp ứng và tránh tình trạng quá tải trên máy chủ.
+      Khi hệ thống hoạt động với hiệu suất cao, các máy ảo hoạt động tích cực trên 70% sẽ được chuyển từ máy chủ bận rộn sang máy chủ rảnh khác.
+      Khi một máy chủ ngừng hoạt động, rất có thể nó khiến công ty của bạn mất tiền. Nếu là của bạn mạng chứa một trang web hoặc cơ sở dữ liệu bên ngoài kiểm soát việc bán hàng, đặt hàng của bạn, hàng tồn kho, hoặc sản xuất, thời gian chết máy chủ có thể gây bất lợi cho các nhu cầu kinh doanh này. Nếu như nó là một máy chủ nội bộ, nó có thể không cho phép người dùng của bạn thực hiện công việc của họ. Trong cả hai trường hợp, công ty của bạn mất tiền thông qua doanh thu hoặc thông qua năng suất.
+2.9 Failover Cluster trong Windows
+2.9.1 Windows Failover Clustering
+      Windows Failover Clustering là công nghệ của Microsoft để cung cấp tính sẵn sàng cao tại cấp độ máy chủ. Windows Failover Clustering cơ bản là liên quan đến việc sử dụng nhiều Server trong một nhóm hoặc cụm. Nếu một trong các Server trong Cluster có một lỗi từ hệ thống, khi đó một trong các Server khác trong Cluster sẽ đảm nhận khối lượng công việc của Server bị lỗi đó. Mỗi Server vật lý trong Cluster được gọi là một Node, và các Node làm việc cùng nhau để tạo thành Cluster. Tất cả các Node trong một Failover Cluster liên tục giao tiếp với nhau. Nếu một trong các Node trong Cluster mất liên lạc với các Node khác trong Cluster thì một trong những Node khác sẽ tự động nhận nhiệm vụ của mình là đảm nhận các dịch vụ của Node bị mất liên lạc đó. Quá trình này được gọi là Failover. Node bị hỏng đó sẽ được khôi phục lại. Quá trình này được gọi là Failback.
+      Khi hệ thống có Node bị Downtime, Windows Failover Cluster sẽ khởi động lại các dịch vụ bị lỗi hay các ứng dụng trên một trong các Node còn lại. Thời gian cần thiết để hoàn thành Failover phụ thuộc một phần vào phần cứng được sử dụng và phần còn lại là vào chất lượng của dịch vụ hoặc ứng dụng.
+      
+    Hình 2.2: Mô hình Failove Clustering
+
+
+2.9.2 Các thành phần của Failover Clustering.
+• Cluster Node
+      Mỗi Server tham gia trong Cluster được gọi là một Cluster Node. Chúng cần được kết nối với nhau. Các Cluster Node phải liên lạc thường xuyên với nhau để xác định tình trạng của từng Node. Kết nối này được gọi là Cluster Heartbeat. Tất cả Cluster Node cần phải chạy cùng một phiên bản của Windows Server. 
+• Cluster Service
+      Cluster Service là thành phần chính để điều khiển hoạt động của Failover Cluster. Cluster Service chạy trên tất cả Cluster Node và được quản lý bởi Failover Cluster Manager.
+• Địa chỉ IP ảo và tên của Cluster
+      Địa chỉ IP ảo và tên Cluster được đặt duy nhất cho các cluster, và chúng khác nhau về giá trị tùy thuộc vào từng Cluster Node. Địa chỉ IP ảo và tên Cluster là các thông tin mà các Client đã kết nối với nhau sử dụng để kết nối với Cluster. Điều này cho phép các Client minh bạch trong kết nối với Cluster Service và Application sau quá trình Failover.
+• Cluster Quorum
+      Mục đích của các Fluster Quorum là xác định node nào sẽ tham gia vào Cluster trong trường hợp hỏng phần cứng, mạng ngừng hoạt động và các Cluster Node không giao tiếp được với nhau.
+      Windows Failover Cluster hỗ trợ nhiều loại Quorum để giải quyết các cách sắp xếp Cluster và sự khác nhau về số lượng Node.
+• Service và Application
+      Các Service và Application của Cluster về cơ bản được đĩnh nghĩa là duy nhất trong Failover. Trong các phiên bản trước của Failover Clustering, chúng đã được định nghĩa như là các nhóm tài nguyên. Tại bất kỳ thời điểm nào Service hoặc Application chỉ được sở hữu bởi một Cluster Node. Nếu Cluster Node đó bị Fail thì Cluster Node khác sẽ sỡ hữu nhóm Resource và khởi động trên Node đó. Ta có thể cấu hình các Node ưu tiên mà một Service hay Application sẽ Failover. Các tài nguyên sẽ được kiểm tra trạng thái bằng một công cụ có tên là LooksAlive, nó sẽ kiểm tra tình trạng hoạt động cho các Application. Mặc định thì SQL Server dùng LooksAlive để test trạng thái 5s/lần.
+• Shared Storage
+      Cluster yêu cầu phải có 1 ổ lưu trữ chung vì nó không thể xây dựng bằng cách truy cập lưu lượng trực tiếp được. Ổ lưu trữ chung ở đây có thể dùng iSCSI SAN (Storage Area Network) hoặc Fibre Channel SAN. Đối với SQL Server một Shared Disk Resource chứa tất cả hệ thống và User Database, log, các FileStream, và tích hợp file full-text search. Trong trường hợp failover, các đĩa được định vị vào một backup node, và khi đó dịch vụ SQL Server sẽ được khởi động lại trên node đó.
+2.9.3 Chức năng của failover clustering
+      Windows Failover Clustering cung cấp các chức năng chính sau:
+- Automatic Failover: khi một Node Fail, Cluster sẽ tự động chuyển các Service đến một Node dự phòng khác.
+- Rapid Failover: quá trình Failover hoàn tất chỉ trong khoảng 30s.
+- Transparent to clients: sau khi failover, các client có thể ngay lập tức kết nối lại vào Cluster mà không phải thay đổi đường mạng khác.
+- Transactional Integrity: Không bị mất dữ liệu. Đối với SQL Server, tất cả các Committed Transaction được lưu và cấp lại cho Database sau khi quá trình Failover  hoàn tất.
+2.9.4 Cấu trúc của cluster
+      Trong Cluster tùy theo nhu cầu mà chúng ta có thể triển khai nhiều ứng dụng trên cùng 1 Cluster hay cài đặt trên mỗi Node 1 ứng dụng, nói chung cấu trúc của 1 Cluster không cố định nhưng chủ yếu chúng ta thấy hữu ích nhất là các loại cấu trúc sau: 
+− Thứ 1: Nếu ta triển khai 2 ứng dụng Stateful trên hệ thống Cluster thì có 1 phương pháp đơn giản là cài đặt cả 2 ứng dụng ấy vào mỗi Node của Cluster. Ở cấu trúc này thì 2 ứng dụng trên cùng 1 Server do đó nếu ứng này bị lỗi thì sẽ ảnh hưởng đến ứng dụng kia, hiệu quả của hệ thống Cluster thấp.
+      
+    Hình 2.3: Hệ thống cluster có 2 ứng dụng chạy song song trên mỗi Node
+− Thứ 2: Tạo 2 hệ thống Cluster riêng lẻ, trong mỗi Cluster cài đặt duy nhất 1 ứng dụng. Ở cấu trúc này thì hệ thống sẽ hiệu quả hơn nếu có ứng dụng nào đó bị lỗi thì cũng không ảnh hưởng đến các ứng dụng khác. Nhưng chi phí đầu tư cho kiểu này rất cao bởi vì số lượng các Node cho mỗi ứng dụng nhiều hơn loại 1.
+      
+    Hình 2.4: Hai hệ thống Cluster độc chứa 2 ứng dụng khác nhau
+− Thứ 3: Triển khai cả 2 ứng dụng trên cùng 1 Cluster, mỗi Node cài 1 ứng dụng nhưng khác với loại 1 là sẽ có 1 Cluster làm nhiệm vụ Backup. Cụ thể như hình 3 cho ta thấy hệ thống này có 1 Node Passive dùng làm Backup và cài cả 2 ứng dụng của Node 1 và Node 2 (2 Node Active). Nếu 1 trong 2 Node này bị lỗi thì Node Passive sẽ thay thế chức năng của Node bị lỗi. Hệ thống này có hiệu quả cao hơn 2 loại trước.
+      
+    Hình 2.5: Hai Node Active được dự phòng bởi Node Bassive
+2.9.5 Chế độ hoạt động
+      Mỗi máy chủ trong Cluster được gọi là một Node (Cluster Node), và có thể được thiết lập ở chế độ chủ động (Active) hay thụ động (Passive). Khi một Node ở chế độ chủ động, nó sẽ chủ động xử lý các yêu cầu. Khi một Node là thụ động, nó sẽ nằm ở chế độ dự phòng nóng (Stanby) chờ để sẵn sàng thay thế cho một Node khác nếu bị hỏng.
+      Trong một Cluster có nhiều Node có thể kết hợp cả Node chủ động và Node thụ động. Trong những mô hình loại này việc quyết định một Node được cấu hình là chủ động hay thụ động rất quan trọng. Để hiểu lý do tại sao, hãy xem xét các tình huống sau:
+- Nếu một Node chủ động bị sự cố và có một Node thụ động đang sẵn sàng, các ứng dụng và dịch vụ đang chạy trên Node hỏng có thể lập tức được chuyển sang Node thụ động. Vì máy chủ đóng vai trò Node thụ động hiện tại chưa chạy ứng dụng hay dịch vụ gì cả nên nó có thể gánh toàn bộ công việc của máy chủ hỏng mà không ảnh hưởng gì đến các ứng dụng và dịch vụ cung cấp cho người dùng cuối.
+- Nếu tất cả các máy chủ trong Cluster là chủ động và có một Node bị sự cố, các ứng dụng và dịch vụ đang chạy trên máy chủ hỏng sẽ phải chuyển sang một máy chủ khác cũng đóng vai trò Node chủ động. Vì là Node chủ động nên bình thường máy chủ này cũng phải đảm nhận một số ứng dụng hay dịch vụ gì đó, khi có sự cố xảy ra thì nó sẽ phải gánh thêm công việc của máy chủ hỏng. Do vậy để đảm bảo hệ thống hoạt động bình thường kể cả khi có sự cố thì máy chủ trong Cluster cần phải có cấu hình dư ra đủ để có thể gánh thêm khối lượng công việc của máy chủ khác khi cần.
+      Trong cấu trúc Cluster mà mỗi Node chủ động được dự phòng bởi một Node thụ động, các máy chủ cần có cấu hình sao cho với khối lượng công việc trung bình chúng sử dụng hết khoảng 50% CPU và dung lượng bộ nhớ.
+      Trong cấu trúc Cluster mà số Node chủ động nhiều hơn số node bị động, các máy chủ cần có cấu hình tài nguyên CPU và bộ nhớ mạnh hơn nữa để có thể xử lý được khối lượng công việc cần thiết khi một node nào đó bị hỏng.
+      Các Node trong một Cluster thường là một bộ phận của cùng một vùng (Domain) và có thể được cấu hình là máy điều khiển vùng (Domain Controllers) hay máy chủ thành viên. Lý tưởng nhất là mỗi Cluster nhiều Node có ít nhất 2 Node làm máy điều khiển vùng và đảm nhiệm việc Failover đối với những dịch vụ vùng thiết yếu. Nếu không như vậy thì khả năng sẵn sàng của các tài nguyên trên Cluster sẽ bị phụ thuộc vào khả năng sẵn sàng của các máy điều khiển trong Domain.
+2.9.6 Tính mở của cluster
+      Một vấn đề mà các nhà đầu tư xây dựng hệ thống cần quan tâm là khả năng mở rộng của hệ thống Clustering. Tuỳ theo yêu cầu cụ thể các cluster có thể cần phải thêm các máy chủ vào Cluster, hoặc thêm CPU và RAM cho các máy chủ để tăng khả năng đảm nhận công việc cho các máy chủ đã có.
+2.9.7 Hệ thống lữu trữ iSCSI
+      ISCSI được xem như một tiêu chuẩn giao thức phát triển nhằm mục đích truyền tải các lệnh SCSI qua mạng IP bằng giao thức TCP/IP. Từ đó iSCSI cho phép truy cập các khối dữ liệu trên hệ thống lưu trữ SAN qua các lệnh SCSI và truyền tải dữ liệu qua hệ thống mạng Network.
+      iSCSI sử dụng không gian lữu trữ ảo, chủ yếu cạnh tranh với Fabre Channel, khác với Fabre Channel truyền thống , thường đồi hỏi cáp chuyên dụng, iSCSI có thể chạy trên các khoảng cách xa bằng khoảng cách sử dụng hạ tầng mạng hiện có.
+• Lợi ích
+      Chi phí rẻ hơn so với đầu tư hệ thống lưu trữ Fibre Channel.
+      Không tốn nhiều thời gian và chi phí đầu tư đào tạo quản trị viên quản lý hệ thống lưu trữ.
+      Với việc sử dụng hệ thống mạng đơn giản với thành phần Gigabit Ethernet chuẩn, các công ty tổ chức có thể đơn giản hóa việc tạo dựng một môi trường lưu trữ qua mạng của họ.
+      Các sản phẩm tương thích với iSCSI, môi trường iSCSI SAN có thể dễ dàng triển khai bằng cách tận dụng phần cứng mạng hiện có và các thành phần khác.
+      Là một giao thức dựa trên IP, iSCSI tận dụng lợi ích của TCP/IP và Ethernet.
+      Đặc biệt hiệu quả khi sử dụng với card mạng Ethernet 10G phổ biến.
+      
+    Hình 2.6: iSCSI
+CHƯƠNG 3: TRIỂN KHAI HỆ THỐNG
+3.1 Hiện trạng hệ thống và đề xuất giải pháp
+3.1.1 Hiện trạng hệ thống
+      Hệ thống mạng hiện có của nhà trường:
+- Hệ thống mạng hiện tại của CS2 sử dụng mạng FTTH 80Mbps.
+- Tường lửa đang sử dụng là tường lửa TMG 2010, sẽ quản lý mọi dữ liệu ra vào của hệ thống mạng.
+- Từ tường lửa được chia mạng xuống Switch layer 3, sau đó được chuyển qua Switch cấp 2 rồi chuyển đến các phòng.
+- Máy chủ quản lý và cung cấp, chia sẻ dữ liệu cho toàn bộ hệ thống. 
+- Đã trang bị hệ thống mạng không dây. 
+      
+    Hình 3.1: Sơ đồ hệ thống
+      Hệ thống hiện tại đang hoạt động theo nguyên lý như sau: Từ nguồn Internet FTTH 80Mbps sẽ đi qua một thiết bị định tuyến là Virgo 2925 sau đó đi qua tường lửa TMG 2010. Từ tường lửa được chia mạng xuống Switch layer 3 xong đi theo 2 hướng là đi vào hệ thống máy chủ quản lý tập chung và một hướng đi đến Switch cấp 2 và đến các phòng ban.
+3.1.2 Yêu cầu hệ thống
+      Hệ thống mà nhà trường đang hoạt động sử dụng các 2 Server hoạt động riêng lẻ, độc lập quản lý tài nguyên và dữ liệu sự hoạt động không thực sự hiệu quả. Hiện tại nhà trường đang có nhu cầu nâng cấp và mở rộng hệ thống với nhiều dịch vụ hơn như Server quản lý hệ thống Wifi, một số dịch vụ khác. Việc đầu tư cơ sở vật chất cũng như Server vật lý là bất khả thi, chi phí đầu tư cao. Để khắc phục hiện trạng mà hệ thống cũ đang triển khai gặp phải khi đang hoạt động với số Server hoạt động riêng biệt cho nhiều mục đích khác nhau. Sự hoạt động đó dẫn đến việc đầu tư Server vật lý và khi có nhu cầu cần thêm Server cho các dịch vụ hoặc ứng dụng mới thì chi phí rất cao, tốn kém. Khi hệ thống hoạt động với nhiều Server vật lý độc lập như vậy gây lãng phí tài nguyên về phần cứng. Hệ thống hoạt động không hiệu quả.
+      Thực hiện tiến hành xây dựng hệ thống sử dụng phương pháp ảo hóa Hyper-V nhằm đảm bảo khả năng làm việc hiệu quả, tận dụng hết tài nguyên phần cứng của Server vật lý. Xây dựng giải pháp Failover Cluster để tạo cho hệ thống có khả năng chống chịu lỗi giúp hệ thống hoạt động không bị gián đoạn.
+3.1.3 Giải pháp thực hiện
+      Để đảm bảo khả năng sẵn sàng cao cùng với khả năng chống chịu lỗi tốt ta triển khai mô hình Failover Clustering. Để thực hiện được hệ thống này ta cần thực hiện:
+- Cài đặt 2 Server làm 2 Node cài đặt Hyper-V đóng vai trò máy chủ động cài đặt, dịch vụ chạy trên máy và máy thụ động dùng để dự phòng cho trường hợp sự cố sẽ gánh vác công việc mà máy chủ động đang đảm nhiệm một cách nhanh chóng, hoàn thiện.
+- Một Server làm iSCSI và DC để dùng chung dữ liệu. Ta cài đặt và cấu hình Failover Cluster trên 2 Server 2 Node để chia sẻ File và đồng bộ dữ liệu vào iSCSI.
+      
+    Hình 3.2: Sơ đồ giải pháp
+3.1.4 Các bước triển khai
+      Bước 1: Thực hiện cài đặt máy chủ iSCSI và nâng cấp máy chủ lên Domain Controller với tên miền là: utehy.edu.vn
+- Cài đặt Windows Server 2016
+- Đặt tên và địa chỉ IP
+- Nâng cấp lên Active Directory (AD)
+      Bước 2: Cài đặt 2 máy chủ Hyper-V
+- Cài đặt Windows Server 2016
+- Đặt tên và địa chỉ IP
+- Cài đặt Hyper-V
+- Join vào Domain
+      Bước 3: Cài đặt iSCSI trên DC
+- Add Role iSCSI Target Server
+- Tạo Disk iSCSI
+      Bước 4: Cấu hình iSCSI initiator trên 2 máy chủ Hyper-V
+- Chạy iSCSI Initiator
+- Sử dụng Disk Management để thêm Disk
+      Bước 5: Cài đặt và cấu hình Failover Clustering
+- Add Role Failover Clustering trên máy chủ Hyper-V
+- Cấu hình Failover Clustering
+      Bước 6: Kiểm tra hoạt động
+3.2 Mô phỏng quá trình thực hiện
+3.2.1 Nâng cấp máy chủ lên domain controller
+      Triển khai một máy Server chạy hệ điều hành Windows Server 2016 thực hiện nâng cấp lên Domain Controller.
+      Mở Server Manager lên, sau đó chọn Add Roles and Features.
+      
+    Hình 3.3: Giao diện Server Manager
+      Màn hình giới thiệu chọn Next để qua bước tiếp theo
+      
+    Hình 3.4: Màn hình Before You Begin
+      Màn hình Select Installation Type. Chọn Role based or…..Click Next
+      
+    Hình 3.5: Lựa chọn Installation Type
+      Màn hình Select Destination Server, Chọn Select a Server from the server pool, Click Next
+      
+    Hình 3.6: Màn hình Server Selection
+      Ở màn hình Select Server Roles, bạn đánh dấu chọn vào ô Active Directory Domain Service
+      
+    Hình 3.7: Lựa chọn Server Roles
+      Sau đó click Next,
+      
+    Hình 3.8: Màn hình Features
+      Các bước còn lại bạn nhấn Next theo mặc định. Màn hình Confirm Installation selections, nếu bạn đánh dấu chọn vào ô Restart the destination server automatically if required (hệ thống sẽ tự khởi động lại khi có yêu cầu), sau đó Click Install, để bắt đầu cài đặt.
+      
+    Hình 3.9: Tùy chọn Confirmation
+      Sau khi hoàn tất, màn hình Installation progress nhấp vào Promote this Server to a domain controller.
+      
+    Hình 3.10: Màn hình Results
+      Màn hình Deployment Configuration, chương trình cung cấp cho bạn ba tùy chọn: 
+• Add a domain controller to an existing domain: Thêm một ADC vào domain có sẵn.
+• Add a new domain to an existing forest: Xây dựng domain mới trong forest có sẵn.
+• Add new forest: xây dựng máy DC đầu tiên của forest.
+      Do chúng ta đang xây dựng DC đầu tiên nên Bạn chọn vào tùy chọn đầu tiên là Add a new forest.
+      + Mục Specify the domain information for this operation, nhập vào tên domain tên của công ty mà bạn muốn làm DC
+      Sau đó, click Next
+      
+    Hình 3.11: Giao diện Deployment Configuration
+      Màn hình Domain Controller Options,
+      Forest functional Level và Domain functional Level: tùy theo hệ thống đang sử dụng các phiên bản Windows Server nào thì ta chọn cho tương ứng. 
+      Đánh dấu chọn vào ô Domain Name System (DNS) server để cài đặt thêm DNS cho PDC.
+      Tiếp theo bên dưới là ô Global Catalog (GC). Mục này bắt buộc vì PDC đầu tiên cũng chính là GC.
+      Bên dưới là mục Type the Directory Services Restore Mode (DSRM) password, nhập vào mật khẩu. Mật khẩu này sẽ được dùng để khôi phục AD ở chế độ Restore Mode.
+      Lưu ý: Password nên bao gồm; ký tự hoa, thường, đặc biệt hoặc ký tự số và từ 7 ký tự trở lên, sau đó click Next,
+      
+    Hình 3.12: Lựa chọn Domain Controller Options
+
+
+      Màn hình DNS Options, bạn Click Next,
+      
+    Hình 3.13: Màn hình DNS Options
+      Tại đây có thể đặt lại tên NetBIOS domain name hoặc sử dụng tên mặc định, sau đó click next.
+      
+    Hình 3.14: Chọn Addtional Option
+      Màn hình Paths, trỏ đường dẫn đến nơi cần lưu cơ sở dữ liệu của PAD, log files và SYSVOL. click Next,
+      
+    Hình 3.15: Màn hình Paths
+      Các bước còn lại nhấn Next theo mặc định. Màn hình Prerequisites Check, khi nhận được thông báo “All prerequisites check passed successfully” nghĩa là quá trình kiểm tra điều kiện để cài đặt DC đã thành công. Click Install để bắt đầu cài đặt.
+      
+    Hình 3.16: Prerequisites Check
+      Sau khi cài đặt hoàn tất, bạn phải khởi động lại máy tính để hoàn thành quá trình xây dựng Active Directory Domain Services.
+3.2.2 Cài đặt Hyper-V
+      Mở cửa sổ Server Manager -> chọn Add Roles Windows sẽ hiển thị Add Roles Wizard. Chọn Next. Trong màn hình Select Server Roles, tích chọn Hyper-V -> Next.
+      
+    Hình 3.17: Giao diện Select Server Roles
+Trong màn hình Hyper-V giới thiệu những thông tin tổng quan về dịch vụ Hyper-V.
+Chọn Next để tiếp tục.
+      
+    Hình 3.18: Giới thiệu tổng quan về dịch vụ Hyper-V
+Trong màn hình Creat Virtual Switches, chọn một hoặc nhiều card mạng để tạo mạng ảo, chọn ít nhất một card mạng để các máy có thể giao tiếp với nhau ->Next.
+      
+    Hình 3.19: Màn hình lựa chọn card mạng
+
+
+Trong màn hình Confirm Installation Selections, chọn Install để bắt đầu cài đặt.
+      
+    Hình 3.20: Giao diện xác nhận cài đặt
+Khởi động hoàn thành, màn hình Installation Progress xuất hiện trở lại, nhận được thông báo Installation succeeded. Chọn Close để hoàn thành thao tác cài đặt.
+      
+    Hình 3.21: Cài đặt Hyper-V hoàn thành
+
+
+3.2.3 Cấu hình iSCSI
+      Từ Server Manager, chọn Manage và nhấn vào Add Roles and Features
+      
+    Hình 3.22: Giao diện Server Manager
+      Chọn Server Roles: Roles > Hãy chọn File and iSCSI Services > Chọn File Server và chọn thêm iSCSI Target Server
+      
+    Hình 3.23: Tùy chọn Server Roles
+      Chọn Next để mở tiếp trang xác nhận các phần tính năng mới cần cài
+      Bấm Install để hoàn thành việc cài tính năng mới
+      
+    Hình 3.24: Màn hình Comfirmation 
+      Bây giờ tạo ra LUN hoặc ổ đĩa ảo. Mở Server Manager, chọn “File and Storage Services” và sau đó nhấp vào tab “iSCSI”. Nhấn vào Tasks và chọn New iSCSI Virtual Disk.
+      ISCSI Wizard đĩa ảo mới sẽ mở ra. Chọn máy chủ và chọn Volume và kích “Next”. 
+      
+    Hình 3.25: Màn hình iSCSI Virtual Disk Location
+      Chọn tên ổ đĩa ảo để lưu. Ở đây, tôi chọn C:, nhập tên thư mục và tên file để lưu và nhấn Next. 1 tên file có đuôi VHDX xuất hiện, các định dạng file này là chuẩn Hyper V sử dụng cho các ổ đĩa ảo của máy ảo Hyper V.
+    
+      
+    Hình 3.26: Tùy chọn iSCSI Virtual Disk Name
+      Xác định kích thước đĩa ảo. Chọn loại đĩa, ở đây tôi đã chọn Dynamically expanding để không gian đĩa sẽ không được sử dụng hơn. Nhấn Next.
+      
+    Hình 3.27: Màn hình iSCSI Virtual Disk Size
+      Trong trang “Assign iSCSI target”, chọn “new iSCSI target” và bấm “Next”
+    Hình 3.28: iSCSI Target
+      Nhập tên mới cho Target Server
+      
+    Hình 3.29: Tùy chọn Target Name And Access
+      Trong tab “Access Server”, nhấn nút Add. Thêm hộp thoại “Initiator id” sẽ mở ra.
+      Có ba cách để có thể xác định “Initiator” (thiết bị sẽ sử dụng ổ đĩa ảo này). Ở đây tôi sẽ chọn IP và nhập IP của Initiator machine. Sau đó bấm OK.
+      
+    Hình 3.30: Màn hình Add Initator ID
+      Trong trang Authenticate Enable, có tùy chọn để sử dụng CHAP hoặc  CHAP cả 2 chiều để xác thực Initiator iSCSI và iSCSI Target. Ở đây, tôi sẽ để trống và nhấn Next.
+      
+    Hình 3.31: Giao diện Enable Authentication
+      Bây giờ xem lại cấu hình và nhấn Create để tạo một đĩa ảo mới hay LUN.
+      
+    Hình 3.32: Màn hình Confirm Selections
+      Sau khi cài đặt, bạn có thể xem các đĩa ảo trong tab iSCSI.
+
+
+3.2.3 Triển khai hệ thống Cluster
+      Cài đặt feature Failover Clustering tại cửa sổ Server Manager
+      
+    Hình 3.33: Features
+      Sau khi hoàn tất việc cài đặt, ta mở giao diện quản lý tại Server Manager -> Tools -> Failover Cluster Manager
+      
+    Hình 3.34: Mở Tools
+      Ở bên góc phải, ta chọn Create Cluster… để tạo một Cluster mới
+      
+    Hình 3.35: Tạo Cluster mới
+      Ở bước Select Servers, ta bấm vào nút Browse… và nhập tên máy rồi bấm OK
+    Hình 3.36: Select Servers
+      Ở bước Validation Warning, ta để ở mặc định là Yes để thực hiện quá trình kiểm tra xem các Server đã đạt yêu cầu để tạo Cluster hay chưa
+      
+    Hình 3.37: Validation Warning
+      Ở bước Testing Options, ta để ở mặc định là Run all tests
+      
+    Hình 3.38: Testing Options
+      Ở bước Comfirmation, ta xác nhận lại các thông tin để tiến hành kiểm tra rồi bấm Next
+      
+    Hình 3.39: Comfirmation
+      Sau khi quá trình kiểm tra hoàn tất, ta sẽ thấy một bảng tóm tắt những thông tin đã đạt hay chưa đạt yêu cầu ở bước Summary. Nếu không có vấn đề gì, ta bấm nút Finish để tiếp tục quá trình tạo Cluster
+      
+    Hình 3.40: Summary
+      Ở bước Access Point for Administrating the Cluster, ta nhập tên của Cluster tại ô Cluster Name, và nhập địa chỉ IP ảo mà người dùng sẽ kết nối tới
+      
+    Hình 3.41: Access Point for Administrati
+      Ta kiểm tra lại các thông tin ở bước Comfirmation rồi bấm Next để tiến hành tạo Cluster
+      
+    Hình 3.42: Comfirmation
+      Vậy là ta đã hoàn tất quá trình tạo một Failover Cluster trên Windows Server 2016
+      
+    Hình 3.43: Hoàn tất quá trình tạo
+3.2.4 Tạo virtual machine trong failover cluster
+      Sau khi cài đặt thành công Failover Cluster, ta tiến hành tạo Virtual Machine thực hiện như sau.
+      Ta click chuột phải vào Role, chọn Virtual Machine, chọn tiếp New Virtual Machine để tạo một máy ảo mới.
+      
+    Hình 3.44: Màn hình tạo Virtual Machine mới
+Ta chọn Next để đến với của sổ tiếp theo.
+      
+    Hình 3.45: Màn hình trước khi bắt đầu tạo
+      Tiếp theo ta chọn Node cụm để tạo máy ảo.
+      
+    Hình 3.46: Màn hình chọn máy cụm để tạo máy ảo
+      Sau đó ta chọn tên của máy ảo, ở đây chọn là "VM" và vị trí lưu trữ máy ảo rồi chọn Next.
+      
+    Hình 3.47: Màn hình dặt tên và vị trí lưu
+      Ở cửa sổ tiếp theo ta sẽ chọn loại máy ảo, trong đó:
+      + Generation 1 hỗ trợ Windows 32-bit và 64-bit, phù hợp với các phiên bản cũ hơn của HyperV, và cũng phù hợp với các hệ điều hành từ Windows 8 trở xuống hoặc Windows server 2008 trở xuống.
+      + Generation 2: chỉ hỗ trợ các hệ điều hành Windows 8 và Windows Server 2012 64bit, có hỗ trợ BIOS UEFI
+      
+    Hình 3.48: Màn hình Specify Generation
+      Tiếp theo mình sẽ chọn dung lượng RAM cho máy ảo. Sau đó nhấn Next.
+      
+    Hình 3.49: Tùy chọn Assign Memory
+      Bước tiếp theo chúng ta sẽ cấu hình mạng cho máy ảo và nhấn Next.
+      
+    Hình 3.50: Màn hình Configure Networking 
+      Tiếp theo ta chọn ổ đĩa cứng đã có sẵn ở trong Storage và nhấn Next.
+      
+    Hình 3.51: Connect Virtual Hard Disk 
+      Cửa sổ này giúp ta check lại thông tin nhanh trước khi tiến hành tạo máy ảo. Nhấn Finish để bắt đầu.
+      
+    Hình 3.52: Màn hình check nhanh thông tin
+      Thông báo đã tạo xong Virtual Machine trong Failover Cluster nhấn Finish để kết thúc.
+      
+    Hình 3.53: Màn hình xác nhận tạo xong
+3.2.5 Kiểm tra hoạt động
+      Sau khi tạo xong Virtual Machine ta sẽ thấy máy ảo xuất hiện trong phần Roles của Failover Cluster Manager.
+      
+    Hình 3.54: Màn hình máy ảo vừa được tạo
+      Ta tiến hành Connect đến máy ảo và có thể cài đặt và sử dụng máy bình thường. Với giải pháp ảo hóa sử dụng cụm chuyển đổi dự phòng Failover Cluster thì khi một trong hai máy bị sự cố thì ngay lập tức hệ thống sẽ được chuyển sang máy dự phòng chạy, tránh sự gián đoạn cho người sử dụng.
+      
+    Hình 3.55: Màn hình Connect máy ảo vừa tạo
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được
+- Hiểu được phương pháp mới về tính khả năng phục vụ của hệ thống Server
+- Biết thêm về những tính năng của Cluster 
+- Nắm được vai trò của Cluster trong hệ thống Server
+- Tìm hiểu thêm về những nội dung liên quan
+- Biết phương pháp triển khai hệ thống một cách tối ưu nhất
+- Nắm được các bước triển khai Cluster trên nền hệ điều hành Windows Server 2016.
+4.2 Hạn chế
+- Hệ thống chưa hoàn toàn hoàn thiện, chưa tối ưu còn nhiều vấn đề cần khắc phục.
+- Vẫn thực hiện hệ thống trên dạng mô hình triển khai trên nền ảo hóa.
+- Tài liệu còn nhiều phần chưa rõ ràng, ít tài liệu.
+4.3 Hướng phát triển
+      Để có thể khắc phục một số mặt hạn chế của đề tài ta có hướng phát triển như sau:
+- Xây dựng và triển khai hệ thống thật và đưa vào thực nghiệm.
+- Học hỏi thêm kinh nghiệm từ người đi trước.
+- Tìm tòi học hỏi thêm tài liệu về đề tài để hiểu thật rõ về đề tài một các tổng quan và chính xác nhất.
+- Nâng cấp và hoàn thiện hệ thống được hoạt động tốt nhất.
+
+
+TÀI LIỆU THAM KHẢO
+      [1]. Crystal Panek; William Panek. MCSA Windows Server 2016 Practice Tests. Wiley. December 2018
+      [2]. William Panek. MCSA Windows Server 2016 Complete Study Guide. Wiley. February 2018.
+      [3]. Bekim Dauti. Windows Server 2016 Administration Fundamentals. Packt Publishing. December 2017.
+      [4]. John Savill. Mastering Windows Server 2016 Hyper-V. Wiley. November 2016.
+Xây dựng giải pháp ảo hóa Hyper-V cho trường ĐHSPKT Hưng Yên
+    
+    
+    5
+
+    

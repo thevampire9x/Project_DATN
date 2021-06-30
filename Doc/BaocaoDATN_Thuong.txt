@@ -1,0 +1,806 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Ngày nay, tự động hóa được ứng dụng ở rất nhiều lĩnh vực với mục đích đa dạng khác nhau. Việc tự động hóa này giúp giảm được thời gian, sự sai sót, và nguồn nhân lực cho mỗi dự án. Ngành công nghệ thông tin, cụ thể là phát triển phần mềm cũng không ngoại lệ. Như chúng ta biết, để tạo ra sản phẩm công nghệ thông tin hay phần mềm có chất lượng thì hoạt động kiểm thử phần mềm đóng vai trò rất quan trọng, do vậy nhu cầu tự động hoá quy trình kiểm thử phần mềm  được đặt ra.
+    Qua thực tế cho thấy, việc áp dụng kiểm thử tự động hợp lý sẽ mang lại thành công cho hoạt động kiểm thử phần mềm. Kiểm thử tự động giúp giảm bớt công sức thực hiện, tăng độ tin cậy, giảm sự nhàm chán và rèn luyện kỹ năng lập trình cho người kiểm thử. Trong các công cụ kiểm thử tự động, không thể không nhắc đến Selenium Webdriver. Nó được biết đến là một công cụ kiểm thử tự động để kiểm thử ứng dụng Web, có thể kiểm thử trên nhiều trình duyệt, hỗ trợ nhiều ngôn ngữ lập trình, giao tiếp được với các công cụ kiểm thử khác như Junit, TestNG (với Java) hay Nunit (với C#).
+    Các quốc gia do đang sử dụng rất nhiều loại frameworks khác nhau như: kiểm thử hướng từ khóa, kiểm thử hướng dữ liệu, kiểm thử hướng lai,...với Selenium Webdriver để kiểm thử phần mềm web. Việc sử dụng các công cụ nào là phụ thuộc vào từng loại phần mềm ứng dụng web của chúng ta.
+    Với mong có cái nhìn xác thực, rõ ràng hơn về quy trình kiểm thử phần mềm, đảm bảo chất lượng phần mềm và tiếp cận với công cụ kiểm thử tự động Selenium, đồng thời rèn kỹ năng làm việc tạo tiền đề định hướng cho tương lai sau khi ra trường. Và với mục đích muốn kiểm thử phần mềm ứng dung web – nơi mà cần sử dụng lượng lớn dữ liệu trong quá trình kiểm thử tự động nên em chọn đề tài “Kiểm thử tự động hướng lai với selenium webdriver cho ứng dụng Web”.
+    
+1.2 Mục tiêu của đề tài
+- Trình bày tổng quan về kiểm thử phần mềm.
+- Trình bày tổng quan về kiểm thử tự động.
+- Trình bày tổng quan về kiểm thử hướng lai.
+- Trình bày tổng quan về công cụ Selenium.
+- Xây dựng được framework kiểm thử hướng lai cho ứng dụng Web.
+- Sử dụng hướng lai với Selenium Webdriver để viết kịch bản kiểm thử tự động cho ứng dụng Website bất kì.
+1.3 Giới hạn và phạm vi của đề tài
+-  Đề tài xây dựng công cụ kiểm thử hướng lai sử dụng Selenium Webdriver và được triển khai trên nhiều trang Web với nhiều chức năng khác nhau.
+- Import dữ liệu từ 2 file excel: (Keyword, Data) vào tool kiểm thử và thực hiện test theo các file được import.
+1.4 Nội dung thực hiện
+- Tìm hiểu và trình bày các kiến thức về kiểm thử phần mềm, kiểm thử tự động, kiểm thử hướng dữ liệu, kiểm thử hướng từ khóa, kiểm thử hướng lai.
+- Tìm hiểu về Selenium Webdriver.
+- Xác định được các phần tử trên Web.
+- Xây dựng kịch bản tự động sử dụng Selenium Webdriver.
+- Xây dựng các từ khóa cơ bản cho một trang Web.
+- Xây dựng bộ dữ liệu đầu vào: Keyword và Data cho các chức năng test.
+- Đọc dữ liệu từ tệp bên ngoài: Excel để lấy dữ liệu test.
+- Thực thi các kịch bản tự động và nhận lại kết quả.
+-  Xây dựng được tool framework hướng lai.    
+   -    Viết tài liệu, báo cáo.
+1.5 Phương pháp tiếp cận
+- Cách Cách tiếp cận : 
+o Selenium Webdriver cho ứng dụng Website.
+o Hybrid Framework (Keyword driven and Data driven) và ứng dụng vào bất kì Website thông qua việc thu thập tài liệu, sách bằng tiếng việt hoặc tiếng anh.
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu.
+o Phương pháp phân tích mẫu.
+o Phương pháp thực nghiệm.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về kiểm thử phần mềm
+2.1.1 Khái niệm
+- Kiểm thử phần mềm là việc kiểm tra kết quả thực hiện của chương trình máy tính xem có đúng với mục tiêu đã đặt ra với nó không thông qua việc thực hiện ở một số mẫu thử.
+- Kiểm thử phần mềm là việc tìm ra lỗi trong bản thân phần mềm, việc kiểm thử này trong phần mềm sẽ biểu thị ra những thiếu sót mà ta có thể nhận thấy trong hành vi của phần mềm, và tìm ra những phần mềm không tuân theo quy định, đi lệch ra khỏi những yêu cầu của phần mềm.
+2.1.2 Mục tiêu, vai trò của việc kiểm thử phần mềm
+- Việc kiểm thử phần mềm là cần thiết để xác định phần mềm được tạo ra có đáp ứng đúng các yêu cầu hay không?
+- Tiết kiệm thời gian và chi phí bởi xác định những thiếu xót sớm.
+- Tránh và giảm bớt thời gian ngừng phát triển.
+- Biết rằng chúng ta đã thỏa mãn được những yêu cầu của khách hàng.
+- Cung cấp cho khách hàng sản phẩm tốt nhất.
+- Phát hiện nhiều lỗi nhất (có thể) trong một khoảng thời gian nhất định (deadline).
+- Xác định xem một sản phẩm phần mềm có đáp ứng các đặc tả yêu cầu của nó hay không?
+- Đảm bảo chất lượng kiểm thử phần mềm với chi phí thấp nhất.
+- Tạo ra các testcase có chất lượng cao, thực hiện các Test có hiệu quả, đưa ra các báo cáo và có ích về vấn đề xảy ra.
+- Cung cấp và duy trì một sản phẩm chất lượng cho khách hàng.
+- Kiểm thử để tìm ra lỗi, ghi nhận thông tin về lỗi nhưng không sửa lỗi.
+- Kiểm thử phần mềm không chỉ cần tìm lỗi phần mềm, mà còn là quá trình kiểm tra và xác minh một phần mềm đã đáp ứng được yêu cầu và mong đợi của khách hàng.
+- Chính vì vậy, việc kiểm thử phần mềm là vô cùng quan trọng vì lỗi phần mềm nếu để lọt thì không chỉ thiệt hại về kinh tế mà còn thiệt hại đến tính mạng con người.
+- 
+2.1.3 Các mức độ kiểm thử phần mềm
+* Kiểm thử mức đơn vị (Unit test):
+• Là hoạt động kiểm tra từng đơn vị thành phần phần mềm riêng biệt của chương trình. 
+• Là một thành phần PM nhỏ nhất mà ta có thể kiểm tra được, đó là các hàm, thủ tục, lớp hoặc các phương thức. 
+• Do lập trình viên thực hiện.
+• Được thực hiện sau khi viết code và trước khi thực hiện Integration test.
+• Nội dung kiểm thử: giao diện, lỗi vào ra, cấu trúc dữ liệu sử dụng cục bộ, dòng điều khiển, điều kiện logic, phép toán xử lý, những lỗi tiềm ẩn.
+• Các kỹ thuật Unit test: Bao phủ câu lệnh - Statement Coverage; Bao phủ nhánh/quyết định – Branch/Decision Coverage; Bao phủ đường đi – Path Coverage.
+* Kiểm thử mức tích hợp (Integrationtest):
+• Kiểm tra giữa các thành phần đơn vị PM khi chúng được tích hợp với nhau mà không quan tâm đến mã lệnh của chương trình. Integration Test tìm ra lỗi xảy ra khi các thành phần PM giao tiếp với nhau.
+• Mục đích: Đảm bảo việc tích hợp các chức năng, module theo bản kế hoạch mức cao. Đảm bảo sự giao tiếp giữa các chức năng, module làm việc 1 cách đúng đắn.
+• Integration test do Tester thực hiện.
+• Integration Test được thực hiện sau khi đã thực hiện xong Unit test và trước khi thực hiện System test.
+• Có 4 loại kiểm tra trong Integration Test: Kiểm tra cấu trúc, kiểm tra chức năng, kiểm tra hiệu năng, kiểm tra khả năng chịu tải.
+• Có 3 mức độ kiểm thử tích hợp: Top- down-từ menu đến chức năng ( sử dụng Stubs); Bottom-up-từ chức năng cụ thể đến menu (sử dụng Driver); Sandwich- tích hợp kẹp giữa Top-down và Bottom-up.
+* Kiểm thử mức hệ thống (Systemtest):
+• Là tập trung vào hành vi cư xử của toàn bộ hệ thống/ sản phẩm được xác định bởi phạm vi của dự án phát triển hoặc sản phẩm.
+• Thông thường được kiểm tra cuối cùng thay cho nhà phát triển để xác nhận rằng hệ thống sẽ được bàn giao đáp ứng yêu cầu KH và mục tiêu của nó là tìm ra lỗi nhiều nhất có thể.
+• Giai đoạn này do Tester thực hiện.
+• Kiểm thử của hệ thống dựa trên: rủi ro, SRS, quy trình nghiệp vụ, use case, tương tác với hệ điều hành, nguồn tài nguyên.
+• Thực hiện System Test để đảm bảo nghiệp vụ của hệ thống hoạt động đúng và đảm bảo hoạt động theo bản đặc tả yêu cầu.
+• System Test được bắt đầu ngay sau khi 1 thành phần nhỏ tập hợp các thành phần đơn vị PM đã được tích hợp và Integration Test đã thực sự hoàn thành.
+• System Test bao gồm: Kiểm thử chức năng-sử dụng kiểm thử hộp đen; Kiểm thử phi chức năng: hiệu năng, kiểm tra khả năng chịu tải, kiểm tra cấu hình, kiểm tra bảo mật, kiểm tra khả năng phục hồi.
+• Môi trường để kiểm thử hầu hết giống với môi trường chạy của sản phẩm để giảm thiểu rủi ro về lỗi môi trường.
+* Kiểm thử chấp nhận sản phẩm (Acceptancetest):
+• Được thực hiện bởi khách hàng.
+• Môi trường kiểm thử chấp nhận thông thường giống với môi trường của sản phẩm.
+• Mục đích để chứng minh PM thoả mãn tất cả các yêu cầu của KH và KH chấp nhận sản phẩm.
+• Acceptance Test có thể diễn ra trong mọi cấp độ kiểm thử khác nhau sau Unit Test (Integration Test, System Test).
+• Acceptance Test để đảm bảo chức năng là cần thiết và đáp ứng được cho KH thông qua sản phẩm.
+• Acceptance Test được thực hiện trước khi sản phẩm được phát hành và sau khi System Test được hoàn thiện.
+• Có 2 công đoạn kiểm thử chấp nhận: kiểm thử Alpha, kiểm thử Beta.
+* Kiểm thử hồi quy (Regressiontest):
+• Regression testing tập trung vào việc tìm kiếm lỗi sau khi xảy ra việc thay đổi code.
+• Phương pháp thông thường của kiểm tra hồi quy là bao gồm việc chạy lại các kiểm thử trước đây và kiểm tra xem có lỗi đã được fixed trước đây bị lỗi lại (bị lại các lỗi cũ đã fixed rồi).
+2.1.4 Kỹ thuật kiểm thử phần mềm
+   Mục tiêu của kiểm thử là phải thiết kế các trường hợp kiểm thử có khả năng cao nhất trong việc phát hiện nhiều lỗi với thời gian và công sức tối thiểu. Do đó có thể chia các kỹ thuật kiểm thử thành hai loại chính:
+• Kỹ thuật kiểm thử hộp đen (Black – box Testing) hay còn gọi là kỹ thuật kiểm thử chức năng (Functional Testing).
+• Kỹ thuật kiểm thử hộp trắng (White – box Testing) hay còn gọi là kỹ thuật kiểm thử cấu trúc (Structural Testing).
+2.1.5 Quy trình kiểm thử phần mềm
+
+Hình 21: Quy trình kiểm thử phần mềm
+Mô tả các bước trong quy trình kiểm thử phần mềm:
+- Phân tích yêu cầu: Xác định phạm vi test. Sau khi nhận được tài liệu yêu cầu từ khách hàng (spec). Người kiểm thử sẽ tìm hiểu spec này. Nếu có bất kỳ vấn đề hay vướng mắc gì thì note vào file gửi cho khách hàng giải đáp.
+- Lập kết hoạch kiểm thử: Chiến lược kiểm thử (test strategy), test plan. Sau khi đã hiểu yêu cầu từ phía khách hàng, người kiểm thử lập kế hoạch test - ghi rõ thời gian cụ thể (ngày bắt đầu, ngày kết thúc).
+- Phát triển kiểm thử: Viết test procedure, test scenario, test case, test data và test script.
+- Thực thi kiểm thử: Tester thực thi phần mềm dựa trên test plan và test case, thực hiện các test case đã tạo.
+- Báo cáo kiểm thử: Tester điền kết quả test vào test case và tạo báo cáo kết quả test. Sau khi hoàn tất quá trình kiểm thử, người kiểm thử phần mềm sẽ tạo ra các báo cáo. Thường là bug list (danh sách lỗi xảy ra trong quá trình thực hiện các test case). Bug list này sẽ được gửi cho đội phát triển để họ fix.
+- Phân tích kết quả kiểm thử: Hoặc còn gọi là phân tích lỗi để quyết định lỗi nào sẽ được sửa và lỗi nào sẽ không sửa.
+- Kiểm thử lại lỗi: Sau khi một lỗi (defect) được DEV sửa xong, chuyển phần mềm cho tester test lại. Sau khi đội phát triển fix bug, người kiểm thử sẽ tiến hành kiểm tra lại và close bug nếu bug đó không còn xảy ra nữa. 
+- Kết thúc kiểm thử: Khi test đã đáp ứng được điều kiện dừng. Từ đó rút ra các bài học kinh nghiệm.
+2.2 Tổng quan về kiểm thử tự động
+2.2.1 Khái niệm
+   Là sử dụng một công cụ kiểm thử tự động để thực thi các test case thay cho con người để kiểm tra một hệ thống nào đó một cách tự động với dữ liệu đầu vào và đầu ra đã được xác định.
+2.2.2 Ưu điểm của việc kiểm thử tự động
+- Độ tin cậy cao (Reliability): Nhờ sự ổn định vượt trội của công cụ kiểm thử tự động so với con người, đặc biệt trong trường hợp có quá nhiều test cases cần được thực thi, nên độ tin cậy của kiểm thử tự động thường cao hơn so với kiểm thử thủ công.
+- Khả năng lặp (Repeatability): Khi dùng kiểm thử tự động, dù có lặp đi lặp lại bao nhiêu lần thì cũng cho ra các thao tác và kết quả giống nhau. Do đó tránh được những rủi ro không cần thiết.Ngoài ra, nếu một lỗi được tìm thấy, nó có thể được tái tạo bằng cách đơn giản là thực hiện cùng một kịch bản tự động, dẫn đến cải thiện khả năng tái lỗi. Kiểm thư tự động còn có tính năng các thao tác test được lưu lại tự động, dễ dàng kiểm tra và cưỡng chế lỗi trong thời gian kiểm thử.
+- Khả năng tái sử dụng (Reusability): Với một bộ kiểm thử tự động, chúng ta có thể sử dụng cho nhiều phiển bản ứng dụng khác nhau, đây được gọi là tính tái sử dụng.
+- Nhanh (Fast): Đây là điều không cần phải bàn cãi, nếu cần 5 phút để thực thi một test case cách thủ công, có thể bạn cần chưa đầy 30s để thực thi cách tự động.
+- Chi phí thấp (Cost Reduction): Nếu áp dụng kiểm thử tự động đúng cách, chúng ta có thể tiết kiệm được rất nhiều chi phí, thời gian và nhân lực. 
+- Tiết  kiệm tiền bạc vời thời gian: Nhận định này đặc biệt đúng nếu xét trong giai đoạn bảo trì của các dự án lớn. Mỗi tuần chúng ta phải thực hiện regression test từ 1 đến 2 lần với số lượng test case rất lớn trong 1 đến 2 ngày. Gần như không thể thực hiện cách thủ công, trong khi với kiểm thử tự động chúng ta hoàn toàn có thể với nguồn nhân lực vô cùng khiêm tốn.
+- Chính xác hơn: Nhờ độ ổn định cao, kiểm thử tự động có thể thực thi các test case với độ chính xác cao hơn.
+- Độ bao phủ cao: Như đã nói ở trên, khi sử dụng kiểm thử tự động, chúng ta có thể thực thi số lượng lớn test case trong một thời gian ngắn. Điều này giúp chúng ta tăng độ bao phủ trong giai đoạn regression test (một ví dụ điển hình).
+- Hoàn thành các công việc mà con người không thể làm được: Nếu chúng ta muốn thực thi load test, performance test, thì kiểm thử tự động là cách duy nhất.
+2.2.3 Nhược điểm của việc kiểm thử tự động
+   Các công cụ kiểm thử tự động mặc dù rất thuận tiện về nhiều phương diện nhưng thực tế dù như thế nào đi chăng nữa thì nó cũng không phải là một công cụ có thể thay thế hoàn toàn quá trình kiểm thử. Để thực hiện các thiếp lập tự động thì vẫn cần có con người, phải bỏ công sức, tiền bạc và thời gian.
+- Mất thời gian và công sức để tạo mới và chỉnh sửa script test.
+- Mất chi phí cho các các công cụ tự động hóa như phí bản quyền, bảo trì, tìm hiểu, giáo dục.
+- Khó mở rộng, khó bảo trì (Poor scalability and maintainability): Trong cùng một dự án, để mở rộng phạm vi cho kiểm thử tự động là khó hơn nhiều so với kiểm thử cách thủ công. Số lượng công việc phải làm để mở rộng phạm vi cho kiểm thử tự động là nhiều hơn và khó hơn kiểm thử thủ công. Cũng vậy, để cập nhật một test case thủ công, chúng ta chỉ cần mở ra và gõ, rất đơn giản. Nhưng kiểm thử tự độnglại không đơn giản như vậy, cập nhật hay chỉnh sửa yêu cầu rất nhiều công việc như debug, thay đổi dữ liệu đầu vào, và cập nhật code mới.
+- Khả năng bao phủ thấp(Low coverage): Chính vì việc khó ứng dụng, khó mở rộng, cũng như đòi hỏi quá nhiều kỷ năng lập trình nên độ bao phủ của kiểm thử tự động khá thấp (xét trên góc nhìn toàn dự án).
+- Vấn đề công cụ và nhân lực (Technology vs. people issues): Cho đến nay công cụ hỗ trợ kiểm thử tự động đã có những bước phát triển mạnh mẽ, chúng ta có các công cụ rất tốt như QTP, Selenium, Test Complete, LoadTest, Jmeter, Visual Studio, … Nhưng nhìn chung vẫn còn rất nhiều mặt hạn chế. Ngoài ra nguồn nhân lực đạt yêu cầu cũng không nhiều.
+2.2.4 Khi nào nên sử dụng kiểm thử tự động
+- Lý do thường xuyên nhất dẫn đến quyết định sử dụng kiểm thử tự động là thường xuyên phải thực thi regression test. Từ khi DEV đưa ra bản build mới cho tới khi phiên bản mới tới tay khách hàng chỉ từ 1 đến 2 ngày. Trong thời gian ngắn ngủi này, regression test sẽ được thực thi, nghĩa là một số lượng test case lớn phải được thực thi trong một khoảng thời gian ngắn. Đây là lúc lý tưởng để sử dụng kiểm thử tự động.
+- Xây dựng một bộ kiểm thử tự động cho những function chính, để thực thi smoke test mỗi khi có build mới cũng là một ý tưởng hay. Đây là công việc rất thường xuyên trước khi thực hiện regression test.
+- Khi số lượng đầu vào của 1 test case quá nhiều (như ví dụ 50 bộ dữ liệu test), chúng ta cũng nên xem xét khả năng thực hiện kiểm thử tự động.
+2.2.5 Các kiểm nghiệm phù hợp và không phù hợp cho tự động hóa
+- Kiểm thử thích hợp cho tự động hóa:
+• Những kiểm tra cần thực hiện nhiều lần.
+• Thực hiện kiểm tra ở nhiều môi trường.
+• Đặc điểm kĩ thuật được xác định, test màn hình・chức năng không thay đổi trong tương lai.
+• Thường xuyên thực hiện test xác nhận hoạt động cơ bản( chẳng hạn như di chuyển hệ thống).
+• Test sự kết hợp của nhiều giá trị đầu vào ở một bước nào đó.
+• Kiểm tra nhiều màn hình của dữ liệu đầu vào.
+* Kiểm thử không thích hợp cho tự động hóa:
+• Kiểm tra không có tính hồi quy.
+• Kiểm tra những hoạt động như test độ tin cây, giới hạn, cạnh tranh…
+2.3 Tổng quan về công cụ Selenium
+2.3.1 Khái quát về công cụ Selenium
+- Khái niệm:
+    Selenium là một trong những công cụ kiểm thử phần mềm tự động mã nguồn mở (open source test automation tool) mạnh mẽ nhất hiện nay cho việc kiểm thử ứng dụng Web.      Selenium script có thể chạy được trên hầu hết các trình duyệt như IE, Mozilla FireFox, Chrome, Safari, Opera; và hầu hết các hệ điều hành như Windows, Mac, Linux.
+- Ưu điểm:
+• Là công cụ mã nguồn mở.
+• Đơn giản, dễ cài đặt, dễ làm việc.
+• Sử dụng miễn phí.
+• Dễ dàng ghi và phát lại các thao tác của người dùng với trình duyệt.
+• Gỡ lỗi và thiết lập các điểm dừng.
+• Lưu các kiểm thử như là với các định dạng khác nhau (Ví dụ: HTML, PHP…).
+• Hỗ trợ các tệp tin selenium user-extensions.js.
+• Dễ dàng điểu chỉnh thông qua các plugin.
+• Các lựa chọn trường thông minh sẽ sử dụng ID, name hoặc Xpath khi cần thiết.
+• Tự động hoàn chỉnh cho tất cả các lệnh Selenium thường gặp.
+- Nhược diểm:
+• Không thể đảm bảo bất kỳ add-in nào được yêu cầu nếu selenium không thể nhận ra các đối tượng.
+• Hỗ trợ được cung cấp cho Selenium là rất ít.
+- Bộ công cụ:
+
+Hình 22: Bộ công cụ Selenium
+    
+➢ Selenium IDE (Integrated Development Environment) là một công cụ cho phép chúng ta Record/Playback một test script. Đây là một add-on hỗ trợ cho FireFox. Chúng ta chỉ có thể Record trên trình duyệt FireFox, nhưng bù lại, chúng ta có thể Playback trên các trình duyện khác như là IE, Chrome….
+➢ Selenium Gird là một hệ thống hỗ trợ người dùng thực thi test script trên nhiều trình duyệt một cách song song mà không cần phải chỉnh sửa test script.
+➢ Selenium RC, Selenium WebDriver là một thư viện cho phép chúng ta lập trình (scripting) test script trên các ngôn ngữ lập trình khác nhau như Python, Java, C#, Ruby.
+➢ Selenium Webdriver là công cụ hỗ trợ cho người dùng thực thi các script tự động chạy trên nhiều môi trường trình duyệt khác nhau.
+2.3.2 Khái quát về Selenium WebDriver
+- Selenium Webdriver kế thừa và phát triển từ Selenium IDE, Selenium Remote Control (RC), Selenium Grid. Selenium Webdriver giải quyết những khó khăn về ngôn ngữ.
+- Tính năng chính trong Selenium 2.0 là việc tích hợp WebDriver API. Selenium WebDriver được thiết kế để mang đến một giao diện lập trình đơn giản hơn và giải quyết một số hạn chế trong Selenium- RC API (Một phần khác của Selenium có thể coi là phiên bản tiền thân của selenium WebDriver).
+- Slenium WebDriver cho phép chúng ta sử dụng một trong số các ngôn ngữ lập trình như C#, HTML, Java, .Net, Perl, Ruby… để tạo kịch bản test (Test Case) kết hợp với sử dụng các điều kiện, vòng lặp… khiến cho test script trở nên chính xác hơn..
+- Selenium WebDriver được phát triển tốt hơn để hỗ trợ cho các trang web động (Những trang web mà phần tử trong nó có thể thay đổi ngay cả khi trang đó không được tải lại).
+2.4 Tổng quan về kiểm thử hướng lai
+2.4.1 Khái niệm
+   Kiểm thử hướng lai là sự kết hợp của kiểm thử hướng mô-đun(POM), kiểm thử hướng dữ liệu và kiểm thử hướng từ khóa.Sự kết hợp của các khuôn khổ giúp hướng lai tận dụng ưu điểm và hạn chế các nhược điểm của các hướng khác.
+
+Hình 23: Các loại Automation Framework
+   Hybrid Framework kết hợp giữa Data-  Driven Framework và KeywordDriven Framework
+
+
+    Hình 24: Hybrid Framework (Data Driven+Keywork Driven)
+- Nhược điểm của Data-Driven Framework
+• Chất lượng và độ bao phủ phụ thuộc vào kỹ năng tự động hoá của người thực hiện
+• Xác nhận dữ liệu là bắt buộc: quá trình kiểm thử bằng tay trên quy trình kiểm thử hướng dữ liệu tốn nhiều thời gian, đặc biệt khi kiểm tra các vùng dữ liệu lớn
+• Bảo trì liên tục các vấn đề do một số lượng lớn mã code
+- Nhược điểm của KeywordDriven Framework
+• Sự linh hoạt ít hơn
+• Không hỗ trợ cho việc thực hiện nhiều kịch bản
+• Hỗ trợ dữ liệu ít hơn
+• Phụ thuộc vào khuôn khổ phát triển
+• Khi thay đổi khuôn khổ của nó tốn kém thời gian và ít được hỗ trợ.
+2.4.2 Ưu điểm
+- Mức độ tái sử dụng cao (Tất cả các đối tượng trang của đối tượng dữ liệu được duy trì trong tệp Excel).
+- Mức độ bảo trì cao (Sử dụng Khung Dữ liệu).
+- Độ linh hoạt cao hơn .
+- Khả năng sử dụng lại thành phần.
+- Khả năng sử dụng lại mã.
+- Tự động hóa công cụ độc lập.
+- Dễ đọc kịch bản thử nghiệm.
+- Dễ dàng để thêm mới thử nghiệm script & tăng người dùng năng suất.Thử nghiệm kịch bản có thể được tạo ra ngay cả khi các ứng dụng không sẵn sàng cho thử nghiệm.
+2.4.3 Nhược điểm
+- Cộng đồng phát triển chưa đông.
+- Ở vài trường hợp phức tạp, khi mà các đối tượng UI không thể được xác định dễ dàng, chúng ta phải sử dụng nhiều kỹ thuật khác nhau để xủa lý.
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Xây dựng kiến trúc của hybrid framework
+3.1.1 Kiến trúc tổng quan của hybrid framework
+
+Hình 31: Mô hình kiến trúc tổng quan của Hybrid Framework
+    
+- Là sự kết hợp của hai hoặc nhiều kỹ thuật ở trên, kế thửa thế mạnh và loại bỏ những điểm yếu của các mô hình khác.
+- Mô hình này sử dụng cách tiếp cận theo hướng modul, kết hợp với hướng dữ liệu hoặc hướng từ khóa.
+- Mô hình này có thể dùng mã nguồn để xủ lý những công việc đặc biệt mà quá khó để tạo ra với cách làm từ khóa
+3.1.2 Kiến trúc chi tiết của hybrid framework
+
+Hình 32: Mô hình kiến trúc chi tiết của Hybrid Framework
+Là sự kết hợp giữa kiểm thử hướng dữ liệu và kiểm thử hướng từ khóa
+- Kiểm thử hướng từ khóa:
+• Cả dữ liệu và chức năng được định nghĩa bên ngoài mã nguồn.
+• Có 3 thành phần cơ bản của một kịch bản kiểm tra trong khung điều khiển từ khóa:
+o Định nghĩa các từ khóa: là các từ khóa hành động theo từng bước thực hiện của kịch bản.
+o Các giá trị locator type: là các phần tử (Id, Name, Class, Xpath,...) tương ứng với các phần tử của trang web 
+o Các giá trị locator value: là các giá trị thuộc phần tử được xác định theo locator type.
+- Kiểm thử hướng dữ liệu:
+• Được sử dụng để lấy dữ liệu từ các tệp dữ liệu khác nhau, có thể là một tập tin CSV, một bảng Excel hay một cơ sở dữ liệu. 
+• Khi kiểm thử thực thi, các giá trị này được lấy ra từ tập tin, chứa vào biến và thay thế các giá trị dataObject trong bảng keyword.
+3.2 Xây dựng công cụ
+3.2.1 Ý tưởng
+- Hiện nay, nền công nghiệp 4.0 đang phát triển mạnh mẽ, kéo theo sự phát triển của rất nhiều ngành nghề, đặc biệt là ngành công nghệ thông tin. Do đó, yêu cầu về nhân lực trong mảng này cũng đòi hỏi các ứng viên cần phải có kỹ năng tốt hơn nữa về lập trình, kỹ thuật, các kỹ năng về automation....
+• Nếu search trên các trang mạng tuyển dụng lớn như ITviec, Vietnamworks, LinkIn, Indeed, Dice, Monster, CareerBuilder … thì bạn sẽ thấy có vô vàn kết quả với các từ khóa tìm kiếm như:
+o Test Automation Engineer
+o Automation Developer
+o Automation Testing/Automation Tester
+o QA Automation Engineer
+  Từ đây, bạn có thể thấy được nhu cầu tuyển một Tester, QA có kiến thức và kinh nghiệm về automation test là rất lớn. 
+- Tuy nhiên, kiểm thử tự động không chỉ đòi hỏi về mặt kỹ thuật mà còn về mặt kinh tế. Do đó, ý tưởng xây dựng công cụ của em là muốn xây dựng 1 công cụ kiểm thử chức năng chạy được nhiều trình duyệt, tùy biến các locactor và dữ liệu nhưng không mất chi phí.
+3.2.2 Giao diện
+
+Hình 33: Màn hình giao diện công cụ
+3.2.3 Nguyên lý hoạt động 
+➢ 1: Nhập địa chỉ URL
+
+Hình 34: Màn hình sau khi nhập địa chỉ URL
+➢ 2: Chọn trình duyệt để chạy trương trình
+
+Hình 35: Màn hình sau khi chọn trình duyệt
+➢ 3: Import Keyword
+
+Hình 36: Màn hình sau khi import keyword
+➢ 4: Import Data
+
+Hình 37: Màn hình sau khi import data
+➢ 5: Click buttion [Run] để chạy chương trình
+
+Hình 38: Màn hình khi nhấn chọn [Run]
+➢ 6: Kết quả về Test Resuil và Test Report
+
+Hình 39: Màn hình kết quả khi chạy xong chương trình
+➢ 7: Click buttion [Close] để đóng chương trình => Hiển thị thông báo:"Bạn có thực sự muốn thoát không?”
+
+Hình 310: Màn hình khi nhấn chọn [Close]
+3.2.4 Nội dung của các chức năng chính có trong công cụ
+• Lớp “Keyword”
+    Lớp Keyword, lớp này chứa các từ khóa hành động và cấu hình trình duyệt.
+- Phương thức xác định locator
+    Trước khi muốn kiểm thử một trang web, ta phải xác định locator phần tử trang web đó.
+    privatestatic By GetElementLocator(String locatorType,String locatorValue) throws Exception{
+    		//Find by xpath
+    		if(locatorType.equalsIgnoreCase("Xpath")){
+    			
+    			return By.xpath(locatorValue);
+    		}
+    		//find by class
+    		elseif(locatorType.equalsIgnoreCase("ClassName")){
+    			
+    			return By.className(locatorValue);
+    			
+    		}
+    		//find by name
+    		elseif(locatorType.equalsIgnoreCase("Name")){
+    			
+    			return By.name(locatorValue);
+    			
+    		}
+    		//find by id
+    		elseif(locatorType.equalsIgnoreCase("Id")){
+    			
+    			return By.id(locatorValue);
+    		}
+    		//find by tagname
+    		elseif(locatorType.equalsIgnoreCase("TagName")){
+    			
+    			return By.tagName(locatorValue);
+    			
+    		}
+    		//Find by css
+    		elseif(locatorType.equalsIgnoreCase("Css")){
+    			
+    			return By.cssSelector(locatorValue);
+    			
+    		}
+    		//find by link
+    		elseif(locatorType.equalsIgnoreCase("Link")){
+    			
+    			return By.linkText(locatorValue);
+    			
+    		}
+    		//find by partial link
+    		elseif(locatorType.equalsIgnoreCase("PartialLink")){
+    			
+    			return By.partialLinkText(locatorValue);
+    			
+    		}else
+    		{
+    			thrownew Exception("Wrong object type");//Loại sai đối tượng
+    		}
+    	}
+- Phương thức mở trình duyệt
+    Trước khi muốn kiểm thử một trang web, ta cần phải truy cập vào trang web đó. Để truy cập được ta gọi phương thức openBrowser().
+    publicstaticvoid openBrowser(String browserName) throws IOException
+    	{
+    		if(browserName.equalsIgnoreCase("Firefox"))
+    		{
+    			System.setProperty("webdriver.gecko.driver","C:\\geckodriver.exe");
+    			driver=new FirefoxDriver();
+    		}
+    		elseif(browserName.equalsIgnoreCase("Chrome"))
+    		{
+    	System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+    			driver=new ChromeDriver();
+    		}
+    		elseif(browserName.equals("IE"))
+    		{
+    	System.setProperty("webdriver.ie.driver", "C:\\IEDriverServer.exe");
+    			driver = new InternetExplorerDriver();
+    		}
+    }
+- Phương thức chuyển hướng đến url
+    Sự kiện Navigate để chuyển hướng đến url
+    Khi muốn Navigate ta phải truyền vào một đường link url.
+    
+    publicstaticvoid NavigateToUrl(String URL)
+    	{
+    		driver.navigate().to(URL);
+    		
+    }
+- Phương thức click vào sự kiện
+    Sự kiện Click ở đây phải dựa vào các phần tử web
+    Khi muốn Click vào sự kiện gì đó, ta phải tìm theo phần tử web, khi tìm thấy phần tử đó ta tiến hành Click vào sự kiện.
+    publicstaticvoid ClickOnButton(String locatorType, String locatorValue)
+    	{
+    		try
+            {
+    		By locator;
+    		locator = GetElementLocator(locatorType,locatorValue);
+    		element =driver.findElement(locator);
+    		element.click();
+             }
+    catch (Exception ex)
+             {
+    	 System.out.println("No element found to perform click " + ex);
+             }
+    	}
+- Phương thức nhập giá trị sendkey
+    Giá trị sendkey ở đây cũng phải dựa vào các phần tử web
+    Khi muốn nhâp vào giá trị của một ô bất kì, ta phải tìm theo phần tử web, khi tìm thấy phần tử đó ta tiến hành nhập giá trị mà ta muốn nhập vào ô đó.
+    publicstaticvoid TypeInTextBox(String locatorType, String locatorValue, String text)
+    	{
+    		try
+            {
+    		By locator;
+    		locator = GetElementLocator(locatorType,locatorValue);
+    		element =driver.findElement(locator);
+    		element.sendKeys(text);
+             }
+    catch (Exception ex)
+             {
+    	 System.out.println("No element found to enter text " + ex);
+             }
+    	}
+- Phương thức GetValue
+    GetValue là xác định thông báo sau khi thực thi từng hành động.
+     public void GetValue(string idTC, string locatorType, string locatorValue, string text)
+                {
+                    try
+                    {
+                        By locator;
+                        locator = GetElementLocator(locatorType, locatorValue);
+                        element = driver.FindElement(locator);
+                        var value = element.Text;
+                        if (value.Equals(text))
+                        {
+                            txtResult.Text += idTC + " : Pass\n";
+                            pass += 1;
+                            
+                        }
+                        else
+                        {
+                            txtResult.Text += idTC + " : Fail\n";
+                            fail += 1;
+                            
+                        }
+                        
+    
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.Write("No element found to get value " + ex);
+                    }
+                    
+                   	 }
+- Phương thức đóng trình duyệt.
+    Sau khi thực hiện kiểm thử một trang web, ta cần đóng trình duyệt, đồng thời cả trang web và những thao tác mà ta đã làm. Thì ta gọi phương thức closeBrowser()
+    	publicstaticvoid closeBrower()
+    	 {
+    		driver.quit();
+    	 }
+    
+• Phương thức “Import Keyword”
+    Phương thức importKeyword, dùng để đọc hàng, cột trong file Excel và import vào Tool test
+      private void importKeyword_Click(object sender, EventArgs e)
+            {
+    lstKeyword.Clear();
+                // tạo đối tượng mở tệp tin
+                OpenFileDialog fopen = new OpenFileDialog();
+                //chỉ ra đuôi
+                fopen.Filter = "(Tất cả các tệp)|*.*|( Các tệp excel)|.xlsx";
+                fopen.ShowDialog();
+                // xử lý
+                if (fopen.FileName != "")
+                {
+                    // tạo đối tượng excel
+                    Excel.Application app = new Excel.Application();
+                    // Mở tệp excel
+                    Excel.Workbook wb = app.Workbooks.Open(fopen.FileName);
+                    try
+                    {
+                        Excel._Worksheet sheet = wb.Sheets[1];
+                        Excel.Range range = sheet.UsedRange;
+                        // Đọc dữ liêu
+                        int rows = range.Rows.Count;
+                        int column = range.Columns.Count;
+                        // Đọc dòng tiêu đề để tạo cột trong listview
+                        for (int c = 1; c <= column; c++)
+                        {
+                            string columnname = range.Cells[1, c].Value.ToString();
+                            ColumnHeader col = new ColumnHeader();
+                            col.Text = columnname;
+                            col.Width = 120;
+                            lstKeyword.Columns.Add(col);
+    
+                        }
+    
+                        // đọc dữ liệu
+                        for (int i = 2; i <= rows; i++)
+                        {
+                            ListViewItem item1 = new ListViewItem();
+    
+                            for (int j = 1; j <= column; j++)
+                            {
+                                if (j == 1)
+                                    item1.Text = range.Cells[i, j].Value.ToString();
+                                else
+                                    item1.SubItems.Add(range.Cells[i, j].Value.ToString());
+    
+                            }
+    
+                            lstKeyword.Items.Add(item1);
+    
+                        }
+                    }
+    
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Bạn không chọn tệp tin nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+    
+• Phương thức “Import Data”
+    Phương thức importData, dùng để đọc hàng, cột trong file Excel và import vào Tool test
+    	private void importData_Click(object sender, EventArgs e)
+            {
+                lstData.Clear();
+                // tạo đối tượng mở tệp tin
+                OpenFileDialog fopen = new OpenFileDialog();
+                //chỉ ra đuôi
+    
+                fopen.Filter = "(Tất cả các tệp)|*.*|( Các tệp excel)|.xlsx";
+                fopen.ShowDialog();
+                // xử lý
+                if (fopen.FileName != "")
+                {
+                    // tạo đối tượng excel
+                    Excel.Application app = new Excel.Application();
+                    // Mở tệp excel
+                    Excel.Workbook wb = app.Workbooks.Open(fopen.FileName);
+                    try
+                    {
+                        Excel._Worksheet sheet = wb.Sheets[1];
+                        Excel.Range range = sheet.UsedRange;
+                        // Đọc dữ liêu
+                        int rows = range.Rows.Count;
+                        int column = range.Columns.Count;
+                        header = new String[column];
+                        // Đọc dòng tiêu đề để tạo cột trong listview
+                        for (int c = 1; c <= column; c++)
+                        {
+    
+                            string columnname = range.Cells[1, c].Value.ToString();
+                            header[c - 1] = columnname;
+                            ColumnHeader col = new ColumnHeader();
+                            col.Text = columnname;
+                            col.Width = 120;
+                            lstData.Columns.Add(col);
+    
+                        }
+                        // đọc dữ liệu
+                        for (int i = 2; i <= rows; i++)
+                        {
+                            ListViewItem item2 = new ListViewItem();
+                            if (item2 != null)
+                            {
+                                for (int j = 1; j <= column; j++)
+                                {
+                                    if (j == 1)
+                                        item2.Text = range.Cells[i, j].Value.ToString();
+                                    else
+                                        item2.SubItems.Add(range.Cells[i, j].Value.ToString());
+    
+                                }
+                                lstData.Items.Add(item2);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+    
+                }
+                else
+                {
+                    MessageBox.Show("Bạn không chọn tệp tin nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }	
+• Phương thức “Chạy Tool test”
+    Phương thức này dùng để chạy các dữ liệu test được import vào tool.
+    
+private void btnRun_Click(object sender, EventArgs e)
+        {
+
+            var dataObject = string.Empty;
+            var idTC = string.Empty;
+            var testSteps = string.Empty;
+            var keyword = string.Empty;
+            var locatorType = string.Empty;
+            var locatorValue = string.Empty;
+
+            #region Chrome
+            if (radChrome.Checked == true)
+            {
+                ListViewItem item2;
+                for (int i = 0; i < lstData.Items.Count; i++)// lấy ra só hàng có trong listdata
+                {
+                    item2 = lstData.Items[i];
+                    driver = new ChromeDriver();
+                    driver.Navigate().GoToUrl(txtUrl.Text.Trim());
+                    foreach (ListViewItem item1 in lstKeyword.Items)
+                    {
+
+                        idTC = item2.SubItems[0].Text;
+                        testSteps = item1.SubItems[1].Text;
+                        keyword = item1.SubItems[2].Text;
+                        locatorType = item1.SubItems[3].Text;
+                        locatorValue = item1.SubItems[4].Text;
+                        dataObject = item2.SubItems[getID(item1.SubItems[5].Text)].Text;
+
+                        switch (keyword)
+                        {
+                            case "SendKeys":
+                                Ke.TypeInTextBox(locatorType, locatorValue, dataObject);
+                                break;
+                            case "Click":
+                                Ke.ClickOnButton(locatorType, locatorValue);
+                                break;
+                            case "GetValue":
+                                Ke.GetValue(idTC, locatorType, locatorValue, dataObject);
+                                break;
+                            case "closeBrowser":
+                                driver.Quit();
+                                Ke.closeBrower();
+                                break;
+                            default:
+                                throw new Exception("Keyword Not Found ");        
+                        }
+                        if (keyword.Equals("closeBrowser"))
+
+                        {
+                            dgvResult.Rows.Add(rowResuil);
+                        }
+                    }
+
+        }
+
+        txtPass.Text = dempass.ToString();
+        txtFail.Text = demfail.ToString();
+        txtSum.Text = (dempass + demfail).ToString();
+        //dgvResult.Rows.Add(rowResuil);
+
+      }
+
+            #endregion
+
+            #region IE
+            if (radIE.Checked == true)
+            {                
+                ListViewItem item2;
+                for (int i = 0; i < lstData.Items.Count; i++)// lấy ra só hàng có trong listdata
+                {
+                    item2 = lstData.Items[i];
+                    driver = new InternetExplorerDriver();
+                    driver.Navigate().GoToUrl(txtUrl.Text.Trim());
+                    foreach (ListViewItem item1 in lstKeyword.Items)
+                    {
+
+                        idTC = item2.SubItems[0].Text;
+                        testSteps = item1.SubItems[1].Text;
+                        keyword = item1.SubItems[2].Text;
+                        locatorType = item1.SubItems[3].Text;
+                        locatorValue = item1.SubItems[4].Text;
+                        dataObject = item2.SubItems[getID(item1.SubItems[5].Text)].Text;
+
+                        switch (keyword)
+                        {
+                            case "SendKeys":
+                                Ke.TypeInTextBox(locatorType, locatorValue, dataObject);
+                                break;
+                            case "Click":
+                                Ke.ClickOnButton(locatorType, locatorValue);
+                                break;
+                            case "GetValue":
+                                Ke.GetValue(idTC, locatorType, locatorValue, dataObject);
+                                break;
+                            case "closeBrowser":
+                                driver.Quit();
+                                Ke.closeBrower();
+                                break;
+                            default:
+                                throw new Exception("Keyword Not Found ");
+                        }
+                        if (keyword.Equals("closeBrowser"))
+
+                        {
+                            dgvResult.Rows.Add(rowResuil);
+                        }
+                    }
+
+                }
+
+                txtPass.Text = dempass.ToString();
+                txtFail.Text = demfail.ToString();
+                txtSum.Text = (dempass + demfail).ToString();
+                //dgvResult.Rows.Add(rowResuil);
+
+            }
+            #endregion
+
+            #region FireFox
+            if (radFireFox.Checked == true)
+            {
+                
+                ListViewItem item2;
+                for (int i = 0; i < lstData.Items.Count; i++)// lấy ra só hàng có trong listdata
+                {
+                    item2 = lstData.Items[i];
+                    driver = new FirefoxDriver();
+                    driver.Navigate().GoToUrl(txtUrl.Text.Trim());
+                    foreach (ListViewItem item1 in lstKeyword.Items)
+                    {
+
+                        idTC = item2.SubItems[0].Text;
+                        testSteps = item1.SubItems[1].Text;
+                        keyword = item1.SubItems[2].Text;
+                        locatorType = item1.SubItems[3].Text;
+                        locatorValue = item1.SubItems[4].Text;
+                        dataObject = item2.SubItems[getID(item1.SubItems[5].Text)].Text;
+
+                        switch (keyword)
+                        {
+                            case "SendKeys":
+                                Ke.TypeInTextBox(locatorType, locatorValue, dataObject);
+                                break;
+                            case "Click":
+                                Ke.ClickOnButton(locatorType, locatorValue);
+                                break;
+                            case "GetValue":
+                                Ke.GetValue(idTC, locatorType, locatorValue, dataObject);
+                                break;
+                            case "closeBrowser":
+                                driver.Quit();
+                                Ke.closeBrower();
+                                break;
+                            default:
+                                throw new Exception("Keyword Not Found ");
+                        }
+                        if (keyword.Equals("closeBrowser"))
+
+                        {
+                            dgvResult.Rows.Add(rowResuil);
+                        }
+                    }
+
+                }
+
+                txtPass.Text = dempass.ToString();
+                txtFail.Text = demfail.ToString();
+                txtSum.Text = (dempass + demfail).ToString();
+                //dgvResult.Rows.Add(rowResuil);
+
+            }
+            #endregion
+
+            }
+• Phương thức “Đóng Tool test”
+Phương thức này dùng để thoát tool test
+    
+    private void btnclose_Click(object sender, EventArgs e)
+            {
+                DialogResult result = new DialogResult();
+                result = MessageBox.Show("Bạn có thực sự muốn thoát không?", "Thông báo ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result.ToString() == "Yes")
+                {
+                    this.Close();
+                }
+            }
+3.3 Demo công cụ
+3.3.1 Kiểm thử cho các chức năng đăng ký
+    Kiểm thử chức năng đăng ký cho trang: http://blogtruyen.com/
+Bảng 31: Bảng Keyword cho chức năng đăng ký
+TCIDStepsKeywordLocatorTypeLocatorValueDataObjectTC01Nhap Ten hien thiSendKeysXPath//*[@id="DisPlayName"]Dat1TC01Nhap Ten DNSendKeysXPath//*[@id="UserName"]Dat2TC01Nhap MkSendKeysXPath//*[@id="Password"]Dat3TC01Nhap lai MkSendKeysXPath//*[@id="ConfirmPassword"]Dat4TC01Nhap EmailSendKeysXPath//*[@id="Email"]Dat5TC01Nhap lai EmailSendKeysXPath//*[@id="ConfirmEmail"]Dat6TC01Click Dang KiClickXPath//*[@id="frmResiter"]/div[7]/div[2]/button      TC01So sanh ket quaGetValueXPath//*[@id="frmResiter"]/div[1]/span/spanDat7TC01Dong trinh duyetcloseBrowser                      
+Bảng 32: Bảng Data cho chức năng đăng ký
+    
+ID TCDat1Dat2Dat3Dat4Dat5Dat6Dat7TC01abc    123123abcabcabc   Tên hiển thị' phải có độ dài tối thiểu là 7 ký tựTC02123123123123123123Tên hiển thị' phải có độ dài tối thiểu là 7 ký tựTC03             khongmatkhaukhongmatkhaukhongmatkhaukhongmatkhaukhongmatkhauTên hiển thị' là trường thông tin bắt buộc
+-Kết quả sau khi kiểm thử
+
+
+Hình 311: Màn hình sau khi test xong chức năng đăng ký
+3.3.2 Kiểm thử cho các chức năng đăng nhập
+    Kiểm thử chức năng đăng nhập cho trang: http://goctruyen.com/
+Bảng 33: Bảng keyword cho chức năng đăng nhập
+TCIDStepsKeywordLocatorTypeLocatorValueDataObjectTC01Nhap TenDKSendKeysNametxtuserDat1TC01Nhap the MKSendKeysNametxtpassDat2TC01Click Dang NhapClickNamelogin     TC01So sanh ket quaGetValueXPath//*[@id="main"]/div[2]/form/p[1]/spanDat3TC01Dong trinh duyetcloseBrowser               
+Bảng 34: Bảng data cho chức năng đăng nhập
+ID TCDat1Dat2    Dat3TC01abcabcThông tin không quá ngắn hoặc quá dàiTC02123123Thông tin không quá ngắn hoặc quá dàiTC03cabcvbnnmnmhhjkjhjhghgkjk1223546567865643234567876543123azkhongmatkhauThông tin không quá ngắn hoặc quá dài- Kết quả sau khi kiểm thử
+
+
+Hình 312: Màn hình sau khi test xong chức năng đăng nhập
+3.3.3 Kiểm thử cho chức năng tìm kiếm
+    Kiểm thử chức năng tìm kiếm cho trang: http://goctruyen.com/
+Bảng 35: Bảng keyword cho chức năng tìm kiếm
+TCIDStepsKeywordLocatorTypeLocatorValueDataObjectTC01Nhap Ten TKSendKeysIdtxtsearchDat1TC01Click TKClickClassNamew3-btn     TC02So sanhGetValueCssSelector#main > div.main-module.list-category > div:nth-child(1) > div > h1Dat2TC01Dong trinh duyetcloseBrowser           
+Bảng 36: Bảng data cho chức năng tìm kiếm
+ID TCDat1Dat2TC01#a1TÌM KIẾM TRUYỆNTC02abc 123TÌM KIẾM TRUYỆNTC03 12dTÌM KIẾM TRUYỆNTC04itTÌM KIẾM TRUYỆN
+- Kết quả sau khi kiểm thử
+
+
+Hình 313: Màn hình sau khi test xong chức năng tìm kiếm
+    
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+- Nắm được về kiểm thử tự động, về kiểm thử hướng lai.
+- Ứng dụng được Selenium Webdriver vào kiểm thử tự động.
+- Xây dựng được công cụ kiểm thử hướng lai sử dụng Selenium Webdriver .
+- Công cụ chạy được nhiều trình duyệt, tùy biến các locactor và dữ liệu.
+- Lấy được dữ liệu từ File Excel và định nghĩa được các hoạt động của từ khóa. 
+4.2 Hạn chế của đề tài
+- Chưa xây dựng được hết các tính năng nâng cao cho công cụ.
+- Chưa mở rộng được các dữ liệu test, đọc trên các file khác ngoài Excel.
+4.3 Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+• Xây dựng thêm các chức năng nâng cao để phát triển tính năng cho công cụ.
+• Mở rộng dữ liệu test, có thể đọc trên các file khác ngoài Excel, như: XML, CSV, DataBase
+    
+    
+    
+TÀI LIỆU THAM KHẢO
+x
+[1] Khoa Công nghệ thông tin, Đề cương Kiểm thử phần mềm tự động, Trường Đại học SPKT Hưng Yên, 2016[2]Yujun Liang & Alex Collins, Selenium WebDriver From Foundations To Framework, LearnPub, 2016[3]Laukkanen, Pekka, “Data-Driven and Keyword-Driven Test Automation Frameworks”, Master’s Thesis, Software Business and Engineering Institute, Department of Computer Science and Engineering, Helsinki University of Technology, 2006.[4]Zhimin Zhan, Selenium WebDriver Recipes in C#: Second Edition, Apress, 2012[5]https://www.guru99.com/creating-keyword-hybrid-frameworks-with- selenium.html
+    
+    
+    
+    
+    
+    
+PHỤ LỤC
+Kiểm thử tự động hướng lai với Selenium Webdriver cho ứng dụng Web	
+
+     
+    
+58
+    
+    

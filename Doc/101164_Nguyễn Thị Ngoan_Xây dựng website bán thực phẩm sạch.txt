@@ -1,0 +1,836 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1. Lý do chọn đề tài
+   Cùng với sự phát triển không ngừng về kỹ thuật máy tính và mạng điện tử, công nghệ thông tin cũng được những công nghệ có đẳng cấp cao và lần lượt chinh phục hết đỉnh cao này đến đỉnh cao khác. Mạng Internet là một trong những sản phẩm có giá trị hết sức lớn lao và ngày càng trở nên một công cụ không thể thiếu, là nền tảng chính cho sự truyền tải, trao đổi thông tin trên toàn cầu.
+   Đại dịch COVID đã và đang ảnh hưởng lớn đến cuộc sống của con người trên toàn thế giới, đặc biệt là hành vi mua sắm. Do đó, người tiêu dùng muốn tránh xa đám đông nhiều hơn, hạn chế đi đến siêu thị, trung tâm mua sắm, các dịch vụ trực tuyến vì thế sẽ ngày càng phát triển và thu hút thêm nhiều khách hàng mới đến dịch vụ này. Do đó, tăng trưởng trong ngành này sẽ có nhiều đột phá thời gian tới. 
+   Ứng dụng công nghệ thông tin vào thực tiễn đời sống xã hội giảm thiểu được sức lao động của con người, tăng hiệu quả kinh tế, đảm bảo thực hiện an toàn các biện pháp giãn cách xã hội và an toàn phòng chống bệnh, phục vụ mục đích thiết thực hàng ngày của con người. Bán hàng online cũng là lĩnh vực được nhiều người quan tâm. Trong phạm vi của một đề tài đồ án tốt nghiệp đại học chuyên ngành công nghệ thông tin, tôi đã lựa chọn đề tài “Xây dựng website bán thực phẩm sạch”. Nội dung của đề tài đi vào việc tìm hiểu nghiệp vụ của một website bán hàng online. Tôi sẽ phân tích thiết kế đồng thời đưa ra cài đặt cho hệ thống website.
+1.2 Mục tiêu của đề tài
+- Phân tích được bài toán quản lý bán hàng online, hiểu được quy trình quản lý hệ thống.
+- Tìm hiểu cơ sở lý thuyết của hệ quản trị cơ sở dữ liệu MySql, Navicat, ngôn ngữ lập PHP và web framework Codeigniter để xây dựng website.
+- Phân tích và thiết kế CSDL, các biểu đồ use case và biểu đồ tuần tự.
+- Xây dựng Website quản lý và bán thực phẩm sạch.
+1.3 Giới hạn và phạm vi của đề tài
+     Đề tài bước đầu được xây dựng để áp dụng cho việc quản lý và bày bán thực phẩm sạch; sau đó có thể phát triển thêm và ứng dụng cho các cửa hàng trong thực tế.
+    Đề tài xây dựng sử dụng Công nghệ mới dựa trên ngôn ngữ PHP và phát triển trên web framework codeigniter và công cụ lập trình sublime Text 3.
+1.4 	Nội dung thực hiện
+   Nội dung thực hiện/ nghiên cứu cụ thể của đề tài:
+- Hiểu được cách sử dụng cơ bản của ngôn ngữ php, trong đó có các đối tượng, biến, hàm, phương thức, thuộc tính…
+- Tìm hiểu cách sử dụng web framework codeigniter trong thiết kế và lập trình website bằng ngôn ngữ PHP.
+- Tìm hiểu cách sử dụng sublime text 3 để thiết kế giao diện và xây dựng các chức năng website thương mại điện tử bằng ngôn ngữ PHP.
+- Biết cách sử dụng hệ quản trị CSDL bằng MySql và Navicat
+- Khảo sát và phân tích yêu cầu quy trình quản lý và bán hàng online.
+- Thiết kế và đặc tả hệ thống.
+- Xây dựng cơ sở dữ liệu.
+- Lập trình các module của hệ thống.
+- Kiểm thử hệ thống.
+- Triển khai thực nghiệp hệ thống trên mạng Internet.
+1.5 	Phương pháp tiếp cận
+- Nghiên cứu quy trình quản lý và bán hàng online trên truyền thông và mạng internet, nghiên cứu ngôn ngữ mới PHP, web framework codeigniter và mô hình Controler - Model - View.
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu.
+o Phương pháp phân tích mẫu, thực nghiệm
+1.6	Kêt luận chương 1
+    Trong chương 1 đã nêu nên lý do chọn đề tài xây dựng “Website quản lý và bán thực phẩm sạch”. Cũng như mục tiêu, phạm vi, nội dung và phương pháp thực hiện. Chương tiếp theo là tìm hiểu và giới thiệu về công nghệ mới PHP, web framework Igniter và MySql, Navicat.
+
+
+CHƯƠNG 2: GIỚI THIỆU PHP VÀ FRAMEWORK CODEIGNITER
+2.1 Giới thiệu về ngôn ngữ PHP
+2.1.1 PHP là gì?
+    PHP – Hypertext Preprocessor hiểu ra tiếng việt PHP là bộ xử lý siêu văn bản trước đó được viết là Personal Home Pages – trang chủ cá nhân. Đây là ngôn ngữ lập trình được sử dụng chủ yếu trong việc phát triển các ứng dụng bằng một loạt các mã lệnh được viết cho máy chủ hay các mã nguồn mở, dùng trong mục đích phát triển các ứng dụng trang web, các trang web tĩnh hay trang web động. Các tệp lệnh PHP chỉ có thể được diễn giải trên một máy chủ đã cài đặt sẵn PHP. Một tệp lệnh PHP chứa các thẻ PHP được kết thúc bằng đuôi “php”.
+    Ngôn ngữ lập trình PHP phù hợp với các web để có thể dễ dàng ứng dụng vào các trang HTML. Do đó nó được tối ưu hóa cho các ứng dụng web với những tính năng ưu việt như nhanh, gọn, cùng cấu trúc sử dụng tương tự như C hay Java. Đây cũng được xem là ngôn ngữ lập trình khá dễ học và nhanh hơn so với một số ngôn ngữ lập trình khác. Bởi vậy, rất nhanh chóng, PHP trở thành ngôn ngữ lập trình web phổ biến nhất thế giới.
+2.1.2 Lịch sử hình thành của PHP
+    PHP mà chúng ta biết đến ngày nay là sự kế thừa của một sản phẩm có tên là PHP/FI. Được viết bởi Rasmus Lerdorf, bản PHP đầu tiên là một tập hợp đơn giản các Common Gateway Interface (CGI) – một chuẩn giao tiếp giữa client và server – nhị phân viết bằng ngôn ngữ C. Ban đầu, Rasmus sử dụng nó để theo dõi người dùng truy cập vào hồ sơ cá nhân trên internet của mình. Vì vậy, ông đặt tên nó là “Personal Home Page Tools”. Theo thời gian, nhiều tính năng mới được thêm vào, và Rasmus đã viết lại PHP Tools này, tạo ra một công cụ lớn hơn và phong phú hơn về tính năng. Mô hình mới này có khả năng tương tác với cơ sở dữ liệu, và hơn nữa, nó giúp cho người dùng, có thể tạo ra một ứng dụng web động, ví dụ như guestbooks. Tháng 6/1995, Rasmus public mã nguồn của PHP Tools ra cộng đồng, cho phép các nhà phát triển có thể sử dụng và phát triển nó – một cách miễn phí.
+    Tháng 9/1995, Rasmus mở rộng PHP, thêm vào công cụ có tên là FI (Forms Interpreter), và một số chức năng như chúng ta biết ngày nay. Nó có các biến kiểu Perl và cú pháp cho phép nhúng mã HTML. Cú pháp này, tương tự Perl, nhưng hạn chế hơn, đơn giản và có phần không phù hợp. Trong thực tế, để nhúng mã lệnh PHP/FI vào một tập tin HTML, các lập trình viên phải sử dụng các comment HTML. Và mặc dù phương pháp này không được hoàn toàn đón nhận, FI vẫn tiếp tục phát triển và đem về lợi nhuận thương mại.
+    Vào năm 1997, PHP/FI 2.0, lần viết lại thứ hai của phiên bản C, đã thu hút được hàng ngàn người sử dụng trên toàn thế giới với xấp xỉ 50.000 tên miền đã được ghi nhận là có cài đặt nó, chiếm khoảng 1% số tên miền có trên mạng Internet. Tuy đã có tới hàng nghìn người tham gia đóng góp vào việc tu chỉnh mã nguồn của dự án này thì vào thời đó nó vẫn chủ yếu chỉ là dự án của một người.
+    PHP/FI 2.0 được chính thức công bố vào tháng 11 năm 1997, sau một thời gian khá dài chỉ được công bố dưới dạng các bản beta. Nhưng không lâu sau đó, nó đã được thay thế bởi các bản alpha đầu tiên của PHP 3.0.
+    PHP 3.0 là phiên bản đầu tiên cho chúng ta thấy một hình ảnh gần gũi với các phiên bản PHP mà chúng ta được biết ngày nay. Nó đã được Andi Gutmans và Zeev Suraski tạo ra năm 1997 sau khi viết lại hoàn toàn bộ mã nguồn trước đó. Lý do chính mà họ đã tạo ra phiên bản này là do nhận họ thấy PHP/FI 2.0 hết sức yếu kém trong việc phát triển các ứng dụng thương mại điện tử mà họ đang xúc tiến trong một dự án của trường đại học. Trong một nỗ lực hợp tác và bắt đầu xây dựng dựa trên cơ sở người dùng đã có của PHP/FI, Andi, Rasmus và Zeev đã quyết định hợp tác và công bố PHP 3.0 như là phiên bản thế hệ kế tiếp của PHP/FI 2.0, và chấm dứt phát triển PHP/FI 2.0.
+    Một trong những sức mạnh lớn nhất của PHP 3.0 là các tính năng mở rộng mạnh mẽ của nó. Ngoài khả năng cung cấp cho người dùng cuối một cơ sở hạ tầng chặt chẽ dùng cho nhiều cơ sở dữ liệu, giao thức và API khác nhau, các tính năng mở rộng của PHP 3.0 đã thu hút rất nhiều nhà phát triển tham gia và đề xuất các mô đun mở rộng mới. Hoàn toàn có thể kết luận được rằng đây chính là điểm mấu chốt dẫn đến thành công vang dội của PHP 3.0. Các tính năng khác được giới thiệu trong PHP 3.0 gồm có hỗ trợ cú pháp hướng đối tượng và nhiều cú pháp ngôn ngữ nhất quán khác.
+    Ngôn ngữ hoàn toàn mới đã được công bố dưới một cái tên mới, xóa bỏ mối liên hệ với việc sử dụng vào mục đích cá nhân hạn hẹp mà cái tên PHP/FI 2.0 gợi nhắc. Nó đã được đặt tên ngắn gọn là ‘PHP’, một kiểu viết tắt hồi quy của “PHP: Hypertext Preprocessor”.
+    Vào cuối năm 1998, PHP đã phát triển được con số cài đặt lên tới hàng chục ngàn người sử dụng và hàng chục ngàn Web site báo cáo là đã cài nó. Vào thời kì đỉnh cao, PHP 3.0 đã được cài đặt cho xấp xỉ 10% số máy chủ Web có trên mạng Internet.
+    PHP 3.0 đã chính thức được công bố vào tháng 6 năm 1998, sau thời gian 9 tháng được cộng đồng kiểm nghiệm.
+    Vào mùa đông năm 1998, ngay sau khi PHP 3.0 chính thức được công bố, Andi Gutmans và Zeev Suraski đã bắt đầu bắt tay vào việc viết lại phần lõi của PHP. Mục đích thiết kế là nhằm cải tiến tốc độ xử lý các ứng dụng phức tạp, và cải tiến tính mô đun (modularity) của mã PHP gốc. Những ứng dụng như vậy đã chạy được trên PHP 3.0 dựa trên các tính năng mới và sự hỗ trợ khá nhiều các cơ sở dữ liệu và API của bên thứ ba, nhưng PHP 3.0 đã không được thiết kế để xử lý các ứng dụng phức tạp như thế này một cách có hiệu quả.
+    Một “cỗ máy” mới, có tên ‘Zend Engine’ (ghép từ các chữ đầu trong tên của Zeev và Andi), đã đáp ứng được các nhu cầu thiết kế này một cách thành công, và lần đầu tiên được giới thiệu vào giữa năm 1999. PHP 4.0, dựa trên “cỗ máy” này, và đi kèm với hàng loạt các tính năng mới bổ sung, đã chính thức được công bố vào tháng 5 năm 2000, gần 2 năm sau khi bản PHP 3.0 ra đời. Ngoài tốc độ xử lý được cải thiện rất nhiều, PHP 4.0 đem đến các tính năng chủ yếu khác gồm có sự hỗ trợ nhiều máy chủ Web hơn, hỗ trợ phiên làm việc HTTP, tạo bộ đệm thông tin đầu ra, nhiều cách xử lý thông tin người sử dụng nhập vào bảo mật hơn và cung cấp một vài các cấu trúc ngôn ngữ mới. Với PHP 4, số nhà phát triển dùng PHP đã lên đến hàng trăm nghìn và hàng triệu site đã công bố cài đặt PHP, chiếm khoảng 20% số tên miền trên mạng Internet.
+    Nhóm phát triển PHP cũng đã lên tới con số hàng nghìn người, và hàng nghìn người khác tham gia vào các dự án có liên quan đến PHP như PEAR, PECL và tài liệu kĩ thuật cho PHP.
+    Sự thành công hết sức to lớn của PHP 4.0 đã không làm cho nhóm phát triển PHP tự mãn. Cộng đồng php đã nhanh chóng giúp họ nhận ra những yếu kém của PHP 4 đặc biệt với khả năng hỗ trợ lập trình hướng đối tượng (OOP), xử lý XML, không hỗ trợ giao thức máy khách mới của MySQL 4.1 và 5.0, hỗ trợ dịch vụ web yếu. Những điểm này chính là mục đích để Zeev và Andi viết Zend Engine 2.0, lõi của PHP 5.0. Một thảo luận trên Slashdot.org đã cho thấy việc phát triển PHP 5.0 có thể đã bắt đầu vào thời điểm tháng 12 năm 2002 nhưng những bài phỏng vấn Zeev liên quan đến phiên bản này thì đã có mặt trên mạng Internet vào khoảng tháng 7 năm 2002. Ngày 29 tháng 6 năm 2003, PHP 5 Beta 1 đã chính thức được công bố để cộng đồng kiểm nghiệm. Đó cũng là phiên bản đầu tiên của Zend Engine 2.0. Phiên bản Beta 2 sau đó đã ra mắt vào tháng 10 năm 2003 với sự xuất hiện của hai tính năng rất được chờ đợi: Iterators, Reflection nhưng namespaces một tính năng gây tranh cãi khác đã bị loại khỏi mã nguồn. Ngày 21 tháng 12 năm 2003: PHP 5 Beta 3 đã được công bố để kiểm tra với việc phân phối kèm với Tidy, bỏ hỗ trợ Windows 95, khả năng gọi các hàm PHP bên trong XSLT (Extensible Stylesheet Language Transformation), sửa chữa nhiều lỗi và thêm khá nhiều hàm mới. PHP 5 bản chính thức đã ra mắt ngày 13 tháng 7 năm 2004 sau một chuỗi khá dài các bản kiểm tra thử bao gồm Beta 4, RC 1, RC2, RC3. Mặc dù coi đây là phiên bản sản xuất đầu tiên nhưng PHP 5.0 vẫn còn một số lỗi trong đó đáng kể là lỗi xác thực HTTP.
+    Ngày 14 tháng 7 năm 2005, PHP 5.1 Beta 3 được PHP Team công bố đánh dấu sự chín muồi mới của PHP với sự có mặt của PDO, một nỗ lực trong việc tạo ra một hệ thống API nhất quán trong việc truy cập cơ sở dữ liệu và thực hiện các câu truy vấn. Ngoài ra, trong PHP 5.1, các nhà phát triển PHP tiếp tục có những cải tiến trong nhân Zend Engine 2, nâng cấp mô đun PCRE lên bản PCRE 5.0 cùng những tính năng và cải tiến mới trong SOAP, streams.
+2.1.3 Các đặc điểm của PHP
+- Mã nguồn mở: PHP là một sản phẩm mã nguồn mở (Open – source) nên việc cài đặt và tùy biến PHP là miễn phí và tự do. Vì có ưu thế nguồn mở nên PHP có thể được cài đặt trên hầu hết các Web Server thông dụng hiện nay như Apache, IIS…
+- Tính cộng đồng của PHP: Là một ngôn ngữ nguồn mở cùng với sự phổ biến của PHP thì cộng đồng PHP được coi là khá lớn và có chất lượng. Với cộng đồng phát triển lớn, việc cập nhật các bản vá lỗi phiên bản hiện tại cũng như thử nghiệm các phiên bản mới khiến PHP rất linh hoạt trong việc hoàn thiện mình. Cộng đồng hỗ trợ, chia sẽ kinh nghiệm của PHP cũng rất dồi dào. Với rất nhiều diễn đàn, blog trong và ngoài nước nói về PHP đã khiến cho quá trình tiếp cận của người tìm hiểu PHP được rút ngắn nhanh chóng.
+- Thư viện phong phú: Ngoài sự hỗ trợ của cộng đồng, thư viện script PHP cũng rất phong phú và đa dạng. Từ những cái rất nhỏ như chỉ là 1 đoạn code, 1 hàm (PHP.net…) cho tới những cái lớn hơn như Framework (Zend, CakePHP, CogeIgniter, Symfony…), ứng dụng hoàn chỉnh (Joomla, WordPress, PhpBB…). Với thư viện code phong phú, việc học tập và ứng dụng PHP trở nên rất dễ dàng và nhanh chóng. Đây cũng chính là đặc điểm khiến PHP trở nên khá nổi bật và cũng là nguyên nhân vì sao ngày càng có nhiều người sử dụng PHP để phát triển web.
+- Hỗ trợ kết nối nhiều hệ cơ sở dữ liệu: Nhu cầu xây dựng web có sử dụng cơ sở dữ liệu là một nhu cầu tất yếu và PHP cũng đáp ứng rất tốt nhu cầu này. Với việc tích hợp sẵn nhiều Database Client trong PHP đã làm cho ứng dụng PHP dễ dàng kết nối tới các hệ cơ sở dữ liệu thông dụng. Việc cập nhật và nâng cấp các Database Client đơn giản chỉ là việc thay thế các Extension của PHP để phù hợp với hệ cơ sở dữ liệu mà PHP sẽ làm việc. Một số hệ cơ sở dữ liệu thông dụng mà PHP có thể làm việc là: MySQL, MS SQL, Oracle, Cassandra…
+- Lập trình hướng đối tượng: Ngày nay, khái niệm lập trình hướng đối tượng (OOP) đã không còn xa lạ với lập trình viên. Với khả năng và lợi ích của mô hình lập trình này nên nhiều ngôn ngữ đã triển khai để hỗ trợ OOP. Từ phiên bản PHP 5, PHP đã có khả năng hỗ trợ hầu hết các đặc điểm nổi bật của lập trình hướng đối tượng như là Inheritance, Abstraction, Encapsulation, Polymorphism, Interface, Autoload…. Với việc ngày càng có nhiều Framework và ứng dụng PHP viết bằng mô hình OOP nên lập trình viên tiếp cận và mở rộng các ứng dụng này trở nên dễ dàng và nhanh chóng.
+- Tính bảo mật: Bản thân PHP là mã nguồn mỡ và cộng đồng phát triển rất tích cực nên có thể nói PHP khá là an toàn. PHP cũng cung cấp nhiều cơ chế cho phép bạn triển khai tính bảo mật cho ứng dụng của mình như session, các hàm filter dữ liệu, kỹ thuật ép kiểu, thư viện PDO (PHP Data Object) để tương tác với cơ sở dữ liệu an toàn hơn. Kết hợp với các kỹ thuật bảo mật ở các tầng khác thì ứng dụng PHP sẽ trở nên chắc chắn hơn và đảm bảo hoạt động cho website.
+- Khả năng mở rộng cho PHP: Bằng việc xây dựng trên nền ngôn ngữ C và là mã nguồn mở nên khả năng mở rộng cho ứng dụng PHP có thể nói là không có giới hạn. Với thư viện phong phú và khả năng mở rộng lớn, ứng dụng PHP có thể tương tác với hầu hết các loại ứng dụng phổ biến như xử lý hình ảnh, nén dữ liệu, mã hóa, thao tác file PDF, Office, Email, Streaming… Bạn hoàn toàn có thể tự xây dựng cho mình các Extension để tối ưu, bổ sung các chức năng cho PHP cũng như tối ưu luôn Core của PHP để phục vụ cho các mục đích mở rộng website của mình.
+
+2.1.4 Ứng dụng của ngôn ngữ PHP
+- Hiện nay, PHP có rất nhiều các CMS (gọi là mã mở nguồn). Vì thế, ngôn ngữ lập trình PHP rất đa dạng và nó sẽ giúp bạn thiết kế dễ dàng các web bán hàng, tin tức hay blog cá nhân cho tới những trang web giới thiệu công ty, web giới thiệu sản phẩm, …
+- PHP còn có thể giúp người dùng thực hiện các hàm hệ thống. Ví dụ như từ các file của một hệ thống cụ thể, PHP có thể tạo, mở, đọc, ghi và đóng chúng.
+- Cùng với đó, khi tìm hiểu PHP là gì, các bạn sẽ nhận thấy rằng PHP còn có thể xử lý các form một cách nhanh chóng và đơn giản như thu thập dữ liệu từ file hay lưu dữ liệu vào cùng một file, …
+- Khi sử dụng ngôn ngữ lập trình PHP, người dùng còn có thể tự thêm, sửa hoặc xóa các phần tử bên trong của Database của mình. Ngoài ra, PHP còn có khả năng thiết lập Cookie và truy cập các biến Cookie. Đồng thời, PHP cũng giúp bạn hạn chế được số lượng người sử dụng truy cập vào trang web của riêng bạn.
+2.2 Giới thiệu về web Framework Codeigniter
+2.2.1 Codeigniter là gì?
+  Codeigniter hay Codeigniter Framework là một trong các nền tảng thiết kế web theo mã nguồn mở được ưa chuộng hiện nay, bên cạnh Laravel, Drupal, Magento, … Nền tảng này được sử dụng chủ yếu để xây dựng các loại ứng dụng web động có tương tác với ngôn ngữ PHP. Phiên bản đầu tiên của Codeigniter được phát hành ngày 28/02/2006. Tính đến thời điểm hiện tại thì Codeigniter đang được phát triển bởi ExpressionEngine Development Team thuộc EllisLab, Inc.
+   M là viết tắt của Model: Các thao tác làm việc với cơ sở dữ liệu, Model xử lý dữ liệu được yêu cầu từ Controller và trả về kết quả truy xuất.
+   V là từ viết tắt của View: Chức năng hiển thị các thành phần của điều hướng của controller đến với người dùng.
+   C là từ viết tắt của Controller: Tức là điều khiển, controller nhận lệnh từ người dùng sau đó xử lý, nếu có thao tác đến cơ sở dữ liệu thì gửi yêu cầu qua Model truy vấn dữ liệu sau đó truyền đến View để show dữ liệu ra màn hình.
+2.2.2 Framework Codeigniter là gì?
+  Codeigniter (CI) là một PHP framework được xây dựng theo mô hình MVC, bao gồm các thư viện được viết sẵn bằng PHP.Các thư viện trong Codeigniter giúp chúng ta kết nối và thực hiện các công việc liên quan đến cơ sở dữ liệu, upload file, xử lý ảnh, phân trang, cookies, session, và một số phương thức bảo mật cơ bản, ... điều này giúp ta xây dựng một website nhanh hơn, đồng thời tổ chức code tốt hơn với mô hình MVC.
+2.2.3 Ưu điểm của framework Codeigniter
+      Codeigniter Framework sở hữu rất nhiều ưu điểm đặc biệt khiến nhiều lập trình viên cũng như các nhà phát triển web lựa chọn trong quá trình thiết kế web của mình. Có thể kể tới các ưu điểm của dịch vụ này như sau:
+  Hệ thống thư viện đa dạng: Codeigniter Framework cung cấp các thư viện phục vụ cho những tác vụ thường gặp nhất hiện nay trong quá trình lập trình web. Codeigniter Framework cung cấp các thư viện phục vụ cho các tác vụ thường gặp nhất trong lập trình web, cụ thể như việc truy cập cơ sở dữ liệu, gửi mail, kiểm tra cơ sở dữ liệu và xử lý hình ảnh, ...
+  Footprint nhỏ: Dung lượng của CodeIgniter 3 chỉ tốn khoảng 2MB khi tải về bao gồm cả file cài đặt lẫn hướng dẫn sử dụng Codeigniter Framework.
+  Khả năng tương thích với lưu trữ đạt chuẩn: CodeIgniter 3 chỉ cần ngôn ngữ PHP 5.3.7 và có thể hoạt động tương thích với hầu hết các hosting chia sẻ hoặc hosting riêng. Rất nhiều ứng dụng web cần đến một cơ sở dữ liệu và CodeIgniter cũng hỗ trợ điều này bao gồm cả ngôn ngữ MySQL.
+  Codeigniter Framework được thiết kế theo mô hình Model-View-Controller (MVC) giúp tách phần hiển thị giao diện và xử lý của một phần mềm thành nhiều phần độc lập. Từ đó giúp cho việc thiết kế, xử lý cũng như bảo trị mã nguồn một cách dễ dàng hơn.
+  Cấu hình gần như bằng không: Đa số cấu hình CodeIgniter được thực hiện theo quy ước, cụ thể như việc đặt mô hình trong một mô hình thư mục. Ngoài ra còn có một số tùy chọn cấu hình sẵn có thông qua các tập lệnh bên trong thư mục “config”.
+Tốc độ vô cùng nhanh chóng: CodeIgniter được đánh giá là 1 PHP framework có tốc độ nhanh, chúng có thể đáp ứng được hàng triệu lượt truy cập trên một ngày.
+  Codeigniter Framework hoàn toàn miễn phí: Chúng được cấp phát hành dưới giấy phép Apache/BSD mở rộng cho phép người dùng tự do thay đổi, phát triển cũng như phân phối mã nguồn mở đó theo sự sáng tạo của bản thân mình.
+  Với sự hỗ trợ từ Framewwork Codeigniter, rất nhiều website đã đạt tiêu chuẩn MVC và hoạt động tốt giữa rất nhiều website có mặt trên Internet hiện nay.
+  Hỗ trợ tốt nhất cho SEO: Cấu trúc URL của CodeIgniter vô cùng thân thiện với các công cụ tìm kiếm. Đương nhiên điều này giúp cho trang web của bạn tăng thứ hạng nhanh hơn mà không cần thiết phải đầu tư quá nhiều về phần mềm hay công cụ.
+  Khả năng bảo mật hệ thống: Cơ chế kiểm tra dữ liệu chặt chẽ, ngăn ngừa XSS và SQL Injection của CodeIgniter giúp giảm thiểu đáng kể những nguy cơ xâm nhập và làm hại tới hệ thống.
+2.2.4 Nhược điểm của framework Codeigniter
+    Ngoài các ưu điểm nổi trội trên, phần mềm mã nguồn mở này còn nhiều điểm chưa hoàn thiện cần phải tối ưu thêm. Cụ thể có thể nhắc tới một số yếu tố sau đây:
+• Chưa hỗ trợ Object-Relational Mapping (ORM): ORM được hiểu là 1 kỹ thuật lập trình, trong đó có các bảng của cơ sở dữ liệu được ánh xạ thành các đối tượng trong quá trình lập trình. Kỹ thuật này giúp cho việc thực hiện các thao tác trong dữ liệu (Create Read UpdateDelete – CRUD) dễ dàng và ngắn gọn hơn.
+• Chưa hỗ trợ 1 số module thông dụng: So với các framework mã nguồn mở khác, CodeIgniter vẫn chưa có các module hỗ trợ cho các tác vụ thường gặp trong quá trình xây dựng ứng dụng web như là: Chứng thực người dùng (User Authorization), trình phân tích RSS (RSS Parser) hoặc trình xử lý PDF.
+2.3 Hệ quản trị Cơ sở dữ liệu MySql và Naticat.
+2.3.1 MySQL là gì ?
+    MySQL là một cơ sở dữ liệu quan hệ miễn phí hiện nay đã được hãng Oracle mua lại từ hãng Sun. Nó thường được sử dụng kết hợp với PHP để lưu trữ dữ liệu của ứng dụng website khi người dùng thao tác trên website của chúng ta. SQL Server - một hệ cơ sở dữ liệu quan hệ của Microsoft - và MySQL được xây dựng giống nhau về tư tưởng, kiến trúc.
+• Database: là một CSDL (cơ sở dữ liệu), trong CSDL bao gồm các table.
+• Table: là bảng dữ liệu, trong table bao gồm các field.
+• Field: là trường dữ liệu.
+2.3.2 Naticat là gì?
+  Navicat Premium là một công cụ quản trị cơ sở dữ liệu đa kết nối nâng cao cho phép bạn kết nối đồng thời với tất cả các loại cơ sở dữ liệu một cách dễ dàng. Navicat cho phép bạn kết nối với cơ sở dữ liệu MySQL, MariaDB, Oracle, PostgreSQL, SQLite và SQL Server từ một ứng dụng duy nhất, giúp quản trị cơ sở dữ liệu trở nên dễ dàng.
+  Sẽ không còn phải sử dụng cửa sổ dòng lệnh đơn đọc bạn có thể dễ dàng và nhanh chóng xây dựng, quản lý và duy trì một cơ sở dữ liệu của mình bằng giao diện sinh động. Nó có thể giúp bạn kết nói với một máy chỉ database ở xa và cung cấp các công cụ tiện ích mà bạn có thể sẽ bất ngờ. Chương trình hoàn toàn tương thích với các cơ sở dữ liệu địa phương, mạng cũng như các đám mây như Amazon, SQL Azure, Oracle Cloud và Google Cloud.
+2.3.3 Lịch sử phát triển của MySQL
+- Công ty Thuy Điển MySQL AB phát triển MySQL vào năm 1994.
+- Phiên bản đầu tiên của MySQL phát hành năm 1995.
+- Công ty Sun Microsystems mua lại MySQL AB trong năm 2008.
+- Năm 2010 tập đoàn Oracle thâu tóm Sun Microsystems. Ngay lúc đó, đội ngũ phát triển của MySQL tách MySQL ra thành 1 nhánh riêng gọi là MariaDB. Oracle tiếp tục phát triển MySQL lên phiên bản 5.5.
+- 2013 MySQL phát hành phiên bản 5.6.
+- 2015 MySQL phát hành phiên bản 5.7.
+- MySQL đang được phát triển lên phiên bản 8.0.
+- MySQL hiện nay có 2 phiên bản miễn phí (MySQL Community Server) và có phí (Enterprise Server).
+- MySQL là một hệ quản trị cơ sở dữ liệu quan hệ rất phổ biến hiện nay.
+2.3.4 Lợi ích của MySQL
+- MySQL là CSDL có tốc độ khá cao, ổn định và khá dễ sử dụng có thể hoạt động được trên khá nhiều hệ điều hành.
+- Tính bảo mật mạnh và sử dụng được trên nhiều ứng dụng mà MySQL còn hoàn toàn được sử dụng miễn phí.
+- MySQL không chỉ dừng lại ở bổ trợ cho PHP và Perl, mà nó còn bổ trợ cho nhiều ngôn ngữ khác, Nó là nơi để lưu trữ thông tin trên các trang web được viết bằng Perl hoặc PHP.
+2.4 Kết luận chương 2
+    Trong chương 2 của đồ án đã nên được nội dung lý thuyết quá trình tìm hiểu công nghệ mới về ngôn ngữ lập trình PHP, web framwork Codeigniter và hệ quản trị cơ sở dữ liệu MySql và Naticat. Chương tiếp theo sẽ tiến hành xây dựng “Website quản lý và bán thực phẩm sạch”.	
+
+
+CHƯƠNG 3: XÂY DỰNG WEBSITE QUẢN LÝ VÀ BÁN
+THỰC PHẨM SẠCH
+3.1. Khảo sát và phân tích yêu cầu
+3.1.1 Thời gian và địa điểm khảo sát
+- Tham khảo một số website bán hàng online trên mạng: thucphamsach.com, organicfood.vn, …
+3.1.2 Thông tin liên hệ
+- Bộ môn CNPM – Khoa Công Nghệ Thông Tin – Trường ĐHSPKT Hưng Yên 
+3.1.3 Thông tin dự án
+- Tên dự án: “XÂY DỰNG WEBSITE BÁN THỰC PHẨM SẠCH”
+- Người thực hiện: Nguyễn Thị Ngoan.
+- Người hướng dẫn: Thạc sĩ Trần Đỗ Thu Hà.
+- Ngày thực hiện: 02/03/2020.
+- Dự kiến ngày hoàn thành: 01/07/2020.
+3.1.4 Yêu cầu của hệ thống sau khảo sát
+    Bảng 1: Yêu cầu khách hàng
+STTTên yêu cầu1Đăng nhập vào hệ thống quản trị2Hiển thị thông tin loại sản phẩm lên thanh menu của website 3Hiển thị nội dung của website như sản phẩm mới nhất, giảm giá.4Hiển thị thông tin chi tiết về sản phẩm5Hiển thị thông tin kết quả tìm kiếm6Quản lý giỏ hàng khi khách hàng thêm sản phẩm vào giỏ hàng7Chức năng đặt hàng8Chắc năng tìm kiếm và lọc thông tin theo yêu cầu của khách hàng9Hiển thị thông tin chi tiết sản phẩm khi chọn xem một sản phẩm10Hiển thị trang AboutUs giới thiệu về cửa hàng11Quản lý dữ liệu khách hàng12Quản lý Order13Quản lý Slider14Quản lý Giảm giá15Quản lý Bài viết16Quản lý sản phẩm17Quản lý loại sản phẩm18Quản lý danh mục tin tức19Quản lý chi tiết tin tức20Quản lý kho ảnh media21Quản lý đối tác3.1.5 Mô tả yêu cầu của hệ thống
+• Các yêu cầu chức năng
+    Bảng 2: Các yêu cầu chức năng
+STTTên yêu cầuMô tả yêu cầuICác yêu cầu chức năng nghiệp vụLà các chức năng của phần mềm tương ứng với các công việc trong thế giới thực.1Module sản phẩmHiển thị thông tin và phân loại sản phẩm trong gian hàng. Sản phẩm hiển thị lên website được hiển thị đầy đủ thông tin về sản phẩm đó như: Hình ảnh, tên sản phẩm, đặc điểm nổi bật của sản phẩm, giá, hạn sản xuất.2Module giỏ hàngKhi tham khảo đầy đủ thông tin về sản phẩm khách hàng có thể đặt mua ngay tại website thông qua chức năng giỏ hàng mà không cần phải đến điềm giao dịch, giỏ hàng có thể thêm, bớt, thanh toán tiền các sản phẩm đã mua. Khi chọn thanh toán giỏ hàng khách hàng phải ghi đầy đủ thông tin cá nhân, thông tin này được hệ thống lưu trữ xử lý.3Module tìm kiếm sản phẩm, tin tức, tư vấn
++ Trang tin tức: Tư vấn cho khách hàng muốn tìm hiểu về mỹ phẩm
++ Trang giới thiệu: Giới thiệu các thông tin về cửa hàng
++ Trang liên hệ: Khách hàng có thể liên hệ nhân viên về các thắc mắc, ý kiến của mình.5Module quản lý sản phẩm, đơn hàng
+Người quản trị có thể cập nhật thông tin các mặt hàng, loại hàng, quản lý thông tin đơn hàng.6Module quản lý danh mụcLà quản lý thông tin về các danh mục sản phẩm.7Module quản lý khuyến mạiMã khuyến mại, mã sản phẩm…IICác yêu cầu chức năng hệ thốngLà các chức năng của phần mềm được phát sinh thêm khi thực hiện một công việc trên máy tính.1Quản lý hệ thống+ Quản lý thông tin tài khoản
++ Đổi mật khẩu
++ Thêm tài khoản
++ Phân quyền tài khoản2Quản lý sản phẩm+ Quản lý danh mục nhân viên
++ Quản lý danh mục sản phẩm
++ Quản lý thông tin
++ Quản lý đánh giá3Báo cáo+ Báo cáo, thống kê sản phẩm
++ Báo cáo khách hàng
++ Báo cáo doanh thu4Quản lý tài khoản+ Quản lý người dùng
++ Quản lý bình luận
++ Quản lý liên hệ• Các yêu cầu phi chức năng
+    Bảng 3: Các yêu cầu phi chức năng
+STTTên yêu cầuMô tả yêu cầu1Giao diệnGiao diện hệ thống phải dễ sử dụng, trực quan, thân thiện với mọi người dùng.2Tốc độ xử lýHệ thống phải xử lý nhanh chóng và chính xác.3Bảo mật dữ liệuTính bảo mật và độ an toàn cao.4Tương thíchTương thích với đa phần các trình duyệt web hiện tại.
+3.2 Phân tích thiết kế với UML
+3.2.1 Biểu đồ Use case
+• Xác định các tác nhân và tình huống sử dụng Use case 
+   Qua khảo sát hiện trạng thực tế, kết hợp với, việc tham khảo tài liệu và phân tích ý kiến của người dùng, hệ thống quản lý đồ án có các tác nhân sau:
+    Bảng 4: Xác định tác nhân
+STTTác NhânDiễn Giải1Những người thuộc nhóm quyền này có thể tạo tài khoản người dùng và phẩm quyền cho từng tài khoản đó2Những người thuộc quyền này sẽ được Admin cấp cho tài khoản và được giới hạn quyền hạn sử dụng.3Những người thuộc nhóm quyền này có thê truy xuất vào trang web bán hàng và thực hiện việc xem, tìm kiếm thông tin và mua sắm online.
+
+
+• Các quyền sử dụng 
+    Bảng 5: Xác định quyền sử dụng
+STTTác nhân chínhTên Use case1Admin  Thực hiện các chức năng như quản lý danh mục sản phẩm, quản lý thông tin, quản lý đánh giá, quản lý sản phẩm, quản lý bình luận, quản lý danh mục bài viết, quản lý bài viết, quản lý nhập kho, quản lý xuất kho, quản lý admin, quản lý khách hàng, quản lý nhà cung cấp, quản lý đơn hàng, quản lý slide, quản lý sự kiện, quản lý trang tĩnh, quản lý thống kê. Để thực hiện chức năng này admin phải đăng nhập.2Editor Thực hiện các chức năng như quản lý danh mục sản phẩm, quản lý thông tin, quản lý đánh giá, quản lý bình luận, quản lý sản phẩm, quản lý danh mục bài viết, quản lý bài viết, quản lý nhập kho, quản lý xuất kho, quản lý khách hàng, quản lý nhà cung cấp, quản lý đơn hàng. Để thực hiện chức năng này nhân viên phải đăng nhập.3Customer Có thể thực hiện các chức năng như tìm kiếm sản phẩm, xem thông tin chi tiết của sản phẩm, đặt hàng, xem giỏ hàng, bình luận sản phẩm, đánh giá, đăng nhập hệ thống, gửi thông tin liên hệ.
+
+
+
+
+
+
+• Biểu đồ Use Case tổng quát
+
+    Hình 1: Biểu đồ Use case cho hệ thống
+• Biểu đồ Use Case “đăng nhập”
+
+    Hình 2: Biểu đồ Use Case dăng nhập
+Tác nhân: Admin, nhân viên
+Mô tả: Use case cho admin, nhân viên đăng nhập vào hệ thống.
+Điều kiện trước: admin, nhân viên chưa đăng nhập vào hệ thống.
+Dòng sự kiện chính:
+- Chọn chức năng đăng nhập.
+- Giao diện đăng nhập hiển thị.
+- Nhập email, mật khẩu vào giao diện đăng nhập.
+- Hệ thống kiểm tra email và mật khẩu nhập của admin, nhân viên. Nếu nhập sai email hoặc mật khẩu thì chuyển sang dòng sự kiện rẽ nhánh A1. Nếu nhập đúng thì hệ thống sẽ chuyển tới trang quản trị.
+Use case kết thúc.
+Dòng sự kiện rẽ nhánh:
+- Dòng rẽ nhánh A1: admin, nhân viên đăng nhập không thành công.
+- Hệ thống thông báo quá trình đăng nhập không thành công do sai email hoặc mật khẩu.
+- Chọn nhập lại hệ thống yêu cầu nhập lại email, mật khẩu.
+Use case kết thúc.
+    Hậu điều kiện: admin, nhân viên đăng nhập thành công và có thể sử dụng các chức năng tương ứng trong trang quản trị.
+• Biểu đồ Use Case “Quản lý danh mục sản phẩm”
+      
+    Hình 3: Biểu đồ Use Case quản lý danh mục sản phẩm
+Tác nhân: Admin, nhân viên
+Mô tả: use case cho phép xem, thêm, sửa, xóa danh mục sản phẩm trong hệ thống.
+Điều kiện trước: admin, nhân viên đã đăng nhập vào hệ thống.
+Dòng sự kiện chính: 
+Người sử dụng chọn kiểu tác động: thêm, sửa, xóa thông tin danh mục sản phẩm.
+- Thêm danh mục sản phẩm: chọn thêm danh mục sản phẩm, hệ thống hiển thị giao diện nhập thông tin danh mục sản phẩm, người sử dụng nhập thông tin danh mục sản phẩm, nếu thành công hệ thống đưa ra thông báo, nếu sai thực hiện dòng rẽ nhánh A1, lưu thông tin vào danh sách danh mục sản phẩm.
+- Sửa thông tin danh mục sản phẩm: hệ thống hiển thị danh sách danh mục sản phẩm, chọn danh mục sản phẩm cần sửa, nhập các thông tin cần thay đổi, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách danh mục sản phẩm.
+- Xóa thông tin danh mục sản phẩm: hệ thống hiển thị danh sách danh mục sản phẩm, chọn danh mục sản phẩm cần xóa, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách danh mục sản phẩm.
+Use case kết thúc.
+Dòng sự kiện rẽ nhánh A1: hệ thống thông báo việc nhập dữ liệu không hợp lệ, nhập lại thông tin, quay lại bước 1 của dòng sự kiện chính.
+Hậu điều kiện: các thông tin về danh mục sản phẩm được cập nhật trong cơ sở dữ liệu.
+• Biểu đồ Use Case “Quản lý sản phẩm”
+
+    Hình 4: Biểu đồ Use case “Quản lý sản phẩm”
+
+Tác nhân: Admin, nhân viên
+Mô tả: use case cho phép xem, thêm, sửa, xóa thông tin sản phẩm trong hệ thống.
+Điều kiện trước: admin, nhân viên đã đăng nhập vào hệ thống.
+Dòng sự kiện chính: 
+Người sử dụng chọn kiểu tác động: thêm, sửa, xóa thông tin sản phẩm.
+- Thêm thông tin sản phẩm: chọn thêm sản phẩm, hệ thống hiển thị giao diện nhập thông tin sản phẩm, người sử dụng nhập thông tin sản phẩm như tên sản phẩm, hạn sản phẩm, … nếu thành công hệ thống đưa ra thông báo, nếu sai thực hiện dòng rẽ nhánh A1, lưu thông tin vào danh sách sản phẩm.
+- Sửa thông tin sản phẩm: hệ thống hiển thị danh sách sản phẩm, chọn sản phẩm cần sửa, nhập các thông tin cần thay đổi, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách sản phẩm.
+- Xóa thông tin sản phẩm: hệ thống hiển thị danh sách sản phẩm, chọn sản phẩm cần xóa, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách sản phẩm.
+Use case kết thúc
+Dòng sự kiện rẽ nhánh A1: hệ thống thông báo việc nhập dữ liệu không hợp lệ, nhập lại thông tin, quay lại bước 1 của dòng sự kiện chính.
+Hậu điều kiện: các thông tin về sản phẩm được cập nhật trong cơ sở dữ liệu.							
+
+
+
+
+
+
+
+• Biểu đồ Use Case “Quản lý khách hàng”
+
+    Hình 5: Biểu đồ Use case “Quản lý khách hàng”
+Tác nhân: Admin, nhân viên
+Mô tả: use case cho phép xem, xóa thông tin khách hàng, quản lý nợ cần thu trong hệ thống.
+Điều kiện trước: admin, nhân viên đã đăng nhập vào hệ thống.
+Dòng sự kiện chính: 
+Người sử dụng chọn kiểu tác động: xóa thông tin khách hàng, quản lý nợ cần thu.
+- Quản lý nợ cần thu: người dùng có thể xem nợ cần thu của khách hàng và xác nhận đã thanh toán sau khi khách hàng thanh toán, thông tin được lưu trong danh sách khách hàng.
+- Xóa thông tin khách hàng: hệ thống hiển thị danh sách khách hàng, chọn khách hàng cần xóa, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách khách hàng.
+Use case kết thúc
+Dòng sự kiện rẽ nhánh A1: hệ thống thông báo việc nhập dữ liệu không hợp lệ, nhập lại thông tin, quay lại bước 1 của dòng sự kiện chính.
+    Hậu điều kiện: các thông tin về khách hàng được cập nhật trong cơ sở dữ liệu.
+    
+• Biểu đồ Use Case “Quản lý thông tin”
+
+    Hình 6: Biểu đồ Use case “Quản lý thông tin”
+Tác nhân: Admin, nhân viên
+Mô tả: use case cho phép xem, thêm, sửa, xóa thông tin sản phẩm trong hệ thống.
+Điều kiện trước: admin, nhân viên đã đăng nhập vào hệ thống.
+Dòng sự kiện chính: 
+Người sử dụng chọn kiểu tác động: thêm, sửa, xóa thông tin thông tin sản phẩm.
+- Thêm thông tin sản phẩm: chọn thêm thông tin, hệ thống hiển thị giao diện nhập thông tin sản phẩm như kích thước, khối lượng, phân loại, … người sử dụng nhập thông tin, nếu thành công hệ thống đưa ra thông báo, nếu sai thực hiện dòng rẽ nhánh A1, lưu thông tin vào danh sách thông tin.
+- Sửa thông tin sản phẩm: hệ thống hiển thị danh sách thông tin, chọn thông tin cần sửa, nhập các thông tin cần thay đổi, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách thông tin.
+- Xóa thông tin sản phẩm: hệ thống hiển thị danh sách thông tin, chọn thông tin cần xóa, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách thông tin sản phẩm.
+Use case kết thúc
+Dòng sự kiện rẽ nhánh A1: hệ thống thông báo việc nhập dữ liệu không hợp lệ, nhập lại thông tin, quay lại bước 1 của dòng sự kiện chính.
+Hậu điều kiện: các thông tin về thông tin sản phẩm được cập nhật trong cơ sở dữ liệu.
+• Biểu đồ Use Case “Quản lý đánh giá”
+
+    Hình 7: Biểu đồ Use case “Quản lý đánh giá”
+Tác nhân: Admin, nhân viên
+Mô tả: use case cho phép xem xóa thông tin đánh giá trong hệ thống.
+Điều kiện trước: admin, nhân viên đã đăng nhập vào hệ thống.
+Dòng sự kiện chính: 
+Người sử dụng chọn kiểu tác động: xóa thông tin đánh giá.
+- Xóa thông tin đánh giá: hệ thống hiển thị danh sách đánh giá, chọn đánh giá cần xóa, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách đánh giá.
+Use case kết thúc
+Dòng sự kiện rẽ nhánh A1: hệ thống thông báo việc nhập dữ liệu không hợp lệ, nhập lại thông tin, quay lại bước 1 của dòng sự kiện chính.
+Hậu điều kiện: các thông tin về đánh giá được cập nhật trong cơ sở dữ liệu.
+
+
+• Biểu đồ Use Case “Quản lý bình luận”
+
+    Hình 8: Biểu đồ Use case “Quản lý bình luận”
+Tác nhân: Admin, nhân viên
+Mô tả: use case cho phép xem xóa thông tin bình luận trong hệ thống.
+Điều kiện trước: admin, nhân viên đã đăng nhập vào hệ thống.
+Dòng sự kiện chính: 
+Người sử dụng chọn kiểu tác động: xóa thông tin bình luận.
+- Xóa thông tin bình luận: hệ thống hiển thị danh sách bình luận, chọn bình luận cần xóa, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách bình luận.
+Use case kết thúc
+Dòng sự kiện rẽ nhánh A1: hệ thống thông báo việc nhập dữ liệu không hợp lệ, nhập lại thông tin, quay lại bước 1 của dòng sự kiện chính.
+Hậu điều kiện: các thông tin về bình luận được cập nhật trong cơ sở dữ liệu.
+
+
+
+
+
+
+
+• Biểu đồ Use Case “Quản lý Danh mục bài viết”
+
+    Hình 9: Biểu đồ Use case “Quản lý Danh mục bài viết”
+Tác nhân: Admin, nhân viên
+Mô tả: use case cho phép thêm, sửa, xóa danh mục bài viết trong hệ thống.
+Điều kiện trước: admin, nhân viên đã đăng nhập vào hệ thống.
+Dòng sự kiện chính: 
+Người sử dụng chọn kiểu tác động: thêm, sửa, xóa danh mục bài viết.
+- Thêm danh mục bài viết: chọn thêm danh mục bài viết, hệ thống hiển thị giao diện nhập thông tin danh mục bài viết, người sử dụng nhập thông tin danh mục bài viết, nếu thành công hệ thống đưa ra thông báo, nếu sai thực hiện dòng rẽ nhánh A1, lưu thông tin vào danh sách danh mục bài viết.
+- Sửa danh mục bài viết: hệ thống hiển thị danh sách danh mục bài viết, chọn danh mục bài viết cần sửa, nhập các thông tin cần thay đổi, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách danh mục bài viết.
+- Xóa danh mục bài viết: hệ thống hiển thị danh sách danh mục bài viết, chọn danh mục bài viết cần xóa, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách danh mục bài viết.
+Use case kết thúc
+Dòng sự kiện rẽ nhánh A1: hệ thống thông báo việc nhập dữ liệu không hợp lệ, nhập lại thông tin, quay lại bước 1 của dòng sự kiện chính.
+Hậu điều kiện: các thông tin về danh mục bài viết được cập nhật trong cơ sở dữ liệu.
+• Biểu đồ Use Case “Quản lý Bài viết”
+
+    Hình 10: Biểu đồ Use case cho chức năng “Quản lý bài viết”
+Tác nhân: Admin, nhân viên
+Mô tả: use case cho phép thêm, sửa, xóa bài viết trong hệ thống.
+Điều kiện trước: admin, nhân viên đã đăng nhập vào hệ thống.
+Dòng sự kiện chính: 
+Người sử dụng chọn kiểu tác động: thêm, sửa, xóa bài viết.
+- Thêm bài viết: chọn thêm bài viết, hệ thống hiển thị giao diện nhập thông tin bài viết, người sử dụng nhập thông tin bài viết, nếu thành công hệ thống đưa ra thông báo, nếu sai thực hiện dòng rẽ nhánh A1, lưu thông tin vào danh sách bài viết.
+- Sửa bài viết: hệ thống hiển thị danh sách bài viết, chọn bài viết cần sửa, nhập các thông tin cần thay đổi, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách bài viết.
+- Xóa bài viết: hệ thống hiển thị danh sách bài viết, chọn bài viết cần xóa, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách bài viết.
+Use case kết thúc
+Dòng sự kiện rẽ nhánh A1: hệ thống thông báo việc nhập dữ liệu không hợp lệ, nhập lại thông tin, quay lại bước 1 của dòng sự kiện chính.
+Hậu điều kiện: các thông tin về bài viết được cập nhật trong cơ sở dữ liệu.
+• Biểu đồ Use Case “Quản lý Đơn hàng”
+
+    Hình 11: Biểu đồ Use case cho chức năng “Quản lý Đơn Hàng” 
+Tác nhân: Admin, nhân viên
+Mô tả: use case cho phép tìm kiếm đơn hàng, xuất thông tin, xóa đơn hàng, cập nhật tình trạng đơn hàng, xem chi tiết đơn hàng, xóa sản phẩm của đơn hàng trong hệ thống.
+Điều kiện trước: admin, nhân viên đã đăng nhập vào hệ thống.
+Dòng sự kiện chính: 
+Người sử dụng chọn kiểu tác động: tìm kiếm đơn hàng, xuất thông tin, xóa đơn hàng, cập nhật tình trạng đơn hàng, xem chi tiết đơn hàng, xóa sản phẩm của đơn hàng.
+- Cập nhật tình trạng đơn hàng: hệ thống hiển thị danh sách đơn hàng, chọn đơn hàng cần cập nhật trạng thái, chọn trạng thái cho đơn hàng, thông tin được lưu vào danh sách đơn hàng.
+- Tìm kiếm đơn hàng: nhập dữ liệu cần tìm kiếm vào các tiêu chí tìm kiếm, hệ thống hiển thị kết quả tìm được.
+- Xóa đơn hàng: hệ thống hiển thị danh sách đơn hàng, chọn đơn hàng cần xóa, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách đơn hàng.
+- Xuất thông tin: người dùng kích chọn vào nút xuất thông tin, thông tin các đơn hàng sẽ được trích xuất.
+- Xem thông tin đơn hàng: người dùng kích vào nút xem đơn hàng để xem chi tiết đơn hàng; nếu muốn xóa sản phẩm của đơn hàng, chọn sản phẩm cần xóa cần xóa, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách đơn hàng.
+Use case kết thúc.
+Dòng sự kiện rẽ nhánh A1: hệ thống thông báo việc nhập dữ liệu không hợp lệ, nhập lại thông tin, quay lại bước 1 của dòng sự kiện chính.
+Hậu điều kiện: các thông tin về đơn hàng được cập nhật trong cơ sở dữ liệu.
+• Biểu đồ Use Case “Quản lý Admin”
+
+    Hình 12: Biểu đồ Use case cho chức năng “Quản lý Admin”
+Tác nhân: Admin
+Mô tả: use case cho phép thêm, sửa, xóa admin trong hệ thống.
+Điều kiện trước: admin đã đăng nhập vào hệ thống.
+Dòng sự kiện chính: 
+Người sử dụng chọn kiểu tác động: thêm, sửa, xóa admin.
+- Thêm admin: chọn thêm admin, hệ thống hiển thị giao diện nhập thông tin admin, người sử dụng nhập thông tin admin, nếu thành công hệ thống đưa ra thông báo, nếu sai thực hiện dòng rẽ nhánh A1, lưu thông tin vào danh sách admin.
+- Sửa admin: hệ thống hiển thị danh sách admin, chọn admin cần sửa, nhập các thông tin cần thay đổi, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách admin.
+- Xóa admin: hệ thống hiển thị danh sách admin, chọn admin cần xóa, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách admin.
+Use case kết thúc
+Dòng sự kiện rẽ nhánh A1: hệ thống thông báo việc nhập dữ liệu không hợp lệ, nhập lại thông tin, quay lại bước 1 của dòng sự kiện chính.
+  Hậu điều kiện: các thông tin về admin được cập nhật trong cơ sở dữ liệu.
+• Biểu đồ Use Case “Quản lý Slide”
+
+    Hình 13: Biểu đồ Use case cho chức năng “Quản lý Slide”
+Tác nhân: Admin
+Mô tả: use case cho phép thêm, sửa, xóa slide trong hệ thống.
+Điều kiện trước: admin đã đăng nhập vào hệ thống.
+Dòng sự kiện chính: 
+Người sử dụng chọn kiểu tác động: thêm, sửa, xóa slide.
+- Thêm slide: chọn thêm slide, hệ thống hiển thị giao diện nhập thông tin slide, người sử dụng nhập thông tin slide, nếu thành công hệ thống đưa ra thông báo, nếu sai thực hiện dòng rẽ nhánh A1, lưu thông tin vào danh sách slide.
+- Sửa slide: hệ thống hiển thị danh sách slide, chọn slide cần sửa, nhập các thông tin cần thay đổi, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách slide.
+- Xóa slide: hệ thống hiển thị danh sách slide, chọn slide cần xóa, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách slide.
+Use case kết thúc
+Dòng sự kiện rẽ nhánh A1: hệ thống thông báo việc nhập dữ liệu không hợp lệ, nhập lại thông tin, quay lại bước 1 của dòng sự kiện chính.
+Hậu điều kiện: các thông tin về slide được cập nhật trong cơ sở dữ liệu.
+• Biểu đồ Use Case “Quản lý sự kiện”
+
+    Hình 14: Biểu đồ Use case cho chức năng “Quản lý Sự kiện”
+Tác nhân: Admin
+Mô tả: use case cho phép thêm, sửa, xóa sự kiện trong hệ thống.
+Điều kiện trước: admin đã đăng nhập vào hệ thống.
+Dòng sự kiện chính: 
+Người sử dụng chọn kiểu tác động: thêm, sửa, xóa sự kiện.
+- Thêm sự kiện: chọn thêm sự kiện, hệ thống hiển thị giao diện nhập thông tin sự kiện, người sử dụng nhập thông tin sự kiện, nếu thành công hệ thống đưa ra thông báo, nếu sai thực hiện dòng rẽ nhánh A1, lưu thông tin vào danh sách sự kiện.
+- Sửa sự kiện: hệ thống hiển thị danh sách sự kiện, chọn sự kiện cần sửa, nhập các thông tin cần thay đổi, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách sự kiện.
+- Xóa sự kiện: hệ thống hiển thị danh sách sự kiện, chọn sự kiện cần xóa, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách sự kiện.
+Use case kết thúc
+Dòng sự kiện rẽ nhánh A1: hệ thống thông báo việc nhập dữ liệu không hợp lệ, nhập lại thông tin, quay lại bước 1 của dòng sự kiện chính.
+Hậu điều kiện: các thông tin về sự kiện được cập nhật trong cơ sở dữ liệu.
+
+• Biểu đồ Use Case “Quản lý Trang”
+
+    Hình 15: Biểu đồ Use case cho chức năng “Quản lý Trang”
+Tác nhân: Admin
+Mô tả: use case cho phép thêm, sửa, xóa trang tĩnh trong hệ thống.
+Điều kiện trước: admin đã đăng nhập vào hệ thống.
+Dòng sự kiện chính: 
+Người sử dụng chọn kiểu tác động: thêm, sửa, xóa trang tĩnh.
+- Thêm trang tĩnh: chọn thêm trang tĩnh, hệ thống hiển thị giao diện nhập thông tin trang tĩnh, người sử dụng nhập thông tin trang tĩnh, nếu thành công hệ thống đưa ra thông báo, nếu sai thực hiện dòng rẽ nhánh A1, lưu thông tin vào danh sách trang tĩnh.
+- Sửa trang tĩnh: hệ thống hiển thị danh sách trang tĩnh, chọn trang tĩnh cần sửa, nhập các thông tin cần thay đổi, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách trang tĩnh.
+- Xóa trang tĩnh: hệ thống hiển thị danh sách trang tĩnh, chọn trang tĩnh cần xóa, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách trang tĩnh.
+Use case kết thúc
+Dòng sự kiện rẽ nhánh A1: hệ thống thông báo việc nhập dữ liệu không hợp lệ, nhập lại thông tin, quay lại bước 1 của dòng sự kiện chính.
+Hậu điều kiện: các thông tin về trang tĩnh được cập nhật trong cơ sở dữ liệu.
+• Biểu đồ Use Case “Quản lý Thống kê”
+
+    Hình 16: Biểu đồ Use case cho chức năng “Quản lý Thống kê”
+Tác nhân: Admin
+Mô tả: use case cho phép xem thống kê trong hệ thống.
+Điều kiện trước: admin đã đăng nhập vào hệ thống.
+Dòng sự kiện chính: 
+Người sử dụng chọn kiểu tác động: xem thống kê.
+- Cho phép xem thống kê: tổng số đơn hàng, thành viên, sản phẩm, xuất kho, biểu đồ doanh thu các ngày trong tháng, danh sách đơn hàng mới, top sản phẩm bán chạy, top sản phẩm xem nhiều, số lượng tồn đầu kỳ theo từng loại.
+Use case kết thúc
+Dòng sự kiện rẽ nhánh A1: hệ thống thông báo việc nhập dữ liệu không hợp lệ, nhập lại thông tin, quay lại bước 1 của dòng sự kiện chính.
+Hậu điều kiện: các thông tin được cập nhật trong cơ sở dữ liệu.
+• Biểu đồ Use Case “Chức năng của khách hàng”
+
+    Hình 17: Biểu đồ Use case cho chức năng “Chức năng của khách hàng”
+Tác nhân: khách hàng 
+Mô tả use case cho phép khách hàng thực hiện được các chức năng trên hệ thống.
+Điều kiện trước: khách đã truy cập vào hệ thống.
+Dòng sự kiện chính: 
+Người dùng có thể thực hiện các chức năng sau trên website:
+- Tìm kiếm sản phẩm được đăng trên website.
+- Xem sản phẩm: chọn sản phẩm để xem thông tin chi tiết.
+- Bình luận sản phẩm: vào mục xem chi tiết sản phẩm, để lại bình luận nếu muốn.
+- Đánh giá sản phẩm: vào mục xem chi tiết sản phẩm, gửi đánh giá sản phẩm nếu muốn.
+- Xuất kho: vào mục xem chi tiết sản phẩm để xuất kho sản phẩm
+- Đặt hàng: chọn sản phẩm cần mua, thay đổi thông tin mua hàng trong giỏ hàng.
+- Đăng ký: đăng ký tài khoản trên hệ thống.
+- Đăng nhập: đăng nhập tài khoản đã đăng ký trên hệ thống.
+- Liên hệ: gửi thông tin liên hệ
+- Quản lý tài khoản: xem tổng quan trang cá nhâ, cập nhật thông tin tài khoản, quản lý đơn hàng, xem sản phẩm yêu thích, sản phẩm đã xem, xem lịch sử login.
+Use case kết thúc
+Hậu điều kiện: các thông tin về chức năng khách hàng được cập nhật trong cơ sở dữ liệu.
+
+3.2.2 Biểu đồ lớp
+• Biểu đồ lớp tổng quát
+    
+    Hình 18: Biểu đồ lớp tổng quát
+
+
+
+• Danh sách các lớp đối tượng
+    Bảng 3. 6: Danh sách các lớp
+STTTên thực thểMô tả1AdminsMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý tài khoản admin2ArticlesMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý bài viết3AttributesMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý thông tin4CategoriesMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý danh mục sản phẩm5CommentsMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý bình luận6ContactsMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý liên hệ7EventsMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý sự kiện8MenuMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý danh mục bài viết9OrderMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý đơn hàng11ProMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý sản phẩm12Pro_categoreisMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý danh mục sản phẩm13imagesMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý ảnh của hệ thống14RatingsMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý đánh giá15SlideMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý slide16PageMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý trang tĩnh17TransactionsMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý giao dịch18UsersMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý người dùng19User_favouriteMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý sản phẩm yêu thích
+3.2.3 Biểu đồ tuần tự
+• Biểu đồ tuần tự chức năng đăng nhập
+
+    Hình 19: Biểu đồ tuần tự chức năng đăng nhập
+
+• Biểu đồ tuần tự cho chức năng quản lý danh mục sản phẩm
+
+    Hình 20: Biểu đồ tuần tự cho chức năng quản lý danh mục sản phẩm
+• Biểu đồ tuần tự cho chức năng quản lý sản phẩm
+
+    Hình 21: Biểu đồ tuần tự cho chức năng quản lý sản phẩm
+
+• Biểu đồ tuần tự cho chức năng quản lý bài viết
+
+    Hình 22: Biểu đồ tuần tự cho chức năng quản lý bài viết
+• Biểu đồ tuần tự cho chức năng quản lý danh mục bài viết
+
+    Hình 23: Biểu đồ tuần tự cho chức năng quản lý danh mục bài viết
+• Biểu đồ tuần tự cho chức năng quản lý slide
+
+    Hình 24: Biểu đồ tuần tự cho chức năng quản lý slide
+• Biểu đồ tuần tự cho chức năng quản lý sự kiện
+
+    Hình 25: Biểu đồ tuần tự cho chức năng quản lý sự kiện
+• Biểu đồ tuần tự cho chức năng quản lý đơn hàng
+
+    Hình 26: Biểu đồ tuần tự cho chức năng quản lý đơn hàng
+3.3 Thiết kế cơ sở dữ liệu
+3.3.1 Các bảng dữ liệu
+• Bảng nuy_user: Admins
+    Bảng 3. 7: Admins
+STTTên thực thểKiểu dữ liệuRàng buộcMô tả1Idint (11)Khóa chínhKhóa chính của bảng2userameVarchar (255)Not nullTên3EmailVarchar (255)Not nullEmail4PasswordVarchar (255)Not nullMật khẩu6actint (11)Not nullKích hoạt7noteVarchar (255)Not nullGhi chú8ParentInt (11)Not nullPhân quyền9Created_atBigint (20)Not nullNgày tạo
+• Bảng pro_categories: Danh mục sản phẩm
+    Bảng 3. 8: Pro_categories
+STTTên thực thểKiểu dữ liệuRàng buộcMô tả1IdInt (11)Khóa chínhKhóa chính của bảng2NameVarchar (255)NullTên danh mục3SlugVarchar (255)Not nullSlug4icontextNot nullHình ảnh5ordInt (11)Not nullSắp xếp6homeTinyint (1)Not nullHiển thị trang chủ7actTinyint (4)Not nullKích hoạt8hotInt (11)Not nullDanh mục hot9s_titleVarchar (255)Not nullMô tả SEO10s_desVarchar (255)Not nullMô tả SEO11s_keyVarchar (255)Not nullTừ khóa SEO12parentInt (11)Not nullDanh mục cha13Created_atBigint (20)NullNgày tạo14Updated_atBigint (20)NullNgày cập nhật
+
+
+
+
+
+
+• Bảng pro: Sản phẩm
+    Bảng 3. 9: pro
+STTTên thực thểKiểu dữ liệuRàng buộcMô tả1IdInt (11)Khóa chínhKhóa chính của bảng2nameVarchar (255)NullTên sản phẩm3slugVarchar (255)Not nullSlug4codeVarchar (255)Not nullMã sản phẩm5ordInt (11)Not nullSắp xếp6homeTinyint (1)Not nullHiển thị trang chủ7actTinyint (4)Not nullKích hoạt8hotInt (11)Not nullDanh mục hot9s_titleVarchar (255)Not nullMô tả SEO10s_desVarchar (255)Not nullMô tả SEO11s_keyVarchar (255)Not nullTừ khóa SEO12parentInt (11)Not nullDanh mục cha13created_atBigint (20)NullNgày tạo14updated_atBigint (20)NullNgày cập nhật15pricebigintNullGiá sản phẩm16price_salebigintNullGiá khuyến mãi17imgTextNullẢnh sản phẩm18lib_imgTextNullThư viện ảnh 19tag_proVarchar (255)Not nullTag sản phẩm20short_contentTextNullMô tả ngắn21contentTextNullNội dung
+
+
+• Bảng tagpro: tag sản phẩm
+    Bảng 3. 10: pro
+STTTên thực thểKiểu dữ liệuRàng buộcMô tả1IdInt (11)Khóa chínhKhóa chính của bảng2nameVarchar (255)NullTên 3linkVarchar (255)Not nullLink4s_titleTextNot nullMô tả SEO5s_desTextNot nullMô tả SEO6s_keyTextNot nullTừ khóa SEO7created_atBigint (20)NullNgày tạo8updated_atBigint (20)NullNgày cập nhật9contentTextNot nullNội dung
+• Bảng new_categories: Danh mục tin tức
+    Bảng 3. 11: new_categories
+STTTên thực thểKiểu dữ liệuRàng buộcMô tả1IdInt (11)Khóa chínhKhóa chính của bảng2nameVarchar (255)NullTên danh mục3slugVarchar (255)Not nullSlug4ordInt (11)Not nullSắp xếp5actTinyint (4)Not nullKích hoạt6parentInt (11)Not nullDanh mục cha7s_titleVarchar (255)Not nullMô tả SEO8s_desVarchar (255)Not nullMô tả SEO9s_keyVarchar (255)Not nullTừ khóa SEO10created_atbigintNullNgày tạo11updated_atbigintNullNgày cập nhật
+• Bảng news: Tin tức
+    Bảng 3. 12: new
+STTTên thực thểKiểu dữ liệuRàng buộcMô tả1IdInt (11)Khóa chínhKhóa chính của bảng2nameVarchar (255)NullTên danh mục3slugVarchar (255)Not nullSlug4ordInt (11)Not nullSắp xếp5actTinyint (4)Not nullKích hoạt6parentInt (11)Not nullDanh mục bài viết7s_titleVarchar (255)Not nullMô tả SEO8s_desVarchar (255)Not nullMô tả SEO9s_keyVarchar (255)Not nullTừ khóa SEO10news_relatedVarchar (255)Not nullBài viết liên quan11mainTinyint (1)Not nullTin tức trang chủ12countInt (11)Not nullSố lượt xem13publish_byVarchar (255)Not nullĐăng bởi14created_atbigintNullNgày tạo15updated_atbigintNullNgày cập nhật16imgTextNullẢnh sản phẩm17short_contentTextNullMô tả ngắn18contentTextNullNội dung
+
+• Bảng khoanggia: Khoảng giá để lọc sản phẩm
+    Bảng 3. 13: khoanggia
+STTTên thực thểKiểu dữ liệuRàng buộcMô tả1IdBigint (20)Khóa chínhKhóa chính2price_fromBigint (20)Not nullTừ3price_toBigint (20)Not nullĐến
+• Bảng group_menu: Nhóm menu
+    Bảng 3. 14: group_menu
+STTTên thực thểKiểu dữ liệuRàng buộcMô tả1IdInt (11)Khóa chínhKhóa chính2nameVarchar (255)Not nullTên
+• Bảng Menus: Menus
+Bảng 3. 15: Menus
+STTTên thực thểKiểu dữ liệuRàng buộcMô tả1IdInt (11)Khóa chínhKhóa chính2nameVarchar (255)Not nullTên3Link Varchar (255)Not nullLink điều hướng4imgVarchar (1000)NullHình ảnh 5noteVarchar (255)NullTitle6ordInt (11)Not nullSắp xếp7actTinyint (4)Not nullKích hoạt8parentInt (11)Not nullCha9group_idInt (11)Khóa chínhNhóm10nofollowTinyint (1)Not nullTrạng thái11Created_atBigint (20)NullNgày tạo12Updated_atBigint (20)NullNgày sửa
+• Bảng Orders: Đơn hàng
+    Bảng 3. 16: Orders
+STTTên thực thểKiểu dữ liệuRàng buộcMô tả1IdInt (11)Khóa chínhKhóa chính2info_customerTextNot nullThông tin khách hàng3info_proTextNot nullThông tin sản phẩm4actTinyint (4)Not nullTrạng thái5cityInt (4)Not nullThông tin tỉnh thành6provideInt (4Not nullThông tin quận huyện7proTextNot nullSản phẩm8Created_atTextNot nullThời gian gửi đơn
+• Bảng group_slide: Nhóm slide
+    Bảng 3. 17: group_slide
+STTTên thực thểKiểu dữ liệuRàng buộcMô tả1IdInt (11)Khóa chínhKhóa chính2nameVarchar (255)Not nullTên
+
+
+• Bảng Slide: Ảnh slide
+    Bảng 3. 18: slide
+STTTên thực thểKiểu dữ liệuRàng buộcMô tả1IdInt (11)Khóa chínhKhóa chính2nameVarchar (255)Not nullTên3link Varchar (255)Not nullLink điều hướng4imgText NullHình ảnh slide5ordInt (11)Not nullSắp xếp6actTinyint (4)Not nullKích hoạt7parentVarchar (255)Not nullNhóm slide8Created_atBigint (20)Not nullNgày tạo
+• Bảng partner: Đối tác
+    Bảng 3. 8: partner
+STTTên thực thểKiểu dữ liệuRàng buộcMô tả1IdInt (11)Khóa chínhKhóa chính2link Varchar (255)Not nullLink điều hướng4imgText NullHình ảnh đối tác5ordInt (11)Not nullSắp xếp6actTinyint (4)Not nullKích hoạt7Created_atBigint (20)Not nullNgày tạo
+
+
+
+
+• Bảng group_ads: Nhóm quảng cáo
+    Bảng 3. 20: group_ads
+STTTên thực thểKiểu dữ liệuRàng buộcMô tả1IdInt (11)Khóa chínhKhóa chính2nameVarchar (255)Not nullTên
+• Bảng Ads: Ảnh quảng cáo
+    Bảng 3. 21: Ads
+STTTên thực thểKiểu dữ liệuRàng buộcMô tả1IdInt (11)Khóa chínhKhóa chính2nameVarchar (255)Not nullTên3link Varchar (255)Not nullLink điều hướng4imgText NullHình ảnh slide5ordInt (11)Not nullSắp xếp6actTinyint (4)Not nullKích hoạt7group_idVarchar (255)Not nullNhóm ads8created_atBigint (20)Not nullNgày tạo
+• Bảng group_slogan: Nhóm slogan
+    Bảng 3. 22: group_ads
+STTTên thực thểKiểu dữ liệuRàng buộcMô tả1IdInt (11)Khóa chínhKhóa chính2nameVarchar (255)Not nullTên
+• Bảng slogan: slogan
+    Bảng 3. 23: slogan
+STTTên thực thểKiểu dữ liệuRàng buộcMô tả1IdInt (11)Khóa chínhKhóa chính2nameVarchar (255)Not nullTên3link Varchar (255)Not nullLink điều hướng4imgText NullHình ảnh slide5contentTextNullNội dung6actTinyint (4)Not nullKích hoạt7group_idVarchar (255)Not nullNhóm slogan8created_atBigint (20)Not nullNgày tạo
+• Bảng Feeds: Cảm nhận khách hàng
+    Bảng 3. 24: Feeds
+• STTTên thực thểKiểu dữ liệuRàng buộcMô tả1IdInt (11)Khóa chínhKhóa chính2nameVarchar (255)Not nullTên3link Varchar (255)Not nullLink điều hướng4imgText NullHình ảnh slide5ordInt (11)Not nullSắp xếp6actTinyint (4)Not nullKích hoạt7addressVarchar (255)Not nullĐịa chỉ8contentTextNot nullNội dung9Created_atBigint (20)Not nullNgày tạo
+• Bảng reviews: Thông tin liên hệ
+    Bảng 3. 25: reviews
+• STTTên thực thểKiểu dữ liệuRàng buộcMô tả1IdInt (11)Khóa chínhKhóa chính2nameVarchar (255)Not nullTên3link Varchar (255)Not nullLink điều hướng4emailVarchar (255)Not nullĐịa chỉ email5phoneVarchar (255)Not nullSĐT khách hàng6TitleVarchar (255)Not nullGhi chú7addressVarchar (255)Not nullĐịa chỉ9Created_atBigint (20)Not nullNgày tạo
+• Bảng email_customer: Email khách hàng gửi nhận đăng ký
+    Bảng 3. 26: email_customer
+• STTTên thực thểKiểu dữ liệuRàng buộcMô tả1IdInt (11)Khóa chínhKhóa chính2nameVarchar (255)Not nullTên3emailVarchar (255)Not nullĐịa chỉ email4actInt (11)Not nullTrạng thái5Created_atBigint (20)Not nullNgày tạo
+
+
+
+
+• Bảng Configs: Thông tin cơ bản của website
+    Bảng 3. 27: Configs
+• STTTên thực thểKiểu dữ liệuRàng buộcMô tả1IdInt (11)Khóa chínhKhóa chính2nameVarchar (255)Not nullTên3typeVarchar (255)Not nullLoại4actInt (11)Not nullTrạng thái5noteVarchar (255)Not nullNội dung6Created_atBigint (20)Not nullNgày tạo
+3.4 Thiết kế đặc tả giao diện
+3.4.1 Chức năng hiển thị trang chủ
+• Mục đích
+   Chức năng này cho phép người dùng khi truy cập vào website sẽ hiển thị giao diện với nội dung danh sách sản phẩm, menu, slide...
+• Phạm vi
+   Chức năng này sẽ cho phép người dụng truy cập vào website có thê sử dụng.
+• Ràng buộc
+   Người dùng phải truy cập vào website.
+• Mô tả chức năng
+   Khi người dùng truy cập vào website, trang chủ sẽ hiển thị ra với các nội dung bao gồm: khung tìm kiếm; logo website; menu; ảnh slide; thông tin sản phẩm bán trên với nội dung tên, giá, hình ảnh, thông tin và phần footer là nội dung thông tin về địa chỉ, nhà cung cấp, hỗ trợ.
+   
+   
+3.4.2 Chức năng hiển thị chi tiết sản phẩm
+• Mục đích
+   Chức năng này hiển thị thông tin chi tiết sản phẩm khi người dụng click vào sản phẩm nào đó trên trang chủ để xem thông tin chi tiết về sản phẩm đó.
+• Phạm vi
+   Chức năng này cho phép người dùng truy cập vào website có thê sử dụng.
+• Ràng buộc
+Người dùng phải truy cập vào website và click vào sản phẩm để xem thông tin chi tiết.
+• Mô tả chức năng
+   Khi người dùng ấn vào xem chi tiết sản phẩm, giao diện chi tiết sản phẩm sẽ hiển thị ra với thông tin về chi tiết về sản phẩm; ảnh; giá; khuyến mãi; sản phẩm liên quan; thông số kỹ thuật và hai button là: thêm sản phẩm vào giỏ hàng và mua ngay. Hai nút này đêu có chức năng là đưa sản phẩm khách hàng đã chọn vào giỏ hàng của mình. Tuy nhiên với button thêm sản phẩm vào giỏ hàng thì khi người dùng ấn button, người dùng vẫn sẽ ở trang hiện tại, còn với button mua ngay người dùng sẽ được chuyển hướng đến trang người giỏ hàng ngay.
+3.4.3 Chức năng hiển thị loại sản phẩm
+• Mục đích
+   Giúp người dùng có thể xem hết tất cả các sản phẩm cùng một loại sản phẩm.
+• Phạm vi
+   Chức năng này cho phép người dùng truy cập vào website có thê sử dụng.
+• Ràng buộc
+   Người dùng phải truy cập vào website và chọn vào mục các loại sản phẩm.
+• Mô tả chức năng
+   Khi người dùng chọn chức năng xem loại sản phẩm, giao diện trang loại sản phẩm sẽ hiện ra với tất cả các sản phẩm thuộc loại sản phẩm mà khác hàng muốn xem. Tại đây khách hàng cũng có thể thực hiện chức năng tìm kiếm và xem thông tin chi tiết sản phẩm mỗi khi click vào hình ảnh của bất kì sản phẩm nào.
+3.4.4 Chức năng tìm kiếm
+• Mục đích
+   Giúp người dùng có thể tìm kiếm thông tin theo đúng nhu cầu của mình một cách chính sác và nhanh chóng nhất.
+• Phạm vi
+   Chức năng này cho phép người dùng truy cập vào website có thê sử dụng.
+• Ràng buộc
+   Người dùng phải truy cập vào website và nhập thông tin sản phẩm cần tìm kiếm.
+• Mô tả chức năng
+   Khi người dùng chọn chức năng xem loại sản phẩm, giao diện trang loại sản phẩm sẽ hiện ra với tất cả các sản phẩm thuộc loại sản phẩm mà khác hàng muốn xem. Tại đây khách hàng cũng có thể thực hiện chức năng tìm kiếm và xem thông tin chi tiết sản phẩm mỗi khi click vào hình ảnh của bất kì sản phẩm nào.
+3.4.5 Chức năng quản lý giỏ hàng
+• Mục đích
+   Giúp người dùng quản lý thông tin các sản phẩm của mình đã được thêm vào giỏ hàng trong quá trình mua sắm online trên website.
+• Phạm vi
+   Chức năng này cho phép người dùng truy cập vào website có thê sử dụng.
+• Ràng buộc
+   Người dùng phải truy cập vào website và thực hiện các bước thêm sản phẩm vào giỏ hàng.
+• Mô tả chức năng
+   Khi người dùng chọn quản lý giỏ hàng bên góc phải menu, giao diện trang giỏ hàng sẽ hiện ra với tất cả các sản phẩm đã được người dùng thêm vào giỏ hàng và tổng tiền của tất cả sản phẩm. Tại đây người dùng có thể thực hiện update số lượng sản phẩm hoặc xóa sản phẩm khỏi giỏ hàng. Người dùng cũng có thể xem loai thông tin chi tiết sản phẩm khi click vào thông tin của sản phẩm. Ngoài ra tại đây khách hàng có thể đặt hàng sau khi xác định sản phẩm cần mua bằng các click vào button
+“THÊM VÀO GIỎ HÀNG”.
+3.4.6 Chức năng đặt hàng
+• Mục đích
+   Giúp người dung điền thông tin cá nhân và sác nhận loại thông tin.
+• Phạm vi
+   Chức năng này cho phép người dùng truy cập vào website có thê sử dụng.
+• Ràng buộc
+   Người dùng phải truy cập vào website và thực hiện click button đặt hàng.
+• Mô tả chức năng
+   Khi người dùng chọn button đặt hàng. Hệ thống sẽ chuyển qua giao điẹn đặt hàng. Tại đây khách hàng sẽ nhập thông tin xác nhân, và kiểm tra thông tin sản phẩm mà mình đã đặt	
+3.4.7 Chức năng đăng nhập
+• Mục đích
+   Chức năng này sẽ kiểm tra tài khoản sử dụng hệ thống có hợp lệ hay không? Nhằm bảo mật các thông tin trong hệ thống. Và đảm bảo người dùng sử dụng đúng các chức năng được cấp.
+• Phạm vi
+   Chức năng này sẽ kiểm tra tài khoản sử dụng hệ thống có hợp lệ hay không? Nhằm bảo mật các thông tin trong hệ thống. 
+• Ràng buộc
+   Khi người dùng kích hoạt hệ thống, một cửa sổ “Đăng nhập hệ thống” hiện lên, yêu cầu cung cấp các thông tin để đăng nhập sử dụng hệ thống.
+• Mô tả chức năng
+   Khi truy cập vào trang web, chức năng này sẽ hiển thị đầu tiên hoặc khi người dùng đang đăng nhập khi click vào  “Đăng xuất” trên giao diện chính thì giao diện chính sẽ bị ẩn đi và giao diện đăng nhập này cũng sẽ hiện nên, Sau khi người dùng đã điền đầy đủ thông tin người dùng nhấn “Đăng nhập” nếu thông tin hợp lệ sẽ vào được hệ thống với các chức năng được cấp hiện nên cho phép người dùng sử dụng.
+3.4.8 Chức năng quản lý sản phẩm
+• Mục đích
+   Giúp người quản lý quản lý thông tin về sản phẩm
+• Phạm vi
+   Nhân viên có quyền được phép truy cập chức năng quản lý sản phẩm.
+• Ràng buộc
+   Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng chọn “Quản lý sản phẩm” trong mục nhập liệu ở menu bên trên.
+• Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng “Quản lý sản phẩm”:
+   -	Chức năng thêm: khi thêm các thông tin về tên loại sản phẩm, số lượng, giá, ... khi nhấn vào Save thì sản phẩm mới đã được thêm vào database. Khi nhân vào Save and continue editing sản phẩm sẽ được lưu lại và tiếp tục sửa thông tin. Khi án vào nut Save and add another thì thông tin sẽ được lưu lại và tiếp tục thêm thông tin sản phẩm mới.
+   -	Chức sửa thêm: khi thêm các thông tin về tên sản phẩm, số lượng, giá, ... khi nhấn vào Save thì sản phẩm mới đã được thêm vào database. Khi nhân vào Save and continue editing sản phẩm sẽ được lưu lại và tiếp tục sửa thông tin. Khi án vào nut Save and add another thì thông tin sẽ được lưu lại và tiếp tục thêm thông tin sản phẩm mới.
+   -	Chức năng xoá khi người sử dụng chọn thông tin dưới danh sách khi chọn xoá thì thông tin sẽ xoá trong danh sách.
+3.4.9 Chức năng quản lý giảm giá
+• Mục đích
+   Chức năng này giúp người quản lý quản lý thông tin về giảm giá sản phẩm một cách dễ dàng và thuận tiện nhất.
+• Phạm vi
+   Nhân viên có quyền được phép truy cập chức năng quản lý giảm giá sản phẩm.
+• Ràng buộc
+   Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng chọn “Quản lý giảm giá sản phẩm” trong mục nhập liệu ở menu bên trái.
+• Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng “Quản lý giảm giá sản phẩm”:
+   - Chức năng thêm: khi thêm các thông tin về tên sản phẩm, ngày áp dụng, ngày hết hạn, phần trăm giảm giá, trạng thái. Khi nhấn vào Save thì giảm giá mới đã được thêm vào database. Khi nhân vào Save and continue editing giảm giá sẽ được lưu lại và tiếp tục sửa thông tin. Khi án vào nut Save and add another thì thông tin giảm giá sẽ được lưu lại và tiếp tục thêm thông tin giảm giá mới.
+   -	Chức năng sửa khi người dùng chọn thông tin dưới danh sách các thông tin sẽ hiển thị tương ứng trên điều khiển người dùng có thể sửa ngày áp dụng, ngày hết hạn, phần trăm giảm giá, trạng thái. Thông tin sẽ được hiển thị dưới danh sách.
+   -	Chức năng xoá khi người sử dụng chọn thông tin dưới danh sách khi chọn xoá thì thông tin sẽ xoá trong danh sách.
+   
+   
+   
+   
+   
+3.4.10 Chức năng quản lý Slide
+• Mục đích
+   Chức năng này giúp người quản lý quản lý thông tin về slide quảng cáo một cách dễ dàng và thuận tiện nhất.
+• Phạm vi
+   Nhân viên có quyền được phép truy cập chức năng quản lý giảm slide quảng cáo.
+• Ràng buộc
+   Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng chọn “Quản lý giảm slide” trong mục nhập liệu ở menu bên trái.
+• Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng “Quản lý Slide”:
+   - Chức năng thêm: khi thêm các thông tin về mô tả, hình ảnh, trạng thái. Khi nhấn vào Save thì slide mới đã được thêm vào database. Khi nhân vào Save and continue editing slide sẽ được lưu lại và tiếp tục sửa thông tin. Khi án vào nut Save and add another thì slide sẽ được lưu lại và tiếp tục thêm thông tin slide mới.
+   -	Chức năng sửa khi người dùng chọn thông tin dưới danh sách các thông tin sẽ hiển thị tương ứng trên điều khiển người dùng có thể sửa hình ảnh, mô tả, trạng thái. Thông tin sẽ được hiển thị dưới danh sách.
+   -	Chức năng xoá khi người sử dụng chọn thông tin dưới danh sách khi chọn xoá thì thông tin sẽ xoá trong danh sách.
+3.4.11 Chức năng quản lý đối tác
+• Mục đích
+   Chức năng này giúp người quản lý quản lý thông tin về đối tác một cách dễ dàng và thuận tiện nhất.
+• Phạm vi
+   Nhân viên có quyền được phép truy cập chức năng quản lý đối tác.
+• Ràng buộc
+   Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng chọn “Đối tác”.
+• Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng “Quản lý đối tác.”:
+   - Chức năng thêm: khi thêm các thông tin về tên, ảnh, trạng thái. Khi nhấn vào Save thì đối tác mới đã được thêm vào database. Khi nhấn vào Lưu đối tác sẽ được lưu lại và tiếp tục sửa thông tin. 
+   -	Chức năng sửa khi người dùng chọn thông tin dưới danh sách các thông tin sẽ hiển thị tương ứng trên điều khiển người dùng có thể sửa tên, số điện thoại, địa chỉ, trạng thái. Thông tin sẽ được hiển thị dưới danh sách.
+   -	Chức năng xoá khi người sử dụng chọn thông tin dưới danh sách khi chọn xoá thì thông tin sẽ xoá trong danh sách.
+3.4.12 Chức năng quản lý loại sản phẩm
+• Mục đích
+   Giúp người quản lý quản lý thông tin về danh mục sản phẩm
+• Phạm vi
+   Nhân viên có quyền được phép truy cập chức năng quản lý danh mục sản phẩm.
+• Ràng buộc
+   Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng chọn “Quản lý danh mục sản phẩm”.
+• Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng “Quản lý danh mục sản phẩm”:
+   -	Chức năng thêm: khi thêm các thông tin về tên loại sản phẩm, mô tả, trạng thái. Khi ấn vào nút Thêm mới -> Lưu thì thông tin sẽ được lưu lại và tiếp tục thêm thông tin loại sản phẩm mới.
+   -	Chức năng sửa: khi thêm thông tin về tên loại sản phẩm, mô tả, trạng thái. Khi nhấn vào Lưu thì danh mục sản phẩm mới đã được thêm vào database. Khi nhân vào Sửa -> Lưu sản phẩm sẽ được lưu lại và tiếp tục sửa thông tin. Khi án vào nut Save and add another thì thông tin sẽ được lưu lại và tiếp tục thêm thông tin danh mục sản phẩm mới.
+   -	Chức năng xoá khi người sử dụng chọn thông tin dưới danh sách khi chọn xoá thì thông tin sẽ xoá trong danh sách.
+
+3.5 
+   Kết luận chương 3
+   Trong chương 3 của báo cáo đã thực hiện việc Xây dựng Website quản lý và thực phẩm sạch. Từ các kết quả đã thực hiện, có thể tóm tắt quá trình xây dựng hệ thống đã cài đặt như sau:
+- Tiến hành được quá trình khảo sát và phân tích yêu cầu bài toán bán hàng online. Chỉ ra được yêu cầu của hệ thống khảo sát và mô tả chi tiết các yêu cầu.
+- Đã sử dụng ULM để phân tích thiết kế hệ thống với các biểu đồ use case tổng quát, use case chi tiết cho từng chức năng. Xác dịnh được các lớp cần quản lý tưng ứng với các bảng trong cơ sở dữ liệu. Và sử dụng biểu đồ tuần tự để mô tả luồng đi của hệ thống trong từng sự kiện.
+- Thiết kế được cơ sơ dữ liệu từ các yêu cầu của khách hàng cần quản lý.
+- Đã Thiết kế và đặc tả được giao diện của website.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CHƯƠNG 4.  GIAO DIỆN WEBSITE BÁN THỰC PHẨM SẠCH
+1. Giao diện trang người dùng
+a) Giao diện Trang chủ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Hình 27: Giao diện trang chủ.
+b) Giao diện trang chi tiết sản phẩm
+
+
+    Hình 28: Giao diện trang chi tiết sản phẩm.
+c) Giao diện trang loại sản phẩm
+
+
+    Hình 29: Giao diện trang loại sản phẩm.
+d) Giao diện trang tìm kiếm
+
+
+    Hình 30: Giao diện trang tìm kiếm.
+e) Giao diện trang giỏ hàng
+
+    Hình 31: Giao diện trang giỏ hàng.
+a) Giao diện trang thanh toán
+
+    Hình 32: Giao diện trang thanh toán
+
+2. Giao diện trang Admin
+a) Giao diện trang đăng nhập
+
+    Hình 33: Giao diện trang đăng nhập.
+b) Giao diện trang quản lý danh mục sản phẩm
+
+
+ 
+    Hình 34: Giao diện trang quản lý danh mục sản phẩm.
+c) Giao diện trang quản lý sản phẩm
+
+
+    Hình 35: Giao diện trang quản lý loại sản phẩm.
+
+ d) Giao diện trang quản lý Slide ảnh
+
+    Hình 36: Giao diện trang quản lý Slide ảnh
+e) Giao diện trang Quản lý danh mục tin tức	
+
+
+    Hình 37: Giao diện trang quản lý danh mục tin tức.
+f) Giao diện trang quản lý tin tức
+    Hình 38: Giao diện trang quản lý chi tiết tin tức
+g) Giao diện trang quản lý menu
+    Hình 39: Giao diện trang quản lý menu
+h) Giao diện trang quản lý kho media
+    Hình 40: Giao diện trang quản lý kho media
+CHƯƠNG 5.  KẾT LUẬN
+  5.1		Kết quả đạt được của đề tài
+   Quá trình nghiên cứu và thực hiện cài đặt chương trình theo sự khảo sát và yêu cầu của người dùng đã hoàn thành và đạt một số kết quả sau:
+• Hiểu được nghiệp vụ của một trang bán hàng online:
+- Nghiệp vụ quản lý sản phẩm.
+- Nghiệp vụ quản lý khách hàng.
+- Nghiệp vụ quản lý hóa đơn.
+- Một số nghiệp vụ khác.
+• Thông qua nghiệp vụ kết hợp với mục đích thực hiện tin học hóa, mô tả chức
+năng của từng hệ thống.
+Xây dựng chương trình thông qua kết quả thu thập được qua quá trình khảo sát, phân tích hệ thống và đặc tả giao diện.
+• Thực hiện kiểm thử chương trình ở mức độ lập trình.
+    Sau một thời gian thực nghiệm đề tài “Xây dựng Website quản lý và bán thực phẩm sạch” đã đạt được một số kết quả sau:
+- Phía khách hàng: Tạo được địa chỉ cho khách hàng truy cập. Thực hiện một số chức năng trên giao diện như: hiển thị menu loại sản phẩm, hiển thị loại sản phẩm hiển thị sản phẩm mới nhất, tìm kiếm, quản lý giỏ hàng, đặt hàng.
+- Phía Admin và nhân viên: Giúp cho thao tác nhanh hơn, thực hiện được phân nhóm, thêm user, quản lý các chức năng như: quản lý sản phẩm, loại sản phẩm, hóa đơn, order, giảm giá, bài viết…
+         Ngoài những kết quả trên, qua quá trình thực hiện đề tài “Xây dựng Website quản lý và bán thực phẩm sạch” em đã có được:
+- Những kinh nghiệm quý báu về quy trình và nghiệp vụ quản lý website bán hàng online.
+- Trau dồi kiến thức về PHP và biết lập trình bằng ngôn ngữ PHP trên Framework Codeigniter.
+- Rèn luyện kỹ năng làm việc cá nhân, khả năng tư duy và sáng tạo.
+  5.2		Ưu nhược điểm của chương trình
+• Ưu điểm:
+- Website có giao diện thân thiện, dễ sử dụng.
+- Hệ thống phân quyền sử dụng và quản lý các chức năng độc lập.
+- Hệ thống quản lý đơn giản hiệu quả.
+• Nhược điểm
+- CSDL của hệ thống chưa được đầy đủ và tối ưu.
+- Tốc độ chưa hiệu quả.
+- Chưa thực hiện được một số chức năng như thống kê.
+     Do thời gian nghiên cứu chưa được nhiều, bên cạnh những kết quả đạt được còn tồn tại một số vấn đề hạn chế:
+- Tìm kiếm trong trang chủ chưa được tối ưu hóa nhất.
+- Chưa triển khai hệ thống trên server được.
+  5.3 		Hướng phát triển
+  Với mục đích ngày càng hoàn thiện để đáp ứng tốt nhất cho việc tin học hóa quản lý bán điện thoại online, trong tương lai em sẽ cố gắng tìm hiểu kỹ hơn, đi sâu hơn và cố gắng hoàn thành tốt đề tài hơn.
+- Mở rộng bài toán để đáp ứng nhiều hơn các chức năng còn thiếu.
+- Cài đặt hệ thống hoàn chỉnh hơn, để chương trình thực sự hữu ích hơn, đáp ứng
+những nghiệp vụ phức tạp hơn, dữ liệu lớn hơn.
+  5.4 		Đề xuất ý kiến
+  Xây dựng website bán thực phẩm sạch do kinh nghiệm và vốn hiểu biết của em còn hạn chế nên chương trình còn sơ sài, chưa đáp ứng đầy đủ hơn những nhu cầu đặt ra cho một ứng dụng thương mại điện tử. Em mong được các Thầy Cô chỉ bảo, hướng dẫn cho đề tài của em được hoàn thiện tốt hơn.
+Em xin chân thành cảm ơn!
+
+TÀI LIỆU THAM KHẢO
+[1] 	Trần Đình Quế, Phân tích và thiết kế hệ thông thông tin, học viện Công nghệ Bưu chính Viễn Thông, 2007.
+[2] 	Nguyễn Đức Việt, Lập trình backend cho website bằng PHP/MySQL theo mô hình MVC, 2017.
+ [3] 	Các giảng viên trường UTEHY, Giáo trình Lập trình Web với PHP. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY, 2019
+ [4]   	https://www.w3schools.com/
+ [5]     https://codeigniter.com/
+ [6]     Trường Đại học FPT, Combo sách 1239 học Front-end và Back-end PHP
+ [7]     Jon Duckett, HTML and CSS: Design and Build Websites, 512 trang.
+ [8] 	Các giảng viên trường UTEHY, Giáo trình Lập trình Web với HTML & CSS. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY, 2018
+ [9] 	Các giảng viên trường UTEHY, Cấu trúc dữ liệu và giải thuật. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY, 2018
+[10] 	Phạm Quang Huy, Tự Học Photoshop CC Toàn Tập, 5-2019, 384 trang.
+[11]     Nhà xuất bản Bách khoa Hà Nội, Javascript Hướng dẫn học qua ví dụ.
+[12]     Joel Murach, Lập trình cơ bản PHP và Mysql, Nhà xuất bản Khoa học và Kỹ thuật.
+[13] 	https://funnytuts.com/sublime-text-la-gi-gioi-thieu-ve-sublime-text/
+[14] 	https://quocbuugroup.com/tim-hieu-xampp-va-cach-cai-dat-xampp-de-phat-trien-website-tren-local.html
+[15] 	http://kienthucweb.net/tim-hieu-ve-co-du-lieu-mysql.html
+[16] 	https://www.w3schools.com/
+
+
+
+
+
+
+
+92
+
+

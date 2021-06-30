@@ -1,0 +1,527 @@
+﻿
+CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+
+1.1 Lý do chọn đề tài
+
+    Ngành giáo dục nước ta đang phát triểm rất mạnh mẽ. Với việc phát triển như vậy thì đã có rất nhiều phương pháp hỗ trợ học tập đặc cho trẻ. Đặc biệt môn toán giúp trẻ tăng tư duy logic. Lớp 1 chương trình toán còn rất đơn giản. Từ toán lớp 2 thì đã cung cấp cho cho học sinh có kiến thức, kỹ năng về các bài tập luyện tập. Từ những lí do trên nên em đã có ý tưởng xây dựng một ứng dụng hỗ trẻ học toán dành cho học sinh lớp 2.
+1.2 Mục tiêu của đề tài
+
+    Xây dựng được một ứng dụng Android hoàn chỉnh. Bên cạnh đó phải là một ứng dụng dễ sử dụng. Đây là một ứng dụng dễ sử dụng và có thể giúp phụ huynh dạy con em mình học được.
+1.3 Giới hạn và phạm vi của đề tài
+1.3.1     Phạm vi của đề tài
+
+		Ứng dụng được xây dựng trên Android Studio với ngôn ngữ Java sử dụng  
+     một số công nghệ như: Animation, Audio.v..v
+
+           1.3.2     Giới hạn
+
+ 		Phần mềm chỉ có trên nền tảng Android
+1.4 Nội dung thực hiện
+Nội dung thực hiện cụ thể như sau:
+- Xây dựng một ứng dụng trên Android Studio
+- Sử dụng ngôn ngữ Java
+- Xây dựng giao diện thân thiện dễ sử dụng
+- Ứng dụng gồm có các chức năng: nhận biết, làm toán theo từng phân mục và kiểm tra
+- 
+- Phần làm toán sẽ có phân theo danh mục các loại dạng toán lớp 2, từ đây để trẻ có thể lựa chọn làm theo các dạng bài tập và các câu hỏi hiển thị dưới dạng trắc nghiệm dưới dạng 4 đáp án, trẻ sẽ chọn 1 trong 4 đáp án đúng
+- Xây dựng cơ sở dữ liệu
+- Tham khảo nội dung trên mạng và sách giáo khoa lớp 2 theo bản mới nhất mới sửa đổi 2019
+
+
+
+CHƯƠNG 2:	CƠ SỞ LÝ THUYẾT
+
+2.1 Tổng quan về Android
+
+2.1.1 Tổng quan về hệ điều hành Android
+
+    Android là một hệ điều hành dựa trên nền tảng Linux được thiết kế dành cho các thiết bị di động có màn hình cảm ứng như điện thoại thông minh và máy tính bảng. Ban đầu, Android được phát triển bởi Tổng công ty Android, với sự hỗ trợ tài chính từ Google và sau này được chính Google mua lại vào năm 2005. Android ra mắt vào năm 2007 cùng với tuyên bố thành lập Liên minh thiết bị cầm tay mở: một hiệp hội gồm các công ty phần cứng, phần mềm, và viễn thông với mục tiêu đẩy mạnh các tiêu chuẩn mở cho các thiết bị di động.
+    
+    
+    				Hình 2-1 Android
+     Chiếc điện thoại đầu tiên chạy Android được bán vào tháng 10 năm 2008. Android có mã nguồn mở và Google phát hành mã nguồn theo Giấy phép Apache. Chính mã nguồn mở cùng với một giấy phép không có nhiều ràng buộc đã cho phép các nhà phát triển thiết bị, mạng di động và các lập trình viên nhiệt huyết được điều chỉnh và phân phối Android một cách tự do. Ngoài ra, Android còn có một cộng đồng lập trình viên đông đảo chuyên viết các ứng dụng để mở rộng chức năng của thiết bị, bằng một loại ngôn ngữ lập trình Java có sửa đổi. Vào tháng 10 năm 2012, có khoảng 700.000 ứng dụng trên Android, và số lượt tải ứng dụng từ Google Play, cửa hàng ứng dụng chính của Android, ước tính khoảng 25 tỷ lượt.
+     Những yếu tố này đã giúp Android trở thành nền tảng điện thoại thông minh phổ biến nhất thế giới, vượt qua Symbian vào quý 4 năm 2010, và được các công ty công nghệ lựa chọn khi họ cần một hệ điều hành không nặng nề, có khả năng tinh chỉnh, và giá rẻ chạy trên các thiết bị công nghệ cao thay vì tạo dựng từ đầu. Kết quả là mặc dù được thiết kế để chạy trên điện thoại và máy tính bảng, Android đã xuất hiện trên TV, máy chơi game và các thiết bị điện tử khác. Bản chất mở của Android cũng khích lệ một đội ngũ đông đảo lập trình viên và những người đam mê sử dụng mã nguồn mở để tạo ra những dự án do cộng đồng quản lý. Những dự án này bổ sung các tính năng cao cấp cho những người dùng thích tìm tòi hoặc đưa Android vào các thiết bị ban đầu chạy hệ điều hành khác. Android chiếm 75% thị phần điện thoại thông minh trên toàn thế giới vào thời điểm quý 3 năm 2012, với tổng cộng 500 triệu thiết bị đã được kích hoạt và 1,3 triệu lượt kích hoạt mỗi ngày. Sự thành công của hệ điều hành cũng khiến nó trở thành mục tiêu trong các vụ kiện liên quan đến bằng phát minh, góp mặt trong cái gọi là "cuộc chiến điện thoại thông minh" giữa các công ty công nghệ.
+    
+    
+    
+    
+    
+    
+    
+    
+    
+2.1.2 Lịch sử phát triển hệ điều hành Android
+
+
+
+
+			              Hình 2-2  Android
+
+    Tổng công ty Android (Android, Inc.) được thành lập tại Palo Alto, California vào tháng 10 năm 2003 bởi Andy Rubin (đồng sáng lập công ty Danger), Rich Miner (đồng sáng lập Tổng công ty Viễn thông Wildfire), Nick Sears (từng là Phó giám đốc T-Mobile), và Chris White (trưởng thiết kế và giao diện tại WebTV) để phát triển, theo lời của Rubin, "các thiết bị di động thông minh hơn có thể biết được vị trí và sở thích của người dùng". Dù những người thành lập và nhân viên đều là những người có tiếng tăm, Tổng công ty Android hoạt động một cách âm thầm, chỉ tiết lộ rằng họ đang làm phần mềm dành cho điện thoại di động. Trong năm đó, Rubin hết kinh phí. Steve Perlman, một người bạn thân của Rubin, mang cho ông 10.000 USD tiền mặt nhưng từ chối tham gia vào công ty. Google mua lại Tổng công ty Android vào ngày 17 tháng 8 năm 2005, biến nó thành một bộ phận trực thuộc Google. Những nhân viên của chủ chốt của Tổng công ty Android, gồm Rubin, Miner và White, vẫn tiếp tục ở lại công ty làm việc sau thương vụ này. Vào thời điểm đó không có nhiều thông tin về Tổng công ty, nhưng nhiều người đồn đoán rằng Google dự tính tham gia thị trường điện thoại di động sau bước đi này.
+     Tại Google, nhóm do Rubin đứng đầu đã phát triển một nền tảng thiết bị di động phát triển trên nền nhân Linux. Google quảng bá nền tảng này cho các nhà sản xuất điện thoại và các nhà mạng với lời hứa sẽ cung cấp một hệ thống uyển chuyển và có khả năng nâng cấp. Google đã liên hệ với hàng loạt hãng phần cứng cũng như đối tác phần mềm, bắn tin cho các nhà mạng rằng họ sẵn sàng hợp tác với các cấp độ khác nhau. Ngày càng nhiều suy đoán rằng Google sẽ tham gia thị trường điện thoại di động xuất hiện trong tháng 12 năm 2006. Tin tức của BBC và Nhật báo phố Wall chú thích rằng Google muốn đưa công nghệ tìm kiếm và các ứng dụng của họ vào điện thoại di động và họ đang nỗ lực làm việc để thực hiện điều này. Các phương tiện truyền thông truyền thống lẫn online cũng viết về tin đồn rằng Google đang phát triển một thiết bị cầm tay mang thương hiệu Google.
+     Một vài tờ báo còn nói rằng trong khi Google vẫn đang thực hiện những bản mô tả kỹ thuật chi tiết, họ đã trình diễn sản phẩm mẫu cho các nhà sản xuất điện thoại di động và nhà mạng. Tháng 9 năm 2007, InformationWeek đăng tải một nghiên cứu của Evalueserve cho biết Google đã nộp một số đơn xin cấp bằng sáng chế trong lĩnh vực điện thoại di động. Ngày 5 tháng 11 năm 2007, Liên minh thiết bị cầm tay mở (Open Handset Alliance), một hiệp hội bao gồm nhiều công ty trong đó có Texas Instruments, tập đoàn Broadcom, Google, HTC, Intel, LG, tập đoàn Marvell Technology, Motorola, Nvidia, Qualcomm, Samsung,Electronics, Sprint ,extel và T-Mobile được thành lập với mục đích phát triển các tiêu chuẩn mở cho thiết bị di động. Cùng ngày, Android cũng được ra mắt với vai trò là sản phẩm đầu tiên của Liên minh, một nền tảng thiết bị di động được xây dựng trên nhân Linux phiên bản 2.6. Chiếc điện thoại chạy Android đầu tiên được bán ra là HTC Dream, phát hành ngày 22 tháng 10 năm 2008. Biểu trưng của hệ điều hành Android mới là một con rôbốt màu xanh lá cây do hãng thiết kế Irina Blok tại California vẽ. Từ năm 2008, Android đã trải qua nhiều lần cập nhật để dần dần cải tiến hệ điều hành, bổ sung các tính năng mới và sửa các lỗi trong những lần phát hành trước.
+     Mỗi bản nâng cấp được đặt tên lần lượt theo thứ tự bảng chữ cái, theo tên của một món ăn tráng miệng; ví dụ như phiên bản 1.5 Cupcake (bánh bông lan nhỏ có kem) tiếp nối bằng phiên bản 1.6 Donut (bánh vòng). Phiên bản mới nhất hiện nay là 6.0 Marshmallow (kẹo dẻo) và 7.0 Nougat Beta. Vào năm 2010, Google ra mắt loạt thiết bị Nexus - một dòng sản phẩm bao gồm điện thoại thông minh và máy tính bảng chạy hệ điều hành Android, do các đối tác phần cứng sản xuất. HTC đã hợp tác với Google trong chiếc điện thoại thông minh Nexus đầu tiên, Nexus One. Kể từ đó nhiều thiết bị mới hơn đã gia nhập vào dòng sản phẩm này, như điện thoại Nexus 4 và máy tính bảng Nexus 10, lần lượt do LG và Samsung sản xuất. Google xem điện thoại và máy tính bảng Nexus là những thiết bị Android chủ lực của mình, với những tính năng phần cứng và phần mềm mới nhất của Android.
+    
+2.1.3 Android Studio
+    Android cung cấp một khuôn khổ ứng dụng phong phú cho phép bạn xây dựng các ứng dụng và trò chơi mới cho các thiết bị di động trong môi trường ngôn ngữ Java. Tài liệu được liệt kê trong vùng điều hướng bên trái sẽ cung cấp chi tiết về cách xây dựng ứng dụng bằng cách sử dụng các API khác nhau của Android.
+    Nếu bạn mới làm quen với việc phát triển Android, quan trọng là bạn phải hiểu những khái niệm cơ bản sau về khuôn khổ ứng dụng Android:
+- Các ứng dụng Android được tích hợp như một sự kết hợp giữa các thành phần khác nhau có thể được gọi ra riêng. Ví dụ, một hoạt động riêng lẻ cung cấp một màn hình duy nhất cho một giao diện người dùng, và một dịch vụ chạy ngầm thực hiện độc lập công việc.
+- Từ một thành phần, bạn có thể khởi động một thành phần khác bằng cách sử dụng một ý định. Thậm chí bạn có thể bắt đầu một thành phần trong một ứng dụng khác, chẳng hạn như một hoạt động trong một ứng dụng bản đồ để hiển thị một địa chỉ.
+- Mô hình này cung cấp nhiều điểm nhập cho một ứng dụng duy nhất và cho phép bất kỳ ứng dụng nào xử lý như "mặc định" của một người dùng đối với một hành động mà các ứng dụng khác có thể gọi ra.
+- Android cung cấp một khuôn khổ ứng dụng thích ứng cho phép bạn cung cấp các tài nguyên duy nhất cho các cấu hình thiết bị khác nhau
+-  Bạn có thể tạo các tệp bố trí XML khác nhau cho các kích cỡ màn hình khác nhau và hệ thống sẽ xác định bố trí nào sẽ áp dụng dựa trên kích cỡ màn hình hiện tại của thiết bị.
+- Bạn có thể truy vấn về sự sẵn có của các tính năng trên thiết bị vào thời gian chạy nếu bất kỳ tính năng nào của ứng dụng yêu cầu phần cứng cụ thể, chẳng hạn như máy ảnh.
+- Nếu cần, bạn cũng có thể khai báo các tính năng mà ứng dụng của mình yêu cầu vì vậy, những chợ ứng dụng như Google Play Store không cho phép cài đặt trên những thiết bị không hỗ trợ tính năng đó.
+
+- 
+Hình 2-3 Android studio
+
+2.2 Tổng quan về Java
+
+2.2.1 Giới thiệu
+
+     Java là một ngôn ngữ lập trình cao cấp, ban đầu được phát triển bởi Sun Microsystems và được phát hành vào năm 1995. Java chạy trên nhiều nền tảng, chẳng hạn như Windows, Mac OS và các phiên bản khác nhau của UNIX. Phiên bản mới nhất của Java Standard Edition là Java SE 8. Với sự tiến bộ của Java và sự phổ biến rộng rãi của nó, nhiều cấu hình đã được xây dựng để phù hợp với nhiều loại nền tảng khác nhau. 
+     James Gosling đã bắt đầu dự án ngôn ngữ Java vào tháng 6 năm 1991 để sử dụng trong một dự án set-top box của ông. Ngôn ngữ, ban đầu được gọi là ‘Oak’ (cây sồi nằm bên ngoài văn phòng của Gosling), cũng có tên ‘Green’ và sau đó được đổi tên thành Java, từ một danh sách các từ ngẫu nhiên. Sun lần đầu tiên công khai Java 1.0 vào năm 1995. Nó hứa hẹn một khái niệm Write Once, Run Anywhere (WORA), cung cấp thời gian chạy không tốn kém trên nền tảng phổ biến. Ngày 13 tháng 11 năm 2006, Sun phát hành Java như là phần mềm miễn phí và mã nguồn mở theo các điều khoản của GNU General Public License (GPL). Vào ngày 8 tháng 5 năm 2007, Sun hoàn tất quá trình này, tạo ra toàn bộ mã nguồn mở Java miễn phí, ngoại trừ một phần nhỏ mã mà Sun không giữ bản quyền.
+    
+    
+    				      Hình 2-4 Java
+    
+2.2.2 Đặc trưng cơ bản
+
+   Đặc trưng cơ bản của Java là:
+- Hướng đối tượng: Trong Java, mọi thứ đều là một Object. Java có thể dễ dàng mở rộng vì nó được dựa trên mô hình Object.
+- Nền tảng độc lập: Không giống nhiều ngôn ngữ lập trình khác như C và C ++, khi Java được biên dịch, nó không được biên dịch vào nền tảng máy tính cụ thể, thay vào đó là mã byte nền tảng độc lập. Mã byte này được phân phát trên web và được thông dịch bởi Virtual Machine (JVM) trên nền tảng nào đó mà nó đang chạy.
+- Đơn giản : Java được thiết kế rất dễ học. Nếu bạn hiểu khái niệm cơ bản của OOP Java, bạn sẽ rất dễ làm chủ nó.
+- Đảm bảo: Với tính năng an toàn của Java, nó cho phép phát triển các hệ thống không có virus. Các kỹ thuật xác thực dựa trên key mã hoá khóa công khai.
+- Kiến trúc trung lập: Trình biên dịch Java tạo ra một định dạng tệp đối tượng kiến ​​trúc trung lập, làm cho mã biên dịch được thực thi trên nhiều bộ vi xử lý, với sự hiện diện của hệ điều hành Java.
+- Có thể mang đi: Là kiến ​​trúc trung lập và không bị phụ thuộc làm cho Java có thể mang đi dễ dàng. Trình biên dịch trong Java được viết bằng ANSI C với khả năng di chuyển sạch, đó là một tập hợp con POSIX.
+- Mạnh mẽ: Java nỗ lực để loại trừ các tình huống dễ bị lỗi bằng cách nhấn mạnh việc kiểm tra lỗi thời gian biên dịch và kiểm tra thời gian chạy.
+- Đa luồng: Với tính năng đa luồng của Java, có thể viết các chương trình có thể thực hiện nhiều tác vụ đồng thời. Tính năng thiết kế này cho phép các nhà phát triển xây dựng các ứng dụng tương tác có thể chạy trơn tru.
+- Phiên dịch: Mã byte Java được dịch trực tiếp tới các hướng dẫn máy tính và không được lưu trữ ở bất cứ đâu. Quá trình phát triển nhanh hơn và phân tích hơn.
+- Hiệu năng cao: Với việc sử dụng trình biên dịch Just-In-Time, Java cho phép thực hiện chương trình với hiệu năng cao.
+- Phân phối: Java được thiết kế cho môi trường phân tán của internet.
+- Năng động: Java được xem là năng động hơn C hoặc C ++ vì nó được thiết kế để thích nghi với môi trường đang phát triển. Các chương trình Java có thể mang một lượng lớn thông tin run-time, có thể được sử dụng để xác minh và giải quyết các truy cập vào các đối tượng trong thời gian chạy.
+
+
+
+
+
+
+
+2.3 	Tổng quan về SQLite
+2.3.1 Giới thiệu
+
+
+				
+				Hình 2-5 SQlite
+    Nói một cách đơn giản SQLite là phần mềm quản lý cơ sở dữ liệu (DBMS) tương tự như Mysql, PostgreSQL... Đặc điểm của SQLite là gọn, nhẹ, đơn giản. Chương trình gồm 1 file duy nhất vỏn vẹn chưa đến 400kB, không cần cài đặt, không cần cấu hình hay khởi động mà có thể sử dụng ngay. Dữ liệu Database cũng được lưu ở một file duy nhất. Không có khái niệm user, password hay quyền hạn trong SQLite Database. SQLite không thích hợp với những hệ thống lớn nhưng ở quy mô vừa tầm thì SQLite phát huy uy lực và không hề yếu kém về mặt chức năng hay tốc độ. Với các đặc điểm trên SQLite được sử dụng nhiều trong việc phát triển, thử nghiệm … và là sự lưa chọn phù hợp cho những người bắt đầu học Database.
+    SQLite Engine không là một Standalone Process giống như các cơ sở dữ liệu khác, bạn có thể liên kết nó một cách tĩnh hoặc một cách động tùy theo yêu cầu với ứng dụng của bạn. SQLite truy cập các file lưu giữ của nó một cách trực tiếp.
+    
+2.3.2 Lịch sử
+    Năm 2000: D.Richard Hipp đã thiết kế SQLite với mục đích không cần quản trị để điều hành một chương trình. Vào tháng 8, SQLite 1.0 được công bố với GNU Database Manager. Năm 2011: Hipp bổ sung UNQI Interface cho SQLite DB và để phát triển UNQLite (là một Document Oriented Database).
+
+2.3.3 Ưu điểm khi sử dụng SQLite
+
+- SQLite không yêu cầu một tiến trình Server riêng rẽ để hoạt động.
+-  SQLite không cần cấu hình, nghĩa là không cần thiết phải cài đặt. Một 
+- SQLite Database đầy đủ được lưu giữ trong một disk file đơn.
+-  SQLite là rất nhỏ gọn, nhỏ hơn 400kB đã đươc cấu hình đầy đủ hoặc nhỏ hơn 250kB khi đã bỏ qua các tính năng tùy ý.
+-  SQLite là tự chứa, nghĩa là không có sự phụ thuộc vào ngoại vi.
+-  Các Transaction trong SQLite là tuân theo đầy đủ chuẩn ACID, đảm bảo truy cập an toàn từ nhiều tiến trình hoặc thread.
+-  SQLite hỗ trợ hầu hết các tính năng của một ngôn ngữ truy vấn trong chuẩn SQL92.
+-  SQLite được viết bằng ANSI-C và cung cấp API đơn giản và dễ dàng sử dụng.
+-  SQLite là có sẵn trên UNIX (Linux, Mac OS-X, Android, iOS) và Windows (Win32, WinCE, WinRT).
+
+2.3.4 SQLite trong Android
+    QLite được nhúng trong các thiết bị Android, sử dụng một cơ sở dữ liệu SQLite trong Android không yêu cầu thủ tục thiết lập hoặc quản lý cơ sở dữ liệu. Bạn chỉ phải xác định các câu lệnh SQL để tạo và cập nhật cơ sở dữ liệu. Sau đó các cơ sở dữ liệu được quản lý tự động cho bạn bởi các nền tảng Android. Truy cập vào một cơ sở dữ liệu SQLite liên quan đến việc truy cập vào hệ thống tập tin. Điều này có thể được làm chậm. Vì vậy nó được khuyến khích để thực hiện các hoạt động cơ sở dữ liệu không đồng bộ. Nếu ứng dụng của bạn tạo ra một cơ sở dữ liệu, cơ sở dữ liệu này là bởi mặc định được lưu trong thư mục DATA/data/APP_NAME/databases/FILENAME.
+• Kiến trúc:
+- SQLiteOpenHelper là lớp cung cấp các phương thức getReadableDatabase() và getWriteableDatabase() để truy cập đến các đối tượng của lớp SQLiteDatabase để đọc và ghi dữ liệu.
+- SQLiteDatabase là lớp cung cấp các phương thức thao tác với cơ sở dữ liệu.
+• Tạo và cập nhật
+- Để tạo và nâng cấp cơ sở dữ liệu trong ứng dụng Android của bạn, bạn tạo ra một lớp con của lớp SQLiteOpenHelper.
+- onCreate(): Phương thức này được gọi bởi framework, cơ sở dữ liệu đã được truy cập nhưng chưa được tạo.
+- onUpgrade(): Phương thức này cho phép bạn cập nhật phiên bản mới cơ sở dữ liệu của bạn hoặc xóa cơ sở dữ liệu đã tồn tại và cập nhật cơ sở dữ liệu mới thông qua phương thức onCreate(). Cả hai phương thức này đều nhận đối tượng SQLiteDatabase làm tham số
+• Thao tác:
+- SQLiteDatabase là lớp cơ sở để làm việc với cơ sở dữ liệu SQLite trong Android và nó cung cấp
+- SQLiteDatabase là lớp cơ sở để làm việc với cơ sở dữ liệu SQLite trong Android và nó cung cấp các phương thức mở, truy vấn, cập nhật và đóng cơ sở dữ liệu, ngoài ra còn cung cấp phương thức execSQL() để truy vấn trực tiếp đến cơ sở dữ liệu
+- Sử dụng đối tượng ContentValues để định nghĩa key/values. Key định danh cho cột của bảng và value là giá trị của bản ghi của cột này. ContentValues sử dụng để insert và cập nhật dữ liệu trong bản ghi. Ngoài ra để truy vấn cơ sở dữ liệu chúng ta sử dụng phương thức rawQuery() và query() thông qua lớp SQLiteQueryBuilder.
+- SQLiteQueryBuilder là lớp rất thuận tiện giúp truy vấn cơ sở dữ liệu.
+- rawQuery() chấp nhận một câu lệnh lựa chọn như một đầu vào.
+- Các tham số của phương thức query()
+- String dbName: tên bảng cơ sở dữ liệu
+- String[] columnNames: Trả về danh sách cột của bảng mà bạn muốn, nếu "null" sẽ trả về tất cả các cột của bảng.
+- String whereClause: Điều kiện chọn dữ liệu trả về, nếu tham số này là "null" thì sẽ trả về tất cả các dữ liệu.
+- String[] selectionArgs: Chọn lọc dữ liệu với điều kiện mảng
+- String[] groupBy: Sẽ nhóm các dòng được trả về, nếu tham số này là "null" thì các dòng trả về sẽ không được nhóm.
+- String[] having: Lọc cho các nhóm, "null" sẽ không lọc nhóm.
+- String[] orderBy: dữ liệu trả về sẽ được sắp xếp, nếu "null" sẽ không sắp xếp.
+
+
+CHƯƠNG 3:	NỘI DUNG THỰC HIỆN
+
+3.1 Phát biểu bài toán
+    Hoạt động của ứng dụng giúp trẻ học toán lớp 2
+    Khi người dùng mở ứng dụng thì sẽ hiện lên giao diện chính gồm có 2 phần là luyện tập và kiểm tra
+    Khi người dùng ấn vào phần luyện tập thì sẽ có các dạng toán để làm như: phép cộng phép trừ, toán đố, phép nhân phép chia, so sánh.
+    Ở mỗi mục trong phần luyện tập sẽ là các câu hỏi và được trả lời dưới dạng trắc nghiệm. Khi đúng thì sẽ có nhạc báo hiệu tuyên dương, khi sai sẽ có nhạc báo lại làm lại.
+    Khi người dùng chọn vào phần kiểm tra sẽ có 6 đề để có thể lựa chọn
+    Các đề từ 1 đến 6 để người dùng có thể lựa chọn
+    Trong bài kiểm tra thì sẽ có đồng hồ bấm thời gian. Mỗi đề có 10 câu hỏi và trả lời dưới dạng trắc nghiệm. Khi làm xong đề ta có thể kiểm tra lại và có chức năng chấm và lưu điểm
+3.2    Yêu cầu hệ thống
+3.2.1 Giao diện màn hình chính
+- Có 2 phần luyện tập và kiểm tra cho người dùng lựa chọn
+- Có nhạc nền khi khởi động
+3.2.2 Giao diện luyện tập
+    Hiển thị mục bảng cửu chương và các dạng bài tập: phép cộng phép trừ, phép nhân phép chia, toán đố, so sánh
+3.2.3 Giao diện kiểm tra
+- Hiển thị 6 đề toán
+- Hiển thị thời gian làm mỗi đề
+- Hiển thị số câu, đáp án
+3.2.4 Giao diện bảng điểm
+Hiển thị điểm đã đạt được sau khi làm bài kiểm tra
+
+
+3.3 Biểu đồ Use-case
+3.3.1 Biểu đồ Use case
+Biểu đồ Use case 
+
+
+			Hình 3-1 Biểu đồ Use case 
+
+
+
+
+
+
+
+
+
+
+
+
+3.3.2 Biểu đồ Use case phân rã “LuyenTap”
+
+      
+      
+Hình 3-2 Biểu đồ Use case phân rã
+1. Tóm tắt
+• Use case dành cho người sử dụng chương trình
+• Use case thể hiện chức năng có trong phần luyện tập
+Dòng sự kiện
+1. Dòng sự kiện chính
+• B1: Nhấn vào mục luyện tập
+• B2: Chọn mục mà mình muốn làm trong phần luyện tập
+• B3: Các câu hỏi ở đây đều trả lời dưới hình thức trắc nghiệm thế nên chọn phương án đúng cho câu hỏi
+• B4: Nếu trả lời đúng sẽ có nhạc vỗ tay để khích lệ tinh thần, sai thì sẽ có nhạc báo hiệu tiếng re re
+
+
+
+
+
+3.3.3	Đặc tả Use-case “Kiểm Tra”
+
+Biểu đồ Use case của Use case đặc tả
+
+
+
+
+
+      
+
+
+				Hình 3-3 Biểu đồ Use case đặc tả
+
+
+
+
+Tóm tắt
+• Use case dành cho người sử dụng chương trình
+• Use case thể hiện chức năng Kiểm tra tổng hợp lại kiến thức
+Dòng sự kiện
+Dòng sự kiện chính
+• B1: Hiển thị ra 5 bài kiểm tra để người dùng có thể lựa chọn
+• B2: Các mức độ sẽ tăng dần theo số thứ tự, vì thế nên người dùng có thể dễ dàng lựa bài kiểm tra phù hợp
+• B3: Sau khi hoàn thành bài kiểm tra thì sẽ hiện ra số điểm mà người dùng vừa làm (Chấm điểm)
+
+3.4 Biểu đồ lớp
+3.4.1 Biểu đồ lớp (mức phân tích)
+
+    
+					Hình 3-4 Biểu đồ lớp
+
+Danh sách các lớp đối tượng và quan hệ
+
+STTTên lớp/ Quan hệLoạiÝ nghĩa/ Ghi chú1CauHoiclassLưu trữ danh sách câu hỏi2Luyện tậpclassLưu trữ các dạng bài tập3Kiểm traclassLưu trữ các dang câu hỏi
+
+
+
+• Lớp CauHoi
+
+
+TTTTên thuộc tínhLoạiRàng buộcÝnghĩa/ghi chú1MaCHVarcharKhóa chínhMã câu hỏi2ChuDenvarcharChủ đề3NoidungNvarchar(max)Nội dung câu hỏi4DapAnNvarcharĐáp án câu hỏi5KetQuaNvarcharKết quả câu hỏi
+
+• Lớp Luyentap
+
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1MaCHVarcharKhóa chínhMã câu hỏi2ChuDenvarcharChủ đề3NoidungNvarchar(max)Nội dung câu hỏi4DapAnNvarcharĐáp án câu hỏi5KetQuaNvarcharKết quả câu hỏi
+
+• Lớp Kiemtra
+
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1MaCHVarcharKhóa chínhMã câu hỏi2ChuDenvarcharChủ đề3NoidungNvarchar(max)Nội dung câu hỏi4DapAnNvarcharĐáp án câu hỏi5KetQuaNvarcharKết quả câu hỏi6Cham diemintĐiểm của bài kiểm tra
+
+
+
+
+
+
+
+
+
+3.4.2	Mô tả chi tiết mô hình dữ liệu quan hệ
+
+
+
+
+
+
+				Hình 3-5 Dữ liệu quan hệ
+
+
+Danh sách các bảng trong lược đồ quan hệ
+STTTên bảngÝ nghĩa/ Ghi chú1DungSaiLưu thông tin về các câu hỏi2SoSanhLưu thông tin về các câu hỏi3ToanDoLưu thông tin về các câu hỏi4TinhNhamLưu thông tin về các câu hỏi
+
+
+      
+      
+      
+      
+      Bảng BangPhepcongpheptru
+
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1machINTEGERprimarykeyKhóa chính2chudeVARCHARnullTên chủ đề3noidungVARCHARnullNội dung câu hỏi4dapanAVARCHARnullLựa chọn đáp án5dapanBVARCHARnullLựa chọn đáp án6ketquaVARCHARnullĐáp án của câu hỏi
+      Bảng BangSoSanh
+
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1machINTEGERprimarykeyKhóa chính2chudeVARCHARnullTên chủ đề3noidungVARCHARnullNội dung câu hỏi4dapanAVARCHARnullLựa chọn đáp án5dapanBVARCHARnullLựa chọn đáp án6dapanCVARCHARnullLựa chọn đáp án7ketquaVARCHARnullĐáp án của câu hỏi
+      Bảng BangToanDo
+
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1machINTEGERprimarykeyKhóa chính2chudeVARCHARnullTên chủ đề3noidungVARCHARnullNội dung câu hỏi4dapanAVARCHARnullLựa chọn đáp án5dapanBVARCHARnullLựa chọn đáp án6dapanCVARCHARnullLựa chọn đáp án7dapanDVARCHARnullLựa chọn đáp án8ketquaVARCHARnullĐáp án của câu 
+       Bảng Bangphepnhanphepchia
+
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1machINTEGERprimarykeyKhóa chính2chudeVARCHARnullTên chủ đề3noidungVARCHARnullNội dung câu hỏi4dapanAVARCHARnullLựa chọn đáp án5dapanBVARCHARnullLựa chọn đáp án6dapanCVARCHARnullLựa chọn đáp án7dapanDVARCHARnullLựa chọn đáp án8ketquaVARCHARnullĐáp án của câu hỏi
+
+3.5	Biểu đồ tuần tự “Kiểm tra”
+
+
+ 
+ 
+			Hình 3-6 Biểu đồ tuần tự
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.6       Hình ảnh cơ sở dữ liệu trong SQLite
+
+
+					Hình 3-7 Cơ sở dữ liệu
+
+
+
+				Hình 3-8 Cơ sở dữ liệu
+
+				Hình 3-9 Cơ sở dữ liệu
+
+
+				Hình 3-10 Cơ sở dữ liệu
+
+
+
+
+
+
+
+
+
+
+
+
+3.7	Thiết kế giao diện
+
+    Một số giao diện chính của hệ thống
+    Giao diện bắt đầu
+     
+       		
+      			  	 Hình 3-11 Giao diện bắt đầu 
+      
+• Chức năng: Hiển thị giao diện, phát ra âm thanh nhạc nền, hiển thị mục luyện tập, mục kiểm tra.
+• Sự kiện :
+- Khi người dùng nhấn chọn mục luyện tập thì giao diện sẽ chuyển sang giao diện luyện tập và hiển thị các dạng toán
+- Khi người dùng nhấn chọn mục kiểm tra thì giao diện sẽ chuyển sang giao diện kiểm tra và hiển thị các đề kiểm tra
+
+
+
+
+
+
+	Giao diện luyện tập
+
+       
+      
+      
+      Hình 3-12 Giao diện luyện tập
+      
+• Chức năng: Hiển thị danh sách các dạng toán
+• Sự kiện: Khi chọ vào từng dạng toán thì sẽ hiện ra hàng loạt câu hỏi theo dạng toán mà đã chọn.
+
+
+
+
+
+
+
+
+
+
+
+
+
+	Bảng cửu chương
+
+       
+      
+      
+      Hình 3-13 Giao diện bảng cửu chương
+       
+      
+      
+      Hình 3-14 Giao diện toán đố
+      
+• Chức năng: Hiển thị danh sách các câu hỏi, hiển thị đáp án
+• Sự kiện: 
+- Mỗi khi có câu hỏi mà người dùng chọn đáp án, nếu mà đáp án đúng thì sẽ có tiếng nhạc báo hiệu, nếu sai thì sẽ có nhạc báo hiệu khác
+- Mỗi khi trả lời đúng thì sẽ qua câu tiếp theo
+- Sai thì phải quay trở về
+       
+      
+      
+      Hình 3-15 Giao diện phép nhân phép chia
+      
+• Chức năng: Hiển thị danh sách các câu hỏi, hiển thị đáp án
+• Sự kiện: 
+- Mỗi khi có câu hỏi mà người dùng chọn đáp án, nếu mà đáp án đúng thì sẽ có tiếng nhạc báo hiệu, nếu sai thì sẽ có nhạc báo hiệu khác
+- Mỗi khi trả lời đúng thì sẽ qua câu tiếp theo
+- Sai thì phải quay trở về
+      
+       
+      
+      
+      Hình 3-16 Dạng toán đố
+      
+• Chức năng: Hiển thị danh sách các câu hỏi, hiển thị đáp án
+• Sự kiện: 
+- Mỗi khi có câu hỏi mà người dùng chọn đáp án, nếu mà đáp án đúng thì sẽ có tiếng nhạc báo hiệu, nếu sai thì sẽ có nhạc báo hiệu khác
+- Mỗi khi trả lời đúng thì sẽ qua câu tiếp theo
+- Sai thì phải quay trở về
+      
+       
+      
+      
+      
+      
+          Hình 3-17 Dạng bài toán
+      
+• Chức năng: Hiển thị danh sách các câu hỏi, hiển thị đáp án
+• Sự kiện: 
+- Mỗi khi có câu hỏi mà người dùng chọn đáp án, nếu mà đáp án đúng thì sẽ có tiếng nhạc báo hiệu, nếu sai thì sẽ có nhạc báo hiệu khác
+- Mỗi khi trả lời đúng thì sẽ qua câu tiếp theo
+- Sai thì phải quay trở về
+      
+       
+      
+    Hình 3-18 Đề kiểm tra
+• Chức năng: Hiển thị danh sách các đề kiểm tra
+• Sự kiện: Khi người dùng nhấn chọn vào 1 trong số các đề thì sẽ chuyển sang giao diện làm bài kiểm tra
+       
+      
+    Hình 3-19 Xem câu
+       
+      
+           Hình 3-20 Câu đã làm
+      
+      
+       
+      
+     Hình 3-21 Xem điểm
+      
+• Chức năng: Hiển thị ra danh sách các câu mà mình đã làm 
+• Sự kiện: Sau khi mình đã làm các câu hỏi thì ta chọn vào phần kiểm tra thì sẽ hiện ra danh sách những câu mình đã làm
+      
+      
+       
+      
+          Hình 3-22 Lưu điểm
+      
+• Chức năng: Hiển thị bảng điền tên khi người dùng muốn lưu điểm.
+• Sự kiện: Người dùng nhập thông tin vào để lưu được điểm của mình.
+      
+      
+       
+      
+      
+             Hình 3.23 Câu hỏi
+      
+ 			       
+     Hình 3.24 Danh sách điểm
+                                     
+
+				      Hình 3.25 Giao diện chuẩn bị
+       
+      		Hình 3.26 Giao diện chọn
+• Chức năng: Hiển thị mục chọ môn toán và điểm
+• Sự kiện: Người dùng chọn mục xem điểm của mình hoặc là chọn vào phần làm bài kiểm tra.
+      
+CHƯƠNG 4: KẾT LUẬN		
+4.1     Kết quả đạt được của đề tài
+- Tìm hiểu, nắm bắt được các công cụ thiết kế ứng dụng trẻ học toán lớp 2, công cụ lập trình Android Studio.
+- Biết được cách thiết kế ứng dụng kết nối cơ sở dữ liệu SQLite
+- Hiển thị danh sách dạng toán
+- Hiển thị chi tiết các câu hỏi
+- Hiển thị thời gian kiểm tra
+- Hiển thị điểm bài kiểm tra
+- Áp dụng đề tài vào sử dụng trong thực tế 
+4.2    Hạn chế của đề tài
+- Hệ thống ứng dụng “Giúp trử học toán lớp 2” mới dừng lại ở giải các module cơ bản, chưa có nhiều module tiện ích cho người dùng như học qua video.
+- Chưa thật sự có nhiều câu hỏi
+- Giao diện còn hệ thống còn đơn giản.
+4.3        Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, tác giả đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+- Xây dựng hiệu ứng Audio, Animation
+- Xây dựng chức năng đồng hồ bấm giờ
+- Xây dựng chức năng điểm số trong bài kiểm tra
+- Thiết lập hệ thống câu hỏi
+      
+TÀI LIỆU THAM KHẢO
+
+
+
+[1] Giáo trình chuyên đề 1, 2, 3. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY.
+[2] https://stackoverflow.com/
+[3] https://developer.android.com/docs
+
+
+
+
+

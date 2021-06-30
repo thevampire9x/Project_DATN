@@ -1,0 +1,166 @@
+﻿CHƯƠNG 1: TỔNG QUAN
+1.1. Lí do chọn đề tài
+    Hiện nay, các công nghệ tiên tiến phát triển ngày càng mạnh mẽ và được ứng dụng ngày càng nhiều vào các lĩnh vực kinh tế, sản xuất cũng như đời sống thường nhật của con người. Một điểm tiêu biểu trong việc phát triển các công nghệ đó phải kể đến việc ứng dụng công nghệ thông tin vào hầu khắp các hoạt động. Nhờ đó, các công việc được thực hiện nhanh, chính xác và đạt kết quả cao hơn rất nhiều.
+    Khi xã hội ngày càng phát triển, mức sống của người dân được nâng cao thu nhập kinh tế ngày càng được cải thiện thì những nhu cầu phục vụ đời sống tinh thần được nâng cao. Những năm gần đây nước ta du nhập vào trong nước những thú chơi cảnh mới lạ, gần gũi, và ngày càng mang tính phổ biến. Mỗi khi ra đường hay ở những cửa hàng, căn hộ, hay công viên,… ta có thể bắt gặp những người bạn 4 chân được chủ của chúng dắt theo có thể là 1 chú cho, một con mèo, một chú chuột Hamster nhỏ nhắn… Ngoại hình của chúng nhìn rất đẹp mắt, mỗi con có những đặc trưng riêng về màu lông,đôi tai, da, hoặc những đặc điểm khác như rất tinh anh, thông minh, nghịch ngợm… Được mua về chăm sóc như một đứa con cưng trong nhà.
+    Trào lưu nuôi thú cưng không còn xa lạ mà ngày càng phổ biến và phát triển mạnh mẽ hơn, kéo theo thị trường hàng hóa, dịch vụ cho vật nuôi ngày càng phong phú, từ đồ ăn, thức uống, quần áo, giày dép, trang sức, đồ chơi…đến cả những dịch vụ chăm sóc sức khỏe, ngoại hình, nghỉ dưỡng. Giá cả cũng đa dạng, sẵn sàng phục vụ thú chơi của những người yêu thương vật nuôi. Chính sự hấp dẫn và nhu cầu ngày càng lớn hơn của thị trường thì những cửa hàng cung cấp các sản phẩm, dịch vụ, hàng hóa, phụ kiện cho thú cưng ngày càng nhiều. Nhưng đây là một lĩnh vực kinh doanh khá mới, nên những cửa hàng thú cưng chưa quảng bá được sản phẩm của mình rộng rãi đến với khác hàng, chưa biết các tiếp cận thị trường online. Vì thế cần tạo ra một website khắc phục những điều trên.
+1.2. Mục đích chọn đề tài
+     -    Từ nhu cầu xã hội được tìm hiểu từ thực tế và qua mạng Internet.
+     -    Từ những người chủ, người quản lý trực tiếp, khách hàng 
+     -    Từ các phần mềm đã được thiết kế và đưa vào ứng dụng của trong và ngoài 
+		Nước
+     -     Từ kinh nghiệm của người đã xây dựng phần mềm.
+1.3. Giới hạn và phạm vi của đề tài
+   Xuất phát từ tình hình thực tiễn, với phạm vi hướng tới là các nhà nghỉ, khách sạn có quy mô vùa và nhỏ  đề tài của e sẽ hỗ trợ tốt cho người quản lý trong công tác quản lý của khách sạn.
+   Do phạm vi, nên phần mềm chưa thể đáp ứng được đầy đủ chức năng cần thiết, công tác quản lý, chưa đồng bộ giữa các chức năng.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1. Tổng quan về Laravel framework MVC
+2.1.1	Khái niệm mô hình MVC
+    Mô hình MVC (Model - View - Controller) là một kiến trúc phần mềm hay mô hình thiết kế được sử dụng trong kỹ thuật phần mềm. Nó giúp cho các lập trình viên tách ứng dụng của họ ra 3 thành phần khác nhau Model, View và Controller. Mỗi thành phần có một nhiệm vụ riêng biệt và độc lập với các thành phần khác.
+   Laravel sử dụng MVC pattern để xây dựng framework. Nó đảm bảo rằng các code được trình bày logic và hợp lý. Dễ dàng để có thể hiểu được nó. Vì vậy nó làm cho web project của bạn được trở nên dễ quản lý cũng như phát triển rất rất nhiều. 
+2.2  Kiến trúc mô hình MVC.
+Trong kiến trúc này, hệ thống được chia thành 3 tầng tương ứng đúng với tên gọi của nó (Model – View – Controller). 
+Model: Đây là thành phần chứa tất cả các nghiệp vụ logic, phương thức xử lý, truy xuất database, đối tượng mô tả dữ liệu như các Class, hàm xử lý...
+View: Đảm nhận việc hiển thị thông tin, tương tác với người dùng, nơi chứa tất cả các đối tượng GUI như textbox, images...Hiểu một cách đơn giản, nó là tập hợp các form hoặc các file HTML.
+Controller: Giữ nhiệm vụ nhận điều hướng các yêu cầu từ người dùng và gọi đúng những phương thức xử lý chúng... Chẳng hạn thành phần này sẽ nhận request từ url và form để thao tác trực tiếp với Model.
+
+
+
+CHƯƠNG 3: 	XÂY DỰNG WEBSITE GIỚI THIỆU VÀ BÁN PHỤ KIỆN THÚ CƯNG
+3.1. Mô tả hoạt động của hệ thống
+3.1.1. Hoạt động đặt hàng, nhận hàng
+     Khách hàng có thể mua hàng bằng 2 hình thức là: Mua trực tiếp tại cửa hàng, gọi điện thoại và mua online trên Website của cửa hàng. Khi mua hàng online khách hàng cần khai báo chính xác tên, số điện thoại và địa chỉ của người nhận.
+• Nếu khách hàng đặt mua hàng trên Website của cửa hàng, khách hàng sẽ nhận được hàng từ 5-7 ngày kể từ ngày đặt hàng ( trừ thứ 7 và chủ nhật bưu điện không làm)
+• Nếu khách hàng mua trực tiếp tại cửa hàng thì nhân viên bán hàng sẽ kiểm tra sản phẩm, số lượng sản phẩm rồi lập hóa đơn bán hàng cho khách hàng.
+     Sau khi khách hàng đặt hàng thành công, trong khoảng từ 5-7 ngày kể từ ngày đặt hàng thành công, khách hàng để ý điện thoại để bên trung tâm giao hàng chuyển hàng đến tận tay khách hàng nhanh nhất. Nếu quá 7 ngày mà khách hàng vẫn không nhận được hàng thì khách hàng liên hệ lại với cửa hàng để nhận được hàng tránh hoàn trả lại hàng.
+3.2. Phân tích hệ thống với UML.
+3.2.1. Biểu đồ Use- case tổng quát.
+
+    	Hình 1: Biểu đồ usecase tổng quát hệ thống.
+3.2.2. Biểu đồ lớp
+
+    	Hình 2: Biểu đồ lớp của hệ thống.
+3.3. Biểu đồ thiết kế CSDL cho hệ thống
+
+    	Hình 3: Mô hình CSDL của hệ thống.
+3.4. Thiết kế giao diện
+3.4.1  Giao diện trang chủ
+
+    Hình 4: Giao diện trang chủ.
+3.4.  Giao diện trang Admin
+
+    Hình 5: Giao diện trang Admin.
+
+
+
+
+
+
+
+
+
+
+
+
+
+CHƯƠNG 4: TỔNG KẾT
+4.1. Những kết quả đạt được
+      Sau thời gian nghiên cứu và phát triển, em đã hoàn thành cơ bản các mục tiêu ban đầu đề ra của đề tài.
+• Nắm được quy trình bán hàng trực tuyến.
+• Nắm rõ về ngôn ngữ lập trình web 
+• Cơ bản thực hiện tốt chức năng đề ra.
+• Giao diện chương trình thiết kế với phong cách hiện đại, chuyên nghiệp.
+• Đầy đủ các tính năng cần thiết của website bán hàng.
+• Tích hợp tìm kiếm chính xác.
+• Nội dung website được trình bày hợp lý.
+• Về mặt giao diện
+- Thiết kế được trang web có giao diện thân thiện với người sử dụng. 
+- Bố cục giao diện Website cân đối, hài hòa, phù hợp với nội dung hiển thị của Website.
+- Màu sắc hài hòa, trang nhã giúp cho người dùng không mỏi mắt khi truy cập vào WebSite trong thời gian dài.
+• Về mặt chức năng Website
+- Do được xây dựng từ các module đơn lẻ, Website có thể dễ dàng nâng cấp các chức năng cho mình trong một thời gian ngắn.
+- Nội dung các sản phẩm, tin tức được phân theo loại danh mục rõ ràng.
+- Nội dung các tin tức hiển thị ngắn gọn, xúc tích mà vẫn giúp cho người dùng hiểu được đầy đủ được nội dung của tin tức đó.
+- Tìm kiếm sản phẩm nhanh chóng qua chức năng tìm kiếm nhanh. 
+• Về mặt dữ liệu 
+- WebSite có khả năng lưu trữ lượng dữ liệu tương đối lớn.
+- Thông tin mật khẩu của user đã được mã hóa.
+4.2. Những hạn chế
+   Đồ án còn một số hạn chế như: 
+- Một số chức năng còn thiếu xót chưa hoàn hảo.
+- CSDL chưa thực sự tối ưu.
+- Chưa tương thích với một số trình duyệt website.
+- Chưa được ứng dụng và triển khai vào thực tế.
+4.3. Hướng phát triển đồ án
+- Website sẽ chạy ổn định trên nhiều trình duyệt khác nhau.
+- Tương thích sử dụng cho các dòng điện thoại, máy tính bảng.
+- Xây dựng thêm hệ thống trang diễn đàn để khách hàng có thể trao đổi thông tin.
+- Tối ưu hóa hệ thống để có tốc độ nhanh nhất.
+- Tăng cường tính bảo mật cho website.
+TÀI LIỆU THAM KHẢO
+- [1]. Tài liệu: Larry ULLman, PHP for the Web.
+- [2]. Tài liệu: PHP & MySQL: Novice to Ninja - Kenvin yank
+- [3]. Tài liệu: Head first PHP & MySQL – Lynn Beighley & Michael Morrison
+- [4]. Trang web: https://laravel.com/docs/5.8
+- [5]. Trang web: https://stackoverflow.com/
+- x
+- x
+
+      
+      
+      
+      
+      
+      
+      
+      
+
+TÀI LIỆU THAM KHẢO
+[1]. Tài liệu: Phạm Hữu Khang, Quản trị SQL Server 2008, NXB Thống kê, 2008.
+[2]. Tài liệu: Mai Minh Tuấn - Đỗ Hữu Phú, Giáo trình Cơ sở dữ liệu, NXB Giáo dục, 2011.
+[3]. Tài liệu: Dương Quang Thiện, C# và .NET Framewoek, NXB Tổng hợp TP HCM.
+[4]. Tài liệu: Phạm Trung Kiên, Kỹ thuật lập trình web với Ajax, NXB Hồng Đức, 2007.
+[5]. Tài liệu: Rebecca M. Riordan, Microsoft ADO.NET Step by Step, O’Reilly Media, 2005.
+[6]. Tài liệu: Jesse Liberty, Programming C# for Visual Studio .NET, O’Reilly Media.
+[7]. Trang web: https://www.asp.net/mvc/
+[8]. Trang web: https://www.w3schools.com/
+[9]. Trang web: https://www.mkyong.com/
+[10]. Trang web: https://www.google.com.vn/
+[11]. Trang web: https://stackoverflow.com/
+[12]. Trang web: https://creately.com/
+
+
+
+13
+
+

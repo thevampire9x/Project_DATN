@@ -1,0 +1,389 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Trong những năm gần đây, ứng dụng CNTT về quản lý web đang phát triển mạnh mẽ, giúp cho các cửa hàng kiếm được lợi nhuận nhiểu hơn nhờ vào các trang website bán hàng nhanh. Vì vậy nên em đã chọn đề tài “Xây dựng website bán giày YoungDaddy”. Với mong muốn giúp cho cửa hàng kiếm thêm thu nhập nhiều hơn nhờ vào việc bán hàng online. Ngoài ra, website bán giày rất chuyên nghiệp, giúp khách hàng mua được thuận lợi hơn, khách hàng có thể mua các loại giày yêu thích mà không tốn nhiều thời gian để đi ra cửa hàng mua. Đây là điều tuyệt vời đối với khách hàng.
+    Cửa hàng ngoài việc cung cấp phong phú các loại giày còn cung cấp đầy đủ các dịch vụ về giày như tặng người thân yêu, sinh nhật, giày đôi, giày cho các nhóm nhảy. Nhu cầu giày đẹp của bạn sẽ được cửa hàng phục vụ một cách hoàn hảo nhất.
+    Khách hàng, từ một máy tính tại một nơi nào đó, điền những thông tin thanh toán và địa chỉ liên hệ vào đơn đặt hàng trên Web bán hàng của cửa hàng. Khi nhận được yêu cầu mua hàng khách hàng và phản hồi xác nhận tóm tắt lại những thông tin cần thiết những mặt hàng đã chọn, hình thức thanh toán, địa chỉ giao nhận và số phiếu đặt hàng…Khách hàng kiểm tra lại các thông tin và kích vào nút “đặt hàng” từ bàn phím hay chuột của máy tính để gửi thông tin trả về cho hệ thống.
+    Hệ thống nhận và lưu trữ thông tin đặt hàng đồng thời nếu chọn hình thức thanh toán qua thẻ thì hệ thống sẽ chuyển tiếp thông tin thanh toán (số thẻ tín dụng,ngày đáo hạn, chủ thẻ…) đã được mã hóa đến máy chủ (Server, thiết bị xử lý dữ liệu) của trung tâm cung cấp dịch vụ xử lý thẻ trên mạng Internet. Sau khi tài khoản của cửa hàng được xác nhận từ ngân hàng là đã được khách hàng chuyển vào thì thực hiện giao hàng. Ngược lại báo lỗi qua thư điện tử cho khách. Còn với trường hợp khách hàng thanh toán trực tiếp thì khách hàng sẽ phải trả tiền khi nhân viên của cửa hàng đến giao hàng.
+1.2 Mục tiêu của đề tài
+    Đây là một website nhằm bán và giới thiệu các loại giày của cửa hàng đến người tiêu dùng với chi tiết và giá cả chính xác nhất.
+➢ Khách hàng:
+- Tìm kiếm và lựa chọn giày cần mua: Khách hàng khi truy cập trang web thường tìm kiếm sản phẩm họ cần và muốn mua. Nhưng đôi khi cũng có nhiều khách hàng vào website này mà không có ý định muốn mua hay không biết mua gì thì yêu cầu đặt ra cho hệ thống là làm thế nào để khách hàng thấy bắt mắt với các loại giày đồng thời có thể tìm kiếm nhanh và hiệu quả những thứ cần tìm.
+- Đặt mua hàng: Sau khi khách hàng lựa chọn xong những sản phẩm cần mua thì đơn đặt hàng sẽ được hiển thị để khách hàng nhập vào những thông tin cần thiết, tránh những đòi hỏi hay những thông tin yêu cầu quá nhiều từ phía khách hàng, tạo cảm giác thoải mái, riêng tư cho khách hàng.
+- Theo dõi đơn hàng của mình.
+- Gửi ý kiến đóng góp
+➢ Người quản lý:
+-  Là người có quyền đăng nhập, quản lý và làm chủ mọi hoạt động của hệ thống trang web. Người quản lý có một username và một password để truy cập vào hệ thống nhằm thực hiện các chức năng sau:
+- Thêm, xóa, sửa thông tin giày vào cơ sở dữ liệu
+- Kiểm tra và xử lý đơn đặt hàng
+- Báo cáo doanh thu
+1.3 Giới hạn của đề tài
+    Đề tài xây dựng dựng một hệ thống thông tin với mục đích bán giày (qua điện thoại, qua website) và giới thiệu các mẫu giày.
+    Xây dựng một hệ thống lưu trữ cơ sở dữ liệu phù hợp với nhu cầu, hỗ trợ các công việc mua bán qua mạng nhằm mở rộng phạm vi kinh doanh của cửa hàng.
+
+    Bài toán đòi hỏi hệ thống phải có các khả năng kỹ thuật :
+- Thực hiện được đầy đủ các chức năng cần thiết
+- Tương thích với hầu hết các trình duyệt
+- Dễ dàng nâng cấp sửa đổi
+- Thân thiện, tối ưu với các máy tìm kiếm
+- Tốc độ cao, sử dụng ít tài nguyên và băng thông
+- Độ bảo mật, an toàn tương đối khả năng chạy được trên môi trường Internet.
+Một số yêu cầu khác :
+- Giao diện hệ thống thân thiện, dễ sử dụng.
+- Dễ dàng triển khai và cài đặt.
+1.4 Phương pháp tiếp cận
+- Cách tiếp cận : Nghiên cứu các Web Framework trên các nền tảng công nghệ.NET
+- Sử dụng các phương pháp nghiên cứu:
+o Phương pháp đọc tài liệu;
+o Phương pháp phân tích mẫu;
+o Phương pháp thực nghiệm.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về ASP.NET
+2.1.1 Giới thiệu về ASP.NET
+    Đầu năm 2002, Microsoft giới thiệu một kỹ thuật lập trình Web khá mới mẻ với tên gọi ban đầu là ASP+, tên chính thức sau này là ASP.Net. Với ASP.Net, không những không cần đòi hỏi bạn phải biết các tag HTML, thiết kế web, mà nó còn hỗ trợ mạnh lập trình hướng đối tượng trong quá trình xây dựng và phát triển ứng dụng Web.ASP.Net là kỹ thuật lập trình và phát triển ứng dụng web ở phía Server (Server-side) dựa trên nền tảng của Microsoft .Net Framework.
+    Hầu hết, những người mới đến với lập trình web đều bắt đầu tìm hiểu những kỹ thuật ở phía Client (Client-side) như: HTML, Java Script, CSS (Cascading Style Sheets). Khi Web browser yêu cầu một trang web (trang web sử dụng kỹ thuật client-side), Web server tìm trang web mà Client yêu cầu, sau đó gởi về cho Client. Client nhận kết quả trả về từ Server và hiển thị lên màn hình.
+    ASP.Net sử dụng kỹ thuật lập trình ở phía server thì hoàn toàn khác, mã lệnh ở phía server (ví dụ: mã lệnh trong trang ASP) sẽ được biên dịch và thi hành tại Web Server. Sau khi được Server đọc, biên dịch và thi hành, kết quả tự động được chuyển sang HTML/JavaScript/CSS và trả về cho Client. Tất cả các xử lý lệnh ASP.Net đều được thực hiện tại Server và do đó, gọi là kỹ thuật lập trình ở phía server. 
+2.1.2 Tìm hiểu về mô hình lập trình Web MVC trong ASP.NET
+    Mẫu kiến trúc Model – View – Controller được sử dụng nhằm chi ứng dụng thành ba thành phần chính: model, view và controller. Nền tảng ASP.NET MVC giúp cho chúng ta có thể tạo được các ứng dụng web áp dụng mô hình MVC thay vì tạo ứng dụng theo mẫu ASP.NET Web Forsm. Nền tảng ASP.NET MVC có đặc điểm nổi bật là nhẹ (lighweigt), dễ kiểm thử phần giao diện (so với ứng dụng Web Forms), tích hợp các tính năng có sẵn của ASP.NET. Nền tảng ASP.NET MVC được định nghĩa trong namespace System.Web.Mvc và là một phần của name space System.Web.
+    MVC là một mẫu thiết kế (design pattern) chuẩn mà nhiều lập trình viên đã quen thuộc. Một số loại ứng dụng web sẽ thích hợp với kiến trúc MVC. Một số khác vẫn thích hợp với ASP.NET Web Forms và cơ chế postbacks. Đôi khi có những ứng dụng kết hợp cả hai kiến trúc trên.
+    Nền tảng MVC bao gồm các thành phần dưới đây:
+    Models: Các đối tượng Models là một phần của ứng dụng, các đối tượng này thiết lập logic của phần dữ liệu của ứng dụng. Thông thường, các đối tượng model lấy và lưu trạng thái của model trong CSDL. 
+    Views: Views là các thành phần dùng để hiển thị giao diện người dùng (UI). Thông thường, view được tạo dựa vào thông tin dữ liệu model. 
+    Controllers: Controller là các thành phần dùng để quản lý tương tác người dùng, làm việc với model và chọn view để hiển thị giao diện người dùng. Trong một ứng dụng MVC, view chỉ được dùng để hiển thị thông tin, controller chịu trách nhiệm quản lý và đáp trả nội dung người dùng nhập và tương tác với người dùng. 
+    Sự phân tách rạch ròi ba thành phần của ứng dụng MVC còn giúp cho việc lập trình diễn ra song song. Ví dụ như một lập trình viên làm việc với view, lập trình viên thứ hai lo cài đặt logic của controller và lập trình viên thứ ba có thể tập trung vào logic tác vụ của model tại cùng một thời điểm.
+    Một ứng dụng web được phát triển theo mô hình MVC, có nguyên lý hoạt động xử lý yêu cầu của người dùng như sau:
+- Khi có yêu cầu phát sinh từ người dùng (phía Client), yêu cầu này sẽ được gửi đến phía Server, tại đây Controller sẽ tiếp nhận yêu cầu để xử lý.
+- Bên trong Controller chứa nhiều phương thức (action), mỗi action tương ứng với một yêu cầu cụ thể từ phía người dùng Controller sẽ lựa chọn action phù hợp với yêu cầu để xử lý. Trong quá trình xử lý, Controller sẽ tương tác với Model để có được dữ liệu mà người dùng mong muốn.
+- Sau khi Controller làm việc với Model để có được dữ liệu theo yêu cầu, Controller sẽ gửi về cho View thành phần Data Model và nhiệm vụ của View là chuyển Data Model nhận được thành dữ liệu ứng dụng và gửi trả về phía Client để hiển thị kết quả yêu cầu.
+2.2 Ưu khuyết điểm của ASP.NET
+2.2.1 Ưu điểm
+    ASP.NET được xây dựng với bộ thư viện đa dạng và phong phú của .Net Framewrork, hỗ trợ vượt trội về XML và khả năng truy cập cơ sở dữ liệu qua ADO.net. Bên cạnh đó, ASP và ASPX có thể hoạt động trong cùng một ứng dụng mang lại hiệu năng cao cho website. Có thể nhận thấy ASP.NET mang một phong cách hoàn toàn mới, bạn có thể tách giao diện và code thành 2 phần khác biệt. Điều này giúp cho cho việc quản lý và bảo trì trở nên rõ ràng và đơn giản hơn.
+    Thiết kế web bằng ASP.NET giúp cho hệ điều hành hoạt động trơn tru cũng như tăng tốc độ tải cho trang web của bạn. Với kiến trúc tương tự như các ứng dụng trên Windows, việc sử dụng cũng trở nên dễ dang hơn rất nhiều. Bên cạnh đó ASP.NET có khả năng tự động tạo ra mã HTML cho các Server để website có thể hoạt động trên hầu hết các trình duyệt được khách hàng sử dụng. Đặc biệt, ASP.NET là một ngôn ngữ mất phí nên bạn có thể hoàn toàn yên tâm về vấn đề bảo mật của nó. Với những ưu điểm vượt trội như vậy, ASP.NET luôn được rất nhiều nhà thiết kế web chuyên nghiệp ưa chuộng và sử dụng. Tuy nhiên, nó vẫn còn một số nhược điểm cần khắc phục mà bạn cần chú ý khi xây dựng web doanh nghiệp.
+2.2.2 Nhược điểm
+    Đối với dự án nhỏ, việc áp dụng mô hình MVC gây cồng kềnh, tốn thời gian trong quá trình phát triển
+    Tốn thời gian trung chuyển dữ liệu của các thành phần.
+2.3 HTML và CSS
+2.3.1 HTML
+    HTML (Hyper Text Markup Languages – tiếng Anh) hay còn gọi là “Ngôn ngữ đánh dấu siêu văn bản” nó được sử dụng để tạo nên các trang web thông qua các thẻ đánh dấu. Do vậy HTML không phải là một ngôn ngữ lập trình mà nó chỉ là ngôn ngữ đánh dấu. Phần mở rộng của tập tin HTML thường là .html hoặc .htm. Các trình duyệt sẽ đọc tập tin HTML và hiển thị chúng dưới dạng trang web. Các thẻ HTML sẽ được ẩn đi, chỉ hiển thị nội dung văn bản và các đối tượng khác: hình ảnh, media.  Với các trình duyệt khác nhau đều hiển thị một tập HTML với 1 kết quả nhất định. Các trang HTML được gửi đi qua mạng internet theo giao thức HTTP.
+    HTML không những cho phép nhúng thêm các đối tượng hình ảnh, âm thanh mà còn cho phép nhúng các kịch bản vào trong đó như các ngôn ngữ kịch bản như JavaScript để tạo hiệu ứng động cho trang web. Để trình bày trang web hiệu quả hơn thì HTML cho phép sử dụng kết hợp với CSS. HTML chính thức là chuẩn của W3C từ tháng 1 năm 97 với phiên bản HTML 3.2 trước đó thì HTML xuất bản theo chuẩn của RFC.  
+    HTML được tương thích vỡi mọi hệ điều hành cùng các trình duyệt của nó. Khả năng dễ học, dễ viết là một ưu điểm của HTML. Không những vậy việc soạn thảo đòi hỏi hết sức đơn giản và thông thường sử dụng notepad là đã đủ. HTML vẫn tiếp tục được phát triển, phiên bản hiện tại là HTML 5 – một phiên bản nâng cấp của XHTML. HTML cải tiến khá nhiều đặc biệt hỗ trợ mạnh mẽ các phần tử multimedia mà không cần các plugin. HTML5 nói chung mãnh mẽ hơn nhiều không chỉ về tốc độ và độ thích ứng cao mà chính là khả năng hỗ trợ API (Application Programming Interface - giao diện lập trình ứng dụng) và DOM (Document Object Model – mô hình đối tượng tài liệu hay cây cấu trúc dữ liệu).
+    HTML5
+    HTML4 đã làm việc rất tốt, nhưng nó rõ ràng là có một số nhược điểm. Nhóm phát triển HTML5 chắc chắn đã có một phương án cao hơn cho bước tiếp theo của HTML, điều đó có nghĩa là HTML5 phải được xây dựng dựa trên các nguyên tắc sau đây:
+- Ít phụ thuộc vào các plugin cho các chức năng.
+- Scripting nên được thay thế bằng markup bất cứ khi nào có thể.
+- Độc lập thiết bị (ví dụ, có sẵn trên tất cả các thiết bị và cung cấp các trải nghiệm giống nhau đối với người dùng).
+- Công bố quá trình phát triển để mọi người đều có thể nhìn thấy những gì đang diễn ra.
+    Cụ thể hơn, HTML5 đã bổ sung thêm rất nhiều các thẻ đánh dấu (markup) mới:
+- Các thẻ <header> và <footer> giúp bạn tách các phần trên và dưới của các block nội dung. Để có thể sử dụng nhiều lần trên một trang duy nhất. 
+- Thẻ <article> giúp xác định một phần cụ thể về nội dung, ví dụ, một bài blog hoặc một bình luận của độc giả.
+- Thẻ <nav> để xác định những phần nào được coi là khối điều hướng.
+- Thẻ <section> cho phép bạn xác định một phần nội dung nào đó; tương tự như các thẻ <div> hiện nay.
+- Các thẻ <audio> và <video> để đánh dấu những nội dung bao gồm âm thanh hoặc video.
+- Thẻ <canvas> cho phép bạn vẽ đồ họa sử dụng một ngôn ngữ kịch bản riêng biệt.
+- Thẻ <embed> dùng để nhúng các nội dung hoặc các ứng dụng bên ngoài vào trang web.
+    HTML5 cũng bỏ đi một số thẻ: <acronym>, <applet>, <font>, <frame>, <frameset>, <noframes>, và một số thẻ khác.
+    Các tiêu chuẩn đặc tả kỹ thuật đầy đủ cho HTML5 đã được lên kế hoạch hoàn thành từ năm 2014, nhưng HTML5 đã có nhiều tiến bộ đã và nó có thể được sử dụng để thực hiện các tính năng cho đến hiện nay. Các tiêu chuẩn đặc tả kỹ thuật đầy đủ cho HTML5.1 được hoàn thành vào năm 2016.
+2.3.2 CSS
+    CSS -  Cascading Style Sheet dùng để trình bày các tài liệu viết bằng HTML hoặc XHTML . Ngoài ra ngôn ngữ định kiểu theo tầng cũng có thể dùng cho XML, SVG, XUL,.. Các đặc điểm kĩ thuật của CSS được duy trì bởi tổ chức W3C.  
+    CSS có cấu trúc đơn giản và sử dụng các từ tiếng Anh để đặt tên cho các thuộc tính.CSS khi sử dụng có thể viết trực tiếp xen lẫn vào mã HTML hoặc tham chiếu từ một file css riêng biệt. Và hiện nay CSS thường được viết riêng thành một tập tin với mở rộng là .css Chính vì vậy mà các trang web có sử dụng CSS thì mã HTML sẽ trở nên ngắn gọn và trong sáng hơn. Ngoài ra có thể sử dụng 1 tập tin CSS đó cho nhiều website tiết kiệm rất nhiều thời gian và công sức. Một đặc điểm quan trọng đó là tính kế thừa của CSS do đó sẽ giảm được số lượng dòng code mà vẫn đạt được yêu cầu.  
+    Tuy nhiên đối với CSS thì các trình duyệt hiểu theo kiểu riêng của nó. Do vậy việc trình bày 1 nội dung trên các trình duyệt khác nhau là không thống nhất.
+    CSS3 là một tiêu chuẩn mới và bản nâng cấp đáng kể của CSS. Là một thành phần làm nên trang website một cách toàn diện nhất với các hỗ trợ sẵn có mà không cần phải dùng tới các thành phần bổ sung bên như như: JavaScript, Jquery, Flash,... khiến cho trang web tải nhanh chóng hơn. Tuy nhiên, với tiêu chuẩn mới này thì trình duyệt của bạn cũng phải là phiên bản mới nhất có hỗ trợ CSS3.
+    CSS3 bổ sung rất nhiều thành phần mới giúp người lập trình web giảm thiểu được rất nhiều tài nguyên từ thành phần bổ sung bên ngoài, đặc biệt CSS3 rất có lợi cho website làm việc hiệu quả mà ít tốn dung lượng tài nguyên, thời gian tải trang.
+    Thành phần mới của CSS3
+    - CSS3 Border
+    - CSS3 Backgrounds
+    - CSS3 Gradients
+    - CSS3 Text Effects
+    - CSS3 Fonts
+    - CSS3 2D Transforms
+    - CSS3 3D Transforms
+    - CSS3 Transitions
+    - CSS3 Animations
+    - CSS3 Multiple Columns
+    - CSS3 User Interface
+2.4 JQuery
+    JQuery là một thư viện JavaScript mở để tạo ra các hiệu ứng có thể tương tác trực tiếp với người dùng một cách nhanh chóng, dễ dàn và hiệu quả hơn nhiều lần với việc sử dụng JavaScript thuần. Để sử dụng ta cần khai báo thư viện của jquery giống như khai báo một tập tin java script. 
+    Cách khai báo sử dụng từ máy chủ google.  
+    <script 
+    src=http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.jstype="text/javascript">
+    </script>
+    Hoặc bạn có thể tải về thư viện Jquery từ chính trang chủ của nó: http://jquery.com JQuery có đã phát hành các phiên bản khác nhau, phiên bản hiện tại là phiên bản 1.5.2   
+    Hiện nay Jquery sử dụng rất nhiều trong các ứng dụng web. Với jquery cho phép các nhà phát triển dễ dàng chia sẻ plugin với nhau. Đó là các thư viện jquery được các nhà phát triển sử dụng và chia sẻ với người khác.
+    Để tránh tình trạng quá tải tính năng JQuery cho phép người dung tạo và sử dụng các plugin nếu cần. Cách tạo 1 plugin không quá phức tạp và được hướng dẫn cụ thể, chính vì thế mà cộng đồng sử dụng JQuery đã tạo ra rất nhiều các plugin sang tạo và hữu dụng. Bạn hoàn toàn có thể triển khai các ứng dụng với Jquery mà không cần phải tìm hiểu quá nhiều về Jquery. Thật đơn giản là sử dụng các Plugin được các nhà phát triển và cộng đồng sử dụng xây dựng và chia sẻ. Ví dụ: shadows box, rating stars, Menu, Form,…Bạn có thể tìm hiểu tại: 
+- http://jqueryui.com/  -  Trang chủ về JQuery UI 
+- http://plugins.jquery.com/ - Trang plugin của JQuery
+- http://code.google.com/p/flot/ - Thư viện flot cho JQuery
+2.5 Ajax
+    AJAX (Asynchronous JavaScript and XML)là một nhóm các công nghệ phát triển web được sử dụng để tạo các ứng dụng web động hay các ứng dụng giàu tính Internet (rich Internet application). Từ Ajax được ông Jesse James Garrett đưa ra và dùng lần đầu tiên vào tháng 2 năm 2005 để chỉ kỹ thuật này, mặc dù các hỗ trợ cho Ajax đã có trên các chương trình duyệt từ 10 năm trước. Ajax là một kỹ thuật phát triển web có tính tương tác cao bằng cách kết hợp các ngôn ngữ:
+    HTML (hoặc XHTML) với CSS trong việc hiển thị thông tin
+    Mô hình DOM (Document Object Model), được thực hiện thông qua JavaScript, nhằm hiển thị thông tin động và tương tác với những thông tin được hiển thị
+    Đối tượng XMLHttpRequest để trao đổi dữ liệu một cách không đồng bộ với máy chủ web. (Mặc dù, việc trao đổi này có thể được thực hiện với nhiều định dạng như HTML, văn bản thường, JSON và thậm chí EBML, nhưng XML là ngôn ngữ thường được sử dụng).
+    XML thường là định dạng cho dữ liệu truyền, mặc dù bất cứ định dạng nào cũng có thể dùng, bao gồm HTML định dạng trước, văn bản thuần (plain text), JSON và ngay cả EBML.
+    Giống như DHTML, LAMP hay SPA, Ajax tự nó không phải là một công nghệ mà là một thuật ngữ mô tả việc sử dụng kết hợp một nhóm nhiều công nghệ với nhau. Trong đó, HTMLvà CSS được kết hợp với nhau để đánh dấu và định kiểu thông tin. DOM và JavaScript kết hợp lại để hiển thị thông tin động và cho phép người dùng tương tác với các thông tin này. JavaScript cùng với đối tượng XMLHttpRequest hỗ trợ việc trao đổi dữ liệu bất đồng bộ giữa trình duyệt và máy chủ nhằm hạn chế việc tải lại nguyên trang.
+    Trong thực tế, các công nghệ dẫn xuất hoặc kết hợp dựa trên Ajax như AFLAX cũng đã xuất hiện.
+a) Ưu điểm
+    Trong nhiều trường hợp, các trang web chứa rất nhiều nội dung thông thường trong trang. Nếu sử dụng các phương pháp truyền thống, những nội dung đó sẽ phải nạp lại toàn bộ với từng yêu cầu. Tuy nhiên, nếu sử dụng Ajax, một ứng dụng web có thể chỉ yêu cầu cho các nội dung cần thiết phải cập nhật, do đó giảm lượng lớn băng thông và thời gian nạp trang.
+    Việc dùng các yêu cầu không đồng bộ (asynchronous request) cho phép giao diện người dùng của ứng dụng hiển thị trên trình duyệt giúp người dùng trải nghiệm sự tương tác cao, với nhiều phần riêng lẻ.
+    Việc sử dụng Ajax có thể làm giảm các kết nối đến server, do các mã kịch bản (script) và các style sheet chỉ phải yêu cầu một lần.
+
+
+b) Nhược điểm
+    Các trang web được tạo động không được ghi vào bộ lưu lịch sử lướt web của trình duyệt, do đó nút "back" (quay lui) của trình duyệt sẽ mất tác dụng quay lại trang thái trước đó của trang sử dụng Ajax, thay vào đó sẽ quay lại trang web trước đó mà người dùng ghé thăm. Để khắc phục có thể dùng các IFrame không hiển thị để gây ra sự thay đổi trong lịch sử trình duyệt và thay đổi phần neo của URL (bằng mã a #) khi chạy Ajax và theo dõi những sự thay đổi của nó. 
+    Việc cập nhật các trang web động cũng gây khó khăn cho người dùng trong việc bookmark (đánh dấu địa chỉ yêu thích) một trạng thái nào đó của ứng dụng. Cũng có những cách khắc phục cho vấn đề này, một số trong đó sử dụng mã xác định đoạn (fragment identifier) URL (phần URL ở sau dấu '#') để lưu vết, và cho phép người dùng đánh dấu và quay lại một trạng thái nào đó của ứng dụng. 
+    Do hầu hết các web crawler không thực thi mã JavaScript, các ứng dụng web sẽ cung cấp một phương thức thay thế để truy cập nội dung thông thường được truy cập bằng Ajax, để cho phép các máy tìm kiếm lập chỉ mục chúng. 
+    Bất kỳ người dùng nào có trình duyệt không hỗ trợ Ajax hay JavaScript, hoặc đơn giản là đã bị vô hiệu hóa JavaScript, sẽ đương nhiên không thể sử dụng Ajax. Tương tự, các thiết bị như điện thoại di động, PDA,và thiết bị đọc màn hình (screen reader) có thể không hỗ trợ JavaScript hay đối tượng XMLHttp được yêu cầu. Ngoài ra, các thiết bị đọc màn hình nếu có thể sử dụng Ajax đi nữa cũng vẫn có thể không đọc chính xác các nội dung động. 
+    Chế độ same origin policy (chế độ gốc đơn điệu) có thể không cho phép sử dụng Ajax thông qua các tên miền, mặc dù W3C đã có một đồ án sơ thảo để cho phép điều này. 
+    Việc thiếu các chuẩn cơ bản của Ajax đồng nghĩa với việc không có nhiều sự chọn lựa thực tiễn tốt nhất để kiểm tra các ứng dụng Ajax. Các công cụ kiểm thử cho Ajax thường không hiểu các mô hình sự kiện, mô hình dữ liệu và giao thức của Ajax.
+    Mở ra một cách thức khác cho việc tấn công của các đoạn mã độc mà những nhà phát triển web có thể không kiểm thử hết được. 
+
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Giới thiệu chung
+3.1.1 Xác định yêu cầu khách hàng
+• Khách hàng khi truy cập website có thể xem được thông tin về các loại giày và có thể đặt loại giày mình muốn mua.
+• Khi khách hàng chọn một sản phẩm giày sẽ chuyển tới trang chi tiết, tại đây khách hàng có thể xem các thông tin chi tiết về sản phẩm và có thể đặt mua sản phẩm đó vào giỏ hàng.
+• Khách hàng có thể chuyển đến giỏ hàng để xem danh mục các sản phẩm đã đặt vào. Và khách hàng có thể thay đổi số lượng hoặc bỏ một loại sản phẩm nào đó ra khỏi giỏ hàng.
+• Khi khách hàng muốn thanh toán trực tuyến cần nhập thông tin cần thiết.
+• Khi khách hàng truy cập website, có thể tìm kiếm sản phẩm muốn mua theo tên, xem sản phẩm theo từng loại.
+•  Thông tin khách hàng bao gồm: mã khách hàng, tên khách hàng, địa chỉ, điện thoại, email.
+• Nhân viên có thể thêm, sửa, xóa thông tin các loại giày, kiểm tra đơn đặt hàng, sau đó lập phiếu mua hàng, hỗ trợ thanh toán cho khách hàng.
+• Admin là người quản lý hệ thống, có toàn quyền xử lý trên hệ thống.
+3.1.2 Yêu cầu hệ thống
+   Về mặt chức năng
+• Thực hiện đầy đủ các chức năng cần thiết.
+Về mặt phi chức năng
+• Tương thích hầu hết với các trình duyệt.
+• Dễ dàng nâng cấp sửa đổi.
+• Thân thiện, tối ưu với các máy tìm kiếm
+• Tốc độ cao, sử dụng ít tài nguyên và băng thông.
+• Độ bảo mật, an toàn tương đối khả năng chạy được trên môi trường Internet.
+• Giao diện hệ thống thân thiện, dễ sử dụng.
+• Dễ triển khai và cài đặt.
+3.2 Biểu đồ Use – case
+3.2.1 Biểu đồ Use – case tổng quát
+
+    Hình 31: Biểu đồ use – case tổng quát
+3.2.2 Danh sách Actor
+    Bảng 3-1: Danh sách Actor
+STTTên ActorÝ nghĩa/Ghi chú1AdminNgười quản lý hệ thống website2KhachHangKhách hàng3.2.3 Danh sách các Use – case
+    Bảng 3-2 : Danh sách các Use – case
+STTTên Use-caseÝ nghĩa/Ghi chú1UCTimKiemTìm kiếm sán phẩm2UCMuaHangMua hàng3UC quan ly khach hangQuản lý khách hàng4UC quan ly san phamQuản lý sản phẩm5UC quan ly loai SPQuản lý loại sản phẩm6UC quan ly dat hangQuản lý đặt hàng 7UC dang ky tai khoanĐăng ký tài khoản8UC quan ly tin tucQuản lý tin tức    
+3.2.4 Đặc tả Use – case
+a) Đặc tả UC QL Giỏ hàng
+
+    Hình 32: Biểu đồ UC Mua hàng
+    Tóm tắt
+• Người sử dụng: Khách hàng 
+• Chức năng: Chọn sản phẩm cần mua, Thêm vào giỏ hàng, Loại khỏi giỏ hàng, Xem thông tin giỏ hàng, Hủy việc mua hàng, Thanh toán, Chọn hình thức thanh toán
+    Ý nghĩa: Quản lý việc mua hàng của khách hàng
+    Các luồng sự kiện
+• Khi người dùng có nhu cầu mua hàng trên website sẽ truy cập vào Website và thấy danh sách các mặt hàng được hiển thị.
+• Khi khách hàng muốn mua 1 sản phẩm nào đó, có thể click vào sản phẩm để xem chi tiết. Sau đó ấn vào nút “Mua hàng”, thông tin mặt hàng đặt mua sẽ có trong giỏ hàng.
+• Khi muốn thay đổi số lượng cần mua hoặc không mua nữa khách hàng truy cập vào giỏ hàng, chọn mua thêm hoặc hủy đơn hàng
+    Luồng rẽ nhánh: Không
+    Tiền điều kiện: Phải đăng nhập trước khi UC bắt đầu
+    Hậu điều kiện: Nếu Use-Case thành công thì thông tin mua hàng sẽ lưu vào hệ thống. Ngược lại, trạng thái hệ thống sẽ thay đổi.
+b) Đặc tả UC Quản lý khách hàng
+
+    Hình 33: Biểu đồ UC Quản lý khách hàng
+    Tóm tắt
+• Người sử dụng: Quản trị viên 
+• Chức năng: Thêm khách hàng mới, Cập nhật thông tin khách hàng, Xóa khách hàng, Hiển thị danh sách khách hàng
+• Ý nghĩa: Quản lý khách hàng của website bao gồm mã khách hàng, họ tên, địa chỉ, điện thoại, email,..
+    Các luồng sự kiện
+• Khi người dùng đăng nhập thành công với quyền Quản trị viên và chọn chức năng “Quản lý nhân viên hoặc khách hàng”, 1 form “Quản lý nhân viên hoặc khách hàng” được hiển thị với 2 View là “Quản lý nhân viên” và “Quản lý khách hàng”.
+• Danh sách nhân viên hoặc khách hàng được hiển thị trên GridView và có 2 thao tác “Sửa” và “Xóa”.
+• Khi người dùng chọn “Sửa”, thông tin nhân viên hoặc khách hàng sẽ hiển thị lên các Textbox và thông tin sẽ được cập nhật khi người dùng chọn “Cập nhật”. 
+• Khi người dùng chọn “Xóa”, nhân viên hoặc khách hàng sẽ được xóa bỏ.
+• Người dùng có thể điền thông tin các Textbox và chọn “Thêm mới” để thêm nhân viên hoặc khách hàng mới.
+    Luồng rẽ nhánh: Không
+    Tiền điều kiện: Phải đăng nhập trước khi UseCase bắt đầu
+    Hậu điều kiện: Nếu Use-Case thành công thì thông tin khách hàng sẽ lưu vào hệ thống. Ngược lại, trạng thái hệ thống sẽ thay đổi.
+
+c) Đặc tả UC Tìm kiếm
+
+    Hình 34: Biểu đồ UC Tìm kiếm
+Tóm tắt
+• Người sử dụng: khách hàng
+• Chức năng: Tìm kiếm, Tìm kiếm sản phẩm theo tên, hiển thị sản phẩm
+• Ý nghĩa: tìm kiếm sản phẩm 
+    Các luồng sự kiện: Khi khách hàng muốn tìm kiếm một sản phẩm nào đó, khách hàng sẽ chọn lên thanh tìm kiếm, gõ theo tên hoặc nhà cung cấp của sản phẩm cần tìm và chọn chức năng “tìm kiếm”, sẽ hiện thị ra 1 form có sản phẩm khách hàng muốn tìm. 
+    Luồng rẽ nhánh: Không
+    Tiền điều kiện: Phải đăng nhập trước khi UseCase bắt đầu
+    Hậu điều kiện: Nếu Use-Case thành công thì thông tin tìm kiếm sẽ lưu vào hệ thống. Ngược lại, trạng thái hệ thống sẽ thay đổi.
+
+
+d) Đặc tả UC Quản lý đặt hàng
+
+    Hình 35: Biểu đồ UC Quản lý đặt hàng
+    Tóm tắt
+• Người sử dụng: Quản trị viên 
+• Chức năng: Tiếp nhận đơn hàng, Xác nhận đơn hàng, Chuyển cho nhân viên giao hàng
+• Ý nghĩa: Quản lý đơn hàng khi có khách đặt mua trên website.
+    Các luồng sự kiện
+• Khi người dùng đăng nhập thành công với quyền Quản trị viên và chọn chức năng “Quản lý đơn hàng” sẽ được hiển thị.
+• Danh sách đơn hàng chờ xác nhận được hiển thị trên GridView và có 2 thao tác “Sửa” và “Xóa”.
+• Khi người dùng chọn “Sửa”, thông tin đơn hàng sẽ hiển thị lên các Textbox và thông tin sẽ được cập nhật khi người dùng chọn “Cập nhật”. 
+• Khi người dùng chọn “Xóa”, đơn hàng sẽ được xóa bỏ.
+    Luồng rẽ nhánh: Không
+    Tiền điều kiện: Phải đăng nhập trước khi UseCase bắt đầu
+    Hậu điều kiện: Nếu Use-Case thành công thì thông tin đơn hàng sẽ lưu vào hệ thống. Ngược lại, trạng thái hệ thống sẽ thay đổi.
+3.3 Biểu đồ lớp
+3.3.1 Biểu đồ lớp mức phân tích
+
+    Hình 36: Biểu đồ lớp mức phân tích
+3.3.2 Danh sách các lớp đối tượng và quan hệ
+    Bảng 3-3: Danh sách các lớp đối tượng và quan hệ
+STTTên lớp/quan hệLoạiÝ nghĩa/Ghi chú1KhachhangKhách hàng2DonHangĐơn hàng3SanPhamSản Phẩm4LoaiSPLoại Sản phẩm5ChiTietDonHangChi tiết đơn hàng6GioHangGiỏ hàng7AdminQuản trị viên8NhacungcapNhà cung cấp3.3.3 Chi tiết các lớp đối tượng
+a) Lớp khách hàng
+    Bảng 3-4: Lớp khách hàng
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1MaKHpublicMã khách hàng2TenKHPublicTên khách hàng3DienThoaiPublicĐiện thoại4DiaChiPublicĐịa chỉ5EmailpublicEmail6NgaySinhPublic Ngày sinh7GioiTinhPublic Giới tính8TaiKhoanPublic Tài khoản9MatKhauPublic Mật khẩu
+b) Lớp đơn hàng
+    Bảng 3-5 : Lớp đơn hàng
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1MaDonHangpublicMã đơn hàng2DaThanhToanPublicĐã thanh toán3NgayDatPublicNgày đặt4NgayGiaoPublicNgày giao5TinhTrangGiaoHangPublic Tình trạng giao hàng    
+
+
+c) Lớp sản phẩm
+    Bảng 3-6 : Lớp sản phẩm
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1MaSPpublicMã sản phẩm2TenSPPublicTên sản phẩm3GiaBanPublicGiá bán4AnhPublicẢnh5MoTaPublicMô tả6SoLuongPublicSố lượngd) Sản phẩm
+    Bảng 3-7 : Lớp loại sản phẩm
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1MaloaipublicMã loại2TenLoaiPublicTên loại
+e) Lớp chi tiết đơn hàng
+    Bảng 3-8 : Lớp chi tiết đơn hàng
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1MadonhangpublicMã đơn hàng2TenMatHangPublicTên mặt hàng3SoLuongPublicSố lượng4DonGiaPublicĐơn giá5TongtienpublicTổng tiền
+f) Lớp giỏ hàng
+    Bảng 3-9 : Lớp giỏ hàng
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1MaGHpublicMã hóa đơn2TenMatHangPublicSố lượng3SoLuongPublicMã loại hoa4AnhPublic Ảnh
+
+g) Lớp admin
+    Bảng 3-11 : Lớp admin
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1UserNamepublicTên tài khoản2PassWordPublicMật khẩu
+
+h) Lớp nhà cung cấp
+    Bảng 3-12 : Lớp nhà cung cấp
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1MaNCCpublicMã nhà cung cấp2TenNCCPublicTên nhà cung cấp3DiaChiPublicĐịa chỉ4DienThoaiPublic Điện thoại5EmailPublic Email
+3.4 Biểu đồ tuần tự
+3.4.1 Biểu đồ tuần tự cho chức năng đăng nhập
+
+    Hình 37: Biểu đồ tuần tự cho chức năng Đăng nhập
+3.4.2 Biểu đồ tuần tự quản lý nhà cung cấp
+
+    Hình 38: Biểu đồ tuần tự quản lý Nhà Cung Cấp
+3.4.3 Biểu đồ tuần tự quản lý khách hàng
+
+    Hình 39: Biểu đồ tuần tự quản lý Khách Hàng
+3.4.4 Biểu đồ tuần tự cho chức năng tìm kiếm
+
+    Hình 310: Biểu đồ tuần tự cho chức năng Tìm Kiếm
+3.4.5 Biểu đồ tuần tự cho chức năng đặt hàng
+
+    Hình 311: Biểu đồ tuần tự cho chức năng Đặt Hàng
+3.5 Thiết kế cơ sở dữ liệu của hệ thống.
+3.5.1 Bảng tbl_KhachHang
+    Bảng 3-13 : Khách hàng
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1IDVarchar(50)Not nullKhóa chính2TenKHNvarchar(50) null3TaiKhoanNvarchar(50)null4MatKhauNvarchar(50)null5DiaChiNvarchar(100)null6DienThoaiNvarchar(50)null7EmailNvarchar(50)null8NgaySinhDate null9GioiTinhNvarchar(10)null
+
+3.5.2 Bảng tbl_DonHang
+    Bảng 3-15 : Đơn hàng
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1IDVarchar(50)Not nullKhóa chính2NgayDatDate Null 3NgayGiaoDateNull 4TinhTrangGiaoHangNvarchar(50)Null 5TenKHVarchar(50)Not nullKhoá ngoại
+3.5.3 Bảng tbl_ChiTietDonHang
+
+    Bảng 3-16 : Chi tiết đơn hàng
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1IDvarchar(20)Not nullKhóa chính2MaSpIdNvarchar(100)Null 3SoLuongInt Null 4DonGiaDecimal Null 5HoadonIdDecimal Not Null Khóa ngoại
+3.5.4 Bảng tbl_SanPham
+    Bảng 3-17 : Sản phẩm
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1IDVarchar(50)Not nullKhóa chính2TenSPNvarchar(100)Null 3MoTaNvarchar(200)Null 4AnhVarchar(500)Null5GiaDecimalNull 6SoLuongInt Null 7NoiDungNvarchar(1000)Null 8GiaKMDecimalNull 9MaLoaiVarchar(50)Not nullKhóa ngoại10MaNCCVarchar(50)Not nullKhóa ngoại11SizeInt
+3.5.5 Bảng tbl_LoaiSP
+    Bảng 3-18: Loại sản phẩm
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1IDVarchar(50)Not nullKhóa chính2TenLoaiNvarchar(50)Null     
+3.5.6 Bảng tbl_NCC
+    Bảng 3-19 : Nhà cung cấp
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1IDVarchar(50)Not nullKhóa chính2TenNCCNvarchar(100)Null3DiaChiNvarchar(100)Null4DienThoaiNvarchar(50)Null 5EmailNvarchar(50)Null     
+3.5.7 Bảng tbl_GioHang
+    Bảng 3-20 : Giỏ hàng
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1IDVarchar(50)Not nullKhóa chính2TenSPNvarchar(100)Null3MaSPVarchar(50)Not nullKhóa ngoại4SoLuongIntNull 5HinhAnhVarchar(500)Null 6DonGiaDecimal Null7ThanhTienDecimal Null8TongTienDecimal Null    
+3.5.8 Bảng tbl_Admin
+    Bảng 3-21 : Admin
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1IDIntNot Null1Usernamenvarchar(50)Null2Password nvarchar(50)Null
+3.5.9 Bảng Order
+    Bảng 3-22 : Order
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1IdIntNotnull Khóa chính2NgaydatDateNull3TenkhachhangNvarchar(50)4Sdt Nchar(13)5EmailNvarchar(50)6NgaygiaoDate     
+3.5.10 Bảng Orderdetail
+
+    Bảng 3-23 : Orderdetail
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1IdInt NotNullKhóa chính2MaSpIDvarchar(50)NotNullKhóa ngoại3SoluongIntNull4DongiaIntNull5MahdIDIntnotnullKhóa ngoại
+3.6 Thiết kế giao diện
+3.6.1 Giao diện trang chủ
+
+    Hình 312: Giao diện trang chủ
+3.6.2 Giao diện trang chi tiết
+    
+    
+    
+    
+3.6.3 Giao diện giỏ hàng
+    
+    
+    
+    
+    
+
+    Hình 313: Giao diện Giỏ hàng
+3.6.4 Giao diện trang Đăng nhập
+    
+    
+3.6.5 Giao diện trang admin
+
+    Hình 314: Giao diện trang admin
+
+    Hình 315: Giao diện Thêm mới giày
+
+    Hình 316: Giao diện Sửa giày
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau thời gian nghiên cứu hệ thống cùng với sự hướng dẫn tận tình của cô giáo hướng dẫn đồ án tốt nghiệp, em đã dần hoàn thành bài báo cáo của mình. Tuy nhiên, với yêu cầu đề ra em vẫn còn những hạn chế nhất định.
+    Trong quá trình thực hiện cùng với sự hướng dấn tận tình của cô, em đã cố gắng tìm hiểu để hiểu hệ thống và đạt được một số kết quả sau :
+    Về công nghệ :
+• Nắm bắt và áp dụng được các công cụ thiết kế Web
+• Các dịch vụ trên Internet và thương mại điện tử
+• Áp dụng được mô hình ASP.NET MVC
+• Hệ quản trị cơ sở dữ liệu SQL Server 2014
+• Ngôn ngữ lập trình C#
+    Thực hiện được trong quá trình xây dựng Website:
+• Tìm hiểu được về nghiệp vụ bán giày qua mạng
+• Phân tích thiết kế và xây dựng được cơ sở dữ liệu hệ thống
+• Thiết kế được giao diện cho Website thân thiện, dễ sử dụng
+• Cho phép khách hàng tìm kiếm, xem và mua hoa tươi một cách nhanh chóng, thuận tiện
+• Hỗ trợ quản trị được website cũng như quản lý được các chức năng cơ bản của website
+• Hệ thống thân thiện, tối ưu với các máy tìm kiếm.
+• Tốc độ cao, sử dụng ít tài nguyên và băng thông.
+• Dễ dàng triển khai và cài đặt.
+• Dễ dàng nâng cấp sửa đổi.
+4.2 Hạn chế của đề tài
+    Hệ thống website bán giày mới dừng lại ở các module cơ bản của hệ thống tin tức, chưa có nhiều module tiện ích cho người dùng như: Thống kê lượt truy cập theo tháng, thăm dò ý kiến, hỏi đáp,…
+    Hệ thống website chưa giải quyết hết các vấn đề bài đã phân tích đặt ra.
+4.3 Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, em đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+• Xây dựng thêm các Control làm phong phú trên việc tùy biến giao diện của website.
+• Bổ sung các Module hỗ trợ cho các website giới thiệu sản phẩm và thương mại điện tử.
+
+
+    TÀI LIỆU THAM KHẢO
+[1]. Tài liệu: Phạm Hữu Khang, Quản trị SQL Server 2008, NXB Thống kê, 2008.
+[2]. Tài liệu: Mai Minh Tuấn - Đỗ Hữu Phú, Giáo trình Cơ sở dữ liệu, NXB Giáo dục, 2011.
+[3]. Tài liệu: Dương Quang Thiện, C# và .NET Framewoek, NXB Tổng hợp TP HCM.
+[4]. Tài liệu: Phạm Trung Kiên, Kỹ thuật lập trình web với Ajax, NXB Hồng Đức, 2007.
+[5]. Tài liệu: Rebecca M. Riordan, Microsoft ADO.NET Step by Step, O’Reilly Media, 2005.
+[6]. Tài liệu: Jesse Liberty, Programming C# for Visual Studio .NET, O’Reilly Media.
+      [7]. Trang web: https://www.asp.net/mvc/
+      [8]. Trang web: https://www.w3schools.com/
+      [9]. Trang web: https://www.mkyong.com/
+      [10]. Trang web: https://www.google.com.vn/
+      [11]. Trang web: https://stackoverflow.com/
+      [12]. Trang web: https://creately.com/
+    
+    
+Xây dựng Website bán giày YoungDaddy
+    
+    
+47
+    
+    

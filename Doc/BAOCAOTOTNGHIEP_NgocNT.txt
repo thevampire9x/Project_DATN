@@ -1,0 +1,919 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Trong lĩnh vực công nghệ thông tin nói chung cũng như công nghệ phần mềm nói riêng, giao diện phần mềm là một phần không thể thiếu và rất quan trọng. Vì giao diện là phần trực quan để đánh giá về một phần mềm nên việc kiểm thử giao diện giờ đã trở lên rất cần thiết và được chú trọng. Tuy nhiên chủ yếu để kiểm tra giao diện mọi người hay kiểm thử theo hướng thủ công, bằng cách dùng thời gian để tiếp xúc và tìm lỗi sai. Điều này làm cho chúng ta mất khá nhiều thời gian về công đoạn kiểm thử giao diện. Khi mất thời gian dẫn đến tốn kém cả về chi phí cho phần mềm và kiểm thử thủ công sẽ làm cho chúng ta bỏ sót lỗi. Chưa kể giao diện của một dự án còn có thể được dùng với các hệ điều hành cũng như các trình duyệt khác nhau.
+    Vì vậy nếu có thể kiểm thử giao diện một cách tự động là rất cần thiết, vừa tiết kiệm được thời gian chi phí mà còn hạn chế được lỗi cho phần mềm. Với các ứng dụng khác nhau như Web, Android, IOS và các hệ điều hành khác nhau thì vẫn có thể kiểm tra một cách dễ dàng nhất
+    Applitools là một công cụ kiểm thử giao diện trực quan, nhằm hỗ trợ cho việc kiểm thử giao diện bằng hình ảnh. Sau đó đưa ra những so sánh để tìm ra lỗi giữa kết quả mong đợi với kết quả thực tế.
+    Sự phát triển mạnh mẽ của công nghệ đã chiếm lĩnh đa số thị trường sản phẩm phần mềm. Số lượng các cá nhân, tổ chức sử dụng phần mềm ngày càng nhiều, vậy để không tốn quá nhiều nhân lực cũng như thời gian cho việc kiểm thử giao diện thì giải pháp dùng công cụ tự động để kiểm thử là rất cần thiết
+    Thực tế hiện nay, ngoài công cụ kiểm thử tự động applitools thì cũng có một số công cụ khác cũng hỗ trợ cho việc kiểm thử giao diện. Bên cạnh những mặt ưu điểm do công cụ đáp ứng thì cũng có những mặt hạn chế nhất định như: sử dụng phức tạp, khó khăn trong việc phát triển, khó khăn về mặt giá trị để có thể cài đặt đựơc công cụ. Về phía doanh nghiệp nếu muốn được hỗ trợ từ công cụ thì phải tốn một khoản chi phí
+1.2 Mục tiêu của đề tài
+    Nghiên cứu và đề ra giải pháp kiểm thử giao diện trực quan người dùng, nhằm giảm thời gian kiểm tra cũng như rà soát lỗi trên giao diện một cách nhanh nhất, chi tiết và đơn giản nhất.  
+    Áp dụng chương trình kiểm thử tự động và sử dụng thành thạo các tính năng cũng như quản lý được công cụ. Đưa ra kết quả thể hiện sự khác biệt giữa kết quả thực tế và kết quả mong đợi.
+1.3 Giới hạn và phạm vi của đề tài
+    Đề tài xây dựng dựng một công cụ sử dụng các công nghệ trong lập trình như Java, Javascript và Công cụ lập trình Intellij idea.
+    Công cụ Applitools triển khai tại Trung tâm phần mềm  – Khoa CNTT - Trường Đại Học Sư Phạm Kỹ Thuật Hưng Yên nhằm kiểm thử cũng như thử nghiệm các giao diện phần mềm.
+1.4 Nội dung thực hiện
+    Hiện có nhiều ngôn ngữ để có thể lập trình nên Applitools nhưng còn có những mặt hạn chế nhất định như: thiết kế phức tạp, khó khăn trong việc phát triển, đòi hỏi người dùng phải có nhiều kỹ năng về lập trình, thực thi còn chậm. Để tránh sự lặp lại trong công việc kiểm thử, tiết kiệm thời gian và giảm chi phí cho đơn vị phát triển phần mềm, thì đề xuất giải pháp xây dựng công cụ Applitools là:
+    	Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Nghiên cứu công cụ trên nền tảng công nghệ Java
+- Kiểm thử giao diện trực quan về giao diện ứng dụng Web
+- Tìm hiểu về Selenium WebDriver
+- Cài đặt và sử dụng công cụ Applitools
+- Kết hợp Selenium WebDriver và ngôn ngữ Java để xây dựng công cụ
+1.5 Phương pháp tiếp cận
+- Cách tiếp cận : Nghiên cứu công cụ Applitool trên các nền tảng công nghệ khác nhau như PHP, .NET, Pthon…
+- Sử dụng các phương pháp nghiên cứu: 
+• Phương pháp đọc tài liệu;
+• Phương pháp phân tích mẫu;
+• Phương pháp thực nghiệm.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Kiểm thử tự động
+2.1.1 Kiểm thử tự động là gì?
+     Kiểm thử tự động là quá trình thực hiện một cách tự động các bước trong một TC. Nó sử dụng một công cụ kiểm thử tự động nào đó để rút ngắn thời gian kiểm thử. Kiểm thử tự động hỗ trợ các kiểm thử viên rất nhiều tùy vào công cụ và các nội dung. kiểm thử có thể thực hiện bằng tay hay không. Đối với những nhiệm vụ kiểm tra khó mà thực hiện bằng tay hoặc yêu cầu chi phí về nhân công là quá lớn thì sử dụng tool hỗ trợ là điều hết sức cần thiết.
+2.1.2 Tại sao cần kiểm thử tự động?
+    Tiết kiệm tiền bạc vời thời gian: Nhận định này đặc biệt đúng nếu xét trong giai đoạn bảo trì của các dự án lớn. Mỗi tuần chúng ta phải thực hiện regression test từ 1 đến 2 lần với số lượng test case rất lớn trong 1 đến 2 ngày. Gần như không thể thực hiện cách thủ công, trong khi với kiểm thử tự động chúng ta hoàn toàn có thể với nguồn nhân lực vô cùng khiêm tốn.
+    - Chính xác hơn: Nhờ độ ổn định cao, kiểm thử tự động có thể thực thi các test case với độ chính xác cao hơn.
+    - Độ bao phủ cao: Như đã nói ở trên, khi sử dụng kiểm thử tự động, chúng ta có thể thực thi số lượng lớn test case trong một thời gian ngắn. Điều này giúp chúng ta tăng độ bao phủ trong giai đoạn regression test (một ví dụ điển hình).
+    - Hoàn thành các công việc mà con người không thể làm được: Nếu chúng ta muốn thực thi load test, performance test, thì kiểm thử tự động là cách duy nhất.
+    Ngoài ra còn một số lợi ích khác như:
+    + Giảm bớt công sức và thời gian thực hiện quá trình kiểm thử
+    + Tăng độ tin cậy.
+    + Giảm sự nhàm chán cho con người
+    + Rèn luyện kỹ năng lập trình cho kiểm thử viên
+    + Giảm chi phí cho tổng quá trình kiểm thử.Nguyên tắc thiết kế Web Framework
+2.1.3 Mục tiêu của kiểm thử tự động
+    Phần mềm có khiếm khuyết là thông thường và gây ra thiệt hại về kinh tế theo thời gian. Chính vì vậy các tổ chức về phần mềm dành nhiều thời gian và nguồn lực để phân tích và kiểm thử phần mềm.
+    Ngày nay ứng dụng tự động hóa vào các ngành đa dạng, trong đó có ngành kiểm thử. Trước đây kiểm thử viên kiểm thử bằng tay thực hiện và ghi lại kết quả trên giấy, nhưng với ứng dụng công nghệ thông tin thì các công cụ kiểm thử cũng phát triển từ rất sớm hỗ trợ kiểm thử viên rất nhiều và đặc biệt là các trường hợp kiểm thử đặc biệt mà kiểm thử bằng tay không thể thực hiện được hoặc rất khó khăn để thực hiện. Các tổ chức càng quan tâm đến chất lượng phần mềm thì càng có nhiều chức năng và nội dung được kiểm tra đòi hỏi kiểm thử viên phải thực hiện nhiều công việc hơn vì vậy kiểm thử với sự hỗ trợ của công cụ là rất cần thiết. 
+    Mục tiêu của kiểm thử tự động :
+• Giảm bớt công sức và thời gian thực hiện
+• Tăng độ tin cậy
+•  Giảm sự nhàm chán
+• Giảm chi phí cho tổng quá trình kiểm thử
+    Ưu điểm của kiểm thử tự động:
+• Kiểm thử phần mềm không cần can thiệp của kiểm thử viên.
+• Giảm chi phí khi thực hiện kiểm tra số lượng lớn TC hoặc TC lặp lại nhiều lần.
+•  Giả lập tình huống khó có thể thực hiện bằng tay
+2.2 Giới thiệu về Selenium WebDriver
+2.2.1 Selenium WebDriver là gì?
+    Là một thư viện miễn phí và mã nguồn mở cho trang web kiểm tra tự động
+    Là một khuôn khổ tự động hóa web cho phép bạn thực hiện các kiểm thử của mình trên các trình duyệt khác nhau.
+2.2.2 Tại sao cần phải sử dụng Selenium WebDriver?
+- Người dùng có thể dùng miễn phí
+- Kiến trúc đơn giản:
+• Điều khiển trình duyệt từ hệ điều hành.
+• Bạn chỉ cần IDE và trình duyệt là xong.
+- Ngôn ngữ lập trình hỗ trợ:
+• Web Driver hỗ trợ bạn viết kịch bản kiểm thử bằng các ngôn ngữ khác nhau như Java, .NET, PHP, Python, Perl, Ruby và bạn có thể sử dụng các điều kiện if else, các vòng lặp để tăng tính chính xác cho kịch bản kiểm thử.
+- Tốc độ:
+• Khi so sánh với các công cụ khác của bộ Selenium, WebDriver là công cụ nhanh nhất trong số tất cả do tương tác trực tiếp từ hệ điều hành tới trình duyệt.
+    
+    Hình 2. 1: Mô hình Selenium WebDriver
+2.2.3 Sử dụng Selenium WebDriver ở đâu?
+    
+    Hình 2. 2: Mô hình sử dụng của WebDriver
+2.2.4 Ưu điểm
+- Selenium WebDriver là một công cụ mã nguồn mở
+- Selenium WebDriver cho phép chúng ta sử dụng một trong số các ngôn ngữ lập trình như HTML, Java, .Net, Perl, Ruby… để tạo kịch bản test (Test Case) kết hợp với sử dụng các điều kiện, vòng lặp… khiến cho test script trở nên chính xác hơn.
+- Selenium WebDriver được phát triển tốt hơn để hỗ trợ cho các trang web động (Những trang web mà phần tử trong nó có thể thay đổi ngay cả khi trang đó không được tải lại) Mục đích của WebDriver là hỗ trợ cho các vấn đề về kiểm thử web-app hiện nay.
+- Selenium hỗ trợ nhiều hệ điều hành: Windows, Linux, Macintosh (viết Test Cases có thể deploy ở các hệ điều hành khác)
+- Selenium hỗ trợ nhiều trình duyệt lớn (Mozilla, Chrome, IE, Opera, Safari)
+- Selenium là công cụ test tự động recording, editing và debugging tests ưu điểm nổi trội
+2.2.5 Nhược điểm
+- Không được cung cấp Technical support free và tin cậy vì là mã nguồn mở
+- Chỉ hỗ trợ các ứng dụng Web
+- Khó sử dụng, cần có thời gian học viết Test case (Selenium WebDriver chỉ có lập trình giao diện, IDE; ko có các Tool tính năng như Recording, Checkpoint, Data Table nên phải viết từng bước một cho mỗi task).
+- Khó cài đặt mội trường Test Selenium hơn UFT, SilkTest
+- Ít hỗ trợ cho việc Test hình ảnh
+- Không có tính năng tích hợp cho Test Manager
+2.3 Tổng quan về kiểm thử giao diện 
+2.3.1 Kiểm thử giao diện là gì ?
+    Là quá trình thử nghiệm giao diện đồ họa người dùng của kiểm thử ứng dụng. Kiểm tra GUI liên quan đến kiểm tra màn hình với các điều khiển như hình đơn, nút, biểu tượng và tất cả các loại thanh- thanh công cụ, thanh trình đơn, hộp thoại và cửa sổ, v.v…
+    GUI là những gì người dùng nhìn thấy. Nếu bạn truy cập vào một trang web, những gì bạn thấy trên trang chủ được gọi là giao diện đồ họa người dùng của trang web. Người dùng sẽ không nhìn thấy mã nguồn, giao diện người dùng chỉ tập trung vào cấu trúc thiết kế, hình ảnh hiển thị ra ngoài có đúng như lập trình mong đợi hay không.
+    Nếu chúng ta phải làm thử nghiệm GUI, việc đầu tiên cần xác định xem những hình ảnh của trang web sẽ hiện lên giống nhau trên các trình duyệt khác nhau. Ngoài ra, kiểm thử GUI còn xác nhận các liên kết hoặc các nút hoạt động tốt hay không, nếu người dùng thay đổi kích thước màn hình thì hình ảnh và nội dung không được co lại hoặc cắt hoặc chồng chéo.
+2.3.2 Tại sao cần kiểm thử giao diện?
+      Để trả lời câu hỏi, hãy suy nghĩ như một người dùng chứ không phải người kiểm thử. Người dùng không có kiến ​​thức chuyên sâu về phần mềm / ứng dụng. Cái mà họ quan tâm đầu tiên sẽ là giao diện của ứng dụng hay sản phẩm. Nếu người dùng không thoải mái với giao diện hoặc nhận thấy ứng dụng thật khó để sử dụng tất nhiên anh ta sẽ không có lý do để tiếp tục sử dụng ứng dụng đó nữa.
+      Đó là lý do tại sao GUI là một vấn đề đáng lo ngại và cần phải thực hiện kiểm tra thích hợp để đảm bảo rằng GUI không có lỗi.
+2.4 Tổng quan về kiểm thử giao diện trực quan
+2.4.1 Kiểm thử giao diện trực quan là gì ?
+    Là một hình thức thử nghiệm hồi quy đảm bảo rằng màn hình đã chính xác và không có sự thay đổi nào khác
+    Kiểm thử trực quan của một ứng dụng được thực hiện bằng cách chạy một ứng dụng, và lưu ảnh chụp màn hình tại các điểm quan trọng được gọi là trạm kiểm soát. Những ảnh chụp màn hình này sau đó được so sánh với hình ảnh cơ sở được lưu trữ trước đó và bất kỳ sự khác biệt đáng kể nào về mặt thị giác đều được báo cáo.
+    Là quá trình xác nhận các khía cạnh trực quan của Giao diện Người dùng của Ứng dụng (UI). Ngoài việc xác nhận rằng giao diện người dùng hiển thị đúng nội dung hoặc dữ liệu, Visual Testing tập trung vào việc xác thực Giao diện và Hình thức của mỗi phần tử hình ảnh của giao diện người dùng và của toàn bộ giao diện người dung
+    Bố cục chính xác nghĩa là mỗi phần tử thị giác của giao diện người dùng được đặt đúng vị trí trên màn hình, nó có hình dáng và kích thước phù hợp và không chồng chéo hoặc giấu các phần tử hình ảnh khác. Tính đúng đắn của sự xuất hiện có nghĩa là các phần tử hình ảnh có phông chữ, màu sắc, hoặc hình ảnh chính xác.
+    Là một hoạt động đảm bảo chất lượng nhằm xác minh về một giao diện người dung, đồ họa xác định một cách chính xác cho người dung
+    Thử nghiệm bằng hình ảnh là một hoạt động đảm bảo chất lượng có nghĩa là để xác minh rằng giao diện người dùng xuất hiện chính xác cho người dùng. Nhiều người nhầm lẫn rằng với các công cụ kiểm tra chức năng truyền thống như Selenium và QTP / UFT được thiết kế để giúp bạn kiểm tra tính năng của ứng dụng thông qua giao diện người dùng. Khi chúng tôi nói về kiểm tra bằng hình ảnh, chúng tôi muốn đảm bảo giao diện UI đúng với người dùng và mỗi phần tử UI xuất hiện ở đúng màu, hình dạng, vị trí và kích thước. Chúng tôi cũng muốn đảm bảo rằng nó không che dấu hoặc chồng chéo lên bất kỳ phần tử UI nào khác. Trên thực tế, nhiều loại kiểm tra này rất khó khăn để tự động hoá mà chúng kết thúc bằng các bài kiểm tra thủ công.
+    Applitools được thiết kế để giúp người dùng tạo ra những bài kiểm tra xác nhận có thể duy trì được cao, trên một quy mô rất lớn
+2.4.2 Tổng quan về hệ thống
+- Ứng dụng đang kiểm tra (AUT)
+- Một bộ thử nghiệm thực hiện AUT và kiểm tra tính chính xác của nó
+- Các Mắt SDK gọi trong mã kiểm tra bộ để kích hoạt chụp ảnh màn hình và kiểm tra thị giác.
+- Một trình điều khiển ứng dụng, chẳng hạn như Selenium hoặc Appium cung cấp một cách để bộ thử nghiệm gửi các sự kiện đến AUT. Các Mắt SDK cũng sử dụng điều khiển để chụp ảnh chụp màn hình AUT.
+- Các Mắt máy chủ tiếp nhận và lưu trữ các ảnh chụp màn hình AUT từ SDK, so sánh chúng với hình ảnh ban đầu lưu trữ và báo cáo sự khác biệt.
+- Các Mắt Test Manager cho phép người dùng xem lại những kết quả kiểm tra, báo cáo lỗi và quản lý các hình ảnh cơ bản
+ 	Mô tả bên dưới giải thích cách tất cả các tương tác này chạy thử nghiệm và để cho phép Trình kiểm tra xem và quản lý kết quả kiểm tra.
+
+    Hình 2. 3: Mô hình hệ thống của Applitools
+Các con số dưới đây đề cập đến các mũi tên có nhãn trong biểu đồ.
+1: Trình kiểm tra chạy bộ thử nghiệm và mã thường lặp lại các bước sau cho nhiều trạng thái ứng dụng:
+2.1: Mô phỏng hành động của người dùng (ví dụ như nhấp chuột, nhập bàn phím) bằng cách sử dụng trình điều khiển như Selenium hoặc Appium
+2.2: Gọi API API mắt để thực hiện trạm kiểm soát trực quan
+2.2a: Mắt SDK sử dụng Trình điều khiển để có được ảnh chụp màn hình
+2.2b: Sau đó nó sẽ gửi hình ảnh đến máy chủ Eyes , nơi nó, và các hình ảnh trạm kiểm soát khác, được so sánh với các hình ảnh cơ bản trước đó được lưu trữ trên máy chủ
+3: Sau khi các hình ảnh trong bài kiểm tra đã được xử lý, Máy chủ Eyes trả lời các thông tin như có bất kỳ sự khác biệt nào được tìm thấy và liên kết đến trang Eyes nơi các kết quả có thể được xem.
+4: Trình kiểm tra sử dụng Trình quản lý kiểm tra mắt để xem kết quả kiểm tra, cập nhật đường cơ sở, đánh dấu các lỗi và chú thích các vùng cần xử lý đặc biệt. Khi anh ta đã xem tất cả các kết quả, anh ta lưu đường cơ sở và sau đó nó sẽ là cơ sở để so sánh trong lần chạy thử tiếp theo.
+	Applitools cung cấp một bộ SDK hỗ trợ nhiều khuôn khổ tự động kiểm tra web, di động và máy tính để bàn phổ biến, hỗ trợ cho các cơ sở hạ tầng trình điều khiển ứng dụng, ngôn ngữ lập trình và cho tất cả các nền tảng, trình duyệt và hệ điều hành chung. Các SDK này không tương tác trực tiếp với AUT và do đó, Eyes hoàn toàn độc lập với cách ứng dụng được triển khai và triển khai.
+2.5 Công cụ Applitool
+2.5.1 Giới thiệu về Applitool
+    Applitool là công cụ hỗ trợ chụp ảnh, chụp màn hình của các trang web riêng lẻ hoặc toàn bộ trang web, sử dụng các thuật toán xử lý ảnh tinh vi để xác định UI & lỗi chức năng và xác định xem ảnh chụp màn hình đã thay đổi từ bản phát hành sang bản chưa phát hành.
+    Ngoài ra, Applitool giúp bạn liên tục kiểm tra và giám sát giao diện người dùng của ứng dụng như một phần của quá trình CI-CD. Theo dõi tất cả các khía cạnh quan trọng về hình ảnh của doanh nghiệp kỹ thuật số của bạn để tự tin hơn và thường xuyên hơn với các bản phát hành của bạn.
+    Tích hợp liền mạch với các công cụ kiểm tra và giám sát hiện tại của bạn, các công cụ triển khai và luồng công việc cho phép bạn thêm kiểm tra và giám sát trực quan trong vài phút. Applitools hoạt động trên đầu trang của chuỗi công cụ DevOps yêu thích của bạn: các công cụ thương mại hoặc mã nguồn mở, nền tảng thử nghiệm dựa trên đám mây, Máy chủ CI và phần mềm cộng tác. 
+
+    Hình 2. 4: Tính năng của Applitool
+    Với các tính năng được xây dựng cho toàn bộ nhóm kỹ thuật trong tổ chức của bạn như cộng tác và báo cáo cho phép bạn chia sẻ kết quả kiểm tra và giám sát giữa các nhóm trong tổ chức của mình, bạn có thể phát hành thường xuyên khi cần mà không lãng phí thời gian
+2.5.2 Cách hoạt động của Applitools
+Thực hiện kiểm tra trực quan thường bao gồm bốn bước cơ bản:
+- Viết bài kiểm tra thực hiện giao diện người dùng ứng dụng của bạn bằng cách gửi các sự kiện chuột và bàn phím được mô phỏng để nhập các trạng thái khác nhau và chụp ảnh màn hình ở mỗi trạng thái này
+- So sánh các ảnh chụp màn hình đã chụp với hình ảnh đường cơ sở đã chụp trước đây
+- Xem lại các kết quả khác biệt và: 
+• Xác định các trường hợp sự khác biệt được gây ra bởi một đối tượng địa lý mới không xuất hiện trong hình ảnh cơ sở và "chấp nhận" ảnh chụp màn hình mới để nó sẽ được sử dụng làm hình ảnh đường cơ sở mới cho điểm kiểm tra đó.
+• Xác định các trường hợp có sự khác biệt cho thấy lỗi cần được sửa, báo cáo sự cố và "từ chối" hình ảnh - có nghĩa là hình ảnh cơ sở không được cập nhật và vẫn như cũ.
+- Lưu các bản cập nhật cơ sở, để chúng được sử dụng cho lần chạy thử tiếp theo
+- Lần đầu tiên một thử nghiệm được chạy, không có hình ảnh đường cơ sở, vì vậy các ảnh chụp màn hình đã được chụp được chấp nhận làm hình ảnh cơ bản. Trong lần chạy tiếp theo, luồng được mô tả ở trên.
+Quá trình này được minh họa trong sơ đồ và mô tả dưới đây
+
+    Hình 2. 5: Mô hình hoạt động của Applitools
+
+
+Lần chạy đầu tiên
+1) Trước tiên, bạn viết kịch bản thử nghiệm thực hiện giao diện người dùng của mình. Ví dụ: bạn mô phỏng 3 trạng thái giao diện người dùng, sau khi thiết lập từng trạng thái giao diện người dùng, bạn kích hoạt kiểm tra trực quan.
+2) Sau đó chạy thử nghiệm lần đầu tiên
+3) Vì không có đường cơ sở hiện tại, tất cả các trạm kiểm soát được báo cáo là các bước "mới".
+4) Tất cả các hình ảnh được chụp trong quá trình chạy này sẽ tự động được lưu trữ và sau đó được sử dụng làm hình ảnh đường cơ sở trong các thử nghiệm trong tương lai được chạy trên đường cơ sở này.
+Các lần chạy tiếp theo
+5) Bạn thực hiện một số thay đổi đối với ứng dụng và / hoặc mã kiểm tra
+6) Bạn chạy thử nghiệm một lần nữa và hai sự khác biệt (đánh dấu là 1F  và 3B trong hình) được phát hiện.
+7.a)  Trong một trường hợp (1F), bạn xem lại kết quả và quyết định rằng sự khác biệt là do một tính năng mới - bạn chấp nhận hình ảnh và hình ảnh mới được chụp sẽ được sử dụng làm hình ảnh cơ sở mới (sau khi bạn lưu đường cơ sở 4.).
+7.b)  Trong trường hợp thứ hai, bạn quyết định rằng sự khác biệt là do lỗi. Bạn báo cáo lỗi và từ chối hình ảnh - tức là, yêu cầu giữ lại hình ảnh đường cơ sở hiện tại.
+8)   Cuối cùng, bạn lưu đường cơ sở và sau đó nó sẽ được sử dụng làm cơ sở để so sánh trong lần chạy thử tiếp theo (bây giờ với hình ảnh cơ sở mới 1F).
+2.5.3 Tổng quan về màn hình quản lý kiểm tra
+   Màn hình Trình quản lý kiểm tra mắt được chia thành hai khu vực chính. Trong bảng điều khiển bên trái, Trình quản lý kiểm tra hiển thị thông tin về các lô do nhóm của bạn điều hành và cho phép bạn chọn lô "hiện tại" để xem xét. Ở bên phải, Trình quản lý kiểm tra sẽ hiển thị các kiểm tra và các bước của lô mà bạn đã chọn. Cụ thể hơn:
+• Bảng danh sách lô ở bên trái hiển thị các đợt chạy gần đây nhất. Nhấp vào bất kỳ mục nhập nào trong danh sách sẽ làm cho lô đó là "lô hiện tại".
+• Bảng quản lý lô trên danh sách lô cung cấp các công cụ để cập nhật, lọc và xóa các mục trong danh sách lô.
+• Bảng điều khiển chính hiển thị các thử nghiệm trong lô hiện tại và các bước trong mỗi thử nghiệm.
+• Trong thanh công cụ phía trên bảng điều khiển chính, Trình quản lý kiểm tra cung cấp các nút cho phép bạn chọn từ một số chế độ xem khác nhau của thông tin này. Mỗi khung nhìn hiển thị một tập con khác nhau của thông tin có sẵn, điều này cho phép bạn tập trung vào thông tin bạn cần cho tác vụ hiện tại của mình. Các công cụ khác được cung cấp để xóa các bài kiểm tra, chỉ định các bài kiểm tra cho các thành viên nhóm, kiểm tra bộ lọc và các bước, kiểm tra nhóm theo sự khác biệt và nhiều hơn nữa.
+• Phía trên bảng điều khiển chính, Trình quản lý kiểm tra cung cấp bản tóm tắt kết quả của lô hiện tại và tiến trình xem xét của bạn.
+
+    Hình 2. 6: Màn hình quản lý Kiểm tra
+a. Chi tiết màn hình của trình quản lý kiểm thử
+    Ảnh chụp màn hình bên dưới được chú thích với các tính năng chính có sẵn trong Trình quản lý kiểm tra
+
+    Hình 2. 7: Màn hình quản lý lần chạy chi tiết
+1. Hiển thị số lượng lô hiện có sẵn trong danh sách lô. Cung cấp các điều khiển để lọc tập hợp các lô mà bạn thấy trong danh sách lô, xóa lô và cập nhật danh sách lô bằng các kết quả mới nhất.
+2. Danh sách hàng loạt, với các lô mới hơn ở đầu danh sách. Nhấp vào bất kỳ mục nhập nào trong danh sách sẽ làm cho nó trở thành lô hiện tại và tải thông tin của nó trong bảng điều khiển chính.
+3. Thông tin về lô được tải hiện tại và trạng thái của quá trình xem xét (số lượng kiểm tra được chuyển, không thành công và vv).
+4a. Hoạt động trên các thử nghiệm và bước được chọn.
+4b. Chọn chế độ xem nào (trong số năm khả dụng) được sử dụng để hiển thị chi tiết của lô được chọn hiện tại trong bảng điều khiển chính ( )
+4c. Các nút để tải lại lô hiện tại, lọc loạt hiện tại, các bước nhóm theo sự khác biệt tương tự.
+5. Bảng điều khiển chính hiển thị thông tin chi tiết về lô, kiểm tra và bước - những gì được hiển thị trong bảng điều khiển này phụ thuộc vào khung nhìn đã chọn ( ).
+6. Hiển thị một menu với các tùy chọn quản trị và trợ giúp.
+7. Nhận siêu liên kết đến chế độ xem hiện tại có thể dán được chia sẻ với người dùng khác.
+8. Lưu tất cả các thay đổi bạn đã thực hiện cho đường cơ sở và làm cho chúng vĩnh viễn (ví dụ, được sử dụng trong kiểm tra thêm).
+9. Bắt đầu một phiên trò chuyện với nhóm hỗ trợ Applitools.
+b. Xem xét và giải quyết kiểm thử
+      Trình quản lý thử nghiệm cung cấp nhiều cách để xem kết quả kiểm tra và bước; mỗi chế độ xem như vậy tập trung vào các khía cạnh khác nhau của kết quả. Trong mô tả sau, chúng tôi sẽ sử dụng chế độ xem “Chi tiết kiểm tra”. Bạn chọn chế độ xem này bằng cách nhấn nút . Ban đầu, bạn sẽ thấy một màn hình tương tự như màn hình dưới đây với danh sách các kiểm tra trong lô.
+
+    Hình 2. 8: Màn hình quản lý kết quả kiểm tra
+    Nếu bạn nhấp vào bất kỳ bài kiểm tra nào, nó sẽ mở rộng và bạn sẽ thấy một loạt các hình ảnh thu nhỏ đại diện cho “các bước” của bài kiểm tra.
+
+    Hình 2. 9: Chi tiết bài kiểm tra
+“Bước” là gì ?
+      Một bước tương ứng với một điểm kiểm tra trong mã kiểm tra. Mắt tạo ra một bước trong kết quả cho mỗi điểm kiểm tra mới mà nó phát hiện ra. Nếu bạn loại bỏ một trạm kiểm soát trong mã, hình ảnh cơ sở tương ứng với trạm kiểm soát vẫn còn tồn tại trong trạm kiểm soát đường cơ sở. Vì vậy, khi bạn xem kết quả, bạn sẽ thấy các bước tương ứng với hình ảnh cơ bản và khớp hoặc không khớp, và bạn cũng sẽ thấy các bước đại diện cho các trạm kiểm soát mới không có hình ảnh cơ bản hoặc hình ảnh cơ sở của các điểm kiểm tra đã xóa. Các biểu tượng nhỏ ở trên cùng bên trái của mỗi bước cho biết nếu có sự không phù hợp và nếu có - loại nào (từ trái sang phải phía trên: khớp, thiếu điểm kiểm tra, không khớp, điểm kiểm tra mới).
+Khi một Tester đánh giá kết quả, anh ta phải giải quyết hai loại bước không phù hợp:
+• Các bước có hình ảnh cơ bản được ghép nối với một điểm kiểm tra nhưng không khớp với trực quan, nghĩa là có sự không khớp hình ảnh.
+• Các bước cho trạm kiểm soát không có hình ảnh đường cơ sở hoặc hình ảnh cơ bản tương ứng mà không có hình ảnh điểm kiểm tra tương ứng.
+Chấp nhận và từ chối các bước
+	Mắt cung cấp các công cụ để "Chấp nhận"  hoặc "Từ chối" một bước. Các biểu tượng này xuất hiện khi bạn đặt con trỏ lên hình thu nhỏ của một bước. Chúng tôi sẽ giải thích dưới đây chính xác những gì chấp nhận và từ chối có nghĩa là trong bối cảnh của một kết quả bước cụ thể, nhưng nói chung, chúng tác động hai điều, thứ nhất là nếu bước được đặt thành "đã qua" hoặc "không thành công" và thứ hai là nếu hình ảnh đường cơ sở nên được thay thế bằng hình ảnh điểm kiểm tra mới hay không.
+
+    Hình 2. 10: Bước kiểm tra
+Xem lần chạy đầu tiên
+      Sau khi thử nghiệm được chạy lần đầu tiên, trạng thái của nó là "mới". Ảnh chụp màn hình bên dưới cho thấy điều này trông giống như trong Trình quản lý kiểm tra mắt. Các nhãn bên trái của tên thử nghiệm cho thấy thử nghiệm phải là mới.
+
+    Hình 2. 11: Lần chạy đầu tiên
+      Các biểu tượng ở góc trên bên trái của hình thu nhỏ bước chỉ ra rằng bước là một trạm kiểm soát mới. Trong một thử nghiệm mới, tất cả các điểm kiểm tra được giả định là chính xác và các bước có trạng thái được truyền như được chỉ ra bởi thanh màu xanh lục.
+      Các biểu tượng bên dưới chỉ ra rằng hình ảnh trạm kiểm soát lấy được qua các thử nghiệm đã được chấp nhận như là một hình ảnh cơ sở mới.
+      Trong lần chạy thử đầu tiên, khi không có đường cơ sở hiện tại, theo mặc định, Mắt sẽ tự động thêm hình ảnh điểm kiểm tra vào đường cơ sở. Điều này có nghĩa là trong trường hợp này, Trình kiểm tra không cần thực hiện thêm bất kỳ hành động nào. Tuy nhiên, thực hành tốt để Trình kiểm tra xem xét các hình ảnh bước và đảm bảo chúng trông như mong đợi.
+Xem lại các lần chạy tiếp
+      Sau lần chạy thử đầu tiên, Eyes sẽ tự động tạo một đường cơ sở với tất cả các điểm kiểm tra được chụp trong lần chạy đầu tiên đó. Trong lần chạy thử tiếp theo, Eyes so sánh chuỗi hình ảnh được chụp với chuỗi hình ảnh trong đường cơ sở và có bốn kết quả có thể, như bạn có thể thấy trong ảnh chụp màn hình sau của kết quả kiểm tra:
+
+    Hình 2. 12: Kiểm tra các lần chạy
+Trạng thái thử nghiệm
+Kiểm tra đang chạyNếu thử nghiệm bị hủy bỏ trước khi nó hoàn thànhNếu bất kỳ bước kiểm tra nào chưa được giải quyết (nghĩa là có sự không khớp không được chấp nhận hoặc bị từ chối)Nếu không có bước nào chưa được giải quyết trong thử nghiệm và một hoặc nhiều bước không thành côngNếu tất cả các bước trong thử nghiệm được thông qua (theo mặc định hoặc rõ ràng bởi Trình kiểm tra)    Bảng 2. 1: Trạng thái kiểm thử
+Ghi đè trạng thái thử nghiệm mặc định
+Bắt buộc thử nghiệm là "Đã qua" bất kể trạng thái vượt qua / lỗi của các bước của nó.Buộc thử nghiệm là "Thất bại" bất kể tình trạng vượt qua / thất bại của các bước của nó.Trình quản lý kiểm tra sẽ suy ra trạng thái vượt qua / lỗi của thử nghiệm từ trạng thái các bước của nó.    Bảng 2. 2: Trạng thái kiểm thử mặc định
+Trạng thái một lần kiểm tra
+Ít nhất một thử nghiệm trong lô chưa được giải quyết. tức là, đã không khớp hoặc có các bước bị thiếu hoặc mới mà Trình kiểm tra không được chấp nhận hoặc từ chối một cách rõ ràng.Tất cả các bài kiểm tra đã được giải quyết và ít nhất một bài kiểm tra có trạng thái Không thành công.Một hoặc nhiều kiểm tra trong lô vẫn đang chạy, nhưng không có thử nghiệm chưa được giải quyết hoặc không thành công trong lô.Tất cả các thử nghiệm trong lô đã hoàn thành và được thông qua - không có sự không khớp hoặc người dùng chấp nhận tất cả các sự không phù hợp.    Bảng 2. 3: Trạng thái một lần kiểm tra
+
+
+
+Lưu đường cơ sở
+      Bất kỳ thay đổi nào bạn thực hiện để kiểm tra các bước bằng cách chấp nhận và từ chối chúng hoặc bằng cách thêm hoặc xóa chú thích sẽ tự động được lưu lại. Tuy nhiên, các thay đổi của bạn sẽ chỉ áp dụng cho các lần chạy thử nghiệm tiếp theo sau khi bạn lưu chúng một cách rõ ràng vào đường cơ sở bằng cách sử dụng nút.
+Trình quản lý thử nghiệm cho biết rằng có các thay đổi chưa được lưu theo nhiều cách:
+1. Đối với bước như dấu hoa thị (*) ở bên phải của tên bước
+2. Đối với thử nghiệm dưới dạng dấu hoa thị (*) ở bên phải của tên thử nghiệm
+3. Đối với lô hiện tại - chỉ báo số lượng các bước chưa lưu trong tất cả các thử nghiệm của lô.
+4. Đối với một lô trong danh sách lô - nhãn "Chưa được lưu" ở bên phải trạng thái lô
+5. Các biểu tượng "xung".
+
+    Hình 2. 13: Đường cơ sở
+c. Tính năng, đặc điểm chính của Applitool
+(1) Tầm nhìn nhận thức về AI
+    Bằng cách mô phỏng mắt người và não, công nghệ so sánh hình ảnh AI chỉ báo cáo những khác biệt được cảm nhận với người dùng và bỏ qua các hiển thị, kích thước và vị trí không rõ ràng. 
+    Thuật toán của chúng tôi có thể ngay lập tức xác nhận hợp lệ toàn bộ các trang ứng dụng, phát hiện sự cố bố cục và xử lý các trang phức tạp và năng động nhất. Không có hiệu chuẩn, đào tạo, tinh chỉnh hoặc ngưỡng nào được yêu cầu từ phía bạn. Nó chỉ hoạt động hoàn hảo.
+
+    Hình 2. 14: Nhận thức về công nghệ AI
+(2) Tự động kiểm tra
+    Giải quyết hàng nghìn sự khác biệt trong vài phút bằng cách tận dụng các thuật toán phức tạp tự động phân tích sự khác biệt được phát hiện trên tất cả các kiểm tra của bạn và tạo ra một báo cáo ngắn gọn chỉ hiển thị các báo cáo riêng biệt.
+    Chấp nhận hoặc từ chối một thay đổi và tự động áp dụng cùng một quyết định cho tất cả các thay đổi tương tự trong tất cả các bài kiểm tra của bạn. Cho biết các yếu tố được phép di chuyển hoặc bỏ qua và tự động phát hiện chúng trên tất cả các màn hình trong tất cả các kiểm tra của bạn.
+
+    Hình 2. 15: Tự động kiểm tra
+(3) Báo cáo kiểm tra trực quan 
+    Không còn các bản ghi lỗi thất bại về văn bản khó hiểu và phức tạp nữa. Báo cáo kiểm tra trực quan bao gồm ảnh chụp màn hình và sự khác biệt trực quan mà mọi người trong nhóm của bạn có thể hiểu ngay.
+    Dễ dàng phóng to về những thay đổi và tự động nhóm các sự khác biệt tương tự để chỉ xem những cái duy nhất. 
+    Xây dựng các báo cáo của riêng bạn bằng cách lấy các ảnh chụp màn hình, hình ảnh cơ bản, sự khác biệt và chi tiết kiểm tra từ các API web tương tự được sử dụng bởi người quản lý kiểm tra của chúng tôi.
+
+    Hình 2. 16: Báo cáo kiểm tra tự động
+(4) Tích hợp các công cụ
+    Thêm xác nhận trực quan cho các bài kiểm tra hiện tại của bạn trong bất kỳ khuôn khổ tự động hóa và ngôn ngữ lập trình. 
+    Xem kết quả kiểm tra thị giác cụ thể và quản lý các đường cơ sở trực tiếp từ Jenkins, TeamCity và các hệ thống CI khác. Mở Jira trực tiếp từ trình quản lý bài kiểm tra Applitools Eyes và gửi tin nhắn thông qua slack khi các bài kiểm tra thất bại.
+    Truy cập các kết quả thử nghiệm theo chương trình, xây dựng các báo cáo của riêng bạn hoặc tải chúng lên người quản lý kiểm tra yêu thích của bạn.
+    
+
+
+    Hình 2. 17: Công cụ tích hợp
+2.6 Tích hợp cho việc kiểm thử
+2.6.1 Giải pháp
+    Bằng cách sử dụng giải pháp hiện có, bạn có thể bắt đầu và chạy với kiểm tra trực quan tự động một cách nhanh chóng. Dưới đây là danh sách những gì có sẵn (được sắp xếp theo thứ tự bảng chữ cái theo ngôn ngữ lập trình): cách sử dụng giải pháp hiện có, bạn có thể bắt đầu và chạy với kiểm tra trực quan tự động một cách nhanh chóng. Dưới đây là danh sách những gì có sẵn (được sắp xếp theo thứ tự bảng chữ cái theo ngôn ngữ lập trình):
+TênNền tảngNgôn ngữ lập trìnhApplitools Eyes    Selenium & Other    All    Fighting Layout Bugs    Selenium    Java    Selenium Visual Diff    Selenium    Java    CSS Critic    Other    JavaScript    Gemini    Selenium    JavaScript    Grunt PhotoBox    PhantomJS    JavaScript    PhantomCSS    PhantomJS & Resemble.js    JavaScript    Snap and Compare    PhantomJS    JavaScript    Specter    XULRunner    JavaScriptWebdriverCSS    Selenium    JavaScript    FBSnapshotTestCase    Other    Objective-C    VisualCeption    Selenium    PHP    dpdxt    PhantomJS    Python    Huxley    Selenium    Python    Needle    Selenium    Python    Wraith    PhantomJS    Ruby    Wraith-Selenium    Selenium    Ruby    Bảng 2. 4: Giải pháp kiểm tra
+Mỗi công cụ đều tuân theo luồng công việc sau:
+• Thúc đẩy ứng dụng đang kiểm tra (AUT) và chụp ảnh màn hình
+• So sánh ảnh chụp màn hình với hình ảnh “đường cơ sở” ban đầu
+• Báo cáo sự khác biệt
+• Cập nhật đường cơ sở khi cần
+2.6.2 Tự động hóa kiểm tra
+    Applitools được xây dựng để kiểm tra tất cả các yếu tố xuất hiện trên màn hình chỉ với một dòng mã. Sử dụng tầm nhìn nhận thức được hỗ trợ bởi AI, bạn có thể tự động xác minh rằng ứng dụng web hoặc thiết bị di động của mình xuất hiện chính xác trên tất cả các thiết bị, tất cả trình duyệt và tất cả kích thước màn hình.
+• Kiểm tra trình duyệt chéo
+    Applitools hỗ trợ tất cả các trình duyệt và phiên bản trình duyệt chính để bạn có thể chạy thử nghiệm trực quan song song, nhận kết quả tức thì về cách ứng dụng của bạn trông như trong IE, Firefox, Chrome, v.v.
+• Kiểm tra trên thiết bị chéo
+    Applitools cho phép bạn kiểm tra hình ảnh của ứng dụng trên các loại thiết bị khác nhau, cho dù đó là điện thoại di động, máy tính bảng, máy tính xách tay và máy tính để bàn.
+• Kiểm tra phù hợp với thiết kế
+    Applitools giúp bạn kiểm tra mức độ phản hồi của trang web bằng cách đảm bảo bố cục màn hình được hiển thị cho người dùng của bạn khớp với kích thước màn hình mà họ đang sử dụng.
+2.6.3 Phát triển giao diện người dùng
+    Sử dụng Applitools Eyes SDK để tự động kiểm tra xem mã trực quan của bạn có hoạt động đúng không. Bây giờ bạn không chỉ có thể kiểm tra xem cách các trang của bạn hoạt động không thay đổi, mà còn là giao diện của chúng không thay đổi từ xây dựng đến xây dựng. Cuối cùng bạn sẽ có thể kiểm tra mọi thứ bạn phát triển — từ hành vi chức năng của ứng dụng đến giao diện trực quan - trong khi tiếp tục sử dụng các công cụ kiểm tra yêu thích của bạn.
+• Kiểm tra giao diện chức năng người dùng
+    Applitools cho phép bạn kiểm tra mã trực quan của mình kỹ lưỡng như mã giao diện người dùng chức năng để đảm bảo giao diện trực quan của ứng dụng giống như bạn mong đợi.
+• Kiểm tra thành phần
+    Applitools hỗ trợ trực quan kiểm tra các thành phần riêng lẻ trong thư viện thành phần của bạn, tự động tích hợp với các công cụ như Storybook.
+• Kiểm tra phù hợp với thiết kế
+    Applitools cho phép bạn kiểm tra xem ứng dụng của bạn trông như thế nào trong nhiều bố cục màn hình để đảm bảo rằng chúng phù hợp với thiết kế.
+2.6.4 Tích hợp selenium với java
+➢ Cài đặt Applitools SDK cho Selenium Java
+    pplitools Eyes SDK cho Selenium Java có thể được tải xuống từ Maven (tên của gói là eyes-selenium-java).
+    Để cài đặt SDK, hãy thêm tệp sau vào tệp pom.xml của bạn (đảm bảo thay đổi số phiên bản dưới đây thành phiên bản mới nhất có sẵn trên Maven):
+    <dependency>
+     <groupId>com.applitools</groupId>
+     <artifactId>eyes-selenium-java</artifactId>
+     <version>RELEASE</version>
+    </dependency>➢ Eyes Object
+    Eyes object là đối tượng chính trong Applitools Eyes SDK.
+➢ Eyes Creation
+     Eyes eyes = new Eyes ();
+➢ API Key    Trước bất cứ điều gì khác, bạn nên đặt khóa API cho phép bạn làm việc với máy chủ Mắt. Lưu ý rằng bạn sử dụng một hàm tĩnh cho điều đó, vì vậy nó sẽ có sẵn cho tất cả các đối tượng của bạn. Để nhận được Khóa API của bạn, hãy đăng nhập vào ứng dụng web Applitools Eyes và mở trang chi tiết tài khoản của bạn.
+     eyes.setApiKey("MY_API_KEY");    Thay thế MY_API_KEY bằng khóa API của tài khoản của bạn (bạn có thể tìm thấy nó trong email đăng ký của bạn).
+➢ (Optional) Set viewport size
+    Một lựa chọn thay thế cho việc thiết lập kích thước của khung nhìn
+     eyes.setViewportSize(driver, new RectangleSize(width, height));➢ Initialization
+    Phương pháp mở trả về một đối tượng trình điều khiển web tùy chỉnh để theo dõi tất cả các hành động của trình điều khiển. Từ thời điểm này, đối tượng trình điều khiển tùy chỉnh mới nên được sử dụng cho tất cả các hành động trong bài kiểm tra.
+     driver = eyes.open(driver, appName, testName, viewportSize);    driver – đối tượng Selenium Webdriver có liên quan.
+    appName – chuỗi đại diện cho tên hợp lý của AUT (tên này sẽ được trình bày trong kết quả kiểm tra)
+    testName – chuỗi đại diện cho tên của bài kiểm tra (tên này sẽ được trình bày trong kết quả kiểm tra
+    viewportSize – kích thước khung nhìn được xác định trước sẽ được sử dụng cho cửa sổ trình duyệt trong quá trình kiểm tra này (tham số này rất quan trọng đối với các bài kiểm tra trực quan để đảm bảo rằng bài kiểm tra sẽ chạy với kích thước khung nhìn được xác định và kết quả sẽ nhất quán)
+    Lệnh kiểm tra cửa sổ sẽ chụp nhanh cửa sổ hiện tại trong AUT và sẽ thực hiện so sánh trực quan thông minh của cửa sổ đó với đường cơ sở. Trong trường hợp đây là một cửa sổ mới không tồn tại trong đường cơ sở, cửa sổ này sẽ được thêm vào đường cơ sở.
+       eyes.checkWindow(windowName);
+    windowName – Chuỗi đại diện cho tên hợp lý của cửa sổ / điểm xác nhận này sẽ xuất hiện trong báo cáo kết quả thử nghiệm, giá trị mặc định là "null"
+➢ Ending a test
+    Vào cuối mỗi bài kiểm tra, đảm bảo gọi phương thức eyes.close để thông báo cho dịch vụ rằng bài kiểm tra đã hoàn thành thành công. Cũng nên gọi phương thức eyes.abortIfNotClosed vào cuối bài kiểm tra như là một phần của khối "cuối cùng" để phân biệt giữa các bài kiểm tra và các bài kiểm tra đã hoàn tất đã bị hủy bỏ một cách bất thường (ví dụ như một ngoại lệ đã được ném ra).
+    try {
+        ...
+        eyes.close();
+    }finally{
+        eyes.abortIfNotClosed();
+    }     Trong khối "cuối cùng" của bài kiểm tra Selenium, bạn thường sẽ muốn bao gồm "driver.quit ()", vì bài kiểm tra đã hoàn thành hoặc không thành công. 
+➢  (Optional) Mức so sánh thử nghiệm vượt quá
+    Độ nhạy so sánh, hay còn gọi là "mức phù hợp" được đặt theo mặc định là Mức độ nghiêm ngặt để có mức độ phù hợp nhất. Đôi khi đối với các bài kiểm tra cụ thể, nó phải thay đổi mức so sánh mặc định.
+    eyes.setMatchLevel(MatchLevel.<Level>);    Level - The match level of the test 
+• Exact - Pixel to Pixel so sánh, cho các mục đích trình diễn và gỡ lỗi, sẽ không thành công nếu một pixel không có tại chỗ. (không phải ren. (không khuyến khích)
+• Strict - nghiêm ngặt là mức phù hợp mặc định, nó bắt chước con người nên chỉ phát hiện thấy những thay đổi đáng kể về hình ảnh, trong khi những thay đổi nhỏ không nhìn thấy được bằng mắt thường sẽ bị bỏ qua.
+• Content - bỏ qua phong cách và sự khác biệt chống răng cưa, trong khi ghi nhận thay đổi nội dung. (mức độ nội dung có thể hữu ích nếu trang web của bạn có các kiểu khác nhau không liên quan đến các bài kiểm tra của bạn).
+• Layout - bỏ qua thay đổi nội dung và chỉ phát hiện thay đổi bố cục. (hữu ích cho các trang có nội dung động và các trang địa phương hoá)
+    Lưu ý: Ghi đè mức đối sánh chỉ hiệu quả nếu được đặt trước khi khởi tạo.
+2.6.5 Làm thế nào để tạo ra một đường cơ sở
+    Một đường cơ sở là một tập các hình ảnh đại diện cho kết quả mong đợi của một bài kiểm tra cụ thể chạy trên một ứng dụng cụ thể trên một môi trường cụ thể.
+     Một đường cơ sở được tạo ra lần đầu tiên bạn chạy thử nghiệm trên một môi trường cụ thể và đường cơ sở này sẽ được cập nhật bất cứ khi nào bạn thực hiện thay đổi bất kỳ trang nào trong ứng dụng của bạn và chấp nhận những thay đổi này trong Applitools Eyes Test Manager. 
+    Bất kỳ lần chạy tương lai nào trong cùng một thử nghiệm trên môi trường tương tự sẽ được so sánh với đường cơ sở. 
+    Theo mặc định, tạo thử nghiệm trên một trình duyệt cụ thể lần đầu tiên (ví dụ Firefox) sẽ tạo một Đường cơ sở mới, do đó chạy cùng một thử nghiệm trên một trình duyệt khác (ví dụ như Chrome) sẽ tạo ra một đường cơ sở mới
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Tích hợp Selenium với javascript
+3.1.1 Thiết lập môi trường
+- Cái đặt Intellij idea
+
+    Hình 3. 1: Intellij idea
+- Cài đặt Applitools Eyes SDK cho Java và Add thư viện Selenium
+
+    Hình 3. 2: Thêm thư viện
+- Tải ChromeDriver về local
+
+    Hình 3. 3: ChromeDriver
+- Đăng ký tài khoản Applitools trên https://applitools.com/users/login
+
+    Hình 3. 4: Đăng ký tài khoản Applitools
+    
+    
+3.1.2 Xây dựng chương trình
+- Thực hiện chạy kiểm tra lần đầu tiên 
+import com.applitools.eyes.RectangleSize;
+import com.applitools.eyes.selenium.Eyes;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.After;
+import org.junit.Rule;
+import org.junit.rules.TestWatcher;
+import org.junit.runner.Description;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import java.util.concurrent.TimeUnit;
+public class test {
+    WebDriver driver;
+    Eyes eyes;
+    String testName;
+    @Before
+    public  void setup()throws Exception{   System.setProperty("webdriver.chrome.driver","D:/DATN/ngocnt/ngocnt/drive/chromedriver.exe");   
+driver = new ChromeDriver();
+eyes = new Eyes();     eyes.setApiKey("vGZ2xwTRQNihROTTyKQ2qtguZ66rnUKnHgzVJZ3yFaM110"); 
+eyes.open(driver, "The-internet", testName, new RectangleSize(800, 600));
+    }
+    @Rule
+    public TestWatcher watcher= new TestWatcher() {
+        @Override
+        protected void starting(Description description) {
+            testName = description.getDisplayName();
+        }
+    };
+    @After
+    public  void TestDown(){
+        eyes.abortIfNotClosed();
+        driver.quit();
+    }
+    @Test
+    public void LoginValid(){
+        try {
+            driver.navigate().to("http://the-internet.herokuapp.com/login");
+            eyes.checkWindow("Login form");
+            driver.findElement(By.id("username")).sendKeys("tomsmith");
+ driver.findElement(By.id("password")).sendKeys("SuperSecretPassword!");           
+driver.findElement(By.cssSelector("button")).click();
+eyes.checkWindow("Logged In");
+eyes.close();
+        }catch (Exception ex){
+            System.out.println(ex.toString());
+            ex.printStackTrace();
+        }
+    }
+}
+
+
+
+
+
+
+- Kết quả lần chạy đầu tiên
+
+    Hình 3. 5: Kết quả lần chạy đầu tiên
+- Thực hiện viết Script thay đổi giao diện
+import com.applitools.eyes.RectangleSize;
+import com.applitools.eyes.selenium.Eyes;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.After;
+import org.junit.Rule;
+import org.junit.rules.TestWatcher;
+import org.junit.runner.Description;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import java.util.concurrent.TimeUnit;
+public class test {
+    WebDriver driver;
+    Eyes eyes;
+    String testName;
+    @Before
+    public  void setup()throws Exception{    System.setProperty("webdriver.chrome.driver","D:/DATN/ngocnt/ngocnt/drive/chromedriver.exe");
+        driver = new ChromeDriver();
+        eyes = new Eyes();        eyes.setApiKey("vGZ2xwTRQNihROTTyKQ2qtguZ66rnUKnHgzVJZ3yFaM110");
+        eyes.open(driver, "The-internet", testName, new RectangleSize(800, 600));
+    }
+    @Rule
+    public TestWatcher watcher= new TestWatcher() {
+        @Override
+        protected void starting(Description description) {
+            testName = description.getDisplayName();
+        }
+    };
+    @After
+    public  void TestDown(){
+        eyes.abortIfNotClosed();
+        driver.quit();
+    }
+    @Test
+    public void LoginValid(){
+        try {         
+driver.navigate().to("http://the-internet.herokuapp.com/login");
+eyes.checkWindow("Login form");
+driver.findElement(By.id("username")).sendKeys("tomsmith");            driver.findElement(By.id("password")).sendKeys("SuperSecretPassword!");
+driver.findElement(By.cssSelector("button")).click();
+JavascriptExecutor js= (JavascriptExecutor) driver;           js.executeScript("document.getElementById(\"flash\").style.color = \"#ff0000\"");
+js.executeScript("document.getElementsByClassName(\"icon-2x icon-signout\")[0].innerHTML = \"Login\"");
+eyes.checkWindow("Logged In");
+eyes.close();
+        }catch (Exception ex){
+            System.out.println(ex.toString());
+            ex.printStackTrace();
+- Kết quả lần chạy tiếp theo
+
+    Hình 3. 6: Kết quả lần chạy tiếp theo	
+    
+    
+    
+    
+    
+    
+    
+    
+- Kết quả so sánh giữa 2 lần chạy
+
+    Hình 3. 7: So sánh kết quả
+3.2 Kiểm tra bằng hình ảnh
+import com.applitools.eyes.RectangleSize;
+import com.applitools.eyes.images.Eyes;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+public class Test_image {
+public static void main(String[] args) throws IOException {
+    //Switch between the versions to generate test failure.
+    String version = "0.2";
+    Eyes eyes = new Eyes();
+  eyes.setApiKey("vGZ2xwTRQNihROTTyKQ2qtguZ66rnUKnHgzVJZ3yFaM110");
+    // Define the OS and hosting application to identify the baseline
+        eyes.setHostOS("Windows10");
+        eyes.setHostApp("The-internet");
+    BufferedImage img;
+        try {
+        // Start visual testing
+        eyes.open("The-internet", "Sanity Test", new RectangleSize(785, 1087));
+        // Load page image and validate
+        img = ImageIO.read(new File("D:/DATN/image/Baseline.png"));
+        // Visual validation point #1
+        eyes.checkImage(img, "Login form");
+        // Load another page and validate
+        img = ImageIO.read(new File("D:/DATN/image/anh_test.png"));
+        // Visual validation point #2
+        eyes.checkImage(img, "Login form");
+        // End visual testing. Validate visual correctness.
+        eyes.close();
+    } finally {
+        eyes.abortIfNotClosed();
+    }
+}
+}
+3.3 Kiểm tra song song hai kết quả với độ phân giải khác nhau
+3.3.1 Demo lần chạy đầu tiên
+import com.applitools.eyes.RectangleSize;
+import com.applitools.eyes.TestResults;
+import com.applitools.eyes.selenium.Eyes;
+import com.applitools.eyes.BatchInfo;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import  java.net.URI;
+import  java.net.URISyntaxException;
+public class ViewSize {
+    static private String  appName  = "Helo World App";
+    // change the value of testName so that it has a unique value on your Eyes system
+    static private String  testName = "Helo World test";
+    // if you have a dedicated Eyes server, set the value of the variable serverURLstr to your URL
+    static String serverURLstr = "https://eyesapi.applitools.com";
+    //set the value of runAsBatch to true so that the tests run as a single batch
+   // static private Boolean runAsBatch = false;
+    static private Boolean runAsBatch = true;
+    // set the value of changeTest to true to introduce changes that Eyes will detect as mismatches
+    static private Boolean changeTest = false;
+    static private String  weburl = "https://applitools.com/helloworld2";
+    public static void main(String[] args) {
+        URI serverURL;
+        try {
+            serverURL = new URI(serverURLstr);
+        } catch (URISyntaxException e) {
+            System.out.println("URI Exception ");
+            return;
+        }
+        Eyes eyes = new Eyes(serverURL);
+        setup(eyes);
+        System.setProperty("webdriver.chrome.driver","D:/DATN/ngocnt/ngocnt/drive/chromedriver.exe");
+        RectangleSize viewportSizeLandscape = new RectangleSize(/*width*/ 800, /*height*/ 600 );
+        RectangleSize viewportSizePortrait = new RectangleSize(/*width*/ 900, /*height*/ 650 );
+        WebDriver innerDriver = new ChromeDriver();  // Open a Chrome browser.
+        if (!changeTest) {
+            test01(innerDriver, eyes, viewportSizeLandscape);
+            test01(innerDriver, eyes, viewportSizePortrait);
+        } else {
+            test01Changed(innerDriver, eyes, viewportSizeLandscape);
+            test01Changed(innerDriver, eyes, viewportSizePortrait);
+        }
+        innerDriver.quit();
+    }
+    static private void test01(WebDriver innerDriver, Eyes eyes, RectangleSize viewportSize) {
+        // Start the test and set the browser's viewport size
+        WebDriver driver = eyes.open(innerDriver, appName, testName, viewportSize);
+        try {
+            driver.get(weburl);
+            eyes.checkWindow("Before enter name");                 // Visual checkpoint 1
+            driver.findElement(By.id("name")).sendKeys("Ngọc ngọc"); //enter the name
+            eyes.checkWindow("After enter name");                  // Visual checkpoint 2
+            driver.findElement(By.tagName("button")).click();      // Click the  button
+            eyes.checkWindow("After Click");                       // Visual checkpoint 3
+            TestResults result = eyes.close(false); //false means don't thow exception for failed tests
+            handleResult(result);
+        } finally {
+            eyes.abortIfNotClosed();
+        }
+    }
+    static private void test01Changed(WebDriver innerDriver, Eyes eyes, RectangleSize viewportSize) {
+        TestResults result;
+        // Start the test and set the browser's viewport size
+        WebDriver driver = eyes.open(innerDriver, appName, testName, viewportSize);
+        try {
+            String webUrlToUse = weburl;
+            if (changeTest) {
+                webUrlToUse += "?diff2";
+            }
+
+            driver.get(webUrlToUse);                                // Navigate the browser to the web-site.
+            if (!changeTest) {
+                eyes.checkWindow(" Before enter name");          // skip visual checkpoint number 1
+            }
+            driver.findElement(By.id("name")).sendKeys("Ngọc ngọc");  // enter the name
+            eyes.checkWindow("After enter name)");                  //visual checkpoint number 2
+            driver.findElement(By.tagName("button")).click();      // Click the "Click me!" button.
+            eyes.checkWindow("After click");                       // Visual checkpoint 3
+            if (changeTest) {
+                eyes.checkWindow("After click again");           // additional visual checkpoint 4
+            }
+            result = eyes.close(false);
+            handleResult(result);
+        } finally {
+            eyes.abortIfNotClosed();
+        }
+    }
+
+    static private  void handleResult(TestResults result) {
+        String resultStr;
+        String url;
+        if (result == null) {
+            resultStr = "Test aborted";
+            url = "undefined";
+        } else {
+            url = result.getUrl();
+            int totalSteps = result.getSteps();
+            if (result.isNew()) {
+                resultStr = "New Baseline Created: " + totalSteps + " steps";
+            } else if (result.isPassed()) {
+                resultStr = "All steps passed:     " + totalSteps + " steps";
+            } else {
+                resultStr = "Test Failed     :     " + totalSteps + " steps";
+                resultStr += " matches=" +  result.getMatches();      /*  matched the baseline */
+                resultStr += " missing=" + result.getMissing();       /* missing in the test*/
+                resultStr += " mismatches=" + result.getMismatches(); /* did not match the baseline */
+            }
+        }
+        resultStr += "\n" + "results at " + url;
+        System.out.println(resultStr);
+    }
+    static private void setup(Eyes eyes) {
+        String apiKey = System.getenv("APPLITOOLS_API_KEY");
+        eyes.setApiKey("vGZ2xwTRQNihROTTyKQ2qtguZ66rnUKnHgzVJZ3yFaM110");
+        if (runAsBatch) {
+            BatchInfo batchInfo = new BatchInfo("Hello World 2 Batch");
+            eyes.setBatch(batchInfo);
+        }
+    }
+}
+
+    Hình 3. 8: Kết qủa trả về pass
+
+    Hình 3. 9: Kết quả lần chạy đầu tiên
+3.3.2 Demo lần chạy tiếp theo
+import com.applitools.eyes.RectangleSize;
+import com.applitools.eyes.TestResults;
+import com.applitools.eyes.selenium.Eyes;
+import com.applitools.eyes.BatchInfo;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import  java.net.URI;
+import  java.net.URISyntaxException;
+
+public class ViewSize {
+    static private String  appName  = "Helo World App";
+    // change the value of testName so that it has a unique value on your Eyes system
+    static private String  testName = "Helo World test";
+    // if you have a dedicated Eyes server, set the value of the variable serverURLstr to your URL
+    static String serverURLstr = "https://eyesapi.applitools.com";
+    //set the value of runAsBatch to true so that the tests run as a single batch
+   // static private Boolean runAsBatch = false;
+    static private Boolean runAsBatch = true;
+    // set the value of changeTest to true to introduce changes that Eyes will detect as mismatches
+    static private Boolean changeTest = true;
+    static private String  weburl = "https://applitools.com/helloworld2";
+    public static void main(String[] args) {
+        URI serverURL;
+        try {
+            serverURL = new URI(serverURLstr);
+        } catch (URISyntaxException e) {
+            System.out.println("URI Exception ");
+            return;
+        }
+        Eyes eyes = new Eyes(serverURL);
+        setup(eyes);
+        System.setProperty("webdriver.chrome.driver","D:/DATN/ngocnt/ngocnt/drive/chromedriver.exe");
+        RectangleSize viewportSizeLandscape = new RectangleSize(/*width*/ 800, /*height*/ 600 );
+        RectangleSize viewportSizePortrait = new RectangleSize(/*width*/ 900, /*height*/ 650 );
+        WebDriver innerDriver = new ChromeDriver();  // Open a Chrome browser.
+
+        if (!changeTest) {
+            test01(innerDriver, eyes, viewportSizeLandscape);
+            test01(innerDriver, eyes, viewportSizePortrait);
+        } else {
+            test01Changed(innerDriver, eyes, viewportSizeLandscape);
+            test01Changed(innerDriver, eyes, viewportSizePortrait);
+        }
+        innerDriver.quit();
+    }
+    static private void test01(WebDriver innerDriver, Eyes eyes, RectangleSize viewportSize) {
+        // Start the test and set the browser's viewport size
+        WebDriver driver = eyes.open(innerDriver, appName, testName, viewportSize);
+        try {
+            driver.get(weburl);
+            eyes.checkWindow("Before enter name");                 // Visual checkpoint 1
+
+            driver.findElement(By.id("name")).sendKeys("Ngọc ngọc"); //enter the name
+            eyes.checkWindow("After enter name");                  // Visual checkpoint 2
+
+            driver.findElement(By.tagName("button")).click();      // Click the  button
+            eyes.checkWindow("After Click");                       // Visual checkpoint 3
+
+            TestResults result = eyes.close(false); //false means don't thow exception for failed tests
+            handleResult(result);
+        } finally {
+            eyes.abortIfNotClosed();
+        }
+    
+    static private void test01Changed(WebDriver innerDriver, Eyes eyes, RectangleSize viewportSize) {
+        TestResults result;
+        // Start the test and set the browser's viewport size
+        WebDriver driver = eyes.open(innerDriver, appName, testName, viewportSize);
+        try {
+            String webUrlToUse = weburl;
+
+            if (changeTest) {
+                webUrlToUse += "?diff2";
+            }
+
+            driver.get(webUrlToUse);                                // Navigate the browser to the web-site.
+            if (!changeTest) {
+                eyes.checkWindow(" Before enter name");          // skip visual checkpoint number 1
+            }
+            driver.findElement(By.id("name")).sendKeys("Ngọc ngọc");  // enter the name
+            eyes.checkWindow("After enter name)");                  //visual checkpoint number 2
+            driver.findElement(By.tagName("button")).click();      // Click the "Click me!" button.
+            eyes.checkWindow("After click");                       // Visual checkpoint 
+            if (changeTest) {
+                eyes.checkWindow("After click again");           // additional visual checkpoint 4
+            }
+            result = eyes.close(false);
+            handleResult(result);
+        } finally {
+            eyes.abortIfNotClosed();
+        }
+    }
+    static private  void handleResult(TestResults result) {
+        String resultStr;
+        String url;
+        if (result == null) {
+            resultStr = "Test aborted";
+            url = "undefined";
+        } else {
+            url = result.getUrl();
+            int totalSteps = result.getSteps();
+            if (result.isNew()) {
+                resultStr = "New Baseline Created: " + totalSteps + " steps";
+            } else if (result.isPassed()) {
+                resultStr = "All steps passed:     " + totalSteps + " steps";
+            } else {
+                resultStr = "Test Failed     :     " + totalSteps + " steps";
+                resultStr += " matches=" +  result.getMatches();      /*  matched the baseline */
+                resultStr += " missing=" + result.getMissing();       /* missing in the test*/
+                resultStr += " mismatches=" + result.getMismatches(); /* did not match the baseline */
+            }
+        }
+        resultStr += "\n" + "results at " + url;
+        System.out.println(resultStr);
+    }
+    static private void setup(Eyes eyes) {
+        String apiKey = System.getenv("APPLITOOLS_API_KEY");
+        eyes.setApiKey("vGZ2xwTRQNihROTTyKQ2qtguZ66rnUKnHgzVJZ3yFaM110");
+        if (runAsBatch) {
+            BatchInfo batchInfo = new BatchInfo("Hello World 2 Batch");
+            eyes.setBatch(batchInfo);
+        }
+
+        //eliminate artifacts caused by a blinking cursor - on by default in latest SDK
+      // eyes.setIgnoreCaret(true);
+    }
+}
+
+    Hình 3. 10: Kết quả trả về fail
+
+    Hình 3. 11: Kết quả lần chạy kế tiếp
+3.3.3 So sánh kết quả sau khi cập nhật đường cơ sở
+import com.applitools.eyes.RectangleSize;
+import com.applitools.eyes.TestResults;
+import com.applitools.eyes.selenium.Eyes;
+import com.applitools.eyes.BatchInfo;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import  java.net.URI;
+import  java.net.URISyntaxException;
+public class ViewSize {
+    static private String  appName  = "Helo World App";
+    // change the value of testName so that it has a unique value on your Eyes system
+    static private String  testName = "Helo World test";
+    // if you have a dedicated Eyes server, set the value of the variable serverURLstr to your URL
+    static String serverURLstr = "https://eyesapi.applitools.com";
+    //set the value of runAsBatch to true so that the tests run as a single batch
+   // static private Boolean runAsBatch = false;
+    static private Boolean runAsBatch = true;
+    // set the value of changeTest to true to introduce changes that Eyes will detect as mismatches
+    static private Boolean changeTest = true;
+    static private String  weburl = "https://applitools.com/helloworld2";
+    public static void main(String[] args) {
+        URI serverURL;
+        try {
+            serverURL = new URI(serverURLstr);
+        } catch (URISyntaxException e) {
+            System.out.println("URI Exception ");
+            return;
+        }
+        Eyes eyes = new Eyes(serverURL);
+        setup(eyes);
+System.setProperty("webdriver.chrome.driver","D:/DATN/ngocnt/ngocnt/drive/chromedriver.exe");
+        RectangleSize viewportSizeLandscape = new RectangleSize(/*width*/ 800, /*height*/ 600 );
+        RectangleSize viewportSizePortrait = new RectangleSize(/*width*/ 900, /*height*/ 650 );
+        WebDriver innerDriver = new ChromeDriver();  // Open a Chrome browser.
+        if (!changeTest) {
+            test01(innerDriver, eyes, viewportSizeLandscape);
+            test01(innerDriver, eyes, viewportSizePortrait);
+        } else {
+            test01Changed(innerDriver, eyes, viewportSizeLandscape);
+            test01Changed(innerDriver, eyes, viewportSizePortrait);
+        }
+        innerDriver.quit();
+    }
+    static private void test01(WebDriver innerDriver, Eyes eyes, RectangleSize viewportSize) {
+        // Start the test and set the browser's viewport size
+        WebDriver driver = eyes.open(innerDriver, appName, testName, viewportSize);
+        try {
+            driver.get(weburl);
+            eyes.checkWindow("Before enter name");                 // Visual checkpoint 1
+            driver.findElement(By.id("name")).sendKeys("Ngọc ngọc"); //enter the name
+            eyes.checkWindow("After enter name");                  // Visual checkpoint 
+            driver.findElement(By.tagName("button")).click();      // Click the  button
+            eyes.checkWindow("After Click");                       // Visual checkpoint 3
+            TestResults result = eyes.close(false); //false means don't thow exception for failed tests
+            handleResult(result);
+        } finally {
+            eyes.abortIfNotClosed();
+        }
+    }
+
+    static private void test01Changed(WebDriver innerDriver, Eyes eyes, RectangleSize viewportSize) {
+        TestResults result;
+        // Start the test and set the browser's viewport size
+        WebDriver driver = eyes.open(innerDriver, appName, testName, viewportSize);
+        try {
+            String webUrlToUse = weburl;
+            if (changeTest) {
+                webUrlToUse += "?diff2";
+            }
+            driver.get(webUrlToUse);                                // Navigate the browser to the web-site.
+            if (!changeTest) {
+                eyes.checkWindow(" Before enter name");          // skip visual checkpoint number 1
+            }
+            driver.findElement(By.id("name")).sendKeys("Ngọc ngọc");  // enter the name
+            eyes.checkWindow("After enter name)");                  //visual checkpoint number 2
+            driver.findElement(By.tagName("button")).click();      // Click the "Click me!" button.
+            eyes.checkWindow("After click");                       // Visual checkpoint 3
+            if (changeTest) {
+                eyes.checkWindow("After click again");           // additional visual checkpoint 4
+            }
+            result = eyes.close(false);
+            handleResult(result);
+        } finally {
+            eyes.abortIfNotClosed();
+        }
+    }
+
+    static private  void handleResult(TestResults result) {
+        String resultStr;
+        String url;
+        if (result == null) {
+            resultStr = "Test aborted";
+            url = "undefined";
+        } else {
+            url = result.getUrl();
+            int totalSteps = result.getSteps();
+            if (result.isNew()) {
+                resultStr = "New Baseline Created: " + totalSteps + " steps";
+            } else if (result.isPassed()) {
+                resultStr = "All steps passed:     " + totalSteps + " steps";
+            } else {
+                resultStr = "Test Failed     :     " + totalSteps + " steps";
+                resultStr += " matches=" +  result.getMatches();      /*  matched the baseline */
+                resultStr += " missing=" + result.getMissing();       /* missing in the test*/
+                resultStr += " mismatches=" + result.getMismatches(); /* did not match the baseline */
+            }
+        }
+        resultStr += "\n" + "results at " + url;
+        System.out.println(resultStr);
+    }
+    static private void setup(Eyes eyes) {
+        String apiKey = System.getenv("APPLITOOLS_API_KEY");
+        eyes.setApiKey("vGZ2xwTRQNihROTTyKQ2qtguZ66rnUKnHgzVJZ3yFaM110");
+        if (runAsBatch) {
+            BatchInfo batchInfo = new BatchInfo("Hello World 2 Batch");
+            eyes.setBatch(batchInfo);
+        }
+    }
+}
+
+
+    Hình 3. 12: Kết quả so sánh với độ phân giải khác nhau
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+- Tìm hiểu và nắm rõ được lý thuyết về kiểm thử giao diện trực quan
+- Cài đặt và sử dụng được công cụ Applitools 
+- Tạo chương trình Demo chạy tự động cho đề tài
+- Áp dụng kiểm thử vào nhiều giao diện trên các trang Web khác nhau
+- Thực hiện kiểm tra song song và trên độ phân giải khác nhau
+4.2 Hạn chế của đề tài
+- Kết quả mới chỉ đạt được ở một mức độ nhất định cần nâng cao và chi tiết hơn nữa.
+- Cần áp dụng thử nghiệm ở nhiều độ phân giải, trên nhiều trình duyệt và hệ điều hành khác nhau để thấy được rõ sự so sánh đó
+- Nên áp dụng nhiều ngôn ngữ lập trình cũng như nhiều thao tác tự động hơn nữa để phục vụ tốt hơn cho việc kiểm thử giao diện
+4.3 Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, tôi đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+• Áp dụng thử nghiệm kiểm tra chéo trên các trình duyệt khác nhau như firefox, internet-explorer…
+• Thử nghiệm trên các hệ điều hành khác như: Android, IOS…
+• Nghiên cứu và xây dựng tool phục vụ kiểm thử giao diện tự động hóa
+TÀI LIỆU THAM KHẢO
+[1] Khoa Công nghệ thông tin, Đề cương Kiểm thử phần mềm tự động, Trường Đại học SPKT Hưng Yên, 2016
+[2]. Yujun Liang & Alex Collins, Selenium WebDriver From Foundations To Framework, LearnPub, 2016
+[3]. Unmesh Gundecha, Selenium Testing Tools Cookbook Second Edition, PACK Publishing, 2015
+[4] Zhimin Zhan, Selenium WebDriver Recipes in C#: Second Edition, Apress, 2012
+[5] Satya Avasarala, Selenium WebDriver Practical Guide, Packt Publishing, 2014
+[6] https://applitools.com/
+[7] http://support.applitools.com/
+
+    
+Kiểm thử tự động giao diện trực quan với Applitool
+    
+    
+22
+    
+    

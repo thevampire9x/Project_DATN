@@ -1,0 +1,477 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+     Ngày nay, cùng với sự tiến bộ của khoa học công nghệ, lĩnh vực công nghệ thông tin ngày càng phát triển. Đặc biệt là trong những năm gần đây với sự ra đời của các thế hệ máy tính cá nhân đã thay đổi bộ mặt của nhiều khía cạnh cuộc sống.
+     Một trong những sản phẩm nổi trội và đáng quan tâm của Công Nghệ Thông Tin đó chính là công nghệ Internet. Dù mới ra đời và du nhập vào Việt Nam nhưng theo thống kê sơ bộ cho thấy thị trường Internet của Việt Nam phát triển rất mạnh, nhất là trong những năm gần đây.
+     Việc tiếp cận Internet của Việt Nam là mới nên ứng dụng Internet vào cuộc sống chưa cao. Và việc thúc đẩy ứng dụng Internet vào thực tế đang từng bước được thực hiện. Áp dụng trên tất cả các lĩnh vực của đời sống: Y tế, thương mại, giải trí, thông tin… Khi ứng dụng Internet vào cuộc sống thì quá trình tìm kiếm, trao đổi, cập nhật thông tin trở nên dễ dàng hơn. Ứng dụng quan trọng và có thể nói là nền tảng của mạng Internet đó chính là các hệ thống website. Hiện nay, ở Việt Nam ngoài các hệ thống website của các tổ chức lớn còn có các hệ thống website cá nhân đều cùng mục đích là cung cấp và trao đổi thông tin cho những người sử dụng.
+     Nhờ Internet mà khoảng cách gần như ngắn lại, sự xa xôi cách trở đã được rút ngắn nhiều lần. Chỉ ngồi ở nhà với một thiết bị có kết nối Internet là ta có thể làm được nhiều việc hàng ngày; Mua sắm, xem thông tin, thời tiết, giá cả… chỉ thông qua một vài cú nhấp chuột. 
+     Cùng với sự phát triển của công nghệ thì ngày nay dịch vụ bất động sản trở thành tâm điểm của xã hội cho các doanh nghiệp vừa và nhỏ vì vậy tôi đã chọn làm những website bất động sản nhằm đem lại sự lựa chọn tốt nhất cho các doanh nghiệp, cung cấp các thông tin hiệu quả, quảng bá dự án cho khách hàng. Hơn thế nữa thiết kế web bất động sản nhằm đáp ứng nhu cầu về có 1 trang web đối với các doanh nghiệp bất động sản là vô cùng cần thiết. Vì vậy mỗi doanh nghiệp đều cần có 1 website để quảng bá và giao dịch trực tuyến, nhưng làm thế nào để tạo ra 1 website hoạt động hiệu quả. Vậy nên tôi đã lựa chọn đề tài; “ Xây dựng website doanh nghiệp bất động sản”.
+1.2 Mục tiêu của đề tài
+     Đây là một website giới thiệu về các bất động sản với thông tin chi tiết và giá cả chính xác nhất
+➢ Khách hàng;
+- Người sử dụng tìm kiếm các thông tin mình cần tìm kiếm thông 
+qua các danh mục bài đăng, hệ thống tìm kiếm. Họ có thể xem được các thông tin cần thiết;Thông tin về bất động sản; Vị trí, giá cả, những tiện ích…
+➢ Người quản lý;
+-  Là người có quyền đăng nhập, quản lý và làm chủ mọi hoạt động của hệ thống trang web. Người quản lý có một username và một password để truy cập vào hệ thống nhằm thực hiện các chức năng sau;
+- Quản lý bất động sản một cách dễ dàng.
+- Thêm, xóa, sửa thông tin bất động sản vào cơ sở dữ liệu
+1.3 Giới hạn và phạm vi của đề tài
+     Đề tài xây dựng dựng một hệ thống thông tin với mục đích giới thiệu các dự án chung cư, nhà ở.
+     Trong phần này từng bộ phận được tổ chức lại, xây dựng một hệ thống lưu trữ cơ sở dữ liệu phù hợp với nhu cầu, hỗ trợ các công việc tìm kiếm thông tin nhằm giúp cho những người quan tâm đến bất động sản có thể tim hiểu thông tin đc rõ hơn, nhanh hơn.
+1.4 Nội dung thực hiện
+     Bài toán đòi hỏi hệ thống phải có các khả năng kỹ thuật
+- Thực hiện được đầy đủ các chức năng cần thiết
+- Tương thích với hầu hết các trình duyệt
+- Dễ dàng nâng cấp sửa đổi
+- Độ linh hoạt và khả năng tùy biến
+- Thân thiện, tối ưu với các máy tìm kiếm
+- Tốc độ cao, sử dụng ít tài nguyên và băng thông
+- Độ bảo mật, an toàn tương đối khả năng chạy được trên môi trường Internet.
+Một số yêu cầu khác:
+- Giao diện hệ thống thân thiện, dễ sử dụng.
+- Dễ dàng triển khai và cài đặt.
+1.5 Phương pháp tiếp cận
+- Cách tiếp cận :Nghiên cứu các Web Framework trên các nền tảng công nghệ.NET
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu.
+o Phương pháp phân tích mẫu.
+o Phương pháp thực nghiệm.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về ASP.NET
+2.1.1 Giới thiệu về ASP.NET
+     Đầu năm 2002, Microsoft giới thiệu một kỹ thuật lập trình Web khá mới mẻ với tên gọi ban đầu là ASP+, tên chính thức sau này là ASP.Net. Với ASP.Net, không những không cần đòi hỏi bạn phải biết các tag HTML, thiết kế web, mà nó còn hỗ trợ mạnh lập trình hướng đối tượng trong quá trình xây dựng và phát triển ứng dụng Web.ASP.Net là kỹ thuật lập trình và phát triển ứng dụng web ở phía Server (Server-side) dựa trên nền tảng của Microsoft .Net Framework.
+     Hầu hết, những người mới đến với lập trình web đều bắt đầu tìm hiểu những kỹ thuật ở phía Client (Client-side) như: HTML, Java Script, CSS (Cascading Style Sheets). Khi Web browser yêu cầu một trang web (trang web sử dụng kỹ thuật client-side), Web server tìm trang web mà Client yêu cầu, sau đó gởi về cho Client. Client nhận kết quả trả về từ Server và hiển thị lên màn hình.
+     ASP.Net sử dụng kỹ thuật lập trình ở phía server thì hoàn toàn khác, mã lệnh ở phía server (ví dụ: mã lệnh trong trang ASP) sẽ được biên dịch và thi hành tại Web Server. Sau khi được Server đọc, biên dịch và thi hành, kết quả tự động được chuyển sang HTML/JavaScript/CSS và trả về cho Client. Tất cả các xử lý lệnh ASP.Net đều được thực hiện tại Server và do đó, gọi là kỹ thuật lập trình ở phía server. 
+2.1.2 Tìm hiểu về mô hình lập trình Web MVC trong ASP.NET
+     Mẫu kiến trúc Model – View – Controller được sử dụng nhằm chi ứng dụng thành ba thành phần chính: model, view và controller. Nền tảng ASP.NET MVC giúp cho chúng ta có thể tạo được các ứng dụng web áp dụng mô hình MVC thay vì tạo ứng dụng theo mẫu ASP.NET Web Forsm. Nền tảng ASP.NET MVC có đặc điểm nổi bật là nhẹ (lighweigt), dễ kiểm thử phần giao diện (so với ứng dụng Web Forms), tích hợp các tính năng có sẵn của ASP.NET. Nền tảng ASP.NET MVC được định nghĩa trong namespace System.Web.Mvc và là một phần của name space System.Web.
+     MVC là một mẫu thiết kế (design pattern) chuẩn mà nhiều lập trình viên đã quen thuộc. Một số loại ứng dụng web sẽ thích hợp với kiến trúc MVC. Một số khác vẫn thích hợp với ASP.NET Web Forms và cơ chế postbacks. Đôi khi có những ứng dụng kết hợp cả hai kiến trúc trên.
+     Nền tảng MVC bao gồm các thành phần dưới đây:
+     Models: Các đối tượng Models là một phần của ứng dụng, các đối tượng này thiết lập logic của phần dữ liệu của ứng dụng. Thông thường, các đối tượng model lấy và lưu trạng thái của model trong CSDL. 
+     Views: Views là các thành phần dùng để hiển thị giao diện người dùng (UI). Thông thường, view được tạo dựa vào thông tin dữ liệu model. 
+     Controllers: Controller là các thành phần dùng để quản lý tương tác người dùng, làm việc với model và chọn view để hiển thị giao diện người dùng. Trong một ứng dụng MVC, view chỉ được dùng để hiển thị thông tin, controller chịu trách nhiệm quản lý và đáp trả nội dung người dùng nhập và tương tác với người dùng. 
+     Sự phân tách rạch ròi ba thành phần của ứng dụng MVC còn giúp cho việc lập trình diễn ra song song. Ví dụ như một lập trình viên làm việc với view, lập trình viên thứ hai lo cài đặt logic của controller và lập trình viên thứ ba có thể tập trung vào logic tác vụ của model tại cùng một thời điểm.
+     Một ứng dụng web được phát triển theo mô hình MVC, có nguyên lý hoạt động xử lý yêu cầu của người dùng như sau;
+- Khi có yêu cầu phát sinh từ người dùng (phía Client), yêu cầu này sẽ được gửi đến phía Server, tại đây Controller sẽ tiếp nhận yêu cầu để xử lý.
+- Bên trong Controller chứa nhiều phương thức (action), mỗi action tương ứng với một yêu cầu cụ thể từ phía người dùng.Controller sẽ lựa chọn action phù hợp với yêu cầu để xử lý. Trong quá trình xử lý, Controller sẽ tương tác với Model để có được dữ liệu mà người dùng mong muốn.
+- Sau khi Controller làm việc với Model để có được dữ liệu theo yêu cầu, Controller sẽ gửi về cho View thành phần Data Model và nhiệm vụ của View là chuyển Data Model nhận được thành dữ liệu ứng dụng và gửi trả về phía Client để hiển thị kết quả yêu cầu.
+2.2 Ưu khuyết điểm của ASP.NET
+2.2.1 Ưu điểm
+     ASP.NET được xây dựng với bộ thư viện đa dạng và phong phú của .Net Framewrork, hỗ trợ vượt trội về XML và khả năng truy cập cơ sở dữ liệu qua ADO.net. Bên cạnh đó, ASP và ASPX có thể hoạt động trong cùng một ứng dụng mang lại hiệu năng cao cho website. Có thể nhận thấy ASP.NET mang một phong cách hoàn toàn mới, bạn có thể tách giao diện và code thành 2 phần khác biệt. Điều này giúp cho cho việc quản lý và bảo trì trở nên rõ ràng và đơn giản hơn.
+     Thiết kế web bằng ASP.NET giúp cho hệ điều hành hoạt động trơn tru cũng như tăng tốc độ tải cho trang web của bạn. Với kiến trúc tương tự như các ứng dụng trên Windows, việc sử dụng cũng trở nên dễ dang hơn rất nhiều. Bên cạnh đó ASP.NET có khả năng tự động tạo ra mã HTML cho các Server để website có thể hoạt động trên hầu hết các trình duyệt được khách hàng sử dụng. Đặc biệt, ASP.NET là một ngôn ngữ mất phí nên bạn có thể hoàn toàn yên tâm về vấn đề bảo mật của nó. Với những ưu điểm vượt trội như vậy, ASP.NET luôn được rất nhiều nhà thiết kế web chuyên nghiệp ưa chuộng và sử dụng. Tuy nhiên, nó vẫn còn một số nhược điểm cần khắc phục mà bạn cần chú ý khi xây dựng web doanh nghiệp.
+2.2.2 Nhược điểm
+     Đối với dự án nhỏ, việc áp dụng mô hình MVC gây cồng kềnh, tốn thời gian trong quá trình phát triển
+     Tốn thời gian trung chuyển dữ liệu của các thành phần.
+2.3 HTML và CSS
+2.3.1 HTML
+     HTML (Hyper Text Markup Languages – tiếng Anh) hay còn gọi là “Ngôn ngữ đánh dấu siêu văn bản” nó được sử dụng để tạo nên các trang web thông qua các thẻ đánh dấu. Do vậy HTML không phải là một ngôn ngữ lập trình mà nó chỉ là ngôn ngữ đánh dấu. Phần mở rộng của tập tin HTML thường là .html hoặc .htm. Các trình duyệt sẽ đọc tập tin HTML và hiển thị chúng dưới dạng trang web. Các thẻ HTML sẽ được ẩn đi, chỉ hiển thị nội dung văn bản và các đối tượng khác: hình ảnh, media.  Với các trình duyệt khác nhau đều hiển thị một tập HTML với 1 kết quả nhất định. Các trang HTML được gửi đi qua mạng internet theo giao thức HTTP.
+     HTML không những cho phép nhúng thêm các đối tượng hình ảnh, âm thanh mà còn cho phép nhúng các kịch bản vào trong đó như các ngôn ngữ kịch bản như JavaScript để tạo hiệu ứng động cho trang web. Để trình bày trang web hiệu quả hơn thì HTML cho phép sử dụng kết hợp với CSS. HTML chính thức là chuẩn của W3C từ tháng 1 năm 97 với phiên bản HTML 3.2.trước đó thì HTML xuất bản theo chuẩn của RFC.  
+     HTML được tương thích vỡi mọi hệ điều hành cùng các trình duyệt của nó. Khả năng dễ học, dễ viết là một ưu điểm của HTML. Không những vậy việc soạn thảo đòi hỏi hết sức đơn giản và thông thường sử dụng notepad là đã đủ. HTML vẫn tiếp tục được phát triển, phiên bản hiện tại là HTML 5 – một phiên bản nâng cấp của XHTML. HTML cải tiến khá nhiều đặc biệt hỗ trợ mạnh mẽ các phần tử multimedia mà không cần các plugin. HTML5 nói chung mãnh mẽ hơn nhiều không chỉ về tốc độ và độ thích ứng cao mà chính là khả năng hỗ trợ API (Application Programming Interface - giao diện lập trình ứng dụng) và DOM (Document Object Model – mô hình đối tượng tài liệu hay cây cấu trúc dữ liệu).
+     HTML5
+     HTML4 đã làm việc rất tốt, nhưng nó rõ ràng là có một số nhược điểm. Nhóm phát triển HTML5 chắc chắn đã có một phương án cao hơn cho bước tiếp theo của HTML, điều đó có nghĩa là HTML5 phải được xây dựng dựa trên các nguyên tắc sau đây:
+- Ít phụ thuộc vào các plugin cho các chức năng.
+- Scripting nên được thay thế bằng markup bất cứ khi nào có thể.
+- Độc lập thiết bị (ví dụ, có sẵn trên tất cả các thiết bị và cung cấp các trải nghiệm giống nhau đối với người dùng).
+- Công bố quá trình phát triển để mọi người đều có thể nhìn thấy những gì đang diễn ra.
+     Cụ thể hơn, HTML5 đã bổ sung thêm rất nhiều các thẻ đánh dấu (markup) mới:
+- Các thẻ <header> và <footer> giúp bạn tách các phần trên và dưới của các block nội dung. Để có thể sử dụng nhiều lần trên một trang duy nhất. 
+- Thẻ <article> giúp xác định một phần cụ thể về nội dung, ví dụ, một bài blog hoặc một bình luận của độc giả.
+- Thẻ <nav> để xác định những phần nào được coi là khối điều hướng.
+- Thẻ <section> cho phép bạn xác định một phần nội dung nào đó; tương tự như các thẻ <div> hiện nay.
+- Các thẻ <audio> và <video> để đánh dấu những nội dung bao gồm âm thanh hoặc video.
+- Thẻ <canvas> cho phép bạn vẽ đồ họa sử dụng một ngôn ngữ kịch bản riêng biệt.
+- Thẻ <embed> dùng để nhúng các nội dung hoặc các ứng dụng bên ngoài vào trang web.
+     HTML5 cũng bỏ đi một số thẻ: <acronym>, <applet>, <font>, <frame>, <frameset>, <noframes>, và một số thẻ khác.
+     Các tiêu chuẩn đặc tả kỹ thuật đầy đủ cho HTML5 đã được lên kế hoạch hoàn thành từ năm 2014, nhưng HTML5 đã có nhiều tiến bộ đã và nó có thể được sử dụng để thực hiện các tính năng cho đến hiện nay. Các tiêu chuẩn đặc tả kỹ thuật đầy đủ cho HTML5.1 được hoàn thành vào năm 2016.
+2.3.2 CSS
+     CSS -  Cascading Style Sheet dùng để trình bày các tài liệu viết bằng HTML hoặc XHTML . Ngoài ra ngôn ngữ định kiểu theo tầng cũng có thể dùng cho XML, SVG, XUL,.. Các đặc điểm kĩ thuật của CSS được duy trì bởi tổ chức W3C.  
+     CSS có cấu trúc đơn giản và sử dụng các từ tiếng Anh để đặt tên cho các thuộc tính.CSS khi sử dụng có thể viết trực tiếp xen lẫn vào mã HTML hoặc tham chiếu từ một file css riêng biệt. Và hiện nay CSS thường được viết riêng thành một tập tin với mở rộng là .css Chính vì vậy mà các trang web có sử dụng CSS thì mã HTML sẽ trở nên ngắn gọn và trong sáng hơn. Ngoài ra có thể sử dụng 1 tập tin CSS đó cho nhiều website tiết kiệm rất nhiều thời gian và công sức. Một đặc điểm quan trọng đó là tính kế thừa của CSS do đó sẽ giảm được số lượng dòng code mà vẫn đạt được yêu cầu.  
+     Tuy nhiên đối với CSS thì các trình duyệt hiểu theo kiểu riêng của nó. Do vậy việc trình bày 1 nội dung trên các trình duyệt khác nhau là không thống nhất.
+     CSS3
+     CSS3 là một tiêu chuẩn mới và bản nâng cấp đáng kể của CSS. Là một thành phần làm nên trang website một cách toàn diện nhất với các hỗ trợ sẵn có mà không cần phải dùng tới các thành phần bổ sung bên như như: JavaScript, Jquery, Flash,... khiến cho trang web tải nhanh chóng hơn. Tuy nhiên, với tiêu chuẩn mới này thì trình duyệt của bạn cũng phải là phiên bản mới nhất có hỗ trợ CSS3.
+     CSS3 bổ sung rất nhiều thành phần mới giúp người lập trình web giảm thiểu được rất nhiều tài nguyên từ thành phần bổ sung bên ngoài, đặc biệt CSS3 rất có lợi cho website làm việc hiệu quả mà ít tốn dung lượng tài nguyên, thời gian tải trang.
+     Thành phần mới của CSS3
+     - CSS3 Border
+     - CSS3 Backgrounds
+     - CSS3 Gradients
+     - CSS3 Text Effects
+     - CSS3 Fonts
+     - CSS3 2D Transforms
+     - CSS3 3D Transforms
+     - CSS3 Transitions
+     - CSS3 Animations
+     - CSS3 Multiple Columns
+     - CSS3 User Interface
+2.4 JQuery
+     JQuery là một thư viện JavaScript mở để tạo ra các hiệu ứng có thể tương tác trực tiếp với người dùng một cách nhanh chóng, dễ dàn và hiệu quả hơn nhiều lần với việc sử dụng JavaScript thuần. Để sử dụng ta cần khai báo thư viện của jquery giống như khai báo một tập tin java script. 
+     Cách khai báo sử dụng từ máy chủ google.  
+     <script>
+src=http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.jstype="text/javascript">
+     </script>
+     Hoặc bạn có thể tải về thư viện Jquery từ chính trang chủ của nó: http://jquery.com JQuery có đã phát hành các phiên bản khác nhau, phiên bản hiện tại là phiên bản 1.5.2   
+     Hiện nay Jquery sử dụng rất nhiều trong các ứng dụng web. Với jquery cho phép các nhà phát triển dễ dàng chia sẻ plugin với nhau. Đó là các thư viện jquery được các nhà phát triển sử dụng và chia sẻ với người khác.
+     Để tránh tình trạng quá tải tính năng JQuery cho phép người dung tạo và sử dụng các plugin nếu cần. Cách tạo 1 plugin không quá phức tạp và được hướng dẫn cụ thể, chính vì thế mà cộng đồng sử dụng JQuery đã tạo ra rất nhiều các plugin sang tạo và hữu dụng. Bạn hoàn toàn có thể triển khai các ứng dụng với Jquery mà không cần phải tìm hiểu quá nhiều về Jquery. Thật đơn giản là sử dụng các Plugin được các nhà phát triển và cộng đồng sử dụng xây dựng và chia sẻ. Ví dụ: shadows box, rating stars, Menu, Form,…Bạn có thể tìm hiểu tại: 
+- http://jqueryui.com/  -  Trang chủ về JQuery UI 
+- http://plugins.jquery.com/ - Trang plugin của JQuery
+- http://code.google.com/p/flot/ - Thư viện flot cho JQuery
+2.5 Ajax
+     AJAX (Asynchronous JavaScript and XML)là một nhóm các công nghệ phát triển web được sử dụng để tạo các ứng dụng web động hay các ứng dụng giàu tính Internet (rich Internet application). Từ Ajax được ông Jesse James Garrett đưa ra và dùng lần đầu tiên vào tháng 2 năm 2005 để chỉ kỹ thuật này, mặc dù các hỗ trợ cho Ajax đã có trên các chương trình duyệt từ 10 năm trước. Ajax là một kỹ thuật phát triển web có tính tương tác cao bằng cách kết hợp các ngôn ngữ:
+     HTML (hoặc XHTML) với CSS trong việc hiển thị thông tin
+     Mô hình DOM (Document Object Model), được thực hiện thông qua JavaScript, nhằm hiển thị thông tin động và tương tác với những thông tin được hiển thị
+     Đối tượng XMLHttpRequest để trao đổi dữ liệu một cách không đồng bộ với máy chủ web. (Mặc dù, việc trao đổi này có thể được thực hiện với nhiều định dạng như HTML, văn bản thường, JSON và thậm chí EBML, nhưng XML là ngôn ngữ thường được sử dụng).
+     XML thường là định dạng cho dữ liệu truyền, mặc dù bất cứ định dạng nào cũng có thể dùng, bao gồm HTML định dạng trước, văn bản thuần (plain text), JSON và ngay cả EBML.
+     Giống như DHTML, LAMP hay SPA, Ajax tự nó không phải là một công nghệ mà là một thuật ngữ mô tả việc sử dụng kết hợp một nhóm nhiều công nghệ với nhau. Trong đó, HTMLvà CSS được kết hợp với nhau để đánh dấu và định kiểu thông tin. DOM và JavaScript kết hợp lại để hiển thị thông tin động và cho phép người dùng tương tác với các thông tin này. JavaScript cùng với đối tượng XMLHttpRequest hỗ trợ việc trao đổi dữ liệu bất đồng bộ giữa trình duyệt và máy chủ nhằm hạn chế việc tải lại nguyên trang.
+     Trong thực tế, các công nghệ dẫn xuất hoặc kết hợp dựa trên Ajax như AFLAX cũng đã xuất hiện.
+a) Ưu điểm
+     Trong nhiều trường hợp, các trang web chứa rất nhiều nội dung thông thường trong trang. Nếu sử dụng các phương pháp truyền thống, những nội dung đó sẽ phải nạp lại toàn bộ với từng yêu cầu. Tuy nhiên, nếu sử dụng Ajax, một ứng dụng web có thể chỉ yêu cầu cho các nội dung cần thiết phải cập nhật, do đó giảm lượng lớn băng thông và thời gian nạp trang.
+     Việc dùng các yêu cầu không đồng bộ (asynchronous request) cho phép giao diện người dùng của ứng dụng hiển thị trên trình duyệt giúp người dùng trải nghiệm sự tương tác cao, với nhiều phần riêng lẻ.
+     Việc sử dụng Ajax có thể làm giảm các kết nối đến server, do các mã kịch bản (script) và các style sheet chỉ phải yêu cầu một lần.
+b) Nhược điểm
+     Các trang web được tạo động không được ghi vào bộ lưu lịch sử lướt web của trình duyệt, do đó nút "back" (quay lui) của trình duyệt sẽ mất tác dụng quay lại trang thái trước đó của trang sử dụng Ajax, thay vào đó sẽ quay lại trang web trước đó mà người dùng ghé thăm. Để khắc phục có thể dùng các IFrame không hiển thị để gây ra sự thay đổi trong lịch sử trình duyệt và thay đổi phần neo của URL (bằng mã a #) khi chạy Ajax và theo dõi những sự thay đổi của nó. 
+     Việc cập nhật các trang web động cũng gây khó khăn cho người dùng trong việc bookmark (đánh dấu địa chỉ yêu thích) một trạng thái nào đó của ứng dụng. Cũng có những cách khắc phục cho vấn đề này, một số trong đó sử dụng mã xác định đoạn (fragment identifier) URL (phần URL ở sau dấu '#') để lưu vết, và cho phép người dùng đánh dấu và quay lại một trạng thái nào đó của ứng dụng. 
+     Do hầu hết các web crawler không thực thi mã JavaScript, các ứng dụng web sẽ cung cấp một phương thức thay thế để truy cập nội dung thông thường được truy cập bằng Ajax, để cho phép các máy tìm kiếm lập chỉ mục chúng. 
+     Bất kỳ người dùng nào có trình duyệt không hỗ trợ Ajax hay JavaScript, hoặc đơn giản là đã bị vô hiệu hóa JavaScript, sẽ đương nhiên không thể sử dụng Ajax. Tương tự, các thiết bị như điện thoại di động, PDA, và thiết bị đọc màn hình (screen reader) có thể không hỗ trợ JavaScript hay đối tượng XMLHttp được yêu cầu. Ngoài ra, các thiết bị đọc màn hình nếu có thể sử dụng Ajax đi nữa cũng vẫn có thể không đọc chính xác các nội dung động. 
+     Chế độ same origin policy (chế độ gốc đơn điệu) có thể không cho phép sử dụng Ajax thông qua các tên miền, mặc dù W3C đã có một đồ án sơ thảo để cho phép điều này. 
+     Việc thiếu các chuẩn cơ bản của Ajax đồng nghĩa với việc không có nhiều sự chọn lựa thực tiễn tốt nhất để kiểm tra các ứng dụng Ajax. Các công cụ kiểm thử cho Ajax thường không hiểu các mô hình sự kiện, mô hình dữ liệu và giao thức của Ajax.
+     Mở ra một cách thức khác cho việc tấn công của các đoạn mã độc mà những nhà phát triển web có thể không kiểm thử hết được. 
+     
+     
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Giới thiệu chung
+3.1.1 Tổng quan về đề tài
+3.1.1.1. Xác định yêu cầu hệ thống
+- Cơ bản áp dụng rộng rãi, phổ biến cho nhiều người có thể sử dụng được, ít xảy ra lỗi, đầy đủ, rành mạch, rõ ràng...	
+- Có các chức năng cơ bản như: Quản lý bài đăng, Quản lý thể loại, Quản lý người dùng…
+- Giao diện đơn giản, thân thiện, đẹp và dễ nhìn.
+- Đáp ứng được tính bảo mật trên website nói chung.
+- Thao tác nhanh chóng, hợp lý, hiệu quả, chính xác.
+- Cập nhật, phục hồi và sao lưu dữ liệu.
+3.1.1.2. Xác định yêu cầu cụ thể từng chức năng
+      Những khảo sát và mục tiêu cần hướng tới ở trên, một yêu cầu cấp thiết cần đặt ra là xây dựng và phát triển một website xây dựng 1 website tin tức. Việc xây dựng website phải đáp ứng được những yêu cầu sau:
+• Cung cấp cho người truy cập:
+➢ Thông tin về bất động sản trên cả nước.
+➢ Những bài viết tư vấn, chia sẻ kinh nghiệm.
+• Quản bài đăng: Website có lượng thông tin nhiều được chia thành nhiều loại tin, thông tin được tổ chức phân chia theo nhiều nhóm, nhiều cấp nên phải quản lý một cách dễ dàng, tìm kiếm chính xác.
+• Cho phép thay đổi cập nhật thông tin.
+• Website phải có chức năng phản hồi cho người xem qua đó ta có thể tiếp thu được những ý kiến đóng góp của người truy cập để hoàn thiện website theo đúng mục tiêu hơn.
+• Website đảm bảo tính bảo mật trong quản trị, tối ưu hóa về quản trị nội dung, đăng tải một cách dễ dàng, thân thiện với đối tượng người truy cập.
+3.2 Biểu đồ Use – case
+3.2.1 Danh sách Actor
+STTTên ActorÝ nghĩa/Ghi chú01NguoiQuanLyNgười quản lý hệ thống website03NguoiDungNgười dùng    Bảng 1: Danh sách Actor
+3.2.2 Danh sách các Use – case
+STTTên Use-caseÝ nghĩa/Ghi chú01QuanLyBaiDangQuản lý bài đăng, tin tức02QuanLyTaiKhoanQuản lý người dùng03QuanLyTheLoaiQuản lý thể loại04QuanLyCauHinhQuản lý cấu hình hệ thống    Bảng 2: Danh sách Use-case
+3.2.3 Đặc tả Use – case
+3.2.3.1. Biểu đồ Use-case tổng quan
+a) Biểu đồ Use-case tổng quát của hệ thống
+
+Hình 1. Biểu đồ Use-case tổng quát của hệ thống
+b) Biểu đồ Use-case “Người quản lý” tổng quan 
+
+Hình 2. Biểu đồ Use-case “Người quản lý” tổng quan 
+     
+c) Biểu đồ Use-case “Người dùng” tổng quan
+
+    Hình 3. Biểu đồ Use-case “Người dùng” tổng quan
+3.2.3.2. Đặc tả chi tiết các biểu đồ Use-case
+a) Biểu đồ Use-case “Đăng nhập”
+
+    Hình 4. Biểu đồ Use-case “Đăng nhập”
+     Mô tả tóm tắt:
+o Tên Ca sử dụng: Đăng nhập.
+o Mục đích: Đảm bảo xác thực người quản lý và các yêu cầu về bảo mật của hệ thống.
+o Tác nhân: Người quản lý.
+• Tóm lược: Người quản lý muốn sử dụng các dịch vụ hệ thống thì phải cung cấp thông tin là username và mật khẩu đăng nhập vào hệ thống. Hệ thống sẽ kiểm tra  thông tin xem người dùng có đúng là thành viên của hệ thống không, nếu đúng thì người quản lý có thể truy cập vào hệ thống với quyền nhất định đã được quy định: quyền admin 
+      Mô tả kịch bản:	
+• Thông tin đầu vào: Username và Password
+• Điều kiện đầu vào:Không có
+• Dòng sự kiện chính:
+
+Hành động của tác nhânPhản ứng của hệ thống1. Chọn chức năng đăng nhập khi đã có tài khoản hoặc sau khi đăng kí xong hệ thống tự động cho thành viên vào trang đăng nhập.
+3. Nhập thông tin tài khoản.
+4. Gửi thông tin đăng nhập tới hệ thống.
+
+2. Hiển thị trang chủ, tại đây người dùng có thể đăng nhập vào hệ thống.
+
+5. Kiểm tra thông tin đăng nhập, nếu đúng thì cho phép truy cập hệ thống, sai thì thông báo lỗi.• Dòng sự kiện phụ:
+- Nếu người dùng (đã là thành viên của trang web) nhập tên truy cập  (Username) và mật khẩu (Password) không đúng thì hệ thống sẽ đưa ra thông báo yêu cầu nhập lại.
+- Khi khách hàng nhập chính xác thông tin tài khoản của mình, hệ thống xử lí và thông báo đăng nhập thành công, tự động bật lên trang chủ cho người dùng thao tác với các chức năng khác.
+- Đối với người quản lí, nếu dùng Username, Password không đúng, hệ thống thông báo thông tin đăng nhập sai. Nếu thông tin đăng nhập chính xác, thông báo đăng nhập thành công và chuyển đến trang quản trị.
+Người quản trị hay người dùng muốn thay đổi thông tin tài khoản, chọn chức năng thay đổi mật khẩu, hệ thống hiển thị trang thay đổi mật khẩu
+b) Biểu đồ Use-case chức năng “Quản lý bài đăng”
+
+    Hình 5. Biểu đồ Usecase chức năng Quản lý bài đăng
+     Mô tả tóm tắt:
+• Tên Ca sử dụng: QuanLyBaiDang
+• Mục đích: Để giúp cho NQL quản lý dễ dàng các thông tin về bài đăng( Tênbài đăng, tiêu đề, ngày đăng, nội dung tin, hình ảnh, người đăng,…  giúp cho người quản lý có thể dễ dàng quản lý thông tin về các bài đăng.
+• Tác nhân: Người quản lý
+• Tóm lược: Khi NQL đã đăng nhập thành công thì Use Case sẽ được gọi để giúp NQL có thể lựa chọn các chức năng: nhập thông tin cho một bài đăng hay tìm kiếm thông tin về một bài đăng đã có trong hệ thống thông qua các Use Case tương ứng QuanLyBaiDang. Khi NQL thao tác với chức năng nhập, hệ thống sẽ kiểm tra thông tin NQL nhập vào, nếu sai hoặc không hợp lệ thì liệt kê các lỗi không hợp lệ cho NQL biết và cho phép nhập lại. Nếu các thông tin NQL cung cấp đầy đủ và chính xác, hệ thống cho phép thêm thông tin này vào CSDL và thông báo thêm mới thành công
+Mô tả các kịch bản:
+• Thông tin đầu vào:Là các thông tin của bài đăng như sau:
+- ID bài đăng
+- Tên bài đăng
+- Mô tả
+- Giá
+- Tiêu đề
+- Người đăng.
+- Ngày đăng.
+- Hình ảnh.
+- Nội dung tin.
+- Trạng thái bài đăng
+- Thể loại
+• Điều kiện đầu vào: NQL cần phải đăng nhập thành công vào hệ thống.
+• Dòng sự kiện chính:
+     Hành động của tác nhân     Phản ứng của hệ thống     1.Người quản lí chọn chức năng QuanLyBaiDang
+     
+     3. Chọn chức năng: Nhập thông tin bài đăng, khi có tin mới, NQL tiến hành việc nhập thông tin về bài đăng đó vào hệ thống nhằm phục vụ cho việc quản lí thông tin bài đăng một cách dễ dàng 
+     5. NQL nhập các thông tin củabài đăngmà hệ thống yêu cầu.
+     6. Gửi thông tin đã nhập tới hệ thống
+     
+     
+     
+     8.Chọn một trong các chức năng sửa lại thông tin của một bài đăng đã lưu trước.
+     
+     
+     10. Tìm kiếm và chọn bài đăng cần sửa thông tin
+     11. Cập nhập lại các thông tin muốn sửa
+     12. Gửi thông tin đã nhập lại đến hệ thống     
+     2. Hiển thị danh sách các chức năng quản lí thông tin bài đăng có trong hệ thống, cho phép NQL lựa chọn
+     
+     4. Hiển thị trang nhập thông tin bài đăng.
+     
+     
+     
+     
+     7. Kiểm tra thông tin đã nhập, nếu chính xác thì lưu thông tin này vào cơ sở dữ liệu và thông báo nhập mới thành công, trường hợp sai so với định dạng đã thống nhất  thì thông báo thêm mới không thành công. Hệ thống hiển thị danh sách bài đăng mới cập nhật lại cho NQL kiểm tra lại các thông tin đã nhập mới vào CSDL.
+     9. Hiển thị trang cho phép sửa thông tin bài đăng.
+     
+     
+     
+     13. Kiểm tra thông tin đã cập nhật lại, nếu chính xác thì lưu thông tin này vào CSDL và thông báo cập nhập thành công, trường hợp sai so với định dạng đã thống nhất  thì thông báo cập nhật không thành công. Hệ thống hiển thị danh sách bản ghi mới cập nhật cho NQL kiểm tra lại thông tin     Dòng sự kiện phụ: 
+• Nếu NQL nhập các thông tin sai định dạng thì hệ thống thông báo yêu cầu nhập lại.
+     Mỗi  bài đăng nhập vào CSDL có một mã riêng để phân biệt với các bài đăng khác, mã này được hệ thống cung cấp tự động.
+c) Biểu đồ Use-case chức năng “Quản lý thể loại”
+
+    Hình 6. Biểu đồ Usecase chức năng Quản lý thể loại
+     Mô tả tóm tắt:
+• Tên Ca sử dụng: QuanLyTheLoai
+• Mục đích: Để giúp cho NQL quản lý dễ dàng các thông tin về các thể loại tin  
+• Tác nhân: Người quản lý
+• Tóm lược: Khi NQL đã đăng nhập thành công thì Use Case sẽ được gọi để giúp NQL có thể lựa chọn các chức năng: nhập thông tin cho một thể loại hay tìm kiếm thông tin về một thể loại đã có trong hệ thống thông qua các Use Case tương ứng QuanLyTheLoai. Khi NQL thao tác với chức năng nhập, hệ thống sẽ kiểm tra thông tin NQL nhập vào, nếu sai hoặc không hợp lệ thì liệt kê các lỗi không hợp lệ cho NQL biết và cho phép nhập lại. Nếu các thông tin NQL cung cấp đầy đủ và chính xác, hệ thống cho phép thêm thông tin này vào CSDL và thông báo thêm mới thành công
+Mô tả các kịch bản:
+• Thông tin đầu vào:Là các thông tin của thể loại như sau:
+- ID thể loại
+- Tên Thể loại 
+- Mô tả
+- Link
+- Ngày tạo
+- Trạng thái
+• Điều kiện đầu vào: NQL cần phải đăng nhập thành công vào hệ thống.
+• Dòng sự kiện chính:
+     Hành động của tác nhân     Phản ứng của hệ thống     1.Người quản lí chọn chức năng QuanLyTheLoai
+     
+     3. Chọn chức năng: Nhập thông tin thể loại, khi có thể loại mới, NQL tiến hành việc nhập thông tin về thể loại đó vào hệ thống nhằm phục vụ cho việc quản lí thể loại một cách dễ dàng 
+     5. NQL nhập các thông tin củathể loạimà hệ thống yêu cầu.
+     6. Gửi thông tin đã nhập tới hệ thống
+     
+     
+     
+     8.Chọn một trong các chức năng sửa lại thông tin của một thể loại đã lưu trước.
+     
+     
+     10. Tìm kiếm và chọn thể loại cần sửa thông tin
+     11. Cập nhập lại các thông tin muốn sửa
+     12. Gửi thông tin đã nhập lại đến hệ thống     
+     2. Hiển thị danh sách các chức năng quản lí thể loại có trong hệ thống, cho phép NQL lựa chọn
+     
+     4. Hiển thị trang nhập thông tin thể loại.
+     
+     
+     
+     
+     7. Kiểm tra thông tin đã nhập, nếu chính xác thì lưu thông tin này vào cơ sở dữ liệu và thông báo nhập mới thành công, trường hợp sai so với định dạng đã thống nhất  thì thông báo thêm mới không thành công. Hệ thống hiển thị danh sách bài đăng mới cập nhật lại cho NQL kiểm tra lại các thông tin đã nhập mới vào CSDL.
+     9. Hiển thị trang cho phép sửa thông tin thể loại
+     
+     
+     
+     13. Kiểm tra thông tin đã cập nhật lại, nếu chính xác thì lưu thông tin này vào CSDL và thông báo cập nhập thành công, trường hợp sai so với định dạng đã thống nhất  thì thông báo cập nhật không thành công. Hệ thống hiển thị danh sách bản ghi mới cập nhật cho NQL kiểm tra lại thông tin     Dòng sự kiện phụ: 
+• Nếu NQL nhập các thông tin sai định dạng thì hệ thống thông báo yêu cầu nhập lại.
+     Mỗi  thể loại nhập vào CSDL có một mã riêng để phân biệt với các thể loại khác, mã này được hệ thống cung cấp tự động.
+d) Biểu đồ Use-case chức năng “Quản lý cấu hình hệ thống”
+
+    Hình 7. Biểu đồ Use-case chức năng “Quản lý cấu hình hệ thống”
+e) Biểu đồ Use-case chức năng “Quản lý người dùng”
+
+    Hình 8. Biểu đồ Use-case chức năng “Quản lý người dùng”
+     Mô tả tóm tắt:
+• Tên Ca sử dụng: QuanLyTaiKhoan
+• Mục đích: Để giúp cho NQL quản lí dễ dàng các thông tin về tài khoản có trong hệ thống.
+• Tác nhân: Người quản lý
+• Tóm lược: Khi NQL đã đăng nhập thành công thì Use Case sẽ được gọi để giúp NQL có thể lựa chọn các chức năng: nhập thông tin cho một tài khoản hay tìm kiếm thông tin về một tài khoản đã có trong hệ thống thông qua các Use Case tương ứng QuanLyTaiKhoan, Khi NQL thao tác với chức năng nhập, hệ thống sẽ kiểm tra thông tin NQL nhập vào, nếu sai hoặc không hợp lệ thì liệt kê các lỗi không hợp lệ cho NQL biết và cho phép nhập lại. Nếu các thông tin NQL cung cấp đầy đủ và chính xác, hệ thống cho phép thêm thông tin này vào CSDL và thông báo thêm mới thành công
+Mô tả các kịch bản:
+• Thông tin đầu vào:Là các thông tin của tài khoản như sau:
+- ID tài khoản
+- Tên tài khoản
+- Mật khẩu
+- Họ tên
+- Ngày sinh
+- Giới tính
+- Email
+- Địa chỉ
+- Số điện thoại
+- Ảnh đại diện
+- Trạng thái
+- Ngày tạo
+• Điều kiện đầu vào: NQL cần phải đăng nhập thành công vào hệ thống.
+• Dòng sự kiện chính:
+     Hành động của tác nhân     Phản ứng của hệ thống     1.Người quản lí chọn chức năng QuanLyTinTuc
+     
+     3. Chọn chức năng: Nhập thông tin tài khoản, khi có tin mới, NQL tiến hành việc nhập thông tin về tài khoản đó vào hệ thống nhằm phục vụ cho việc quản lí thông tin tài khoản một cách dễ dàng 
+     5. NQL nhập các thông tin của tài khoản mà hệ thống yêu cầu.
+     6. Gửi thông tin đã nhập tới hệ thống
+     
+     
+     
+     8.Chọn một trong các chức năng sửa lại thông tin của một tài khoản đã lưu trước.
+     
+     
+     10. Tìm kiếm và chọn tài khoản cần sửa thông tin
+     11. Cập nhập lại các thông tin muốn sửa
+     12. Gửi thông tin đã nhập lại đến hệ thống     
+     2. Hiển thị danh sách các chức năng quản lí thông tin tài khoản có trong hệ thống, cho phép NQL lựa chọn
+     
+     4. Hiển thị trang nhập thông tin tài khoản.
+     
+     
+     
+     
+     7. Kiểm tra thông tin đã nhập, nếu chính xác thì lưu thông tin này vào cơ sở dữ liệu và thông báo nhập mới thành công, trường hợp sai so với định dạng đã thống nhất thì thông báo thêm mới không thành công. Hệ thống hiển thị danh sách tài khoản mới cập nhật lại cho NQL kiểm tra lại các thông tin đã nhập mới vào CSDL.
+     9. Hiển thị trang cho phép sửa thông tin tài khoản.
+     
+     
+     
+     13. Kiểm tra thông tin đã cập nhật lại, nếu chính xác thì lưu thông tin này vào CSDL và thông báo cập nhập thành công, trường hợp sai so với định dạng đã thống nhất thì thông báo cập nhật không thành công. Hệ thống hiển thị danh sách bản ghi mới cập nhật cho NQL kiểm tra lại thông tin     Dòng sự kiện phụ: 
+• Nếu NQL nhập các thông tin sai định dạng thì hệ thống thông báo yêu cầu nhập lại.
+Mỗi tài khoản nhập vào CSDL có một mã riêng để phân biệt với các tài khoản khác, mã này được hệ thống cung cấp tự động.
+3.3 Biểu đồ lớp
+3.3.1 Danh sách các lớp đối tượng và quan hệ
+STTTên lớp/quan hệLoạiÝ nghĩa/Ghi chú1BaiDangBài đăng2TheLoaiThể loại3TaiKhoanNgười dùng4CauHinhCấu hình hệ thống    Bảng 3. Danh sách các lớp đối tượng và quan hệ
+3.3.2 Chi tiết các lớp đối tượng
+a) Lớp Tài khoản
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IDTaiKhoanpublicMã tài khoản2TenTaiKhoanPublicTên tài khoản3MatKhauPublicMật khẩu4HoTenPublicHọ tên5NgaySinhpublicNgày sinh6GioiTinhPublic Giới tính7EmailPublic Email8DiaChiPublic Địa chỉ9AnhDaiDienPublic Ảnh đại diện10TrangThaiNguoiDungPublicTrạng thái người dùng11QuyenPublicQuyền12NgayTaoPublicNgày tạo    Bảng 4. Lớp Tài Khoản
+b) Lớp Bài đăng
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IDBaiDangpublicMã bài đăng2TenBaiDangPublicTên bài đăng3MoTaPublicMô tả4GiaPublic Giá5TieuDePublic Tiêu đề6AnhDaiDienPublicẢnh đại diện7NoiDungPublicNội dung8IDTaiKhoanPublicID tài khoản9NgayDangPublicNgày đăng10TrangThaiBaiDangPublicTrạng thái bài đăng11IDTheLoaiPublicID thể loại12LuotXemPublicLượt xem    Bảng 5. Lớp Bài đăng
+c) Lớp Cấu hình
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IDpublicMã công ty2TenCongTyPublicTên công ty3MoTaPublicMô tả công ty4DiaChiPublicĐịa chỉ công ty5SoDienThoaiPublicSố điện thoại6EmailPublicEmail7FaxPublicFax    Bảng 6. Lớp cấu hình
+d) Lớp Thể loại
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IDTheLoaipublicMã thể loại2TenTheLoaiPublicTên thể loại3MoTaPublicMô tả4LinkPublicLink5NgayTaoPublicNgày tạo6TrangThaiPublicTrạng thái    Bảng 7. Lớp Thể loại
+3.3.3. Biểu đồ lớp (Mức tổng quát)
+
+    Hình 9. Biểu đồ lớp mức tổng quát
+3.4 Biểu đồ tuần tự
+3.4.1 Biểu đồ tuần tự cho chức năng đăng nhập
+
+    Hình 10. Biểu đồ tuần tự cho chức năng đăng nhập
+3.4.2 Biểu đồ tuần tự chức năng Thêm mới người dùng dành cho “Người quản lý”
+
+    Hình 11. Biểu đồ tuần tự chức năng Thêm mới người dùng dành cho “Người quản lý”
+3.4.3 Biểu đồ tuần tự nhập thông tin tin tức
+
+    Hình 12. Biểu đồ tuần tự nhập thông tin tin tức
+3.4.4 Biểu đồ tuần tự Sửa thông tin tin tức
+
+    Hình 13. Biểu đồ tuần tự Sửa thông tin tin tức
+3.4.6	Biểu đồ tuần tự cho chức năng xóa tin tức
+
+    Hình 14. Biểu đồ tuần tự cho chức năng xóa tin tức
+3.4.7. Biểu đồ tuần tự cho chức năng tìm kiếm tin tức
+
+    Hình 15. Biểu đồ tuần tự cho chức năng tìm kiếm tin tức
+3.4.8. Biểu đồ tuần tự chức năng Xem thông tin
+
+    Hình 16. Biểu đồ tuần tự chức năng Xem thông tin
+3.5 Thiết kế cơ sở dữ liệu của hệ thống.
+3.5.1 Biểu diễn cơ sở dữ liệu qua các bảng
+a) Bảng BaiDang
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1IDBaiDangintNot nullKhóa chính2TenBaiDangNvachar(300)Null3MoTaNvarchar(MAX)Null4GiaIntNull5TieuDeNvarchar(300)Null 6AnhDaiDienNvarchar(500)Null7NoiDungNtextNull8IDTaiKhoanIntNot null9NgayDangDateNull10TrangThaiBaiDangNvarchar(50)Null11IDTheLoaiintNot null12LuotXemintNull    Bảng 8. Bảng Bài đăng
+b) Bảng TaiKhoan
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1IDTaiKhoanIntNot nullKhóa chính2TenTaiKhoanNvarchar(30)Null3MatKhauNvarchar(MAX)Null4HoTenNvarchar(50)Null 5NgaySinhDateNull 6GioiTinhNvarchar(20)Null7EmailNvarchar(50)Null8DiaChiNvarchar(200)Null9SDTNvarchar(30)Null10AnhDaiDienNvarchar(100)Null11TrangThaiNguoiDungNvarchar(50)Null12QuyenChar(1)Null13NgayTaoDatetimeNull    Bảng 9. Bảng Tài khoản
+c) Bảng TheLoai
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1IDTheLoaiIntNot nullKhóa chính2TenTheLoaiNvarchar(50)Null3MoTaNtextNull4LinkNvarchar(500)Null 5NgayTaoDatetimeNull 6TrangThaiIntNull    Bảng 10. Bảng Thể loại
+d) Bảng CauHinh
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1IDIntNot null2TenCongTyNvarchar(250)Null3MoTaNvarchar(MAX)Null3SoDienThoaiNvarchar(50)Null4DiaChiNvarchar(150)Null5EmailNvarchar(150)Null6FaxNvarchar(150)null    Bảng 11. Bảng Cấu hình hệ thống
+3.5.2 Mô hình cơ sở dữ liệu
+
+    Hình 17. Mô hình cơ sở dữ liệu của hệ thống
+3.6 Thiết kế giao diện
+3.6.1 Giao diện trang chủ
+
+
+    Hình 18. Giao diện trang chủ Website doanh nghiệp bất động sản
+3.6.2 Giao diện trang Quản trị hệ thống
+3.6.2.1. Chức năng Quản lý Thể loại
+a) Trang Quản lý danh sách thể loại
+
+    Hình 19. Giao diện trang Quản lý danh sách thể loại
+b) Thêm mới Thể loại
+
+    Hình 20. Giao diện trang Thêm mới Thể loại
+c) Sửa Thể loại
+
+    Hình 21. Giao diện trang Sửa Thể loại
+3.6.2.2. Chức năng Quản lý bài đăng
+a) Trang Quản lý danh sách bài đăng
+
+    Hình 22. Giao diện trang Quản lý danh sách bài đăng
+b) Thêm mới bài đăng
+
+
+    Hình 23. Giao diện trang Thêm mới bài đăng
+c) Sửa bài đăng
+
+
+    Hình 24. Giao diện trang Sửa bài đăng
+d) Xem chi tiết bài đăng
+
+
+    Hình 25. Giao diện trang Xem chi tiết bài đăng
+3.6.2.3. Chức năng Quản lý người dùng
+a) Trang Quản lý danh sách người dùng
+
+    Hình 26. Giao diện trang Quản lý danh sách người dùng
+b) Thêm mới người dùng
+
+    Hình 27. Giao diện trang Thêm mới người dùng
+c) Sửa người dùng
+
+     Hình 28. Giao diện trang Sửa người dùng
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+     Sau thời gian nghiên cứu hệ thống cùng với sự hướng dẫn tận tình của thầy giáo hướng dẫn đồ án tốt nghiệp, em đã dần hoàn thành bài báo cáo của mình. Tuy nhiên, với yêu cầu đề ra em vẫn còn những hạn chế nhất định.
+     Trong quá trình thực hiện cùng với sự hướng dấn tận tình của thầyNguyễn Văn Hậu, em đã cố gắng tìm hiểu để hiểu hệ thống và đạt được một số kết quả sau;
+     Về công nghệ;
+• Tìm hiểu và nắm bắt được các công cụ thiết kế Web
+• Các dịch vụ trên Internet và thương mại điện tử
+• Tìm hiểu về ASP.NET MVC
+• Hệ quản trị cơ sở dữ liệu SQL Server 2014
+• Ngôn ngữ lập trình C#
+     Ứng dụng cơ sở lý thuyết vào việc xây dựng Website;
+• Phân tích thiết kế và xây dựng được cơ sở dữ liệu hệ thống
+• Thiết kế được giao diện cơ bản của trang Web
+• Cho phép người dùng tìm kiếm, xem thông tin bất động sản một cách nhanh chóng, thuận tiện
+• Hỗ trợ quản trị được website cũng như quản lý được các chức năng cơ bản của website
+4.2 Hạn chế của đề tài
+     Hệ thống website doanh nghiệp bất động sản mới dừng lại ở các module cơ bản của hệ thống tin tức, chưa có nhiều module tiện ích cho người dùng như: Thống kê lượt truy cập theo tháng, thăm dò ý kiến, hỏi đáp,…
+     Hệ thống website chưa giải quyết hết các vấn đề bài đã phân tích đặt ra
+4.3 Hướng phát triển của đề tài
+     -Phát triển thêm một số chức năng của hệ thống để hoàn thiện hơn hệ thống đối với người sử dụng
+TÀI LIỆU THAM KHẢO
+x
+[1]Phạm Hữu Khang, Lập trình ASP.NET 2.0. Hà Nội, Việt Nam: Nhà xuất bản Lao Động Xã Hội, 2005.[2]Nguyễn Văn Quyết, Giáo trình Công nghệ Web và ứng dụng. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY, 2010.x
+     
+PHỤ LỤC
+     
+     
+Xây dựng Website doanh nghiệp bất động sản
+    
+    
+55
+    
+    

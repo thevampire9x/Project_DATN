@@ -1,0 +1,317 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Trong những năm gần đây, các công nghệ nổ ra những phần mềm hiện đại đã làm nên cuộc cách mạng công nghệ 4.0. Một số giải pháp truyền thống đem lại những trải nghiệm không thông minh làm cho người dùng chán không ưu thích trên tất cả nền tảng. Trước tiên chúng ta cần hiểu thêm về công nghệ 4.0 là gì và tại sao lại nổ ra cuộc cách mạng công nghệ 4.0.
+    Công nghệ 4.0 là xu hướng hiện thời trong việc tự động hóa và trao đổi dữ liệu trong công nghệ sản xuất. Công nghệ 4.0 tạo ra "nhà máy thông minh" (tiếng Anh: smart factory). Trong các nhà máy thông minh với cấu trúc kiểu mô-đun, hệ thống thực-ảo giám sát các quy trình thực tế, tạo ra một bản sao ảo của thế giới thực và đưa ra các quyết định phân tán. Qua Internet Vạn Vật, các hệ thống thực-ảo giao tiếp và cộng tác với nhau và với con người trong thời gian thực, và với sự hỗ trợ của Internet Dịch vụ, dịch vụ nội hàm và dịch vụ xuyên tổ chức được cung cấp cho các bên tham gia chuỗi giá trị sử dụng.
+    Cách mạng công nghệ lần thứ tư ra đời dựa trên cơ sở nền tảng của cuộc cách mạng công nghệ lần thứ ba nội dung chủ yếu là các phát minh, phát kiến và sự kết hợp của ba “đại xu hướng”: vật lý, số hóa và sinh học, hay là sự kết hợp của ba thế giới: thế giới vật chất, thế giới ảo (thế giới số) và thế giới sinh vật. Đây là cuộc cách mạng phát triển mạnh mẽ với tốc độ chóng mặt lên đến cấp số nhân so với 3 cuộc cách mạng trước. Đặc trưng của cuộc cách mạng công nghệ 4.0 đó chính là sự hợp nhất về mặt công nghệ, cũng từ đó xóa bỏ ranh giới giữa các lĩnh vực vật lý, kỹ thuật số và sinh học, đem lại sự kết hợp giữa hệ thống ảo và thực thể.
+    Một số công nghệ nổi bật như: VR (Virtual Reality) hay còn được gọi với cái tên thực tế ảo, AR (Augmented Reality) công nghệ tương tác ảo, IoT (Internet of Things) một trong những yếu tố quan trọng của mọi dự báo về công nghệ tương lai và một số công nghệ khác.
+    
+    Các mạng công nghệ đã về tới Việt Nam trong vài năm gần đây. Nó ảnh hưởng đến hầu hết các ngành nghề từ giáo dục đến các ngành kỹ thuật, từ những em nhỏ tới người cao tuổi, đem lại một sự trải nghiệm vô cùng tuyệt vời.
+    Trong bối cảnh Việt Nam đang hội nhập sâu rộng vào nền kinh tế thế giới với việc hoàn tất nhiều hiệp định thương mại tự do quy mô lớn như TPP, FTA với EU, Liên minh kinh tế Á - Âu..., việc tiếp cận thành tựu cách mạng sản xuất mới sẽ tạo ra công cụ đắc lực giúp Việt Nam tham gia hiệu quả chuỗi giá trị toàn cầu và đẩy nhanh quá trình công nghiệp hóa, hiện đại hóa đất nước. Những cải cách công nghệ mang tính đột phá có thể dẫn đến những điều kỳ diệu trong sản xuất và năng suất.
+    Tuy nhiên, CMCN 4.0 lần này cũng đang đặt ra nhiều thách thức mới đối với các nước đang phát triển như Việt Nam. Đó là thách thức tụt hậu xa hơn, lao động chi phí thấp mất dần lợi thế, khoảng cách công nghệ và tri thức nới rộng hơn dẫn đến phân hóa xã hội sẽ sâu sắc hơn... Chính phủ, các doanh nghiệp, các trung tâm nghiên cứu và cơ sở giáo dục tại Việt Nam cần phải nhận thức được và sẵn sàng thay đổi và có chiến lược phù hợp cho việc phát triển công - nông nghiệp, dịch vụ và kinh tế hay nguồn nhân lực trong thời kỳ Internet vạn vật và cuộc CMCN 4.0.
+    Cuộc cách mạng công nghệ (CMCN) lần thứ tư đã và đang đến. Đây là cuộc cách mạng chưa từng có trong lịch sử nhân loại, nó sẽ diễn biến rất nhanh, là sự kết hợp của công nghệ trong các lĩnh vực vật lý, số hóa và sinh học, tạo ra những khả năng hoàn toàn mới và có tác động sâu sắc đối với các hệ thống chính trị, xã hội, kinh tế của thế giới.
+    Cuộc cách mạng sản xuất mới này được dự đoán sẽ tác động mạnh mẽ đến mọi quốc gia, chính phủ, doanh nghiệp và người dân khắp toàn cầu, cũng như làm thay đổi căn bản cách chúng ta sống, làm việc và sản xuất.
+    Thực tế hiện nay, khi chúng ta được trải nghiệm với những phần mềm thông minh, giao tiếp giọng nói, tương tác với những vật là ảo sẽ cho chúng ta những cảm nhận vô cùng thích thu và đặc biệt có những phần mềm hỗ trợ việc trợ lý ảo…
+1.2 Mục tiêu của đề tài
+    Để tiếp xúc và nghiên cứu cuộc cách mạng 4.0, tôi xin đem tới một công nghệ mà nổi nhất tới thời điểm hiện tại sau VR đó là AR công nghệ tương tác ảo.
+    AR (Augmented Reality - Thực tế Tăng cường) thì khác một xíu! Mặc dù cái nền vẫn là các sản phẩm ảo (như ứng dụng) nhưng nó lại có cơ chế và cách hoạt động dựa vào thực tế. Một công nghệ cho phép lồng ghép thông tin ảo vào thế giới thực (và ngược lại), nó giúp người sử dụng tương tác với những nội dung số trong thực tại (như chạm vào, phủ vật thể lên trên - nói dễ hiểu là ghép ảnh theo dạng 3D) ...
+    Xây dựng ứng dụng mô phỏng hình ảnh, màu thành một mô hình 3d, cho phép tương tác ảo, xoay nhân vật, đồng thời cung cấp những hình ảnh ngộ nghĩnh, con vật sống động, giúp trẻ em thích học hơn.
+    Áp dụng công nghệ AR, một công nghệ tương tác ảo, thêm những con vật không màu dựa trên những hình ảnh 2D thông thường. Người dùng tô màu vào bộ phận của con vật thì ứng dụng sẽ mô phỏng lại màu tương ứng đã tô lên bộ phận mô hình 3D trong ứng dụng…. Hứa hẹn sẽ là ứng dụng phổ biến, giúp khả năng học hỏi, chủ động trong việc học dành cho các em nhỏ.
+1.3 Giới hạn và phạm vi của đề tài
+    Đề tài xây dựng một ứng dụng và trình bày về công nghệ AR, công nghệ tương tác ảo. Dựa trên bối cảnh thật để thêm chi tiết ảo, người dùng có thể tương tác với những vật ảo. 
+    Hệ thống mô tả rõ nét hơn về AR, một ứng dụng dành cho trẻ nhỏ, từ những bức ảnh trẻ nhỏ có thể nhìn thấy con vật trên bức ảnh, ngoài ra có cho phép tô màu trên bức ảnh 2D sau đó hiển thị màu đã tô lên Object 3D trên ứng dụng. Và dựa trên từng Object sẽ gắn với một khung cảnh riêng đồng thời có thể thấy Object chuyển động, phát ra âm thanh, …
+    Sử dụng công cụ Unity, nền tảng mobile, VisualStudio 2017 lập trình C# script. 3Dmax, Photoshop để vẽ và thiết kế các Object.
+1.4 Nội dung thực hiện
+    Hiện một số giải pháp thiết kế ứng dụng AR trên nền các nền tảng không chỉ mobile mà còn cả trên web nhưng còn có những mặt hạn chế nhất định như: thiết kế cồng kềnh và phức tạp, khó khăn trong việc phát triển và bảo trì, đòi hỏi người dùng phải có nhiều kỹ năng về lập trình, thực thi còn chậm. Để tránh sự lặp lại trong công việc thiết kế, tiết kiệm thời gian và thực thi, hiểu hơn về công nghệ tương tác ảo AR, tác giả đề xuất giải pháp xây dựng hệ thống áp dụng công nghệ AR.
+    	Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Nghiên cứu các công cụ hỗ trợ công nghệ AR trên các nền tảng công nghệ Android, IOS, WebGL,...
+- Phân tích yêu cầu và đề xuất giải pháp xây dựng ứng dụng áp dụng AR để làm sáng tỏ về công nghệ AR.
+- Thiết kế đặc tả hệ thống.
+- Thiết kế và xây dựng Object.
+- Lập trình cho các Module của hệ thống
+- Kiểm thử hệ thống.
+- Triển khai thực nghiệm hệ thống mạng Mobile.
+- Sử dụng Unity thiết kế sản phẩm.
+- Ngôn ngữ Script lập trình cho ứng dụng.
+- Sử dụng công nghệ Region Capture để nhận diện màu sắc của hình ảnh 2D tương ứng lên Object 3D.
+- Tích hợp 3Dmaxs thiết kế Object 3D và texture.
+- Sử dụng photoshop thiết kế hình ảnh 2D.
+    
+    
+1.5 Phương pháp tiếp cận
+- Cách tiếp cận : Nghiên cứu các công cụ lập trình ứng dụng AR trên các nền tảng công nghệ khác nhau như Android studio, Xcode 9.3…
+- Tiếp cận trực tiếp với việc lập trình ứng dụng và game trên Unity.
+- Thiết kế Objetc 3D và hình ảnh 2D sử dụng các công cụ 3ds Max, photoshop cs6.
+- Tìm hiểu và tiếp cận trực tiếp với các công cụ hỗ trợ AR như : Vuforia, Toolkit, …
+- Sử dụng các phương pháp nghiên cứu : 
+o Phương pháp đọc tài liệu về Unity, Visual Studio công cụ tạo ứng dụng AR.
+o Phương pháp đọc tài liệu các tool hộ trợ AR.
+o Phương pháp nghiên cứu thực tiễn.
+o Phương pháp thiết kế thực nghiệm đồ họa.
+o Phương pháp thiết kế ứng dụng thực tế.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về AR
+2.1.1 AR là gì?
+    AR là chữ viết tắt của Augmented Reality. Công nghệ thực tế tăng cường AR là sự kết hợp của thế giới thật với thông tin ảo, chứ không hề tách riêng biệt giữa thế giới ảo và thực như VR. Công nghệ AR sẽ bổ sung những chi tiết ảo được tạo bởi máy tính, smartphone vào thế giới thực để tăng cường sự trải nghiệm. Người dùng có thể thoải mái tương tác với những nội dung ảo ngay trong đời thực, như chạm vào, tóm lấy, ... Điển hình trò chơi Pokemon Go là một minh chứng rõ nhất.
+    Một số tool hỗ trợ việc làm ứng dụng AR như: Vuforia, Tookit, ARKit, ARCore…
+2.1.2 Cuộc cách mạng công nghệ 4.0
+    Theo đánh giá của nhiều chuyên gia và nhà kinh tế trên thế giới, cuộc cách mạng công nghệ 4.0 sẽ có những tác động mạnh mẽ tới các ngành, lĩnh vực cụ thể như: sản xuất - tự động hóa, giao thông, tài chính - ngân hàng, giáo dục, y tế, nông nghiệp... Làn sóng công nghệ mới này sẽ giúp các doanh nghiệp nâng cao năng lực sản xuất, đổi mới sáng tạo các sản phẩm dịch vụ, giảm tiêu hao nguyên nhiên liệu, giảm chi phí sản xuất - vận hành, đồng thời đáp ứng chính xác hơn nhu cầu của khách hàng.
+    Nền công nghệ 4.0 là xu thế công nghệ tất yếu mà Việt Nam phải hướng đến để theo kịp các nước phát triển trên thế giới với các công nghệ thông minh như: trí tuệ nhân tạo, Internet vạn vật, tự động hoá, công nghệ in 3D và người máy... “Không nằm ngoài guồng quay, các doanh nghiệp Việt Nam cần có một lộ trình cụ thể để bắt kịp xu hướng phát triển của thế giới trong cách mạng công nghệ 4.0”.
+    Vấn đề đặt ra với Việt Nam trong cuộc cách mạng 4.0 cần được các chuyên gia giúp Chính phủ làm rõ như: giảm bớt các xáo trộn, chuyển dịch lao động ở quy mô lớn khi các mô hình kinh doanh mới ra đời, xu hướng tự động hóa phát triển; đào tạo lực lượng lao động chất lượng cao, có khả năng thích ứng và năng lực đổi mới - sáng tạo; kiến tạo môi trường phát triển toàn diện, mang tính phổ cập giữa các vùng miền, để mọi người dân được hưởng lợi, không ai bị bỏ lại phía sau; nghĩa vụ tài chính, cạnh tranh công bằng giữa các loại hình kinh doanh cần phải kiểm soát tốt.
+    Các công nghệ để lại ấn tượng mạnh và ảnh hưởng cực lớn không chỉ ở Việt Nam mà còn ngoài các nước khác như: AR (Công nghệ tương tác ảo), VR (Công nghệ thực tế ảo), Iot, …
+2.2 Unity và Visual Studio
+2.2.1 Unity
+2.2.1.1   Khái niệm
+    Unity là một commercial game engine, được xây dựng bởi đội ngũ Unity Technologies. Hiện tại đã release đến version 2018 và đang chuẩn bị cho những bước tiến mới.
+    Với các phiên bản đầu tiên như 1.x - 2.x, Unity còn rất đơn giản và gần như chỉ hướng đến các nhà làm game không chuyên với những khả năng đơn giản. Các phiên bản về sau, Unity được cải tiến, nâng cấp và tích hợp nhiều thành phần, công nghệ mạnh mẽ khác để đủ sức phát triển một serious game. Hiện nay, mặc dù cộng đồng sử dụng Unity đa số vẫn là các cá nhân hay các indie team, nhưng Unity vẫn phát triển mạnh với tốc độ rất nhanh, bằng chứng là càng có nhiều cá nhân, công ty sử dụng Unity, đồng thời đã có nhiều tựa game được phát triển bởi Unity được tung ra thị trường (đặc biệt là thị trường game mobile).
+2.2.1.2    Một số đặc điểm
+      Unity tích hợp nhiều công cụ, công nghệ về graphic rendering (DirectX, OpenGL), physic (NVIDIA PhysX), audio (OpenAL) giúp quá trình phát triển game trở nên nhanh và đơn giản hơn khi không phải thực hiện và kết hợp nhiều thành phần riêng lẻ lại với nhau thay vào đó là sự gắn kết liền mạch giữa các thành phần một cách trực quan và logic nhờ sự hỗ trợ trực tiếp từ Unity.
+
+     	Các công cụ, tính năng dành cho mảng thiết kế trực quan, thân thiện thuận lợi cho Designer. Hỗ trợ lập trình bằng nhiều ngôn ngữ (C#, JavaScript, Boo) bởi một thư viện API không kém đồ sộ.
+      Hỗ trợ Networking để phát triển MMO game.
+      Hỗ trợ xuất bản nhiều platforms từ stand alone cho PC và Mac, mobile như iOS và Android, console như PS3, XBOX360, Wii đến các phiên bản chạy trực tiếp trên web nhờ Unity Web Player.
+      Cộng đồng lớn mạnh sẵn sàng chia sẽ kiến thức, tài nguyên. Nhà phát triển thường xuyên tổ chức các hội nghị, hội thảo, các cuộc thi phát triển game với các phần thưởng hấp dẫn.
+2.2.1.3    Các thành phần cơ bản Unity
+      	Asset là những tài nguyên xây dựng nên một dự án Unity. Từ những tập tin hình ảnh, mô hình 3D đến các tập tin âm thanh. Unity gọi các tập tin mà chúng ta dùng để tạo nên trò chơi là tài sản (Asstets). Điều này lý giải tại sao tất cả các tập tin, thư mục của các dự án Unity đều được lưu trữ trong một thư mục có tên “Assets”.
+     	Scenes: Trong Unity, chúng ta cần hiểu một cảnh (hay một phân đoạn) nghĩa là một màn chơi riêng biệt hoặc một khu vực hay thành phần có trong nội dung của trò chơi (ví dụ như Game menu). Bằng cách tạo nên nhiều Scene cho trò chơi, chúng ta có thể phân phối thời gian tải hoặc kiểm tra các thành phần khác nhau của trò chơi một cách riêng lẽ.
+      Game Object:  Khi Assets được sử dụng trong Scene, chúng trở thành Game Object – một thuật ngữ được sử dụng trong Unity (đặc biệt là trong mảng lập trình). Tất cả các Game Object đều chứa ít nhất một thành phần là Transform. Transform là thông tin về vị trí, góc xoay và tỉ lệ của đối tượng, tất cả được mô tả bởi bộ 3 số X, Y, Z trong hệ trục tọa độ. Thành phần này có thể được tùy biến lại trong quá trình lập trình nhằm thay đổi vị trí, góc quay và tỉ lệ của đổi tượng (so với đối tượng gốc) qua các đoạn mã. Từ các thành phần cơ bản này, chúng ta sẽ tạo ra Game Object, với các thành phần khác, bổ sung chức năng cần thiết để xây dựng nên bất kỳ một thành phần nào trong kịch bản Game mà chúng ta đã thiết kế.
+      Components có nhiều hình thức khác nhau. Chúng có thể xác định hành vi, cách xuất hiện, … hay ảnh hưởng đến các khía cạnh khác nhau trong chức năng của Game Object trong trò chơi. Bằng cách “gắn” (attach) chúng vào trong Game Object, chúng ta có thể ngay lập tức áp dụng tác động của chúng lên đối tượng. Những Components phổ biến trong quá trình phát triển trò chơi đều được Unity hỗ trợ sẵn. Ví dụ như thành phần Rigitbody chuyên xử lí các vấn đề vật lý, các yếu tố đơn giản đến từ thực tế khác như ánh sáng, Camera, … Để tạo nên các yếu tố tương tác trong trò chơi, chúng ta sẽ sử dụng Script (mã kịch bản), chúng cũng được xem như là một Components trong Unity.
+      Script: ược Unity xem như một Component, Script là một thành phần thiết yếu trong quá trình phát triển trò chơi và đáng đề cập như một khái niệm “chìa khóa”. Unity cung cấp cho chúng ta khả năng viết Script bằng cả 3 ngôn ngữ là JavaScript, C# và Boo (một dẫn xuất của ngôn ngữ Python). Unity không đòi hỏi chúng ta phải học làm thế nào để lập trình trong Unity, nhưng hầu như chúng ta phải sử dụng Script tại mỗi thành phần trong kịch bản mà chúng ta phát triển. Unity đã xây dựng sẵn một tập hợp đa dạng các Class, Function, … mà chúng ta hoàn toàn có thể ứng dụng trong quá trình lập trình trò chơi của mình. Để viết Script, chúng ta sẽ làm việc với một trình biên tập Script độc lập của Unity, hoặc với chương trình Mono Developer được tích hợp và đồng bộ với Unity trong những phiên bản mới nhất gần đây. Mono Developer là một IDE khá tốt để lập trình khi cung cấp đầy đủ các chức năng của một IDE hoàn chỉnh tương tự Visual Studio. Mã nguồn viết trên Mono Developer sẽ được cập nhật và lưu trữ trong dự án Unity.
+      Prefab là một thành phần khá quan trọng, cho phép chúng ta tạo dựng các gói tài nguyên mà có thể tận dụng lại ở mọi lúc mà chúng ta cần, Prefabs cho phép chúng ta lưu trữ các đối tượng với những Components và những thiết đặt hoàn chỉnh. Có thể so sánh với khái niệm MovieClip trong Adobe Flash, Prefabs chỉ đơn giản là một đối tượng chứa (Container) mà chúng ta có thể đưa bất kỳ một đối tượng hay dữ liệu mẫu nào mà chúng ta muốn tái sử dụng về sau.
+      Giao diện trong Unity: Đây cũng là một thủ tục khi giới thiệu về một phần mềm nào đó – giới thiệu giao diện, tuy nhiên cũng không quá quan trọng, giao diện của Unity đủ thân thiện để có thể dễ dàng làm quen,
+2.2.1.4    Các bước tạo một project trong Unity
+      Chạy phần mềm Unity, cửa sổ Unity hiện ra. Tại đây có thể tạo mới một project hoặc mở một project sẵn có.
+      Để tạo một một project chọn new project. Trong thẻ project, điền các thông tin:
+
+Hình 1: Cửa sổ tạo một project unity
+    Project name: Tên dự án, giả sử là FirstGame
+    Location: Khu vực lưu trữ dự án FirstGame. Hiện tại, tôi đang chọn lưu dự án ở thư mục TUTS. Tuy nhiên, có thể thay đổi thư mục lưu trữ dự án bằng cách nhấp chuột vào biểu tượng ...
+
+Hình 2: Cửa sổ choose location
+      Trong cửa sổ Choose location for new project, tạo mới 1 thư muc tên là FirstGame, sau đó nhấn nút Select Folder.
+      Khi đó, dự án FirstGame sẽ được lưu trữ ở thư mục FirstGame nằm trong đường dẫn "P:\UNITY\TUTS\FirstGame".
+      Trong phần Asset packages, chọn 3D nếu muốn lập trình Game 3D. Tương tự, chọn 2D nếu muốn lập trình Game 2D.
+      Cuối cùng, nhấn Create project để tạo mới 1 dự án Game.
+      Sau khi tạo xọng Unity sẽ hiển thị giao diện mặc định. Đây là nơi mà dành phần lớn thời gian để hoàn thành một game.
+
+Hình 3: Giao diện Unity
+      A: Thanh Menu
+      B: Game: hiển thị thực tế game trên màn hình khi run game.
+      C: Scene: là nơi làm việc chính. Đây chính là vùng làm việc kéo thả thiết kế các đối tượng trong game.
+      D: Hierarchy: list các đối tượng trong Scene.
+      E: Inspector: hiển thị chi tiết các Component (thành phần) của đối tượng.
+      F: Project: hiênt hị các folder, file trong project.
+      G: Console: hiển thị lỗi trong project.
+      Chú ý: Có thể thay đổi vị trí, kích thước các vùng này bằng cách kéo thả, co dãn theo ý muốn.
+      Trong Project folder thường bao gồm 4 thư mục con: Library, Assest, ProjectSettings, và Temp. Project Panel trong Unity interface sẽ hiển thị các nội dung của thư mục Assest, vì đây là nơi các file Game sẽ được lưu trữ khi import. Ba thư mục còn lại có chứa data phức tạp, và được quản lý độc quyền bởi Unity. Nó khuyến khích không bao giờ để tự loại bỏ hoặc chỉnh sửa các file từ bất cứ nơi nào bên trong Project folder hoặc các folder con của nó. làm như vậy có thể dẫn đến Project bị hỏng nếu các file không được sao chép một cách thích hợp. Tôi nghĩ đơn giản là không cần quan tâm đến 3 folder này.
+2.2.2 Visual Studio
+      Microsoft Visual Studio là một môi trường phát triển tích hợp (IDE) từ Microsoft. Nó được sử dụng để phát triển chương trình máy tính cho Microsoft Windows, cũng như các trang web, các ứng dụng web và các dịch vụ web. Visual Studio sử dụng nền tảng phát triển phần mềm của Microsoft như Windows API, Windows Forms, Windows Presentation Foundation, Windows Store và Microsoft Silverlight. Nó có thể sản xuất cả hai ngôn ngữ máy và mã số quản lý.
+      Visual Studio bao gồm một trình soạn thảo mã hỗ trợ IntelliSense cũng như cải tiến mã nguồn. Trình gỡ lỗi tích hợp hoạt động cả về trình gỡ lỗi mức độ mã nguồn và gỡ lỗi mức độ máy. Công cụ tích hợp khác bao gồm một mẫu thiết kế các hình thức xây dựng giao diện ứng dụng, thiết kế web, thiết kế lớp và thiết kế giản đồ cơ sở dữ liệu. Nó chấp nhận các plug-in nâng cao các chức năng ở hầu hết các cấp bao gồm thêm hỗ trợ cho các hệ thống quản lý phiên bản (như Subversion) và bổ sung thêm bộ công cụ mới như biên tập và thiết kế trực quan cho các miền ngôn ngữ cụ thể hoặc bộ công cụ dành cho các khía cạnh khác trong quy trình phát triển phần mềm.
+      Visual Studio hỗ trợ nhiều ngôn ngữ lập trình khác nhau và cho phép trình biên tập mã và gỡ lỗi để hỗ trợ (mức độ khác nhau) hầu như mọi ngôn ngữ lập trình. Các ngôn ngữ tích hợp gồm có C. C++ và C++/CLI (thông qua Visual C++), VB.NET (thông qua Visual Basic.NET), C# (thông qua Visual C#) và F# (như của Visual Studio 2010[5]). Hỗ trợ cho các ngôn ngữ khác như J++/J#, Python và Ruby thông qua dịch vụ cài đặt riêng rẽ. Nó cũng hỗ trợ XML/XSLT, HTML/XHTML, JavaScript và CSS. 
+2.3 Vuforia
+2.3.1 Vuforia là gì?
+      Vuforia là một nền tảng được Qualcomm phát triển, giúp cho các lập trình viên có thể hiện thực hóa ý tưởng của mình. Bộ công cụ lập trình vuforia hỗ trợ cả hai hệ điều hành iOS và Androd với các API được cung cấp tương thích với ngôn ngữ lập trình C++, Java, Objective-C và .Net. Vuforia có một thư viện hình ảnh đồ sộ và khả năng nhận biết vật thể phát triển, mã hiệu nhận biết không nhất thiết phải là một hình ảnh cụ thể mà có thể sử dụng các dữ liệu riêng các mã QR... ngoài ra cũng có thể thiết kế các vật thể 3D một cách đơn giản không tốn quá nhiều effort nhờ công cụ Multi-Targets.
+      Vuforia Engine là 1 thư viện phía client, được liên kết tĩnh với ứng dụng. Nó có sẵn client SDK và hỗ trợ Android, iOS và Universal Windows Platform (UWP). Có thể sử dụng Android Studio, Xcode, Visual Studio hoặc Unity – để xây dựng ứng dụng.
+      Vuforia cũng cung cấp dịch vụ nhận dạng đám mây (Cloud Recognition Service) khi ứng dụng cần nhận biết một lượng lớn các hình ảnh hoặc dữ liệu được thường xuyên cập nhật. Vuforia cho phép quản lý dữ liệu hình ảnh lớn này trong đám mây một cách hiệu quả và cho phép tự động tách luồng công việc bằng cách tích hợp trực tiếp vào hệ thống quản lý nội dung.
+      
+      
+      
+      
+2.3.2 Một số thành phần và tính năng
+2.3.2.1   Thành phần
+      	Vuforia Object Scanner: giúp dễ dàng quét vận thể 3D thành 1 file định dạng tương thích với với Vuforia Engine.
+     	Vuforia Target Manager: là một ứng dụng web cho nhà phát triển, giúp nhà phát triển tạo dữ liệu Target cho việc sử dụng trên thiết bị và trên đám mây (đối với lượng lớn Target).
+      	Vuforia Calibration Assistant: các nhà phát triển xây dựng các ứng dụng cho các thiết bị đeo mắt kỹ thuật số có thể sử dụng Calibration Assistant giúp cho người dùng tạo 1 hồ sơ cá nhân cho phép Vuforia SDK hiển thị nội dung chính xác vị trí dựa theo hình dạng gương mặt và thị lực của người dùng cuối.
+2.3.2.2    Tính năng
+      Image Targets: Vuforia có thể phát hiện và theo dõi hình ảnh, thông qua đó hiển thị nội dung thực tế tăng cường phù hợp.
+      VuMark: là một dạng thế hệ mã vạch tiếp theo. Chúng là những con dấu được tùy chỉnh để mã hóa dữ liệu.
+      Multi Targets: bao gồm nhiều Image Target được sắp xếp theo một dạng hình học thông thường (hình hộp) hoặc bất kì cách sắp xếp nào trong mặt phẳng.
+      Cylinder Targets: cho phép phát hiện và theo dõi các vật thể hình trụ. Cylinder Targets cũng hỗ trợ phát hiện và theo dõi các hình ảnh trên mặt phẳng trên và dưới của vật thể.
+      Text Recognition: cho phép nhà phát triển các ứng dụng nhận dạng từ trong từ điển, Vuforia SDK cung cấp danh sách gồm 100.000 từ tiếng Anh thông dụng.
+      Object Recognition: Vuforia cũng có thể phát hiện và theo dõi một vật thể 3D, nó cho phép tạo ứng dụng, triển khai nội dung thực tế tăng cường ngay trên vật thể 3D đó.
+      Smart Terrain: là một công nghệ đột phá có thể tái tạo lại môi trường vật lý của người dùng dưới dạng lưới 3D. Nó cho phép các nhà phát triển tạo ra một lớp môi trường ảo hóa trên sản phẩm thực tế, nơi mà nội dung có thể tương tác với các vật thể và bề mặt vật lý trong thế giới thực. Lưu ý: Smart Terrain chỉ hỗ trợ cho Unity.
+2.4 Một số phần phần mềm khác
+2.4.1   3ds Max
+    3ds Max là một phần mềm diễn họa các vật thể 3 chiều.  Phần mềm tuyệt vời này còn bao gồm thiết kế mô hình 3D, hoạt hình và các trình diễn mô hình 3Ds. Trong phần mềm 3ds Max có nhiều hình dạng độc đáo khác nhau như ấm trà, hình nón, kim tự tháp và hình khối có thể được sử dụng làm cơ sở để phát triển mô hình.
+2.4.2   Region Capture
+    Công cụ hỗ trợ việc nhận diện, những chi tiết từ hình ảnh 2D có thể trở thành những chi tiết của Object 3D.
+2.5 Kiến trúc của một ứng dụng
+    Một ứng dụng thường có 2 phần chính đó là: UI và UX.
+2.5.1   UI
+    UI (User Interface) hay còn được gọi là giao diện người dùng: Đây là những gì người dùng nhìn thấy và giúp họ tương tác với hệ thống (giao diện Web, button, ImageView, ListView, Cell, TableView …)
+2.5.2   UX
+    UX (User Experience) – Trải nghiệm người dùng: Đây là những gì người dùng trải nghiệm khi sử dụng sản phẩm và dịch vụ (Bao gồm cảm xúc, suy nghĩ trong quá trình sử dụng). UI chỉ là một phần của UX.
+    
+    
+    
+2.5.3   Quan hệ giữ UI và UX
+    UI và UX không bao giờ đứng riêng rẽ mà luôn song hành với nhau để tạo nên sản phẩm hoàn chỉnh. Một trang web với font chữ cẩu thả, màu sắc lòe loẹt, button nhỏ xíu (UI tồi) thì khó mà mang lại UX tốt cho người dùng được.
+    Ứng dụng có UI đẹp và chuyên nghiệp thì sẽ thu hút được người dùng. Ứng dụng có UX tốt thì sẽ chiếm được thiện cảm của người dùng, được họ sử dụng thường xuyên và giới thiệu cho bạn bè.
+    Có thể nói chính UI và UX góp phần quyết định sự thành bại của một sản phẩm!
+2.5.4   Chú ý
+    Kiến thức về UI/UX đều hữu dụng trong cả hai trường hợp trên. Ở các công ty lớn, biết về UI/UX sẽ giúp dễ trao đổi với designer và hiểu điều họ muốn làm. Ở công ty vừa và nhỏ, biết về UI và UX sẽ giúp btạo ra chức năng tốt hơn, phù hợp với người dùng hơn.
+2.6	Các ngôn ngữ trong Unity
+    Unity đã cung cấp sẵn cho chúng ta rất nhiều component như Physics 2D, Audio, Animation để làm game. Tuy nhiên để sử dụng, điều khiển, chỉnh sửa và kết hợp các component này một cách linh hoạt, Unity cung cấp thêm một component do người dùng tự tạo đó là script. Có thể điều chỉnh bất cứ thuộc tính của component khác thông qua script. Có thể nói script như là ‘não’ người, nó có thể điều khiển các bộ phận còn lại.
+    Unity hỗ trợ 2 ngôn ngữ chính là C# và JavaScript. Thật ra ở phiên bản trước có hỗ trợ thêm ngôn ngữ Boo, nhưng có lẽ vì ít người sử dụng nên Unity đã loại bỏ ngôn ngữ Boo ở các phiên bản sau này. Mình sẽ viết thêm nhiều bài về cách lập trình C# trong Unity trong thời gian tới. Dĩ nhiên, nếu đã tiếp cận với C# từ trước thì việc sử dụng nó trong Unity rất dễ dàng.
+    
+    
+2.7	Tích hợp Vuforia vào Unity
+      Vuforia SDK được sử dụng để xây dựng các ứng dụng Android, iOS, Universal Windows Platform (UWP) cho thiết bị di động và kính kỹ thuật số. Các ứng dụng này có thể được xây dựng bằng Android Studio, XCode, Visual Studio hoặc Unity. Trong bài viết này tôi sẽ hướng dẫn cài đặt Vuforia trong môi trường Unity.
+      Để sử dụng hết các tính năng của Vuforia, cần phải tạo 1 tài khoản tại https://developer.vuforia.com/user/register.
+Để có thể sử dụng các tính năng của Vuforia, đầu tiên vào trang 
+License Manager: https://developer.vuforia.com/license-manager để tạo license key.
+
+Hình 4: Tạo license key Vuforia
+
+
+
+
+      Chọn Add License Key, chọn Project Type là Development, và điền App Name rồi chọn Next.
+
+Hình 5: Thêm project và kiểu project Vuforia
+      Check vào ô đồng ý với điều kiện giấy phép của Vuforia rồi chọn Confirm.
+
+Hình 6: Xác nhận tạo project Vuforia
+      Sau khi tạo xong, license vừa tạo sẽ hiện trong danh sách license, chọn license vừa tạo và đã có 1 license key.
+
+Hình 7: Lấy key của project trên Vuforia
+Sau đó, truy cập vào trang web https://developer.vuforia.com/downloads/sdk để download Vuforia SDK cho Unity.
+
+Hình 8: Dowload Vuforia tích hợp vào Unity
+      Import package vừa tải về vào project Unity. Trong cửa sổ Project, chọn file VuforiaConfiguration để mở phần setting của Voforia.
+      
+      Hình 9: Cấu hình Vuforia trong Unity
+      Bước cuối cùng, ở cửa sổ Inspector, điền license key vừa mới tạo ở trên vào mục App License Key. Vậy là đã có thể tích hợp Vuforia vào project Unity.
+    
+    Hình 10: Điền key project đã tạo vào Unity
+CHƯƠNG 3:	   NỘI DUNG THỰC HIỆN
+3.1  	Mục tiêu 
+    Xây dựng ứng dụng áp dụng công nghệ AR – công nghệ tương tác ảo. Hôm nay tôi sẽ trình bày về công nghệ AR, từ cơ sở lý thuyết tới ứng dụng thể thiện công nghệ AR. Mọi người có thể thấy các kỹ thuật công nghệ hiện đại đang được yêu thích, bao gồm tất cả lĩnh vực trong xã hội, từ giáo dục cho đến các ngành kỹ thuật. Dựa vào đó ứng dụng sẽ thể hiển rõ về lợi ích của công nghệ, thế nào là tương tác ảo. Ứng dụng dành cho trẻ nhỏ, giúp trẻ nhỏ ham học hỏi.
+    Ngoài ra nắm vững về Unity, ngôn ngữ C# script. Thiết kế đồ họa sử dụng 3Dmaxs các mô hình 3D, nhà, ...
+3.2  	Tổng quan về ứng dụng
+3.2.1 Kiến trúc tổng quan
+    Hệ thống ứng dụng tô màu sử dụng AR cung cấp các chức năng, các thao tác như: dựa vào hình ảnh 2D cho phép người dùng trải nghiệm những con vật thông qua chiếc điện thoại mà không cần mất phí. Hệ thống giúp người dùng tương tác với những Object ảo bằng các tô màu lên hình ảnh 2D sẽ xuất hiện một Object 3D chứa màu vừa tô, dễ sử dụng, giao diện đẹp mắt. Hơn nữa, người dùng còn có thể nghe nhạc về con vật đó. Hệ thống ứng dụng tô màu sử dụng AR sẽ đem lại những trải nghiệm tuyệt vời, giúp người dùng tiếp xúc gần hơn với công nghệ AR, giúp trẻ thích thú việc học hơn.
+
+    
+    
+    
+3.2.2 Môi trường phát triển
+• Môi trường phần cứng
+○ CPU: Snapdragon 200 trở lên
+○ RAM: tối thiểu 128 MB
+○ HDD: dung lượng tối thiểu trống 50GB
+• Môi trường phần mềm
+○ Hệ điều hành: Android 4.0.3 trở lên
+      ○ Công cụ phát triển: 3Dmax 2016 trở lên
+○ Công cụ phát triển: Unity 5.0.0 trở lên
+○ Công cụ phát triển: Visual studio 2017
+3.3    	Thiết kế biểu đồ use- case
+Bảng 1: Danh sách các Actor
+STT    Tên Actor    Ý nghĩa/Ghi chú1    Người sử dụng    Người sử dụng ứng dụng2    Thiết bị    Thiết bị
+Bảng 2: Danh sách các Use-case
+STT    Tên Use-case    Ý nghĩa/Ghi chú1Quản lý hình ảnh 2D    Quản lý hình ảnh 2D trong ứng dụng2Quản lý mô hình 3D    Quản lý mô hình 3D trong ứng dụng
+
+
+
+
+Biểu đồ Use-case tổng quát 
+- Quản lý hình ảnh 2D: Sinh hình ảnh 2D – 1 use case extends quản lý hình ảnh 2D.
+- Quản lý mô hình 3D: Phát âm thanh, Sinh animation, Sinh mô hình 3D – 3 use case extends quản lý mô hình 3D.
+
+Hình 11: Mô tả Use-case tổng quát
+Đặc tả Use-case
+• Đặc tả Use-case “Quản lý hình ảnh 2D”
+- Biểu đồ đặc tả use case
+
+Hình 12: Mô tả use-case phân dã quản lý hình ảnh 2D
+  Quản lý hình ảnh 2D: khi mở ứng dụng sẽ tự động load hình ảnh 2D có trong ứng dụng.
+  
+
+- Dòng sự kiện chính
+Hành động của tác nhânPhản ứng của hệ thốngVào ứng dụngSinh các hình ảnh 2D trong ứng dụng- Các dòng sự kiện khác
+    Hình ảnh 2D là hình thật, được mô tả lại trong ứng dụng bởi Vuforia.
+- Các yêu cầu đặc biệt
+    Khi điều thay đổi hình ảnh 2D từ người dùng thì sẽ tự động cập nhật lại UI.
+- Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+ Hệ thống không yêu cầu người dùng đăng nhập. 
+- Trạng thái hệ thống sau khi thực hiện Use-case
+Sinh các hình ảnh 2D từ Vuforia.
+- Điểm mở rộng
+   Nhiều hình ảnh 2D
+• Đặc tả Use-case “Quản lý mô hình 3D”
+- Biểu đồ đặc tả use case
+
+Hình 13: Mô tả use-case phân dã quản lý mô hình 3D
+  Quản lý mô hình 3D: khi mở ứng dụng hệ thống sẽ tự sinh mô hình 3D, các animation của mô hình, âm thanh.
+- Dòng sự kiện chính
+Hành động của tác nhânPhản ứng của hệ thốngVào ứng dụngSinh các mô hình 3D, animation của từng mô hình, sinh âm anh.- Các dòng sự kiện khác
+ Mô hình 3D được hiển thị và mô phỏng dựa trên hình ảnh 2D, được mô tả lại trong ứng dụng bởi Vuforia.
+- Các yêu cầu đặc biệt
+ Khi điều thay đổi hình ảnh 2D từ người dùng thì sẽ tự động thay đổi mô hình 3D trên màn hình thiết bị tương ứng với hình ảnh 2D đó
+- Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+ Hệ thống không yêu cầu người dùng đăng nhập. 
+- Trạng thái hệ thống sau khi thực hiện Use-case
+Sinh các mô hình 3D từ Vuforia mô phỏng lại.
+- Điểm mở rộng
+   Nhiều mô hỉnh 3D dựa trên hình ảnh 2D
+3.4  	Thiết kế biểu đồ tuần tự
+- Hình 14: Biểu đồ tuần tự quản lý hình ảnh 2D
+
+- Hình 15: Biểu đồ tuần tự quản lý mô hình 3D
+
+    
+- Hình 16: Biểu đồ tuần tự thao tác người dùng
+
+3.5  	Thiết kế giao diện
+• Hình 17:  Giao diện thiết kế đồ họa cho ứng dụng
+
+• Hình 18: Giao diện khi mới vào ứng dụng
+
+• Hình 19: Giao diện hiển thị mô hình 3D dựa trên hình ảnh 2D
+
+• Hình 20: Giao diện tô màu hình ảnh
+
+CHƯƠNG 4: 	 KẾT LUẬN
+4.1 	Kết quả đạt được của đề tài
+    Sau thời gian nghiên cứu và phát triển, tôi đã hoàn thành cơ bản các mục tiêu ban đầu đề ra của đề tài. Nhóm đã thực hiện nghiên cứu và đề ra giải pháp thiết kế ứng dụng áp dụng công nghệ AR trên nền tảng mobile dựa trên Unity, Vuforia, Region Capture, … bao gồm giải pháp về thiết kế dữ liệu, tổ chức dữ liệu trên giao diện, giải pháp tùy biến giao diện trong ứng dụng bằng các hình ảnh 2D và các Object 3D do tác giả lập trình.
+    Tôi đã xây dựng được một hệ thống ứng dụng sử dụng Vuforia và Unity bước đầu cho phép quản lý giao diện người dùng, tạo ứng dụng dễ dùng, giao diện đẹp mắt. Người dùng có thể thay đổi hình ảnh, và con vật trên cùng một màn hình điện thoại của mình. Hơn nữa, việc tương tác người dùng với chi tiết ảo giúp người dùng thú vị với ứng dụng hơn. Ngoài ra, còn có thêm tiện ích giúp các người dùng am hiểu sâu về ứng dụng có thể tùy biến những con vật trong ứng dụng.
+    Hệ thống ứng dụng sử dụng AR được thiết kế với tính tùy biến cao gồm 1 màn hình chính, nhiều Modules với rất nhiều con vật do tôi tạo ra. Hệ thống được thiết kế có tính mở, có thể tiếp tục cập nhật các module một cách dễ dàng thông qua Vuforia, Unity và Object 3D.
+    Cùng với việc đưa ra các giải pháp trên từng con vật và hình ảnh, nhóm đề tài còn xây dựng được nội dung với giao diện chuyên nghiệp, dễ sử dụng và hỗ trợ thêm trong việc tùy chỉnh cấu hình giao diện ở các con vật trong ứng dụng, màn sắc thông qua hình ảnh 2D.
+    Sau khi xây dựng xong hệ thống nhóm đề tài đã tiến hành thử nghiệm xây dựng trên hai nền tảng Android và IOS. Bước đầu ứng dụng được thực nghiệm trên Unity đáp ứng được yêu cầu của người dùng đặc biệt của trẻ nhỏ.
+    
+    Nắm vững được kiến thức thiết kế đồi tương trong 3Dmax, hiểu hơn về ngôn ngữ lập trình Script, thiết kế game và ứng dụng bằng Unity. Công nghệ AR và tool Vuforia, Tookit, ngoài ra còn nắm được cách sử dụng Region Capture.
+4.2 	Hạn chế của đề tài
+    Hệ thống ứng dụng sử dụng AR trên nền tảng mobile, ứng dụng tô màu mới dừng lại ở giải các module cơ bản của con vật tương ứng với hình ảnh 2D, chưa có quá nhiều con vật cho người dùng.
+    Hệ thống chưa có các trợ giúp ngôn ngữ ngữ cảnh cho người dùng và tùy chỉnh không gian của từng ngữ cảnh. 
+4.3  	Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, tác giả đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+    Xây dựng thêm các Control làm phong phú trên việc tùy biến giao diện của ứng dụng, xây dựng các Object bằng 3Dmax, Photoshop.
+    Bổ sung các Module hỗ trợ cho hiển thị các Object 3d từ hình ảnh 2D, tương tác của người dùng Objetc 3D.
+    Nghiên cứu và triển khai đề tài theo hướng ứng dụng trên Unity và Vuforia.
+TÀI LIỆU THAM KHẢO
+[1]	 Hoàng Quốc Việt, Lập trình game trên Andrid, Hưng Yên, Việt Nam: Nhà xuất bản trường Đại học Sư phạm Kỹ thuật Hưng Yên 2017. 
+[2]	Trung tâm đào tạo tin học khoa phạm, Lập trình Unity, Hà Nội, Việt Nam, 2016.
+[3] 	https://unity3d.com/fr/
+[4]	https://developer.vuforia.com
+x
+
+    
+    x
+    
+PHỤ LỤC
+1. Bảng phân công nhiệm vụ thực hiện
+STTThành viênCác công việcGhi chú1Hoàng Văn Đức
+- Phát biểu bài toán
+- Phân tích yêu cầu hệ thống 
+- Nghiên cứu các công cụ hỗ trợ AR.
+- Nghiên cứu thiết kế đồ họa.
+- Thiết kế các chức năng chính cho các ứng dụng.
+- Tạo hiệu ứng them cho mô hình 3D ứng dụng.
+- Thiết kế và code chức năng.
+- Hoàn thiện các ứng dụng.
+    
+Tìm hiểu công nghệ AR, xây dựng ứng dụng tô màu sử dụng AR
+    
+    
+10
+    
+    

@@ -1,0 +1,697 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Tình trạng bán hàng khi mở cửa hàng rất khó khăn vì nhiều nguyên nhân như giá cả thuê mặt bằng, địa điểm bán hàng phải phù hợp và đông đúc dân cư. Người bán hàng thì muốn sản phẩm của mình đến tay người tiêu dùng dễ dàng nhất, muốn người tiêu dùng dễ tiếp cận đến cửa hàng và sản phẩm của mình nhanh và tiện lợi nhất. Người mua hàng còn muốn được tham khảo giá, tham khảo địa điểm bán, cần những đáng giá, nhận xét trước khi quyết định mua hàng. Trong khi đó thị trường bán hàng online hiện tại là thị trường mới nhiều tiềm năng, dễ tiếp cận tới người tiêu dùng qua các trang thông tin quảng cáo.
+    Từ những yếu tố trên, nên em quyết định chọn đề tài “Xây dựng website giới thiệu và bán chăn ga gối đệm”.
+1.2 Mục tiêu của đề tài
+    Tìm hiểu, nghiên cứu ngôn ngữ lập trình Python và web framework Django.
+    Xây dựng Website giới thiệu và bán chăn ga gối đệm Sông Hồng
+1.3 Giới hạn và phạm vi của đề tài
+    Đề tài Xây dựng. Các kiến thức được sử dụng bao gồm: 
+- Lập trình Python SQLite, sử dụng Javascript vào việc xử lý và thiết kế website.
+- Công cụ lập trình được sử dụng bao gồm: Cài đặt python, phần mền JetBrains PyCharm.
+- Website giới thiệu và bán chăn ga gối đệm Sông Hồng.
+1.4 Nội dung thực hiện
+    	Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Phân tích yêu cầu và đề xuất giải pháp Web Framework trên công nghệ python.
+- Thiết kế đặc tả hệ thống.
+- Xây dựng Cơ sở dữ liệu.
+- Lập trình cho các Module của hệ thống
+- Triển khai thực nghiệm hệ thống trên mạng Internet.
+1.5 Phương pháp tiếp cận
+- Cách tiếp cận : Nghiên cứu các Web Framework trên các nền tảng công nghệ khác nhau như PHP, .NET, PYTHON
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu;
+o Phương pháp phân tích mẫu;
+o Phương pháp thực nghiệm.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về ngôn ngữ Python
+2.1.1 Python là gì?
+    Python là một ngôn ngữ lập trình thông dịch (interpreted), hướng đối tượng (object-oriented), và là một ngôn ngữ bậc cao (high-level)  ngữ nghĩa động (dynamic semantics). Python hỗ trợ các module và gói (packages), khuyến khích chương trình module hóa và tái sử dụng mã. Trình thông dịch Python và thư viện chuẩn mở rộng có sẵn dưới dạng mã nguồn hoặc dạng nhị phân miễn phí cho tất cả các nền tảng chính và có thể được phân phối tự do.
+2.1.2 Lịch sử hình thành của python
+    Python đã được hình thành vào cuối những năm 1980, và việc thực hiện nó vào tháng 12 năm 1989 bởi Guido van Rossum tạiCentrum Wiskunde & Informatica (CWI) ở Hà Lan như là một kế thừa cho ngôn ngữ ABC (tự lấy cảm hứng từ SETL) có khả năng xử lý ngoại lệ và giao tiếp với Hệ điều hành Amoeba. Van Rossum là tác giả chính của Python, và vai trò trung tâm của ông trong việc quyết định hướng phát triển của Python.
+    Python 2.0 đã được phát hành vào ngày 16 tháng 10 năm 2000 và có nhiều tính năng mới, bao gồm bộ thu gom rác theo chu kỳ (cycle-detecting garbage) và hỗ trợ Unicode. Với việc phát hành này quá trình phát triển đã được thay đổi và trở nên minh bạch hơn và cộng đồng hậu thuẫn
+    Python 3.0 được phát hành năm 2008, sau một thời gian dài thử nghiệm.
+    Cho tới năm 2017, Python đang có phiên bản 3.7
+2.1.3 Đặc điểm của python
+- Ngôn ngữ lập trình đơn giản, dễ học: Python có cú pháp rất đơn giản, rõ ràng. Nó dễ đọc và viết hơn rất nhiều khi so sánh với những ngôn ngữ lập trình khác như C++, Java, C#. Python làm cho việc lập trình trở nên thú vị, cho phép bạn tập trung vào những giải pháp chứ không phải cú pháp.
+- Miễn phí, mã nguồn mở: Bạn có thể tự do sử dụng và phân phối Python, thậm chí là dùng cho mục đích thương mại. Vì là mã nguồn mở, bạn không những có thể sử dụng các phần mềm, chương trình được viết trong Python mà còn có thể thay đổi mã nguồn của nó. Python có một cộng đồng rộng lớn, không ngừng cải thiện nó mỗi lần cập nhật.
+- Khả năng di chuyển: Các chương trình Python có thể di chuyển từ nền tảng này sang nền tảng khác và chạy nó mà không có bất kỳ thay đổi nào. Nó chạy liền mạch trên hầu hết tất cả các nền tảng như Windows, macOS, Linux.
+- Khả năng mở rộng và có thể nhúng: Giả sử một ứng dụng đòi hỏi sự phức tạp rất lớn, bạn có thể dễ dàng kết hợp các phần code bằng C, C++ và những ngôn ngữ khác (có thể gọi được từ C) vào code Python. Điều này sẽ cung cấp cho ứng dụng của bạn những tính năng tốt hơn cũng như khả năng scripting mà những ngôn ngữ lập trình khác khó có thể làm được.
+- Ngôn ngữ thông dịch cấp cao: Không giống như C/C++, với Python, bạn không phải lo lắng những nhiệm vụ khó khăn như quản lý bộ nhớ, dọn dẹp những dữ liệu vô nghĩa,... Khi chạy code Python, nó sẽ tự động chuyển đổi code sang ngôn ngữ máy tính có thể hiểu. Bạn không cần lo lắng về bất kỳ hoạt động ở cấp thấp nào.
+- Thư viện tiêu chuẩn lớn để giải quyết những tác vụ phổ biến: Python có một số lượng lớn thư viện tiêu chuẩn giúp cho công việc lập trình của bạn trở nên dễ thở hơn rất nhiều, đơn giản vì không phải tự viết tất cả code. Ví dụ: Bạn cần kết nối cơ sở dữ liệu MySQL trên Web server? Bạn có thể nhập thư viện MySQLdb và sử dụng nó. Những thư viện này được kiểm tra kỹ lưỡng và được sử dụng bởi hàng trăm người. Vì vậy, bạn có thể chắc chắn rằng nó sẽ không làm hỏng code hay ứng dụng của mình.
+- Hướng đối tượng: Mọi thứ trong Python đều là hướng đối tượng. Lập trình hướng đối tượng (OOP) giúp giải quyết những vấn đề phức tạp một cách trực quan. Với OOP, bạn có thể phân chia những vấn đề phức tạp thành những tập nhỏ hơn bằng cách tạo ra các đối tượng.
+2.1.4 Ứng dụng của ngôn ngữ Python.
+    Python ngôn ngữ lập trình web được các ông lớn công nghệ yêu thích.
+Python luôn nằm trong top 10 ngôn ngữ lập trình phổ biến nhất bởi nó chính là nền tảng cho rất nhiều sản phẩm cực kỳ nổi tiếng: Google, Quora, Instagram, BitTorrent, Reddit, hay Dropbox, v.v... Bạn muốn phát triển một trang web, Python và framework Django đã tạo nên những ứng dụng tuyệt vời như Instagram, YouTube. 
+    Lập trình Android nhanh chóng
+Python phù hợp với những người bắt đầu từ con số 0 với lập trình nhất là Android bởi Android đòi hỏi không phải code quá nhiều, nó thường ngắn hơn Java từ 3-5 lần và ngắn hơn C++ 5-10 lần. Mặc dù Android không hỗ trợ phát triển Python bản địa nhưng vẫn có những công cụ cho phép bạn tạo apps trên Python và sau đó chuyển đổi chúng thành các APK chạy thành công trên thiết bị Android. Đây là một ngôn ngữ thực tiễn hiệu quả với những người muốn thiết kế các apps nhưng lại không muốn sử dụng các trappings của Java.
+    Ngôn ngữ số 1 trong kỷ nguyên phát triển của AI
+Ngôn ngữ lập trình Python là một trong những ngôn ngữ lập trình được sự dụng nhiều nhất trong việc phát triển trí tuệ nhân tạo. Python được nhiều người lựa chọn để lập trình trí tuệ nhân tạo vì tính phổ biến, dễ học và khả năng tương tích với công nghệ 4.0. Nó có thể được sử dụng một cách trơn tru với các cấu trúc dữ liệu và các thuật toán AI được sử dụng thường xuyên khác.
+Ngoài những ứng dụng thực tế nổi bật trên, Python còn được sử dụng để:
+• Làm game
+• Máy học với Theano, tensorflow, scikit-learn
+• Khoa học máy tính: Python Opencv, numpys, panda, scipy
+• Lập trình cho bó mạch: Ardruino, raspberry pi.
+2.2 Tổng quan về Framword Django
+2.2.1 Django là gì ?
+    	Django là một web framework miễn phí mã nguồn mở được viết bằng Python. Django sử dụng mô hình Model-View-Control (MVC). Django được phát triển bởi Django Software Foundation(DSF) – một tổ chức phi lợi nhuận độc lập. Được viết hoàn toàn bằng ngôn ngữ Python. Nó không phải là một micro-framework như Flask, mà là một framework với đầy đủ các thư viện, module hỗ trợ các web-developer
+2.2.2 Lich sử ra đời Django.
+    	Django ban đầu là một framework cho website của một tờ báo ở Kansas và được đưa vào sử dụng rộng rãi từ năm 2005 đến nay.
+    	Django là một web framework hướng đối tượng dựa trên python và theo mô hình Model – Controler – View.
+    	Django cho phép xây dựng những trang web với hiệu xuất cao một cách nhanh chóng. Đó là lý do tại sao Django trở nên phổ biến nhằm khai thác các dự án quy mô lớn nhanh và hiệu quả.
+2.2.3 Ưu điểm của Django.
+    Học tập nhanh. Tương tự Python, Django cũng rất dễ học, không như Ruby hay Rails.
+    Tự động tạo SQL tables. Django sẽ thay bạn làm công việc này khi bạn đã xác định được cấu trúc.
+    Tạo forms. Khi bạn đã tạo được Form class trong Django và linked đến model, form generator trong Django sẽ đảm nhận render form, xác minh và lưu trưc data.
+    Admin Interface. Tương tự SQL table, khi bạn đã xác định được cấu trúc, Django sẽ tạo một admin interface cho phép bạn quản lý database (không khác gì PhpMyAdmin được build-in trong Django cả.)
+    Django Shell. Python shell, ngay trong môi trường của Django project, chính là lợi thế mà Django shell mang lại. Tính năng này rất hữu hiệu khi debug (thường khó thực hiện trên PHP hơn).
+2.3 Hệ quản trị Cơ sở dữ liệu SQLite
+2.3.1 SQLite là gì ?
+    SQLite là một thư viện phần mềm mà triển khai một SQL Database Engine truyền thống, không cần Server, không cần cấu hình và nhỏ gọn. SQLite là một trong những Database Engine phát triển nhanh nhất, nhưng sự phát triển của nó là về mặt tính phổ biến, không phải là về mặt kích cỡ. SQLite là mã nguồn mở.
+    SQLite là phần mềm quản lý cơ sở dữ liệu (DBMS) tương tự như Mysql, PostgreSQL... Đặc điểm của SQLite là gọn, nhẹ, đơn giản. Chương trình gồm 1 file duy nhất vỏn vẹn chưa đến 400kB, không cần cài đặt, không cần cấu hình hay khởi động mà có thể sử dụng ngay. Dữ liệu Database cũng được lưu ở một file duy nhất. Không có khái niệm user, password hay quyền hạn trong SQLite Database.
+    SQLite không thích hợp với những hệ thống lớn nhưng ở quy mô vừa tầm thì SQLite phát huy uy lực và không hề yếu kém về mặt chức năng hay tốc độ. Với các đặc điểm trên SQLite được sử dụng nhiều trong việc phát triển, thử nghiệm … và là sự lưa chọn phù hợp cho những người bắt đầu học Database.
+    SQLite Engine không là một Standalone Process giống như các cơ sở dữ liệu khác, bạn có thể liên kết nó một cách tĩnh hoặc một cách động tùy theo yêu cầu với ứng dụng của bạn. SQLite truy cập các file lưu giữ của nó một cách trực tiếp.
+2.3.2 Lịch sử của SQLite.
+    Năm 2000: D.Richard Hipp đã thiết kế SQLite với mục đích không cần quản trị để điều hành một chương trình.
+    Vào tháng 8, SQLite 1.0 được công bố với GNU Database Manager.
+    Năm 2011: Hipp bổ sung UNQI Interface cho SQLite DB và để phát triển UNQLite (là một Document Oriented Database).
+2.3.3 Lợi ích của SQLite.
+    SQLite không yêu cầu một tiến trình Server riêng rẽ để hoạt động.
+    SQLite không cần cấu hình, nghĩa là không cần thiết phải cài đặt.
+    Một SQLite Database đầy đủ được lưu giữ trong một disk file đơn.
+    SQLite là rất nhỏ gọn, nhỏ hơn 400kB đã đươc cấu hình đầy đủ hoặc nhỏ hơn 250kB khi đã bỏ qua các tính năng tùy ý.
+    SQLite là tự chứa, nghĩa là không có sự phụ thuộc vào ngoại vi.
+    Các Transaction trong SQLite là tuân theo đầy đủ chuẩn ACID, đảm bảo truy cập an toàn từ nhiều tiến trình hoặc thread.
+    SQLite hỗ trợ hầu hết các tính năng của một ngôn ngữ truy vấn trong chuẩn SQL92.
+    SQLite được viết bằng ANSI-C và cung cấp API đơn giản và dễ dàng sử dụng.
+    
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Khảo sát và đặc tả yêu cầu	
+3.1.1 Mô tả hệ thống
+    Website bán chăn ga gối đệm gồm các hoạt động sau:
+• Khách hàng khi truy cập website có thể xem được các nội dung như các sản phẩm và thông tin sản phẩm.
+• Sản phẩm trên website trang sức có các thông tin như: tên sản phẩm, hình ảnh và một số thông tin khác.
+• Khi khách hàng chọn một sản phẩm sẽ chuyển tới trang chi tiết sản phẩm, tại đây khách hàng có thể xem các thông tin chi tiết về sản phẩm và có thể đặt sản phẩm đó vào giỏ hàng với số lượng mặc định là 1 và sẽ tăng thêm  nếu sản phẩm đặt vào đã có trong giỏ hàng.
+• Khách hàng có thể chuyển đến giỏ hàng để xem danh mục các sản phẩm đã đặt vào. Và khách hàng có thể thay đổi số lượng sản phẩm hoặc bỏ sản phẩm nào đó ra khỏi giỏ hàng. 
+• Khi đã xác định được các mặt hàng và số lượng, khách hàng sẽ tiến hành thanh toán. Khi thanh toán, khách hàng phải điền đầy đủ thông tin vào mẫu, bao gồm: tên người nhận, địa chỉ nhận, số điện thoại người nhận … Sau đó các thông tin sẽ được gửi lại cho nhân viên để nhân viên kiểm tra.
+• Nhân viên sẽ kiểm tra yêu cầu và nếu còn sản phẩm và có điều kiện vận chuyển thì in hóa đơn và chuyển xuống bộ phận vận chuyển.
+• Website còn có nhóm người quản lý, quản lý tất cả nội dụng trên trang web như: quản lý sản phẩm, quản lý loại sản phẩm, quản lý hóa đơn, quản lý khách hàng…
+• Nhân viên sẽ kết xuất các thống kê, báo cáo theo ngày, theo tuần và theo tháng
+3.1.2 Tổng quan về hệ thống mới
+• Cửa hàng chăn ga gối đệm mới được thành lâp nên có nhu cầu lâp website bán sản phẩm của mình trên mạng để cửa hàn của mình được biết đến nhiều hơn, đem được sẳn phẩm của mình đến tay người tiêu dùng.
+• Thiết kế website với giao diện thuận tiện cho người dung trong việc xem mặt hàng và mua bán
+• Các tính năng thân thiện với người sử dụng.
+• Trang quản trị có các chức năng năng quản lý sản phẩm, quản lý khách hàng, tìm kiếm… dễ dàng sử dụng.
+3.1.3 Các mục tiêu chính của hệ thống
+• Yêu cầu về mặt giao diện:
+➢ Giao diện trang web thân thiện, dễ sử dụng.
+➢ Hiển thị đúng trên các trình duyệt khác nhau.
+➢ Cách trình bày nội dung hợp lý.
+➢ Dễ thay đổi tùy chỉnh giao diện Website theo ý muốn.
+➢ Giao diện tùy biến với thiết bị sử dụng như smartphone, máy tính bảng,…
+• Yêu cầu về mặt chức năng:
+➢ Quản lý sản phẩm: thêm, sửa, xóa thông tin sản phẩm
+➢ Quản lý loại sản phẩm: thêm, sửa, xóa thông tin loại sản phẩm
+➢ Quản lý hóa đơn nhập: thêm, sửa, xóa thông tin hóa đơn nhập.
+➢ Quản lý chi tiết hóa đơn nhập: thêm, sửa, xóa thông tin chi tiết hóa đơn nhập.
+➢ Quản lý hóa đơn xuất: thêm, sửa, xóa thông tin hóa đơn xuất.
+➢ Quản lý chi tiết hóa đơn xuất: thêm, sửa, xóa thông tin chi tiết hóa đơn xuất.
+➢ Quản lý bài viết: thêm, sửa, xóa thông tin bài viết
+➢ Quản lý giảm giá: thêm, sửa, xóa thông tin giảm giá của sản phẩm
+➢ Quản lý phương thức vận chuyển: thêm, sửa, xóa thông tin phương thức vận chuyển
+➢ Quản lý khách hàng: thêm sửa, xóa thông tin khách hàng
+➢ Chức năng tìm kiếm thông tin sản phẩm, loại sản phẩm.
+➢ Chức năng thống kê, báo cáo: báo cáo doanh thu hàng tháng, sản phẩm bán chạy nhất…
+➢ Quản lý và sắp xếp thông tin hàng hóa. Yêu cầu về khả năng thay đổi, bảo trì
+3.1.4 Môi trường phát triển.
+• Môi trường phần cứng
+➢ CPU: intel core i3 trở lên.
+➢  RAM: tối thiểu 2G.
+➢ HDD: dung lượng tối thiểu trống 10GB.
+• Môi trường phần mềm
+➢ Hệ điều hành: Windows 7 hoặc cao hơn
+➢ Công cụ phát triển: JeBrains PyCharm.
+3.1.5 Xác định yêu cầu khách hàng
+a) Danh sách các yêu cầu trang giao diện người dùng
+• Đăng ký
+o Cho phép người dùng đăng ký tài khoản mới để trở thành thành viên.
+o Điều kiện hợp lệ: tên đăng nhập là duy nhất
+o Sau khi điền đầy đủ thông tin và xác nhận đăng ký website sẽ tạo tài khoản cho người dùng, người dùng xác nhận qua email. 
+• Đăng nhập
+o Cung cấp chức năng đăng nhập cho người dùng vào trang quản trị của website.
+o Yêu cầu người dùng đăng nhập, nếu chưa có thì đăng kí.
+o Sau khi đăng nhập người dùng có thể xem hồ sơ cá nhân: trang cá nhân, thay đổi thông tin , ảnh đại diện.
+• Hiển thị menu
+o Hiển thị menu cho người dùng lựa chọn.
+o Menu bao gồm: Trang chủ, ô tìm kiếm sản phẩm, liên hệ, loại sản phẩm, sản phẩm,...
+• Hiển thị content website
+o Hiển thị sản phẩm, loại sản phẩm, thông tin chi tiết sản phẩm
+o Hiển thị sản phẩm mới nhất được nhập về.
+• Chức năng tìm kiếm sản phẩm
+o Người dùng có thể tìm kiếm các sản phẩm đang bày bán trên website, trong hệ thống và các  bài viết thông qua các từ khóa tìm kiếm.
+o Kết quả tìm kiếm sẽ được hiển thị tại trang search để người dùng thao tác.
+• Chức năng thống kê, báo cáo
+o Thống kê doanh thu hàng tháng, sản phẩm bán chạy nhất…
+• Hiển thị sản phẩm mới nhất
+o Đây là danh sách những sản phẩm mới được nhập về.
+o Hiển thị tối đa 5 sản phẩm mới nhất.
+o Khách hàng có thể xem thêm các sản phẩm khác theo thứ tự giảm dần về thời gian nhập.
+• Quản lý giỏ hàng
+o Khi khách hàng vào trang web có thể xem thông tin các sản phẩm và giá cả. Sau đó thêm vào giỏ hàng. Thông tin sản phẩm trong giỏ hàng bao gồm: Tên sản phẩm, đơn giá, số lượng (mặc định là 1 khi thêm vào giỏ hàng), thành tiền.
+o Khách hàng có thể sửa đổi số lượng sản phẩm muốn mua.
+o Khách hàng cũng có thể bỏ sản phẩm không cần thiết ra khỏi giỏ hàng.
+o Khách hàng sẽ được thông báo về tổng giá trị các sản phẩm có trong giỏ hàng
+b) Danh sách các yêu cầu trên trang quản trị
+• Đăng nhập
+o Cung cấp chức năng đăng nhập cho người dùng vào trang quản trị của website.
+o Yêu cầu người dùng đăng nhập.
+o Sau khi đăng nhập người dùng có thể xem hồ sơ cá nhân: trang cá nhân, thay đổi thông tin , ảnh đại diện.
+• Quản lý sản phẩm
+o Thêm mới thông tin sản phẩm: Thêm thông tin về sản phẩm bày bán với những thông tin như: Mã sản phẩm, mã loại, tên sản phẩm, số lượng, giá bán, giá nhập, hình ảnh, màu sắc, chất liệu, kích thước, mô tả.
+o Cập nhật thông tin sản phẩm: Sửa đổi thông tin sản phẩm khi có sự thay đổi mới
+o Hiển thị danh sách sản phẩm: Hiển thị danh sách sản phẩm đang bán trên website
+o Xóa  sản phẩm: Xóa những sản phẩm khi mà cửa hàng không còn bày bán nữa
+• Quản lý loại sản phẩm
+o Thêm mới thông tin loại: Thông tin loại sản phẩm bao gồm: Mã Loại, tên loại.
+o Cập nhật thông tin loại: Sửa đổi thông tin chủng loại 
+o Hiển thị danh sách loại: Hiển thị danh sách thông tin các loại sản phẩm đang có.
+o Xóa loại sản phẩm: Xóa những loại sản phẩm khi mà cửa hàng không còn bày bán nữa
+• Quản lý thông tin hóa đơn xuất
+o Thêm hóa đơn xuất: Khi có khách hàng tiến hành thanh toán hàng tại giỏ hàng. Hệ thông sẽ hiên thị form để khách hàng nhập thông tin cần thiết để tiến hành thanh toán thông tin hóa đơn xuất sẽ được lưu vào hệ thống dựa trên những thông tin mà khách hàng đã cung cấp. Thông tin bao gồm: mã hóa đơn xuất, mã khách hàng, tên người nhận, địa chỉ người nhận, ngày đặt, mã phương thức vận chuyển, tổng tiền
+o Cập nhật thông tin hóa đơn xuất: Sửa đổi thông tin hóa đơn xuất khi có sai sót, nhầm lẫn.
+o Xóa hóa đơn xuất: Xóa bỏ hóa đơn xuất  khi không cần thiết.
+o Hiển thị danh sách hóa đơn xuất: Hiển thị danh sách các hóa đơn xuất hiện có trong hệ thống.
+• Quản lý thông tin chi tiết hóa đơn xuất
+o Cập nhập chi tiết hóa đơn xuất: Khi có khách hàng tiến hành thanh toán hàng tại giỏ hàng. Hệ thông sẽ hiên thị form để khách hàng nhập thông tin cần thiết để tiến hành thanh toán thông tin chi tiết hóa đơn xuất sẽ được lưu vào hệ thống dựa trên những thông tin mà khách hàng đã cung cấp. Thông tin bao gồm: mã hóa đơn xuất, mã sản phẩm, giá, số lượng, tổng tiền.
+o Cập nhật thông tin chi tiết hóa đơn xuất: Sửa đổi thông tin order khi có sai sót, nhầm lẫn.
+o Xóa chi tiết hóa đơn xuất: Xóa bỏ chi tiết hóa đơn xuất khi không cần thiết.
+o Hiển thị danh sách chi tiết hóa đơn xuất: Hiển thị danh sách các hóa đơn nhập hiện có trong hệ thống.
+• Quản lý thông tin hóa đơn nhập
+o Thêm hóa đơn nhập: Thông tin bao gồm: mã hóa đơn nhập, ngày nhập, số lượng, tổng tiền
+o Cập nhật thông tin hóa đơn nhập: Sửa đổi thông tin hóa đơn nhập khi có sai sót, nhầm lẫn.
+o Xóa hóa đơn nhập: Xóa bỏ hóa đơn nhập khi không cần thiết.
+o Hiển thị danh sách hóa đơn nhập: Hiển thị danh sách các hóa đơn nhập hiện có trong hệ thống.
+• Quản lý thông tin chi tiết hóa đơn nhập
+o Cập nhập chi tiết hóa đơn nhập. Thông tin bao gồm: mã hóa đơn xuất, mã sản phẩm, giá, số lượng, tổng tiền.
+o Cập nhật thông tin chi tiết hóa đơn nhập: Sửa đổi thông tin order khi có sai sót, nhầm lẫn.
+o Xóa chi tiết hóa đơn nhập: Xóa bỏ chi tiết hóa đơn xuất khi không cần thiết.
+o Hiển thị danh sách chi tiết hóa đơn nhập: Hiển thị danh sách các hóa đơn nhập hiện có trong hệ thống.
+• Quản lý dữ liệu khách hàng
+o Hiển thị danh sách khách hàng: Hiển thị danh sách khách hàng hiện có trong hệ thống.
+o Xóa thông tin khách hàng: Xóa bỏ thông tin khách hàng khi không cần thiết.
+• Chức năng thống kê, báo cáo
+o Thống kê các sản phẩm bán được, các sản phẩm nhập về.
+o Thống kê doanh thu theo ngày, theo tuần, theo tháng, theo năm,..
+o Thống kê mặt hàng bán chạy, mặt hàng ngưng trệ.
+o Kết xuất các báo cáo cần thiết.
+3.2 Phân tích và thiết kế hệ thống
+3.2.1 Phân tích các chức năng
+      a)  Phân tích yêu cầu
+• Xác định các tác nhân
+    Qua khảo sát hiện trạng thực tế, kết hợp với việc tham khảo tài liệu và phân tích ý kiến của người dùng, hệ thống có các tác nhân sau:
+    Bảng 1: Xác định tác nhân.
+STTTác nhânDiễn giải
+
+
+1Những người thuộc nhóm quyền này có quyền truy xuất những chức năng của hệ thống có nhiệm vụ bảo trì hệ thống: đăng nhập đổi mật khẩu; thay đổi thông tin cá nhân, sao lưu phục hồi dữ liệu; quản lý sản phẩm, quản lý loại sản phẩm, quản lý user, quả lý thông tin khách hàng, quản lý hóa đơn, chi tiết hóa đơn, quản lý hình ảnh, quản lý bài viết, giảm giá. Ngoài ra họ có thể phân quyền người sử dụng hệ thống.
+
+2Những người thuộc nhóm quyền này có thể xem và tìm kiếm thông tin sản phẩm; mua hàng, xem sửa xóa thông tin giỏ hàng, thanh toán;  xem sản phẩm mới nhất, bán chạy nhất.
+    b) Xác định các tình huống sử dụng ( usecase)
+    Bảng 2: Xác định các ca sử dụng(Usecase)
+STTTác nhân chínhTên Use case1AdminQuản lý đăng nhập2AdminQuản lí Sản phẩm3AdminQuản lý Loại sản phẩm4AdminQuản lý thông tin User    5AdminThống kê    6AdminQuản lý hóa đơn và chi tiết hóa đơn    7AdminQuản lý chương trình giảm giá    8AdminQuản lý bài viết    9AdminQuản lý khách hàng    10Khách hàngQuản lý giỏ hàng    11Khách hàng, AdminXem thông tin sản phẩm    12Khách hàng, AdminTìm kiếm    13Khách hàng, AdminQuản lý comment
+3.3 Biểu đồ Use Case
+3.3.1 Biểu đồ usecase tổng quát
+    Hình 1: Biểu đồ UseCase tổng quát
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.2.1 Đặc tả Usecase “Quản lý sản phẩm”
+    Hình 2: Biểu đồ usecase “quản lý sản phẩm”
+
+• Tác nhân: người quản lí.
+• Mô tả: Đây là chức năng giành cho người quản lí, quản lý các sản phẩm
+• Điều kiện cần: Người quản trị phải đăng nhập thành công và chọn thực hiện chức năng quản lý sản phẩm
+• Điều kiện đủ: Có đủ quyền hạn để thực hiện.
+• Dòng sự kiện:
+- Dòng sự kiện chính:
+* Người quản trị “Click” chức năng “Thêm sản phẩm ” thì website hiển thị một trang với các thông tin để điền vào. Sau đó nhấn nút “Thêm sản phẩm” để hoàn tất và thực hiện lưu thông tin vào CSDL.
+* Người quản trị “Click” vào chức năng “Sửa sản phẩm” thì hệ thống sẽ chuyển sang trang web khác, người quản trị sẽ chọn sản phẩm cần sửa, sau đó thay đổi thông tin và nhấn vào nút Sửa để hoàn tất và thực hiện lưu thông tin vào CSDL.
+* Người quản trị “Click” vào chức năng “Xóa sản phẩm”, chọn sản phẩm cần xóa,  hệ thống sẽ xóa sản phẩm đó.Yêu cầu phải có quyền xóa sản phẩm mới thực hiện được.
+- Dòng sự kiện phụ: 
+* Nếu như sản phẩm cần tạo đã tồn tại thì không tạo thêm được sản phẩm mới. Nếu việc nhập thông tin về sản phẩm đã hoàn tất nhưng người quản trị chưa nhấn nút “Thêm sản phẩm” thì sản phẩm mới chưa được tạo thêm.
+* Nếu người quản trị không chọn sản phẩm cần sửa đổi mà nhấn nút “Sửa sản phẩm” thì hệ thống thông báo yêu cầu “Chọn sản phẩm để sửa đổi!”. Hoặc việc sửa mà chưa nhấn nút “Lưu sản phẩm” thì việc sửa đổi không hoàn thành hay dữ liệu cần sửa đổi không được lưu vào CSDL.
+* Nếu người quản trị không chọn sản phẩm cần xóa mà nhấn nút “Xóa sản phẩm ” thì hệ thống thông báo yêu cầu “Chọn sản phẩm để xóa!” Phải chọn thì hệ thống mới thực hiện xóa sản phẩm đó khỏi CSDL.
+* Nếu người quản trị không chọn sản phẩm để duyệt hoặc đăng mà nhấn nút thì hệ thống sẽ yêu cầu chọn sản phẩm .
+• Yêu cầu đặc biệt: Không.
+    
+    
+    
+    
+    
+
+3.2.2 Đặc tả Usecase “Quản lý loại sản phẩm”
+    Hình 3: Biểu đồ usecase “quản lý loại sản phẩm”
+
+• Tác nhân:Quản trị hệ thống.
+• Mô tả:Đây là chức năng giành cho người quản trị hệ thống để thực hiện việc quản lý thể loại bao gồm: thêm loại sản phẩm mới, sửa loại sản phẩm, xóa loại sản phẩm.
+• Điều kiện cần: Người quản trị phải đăng nhập thành công và chọn chức năng “Quản lý loại sản phẩm”.
+• Điều kiện đủ: Không
+• Dòng sự kiện:
+- Dòng sự kiện chính:
+* Người quản trị muốn “thêm loại sản phẩm” phải nhập thông tin về loại sản phẩm cần thêm bao gồm các mô tả loại sản phẩm. Sau đó nhấn nút “Thêm” để thực hiện yêu cầu.
+* Người quản trị muốn “sửa loại sản phẩm” phải nhập thông tin về loại sản phẩm cần sửa bao gồm các mô tả chuyên mục. Sau đó nhấn nút “Sửa” để thực hiện yêu cầu.
+* Người quản trị muốn “Xóa loại sản phẩm” đã có thì phải chọn vào loại sản phẩm cần xóa và nhấn nút “Xóa” để thực hiện. 
+- Dòng sự kiện phụ: 
+* Nếu như loại sản phẩm cần tạo đã tồn tại thì không tạo thêm được loại sản phẩm mới. Nếu việc nhập thông tin về loại sản phẩm đã hoàn tất nhưng người dùng chưa nhấn nút “Thêm” thì loại sản phẩm mới chưa được tạo thêm.
+* Nếu người quản trị không chọn loại sản phẩm cần sửa đổi mà nhấn nút “Sửa loại sản phẩm” thì hệ thống thông báo yêu cầu “Chọn loại sản phẩm để sửa đổi!”. Hoặc việc sửa mà chưa nhấn nút “Lưu loại sản phẩm” thì việc sửa đổi không hoàn thành hay dữ liệu cần sửa đổi không được lưu vào CSDL.
+* Nếu người quản trị không chọn loại sản phẩm cần xóa mà nhấn nút “Xóa” thì hệ thống thông báo yêu cầu “Chọn loại sản phẩm để xóa!” Phải chọn thì hệ thống mới thực hiện xóa loại sản phẩm đó khỏi CSDL.
+• Yêu cầu đặc biệt: Không.
+3.2.3 Đặc tả Usecase “Quản lý khách hàng”
+    Hình 4: Biểu đồ usecase “Quản lý khách hàng”
+
+    ➢UseCase Xóa khách hàng:
+• Tác nhân: Quản trị hệ thống.
+• Mô tả: Mô tả cách quản trị xóa thông tin một khách hàng
+• Điều kiện cần: Người quản trị phải đăng nhập vào hệ thống thành công
+• Điều kiện đủ: Không
+• Dòng sự kiện:
+- Dòng sự kiện chính:
+* Người quản trị chọn khách hàng cần xóa.
+* Click nút “Xóa” để thực hiện xóa.
+* Hệ thống tìm kiếm xóa khỏi CSDL.
+- Dòng sự kiện phụ: 
+* Nếu không tồn tại khách hàng cần xóa, hệ thống sẽ đưa ra thông báo tới người Quản trị “khách hàng không tồn tại”.
+* Nếu Quản trị chưa chọn khách hàng cần xóa mà nhấn nút “Xóa” thì hệ thống thông báo yêu cầu “Chọn khách hàng cần xóa”.
+• Yêu cầu đặc biệt: Không
+
+
+
+
+
+
+
+3.2.4 Đặc tả Usecase “Quản lý hóa đơn nhập”
+    Hình 5: Biểu đồ Usecase quản lý hóa đơn nhập
+
+• Tác nhân:Quản trị hệ thống.
+• Mô tả:Đây là chức năng giành cho người quản trị hệ thống để thực hiện việc quản lý hóa đơn nhập.
+• Điều kiện cần: Người quản trị phải đăng nhập thành công và chọn chức năng “Quản lý hóa đơn nhập”.
+• Điều kiện đủ: Không
+• Dòng sự kiện:
+- Dòng sự kiện chính:
+* Người quản trị muốn “thêm hóa đơn nhập” phải nhập thông tin về đơn hàng thêm. Sau đó nhấn nút “Thêm” để thực hiện yêu cầu.
+* Người quản trị muốn “Xóa hóa đơn nhập” đã có thì phải chọn vào đơn hàng cần xóa và nhấn nút “Xóa” để thực hiện. 
+- Dòng sự kiện phụ: 
+* Nếu như hóa đơn nhập cần thêm đã tồn tại thì không tạo thêm được hóa đơn nhập mới. Nếu việc nhập thông tin về hóa đơn nhập đã hoàn tất nhưng người quản trị chưa nhấn nút “Thêm” thì hóa đơn nhập mới chưa được thêm.
+* Nếu người quản trị không chọn hóa đơn nhập cần xóa mà nhấn nút “Xóa” thì hệ thống thông báo yêu cầu “Chọn hóa đơn nhập để xóa!” Phải chọn thì hệ thống mới thực hiện xóa hóa đơn nhập đó khỏi CSDL.
+• Yêu cầu đặc biệt: Không.
+3.2.5 Đặc tả Usecase “Quản lý chi tiết hóa đơn nhập”
+    Hình 6:Biểu đồ usecase quản lý chi tiết hóa đơn nhập
+    
+• Tác nhân:Quản trị hệ thống.
+• Mô tả:Đây là chức năng giành cho người quản trị hệ thống để thực hiện việc quản lý chi tiết hóa đơn nhập.
+• Điều kiện cần: Người quản trị phải đăng nhập thành công và chọn chức năng “Quản lý chi tiết hóa đơn nhập”.
+• Điều kiện đủ: Không
+• Dòng sự kiện:
+-  Dòng sự kiện chính:
+* Người quản trị muốn “thêm chi tiết hóa đơn nhập” phải nhập thông tin về chi tiết hóa đơn nhập. Sau đó nhấn nút “Thêm” để thực hiện yêu cầu.
+* Người quản trị muốn “Xóa chi tiết hóa đơn nhập” đã có thì phải chọn vào chi tiết hóa đơn nhập cần xóa và nhấn nút “Xóa” để thực hiện. 
+- Dòng sự kiện phụ: 
+* Nếu như chi tiết hóa đơn nhập cần thêm đã tồn tại thì không tạo thêm được chi tiết hóa đơn nhập mới. Nếu việc nhập thông tin về chi tiết hóa đơn nhập đã hoàn tất nhưng người quản trị chưa nhấn nút “Thêm” thì chi tiết hóa đơn nhập mới chưa được thêm.
+* Nếu người quản trị không chọn chi tiết hóa đơn nhập cần xóa mà nhấn nút “Xóa” thì hệ thống thông báo yêu cầu “Chọn chi tiết hóa đơn nhập để xóa!” Phải chọn thì hệ thống mới thực hiện xóa chi tiết hóa đơn nhập đó khỏi CSDL.
+• Yêu cầu đặc biệt: Không.
+    
+    
+    
+    
+    
+    
+    
+    
+3.2.6 Đặc tả Usecase “Quản lý hóa đơn xuất”
+    Hình 7: Biểu đồ usecase “Quản lý hóa đơn xuất ”
+    
+• Tác nhân:Quản trị hệ thống.
+• Mô tả:Đây là chức năng giành cho người quản trị hệ thống để thực hiện việc quản lý hóa đơn.
+• Điều kiện cần: Người quản trị phải đăng nhập thành công và chọn chức năng “Quản lý hóa đơn”.
+• Điều kiện đủ: Không
+• Dòng sự kiện:
+- Dòng sự kiện chính:
+* Người quản trị muốn “thêm hóa đơn” phải nhập thông tin về đơn hàng thêm. Sau đó nhấn nút “Thêm” để thực hiện yêu cầu.
+* Người quản trị muốn “Xóa hóa đơn” đã có thì phải chọn vào đơn hàng cần xóa và nhấn nút “Xóa” để thực hiện. 
+- Dòng sự kiện phụ: 
+* Nếu như hóa đơn cần thêm đã tồn tại thì không tạo thêm được hóa đơn mới. Nếu việc nhập thông tin về hóa đơn đã hoàn tất nhưng người quản trị chưa nhấn nút “Thêm” thì hóa đơn mới chưa được thêm.
+* Nếu người quản trị không chọn hóa đơn cần xóa mà nhấn nút “Xóa” thì hệ thống thông báo yêu cầu “Chọn hóa đơn để xóa!” Phải chọn thì hệ thống mới thực hiện xóa hóa đơn đó khỏi CSDL.
+• Yêu cầu đặc biệt: Không.
+    
+3.2.7 Đặc tả Usecase “Quản lý chi tiết hóa đơn xuất”
+    Hình 8: Biểu đồ usecase “Quản lý chi tiết hóa đơn xuất”
+    
+• Tác nhân:Quản trị hệ thống.
+• Mô tả:Đây là chức năng giành cho người quản trị hệ thống để thực hiện việc quản lý chi tiết hóa đơn xuất.
+• Điều kiện cần: Người quản trị phải đăng nhập thành công và chọn chức năng “Quản lý chi tiết hóa đơn xuất”.
+• Điều kiện đủ: Không
+• Dòng sự kiện:
+- Dòng sự kiện chính:
+* Người quản trị muốn “thêm chi tiết hóa đơn” phải nhập thông tin về chi tiết hóa đơn.thêm. Sau đó nhấn nút “Thêm” để thực hiện yêu cầu.
+* Người quản trị muốn “Xóa chi tiết hóa đơn.” đã có thì phải chọn vào chi tiết hóa đơn cần xóa và nhấn nút “Xóa” để thực hiện. 
+- Dòng sự kiện phụ: 
+* Nếu như chi tiết hóa đơn cần thêm đã tồn tại thì không tạo thêm được chi tiết hóa đơn mới. Nếu việc nhập thông tin về chi tiết hóa đơn đã hoàn tất nhưng người quản trị chưa nhấn nút “Thêm” thì chi tiết hóa đơn mới chưa được thêm.
+* Nếu người quản trị không chọn chi tiết hóa đơn cần xóa mà nhấn nút “Xóa” thì hệ thống thông báo yêu cầu “Chọn chi tiết hóa đơn để xóa!” Phải chọn thì hệ thống mới thực hiện xóa chi tiết hóa đơn đó khỏi CSDL.
+• Yêu cầu đặc biệt: Không.
+
+3.2.8 Đặc tả Usecase “Thống kê”
+    
+    Hình 9: Biểu đồ usecase “thống kê”
+    ➢ UseCase thống kê khách hàng:
+• Tác nhân: Quản trị hệ thống.
+• Mô tả: Mô tả thống kê khách hàng
+• Điều kiện cần: Người quản trị phải đăng nhập vào hệ thống thành công
+• Điều kiện đủ: Không
+• Dòng sự kiện:
+-  Dòng sự kiện chính:
+* Quản trị chọn thống kê khách hàng.
+* Click nút “thống kê”.
+* Hệ thống kiểm tra dữ liệu của khách hàng? Hệ thống trả về thông tin thống kê khách hàng.
+- Dòng sự kiện phụ: 
+* Nếu người quản trị hủy việc thống kê, hệ thống trở lại trang chủ quản trị.
+• Yêu cầu đặc biệt: Không.
+    ➢ UseCase thống kê doanh thu:
+• Tác nhân: Quản trị hệ thống.
+• Mô tả: Mô tả thống kê doanh thu
+• Điều kiện cần: Người quản trị phải đăng nhập vào hệ thống thành công
+• Điều kiện đủ: Không
+• Dòng sự kiện:
+-  Dòng sự kiện chính:
+* Quản trị chọn thống kê doanh thu.
+* Click nút “thống kê”.
+* Hệ thống kiểm tra dữ liệu của hóa đơn? Hệ thống trả về thông tin thống kê doanh thu.
+- Dòng sự kiện phụ: 
+* Nếu người quản trị hủy việc thống kê, hệ thống trở lại trang chủ quản trị.
+• Yêu cầu đặc biệt: Không.
+    ➢ UseCase thống kê sản phẩm bán chạy:
+• Tác nhân: Quản trị hệ thống.
+• Mô tả: Mô tả thống kê sản phẩm bán chạy
+• Điều kiện cần: Người quản trị phải đăng nhập vào hệ thống thành công
+• Điều kiện đủ: Không
+• Dòng sự kiện:
+-  Dòng sự kiện chính:
+* Quản trị chọn thống kê sản phẩm bán chạy.
+* Click nút “thống kê”.
+* Hệ thống kiểm tra dữ liệu của đơn hàng? Hệ thống trả về thông tin thống kê sản phẩm bán chạy.
+- Dòng sự kiện phụ: 
+* Nếu người quản trị hủy việc thống kê, hệ thống trở lại trang chủ quản trị.
+• Yêu cầu đặc biệt: Không.
+    ➢ UseCase thống kê sản phẩm tồn kho:
+• Tác nhân: Quản trị hệ thống.
+• Mô tả: Mô tả thống kê sản phẩm tồn kho
+• Điều kiện cần: Người quản trị phải đăng nhập vào hệ thống thành công
+• Điều kiện đủ: Không
+• Dòng sự kiện:
+-  Dòng sự kiện chính:
+* Quản trị chọn thống kê sản phẩm tồn kho.
+* Click nút “thống kê”.
+* Hệ thống kiểm tra dữ liệu của sản phẩm? Hệ thống trả về thông tin thống kê sản phẩm tồn kho.
+- Dòng sự kiện phụ: 
+* Nếu người quản trị hủy việc thống kê, hệ thống trở lại trang chủ quản trị.
+• Yêu cầu đặc biệt: Không.
+3.2.9 Đặc tả Usecase “Đăng nhập”
+Hình 10: Biểu đồ usecase “đăng nhập”
+
+    
+    ➢ UseCase đăng nhập:
+• Tác nhân:Quản trị hệ thống.
+• Mô tả: Mô tả cách quản trị đăng nhập vào hệ thống .                        
+• Điều kiện cần: Người quản trị phải nhập tên và mật khẩu chính xác.
+• Điều kiện đủ: Không
+• Dòng sự kiện:
+-  Dòng sự kiện chính:
+* Quản trị nhập tên và mật khẩu của mình.
+* Click nút “Đăng nhập”.
+* Hệ thống kiểm tra dữ liệu các thông tin đã nhập? Nếu đúng sẽ lưu vào cookie thông tin về quản trị và thông báo việc đăng nhập đã thành công.
+- Dòng sự kiện phụ: 
+* Nếu thông tin nhập sai sẽ thông báo cho quản trị yêu cầu nhập lại.
+• Yêu cầu đặc biệt: Không.
+
+3.2.10 Đặc tả Usecase “Tìm kiếm sản phẩm”
+Hình 11: Biểu đồ usecase “tìm kiếm sản phẩm”
+    
+    
+    ➢ UseCase Tìm kiếm:
+• Tác nhân:khách hàng
+• Mô tả: Mô tả cách khách hàng tìm kiếm sản phẩm.
+• Điều kiện cần: Không
+• Điều kiện đủ: Không
+• Dòng sự kiện:
+-  Dòng sự kiện chính:
+* Khách hàng  nhập các thông tin cần tìm kiếm .
+* Click nút “Tìm Kiếm”.
+* Hệ thống kiểm tra dữ liệu và tìm kiếm trong CSDL và thông báo tới khách hàng.
+- Dòng sự kiện phụ: 
+* Nếu thông tin nhập không có sẽ thông báo cho khách hàng không có sản phẩm nào.
+• Yêu cầu đặc biệt: Không.
+    
+3.2.11 Đặc tả Usecase “Đặt hàng”
+Hình 12: Biểu đồ usecase “đặt hàng”
+    
+    ➢ UseCase Đặt hàng:
+• Tác nhân:khách hàng
+• Mô tả: Mô tả cách khách hàng tìm kiếm sản phẩm.
+• Điều kiện cần:Khách hàng phải đăng nhập thành công
+• Điều kiện đủ: Không
+• Dòng sự kiện:
+-  Dòng sự kiện chính:
+* Click nút “Đặt hàng”.
+* Khách hàng chọn hình thức đặt hàng
+* Hệ thống kiểm tra dữ liệu , lưu thông tin đơn hàng trong CSDL và thông báo tới khách hàng.
+- Dòng sự kiện phụ: 
+* Nếu hình thức đặt hàng không hợp lệ sẽ thông báo cho khách hàng nhập lại.
+• Yêu cầu đặc biệt: Không.
+3.2.12 Đặc tả Usecase “Thanh toán”
+ Hình 13: Biểu đồ usecase “Thanh toán”
+    
+    ➢ UseCase Thanh Toán:
+• Tác nhân:khách hàng
+• Mô tả: Mô tả cách khách hàng tìm kiếm sản phẩm.
+• Điều kiện cần:Khách hàng phải đăng nhập thành công
+• Điều kiện đủ: Không
+• Dòng sự kiện:
+-  Dòng sự kiện chính:
+* Click nút “Thanh toán”.
+* Khách hàng nhập đầy đủ thông tin yêu cầu
+* Hệ thống kiểm tra dữ liệu , lưu thông tin thanh toán trong CSDL và thông báo tới khách hàng.
+- Dòng sự kiện phụ: 
+* Nếu hình thức thanh toán không hợp lệ sẽ thông báo cho khách hàng nhập lại.
+• Yêu cầu đặc biệt: Không.
+
+3.4 Biểu đồ lớp
+      Biểu đồ lớp mô tả các lớp, là các viên gạch để xây dựng bất kì hệ thống hướng đối tượng nào.Khả năng cộng tác giữa chúng, bằng cách truyền thông điệp, được chỉ ra trong các mối quan hệ giữa chúng.
+      Biểu đồ lớp cho ta một khung nhìn tĩnh của các lớp trong mô hình hoặc một phần của mô hình.Nó chỉ cho ta thấy các thuộc tính và các thao tác của lớp, cũng như các loại quan hệ giữa các lớp. Biểu đồ lớp giống như một tấm bản đồ, với các lớp là các thành phố còn các mối quan hệ là các đường nối giữa chúng.
+3.4.1. Xác định các lớp
+      Từ việc phân tích biểu đồ UseCase ta có các đối tượng sau:
+- Product: Lưu thông tin sản phẩm.
+- Category: Lưu danh mục sản phẩm.
+- Promotion: Lưu thông tin về giảm giá của sản phẩm.
+- Order: Lưu thông tin hóa đơn.
+- Order_detail: Lưu thông tin chi tiết hóa đơn.
+- Transport: Lưu thông tin phương thức vận chuyển
+- Customer: Lưu thông tin khách hàng
+- Slider: Lưu hình ảnh slider quảng cáo.
+- Post: Lưu thông tin các bài viết 
+- Import_invoice: Lưu thông tin hóa đơn nhập
+- Import_detail: Lưu chi tiết hóa đơn nhập
+
+
+
+
+3.4.2. Thể hiện biểu đồ lớp.
+    Hình 14: Biểu đồ lớp
+
+
+3.4.3. Danh sách các lớp đối tượng
+    Bảng 3: Danh sách các lớp đối tượng
+STTTên lớp/quan hệLoạiÝ nghĩa/Ghi chú1ProductLớp sản phẩm2CategoryLớp loại sản phẩm3OderLớp hóa đơn xuất4Oder_detailLớp chi tiết hóa đơn xuất5Import_invoiceLớp hóa đơn nhập6Import_detailLớp chi tiết hóa đơn nhập7PromotionLớp giảm giá8TransportLớp phương thức vận chuyển9UserLớp nhân viên10PostLớp bài viết11SliderLớp slider
+3.4.4. Mô tả chi tiết từng lớp đối tượng
+a) Lớp Product
+    Bảng 4: Lớp Product
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1Product_IDIntegerKhông trùngMã sản phẩm2Cate_IDIntegerMã loại3Product_nameTextTên sản phẩm4PriceIntegerGiá bán sản phẩm5Price_ImportIntegerGiá nhập sản phẩm6QuantilyIntegerSố lượng7ImageTextHình ảnh8ColorTextMàu sắc9SizeTextKích thước10MaterialTextChất liệu11DescriptionTextMô tả    
+b) Lớp Category
+    Bảng 5: Lớp Category
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1Cate_IDIntegerKhông trùngMã Loại2Cate_nameTextTên Loại
+c) Lớp Order
+    Bảng 6: Lớp Order
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1Oder_IDIntegerKhông trùngMã hóa đơn2Cus_IDIntegerMã khách hàng3Ship_nameTextTên người nhận4Ship_addressTextĐịa chỉ người nhận5Ship_phoneTextSố điện thoại người nhận6Oder_dateNumericNgày đặt7Total_priceIntegerTổng tiền8Transport_IDIntegerMã phương thức thanh toán    
+d) Lớp Order_detail
+    Bảng 7: Lớp Order_detail
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1Product_IDIntegerKhông trùngMã sản phẩm2Oder_IDIntegerKhông trùngMã hóa đơn3PriceIntegerGiá tiền4QuantilyIntegerSố lượng5Total_priceIntegerTổng tiền    
+e) Lớp Import_invoice
+    Bảng 8: Lớp Import_invoice
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1Import_IDIntegerKhông trùngMã hóa đơn nhập2Import_dateNumericNgày nhập3QuantilyIntegerSố lượng4Total_priceIntegerTổng tiền
+f) Lớp Import_detail
+    Bảng 9: Lớp Import_detail
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1Import_IDIntegerKhông trùngMã hóa đơn nhập2Product_IDIntegerKhông trùngMã sản phẩm3Import_dateNumericNgày nhập4QuantilyIntegerSố lượng5Total_priceIntegerTổng tiền
+g) Lớp Promotion
+    Bảng 10: Lớp Promotion
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1Promotion_IDIntegerKhông trùngMã giảm giá2Product_IDIntegerMã sản phẩm3StartDateNumericNgày bắt đầu4EndDateNumericNgày kết thúc5DiscountIntegerGiá giảm    
+h) Lớp Transport
+    Bảng 11: Lớp Transport
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1Transport_IDIntegerKhông trùngMã phương thức vận chuyển2Transport_nameTextTên phương thức vận chuyển3Transport_priceIntegerGiá4Transport_timeIntegerThời gian vận chuyển
+i) Lớp Customer
+    Bảng 12: Lớp Customer
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1Cus_IDIntegerKhông trùngMã khách hàng2Cus_nameTextHọ tên khách hàng3Cus_addressTextĐịa chi khách hàng4Cus_emailTextEmail khách hàng5Cus_phoneTextSố điện thoại khách hàng
+j) Lớp Post
+    Bảng 13: Lớp Post
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1Post_IDIntegerKhông trùngMã bài viết2Post_nameTextTên bài viết3ContentTextNội dung4ImageTextHình ảnh    
+k) Lớp Slider
+    Bảng 14: Lớp Slider
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1Slider_IDIntegerKhông trùngMã slider2ImageTextHình ảnh3Slider_addressNumericTrạng thái
+3.5 Biểu đồ cơ sở dữ liệu
+    Hình 15: Biểu đồ cơ sở dữ liệu
+
+3.6 Biểu đồ tuần tự 
+3.6.1 Biểu đồ tuần tự cho quá trình  “Đăng kí”
+Hình 16: Biểu đồ tuần tự cho quá trình “đăng ký”
+
+
+
+
+
+
+
+
+
+
+
+3.6.2 Biểu đồ tuần tự cho quá trình “Đăng nhập”
+Hình 17:Biểu đồ tuần tự cho quá trình “đăng nhập”
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+3.6.3 Biểu đồ tuần tự cho quá trình “Tìm kiếm”
+Hình 18: Biểu đồ tuần tự cho quá trình “tìm kiếm”
+
+
+3.6.4 Biểu đồ tuần tự cho quá trình “Thêm sản phẩm”
+Hình 19: Biểu đồ tuần tự cho quá trình “thêm sản phẩm”
+
+3.6.5 Biểu đồ tuần tự cho quá trình “Sửa sản phẩm”
+Hình 20: Biểu đồ tuần tự cho quá trình “sửa sản phẩm”
+    
+3.6.6 Biểu đồ tuần tự cho quá trình “Xóa sản phẩm”
+Hình 21: Biểu đồ tuần tự cho quá trình “xóa sản phẩm”
+
+3.6.7 Biểu đồ tuần tự cho quá trình “Đặt hàng”
+    Hình 22: Biểu đồ tuần tự cho quá trình đặt hàng
+    
+3.6.8 Biểu đồ tuần tự cho quá trình “Xử lý đơn hàng”
+Hình 23: Biểu đồ tuần tự cho quá trình “xử lý đơn hàng”
+    
+    
+    
+    
+3.6.9 Biểu đồ tuần tự cho quá trình “Thanh toán”
+    Hình 24: Biểu đồ tuần tự cho quá trình “thanh toán”
+
+3.6.10 Biểu đồ tuần tự cho quá trình “Thống kê”
+    Hình 25: Biểu đồ tuần tự cho quá trình “thống kê”
+
+
+3.6. Thiết kế giao diện
+3.6.1. Giao diện trang chủ
+    Hình 26: Giao diện trang chủ
+
+3.6.2. Giao diện trang chi tiết
+    Hình 27: Giao diện trang chi tiết
+
+3.6.3. Giao diện trang loại sản phẩm
+    Hình 28: Giao diện trang loại sản phẩm
+    
+3.6.4. Giao diện trang giỏ hàng
+    Hình 29: Giao diện trang giỏ hàng
+
+
+
+
+
+
+
+3.6.5. Giao diện trang đăng nhập
+    Hình 30: Giao diện trang đăng nhập admin
+
+
+3.6.6. Giao diện trang thêm sản phẩm
+    Hình 31: Giao diện trang thêm sản phẩm
+
+3.6.7. Giao diện trang sửa sản phẩm
+    Hình 32: Giao diện trang sửa sản phẩm
+
+CHƯƠNG 4: KẾT LUẬN
+4.1. Kết quả đạt được của đề tài
+    Sau thời gian nghiên cứu hệ thống cùng với sự hướng dẫn tận tình của thầy cô giáo hướng dẫn đồ án tốt nghiệp, em đã dần hoàn thành bài báo cáo của mình. Tuy nhiên, với yêu cầu đề ra em vẫn còn những hạn chế nhất định.
+    Trong quá trình thực hiện cùng với sự hướng dấn tận tình của thầy cô, em đã cố gắng tìm hiểu để hiểu hệ thống và đạt được một số kết quả sau :
+    Về công nghệ :
+• Tìm hiểu và nắm bắt được các công cụ thiết kế Web
+• Các dịch vụ trên Internet và thương mại điện tử
+• Tìm hiểu về Python Django MVC
+• Hệ quản trị cơ sở dữ liệu SQLite
+• Ngôn ngữ lập trình Python Django
+    Ứng dụng cơ sở lý thuyết vào việc xây dựng Website :
+• Tìm hiểu về nghiệp vụ bán chăn ga gối đệm qua mạng
+• Phân tích thiết kế và xây dựng được cơ sở dữ liệu hệ thống
+• Thiết kế được giao diện cơ bản của trang Web
+• Cho phép khách hàng tìm kiếm, xem và mua sản phẩm một cách nhanh chóng, thuận tiện
+• Hỗ trợ quản trị được website cũng như quản lý được các chức năng cơ bản của website
+4.2. Hạn chế của đề tài
+    Hệ thống website giới thiệu và bán chăn ga gối đệm mới dừng lại ở các module cơ bản của hệ thống tin tức, chưa có nhiều module tiện ích cho người dùng như: Thống kê lượt truy cập theo tháng, thăm dò ý kiến, hỏi đáp,…
+    Hệ thống website chưa giải quyết hết các vấn đề bài đã phân tích đặt ra.
+4.3. Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, tác giả đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+• Xây dựng thêm các Control làm phong phú trên việc tùy biến giao diện của website.
+• Bổ sung các Module hỗ trợ cho các website giới thiệu sản phẩm và thương mại điện tử.
+
+
+TÀI LIỆU THAM KHẢO
+x
+[1] Antonio Mele-Django By Example_ Create your own line of successful web
+applications with Django-Packt Publishing (2015)
+[2] Learning Website Development with Django -Packt Publishing (2008)
+[3] Two Scoops of Django_ Best Practices for Django 1.8 (2015)
+x
+
+    
+    
+    
+Xây dựng Website giới thiệu và bán chăn ga gối đệm
+    
+    
+6
+    
+    

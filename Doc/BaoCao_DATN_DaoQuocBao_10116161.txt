@@ -1,0 +1,346 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Trong những năm gần đây, ngành công nghệ phần mềm nói chung và lập trình phát triển game nói riêng đang có những bước đột phá mới, thị trường game đang hết sức rộng mở, số công ty và các studio game được thành lập ngày càng nhiều. Tất cả tạo điều kiện cho việc trở thành một lập tình viên về game, và tạo ra các sản phẩm của riêng mình.
+    Ở Việt Nam số lượng các studio hay công ty lớn về phát triển game và các tựa game chất lượng do các lập trình viên người Việt viết ra vẫn còn rất ít, với đam mê phát triển nên những tựa game nổi tiếng made in Vietnam như Flappy Bird của anh Nguyễn Hà Đông hay tựa game 7554 về lịch sử cuộc kháng chiến chống Pháp của Emobi Games studio.
+    Sự phát triển mạnh mẽ của các công cụ hỗ trợ lập trình game tạo điều kiện cho các lập trình viên non trẻ, trong đó có phần mềm Unity, là nền tảng phát triển game miễn phí hoàn toàn cho người dùng mới.
+    Các tựa game sinh tồn đang rất phát triển và hầu hết các tựa game sinh tồn đều được phát triển từ những dự án độc lập hay là các đồ án của sinh viên và rất được ủng hộ. Với những thuận lợi nêu trên, em quyết định chọn đề tài Lập trình game Lengend of Zelda trên moblie sử dụng Unity.
+1.2 Mục tiêu của đề tài
+    Nghiên cứu và đề ra giải pháp lập trình game trên nền tảng phát triển game Unity, là một nền tàng mở, dễ tích hợp và đặc biệt hoàn toàn miễn phí cho các sản phẩm có lợi nhuận thấp hơn 100.000$. Giúp tiết kiệm chi phí phát triển.
+    Xây dựng được một hệ thống trong game hoàn chỉnh, cho phép người chơi tương tác và thực hiện các thao tác qua nhân nhận giống so với thực tế.
+1.3 Giới hạn và phạm vi của đề tài
+    Đề tài xây dựng một game sử dụng các công nghệ trong lập trình như Unity Shader, Particlesytem, Scriptable Object và công cụ lập trình Visual Studio 2015.
+    Hệ thống các chức năng trong game được thực hiện nhằm tạo ra một tựa game chân thực nhất, gần gũi nhất với người chơi.
+1.4 Nội dung thực hiện
+    	Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Ngiên cứu các tựa game sinh tồn cùng thể loại.
+- Phân tích yêu cầu và đề xuất hướng giải quyết các chức năng trong game.
+- Thiết kế đặc tả hệ thống.
+- Lập trình các chức năng của hệ thống.
+- Kiểm thử hệ thống game.
+- Triển khai thực nghiệm game.
+1.5 Phương pháp tiếp cận
+Cách tiếp cận: 
+- Nghiên cứu ngôn ngữ lập trình C#
+- Nghiên cứu công cụ Unity
+Sử dụng các phương pháp nghiên cứu: 
+- Phương pháp đọc tài liệu;
+- Phương pháp phân tích mẫu;
+- Phương pháp thực nghiệm;
+    
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Unity
+2.1.1 Unity là gì?
+      Unity là một phần mềm làm game đa nền tảng được phát triển bởi Unity Technologies, mà chủ yếu để phát triển video game cho máy tính, consoles và điện thoại.[1] Lần đầu tiên nó được công bố chạy trên hệ điều hành OS X, tại Apple's Worldwide Developers Conference vào năm 2005, đến nay đã mở rộng 27 nền tảng.
+      Unity hỗ trợ đồ họa 2D và 3D, các chức năng được viết chủ yếu qua ngôn ngữ C#. Hai ngôn ngữ lập trình khác cũng được hỗ trợ: Boo, đã bị loại cùng với việc phát triển Unity 5 và UnityScript bị loại vào tháng 8 năm 2017 sau khi phát hành Unity 2017.1. UnityScript là một ngôn ngữ lập trình độc quyền có cú pháp tương tự JavaScript. Phần mềm nhắm mục tiêu các đồ họa APIs sau: Direct3D trên Windows và Xbox One; OpenGL trên Linux, macOS, và Windows; OpenGL ES trên Android và iOS; WebGL trên web; và APIs độc quyền trên các máy chơi video game. Ngoài ra, Unity hỗ trợ APIs cấp thấp như Metal trên iOS và macOS và Vulkan trên Android, Linux, và Windows, cũng như Direct3D 12 trên Windows và Xbox One. Trong 2D games, Unity cho phép nhập sprites và một renderer thế giới 2D tiên tiến. Đối với 3D games, Unity cho phép thiết lập các đập điểm kĩ thuật của các kết cấu và độ phân giải mà công cụ trò chơi hỗ trợ, cung cấp các hỗ trợ cho bump mapping, reflection mapping, parallax mapping, cảnh không gian ambient occlusion (SSAO), hiệu ứng bóng đổ bằng cách sử dụng shadow maps, render thiết lập toàn cảnh đến hiệu ứng. Unity cũng cung cấp các dịch vụ cho nhà phát triển, bao gồm: Unity Ads, Unity Analytics, Unity Certification, Unity Cloud Build, Unity Everyplay, Unity API, Unity Multiplayer, Unity Performance Reporting and Unity Collaborate.
+      Unity nổi bật với khả năng xây dựng trò chơi chạy trên nhiều nền tảng. Các nền tảng được hỗ trợ hiện nay là Android, Android TV, Facebook Gameroom, Fire OS, Gear VR, Google Cardboard, Google Daydream, HTC Vive, iOS, Linux, macOS, Microsoft HoloLens, Nintendo 3DS family, Nintendo Switch, Oculus Rift, PlayStation 4, PlayStation Vita, PlayStation VR, Samsung Smart TV, Tizen, tvOS, WebGL, Wii U, Windows, Windows Phone, Windows Store, và Xbox One. Unity trước đây cũng đã hỗ trợ 7 nền tảng khác chạy trên Unity Web Player. Unity Web Player là một plugin của trình duyệt chạy trên Windows và OS X, đã bị gỡ bỏ vì lợi ích của WebGL.
+    Unity là bộ công cụ phát triển phần mềm mặc định (SDK) cho máy chơi game video game Wii U của Nintendo, kèm theo bản miễn phí của Nintendo với mỗi giấy phép phát triển Wii U. Unity Technologies gọi việc kết hợp sản xuất SDK với một bên thứ ba là "industry first".
+2.1.2 Tại sao nên sử dụng Unity
+      Một hệ sinh thái game cần phải có các chức năng cơ bản như: cung cấp công cụ dựng hình (kết xuất đồ họa) cho các hình ảnh 2D hoặc 3D, công cụ vật lý (tính toán và phát hiện va chạm), âm thanh, mã nguồn, hình ảnh động, trí tuệ nhân tạo, phân luồng, tạo dò nguồn dữ liệu xử lý, quản lý bộ nhớ, dựng ảnh đồ thị và kết nối mạng. Unity là engine đáp ứng đầy đủ các yêu cầu đó.
+      Ngoài những chức năng cơ bản của một hệ sinh thái đó, Unity còn có những ưu việt vượt trội so với các engine khác:
+Sử dụng ngôn ngữ lập trình phổ biến tại Việt Nam là C#.
+Hỗ trợ đa nền tảng: Lập trình viên dùng Unity3D Engine và ngôn ngữ C# hoặc script để phát triển game hoàn thiện, sau đó Unity cho phép bạn “build” ra các phiên bản cho các nền tảng khác mà không cần viết thêm dòng code nào, giúp bạn rút ngắn rất nhiều thời gian xây dựng game cũng như nâng cao mức độ an toàn khi lập trình game. Những nền tảng mà Unity đang hỗ trợ gồm PlayStation 3, Xbox 360, Wii U, iOS, Android, Windows, Blackberry 10, OS X, Linux, trình duyệt web.
+Dễ sử dụng, ngay cả với Lập trình viên nghiệp dư, do Unity3D được xây dựng trong một môi trường phát triển tích hợp, cung cấp một hệ thống toàn diện cho các lập trình viên, từ soạn thảo mã nguồn, xây dựng công cụ tự động hóa đến trình sửa lỗi.
+Tính kinh tế cao: Những cá nhân và doanh nghiệp có doanh thu dưới 100.000 USD/năm được dùng miễn phí Unity3D, và Unity Technology chỉ thu phí 1.500 USD/năm cho bản Pro- một con số rất khiêm tốn so với những gì engine này mang lại.
+Rất được ưa chuộng tại Việt Nam, ngay cả trong các game studio lớn như VTC, VNG, Glass-Egg.
+Thư viện phong phú, đa dạng: Unity có nhiều thư viện, các công cụ hỗ trợ làm game nhanh hơn, thông minh hơn, các đối tượng được tạo sẵn, và tất cả các thư viện này đều “mở”, cho phép cộng đồng tự do sử dụng và sáng tạo nên các sản phẩm của chính mình, thậm chí có thể bán trên Asset Store của Unity.
+Cộng đồng rất lớn mạnh: là engine phổ biến nhất trên thế giới, Unity có cộng đồng sử dụng rất lớn mạnh. Mọi thắc mắc của bạn về Unity đều sẽ được trả lời trên website cộng đồng http://answers.unity3d.com.
+Hỗ trợ Networking để phát triển MMO game.
+2.1.3 Particle System trong Unity
+Particle System trong Unity là gì?
+      Particle system là một hệ thống các hạt dùng để tạo ra các hiệu ứng trong game như mưa, tuyết rơi, khói, lửa, hiệu ứng phép…, giúp làm cho game trở nên sinh động hơn, nhất là đối với game 3D. [2]
+Cách sử dụng của Particle System
+Shape
+    Hình dạng của nguồn phát ra hạt là điều chúng ta cần quan tâm đầu tiên khi làm việc với particle system. Tất nhiên trước bắt tay vào tạo ra hiệu ứng của riêng mình thì bạn đã phải có ý tưởng hoặc concept cho fx đó rồi. Hãy tính toán xem bạn sẽ dùng shape gì, nguồn phát ra hạt sẽ ảnh hưởng khá nhiều đến kết quả. Bạn không thể tạo ra một hiệu ứng tuyết rơi mà nguồn phát ra hạt của bạn lại chỉ từ một điểm phải không ?
+Emission
+    Về cơ bản thì thằng này cho phép bạn kiểm soát tỉ lệ hạt bung ra theo thời gian hoặc theo chiều sâu. Các thông số về Burst cho phép chúng ta ép particle system sinh ra bao nhiêu hạt vào chính xác thời điểm mà chúng ta muốn
+Duration
+    Thông số tiếp theo là thời gian sinh ra hạt. Nó hoàn toàn khác với Start Lifetime.Ví dụ nôm na cho dễ hiểu thì Duration là khoảng thời gian mang thai của một người mẹ thì Start Lifetime là khoảng thời gian sống trên đời của đứa trẻ sau khi nó được sinh ra.
+Size hạt
+    Kích thước một hạt particle trong Unity được điều chỉnh dựa trên 2 thông số đó là Start Size và Size Over Lifetime. Start Size cho phép chúng ta xác định kích thước của một hạt particle trước khi nó được bung ra còn Size Over Lifetime cho phép ta điều chỉnh kích thước của hạt sau khi nó được sinh ra. Bạn có thể xem thêm video mình hướng dẫn làm hiệu ứng hạt lấp lánh để hiểu hơn về cách điều chỉnh kích thước hạt – <Dust Effect – Sử dụng Size Over Lifetime trong Particle System>
+Rotation
+    Tương tự như Size hạt bên trên. Rotation cho phép chúng ta điều chỉnh về góc xoay của hạt trước và sau khi hạt được sinh. Cả Rotation và Size đều có thể tùy chỉnh random để cho các hạt sinh ra được tự nhiên chứ không bị đều đều.
+Physic
+    Về mặt vật lý thì mình nói chung cho cả 2 tab là Velocity over Lifetime và Force over Lifetime. Hai thuộc tính này gần như tương đồng nhau, Velocity cho phép bạn kiểm soát quỹ đạo bay của từng hạt particle trong khi đó Force kiểm soát lực đẩy của từng hạt trong suốt quá trình hạt hiển thị.
+Color
+    Việc kiểm soát màu sắc khi làm Game effect trong Unity 3d còn phụ thuộc vào nhiều yếu tố khác ngoài particle system. Nhưng về cơ bản thì particle chi ra thành Start color và Color over Lifetime. Bảng màu của Unity cũng cho phép chúng ta kiểm soát được opacity của texture bằng kênh Alpha.
+Noise
+    Thuộc tính noise được Unity thêm vào từ bản update 2017. Thuộc tính này về cơ bản sẽ tạo ra Turbulance cho những effect nào có nhiều hạt. Ví dụ như khi tạo hiệu ứng những tàn lửa bay lên trong không khí mà thiếu Turbulance sẽ không tạo ra cảm giác chân thực. Mặc dù mình có nhiều cách để giả Turbulance nhưng yếu tố này thực sự rất quan trọng khi làm việc với particle system. Nó còn là yếu tố không thể thiếu trong các phần khác. Mình vẫn không hiểu tại sao Unity họ không update thuộc tính quan trọng này mà lại thay bằng Noise. Tuy nhiên Noise vẫn thực hiện tốt nhiệm vụ của nó. Nếu bạn làm effect game mobile bằng Unity 3D thì nên hạn chế sử dụng thuộc tính này
+Collision
+    Là thuộc tính thể hiện sự va chạm của hạt với các object khác trong Scene đồng thời kiểm soát được những gì xảy ra sau sự va chạm đó. Ví dụ sau khi hạt chạm vào mặt đất thì hạt đó biến mất ngay hoặc hạt đó sinh ra một Particle System mới. Điều đó tùy thuộc vào ý đồ của bạn. Đây cũng là một thuộc tính quan trọng khi làm Game effect với Unity 3d.
+Texture Sheet Animation
+    Thuộc tính dùng để kiểm soát việc hiển thị của texture. Có nhiều effect trong game phải sử dụng texture frame by frame hoặc có những effect cần phải random giữa nhiều texture khác nhau. Thuộc tính này chỉ hoạt động với 1 tấm texture là prite sheet. 
+Renderer
+    Việc kiểm soát hình ảnh hiển thị ra màn hình thực sự phức tạp hơn những gì chúng ta nhìn thấy và nó không chỉ phụ thuộc vào mỗi Renderer của particle system mà còn phụ thuộc vào setup ánh sáng và camera trong Scene. Cơ bản thì bạn chỉ cần quan tâm đến Render Mode mà thôi, bao gồm : Billboard (texture luôn hướng theo góc quay của camera) Stretched Billboard (texture bị kéo dãn) Horizontal Billboard (texture nằm ngang song song với mặt đất) Vertical Billboard (texture vuông góc với mặt đất) Mesh (texture hiển thị theo bề mặt của vật thể 3d)
+2.1.4 Shader trong Unity
+Shader trong Unity là gì?
+    Shader là các đoạn script nhỏ có chứa những cái tính toán về toán học, thuật toán để tính toán màu sắc cho từng pixel rendered, dựa trên ánh sáng và những tùy chỉnh Material. [3]
+    Unity có hỗ trợ 3 loại Shader. Nhưng chỉ có 2 loại thường được sử dụng đó là Suface Shader và Fragment and Vertex Shaders, loại còn lại là Fixed Function Shader, nhưng loại này giờ hầu như không còn được sử dụng nữa bởi vì nó đã quá lỗi thời so với các loại Shader đang sử dụng hiện giờ.
+Phân loại Shader trong Unity
+      Trong những ngày đầu khi mà phần cứng đồ họa chưa phát triển mạnh như bây giờ thì Shader chỉ có một loại đó là Fixed Function shader với rất nhiều hạn chế khi nó được thiết lập sẵn trên các card đồ họa. Hiện nay, phần cứng đồ họa đã trở nên mạnh mẽ rất nhiều, nhiều bộ nhớ hơn, khả năng tính toán mạnh hơn cùng với đó thì các lập trình viên cũng được tiếp cận với nhiều loại Shader hơn và người ta gọi chung các loại Shader mới này là Programmable Shader còn Fixed Function shader là loại Non-Programmable Shader. Dựa trên tính năng và mục đích của shader mà chúng được phân loại như sau: Vertex shader, Pixel shader, Geometry shader, Compute shader, Tessellation shader.
+2.1.5 Scriptable Object trong Unity
+Scriptable Object trong Unity là gì?
+      Scriptable object đơn giản giống như là một object trong Unity, tuyên nhiên chức năng chính của Scriptable object là để lưu dữ liệu game như audio, text, film. Một game ngoài gameplay hay và các asset siêu đẹp thì những dữ liệu như audio, text, short film cũng rất quan trọng và scriptable object sẽ là nơi chứa tất cả các thứ đó. [4]
+Cách sử dụng Scriptable Object	
+      Các trường hợp sử dụng chính cho ScripableObject là:
+Lưu trữ dữ liệu và Asset trong Editor session
+Lưu dữ liệu dưới dạng Asset trong Project của bạn để sử dụng  trong thời gian chạy
+Để sử dụng ScriptableObject, hãy tạo tập lệnh trong application’s thư mục Asset của bạn và làm cho nó kế thừa từ class Scriptable Object. Bạn có thể sử dụng thuộc tính CreateAssetMenu để dễ dàng tạo tài sản tùy chỉnh bằng lớp của bạn. 
+2.2 Tổng quan về Visual Studio
+2.2.1 Visual Studio là gì?
+      Microsoft Visual Studio là một môi trường phát triển tích hợp (IDE) từ Microsoft. Nó được sử dụng để phát triển chương trình máy tính cho Microsoft Windows, cũng như các trang web, các ứng dụng web và các dịch vụ web. Visual Studio sử dụng nền tảng phát triển phần mềm của Microsoft như Windows API, Windows Forms, Windows Presentation Foundation, Windows Store và Microsoft Silverlight. Nó có thể sản xuất cả hai ngôn ngữ máy và mã số quản lý. [5]
+      Visual Studio bao gồm một trình soạn thảo mã hỗ trợ IntelliSense cũng như cải tiến mã nguồn. Trình gỡ lỗi tích hợp hoạt động cả về trình gỡ lỗi mức độ mã nguồn và gỡ lỗi mức độ máy. Công cụ tích hợp khác bao gồm một mẫu thiết kế các hình thức xây dựng giao diện ứng dụng, thiết kế web, thiết kế lớp và thiết kế giản đồ cơ sở dữ liệu. Nó chấp nhận các plug-in nâng cao các chức năng ở hầu hết các cấp bao gồm thêm hỗ trợ cho các hệ thống quản lý phiên bản (như Subversion) và bổ sung thêm bộ công cụ mới như biên tập và thiết kế trực quan cho các miền ngôn ngữ cụ thể hoặc bộ công cụ dành cho các khía cạnh khác trong quy trình phát triển phần mềm.
+      Visual Studio hỗ trợ nhiều ngôn ngữ lập trình khác nhau và cho phép trình biên tập mã và gỡ lỗi để hỗ trợ (mức độ khác nhau) hầu như mọi ngôn ngữ lập trình. Các ngôn ngữ tích hợp gồm có C, C++ và C++/CLI (thông qua Visual C++), VB.NET (thông qua Visual Basic.NET), C# (thông qua Visual C#) và F# (như của Visual Studio 2010). Hỗ trợ cho các ngôn ngữ khác như J++/J#, Python và Ruby thông qua dịch vụ cài đặt riêng rẽ. Nó cũng hỗ trợ XML/XSLT, HTML/XHTML, JavaScript và CSS.
+      Microsoft cung cấp phiên bản "Express" (đối với phiên bản Visual Studio 2013 trở về trước) và "Community" (đối với bản Visual Studio 2015 trở về sau) là phiên bản miễn phí của Visual Studio.
+2.2.2 Cấu trúc của Visual Studio
+      Các Visual Studio không hỗ trợ cho bất kỳ ngôn ngữ lập trình nào về giải pháp hoặc công cụ thực chất, thay vào đó nó cho phép cắm chức năng được mã hóa như là một VSPackage. Khi cài đặt, các chức năng có sẵn như là một dịch vụ. IDE cung cấp ba dịch vụ: SVsSolution cung cấp khả năng liệt kê các dự án và các giải pháp; SVsUIShell cung cấp cửa sổ và giao diện người dùng và SVsShell. Ngoài ra, IDE cũng có trách nhiệm điều phối và cho phép truyền thông giữa các dịch vụ. Tất cả các biên tập viên, nhà thiết kế, các loại dự án và các công cụ khác được thực hiện theo VSPackages. Visual Studio sử dụng COM để truy cập VSPackages. Visual Studio SDK cũng bao gồm Managed Package Framework (MPF) là một tập hợp quản lý bao bọc quanh các COM-interfaces cho phép các gói được viết bằng bất kỳ ngôn ngữ nào. Tuy nhiên, MPF không cung cấp tất cả các chức năng bộc lộ trong Visual Studio COM-interfaces.[9] Các dịch vụ có thể được tiêu thụ để tạo ra các gói khác, để thêm chức năng cho Visual Studio IDE.
+      Hỗ trợ cho các ngôn ngữ lập trình được thêm vào bằng cách sử dụng một VSPackage đặc biệt được gọi là một dịch vụ ngôn ngữ. Một dịch vụ ngôn ngữ định nghĩa giao tiếp khác nhau mà việc thực hiện VSPackage có thể thực hiện để hỗ trợ thêm cho các chức năng khác nhau. Các chức năng có thể được thêm vào theo cách này bao gồm cú pháp màu, hoàn thành báo cáo kết quả, kết hợp đôi, công cụ chú giải tham số thông tin, danh sách thành viên và đánh dấu lỗi trên nền biên dịch. Nếu giao diện được thực hiện, các tính năng sẽ có sẵn ngôn ngữ. Dịch vụ ngôn ngữ sẽ được thực hiện trên cơ sở mỗi ngôn ngữ. Việc triển khai có thể tái sử dụng mã từ phân tích cú pháp hoặc trình biên dịch cho ngôn ngữ. Dịch vụ ngôn ngữ có thể được triển khai hoặc trong mã nguồn gốc hoặc mã số quản lý. Đối với mã nguồn gốc, thì cả COM-interfaces gốc hoặc Babel Framework (một phần của Visual Studio SDK) đều có thể được sử dụng. Đối với mã số quản lý thì các MPF sẽ bao hàm các dịch vu quản lý văn bản. 
+      Visual Studio không bao gồm bất kỳ Hệ thống quản lý phiên bản hỗ trợ kiểm soát mã nguồn nhưng nó xác định hai cách thay thế cho các hệ thống kiểm soát mã nguồn để tích hợp với IDE. Một VSPackage kiểm soát mã nguồn có thể cung cấp giao diện người dùng tùy chỉnh của riêng mình. Ngược lại, một plugin kiểm soát mã nguồn bằng cách sử dụng MSSCCI (Microsoft Source Code Control Interface) cung cấp một tập các chức năng được sử dụng để thực hiện chức năng kiểm soát mã nguồn khác nhau, với một giao diện người dùng Visual Studio tiêu chuẩn. MSSCCI lần đầu tiên được sử dụng để tích hợp Visual SourceSafe với Visual Studio 6.0 nhưng sau đó được mở ra thông qua Visual Studio SDK. Visual Studio.NET 2002 dùng MSSCCI 1.1, và Visual Studio.NET 2003 dùng MSSCCI 1.2. Visual Studio 2005, 2008 và 2010 dùng MSSCCI 1.3. 
+      Visual Studio hỗ trợ chạy nhiều cá thể của môi trường (tất cả đều có VSPackages riêng của mình). Những trường hợp sử dụng các registry hives khác nhau để lưu trữ trạng thái cấu hình và được phân biệt bởi AppID (Application ID). Các trường hợp được đưa ra bởi một AppId-specific.exe cụ thể mà lựa chọn AppID, thiết lập các hive gốc và khởi chạy IDE. VSPackages đăng ký một AppID được tích hợp với VSPackages khác cho AppID đó. Các phiên bản sản phẩm khác nhau của Visual Studio được tạo ra bằng cách sử dụng AppIds khác nhau. Các sản phẩm phiên bản Visual Studio Express được cài đặt với AppIds riêng nhưng với các sản phẩm Standard, Professional và Team Suite chia sẻ cùng AppID. Do đó, người ta có thể cài đặt các phiên bản Express song song với các phiên bản khác, không giống như các phiên bản khác cập nhật các cài đặt tương tự. Phiên bản Professional bao gồm các VSPackages khổng lồ trong phiên bản Standard và Team. Hệ thống AppID được thừa hưởng bởi Visual Studio Shell trong Visual Studio 2008.
+2.3 Tổng quan về Blender
+2.3.1 Blender là gì?
+    Blender là một phần mềm đồ họa 3D miễn phí và nguồn mở, được sử dụng để làm phim hoạt hình, kỹ xảo, ảnh nghệ thuật, mẫu in 3D, phần mềm tương tác 3D và Video game. Các tính năng của Blender bao gồm tạo mẫu 3D, UV unwrapping, áp vân bề mặt, mô phỏng khói, chất lỏng, hạt và chuyển động cơ thể, điêu khắc, hoạt họa, phối hợp chuyển động, camera tracking, rendering và chỉnh sửa video. [6]
+    Blender tương thích với một số hệ điều hành như Linux, Mac OS X, và Microsoft Windows.
+2.3.2 Tại sao nên sử dụng Blender
+    Blender hoàn toàn miễn phí: Bạn sẽ dễ dàng nhận ra rằng Blender là phần mềm hoàn toàn miễn phí. Tất nhiên ở Việt Nam hiện nay rất “chuộng” crack mọi phần mềm nên dần dần chúng ta luôn đi tìm thứ gì đó miễn phí đúng không nào? Với Blender thì bạn không tốn công crack, dễ dàng download và cài đặt. Những phần mềm thiết kế 3D khác có thể kể đến như Maya hay 3DS Max bạn không chỉ tốn tiền bản quyền phần mềm mà bạn còn phải đăng ký tài khoản trước đó nữa. Tất nhiên cũng có những phiên bản miễn dành cho sinh viên nhưng hết sinh viên rồi chúng ta sẽ làm sao? Một quan niệm sai lầm rất phổ biến là nếu cái gì miễn phí thì đều không tốt. Mặc dù, nó có thể đúng với một số thứ. Tuy nhiên, bạn có thể yên tâm điều này thật sự không đúng đối với trường hợp của Blender.
+    Blender có mã nguồn mở: Đầu tiên chúng ta cần quan tâm đến khái niệm: Freeware và Open-source. Những phần mềm, ứng dụng miễn phí mà chúng ta hay xài (không tính đến việc crack) thường sẽ có thời hạn sử dụng hoặc giới hạn chức năng nhất định. Đó gọi là Freeware. Open-source là dạng phần mềm mở mã nguồn tức là công khai các mã nguồn lập trình bên trong nó. Dạng này là miễn phí tận cùng vì tất cả mọi người đều có thể lấy mã nguồn đó nghiên cứu, thay đổi và cải tiến phần mềm, và phân phối phần mềm ở dạng chưa thay đổi hoặc đã thay đổi. Hiện nay phần mềm mã nguồn mở được phát triển rộng rãi và thay thế hầu hết các phần mềm thương mại với tính năng tương đương, thậm chí tốt hơn, có thể kể đến như WordPress, Opencart… Việc phần mềm Blender miễn phí và có mã nguồn mở dẫn đến việc hình thành cộng động người sử dụng trở nên đông đảo hơn, các tài nguyên, tài liệu cũng được chia sẻ chi tiết.
+    Blender có đầy đủ tính năng của các phần mềm 3D khác: Blender có mọi thứ các phần mềm thương mại khác có như viewport realtime, hỗ trợ path tracing, sử dụng vật liệu dạng node base, công cụ tạc tượng, vẽ texture 3D, smoke/fire/fluid simulation, hỗ trợ python scripting, công cụ retopology và camera matching, dựng phim, hậu kỳ, animation curve, dope sheet. Có thể Blender không bằng Maya trong việc diễn hoạt Animation, hay cũng không bằng 3Ds Max trong việc làm kiến trúc nhưng Blender có nhiều hơn những thứ kể trên. Đặc biệt với phiên bản 2.8 (ra đời năm 2018) có hỗ trợ real time EEVEE, nó hoạt động như một phần mềm chỉnh sửa clip.
+Dễ dàng chuyển đổi sang các phần mềm 3D khác: Chính bởi việc học 3D với Blender có thể giúp bạn tinh thông hầu hết các công cụ, tính năng, ứng dụng mà các phần mềm 3D khác đều có, cho nên sau này khi bạn muốn chuyển đổi sang một phần mềm khác cũng không quá tốn nhiều thời gian để làm quen và tìm hiểu. Giao diện có thể khác nhưng quan trọng là việc bạn tư duy sử dụng công cụ như thế nào mới quan trọng. Ông bà ta có câu “Nhất nghệ tinh, nhất thân vinh”, bạn chỉ cần giỏi 1 phần mềm là cũng đã đạt được nhiều thành công trong công việc rồi. Chưa kể là học 3D với Blender là một sự khởi đầu dễ thở nhất dành cho những ai mới bước chân vào bộ môn này. Từ đó tiếp tục niềm đam mê và phát triển xa hơn.
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Xây dựng nội dung
+3.1.1 Cốt chuyện
+    Lấy bối cảnh là vùng biển Thái Bình Dương mênh mộng rộng lớn, cùng hàng chục hòn đảo lớn nhỏ không bóng người. Lengend of Zelda đem đến cho người chơi một thế giới mở cực kỳ đa dạng và màu sắc.
+    
+    Hình 3.1 Bối cảnh game
+    Vào game, người chơi sẽ nhập vai Jonathan, ông vốn là một doanh nhân thành đạt nhưng chỉ sau một dự án thất bại, công ty của ông đã hoàn toàn phá sản, vợ ông đã đệ đơn ly dị ngay trong ngày hôm ấy. Biết là mình chẳng còn gì để mất, ông một mình lái chiếc máy bay cũ ra giữa đại dương mênh mông rồi quyết định lao thẳng xuống biển. Nhưng thật chớ trêu thay, ông lại may mắn không chết và trôi dạt vào một hòn đảo. Khung cảnh nơi đây khiến cho ông cảm nhận được sự yên bình, và không còn muốn tự sát. Trong thời gian sinh sống tại đây, ông sẽ chế tạo được một cái bè và lang thang sang các hòn đảo bên cạnh, và nếu đã di chuyển qua đủ hết các đảo ông cũng đa thu thập đủ các vật liệu để chế tạo thành một con thuyền giúp ông có thể trở về với cuộc sống bình thường nhưng điều đó có xảy ra hay không hoàn toàn phụ thuộc vào quyết định của người chơi.
+3.1.2 Cách chơi
+    Với góc nhìn thứ nhất, tựa game mang đến một không gian thế giới mở vô cùng rộng lớn. Bản đồ của tựa game này thực sự khá to và người chơi cần mất rất nhiều thời gian để có thể khám phá hết được. Đa phần, xuyên suốt trò chơi, nhân vật của chúng ta sẽ khám phá các hòn đảo xung quanh vùng biển này. Tuy nhiên mỗi hòn đảo đều được bao bọc bởi sương mù nếu người chơi chưa từng khám phá ra trước đó, thế nên việc lạc đường rất dễ xảy ra.
+    Nhiệm vụ đầu tiên của người chơi đó chính là xây thu nhật các vật phẩm và chế tạo chúng, với hệ thống môi trường đa dạng, mang đến nhiều loại cây cối khác nhau như: dừa, cọ,... người chơi có thể khai thác chúng và chế tạo thành một túp lều nhỏ. Về sau, nếu đã khám phá được nhiều hòn đảo, việc chế tạo các căn nhà to hơn, kiên cố hơn sẽ là điều khả thi.
+    Hệ thống xây dựng, chế tạo chính là điểm nổi bật của tựa game này. Người chơi có thể thỏa sức sáng tạo nên hàng trăm món đồ khác nhau thông qua hệ thống này. Từ việc chế tạo các vật dụng cơ bản như: hệ thống hứng nước mưa từ chai nhựa và tấm bạc, hệ thống phơi khô thịt để tích trữ lâu hơn, hệ thống làm chín thức ăn,... cho đến các vật dụng phức tạp khác như: giáo, cung tên, dao, rựa, bi đông, bàn ghế,..... Tất cả những gì người chơi muốn thực hiện đều có mặt trong trò chơi này và điều này chỉ giới hạn khi người chơi không đủ nguyên liệu để chế tạo mà thôi.
+    
+3.2 Xây dựng hệ thống các chức năng trong game Lengend of Zelda
+3.2.1 Xác định yêu cầu của hệ thống
+Hệ thống của game Lengend of Zelda bao gồm các chức năng:
+Di chuyển: Tọa độ và các hình ảnh 3D của nhân vật sẽ di chuyển theo hướng mà người chơi nhấn nút.
+Ăn uống: Người chơi có thể lượm nhặt các vật phẩm thức ăn hay nước uống và sử dụng chúng để tăng chỉ số thức ăn và nước uống.
+Thời gian: Trong game sẽ có thời gian của một ngày, một ngày trong game sẽ kéo dài 600 giây so với ngoài đời thật, sẽ có buổi sáng và buổi tối
+Thu thập: Người chơi có thể nhặt các vật phẩm cho vào kho đồ của mình và sử dụng chúng theo từng tính chất riêng của các vật phẩm.
+Kho đồ: Người chơi có nhiều loại kho đồ, để chứa các vật phẩm do người chơi chế tạo và thu nhặt.
+Chế tạo: Người chơi có thể thu thập các vật phẩm cần thiết, sau đó chế tạo theo các công thức có sẵn.
+Trang bị: Người chơi có thể trang bị các loại quần áo, hay vũ khí do mình chế tạo lên nhân vật để sử dụng.
+Tương tác với môi trường: Người chơi có thể chặt cây để lấy gỗ hay săn bắt các loại động vật để lấy thịt và da.
+
+
+
+
+
+
+3.2.2 Phân tích yêu cầu của hệ thống
+    Biểu đồ use-casse Player
+
+    Hình 3.2 Biểu đồ Use-case tổng quát hệ thống
+    Biểu đồ use-case Quản lý kho đồ
+    
+    Hình 3.3 Biểu đồ use-case Quản lý kho đồ
+
+3.2.3 Thiết kế cơ sở dữ liệu
+    Bảng 3.1 Player
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả1walkspeedfloatTốc độ đi bộ2runspeedfloatTốc độ chạy3walkbackwardspeedfloatTốc độ đi lùi4jumpforcefloat Lực nhảy5healthfloatMáu6healthfallratefloatChỉ số máu giảm khi hết thức ăn và nước uống7staminafloatThể lực8staminadrainfloatChỉ số thể lực giảm khi chạy9staminaregenfloatChỉ số thể lực tăng khi đứng im hoặc đi bộ10jumpcostfloatChỉ số thể lực giảm khi nhảy11hungerfloatChỉ số thức ăn12hungerdrainfloatChỉ số thức ăn giảm13thirstfloatChỉ số nước14thirstdrainfloatChỉ số nước giảm    
+    
+
+    Bảng 3.2 Item
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả1nameitemfloatTên vật phẩm2amountitemfloatSố lượng vật phẩm3idintMã vật phẩm4iscraftboolĐể chế tạo5itemtypefloat Loai vật phẩm6attributesfloatChỉ số buff khi sử dụng7stackableboolCộng dồn8isuseboolĐể sử dụng thẳng    Bảng 3.3 Inventory
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả1typestringKiểu kho đồ2SavepathstringĐường dẫn lưu3slotfloatÔ chứa4itemstringVật phẩm5amountfloatSố lượng vật phẩm
+    
+    Bảng 3.4 Animal
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả1lookRadiusfloatPhạm vi hiện người chơi2healthintMáu con vật3radiusfloatPhạm vi di chuyển4timerfloatThời gian mỗi lần di chuyển5currentIdleTimerfloatThời gian bắt đầu đứng yên6IdleBoolĐứng yên7IdleTimerfloatThời gian đứng yên8DameIntSát thương    Bảng 3.5 Tree
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả1treeHealthfloatMáu của cây2isFallenboolĐã đổ3AintVị trí trục x4bintVị trí trục y5cintVị trí trục z3.3 Thiết kế giao diện của hệ thống.
+3.3.1 Giao diện chính
+    
+    Hình 3.4 Giao diện chính
+    Đặc tả giao diện chính:
+Giao diện chính của game được thiết kế bằng một góc camera hướng ra biển và ở trên là bầu trời, cộng thêm với nhạc nền của game.
+➢ Chức năng: Hiển thị giao diện mới vào game
+➢ Sự kiện:
+- Khi người dùng nhấn vào start game, trò chơi sẽ chuyển sang màn hình chơi game.
+- Khi người dùng nhấn vào quit game, trò chơi sẽ bị thoát.
+3.3.2 Player
+    
+    Hình 3.5 Player
+    Đặc tả Player:
+Model Player được sử dụng từ một bộ asset trên UnityAsset Store sau đó được làm khung xương và các animtion bằng Mixamo. Nhân vật có thể di chuyển bằng các phím A, S, W, D theo mọi hướng và di chuyển hướng nhìn theo hướng của chuột.
+
+    Hình 3.6 Player di chuyển sang trái
+➢ Chức năng: Di chuyển sang trái
+➢ Sự kiện: 
+- Khi người chơi nhấn A, nhân vật sẽ thực hiện hành động di chuyển sang phía bên trái.
+
+    Hình 3.7 Player di chuyển sang phải
+➢ Chức năng: Di chuyển sang phải
+➢ Sự kiện: 
+- Khi người chơi nhấn D, nhân vật sẽ thực hiện hành động di chuyển sang bên phải.
+
+
+    Hình 3.8 Player tiến về phía trước
+➢ Chức năng: Di chuyển về phía trước
+➢ Sự kiện: 
+- Khi người chơi nhấn W, nhân vật sẽ thực hiện hành động di chuyển về phía trước.
+
+    Hình 3.9 Player đi lùi
+➢ Chức năng: Di chuyển lùi về sau
+➢ Sự kiện: 
+- Khi người chơi nhấn S, nhân vật sẽ thực hiện hành đông di chuyển lùi về phía sau.
+
+
+    Hình 3.10 Player nhặt đồ
+➢ Chức năng: Nhặt đồ
+➢ Sự kiện: 
+- Khi người chơi nhấn E và ở trong khoảng cách đủ gần để nhặt vật phẩm, nhân vật sẽ thực hiện hành động nhặt đồ.
+
+    Hình 3.11 Player tấn công
+➢ Chức năng: Tấn công
+➢ Sự kiện: 
+- Khi người chơi giữ chuột trái nhân vật sẽ thực hiệt hoạt động tấn công
+
+    Hình 3.12 Player trang bị quần áo
+➢ Chức năng: Hiển thị vật phẩm lên nhân vật
+➢ Sự kiện: 
+- Khi người chơi kéo món vật phẩm vào ô trang bị, vật phẩm sẽ được trang bị vào nhân vật.
+3.3.3 Giao diện Inventory
+    
+    Hình 3.13 Giao diện Inventory
+➢ Chức năng: Hiển thị giao diện Inventory
+➢ Sự kiện: 
+- Khi người chơi nhấn I, giao diện Inventory sẽ hiện ra. Giao diện Inventory bao gồm phần Inventory (kho đồ) và phần Equiment (Sử dụng)
+- Giao diện Inventory để chứa các vật phẩm nhặt được hoặc chế tạo.
+- Giao diện Equiment để chứa các vật phẩm người chơi muốn sử dụng lên người nhân vật.
+
+3.3.4 Giao diện Survival System
+    
+    Hình 3.14 Giao diện Survival System
+➢ Chức năng: Hiển thị giao diện Survival System
+➢ Sự kiện: 
+- Phần thanh màu tím: Chỉ số thức ăn
+- Phần thanh màu xanh: Chỉ số nước uống
+- Phần màu cam: Chỉ số thể lực
+- Phần hình người: Chỉ số máu
+3.3.5 Giao diện Crafting
+    
+    Hình 3.15 Giao diện Crafting
+    
+➢ Chức năng: Hiển thị giao diện Crafting
+➢ Sự kiện: 
+- Khi người chơi chỉ vào một món đồ trong bảng crafting thì tooltip (hướng dẫn) của món đồ đó sẽ suất hiện. Phần Crafting Recipe là các thành phần cần để chế tạo nên món đồ đó.
+- Khi người chơi nhấn vào món đồ trong bảng crafting thì nếu nguyên liệu cần để chế tạo món đồ đó đủ, món đồ sẽ được thêm vào Inventory.
+    
+3.3.6 Giao diện game play
+    
+    Hình 3.16 Giao diện game play
+Mô tả: Giao diện game là giao diện khi người chơi đang chơi. Ở góc dưới bên phải màn hình là giao diện Survival System(hệ thống sinh tồn) và góc trên là hệ thống nhiệt độ.
+3.3.7 Animal
+    
+    Hình 3.17 Model Lợn
+Miêu tả: Model lợn được tải xuống từ một bộ asset trên Unity, sau đó được gắn xương và làm animation bằng Mixamo.
+    
+    
+    Hình 3.18 Model Gà
+Miêu tả: Model lợn được tải xuống từ một bộ asset trên Unity, sau đó được gắn xương và làm animation bằng Mixamo.
+    
+    Hình 3.19 Model Búa đá
+    Miêu tả: Được thiết kế bằng Blender, dùng để làm vũ khí
+    
+    Hình 3.20 Model Xương
+    Miêu tả: Được thiết kế bằng Blender, dùng để làm vũ khí và vật liệu chế tạo
+    
+    Hình 3.21 Model Khúc gỗ
+    Miêu tả: Được thiết kế bằng Blender, dùng để làm vật liệu chế tạo
+    
+    Hình 3.22 Model Cục đá
+    Miêu tả: Được thiết kế bằng Blender, dùng để làm vật liệu chế tạo
+    
+    Hình 3.23 Model Túi vật phẩm
+Miêu tả: Được thiết kế bằng Blender, dùng để làm vật hiển thị các vật phẩm chưa có model
+    
+    Hình 3.24 Model Đống lửa
+    Miêu tả: Được thiết kế bằng Blender, dùng để làm đống lửa
+    
+    Hình 3.25 Model Lò nung
+    Miêu tả: Được thiết kế bằng Blender, dùng để làm lò nung
+    
+    Hình 3.26 Model Túi ngủ
+    Miêu tả: Được thiết kế bằng Blender, dùng để làm túi ngủ
+    
+    Hình 3.27 Model Chế tạo
+    Miêu tả: Được thiết kế bằng Blender, dùng để làm chế tạo
+    
+3.3.8 Evironment
+    
+    Hình 3.28 Mặt nước
+    Miêu tả: Hệ thống nước được làm bằng một plane object và shader
+    
+    Hình 3.29 Trời sáng
+    Miêu tả: Bầu trời (Sky box) được làm bằng 6 hình từ 6 phía của một bầu trời
+    
+    Hình 3.30 Trời tối
+    Miêu tả: Bầu trời (Sky box) được làm bằng 6 hình từ 6 phía của một bầu trời
+    
+    Hình 3.31 Cây Dừa 1
+Miêu tả: Cây dừa được vẽ bằng bằng Blender, sử dụng các Texture và Material của texture.com
+    
+    Hình 3.32 Cây Dừa 2
+Miêu tả: Cây dừa được vẽ bằng bằng Blender, sử dụng các Texture và Material của texture.com
+    
+    Hình 3.33 Cây Dừa 3
+Miêu tả: Cây dừa được vẽ bằng bằng Blender, sử dụng các Texture và Material của texture.com
+    
+    Hình 3.34 Cây Dừa 4
+    
+    Hình 3.35 Bụi cỏ
+Miêu tả: Bụi cỏ là model tìm được có sẵn trong một bộ asset của Unity
+    
+    
+    Hình 3.36 Moutain 1
+Miêu tả: Mountain là model tìm được có sẵn trong một bộ asset của Unity
+    
+    
+    Hình 3.37 Moutain 2
+Miêu tả: Mountain là model tìm được có sẵn trong một bộ asset của Unity
+    
+    Hình 3.38 Moutain 3
+Miêu tả: Mountain là model tìm được có sẵn trong một bộ asset của Unity
+    
+    Hình 3.39 Moutain 4
+Miêu tả: Mountain là model tìm được có sẵn trong một bộ asset của Unity
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau thời gian nghiên cứu và phát triển, em đã hoàn thành cơ bản các chức năng chức năng ban đầu đề ra của đề tài. Thực hiện các animtion và các hiệu ứng môi trường chân thực nhất.
+    Em đã xây dựng được một hệ thống game sinh tồn cơ bản, giúp người chơi có thể hòa mình vào thế giới trong game, tương tác và thực hiện các hành động với thế giới trong game. Hệ thống vật phẩm trong game được thiết kế đa dạng, thêm nhiều nhất có thể, giúp người chơi tự do khám phá đỡ nhàm chán.
+    Cố gắng sử dụng những model đẹp nhất, hoàn thiện một hòn đảo sát với thực tế nhất có thể.
+    Sau thời gian tìm hiểu và thiết kế hệ thống các chức năng cho game. Em đã thực hiện thành công đề tài, kết quả đạt được đã có các chức năng cơ bản, chạy ổn định và củng cố được kiến thức về lập trình game.
+4.2 Hạn chế của đề tài
+    Hệ thống game Lengend of Zelda mới chỉ dừng lại ở các chức năng cơ bản, chưa tối ưu hóa hoàn thiện game, một số các model trong game được sử dụng được tìm kiếm ở mọi nguồn trên Internet chứ chưa thể tự mình thiết kế hết được.
+    Hệ sinh thái trong game chưa đa dạng, các loài động thực vật cũng chỉ dừng lại ở dưới 10.
+    Hệ thống âm thanh trong game chưa đầy đủ, chưa chân thực, chỉ dừng lại ở mức có.
+    Game chưa có tính năng lưu trữ, chưa có các scene dẫn dắt cốt truyện.
+4.3 Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, em đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+- Xây dựng hoàn thiện các chức năng của một game sinh tồn.
+- Thêm nhiều vật phẩm mới, giúp người chơi dễ dàng trải nghiệm thế giới trong game.
+- Cải thiện hệ thống âm thanh sao cho giống với môi trường thực tế nhất
+- Nâng cấp các model
+- Nâng cấp hệ thống AI của các con vật
+- Xây dựng thêm độ khó bằng cách thêm các loài động vật dữ
+TÀI LIỆU THAM KHẢO
+[1] https://codelearn.io/sharing/lap-trinh-game-voi-unity-nhu-the-nao-phan-1 
+[2] http://ducvu.net/game-effect/particle-system-game-effect-unity-3d//
+[3] https://viblo.asia/p/gioi-thieu-co-ban-ve-shader-trong-unity-WrJeYEwJeVO
+[4] https://thoxaylamcoder.wordpress.com/2016/05/01/unity3d-su-dung-scriptableobject-de-luu-cac-thong-so-cau-hinh-trong-game/
+[5] https://vi.wikipedia.org/wiki/Microsoft_Visual_Studio
+[6] https://vi.wikipedia.org/wiki/Blender_(ph%E1%BA%A7n_m%E1%BB%81m)
+    
+    
+Xây dựng game Lengend of Zelda trên mobile
+    
+    
+8
+    
+    

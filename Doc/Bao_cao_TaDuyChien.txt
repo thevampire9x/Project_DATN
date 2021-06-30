@@ -1,0 +1,548 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+     Hiện nay, từ việc quản lý thông tin trên sổ sách, việc quản lý thông tin sinh viên trên các hệ thống thông tin đã trở nên phổ biến hơn và mang lại nhiều ưu điểm hơn cách lưu trữ giấy tờ truyền thống.
+     Các hệ thống quản lý hiện tại chủ yếu xây dựng trên bộ công cụ Microsoft Office của Microsoft. Bộ công cụ này rất dễ sử dụng và dễ quản lý, tuy nhiên, để sử dụng lâu dài phải kèm theo chi phí bản quyền và cả chi phí nâng cấp phần cứng cho hệ thống.
+     Tới thời điểm hiện tại, các lập trình viên đã phát triển nhiều bộ công cụ cũng như các Framework open source có các đặc điểm không có chi phí bản quyền, triển khai trên các dự án thực tế dễ dàng, hiệu suất của sản phẩm cũng không thua kém gì các phần mềm trả phí và đặc biệt hơn, cộng đồng hỗ trợ cho các open source rất là lớn. Có thể kể đến một số Framework cho lập trình web được giới lập trình viên ưu ái như Spring Framework, Lavarel Framework, Zend Framework, ...
+     Ra đời từ năm 2002, Spring Framework đã làm cho ứng dụng doanh nghiệp đơn giản và dễ dàng hơn. Spring Framework là 1 mã nguồn mở phổ biến nhất hiện nay để xây dựng ứng dụng cho doanh nghiệp, chiếm thị phần đến 50% các dự án viết bằng Java web.
+     Từ các lợi ích của Spring Framework, việc phát triển một hệ thống quản lý sinh viên thay thế cho các hệ thống quản lý hiện tại trở nên khả thi hơn và cần thiết phải thay đổi.
+1.2 Mục tiêu của đề tài
+• Tìm hiểu về Spring Framework
+• Tìm hiểu về Hibernate Framework
+• Tìm hiểu về cách tích hợp Hibernate Framework vào trong 1 dự án Spring framwork
+• Tìm hiểu về cách xây dựng 1 trang web với HTML, CSS, Javascript
+• Phân tích hệ thống quản lý sinh viên
+• Dựa vào những kiến thức đã tìm hiểu được, thực hiện triển khai hệ thống quản lý với Spring Framework.
+1.3 Giới hạn và phạm vi của đề tài
+• Nền tảng phát triển: web application, web service
+• Giao diện sử dụng: HTML, CSS, Bootsrap, JQuery.
+• Ngôn ngữ lập trình: Java
+• Công nghệ phát triển: sử dụng Spring Framework tích hợp thêm các công nghệ khác như Hibernate, JSP Servlet.
+• Công cụ phát triển: IntelliJ, SQL Server 2014 Management, Tomcat Server.
+1.4 Nội dung thực hiện
+    Nội dung thực hiện/nghiên cứu cụ thể như sau:
+• Nghiên cứu các Web Framework trên các nền tảng công nghệ khác như Java, PHP.
+• Phân tích yêu cầu và đề xuất giải pháp Web Framework trên công nghệ .NET.
+• Thiết kế đặc tả hệ thống.
+• Xây dựng Cơ sở dữ liệu.
+• Lập trình cho các Module của hệ thống
+• Kiểm thử hệ thống.
+• Triển khai thực nghiệm hệ thống trên mạng Internet.
+1.5 Phương pháp tiếp cận
+• Sử dụng các phương pháp nghiên cứu và thực hành: 
+o Phương pháp đọc tài liệu;
+o Phương pháp phân tích chức năng;
+o Phương pháp thực nghiệm.
+CHƯƠNG 2: TỔNG QUAN VỀ MỘT SỐ FRAMEWORK VÀ CÔNG CỤ JAVA
+2.1 Tổng quan về Maven
+2.1.1 Giới thiệu về Maven
+    Maven là công cụ quản lý và thiết lập tự động 1 dự án phần mềm. Chủ yếu dùng cho các lập trình viên java, nhưng nó cũng có thể được dùng để xây dựng và quản lý các dự án dùng C#, Ruby, Scala hay ngôn ngữ khác.
+    Maven phục vụ mục đích tương tự như Apache Ant, nhưng nó dựa trên khái niệm khác và cách hoạt động khác.
+    Maven hỗ trợ việc tự động hóa các quá trình tạo dự án ban đầu, thực hiện biên dịch, kiểm thử, đóng gói và triển khai sản phẩm.
+    Được phát triển bằng ngôn ngữ Java cho phép Maven chạy trên nhiều nền tảng khác nhau: Windows, Linux và Mac OS...
+2.1.2 Maven hoạt động như nào?
+    Maven dùng khái niệm Project Object Model (POM) để mô tả việc build project, các thành phần phụ thuộc và các module. Nó định nghĩa các target cho việc khai báo task, trình biên dịch, đóng gói và thứ tự hoạt động để mọi việc diễn ra tốt nhất.
+    Trong mỗi project Maven tạo ra một file .pom, trong file này định nghĩa ra những task như task khi chạy test, task khi build và khi chạy Maven sẽ dựa vào những định nghĩa này để thao tác với project.
+2.1.3 Tại sao cần Maven?
+    Khi một project do nhiều nhóm phát triển ví dụ có 2 team cùng tham gia dự án, 2 team đó ở 2 quốc gia khác nhau vì thế chúng ta luôn cần có một sự liên lạc để thông nhất trong việc lập trình vì thế phải có một cái chuẩn nào đó để tất cả mọi người cùng tuân theo, như trong việc sử dụng những thư viện nào, version của thư viện tất cả những thứ như vậy đều được Maven quản lý.
+    Đối với những hệ thống lớn, phức tạp sử dụng nhiều thư viện lại đòi hỏi phải release liên tục cho nên công việc đóng gói (build & deploy), quản lý, nâng cấp và bào trì chúng rất mất thời gian, và lúc đó ta có Maven.
+2.1.4 Các lệnh command của Maven
+    Cấu trúc lệnh: mvn [options] [<goal(s)>] [<phase(s)>]
+    Một số lệnh hay dùng:
+• Build một project: mvn package
+• Deploy một project lên tomcat: mvn tomcat:deploy
+• Chạy unit test: mvn test
+• Clean project: mvn clean 
+2.1.5 Dependency trong Maven
+    Dependency chính là cách import thư viện vào project thông qua Maven.
+    Cơ chế import thư viện thông qua Maven:
+• Ví dụ để import thư viện redis, bình thường ta sẽ dowload file redis.jar về rồi buildpath trong eclipse, nhưng với thẻ dependency, Maven sẽ tự động dowload thư viện đó về thư mục ~/.m2 trên máy local và buildpath vào project.
+• Repository: http://mvnrepository.com/artifact/redis.clients/jedis.
+• Thư mục ~/.m2/repository sẽ chứa tất cả các thư viện mà Maven dowload về từ server center.
+• Các Dependency sẽ tự động được buildpath trong Project.
+2.2 Tổng quan về JPA (Java Persistence API)
+2.2.1 Khái quát về JPA
+    JPA là một đặc tả của Sun, ra đời cùng với bản đặc tả J2EE 5. JPA không phải là một sản phẩm và không thể nó như thành phần persistence. Nó cần phải có một cài đặt ORM để hoạt động và persist các đối tượng Java. Các Framework ORM có thể sử dụng cho JPA như Hibernate, Toplink, Open JPA, …
+    Ngày nay đa số các nhà cung cấp đều hỗ trợ cài đặt JPA cho Framework persistence của họ. Vì vây, người lập trình có thể lựa chọn nhà cung cấp tốt nhất tùy thuộc yêu cầu ứng dụng của mình.
+    Lợi ích của JPA:
+• Đơn giản hóa công nghệ cho tầng persistence (tầng dữ liệu)
+• Không phụ thuộc vào các Framework ORM
+• Có nhiều nhà cung cấp hỗ trợ cài đặt JPA
+• Dữ liệu có thể được lưu trữ thông qua việc ORM
+    Phiên bản hiện tại của JPA: Hiện tại JPA đã có phiên bản 2.2, cung cấp nhiều tính năng hữu ích cho người lập trình.
+2.2.2 Kiến trúc JPA
+    JPA sử dụng metadata để ánh xạ các đối tượng persistence với các bảng trong cơ sở dữ liệu. JPA hỗ trợ SQL như là một ngôn ngữ truy vấn để dễ dàng xử lý các truy vấn cơ sở dữ liệu. Ngôn ngữ truy vấn JPA có thể dùng thực thi cả truy vấn tĩnh và truy vấn động.
+    Các khái niệm JPA: 
+• Entity: Entity là các đối tượng persistence thể hiện một mẫu tin trong cơ sở dữ liệu. Entity chỉ là các lớp POJO đơn giản, dễ dàng tạo. 
+Dưới đây là một số đặc điểm của một Entity:
+o Entity có thể tương tác với cơ sở dữ liệu quan hệ.
+o Entity được xác định thông qua một định danh (tương đương với khóa chính trong table của cơ sở dữ liệu quan hệ).
+o Entity hỗ trợ giao tác (transaction).
+o Entity hỗ trợ kế thừa giống như những lớp thường khác.
+• EntityManager: EntityManager là một giao diện (interface) cung cấp các API cho việc tương tác với các Entity. 
+Một số chức năng cơ bản của EntityManager như:
+o Persist: phương thức này dùng để lưu một thực thể mới tạo vào cơ sở dữ liệu.
+o Merge: dùng để cập nhật trạng thái của entity vào cơ sở dữ liệu.
+o Remove: xóa một thể hiện của entity.
+• EnityManagerFactory: EntityManagerFactory được dùng để tạo ra một thể hiện của EntityManager.
+    Các tính năng của JPA: Việc giới thiệu JPA vào trong đặc tả J2EE 5 là một bước tiến lớn trong việc đơn giản hóa các quy trình phát triển ứng dụng. JPA đơn giản hóa mô hình thực thể dữ liệu và cộng thểm một số tính năng mới mà phiên bản EJB trước (EJB 2.0) không có. Giờ đây người lập trình có thể ánh xạ trực tiếp các đối tượng persistence với cơ sở dữ liệu quan hệ. JPA có thể sử dụng bên ngoài container, điều này không dễ thực hiện trong EJB 2.1. Bạn cũng có thể sử dụng JPA trong các ứng dụng swing.
+    Một số tính năng của JPA:
+• JPA hỗ trợ pluggable, tức là có thể sử dụng nhiều nhà hãng cung cấp thứ ba như Hibernate hay Toplink.
+• Hỗ trợ annotation.
+• Giảm bớt số lớp yêu cầu cho việc phát triển persistence.
+• Không cần phải viết các mô tả triển khai trong xml. Annotation dựa trên metadata đã hỗ trợ trong các ứng dụng JPA.
+• Đã chuẩn hóa ORM và dễ dàng phát triển hơn.
+• JPA hỗ trợ truy vấn động và tĩnh.
+• Nhiều IDE hỗ trợ phát triển ứng dụng JPA và có thể tự động sinh code ánh xạ từ cơ sở dữ liệu thành các entity và ngược lại.
+2.2.3 Các JPA anotation chính
+• Các anotation liên quan đến khai báo Entity
+o @Entity: Biến một JavaBean trở thành một entity để chúng ta có thể thao tác với Database thông qua việc sử dụng entity này.
+o @Table: Định nghĩa một entity tương ứng với một bảng trong cơ sở dữ liệu. Nếu một entity không có anotation này, mặc định tên bảng trong database được map có tên tương ứng với tên của entity.
+o @Column: Định nghĩa một thuộc tính trong một entity sẽ tương ứng là một trường của một bảng tương ứng trong cơ sở dữ liệu
+o @Id: Định nghĩa một thuộc tính trong một entity sẽ là trường khóa chính tương ứng trong cơ sở dữ liệu.
+o @GeneratedValue: Định nghĩa một thuộc tính có giá trị tăng tự động tương ứng với trường tăng tự động trong cơ sở dữ liệu. Tùy cơ sở dữ liệu khác nhau, các strategy truyền vào cũng khác nhau.
+o @Embeddable: Định nghĩa một composite key chứa các thuộc tính là các khóa chính của một bảng trong cơ sở dữ liệu.
+o @IdClass: Chức năng tương tự như @Embeddable, tuy nhiên, nó chỉ khai báo một class khác là composite key của một entity và class khác đó có định nghĩa các thuộc tính là khóa chính.
+• Các anotation liên quan đến Relationship:
+o @ManyToOne: Định nghĩa mối quan hệ nhiều - một giữa các Entity tương ứng với mối quan hệ gữa các bảng trong cơ sở dữ liệu.
+o @OneToMany: Định nghĩa mối quan hệ một - nhiều giữa các Entity tương ứng với mối quan hệ gữa các bảng trong cơ sở dữ liệu.
+o @OneToOne: Định nghĩa mối quan hệ một – một giữa các Entity tương ứng với mối quan hệ gữa các bảng trong cơ sở dữ liệu.
+o @ManyToMany: Định nghĩa mối quan hệ nhiều – nhiều giữa các Entity tương ứng với mối quan hệ gữa các bảng trong cơ sở dữ liệu.
+
+    Hình 2.1 Ví dụ về định nghĩa một entity với các JPA anotation
+2.3 Hibernate Framework
+2.3.1 Khái quát về Hibernate
+• Hibernate ra đời năm 2001 bởi nhà sáng lập Gavin King như một sự thay thế cho EJB2 kiểu thực thể bean. Hiện nay, phiên bản mới nhất của Hibernate là 5.3.0.Final.
+• Hibernate Framework là một giải pháp ORM mã nguồn mở, gọn nhẹ. Hibernate giúp đơn giản hóa sự phát triển của ứng dụng Java để tương tác với cơ sở dữ liệu, giúp đơn giản hóa việc tạo dữ liệu, thao tác dữ liệu và truy cập dữ liệu. Đó là một kĩ thuật lập trình để ánh xạ đối tượng vào dữ liệu được lưu trữ trong cơ sở dữ liệu.
+       Các tool ORM sử dụng JDBC API để tương tác với cơ sở dữ liệu.
+
+    Hình 2.2 Mô hình tương tác của Hibernate trong ứng dụng
+2.3.2 Lợi ích của Hibernate Framework
+    Hibernate Framework có các lợi ích như dưới đây
+• Mã nguồn mở và nhẹ: Hibernate Framework là mã nguồn mở có giấy phép LGPL và nhẹ.
+• Hiệu suất nhanh: Hiệu suất của Hibernate Freameworj là nhanh bởi vì bộ nhớ cache được sử dụng trong nội bộ Framework. Có hai loại bộ nhớ cahce trong Hibernate, gồm bộ nhớ cache cấp một và bộ nhớ cache cấp hai. Bộ nhớ cache cấp một được bật bằng lệnh mặc định.
+• Truy vấn cơ sở dữ liệu đọc lập: HQL là phiên bản hướng đối tượng cả SQL. Nó tạo ra các truy vấn dữ liệu độc lập. Vì vậy, bạn không cần phải viết các truy vấn cơ sở dữ liệu cụ thể. Trước Hibernate, nếu dự án có cơ sở dữ liệu bị thay đổi, chúng ta cần phải thay đổi truy vấn SQL dẫn đến sự cố bảo trì.
+• Tạo bảng tự động: Hibernate Framework cung cấp phương tiện để tạo ra các bảng cơ sở dữ liệu tự động. Vì vậy, không cần phải tạo ra các bảng trong cơ sở dữ liệu bằng tay.
+• Đơn giản lệnh join phức tạp: Có thể lấy dữ liệu từ nhiều bảng một cách dễ dàng với Hibernate Framework.
+• Cung cấp thống kê truy vấn và trạng thái cơ sở dữ liệu: Hibernate hỗ trợ bộ nhớ cache truy vấn và cung cấp số liệu thống kê về truy vấn và trạng thái cơ sở dữ liệu. 
+2.3.3 Nhược điểm của Hibernate
+• Không hỗ trợ các câu truy vấn phức tạp.
+• Một số trường hợp vẫn phải dùng native SQL do Hibernate không thể cover hết tất cả các cú pháp của các hệ quản trị cơ sử dữ liệu.
+• Bị hạn chế sự can thiệp vào câu lệnh SQl do nó được tự động sinh ra.
+2.3.4 Các database mà Hibernate hỗ trợ
+Hibernate hỗ trợ hầu hết các RBDMS chính. Dưới đây là danh sách vài cơ sở dữ liệu quan hệ được hỗ trợ bới Hibernate:
+• HSQL Database Engine
+• DB2/NT
+• MySQL
+• PostgreSQL
+• Oracle
+• Microsoft SQL Server Database
+• Sybase SQL Server
+• Informix Dynamic Server
+
+2.3.5 Kiến trúc của Hibernate
+    Kiến trúc Hibernate bao gồm nhiều đối tượng như đối tượng persistent, session factory, transaction factory, connection factory, session, transaction, …
+    Có 4 tầng trong kiến trúc hibernate đó là tầng ứng dụng java, tầng hibernate Framework, tầng backhand api và tầng database. Dưới đây là sơ đồ kiến trúc hibernate:
+    
+    Hình 2.3 Kiến trúc của Hibernate
+	
+
+    Dưới đây là một hình ảnh chi tiết về Kiến trúc ứng dụng Hibernate với vài lớp core quan trọng.
+    
+    Hình 2.4 Kiến trúc chi tiết của Hibernate
+Hibernate sử dụng các API Java hiện có, như JDBC, Java Transaction API (JTA) và JNDI. JDBC cung cấp một mức độ trừu tượng cơ bản của cơ sở dữ liệu quan hệ, cho phép hầu hết các cơ sở dữ liệu với trình điều khiển JDBC được hỗ trợ bởi Hibernate. JNDI và JTA cho phép Hibernate được tích hợp với các máy chủ ứng dụng J2EE.
+2.3.6 Các thành phần trong kiến trúc của Hibernate
+    Để tạo ứng dụng hibernate đầu tiên, chúng ta phải biết các thành phần của kiến trúc Hibernate. Chúng là như sau:
+• Đối tượng Configuration: là đối tượng Hibernate đầu tiên bạn tạo trong bất kỳ ứng dụng Hibernate nào và chỉ cần tạo một lần trong quá trình khởi tạo ứng dụng. Nó đại diện cho một tập tin cấu hình hoặc thuộc tính yêu cầu của Hibernate. Đối tượng Configuration cung cấp hai thành phần chính:
+o Database Connection: Thao tác này được xử lý thông qua một hoặc nhiều tệp cấu hình được Hibernate hỗ trợ. Các tệp này là hibernate.properties và hibernate.cfg.xml.
+o Class Mapping Setup: Thành phần này tạo ra kết nối giữa các lớp Java và các bảng cơ sở dữ liệu.
+• SessionFactory: là một đối tượng luồng an toàn và được sử dụng bởi tất cả các luồng của một ứng dụng. SessionFactory là đối tượng nặng nên thường nó được tạo ra trong quá trình khởi động ứng dụng và lưu giữ để sử dụng sau này. Bạn sẽ cần một đối tượng SessionFactory cho mỗi cơ sở dữ liệu bằng cách sử dụng một tập tin cấu hình riêng biệt. Vì vậy, nếu bạn đang sử dụng nhiều cơ sở dữ liệu thì bạn sẽ phải tạo nhiều đối tượng SessionFactory.
+• Session: sử dụng để có được một kết nối vật lý với một cơ sở dữ liệu. Đối tượng Session là nhẹ và được thiết kế để được tạo ra thể hiện mỗi khi tương tác với cơ sở dữ liệu. Các đối tượng liên tục được lưu và truy xuất thông qua một đối tượng Session.
+• Transaction: đại diện cho một đơn vị làm việc với cơ sở dữ liệu và hầu hết các RDBMS hỗ trợ chức năng transaction. Các Transaction trong Hibernate được xử lý bởi trình quản lý transaction và transaction (từ JDBC hoặc JTA). Đây là một đối tượng tùy chọn và các ứng dụng Hibernate có thể chọn không sử dụng interface này, thay vào đó quản lý transaction trong code ứng dụng riêng.
+• Query: Các đối tượng Query sử dụng chuỗi truy vấn SQL hoặc HQL để lấy dữ liệu từ cơ sở dữ liệu và tạo các đối tượng. Ví dụ truy vấn được sử dụng để ràng buộc các tham số truy vấn, giới hạn số lượng kết quả được trả về bởi truy vấn và cuối cùng thực hiện truy vấn.
+• Criteria: Đối tượng Criteria được sử dụng để tạo và thực hiện truy vấn các tiêu chí định hướng đối tượng để lấy các đối tượng.
+2.3.7 Cấu hình Hibernate
+    Khi tích hợp Hibernate vào trong ứng dụng, các cấu hình của Hibernate phải được thiết lập mặc định trong 1 file xml với tên mặc định là hibernate.cfg.xml. 
+    Cấu trúc của file hibernate.cfg.xml gồm 3 phần chính:
+• Phần khai báo thẻ head, thẻ <hibernate-configuration> và thẻ <sesion-factory>: Là các thẻ bắt buộc của 1 file xml phục vụ cho việc cấu hình của Hibernate.
+• Các thẻ <property>: Là các thẻ thực hiện cấu hình cho Hibernate bao gồm cấu hình các thuộc tính như tên driver class, url của database, username của database, password, dialect, …
+• Các thẻ mapping: Các thẻ này sẽ khai báo các Entity đã được cấu hình bởi JPA anotation.
+    
+    Hình 2.5 Nội dung một file cấu hình cho kết với MySQL database
+2.3.8 Mapping dữ liệu với JPA Anotation trong Hibernate
+    Như đã nói trong phần 2, Java Persistence API hay JPA là một đăc tả Java cho việc ánh xạ giữa các đối tượng Java tới cơ sở dữ liệu quan hệ sử dụng cộng nghệ phổ biến là ORM (Object Relational Mapping). JPA API cung cấp đầy đủ các công cụ cho phép người lập trình có thể tạo cơ sở dữ liệu một cách đơn giản và nhanh chóng. JPA API có thể dùng để persist một đối tượng business (POJO) vào trong cơ sở dữ liệu hoặc lấy dữ liệu từ cơ sở dữ liệu và ánh xạ ra các đối tượng business một cách đơn giản.
+    Bất kỳ một ứng dụng doanh nghiệp(enterprise) nào cũng đều cần phải thực hiện các tháo tác(CRUD) đến database bằng việc lưư trữ, trích rút lượng lớn dữ liệu. Các nhà phát triển(developers) cần phải viết nhiều code để thực hiện các việc này.
+    Với công nghệ JDBC trước đây, developers sẽ phải chủ động thực hiện các việc: từ mở kết nối vào Database, tạo các Statement, ResultSet cho đến đóng tất cả các thứ đó lại, và code sẽ trở nên cồng kềnh. Developers cần phải làm việc với cả java code và SQL. Thực tế, từng Database khác nhau thì câu SQL có một số phần khác nhau, nên đòi hỏi developers phải nắm được sự khác biệt này để viết code cho phù hợp. Khi ứng dụng muốn chuyển từ database sang database khác (ví dụ từ Oracle sang MS SQL Server) thì chắc chắn sẽ có một số phần của câu SQL cần phải đổi. Công việc sửa code lại đòi hỏi developers phải test lại ứng dụng. Điều này sẽ tốn thời gian phát triển. Để khắc phục nhược điểm này, đã có rất nhiều Frameworks ra đời với mục đích giúp xóa đi vấn để về tương thích giữa các Database, giúp developers tập trung vào phần xử lý nghiệp vụ.
+2.4 Tổng quan về Servlet
+2.4.1 Định Servlet
+    Servlet có thể xem như là một sự mở rộng của CGI.
+    Tùy vào ngữ cảnh, Sevlet có thể được mô tả bằng nhiều cách:
+• Servlet là một công nghệ được sử dụng để tạo ra ứng dụng web.
+• Servlet là một API cung cấp các interface và lớp bao gồm các tài liệu.
+• Servlet là một thành phần web được triển khai trên máy chủ để tạo ra trang web động.
+    Có nhiều interface và các lớp trong API servlet như Servlet, GenericServlet, HttpServlet, ServletRequest, ServletResponse, …
+2.4.2 Kiến trúc của Servlet
+    
+    Hình 2.6 Vị trí của Servlet trong một ứng dụng web
+    Trong công nghệ Servlet, có hai gói quan trọng là javax.servlet và javax.servlet.http. Hai gói này cung cấp các interface và lớp để tạo ra các Servlet:
+• Interface Servlet: định nghĩa các phương thức trong vòng đời của một Servlet.
+• Lớp GenericServlet: thực thi Servlet.
+• Lớp HttpServlet: kế thừa GenericServlet, cung cấp các phương thức để xử lý các phương thức HTTP như doGet() xử lý GET, doPost() xử lý POST, …
+    Để tạo một Servlet, chúng ta cần phải thực thi interface Servlet trực tiếp hoặc gián tiếp thông qua GenericServlet hoặc HttpServlet. Trong thực tế, lớp Servlet của chúng ta thường kế thừa HttpServlet để có thể xử lý các phương thức HTTP.
+2.4.3 Nhiệm vụ của Servlet
+    Servlet thực hiện các nhiệm vụ chính sau đây:
+• Đọc dữ liệu rõ ràng do khách hàng (trình duyệt) gửi. Điều này bao gồm một mẫu HTML trên một trang Web hoặc nó cũng có thể đến từ một applet hoặc một chương trình khách hàng HTTP tùy chỉnh.
+• Đọc dữ liệu yêu cầu HTTP ẩn được gửi bởi khách hàng (trình duyệt). Điều này bao gồm các cookie, loại phương tiện truyền thông và các chương trình nén mà trình duyệt hiểu được, …
+• Xử lý dữ liệu và tạo ra các kết quả. Quá trình này có thể yêu cầu nói chuyện với một cơ sở dữ liệu, thực hiện một cuộc gọi RMI hoặc CORBA, gọi một dịch vụ Web, hoặc tính trực tiếp phản hồi.
+• Gửi dữ liệu rõ ràng (tức là tài liệu) tới khách hàng (trình duyệt). Tài liệu này có thể được gửi bằng nhiều định dạng, bao gồm văn bản (HTML hoặc XML), nhị phân (hình ảnh GIF), Excel, …
+• Gửi phản hồi HTTP ẩn cho khách hàng (trình duyệt). Điều này bao gồm nói với trình duyệt hoặc các trình khách khác loại tài liệu đang được trả về (ví dụ, HTML), thiết lập cookie và các tham số bộ nhớ đệm, và các tác vụ khác.
+2.4.4 Nhược điểm của Servlet
+    Lập trình viên phải code và html trong cùng một Java file, làm cho việc phát triển cũng như bảo trì phần mềm trở nên khó khăn.
+2.5 Tổng quan về JSP
+2.5.1 Giới thiệu về JSP
+    JSP (JavaServer Pages) là một công nghệ để phát triển các trang web động. JSP giúp các nhà phát triển chèn java code vào các trang HTML bằng cách sử dụng các thẻ JSP đặc biệt.
+    JSP là một kiểu Java servlet được thiết kế để tạo ra giao diện người dùng cho một ứng dụng Java web. Các nhà phát triển web viết các JSP như các tệp văn bản kết hợp mã HTML hoặc XHTML, các phần tử XML, các action và lệnh JSP.
+    Sử dụng JSP, bạn có thể thu thập dữ liệu đầu vào từ người dùng thông qua các Form của trang web, trình bày các bản ghi từ một cơ sở dữ liệu hoặc một nguồn khác, và tạo các trang web động.
+    Các thẻ JSP có thể được sử dụng cho nhiều mục đích khác nhau, chẳng hạn như truy xuất thông tin từ cơ sở dữ liệu hoặc đăng ký mới, truy cập các thành phần JavaBeans, kiểm soát giữa các trang và chia sẻ thông tin giữa các request, các trang, …
+    Các trang JavaServer thường phục vụ cùng một mục đích như các chương trình được thực hiện bằng cách sử dụng CGI. Nhưng JSP cung cấp một số lợi thế so với CGI:
+• Hiệu suất tốt hơn đáng kể vì JSP cho phép nhúng các thành phần động trong các trang HTML thay vì có các tệp CGI riêng biệt.
+• JSP luôn được biên soạn trước khi chúng được xử lý bởi máy chủ không giống như CGI / Perl, yêu cầu máy chủ tải một trình thông dịch và tập lệnh đích mỗi khi trang được request.
+• Giống như Servlet, JSP cũng có quyền truy cập vào tất cả các Enterprise Java APIs, bao gồm JDBC, JNDI, EJB, JAXP, …
+• Các trang JSP có thể được sử dụng kết hợp với các servlet xử lý logic nghiệp vụ, model được hỗ trợ bởi Java servlet.
+    JSP là một phần của Java EE, một nền tảng hoàn chỉnh cho các ứng dụng enterprise.
+
+2.5.2 Kiến trúc của JSP
+    Sơ đồ sau cho thấy vị trí của JSP container và các tệp JSP trong một ứng dụng Web:
+    
+    Hình 2.7 Kiến trúc của JSP
+    Quá trình xử lý của một trang JSP:
+• Giống như trang bình thường, trình duyệt của bạn gửi một HTTP request đến máy chủ web.
+• Máy chủ web nhận ra rằng yêu cầu HTTP là dành cho một trang JSP và chuyển nó tới một công cụ JSP. Điều này được thực hiện bằng cách sử dụng URL hoặc trang JSP kết thúc bằng .jsp thay vì .html.
+• Công cụ JSP tải trang JSP từ đĩa và chuyển nó sang một nội dung servlet. Chuyển đổi này rất đơn giản, trong đó tất cả các văn bản được chuyển đổi thành các câu lệnh println() và tất cả các phần tử JSP được chuyển đổi sang mã Java. Mã này thực hiện hành vi tương ứng của trang.
+• Công cụ JSP biên dịch servlet thành một lớp thực thi và chuyển tiếp yêu cầu ban đầu đến một công cụ servlet.
+• Một phần của máy chủ web được gọi là công cụ servlet nạp lớp Servlet và thực thi nó. Trong quá trình thực thi, servlet tạo ra một đầu ra ở định dạng HTML. Kết quả đầu ra được chuyển tiếp đến máy chủ web bằng servlet engine bên trong HTTP response.
+• Máy chủ web chuyển tiếp phản hồi HTTP tới trình duyệt của bạn về nội dung HTML.
+• Cuối cùng, trình duyệt web xử lý và hiển thị trang HTML tới người dùng.
+    
+    Hình 2.8 Sơ đồ xử lý một trang JSP
+Thông thường, JSP container kiểm tra xem liệu một servlet cho tệp JSP đã tồn tại và liệu ngày sửa đổi trên JSP cũ hơn servlet hay không. Nếu JSP lớn hơn servlet được tạo ra của nó, JSP container giả định rằng JSP không thay đổi và servlet được tạo ra vẫn phù hợp với nội dung của JSP. Điều này làm cho quá trình này hiệu quả hơn với các ngôn ngữ kịch bản khác (như PHP) và do đó nhanh hơn.
+Vì vậy, nói cách khác, một trang JSP thực sự là một cách khác để viết một servlet mà không cần phải là một chương trình lập trình Java. Ngoại trừ giai đoạn dịch từ JSP sang Servlet, một trang JSP được xử lý chính xác như một servlet thông thường.
+2.5.3 Ưu điểm của JSP
+    Các lợi ích khác của việc sử dụng JSP đối với các công nghệ khác:
+• Active Server Pages (ASP): Có 2 lợi thế của JSP so với ASP. Thứ nhất, phần động được viết bằng Java, không phải Visual Basic hoặc ngôn ngữ cụ thể khác, vì vậy nó mạnh hơn và dễ sử dụng hơn. Thứ hai, nó là khả chuyển cho hệ điều hành khác và máy chủ Web không phải của Microsoft.
+• Servlet thuần: JSP thuận tiện hơn Servlet thuần để viết (và để sửa đổi) HTML hơn là sử dụng lệnh println() để tạo ra HTML rối rắm.
+• Server-Side Includes (SSI): SSI thực sự chỉ dành cho những thứ đơn giản, không phải cho các chương trình “thực” sử dụng form dữ liệu, tạo các kết nối cơ sở dữ liệu và những thứ tương tự.
+2.6 Tổng quan về Spring Framework
+2.6.1 Giới thiệu về Spring Framework
+    Spring Framework là một Framework phát triển các ứng dụng Java Enterprise. Ban đầu nó được viết bới Rod Johnson và lần đầu tiên được phát hành theo giấy phép Apache 2.0 vào tháng 6 năm 2003. Spring có kích thước thường nhẹ, phiên bản cơ bản của nó có kích thước khoảng 2MB.
+    Ngoài ra nó còn là một Java Platform mã nguồn mở, một giải pháp gọn nhẹ dành cho Java Enterprise. Với Spring Framework, các nhà phát triển có thể tạo ra các mã có hiệu suất cao, dễ kiểm thử và có thể sử dụng lại được.
+    Các tính năng core của Spring có thể sử dụng trong việc phát triển bất kì các ứng dụng Java. Bên cạnh đó, phần mở rộng được sử dụng để xây dựng các ứng dụng web trên nền tảng Java EE. Mục tiêu của Spring là làm cho việc phát triển ứng dụng J2EE dễ dàng hơn và thúc đẩy việc lập trình tốt hơn bằng mô hình POJO-based.
+2.6.2 Lợi ích của Spring
+• Spring cho phép các nhà phát triển tạo các ứng dụng cấp Enterprise sử dụng các POJO. Lợi ích của việc sử dụng các POJO là bạn không cần một sản phẩm chứa EJB như một máy chủ ứng dụng, mà bạn chỉ có thể sử dụng một bộ chứa servlet mạnh mẽ như Tomcat hoặc một số sản phẩm thương mại khác
+• Spring được tổ chức theo kiểu module. Mặc dù số lượng các gói và các lớp là khá nhiều, nhưng bạn chỉ cần quan tâm đến những gì bạn cần và không cần quan tâm đến phần còn lại
+• Spring sử dụng một số công nghệ hiện có như một số ORM Framework, logging Frameworks, JEE, Quartz, JDK timers và các công nghệ View khác.
+• Dễ dàng kiểm thử một chương trình được viết bằng Spring.
+• Web Framework của Spring là một Web MVC Framework có thiết kế tốt, nó là một thay thế tuyệt vời cho Struts và các công nghệ kém phổ biến khác.
+• Spring cung cấp một API thuận tiện để dịch các ngoại lệ công nghệ cụ thể (ném bởi JDBC, Hibernate, hoặc JDO chẳng hạn) vào các trường hợp ngoại lệ nhất quán, không được kiểm soát.
+• IoC Container có trọng lượng nhẹ. Điều này có lợi cho việc phát triển và triển khai các ứng dụng trên các máy tính có bộ nhớ và tài nguyên CPU hạn chế.
+• Spring cung cấp một giao diện quản lý transaction nhất quán có thể mở rộng đến một local transaction (ví dụ như sử dụng một cơ sở dữ liệu) và mở rộng lên các global transaction (sử dụng JTA).
+2.6.3 Sơ qua về DI và IoC
+    DI (Dependency Injection) là một design pattern để loại bỏ sự phụ thuộc vào mã lập trình, vì vậy nó giúp rễ ràng quản lý và test ứng dụng. Dependency Injection giúp mã lập trình liên kết lỏng với nhau.
+    IoC (Inversion of Control) hay IoC Container có trách nhiệm khởi tạo, configure, gắn kết các đối tượng. Có hai kiểu của IoC containers là BeanFactory và ApplicationContext.
+2.6.4 Các module của Spring Framework
+    Spring Framework bao gồm nhiều tính năng được tổ chức thành khoảng 20 module. Các module này được phân nhóm thành Core Container, Data Access/Integration, Web, AOP, Instrumentation, Messaging, và Test.
+    Spring được chia làm nhiều module khác nhau, tùy theo mục đích sử dụng mà ta dùng trong 1 trong các module đó.
+    Dưới đây là kiến trúc tổng thể của Spring Framework:
+   
+   
+    Hình 2.9 Các module của Spring Framework
+• Core Container: bao gồm các module: spring-core , spring-beans, spring-context, springcontext-support, và spring-expression (Spring Expression Language).
+o Module spring-core và spring-beans cung cấp những phần cơ bản của Framework, bao gồm IoC và Dependency Injection.
+o Module spring-context xây dựng trên một nền tảng vững chắc được cung cấp bởi các module Core và Beans, được sử dụng để truy cập vào các đối tượng trong Framework-style tương tự như việc đăng ký một JNDI. spring-context-support hỗ trợ tích hợp libraries của bên thứ 3 (third-party) vào ứng dụng Spring như caching (EhCache, Guava, JCache), mailing (JavaMail), schedule (CommonJ, Quatz) và các template engine (FreeMarker, JasperReports, Velocity)).
+o Module spring-expression cung cấp một Expression Language mạnh mẽ cho việc truy vấn và tính toán một đồ thị đối tượng lúc runtime. Nó được kế thừa và mở rộng từ unified expression language (unified EL). Ngôn ngữ này hỗ trợ setting và getting giá trị các property, gọi phương thức, truy cập vào nội dung của mảng, tập hợp và chỉ mục, operator logic và tính toán, đặt tên biến, và truy xuất các đối tượng theo tên từ IoC container của Spring.
+• Core Container: bao gồm các module JDBC, ORM, OXM, JMS và Transaction:
+o Module spring-jdbc cung cấp một lớp JDBC-abstraction để loại bỏ những code tẻ nhạt cả JDBC và phân tích những mã lỗi cụ thể của database-vendor.
+o Module spring-orm cung cấp lớp tích hợp với các orm API phổ biến như JPA, JDO và Hibernate.
+o Module spring-oxm cung cấp lớp abstraction hỗ trợ triển khai Object/XML mapping.
+o Module spring-jms chứa các tính năng tạo và sử dụng các message. Từ Spring Framework 4.1, nó được tích hợp với spring-messaging.
+o Module spring-transaction hỗ trợ quản lý giao dịch theo chương trình và khai báo cho các lớp mà thực hiện các giao diện đặc biệt và cho tất cả các POJO của bạn.
+• Web: Tầng này bao gồm các module spring-web , spring-webmvc, spring-websocket và springwebmvc-portlet:
+o Module spring-web cung cấp tính năng tích hợp web theo định hướng cơ bản như chức năng tập tin tải lên nhiều phần dữ liệu và khởi tạo các container IoC sử dụng nghe servlet và một bối cảnh ứng dụng web theo định hướng.
+o Module spring-webmvc bao gồm việc triển khai Model-View-Controller (MVC) của Spring cho các ứng dụng web.
+o Module spring-websocket cung cấp hỗ trợ cho WebSocket-based, giao tiếp hai chiều giữa client và server trong các ứng dụng web.
+o Module springwebmvc-portlet cung cấp việc triển khai MVC được sử dụng trong môi trường portlet và ánh xạ chức năng của module Web-Servlet.
+• Các module khác: Có vài module quan trọng khác như module AOP, Các khía cạnh, Instrumentation, Web và Test mô tả chi tiết như sau:
+o Module AOP cung cấp một thực hiện lập trình hướng khía cạnh cho phép bạn xác định phương pháp-chặn và pointcuts để sạch tách mã thực hiện chức năng đó nên được tách ra.
+o Module Aspects cung cấp tích hợp với AspectJ, mà lại là một khuôn khổ AOP mạnh mẽ và trưởng thành.
+o Module Instrumentation cung cấp thiết bị đo đạc lớp hỗ trợ và triển khai lớp bộ nạp được sử dụng trong các máy chủ ứng dụng nhất định.
+o Module Messaging cung cấp hỗ trợ cho STOMP như WebSocket sub-protocol để sử dụng trong các ứng dụng. Nó cũng hỗ trợ một mô hình lập trình chú thích cho việc định tuyến và xử lý tin nhắn STOMP từ các máy khách WebSocket.
+o Module Test hỗ trợ việc kiểm tra các thành phần mùa xuân với JUnit hoặc TestNG khuôn khổ.
+2.6.5 Các project trong hệ sinh thái của Spring:
+    Spring MVC: Giúp cho các nhà phát triển xây dựng ứng dụng web thao mô hình MVC mà vẫn giữ được các đặc điểm của Spring. Dựa trên mô hình MVC kinh điển, Spring MVC sẽ giúp các nhà phát triển xấy dựng các web.
+    Spring Security: Cung cấp các cơ chế xác thực (authentication) và phân quyền (authorization) cho ứng dụng web.
+    Spring Boot: Dựa vào Spring, sử dụng automatic configuration để loại bỏ configuration truyền thống, chuyển đổi application thành dạng executable.
+    Spring Test: Với Unit Test, bạn có một tập hợp các mock implementation để viết unit test tương thích với JNDI, servlet, portlets. Còn với Integration Test, module này hỗ trợ việc load các bean theo nhiều context khác nhau.
+    Ngoài ra còn rất nhiều các dự án khác như Spring Integration, Spring IO, Spring Cload, Spring Mobile, Spring RESTFuL Service, Spring Social,...
+2.7 Tổng quan về Spring MVC
+2.7.1 Giới thiệu về Spring MVC
+    Spring MVC là một Framework / 1 Project mã nguồn mở của Spring Framework.
+    MVC lần lượt là ba chữ cái đầu tiên của ba từ Model, View và Controller. MVC là một mô hình ứng dụng mà ở đó các thành phần được phân tách ra thành các lớp riêng biệt với các nhiệm vụ đặc trưng. View sẽ là lớp cho các thành phần có chức năng hiển thị, giao tiếp trực tiếp với người dùng. Nhiệm vụ của các thành phần trong View là trình bày các dữ liệu từ Model đến người dùng cuối. Model là các thành phần có khả năng lưu trữ và vận chuyển thông tin. Quá trình ném dữ liệu vào Model sẽ được thực hiện bởi Controller. Controller là các thành phần giúp cho việc xử lý logic các thao tác nghiệp vụ. Nhiệm vụ của Controller là lấy dữ liệu từ Model, xử lý dữ liệu, và cập nhật lại dữ liệu vào Model.
+    Đối với Spring MVC, View sẽ là các trang .jsp giúp cho việc hiển thị dữ liệu lên browser. Dữ liệu được lấy ra từ Model là các POJO hay ta còn gọi là các Domain Object. Cụ thể hơn, nó là các đối tượng có các thuộc tính có khả năng mang vác dữ liệu trong các luồng nghiệp vụ của ứng dụng. Cuối cùng là Controller, là các lớp đặc biệt, có chứa các phương thức có khả năng nhận yêu cầu, xử lý yêu cầu, cập nhật dữ liệu, và chuyển tiếp dữ liệu trong ứng dụng.
+
+2.7.2 Flow trong Spring MVC
+    
+    
+    Hình 2.10 Luồng thực thi trong Spring MVC
+• Bất kỳ request nào tới ứng dụng web đều sẽ được gửi tới Front Controller (Dispatcher Servlet)
+• Front Controller sẽ sử dụng Handler Mapping để biết được controller nào sẽ xử lý request đó
+• Controller nhận request, gọi tới các class service thích hợp xử lý yêu cầu.
+• Sau khi xử lý xong, Controller sẽ nhận được model từ tầng Service hoặc tầng DAO.
+• Controller gửi model vừa nhận tới Front Controller (Dispatcher Servlet)
+• Dispatcher Servlet sẽ tìm các mẫu view, sử dụng view resolver và truyền model vào nó.
+• View template, model, view page được build và gửi trả lại Front Controller
+• Front Controller gửi một page view tới trình duyệt để hiển thị nó cho người dùng.
+    Trong Mô hình MVC thì:
+• Model: là các file POJO, Service, DAO thực hiện truy cập database, xử lý business
+• View: là các file JSP, HTML, …
+• Control: là Dispatcher Controller, Handler Mapping, Controller – thực hiện điều hướn các request.
+2.7.3 Lợi ích của Spring MVC
+    Các tầng trong Spring MVC độc lập nên việc unit test dễ dàng hơn.
+    Phần view có thể tích hợp với nhiều Framework về giao diện như JSF, Freemarker, Themeleaf…
+    Spring MVC base trên các POJO class nên các hành động của nó khá đơn giản.
+    Hỗ trợ cả Annotation và XML config giúp việc phát triển nhanh hơn, sạch hơn.
+    Cung cấp việc phân chia một cách rõ ràng, linh hoạt giữa controller, service, data access layer.
+CHƯƠNG 3: PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG QUẢN LÝ SINH VIÊN THỬ NGHIỆM CHO ĐHSPKT HƯNG YÊN
+3.1 Phát biểu bài toán
+    Xây dựng website quản lý các thông tin liên quan tới sinh viên trong các trường đại học sử dụng Spring Framework thử nghiệm cho khoa Công nghệ Thông tin trường Đại học Sư phạm Kỹ thuật Hưng Yên.
+    Các hoạt động chính của hệ thống:
+• Để có thể sử dụng, thay đổi các dữ liệu trong hệ thống phải đăng nhập tài khoản. 
+• Có 2 loại tài khoản: tài khoản admin và tài khoản user. Tài khoản admin khi đăng nhập có thể thêm và xóa các tài khoản user. Tài khoản user khi đăng nhập có thể cập nhật quản lý thông tin tài khoản cá nhân, quản lý thông tin lớp và quản lý thông tin của sinh viên.
+• Việc xóa dữ liệu của lớp hoặc sinh viên trên hệ thống sẽ không được triển khai. Thay vào đó, dữ liệu sẽ được thêm trường trạng thái để phân biệt dữ liệu cũ và dữ liệu còn khả dụng.
+• Quản lý tài khoản cá nhân có thể thay đổi, cập nhật các thông tin của tài khoản, thay đổi mật khẩu.
+• Quản lý thông tin lớp bao gồm thêm và cập nhật thông tin của lớp.
+• Quản lý thông tin sinh viên bao gồm thêm và cập nhật thông tin của sinh viên.
+• Cung cấp các tính năng tìm kiếm các thông tin liên quan đến lớp học và sinh viên.
+• Ngoài ra, hệ thống còn có các API cung cấp dữ liệu của hệ thống dưới dạng JSON.
+3.2 Yêu cầu của hệ thống
+3.2.1 Yêu cầu về môi trường
+• Môi trường phần cứng:
+o CPU: Pentium IV 2.0 GHz hoặc cao hơn
+o RAM: tối thiểu 2 GB
+o HDD: dung lượng tối thiểu trống 2G
+• Môi trường phần mềm:
+o Ngôn ngữ: Java
+o Cơ sở dữ liệu: Microsoft SQL Server
+o Môi trường phát triển: JDK
+3.2.2 Yêu cầu về trang hiển thị
+• Đăng nhập:
+o Cho phép người dùng đăng nhập vào hệ thống.
+o Yêu cầu người dùng phải đăng nhập mới có thể sử dụng được các chức năng của hệ thống.
+o Người dùng ẩn danh có thể lấy dữ liệu từ API của hệ thống mà không cần phải có sự cho phép của hệ thống.
+• Quản lý tài khoản hệ thống:
+o Cung cấp chức năng tạo, xóa tài khoản của hệ thống.
+o Yêu cầu người dùng phải đăng nhập hệ thống và tài khoản đăng nhập có quyền là admin.
+• Hiển thị thông tin của sinh viên:
+o Cung cấp các thông tin của sinh viên.
+o Người dùng khi đăng nhập có thể quản lý được các thông tin của sinh viên thông tin qua phần hiển thị. Yêu cầu quyền đăng nhập là user.
+• Hiển thị thông tin lớp học và khoa:
+o Hiển thị các thông tin của lớp học và khoa.
+o Người dùng khi đăng nhập có thể quản lý được các thông tin của lớp học và khoa. Yêu cầu quyền đăng nhập là user.
+• Hiển thị phần tìm kiếm thông tin:
+o Hiển thị phần tìm kiếm của hệ thống.
+o Hiển thị các thông tin nếu có trong cơ sở dữ liệu khi được người dùng tìm kiếm đến.
+o Yêu cầu người dùng phải đăng nhập với quyền là user.
+• Hiển thị dữ liệu của API thông qua url:
+o Truy xuất dữ liệu từ API thông qua 1 url hợp lệ, dữ liệu Json sẽ được trả lại cho người dùng.
+o Không yêu cầu đăng nhập hoặc quyền quản lý của tài khoản.
+3.3 Biểu đồ UseCase
+3.3.1 Biểu đồ UseCase mức tổng quát
+          
+          
+    Hình 3.1 Biểu đồ UseCase tổng quát
+3.3.2 Đặc tả UseCase
+• UseCase “Quản lý đăng nhập”
+    Bảng 3.1 Đặc tả UseCase “Quản lý đăng nhập”
+UseCaseQuản lý đăng nhậpMô tảLà chức năng cho phép người dùng đăng nhậpNgười dùngKhông yêu cầuĐiều kiện đầuN/ASự kiện chínhNgười dùng truy cập vào websiteĐiều kiện cuốio Đăng nhập không đúng tài khoản: Yêu cầu nhập lại thông tin đăng nhập
+o Đăng nhập đúng tài khoản với quyền quản trị là Admin: Hiển thị trang quản lý tài khoản
+o Đăng nhập đúng tài khoản với quyền quản trị là User: Hiển thị trang danh sách lớp mà người đó đang quản lý    
+• UseCase “Quản lý tài khoản”
+    Bảng 3.2 Đặc tả UseCase “Quản lý tài khoản”
+UseCaseQuản lý tài khoảnMô tảLà chức năng cho phép người fungd quản lý tài khoảnNgười dùngTất cả người dùng phải đăng nhậpĐiều kiện đầuo Người dùng admin chọn tài khoản
+o Người dùng user chọn xemSự kiện chínho Trang web hiển thị thông tin của tài khoản mà người dùng xemĐiều kiện cuốio Thông tin tài khoản sẽ được cập nhật nếu có sự thay đổi thông tin
+o Tài khoản mới sẽ được tạo nếu người dùng admin thực hiện tạo tài khoản
+• UseCase “Quản lý Khoa”
+    Bảng 3.3 Đặc tả UseCase “Quản lý khoa”
+UseCaseQuản lý KhoaMô tảCung cấp chức năng quản lý đối tượng khoa trong hệ thốngNgười dùngNgười dùng đăng nhập với quyền là AdminĐiều kiện đầuNgười dùng thực hiện chọn xem thông tin của một khoa hoặc tạo mới khoaSự kiện chínhThông tin của khoa sẽ được hiển thị trên trang webĐiều kiện cuốio Người dùng xem thông tin của khoa: Trang web sẽ hiển thị thông tin chi tiết của khoa
+o Người dùng tạo mới khoa: Thông tin khoa sẽ được lưu lại nếu hợp lệ
+• UseCase “Quản lý lớp”
+    Bảng 3.4 Đặc tả UseCase “Quản lý lớp”
+UseCaseQuản lý lớpMô tảCung cấp chức năng quản lý đối tượng Lớp trong hệ thốngNgười dùngNgười dùng đăng nhập với quyền là UserĐiều kiện đầuNgười dùng nhấp chọn hiển thị thông tin của một lớpSự kiện chínho Hệ thống sẽ gọi đến Controller quản lý sinh viên của lớp
+o Trang web hiển thị thông tin của lớp và danh sách các sinh viên từ dữ liệu trả ra của Controller Điều kiện cuốio Trang web sẽ hiển thị các thông tin
+o Các thay đổi dữ liệu sẽ được thực hiện nếu dữ liệu phù hợp
+• UseCase “Quản lý Sinh viên”
+    Bảng 3.5 Đặc tả UseCase “Quản lý sinh viên”
+UseCaseQuản lý Sinh viênMô tảCung cấp chức năng quản lý đối tượng sinh viên trong hệ thốngNgười dùngNgười dùng đăng nhập với quyền là UserĐiều kiện đầuNgười dùng duyệt trang quản lý lớpSự kiện chínho Hệ thống sẽ gọi Controller quản lý lớp, lấy ra thông tin lớp và danh sách các sinh viên của lớp đó
+o Hệ thống hiển thị các thông tin đã lấy được từ Controller lên trang webĐiều kiện cuốio Trang web sẽ hiển thị các thông tin
+o Thực hiện thay đổi dữ liệu nếu người dùng có thay đổi dữ liệu    
+• UseCase “Quản lý Điểm”
+    Bảng 3.6 Đặc tả UseCase “Quản lý điểm”
+UseCaseQuản lý ĐiểmMô tảCung cấp chức năng quản lý đối tượng điểm trong hệ thốngNgười dùngNgười dùng đăng nhập với quyền là UserĐiều kiện đầuNgười dùng duyệt trang quản lý sinh viênSự kiện chínho Hệ thống gọi đến Controller quản lý sinh viên
+o Controller trả ra dữ liệu của sinh viênĐiều kiện cuốiDữ liệu của sinh viên sẽ được tải lên web bao gồm dữ liệu cá nhân và các điểm
+• UseCase “Tìm kiếm”
+    Bảng 3.7 Đặc tả UseCase “Tìm kiếm”
+UseCaseTìm kiếmMô tảCung cấp chức năng tìm kiếm dữ liệu trong hệ thốngNgười dùngNgười dùng đăng nhập với quyền là User và Admin
+• UseCase “Thống kê dữ liệu”
+    Bảng 3.8 Đặc tả UseCase “Thống kê dữ liệu”
+UseCaseThống kê dữ liệuMô tảCung cấp chức năng thống kê các dữ liệu liên quan đến các đối tượng trong hệ thống.Người dùngNgười dùng đăng nhập với quyền là User và Admin
+• UseCase “Lấy dữ liệu từ API”
+    Bảng 3.9 Đặc tả UseCase “Lấy dữ liệu từ API”
+UseCaseLấy dữ liệu từ APIMô tảCung cấp chức năng lấy dữ liệu JSON qua APINgười dùngKhông yêu cầuĐiều kiện đầuDuyệt dường dẫn của webSự kiện chínhHệ thống lọc các dữ liệu liên quan từ các thông tin truyền đến server bằng urlĐiều kiện cuốiServer trả ra trang web có dữ liệu JSON3.4 Biểu đồ lớp
+3.4.1 Biểu đồ lớp (Mức phân tích)
+   
+Hình 3.2. Biểu đồ lớp mức phân tích
+3.4.2 Danh sách các lớp đối tượng và quan hệ
+    Bảng 3.10 Danh sách các lớp đối tượng và quan hệ
+STTTên lớp/quan hệLoạiÝ nghĩa/Ghi chú1AccountLớp tài khoản2FacultyLớp khoa3ClassLớp lớp học4StudentLớp sinh viên5SubjectLớp môn học6ScoreLớp điểm3.4.3 Mô tả chi tiết từng lớp đối tượng
+• Lớp Account
+    Bảng 3.11 Mô tả chi tiết lớp Account
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/Ghi chú1User_idintKhóa chínhMã tài khoản2User_nameStringDuy nhấtTên tài khoản3PasswordStringKhông trốngMật khẩu5User_roleStringQuyền truy cập6User_full_nameStringTên của người dùng7User_addressStringĐịa chỉ8User_phoneStringSố điện thoại9User_emailStringEmail10Update_dayDateNgày cập nhật11StatusbooleanTrạng thái    
+• Lớp Faculty
+    Bảng 3.12 Mô tả chi tiết lớp Faculty
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/Ghi chú1Faculty_idintKhóa chínhMã khoa2Faculty_nameStringTên khoa3Create_dayDateNgày tạo4Update_dayDateNgày cập nhật
+• Lớp Class
+    Bảng 3.13 Mô tả chi tiết lớp Class
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/Ghi chú1Class_idintKhóa chínhMã lớp2Class_nameStringTên lớp3Class_statusStringTrạng thái của lớp4Start_yearintNăm bắt đầu5End_yearintNăm kết thúc6Update_dayDateNgày cập nhật
+• Lớp Student
+    Bảng 3.14 Mô tả chi tiết lớp Student
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/Ghi chú1Student_idintKhóa chínhMã sinh viên2Student_full_nameStringTên đầy đủ3Student_birthdaydateNgày sinh4Student_genderbitGiới tính5Student_addressStringĐịa chỉ6Student_hometownStringQuê quán7Student_emailStringEmail8Student_phoneStringSố điện thoại9Student_statusbooleanTrạng thái10Update_dayDateNgày cập nhật
+• Lớp Subject
+    Bảng 3.15 Mô tả chi tiết lớp Subject
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/Ghi chú1Subject_idintKhóa chínhMã môn học2Subject_nameStringTên môn học3Learn_unitintĐơn vị tín chỉ4Update_dayDateNgày cập nhật
+• Lớp Score
+    Bảng 3.16 Mô tả chi tiết lớp Score
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/Ghi chú1ScorefloatĐiểm2FailbooleanQua môn3Create_dayDateNgày tạo4Update_dayDateNgày cập nhật3.5 Biểu đồ tuần tự
+3.5.1 Đăng nhập
+
+    Hình 3.2 Biểu đồ tuần tự đăng nhập
+3.5.2 Thêm tài khoản
+
+    Hình 3.3 Biểu đồ tuần tự một số phần quản lý
+3.6 Mô hình thực thể liên kết
+3.6.1 Danh sách các thực thể của hệ thống
+    Bảng 3.17 Danh sách các thực thể
+STTTên thực thểÝ nghĩa/Ghi chú1AccountTài khoản2FacultyKhoa3ClassLớp4StudentSinh viên5SubjectMôn học6ScoreĐiểm    
+3.6.2 Chi tiết hóa thực thể hệ thống
+• Thực thể Account
+    Bảng 3.18 Chi tiết thực thể Account
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/Ghi chú1User_idintKhóa chínhMã tài khoản2User_namevarchar(200)Duy nhấtTên tài khoản3Passwordvarchar(200)Không trốngMật khẩu4Faculty_idintKhóa phụMã khoa5User_rolevarchar(200)Quyền truy cập6User_full_namenvarchar(200)Tên của người dùng7User_addressnvarchar(200)Địa chỉ8User_phonevarchar(200)Số điện thoại9User_emailvarchar(200)Email10Update_daydateNgày cập nhật11StatusbitTrạng thái    
+• Thực thể Faculty
+    Bảng 3.19 Chi tiết thực thể Faculty
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/Ghi chú1Faculty_idintKhóa chínhMã khoa2Faculty_namevarchar(200)Tên khoa3Create_daydateNgày tạo4Update_daydateNgày cập nhật
+• Thực thể Class
+    Bảng 3.20 Chi tiết thực thể Class
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/Ghi chú1Class_idintKhóa chínhMã lớp2Faculty_idintKhóa phụMã khoa3Class_namevarchar(200)Tên lớp4Manager_idintMã account5Class_statusvarchar(200)Trạng thái của lớp6Start_yearsmallintNăm bắt đầu7End_yearsmallintNăm kết thúc8Update_daydateNgày cập nhật
+• Thực thể Student
+    Bảng 3.21 Chi tiết thực thể Student
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/Ghi chú1Student_idintKhóa chínhMã sinh viên2Class_idintKhóa phụMã lớp3Faculty_idintKhóa phụMã khoa4Student_full_namenvarchar(200)Tên đầy đủ5Student_birthdaydateNgày sinh6Student_genderbitGiới tính7Student_addressnvarchar(200)Địa chỉ8Student_hometownnvarchar(200)Quê quán9Student_emailvarchar(200)Email10Student_phonevarchar(200)Số điện thoại11Student_statusbitTrạng thái12Update_daydateNgày cập nhật
+• Thực thể Subject
+    Bảng 3.22 Chi tiết thực thể Subject
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/Ghi chú1Subject_idintKhóa chínhMã môn học2Faculty_idintKhóa phụMã khoa3Subject_namenvarchar(200)Tên môn học4Learn_unitsmallintĐơn vị tín chỉ5Update_daydateNgày cập nhật
+• Thực thể Score
+    Bảng 3.23 Chi tiết thực thể Score
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/Ghi chú1Student_idintKhóa phụMã học sinh2Class_idintKhóa phụMã lớp3Subject_idintKhóa phụMã môn học4Faculty_idintKhóa phụMã khoa5ScorefloatĐiểm6FailbitQua môn7Create_daydateNgày tạo8Update_daydateNgày cập nhật
+3.6.3 Liên kết cơ sở dữ liệu
+    
+    Hình 3.4 Lược đồ ER của hệ thống
+3.7 Các module chính của hệ thống
+3.7.1 Module Đăng nhập
+• Phương thức kiểm tra tài khoản đăng nhập.
+3.7.2 Module Quản lý tài khoản
+• Phương thức lấy thông tin tài khoản.
+• Phương thức tạo thông tin tài khoản.
+• Phương thức cập nhật thông tin tài khoản.
+3.7.3 Module Quản lý khoa
+• Phương thức tạo thông tin khoa.
+• Phương thức cập nhật thông tin khoa.
+3.7.4 Module Quản lý lớp
+• Phương thức tạo thông tin lớp.
+• Phương thức cập thông tin nhật lớp.
+3.7.5 Module Quản lý sinh viên
+• Phương thức tạo thông tin sinh viên.
+• Phương thúc cập nhật thông tin sinh viên.
+3.7.6 Module Quản lý môn học
+• Phương thức tạo thông tin môn học.
+• Phương thức cập thông tin nhật môn học.
+3.7.7 Module Quản lý điểm
+• Phương thức tạo thông tin điểm.
+• Phương thức cập nhật thông tin điểm.
+3.7.8 Module Tìm kiếm
+• Phương thức tìm kiếm theo tên từng đối tương
+3.7.9 Module Lấy dữ liệu từ API
+• Phương thức lấy dữ liệu cho Account
+• Phương thức lấy dữ liệu cho Faculty
+• Phương thức lấy dữ liệu cho Class
+• Phương thức lấy dữ liệu cho Student
+• Phương thức lấy dữ liệu cho Subject
+• Phương thức lấy dữ liệu cho Score
+3.8 Thiết kế đặc tả giao diện
+3.8.1 Một số giao diện chính của hệ thống
+• Giao diện trang đăng nhập gồm 2 input là username và password. Yêu cầu người dùng nhập đầy đủ và chính xác thông tin.
+    
+           
+    Hình 3.5 Giao diện đăng nhập
+• Giao diện quản lý các tài khoản: Giao diện có các nút chọn:
+o Nút Làm mới: Làm mới lại danh sách
+o Nút Create: Tạo mới một đối tượng tài khoản
+o Thẻ truyền Account: Người dùng truyền vào tên tài khoản để tìm kiếm tài khoản
+o Thẻ truyền Full name: Người dùng truyền vào tên sẽ thực hiện tìm kiếm tên trong danh sách
+o Nút Trạng thái: thay đổi trạng thái của một tài khoản
+    
+    Hình 3.6 Giao diện quản lý tài khoản
+• Giao diện phần cập nhật thông tin tài khoản: giao diện chứa các thẻ truyền vào thông tin của một tài khoản. Khi nhấn nút Save, dữ liệu sẽ thực hiện được thay đổi. Các thẻ này đều yêu cầu người dùng thực hiện nhập đúng dữ liệu.
+    
+    
+    Hình 3.7 Giao diện hiển thị quản lý thông tin tài khoản
+• Giao diện phần quản lý thông tin khoa: Tương tự như phần giao diện của quản lý tài khoản
+    
+    Hình 3.8 Giao diện hiển thị quản lý khoa
+• Giao diện tạo thông tin tài khoản: Tương tự như phần giao diện hiển thị thông tin tài khoản.
+
+
+• Giao diện khi lấy dữ liệu từ API: Dữ liệu hiển thị dạng Json. Nếu đường dẫn không trả ra được dữ liệu, giao diện sẽ bị trống.
+    
+    Hình 3.9 Giao diện hiển thị dữ liệu API
+• Giao diện quản lý thông tin sinh viên: tương tự như các phần giao diện khác, các thông tin được hiển thị và có thể thực hiện cập nhật thông tin ngay trong phần quản lý.
+    
+    Hình 3.10 Giao diện phần quản lý thông tin sinh viên
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau thời gian nghiên cứu và phát triển, tác giả đã hoàn thành cơ bản các mục tiêu ban đầu đề ra của đề tài:
+• Nghiên cứu các Java Framework và đề ra giải pháp thiết kế web dựa trên các Framework đã nghiên cứu.
+• Thiết kế cơ sở dữ liệu và tổ chức dữ liệu của hệ thống trên hệ quản trị cơ sở dữ liệu Microsoft SQL Server.
+• Thiết kế hệ thống theo mô hình MVC và đã triển khải được các phần liên quan đến backend.
+• Thiết kế được các REST API cần thiết cho một hệ thống, cung cấp dữ liệu cho các nền tảng khác.
+4.2 Hạn chế của đề tài
+    Trong việc triển khai hệ thống, một số hạn chế vẫn còn tồn tại:
+• Hệ thống mới dừng lại ở mức triển khai mẫu, chưa được tối ưu.
+• Giao diện các chức năng của website chưa hoàn chỉnh.
+4.3 Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, các hướng phát triển tiếp theo của đề tài như sau:
+• Áp dụng thêm Spring Security để tăng cường tính bảo mật.
+• Cập nhật lại giao diện hiển thị đẹp hơn, hiện đại hơn. Bổ sung thêm các phần giao diện quản lý.
+• Cập nhật lại thiết các đối tượng và các quan hệ trở nên chặt chẽ hơn, trở nên phù hợp hơn với nhiều môi trường trường học trong thực tế. 
+		TÀI LIỆU THAM KHẢO
+[1] Spring in Action, Craig Walls
+[2] Java Hibernate Cookbook, Vishal Ranapariya and Yogesh Prajapati
+[3] Hibernate in Action, Christian Bauer and Gavin King
+[4] Head First Servlets and JSP, Head First Servlets and JSP
+
+    
+PHỤ LỤC
+    
+    
+Phát triển hệ thống quản lý sinh viên
+    
+48
+    
+    
+
+    

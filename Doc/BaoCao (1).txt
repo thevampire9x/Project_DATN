@@ -1,0 +1,629 @@
+﻿TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Các phần mềm đều được bắt nguồn từ nhu cầu thực tế và xã hội đang phát triển cùng với nhịp sống công nghệ, mỗi người trong chúng ta ai cũng đều muốn tiết kiệm tiền bạc, thời gian, công sức mà vẫn đảm bảo công việc luôn chính xác và đạt hiệu quả cao. Dưới đây là một phần mềm website bán “GIÀY”  được viết theo mô hình MVC. Đề tài xây dựng website bán rượu này nhằm đáp ứng nhu cầu của cửa hàng bán lẻ đảm bảo việc quản lý rượu và thuận tiện cho việc ghi lại thông tin hóa đơn, thống kê bán hàng cuối ngày,... Đặc biệt sử dụng mô hình MVC đơn giản và dễ nâng cấp, bảo trì nên chắc chắn nó sẽ đem lại những thuận lợi cho mọi người.
+    Sau quá trình tìm hiểu, khảo sát, nghiên cứu và thực hiện đến nay, đề tài “Xây dựng website bán giày ” của em đã hoàn thành. 
+    Em xin chân thành cảm ơn các thầy cô đã tận tình giảng dạy, trang bị những kiến thức quý báu, bổ ích cho chúng em trong suốt quá trình thực hiện đề tài, để phần mềm của nhóm được hoàn chỉnh và có thể ứng dụng vào thực tế. Đặc biệt chúng em xin chân thành cảm ơn thầy phạm minh chuẩn  đã hướng dẫn tận tình, giúp chúng em hoàn thành đề tài.
+    Với kinh nghiệm còn non nớt, cùng với kiến thức còn hạn chế, tuy đã cố gắng nỗ lực hết mình nhưng đề tài của em vẫn không tránh khỏi những thiếu sót. Em mong nhận được những ý kiến đóng góp về sự thiếu sót trong đề tài này của em từ thầy cô và các bạn để em có thể rút kinh nghiệm.
+1.2 Mục tiêu của đề tài
+    Triển khai cài đặt và cấu hình Website trên môi trường Internet.
+    Website giúp các chủ cửa hàng nắm bắt được hiệu quả hoạt động kinh doanh của cửa hàng mình một cách nhanh chóng, đơn giản và chính xác nhất. Chủ cửa hàng sẽ nắm bắt và quản lý được tất cả các giao dịch phát sinh, tình hình doanh thu, tình trạng hàng hóa, tồn kho,…bất kỳ lúc nào và bất cứ nơi đâu.
+1.3 Giới hạn và phạm vi của đề tài
+    Đề tài xây dựng Website bán rượu sử dụng các công nghệ trong lập trình như ASP.NET MVC, SQL Server 2014,Angularjs và Công cụ lập trình Visual Studio 2015.
+1.4 Nội dung thực hiện
+    	Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Nghiên cứu công nghệ lập trình Website với ASP.NET.
+- Phân tích yêu cầu và đề xuất giải pháp Website trên công nghệ .NET. 
+- Thiết kế đặc tả hệ thống.
+- Xây dựng Cơ sở dữ liệu.
+- Lập trình cho các Module của hệ thống
+- Kiểm thử hệ thống.
+- Triển khai thực nghiệm hệ thống trên mạng Internet.
+1.5 Phương pháp tiếp cận
+- Cách tiếp cận: Nghiên cứu các ngôn ngữ lập trình Website như ASP.NET MVC, Jquery, HTML, CSS, bootstrap, JavaScritpt,Angularjs…
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu;
+o Phương pháp phân tích mẫu;
+o Phương pháp thực nghiệm.
+CHƯƠNG 2: SƠ LƯỢC VỀ ASP .NET VÀ ANGULARJS
+2.1 Tổng quan về ASP.NET
+2.1.1 Khái niệm và nguồn gốc xuất xứ
+      - Từ khoảng cuối thập niên 90, ASP (Active Server Page) đã được nhiều lập trình viên lựa chọn để xây dựng và phát triển ứng dụng web động trên máy chủ sử dụng hệ điều hành Windows. ASP đã thể hiện được những ưu điểm của mình với mô hình lập trình thủ tục đơn giản, sử dụng hiệu quả các đối tượng COM: ADO (ActiveX Data Object) - xử lý dữ liệu, FSO (File System Object) - làm việc với hệ thống tập tin…, đồng thời, ASP cũng hỗ trợ nhiều ngôn ngữ: VBScript, JavaScript. Chính những ưu điểm đó, ASP đã được yêu thích trong một thời gian dài.
+      - Tuy nhiên, ASP vẫn còn tồn đọng một số khó khăn như Code ASP và HTML lẫn lộn, điều này làm cho quá trình viết code khó khăn, thể hiện và trình bày code không trong sáng, hạn chế khả năng sử dụng lại code. Bên cạnh đó, khi triển khai cài đặt, do không được biên dịch trước nên dễ bị mất source code. Thêm vào đó, ASP không có hỗ trợ cache, không được biên dịch trước nên phần nào hạn chế về mặt tốc độ thực hiện. Quá trình xử lý Postback khó khăn,…
+      - Đầu năm 2002, Microsoft giới thiệu một kỹ thuật lập trình Web khá mới mẻ với tên gọi ban đầu là ASP+, tên chính thức sau này là ASP.NET. Với ASP.NET, không những không cần đòi hỏi bạn phải biết các tag HTML, thiết kế web, mà nó còn hỗ trợ mạnh lập trình hướng đối tượng trong quá trình xây dựng và phát triển ứng dụng Web.
+      - ASP.NET là kỹ thuật lập trình và phát triển ứng dụng web ở phía Server (Server-side) dựa trên nền tảng của Microsoft .Net Framework.
+      - Hầu hết, những người mới đến với lập trình web đều bắt đầu tìm hiểu những kỹ thuật ở phía Client (Client-side) như: HTML, Java Script, CSS (Cascading Style Sheets). Khi Web browser yêu cầu một trang web (trang web sử dụng kỹ thuật client-side), Web server tìm trang web mà Client yêu cầu, sau đó gởi về cho Client. Client nhận kết quả trả về từ Server và hiển thị lên màn hình.
+      - ASP.NET sử dụng kỹ thuật lập trình ở phía server thì hoàn toàn khác, mã lệnh ở phía server (ví dụ: mã lệnh trong trang ASP) sẽ được biên dịch và thi hành tại Web Server. Sau khi được Server đọc, biên dịch và thi hành, kết quả tự động được chuyển sang HTML/JavaScript/CSS và trả về cho Client. Tất cả các xử lý lệnh ASP.NET đều được thực hiện tại Server và do đó, gọi là kỹ thuật lập trình ở phía server.
+2.1.2 Những ưu điểm nổi bật của ASP.NET
+      - ASP.NET cho phép bạn lựa chọn một trong các ngôn ngữ lập trình mà bạn yêu thích: Visual Basic.Net, J#, C#,…
+    - Trang ASP.NET được biên dịch trước. Thay vì phải đọc và thông dịch mỗi khi trang web được yêu cầu, ASP.NET biên dịch những trang web động thành những tập tin DLL mà Server có thể thi hành nhanh chóng và hiệu quả. Yếu tố này là một bước nhảy vọt đáng kể so với kỹ thuật thông dịch của ASP.
+    
+    Hình 2. 1 Quá trình biên dịch của ASP.NET
+    - ASP.NET hỗ trợ mạnh mẽ bộ thư viện phong phú và đa dạng của .Net Framework, làm việc với XML, Web Service, truy cập cơ sở dữ liệu qua ADO.NET,…
+    - ASPX và ASP có thể cùng hoạt động trong 1 ứng dụng.
+    - ASP.NET sử dụng phong cách lập trình mới: Code behide. Tách code riêng, giao diện riêng do vậy dễ đọc, dễ quản lý và bảo trì.
+    - Kiến trúc lập trình giống ứng dụng trên Windows.
+    - Hỗ trợ quản lý trạng thái của các control
+    - Tự động phát sinh mã HTML cho các Server control tương ứng với từng loại Browser
+    - Hỗ trợ nhiều cơ chế cache.
+    - Triển khai cài đặt
+    - Không cần lock, không cần đăng ký DLL
+    - Cho phép nhiều hình thức cấu hình ứng dụng
+    - Hỗ trợ quản lý ứng dụng ở mức toàn cục
+    - Global.aspx có nhiều sự kiện hơn
+    - Quản lý session trên nhiều Server, không cần Cookies
+2.2 Tổng quan mô hình MVC
+2.2.1 Mô hình MVC là gì?
+• Mô hình MVC là một chuẩn mô hình và đóng vai trò quan trọng trong quá trình xây dựng – phát triển – vận hành và bảo trì một hệ thống hay một ứng dụng – phần mềm. Nó tạo ra một mô hình 3 lớp Model – View – Controller tách biệt và tương tác nhau, giúp các chuyên gia có thể dễ dàng dựa vào mô hình để trao đổi và xử lý những nghiệp vụ một cách nhanh chóng. Đây là một mô hình đã xuất hiện từ những năm 70 của thế kỷ 20 tại phòng thí nghiệm Xerox PARC ở Palo Alto, nó không phụ thuộc vào môi trường, nền tảng xây dựng hay ngôn ngữ phát triển. Chúng ta có thể áp dụng mô hình MVC vào các dự án trong môi trường Windows, Linux,… và sử dụng bất kỳ ngôn ngữ nào như PHP, ASP, JSP…
+
+    Hình 2. 2  Hình biểu diễn mô hình MVC
+Mô hình MVC được chia làm 3 lớp xử lý gồm Model – View – Controller:
+• Model: là nơi chứa những nghiệp vụ tương tác với dữ liệu hoặc hệ quản trị cơ sở dữ liệu (mysql, mssql… ); nó sẽ bao gồm các class/function xử lý nhiều nghiệp vụ như kết nối database, truy vấn dữ liệu, thêm – xóa – sửa dữ liệu…
+• View: là nới chứa những giao diện như một nút bấm, khung nhập, menu, hình ảnh… nó đảm nhiệm nhiệm vụ hiển thị dữ liệu và giúp người dùng tương tác với hệ thống.
+• Controller: là nới tiếp nhận những yêu cầu xử lý được gửi từ người dùng, nó sẽ gồm những class/ function xử lý nhiều nghiệp vụ logic giúp lấy đúng dữ liệu thông tin cần thiết nhờ các nghiệp vụ lớp Model cung cấp và hiển thị dữ liệu đó ra cho người dùng nhờ lớp View
+2.2.2 Sự tương tác giữa các lớp trong mô hình MVC
+    Controller – View sẽ lấy những hình ảnh, nút bấm…hoặc hiển thị dữ liệu được trả ra từ Controller để người dùng có thể quan sát và thao tác. Trong sự tương tác này cũng có thể không có dữ liệu được lấy từ Model và khi đó nó chỉ chịu trách nhiệm hiển thị đơn thuần như hình ảnh, nút bấm…
+    Controller – Model là luồng xử lý khi controller tiếp nhận yêu cầu và các tham số đầu vào từ người dùng, controller sẽ sử dụng các lớp/hàm trong Model cần thiết để lấy ra những dữ liệu chính xác.
+    View – Model có thể tương tác với nhau mà không qua Controller, nó chỉ đảm nhận hiển thị dữ liệu chứ không phải qua bất kỳ xử lý nghiệp vụ logics nào. Nó giống như các vùng dữ liệu hiển thị tĩnh trên các website như block slidebar…
+    Mô hình MVC có thể áp dụng cho nhiều loại dự án khác nhau: dự án website, dự án ứng dụng – phần mềm,… nhưng trong phạm vi bài viết chúng ta sẽ chỉ đi tìm hiểu mô hình này được áp dụng như nào trong các dự án xây dựng và phát triển website.
+2.2.3 Quy trình hoạt động mô hình MVC trong dự án website
+
+    Hình 2. 3 Hình biểu diễn quy trình hoạt động của mô hình MVC
+Mô hình trên là thể hiện mô hình MVC trong các dự án website và sẽ hoạt động theo quy trình sau:
+1. Người dùng sử dụng một BROWSER trình duyệt web bất kỳ (Firefox, Chrome, IE,…) để có thể gửi những yêu cầu (HTTP Request) có thể kèm theo những dữ liệu nhập tới những CONTROLLER xử lý tương ứng. Việc xác định Controllerr xử lý sẽ dựa vào một bộ Routing điều hướng.
+2. Khi CONTROLLER nhận được yêu cầu gửi tới, nó sẽ chịu trách nhiệm kiểm tra yêu cầu đó có cần dữ liệu từ MODEL hay không? Nếu có, nó sẽ sử dụng các class/function cần thiết trong MODEL và nó sẽ trả ra kết quả( Resulting Arrays), khi đó CONTROLLER sẽ xử lý giá trị đó và trả ra VIEW để hiển thị. CONTROLLER sẽ xác định các VIEW tương ứng để hiển thị đúng với yêu cầu.
+3. Khi nhận được dữ liệu từ CONTROLLER, VIEW sẽ chịu trách nhiệm xây dựng các thành phẩn hiển thị như hình ảnh, thông tin dữ liệu… và trả về GUI Content để CONTROLLER  đưa ra kết quả lên màn hình BROWSER.
+4. BROWSER sẽ nhận giá trị trả về(HTTP Response) và sẽ hiển thị với người dùng. Kết thúc một quy trình hoạt động.
+
+
+    Hình 2. 4 Hình biểu diễn quy trình hoạt động của mô hình MVC
+2.2.4 Ưu điểm và nhược điểm của mô hình MVC
+Ưu điểm:
+• Các dự án có thể áp dụng ngay mô hình MVC mà không phụ thuộc môi trường, nền tảng xây dựng hay ngôn ngữ lập trình phát triển;
+• Quy hoạch các class/ function vào các thành phần riêng biệt Controller – Model – View, khi đó sẽ dễ dàng xây dựng – phát triển – quản lý – vận hành và bảo trì một dự án, tạo sự rõ ràng, trong sáng trong quá trình phát triển dự án, kiểm soát được các luồng xử lý và tạo ra các thành phần xử lý nghiệp vụ chuyên biệt hóa.
+• Tạo thành mô hình chuẩn cho nhiều dự án, các chuyên gia sẽ tiếp cận – tìm hiểu những dự án đó một cách nhanh chóng và hiệu quả. Nếu bạn nắm rõ mô hình MVC của một dự án nào đó, thì khi tiếp cận với một dự án khác mà bạn chưa từng biết hoặc tiếp xúc, nhưng nó lại được xây dựng với mô hình MVC thì sẽ không khó khăn gì mà cực kỳ dễ dàng. Học một nhưng có thể hiểu và sử dụng được mười.
+• Giúp các chuyên gia lập trình, nhà quản lý, nhà đầu tư, PM,… có thể hiểu được dự án hoạt động ra sao hoặc giúp các lập trình viên dễ dàng quản lý – phát triển dự án. Nó không phải ngôn ngữ, nhưng khi họ cùng nhìn vào nó thì sẽ tự hiểu nó là gì, khi đó họ có thể trao đổi các yêu cầu và bàn bạc công việc.
+• Đây là một mô hình chuẩn, nó tối ưu nhất hiện nay so với nhiều mô hình khác và được sử dụng trong nhiều dự án và nhiều lĩnh vực, đặc biệt trong công nghệ sản xuất ứng dụng – phần mềm. Các lập trình viên sử dụng mô hình chuẩn MVC để có thể dễ dàng phân phối và chuyển giao công nghệ.
+• Đây là mô hình đơn giản, xử lý những nghiệp vụ đơn giản, và dễ dàng triển khai với các dự án nhỏ.
+Nhược điểm:
+▪ Yêu cầu về chuyên môn khá cao, có kiến thức vững về các mô hình chuẩn.
+▪ Khó triển khai với những dự án yêu cầu phúc tạp hơn. Hiện nay đang có một khái niệm mô hình mới đó là HMVC đang dần thay thế cho MVC.
+2.2.5 Ứng dụng thực tế mô hình MVC
+Có rất nhiều hệ thống, ứng dụng – phần mềm được xây dựng theo chuẩn mô hình MVC và được giới thiệu, phân phối như:
+• Zend Framework 1 & 2
+• Yii Framework
+• Phalcon
+• Codeingteger
+Đây là một vài ví dụ về những PHP Framework được xây dựng và áp dụng mô hình MVC rất hiệu quả hiện nay. Các bạn có thể tìm hiểu các tài liệu liên quan được cung cấp để có thể hiểu hơn chúng được phát triển và vận hành như thế nào.
+Như vậy, mô hình MVC là một khái niệm rất quan trọng giúp các bạn xây dựng- phát triển dự án của bạn. Đây cũng là kiến thức cơ bản nhất giúp bạn có thể trở thành một chuyên gia lập trình viên, nó giúp bạn dễ dàng khi tiếp cận các dự án được xây dựng theo chuẩn MVC, và đặc biệt giúp các bạn đang tìm hiểu các bộ mã nguồn mở framework sẽ cực kỳ dễ học – tìm hiểu, kể cả Zend Framework 2 đang được xem là framework không lồ và khó với nhiều người.
+2.3 Tổng quan về Angularjs
+2.3.1 Angularjs là gì?
+• Angularjs là một bộ Javascript Framework rất mạnh và thường được sử dụng để xây dựng project Single Page Application (SPA). Nó hoạt động dựa trên các thuộc tính mở rộng HTML (các atributes theo quy tắc của Angular). Đây là một Framework mã nguồn mở hoàn toàn miễn phí và được hàng ngàn các lập trình viên trên thế giới ưa chuộng và sử dụng. Framework này được thế hệ Web 2.0 phát triển khá mạnh ở nước ngoài, tuy nhiên ở Việt Nam thì vẫn chưa thông dụng lắm.
+• Về thành phần đối tượng học serie AngularJS căn bản đến nâng cao này là những bạn muốn đi theo nghề lập trình web nói chung và những bạn muốn sử dụng AngularJS để làm dự án nói riêng. Mình cam đoan rằng sau khi serie này hoàn thành bạn có thể tự mình làm ứng dụng Angular căn bản, hay thầm chí là ứng dụng Angular nâng cao nếu như bạn có tâm huyết tìm hiểu đến cùng.
+2.3.2 Các đặc tính  của Angularjs
+• AngularJS là một Framwork phát triển dựa trên Javascript để tạo các ứng dụng web phong phú
+• AngularJS thường dùng để phát triển frontend (giao diện khách hàng) thông qua các API để gọi data, sử dụng mô hình MVC rất mạnh mẽ
+• Mã nguồn AngularJS tự động fix với các trình duyệt khác nhau nên bạn không cần phải lo vấn đề tương thích trình duyệt
+• Angularjs là mã nguồn mở, hoàn toàn miễn phí và được phát triển bởi hàng ngàn các lập trình viên trên thế giới.
+    
+2.3.3 Các tính năng code lõi của angularjs
+• Data-binding: (liên kết dữ liệu) tự động đồng bộ dữ liệu giữa model và view
+• Scope: (Phạm vi) Đây là những đối tượng kết nối giữa Controller và View
+• Controller: Đây là những hàm javascript xử lý kết hợp với bộ điều khiển Scope
+• Service: Như tôi đề cập ở trên, AngularJS sử dụng các API được xây dựng từ các web service (PHP, ASP) để thao tác với DB.
+• Filters: Bộ lọc lọc ra các thành phẩn của một mảng và trả về mảng mới
+• Directives:  đánh dấu vào các yếu tố của DOM, nghĩa là sẽ tạo ra các thẻ HTML tùy chỉnh
+• Templates: hiển thị thông tin từ controller, đây là một thành phần của views
+• Routing:  chuyển đổi giữa các action trong controller
+• MVC: Mô hình chia thành phần riêng biệt thành Model, View, Controller. Đây là một mô hình khá hay nhưng trong Angular thì nó được chế biến lại một chút gần giốn với MVVM (Model View View Model)
+• Deep Linking: Liên kết sâu, cho phép bạn mã hóa trạng thái của ứng dụng  trong các URL  để nó có thể đánh dấu được với công cụ tìm kiếm.
+• Dependency Injection: Angular giúp các nhà phát triển tạo ứng dụng  dễ dàng hơn để phát triển, hiểu và thử nghiệm dễ dàng.
+Sau đây là hình ảnh mô hình cac thành phần quan trọng trong AngularJS:
+
+    Hình 2. 5 Hình biểu diễn quy trình hoạt động của mô hình MVC
+2.3.4 Ưu điểm và nhược điểm của angularjs
+    Ưu điểm:
+• Angularjs cho phép tạo ra các ứng dụng một cách đơn giản, code sạch
+• Angularjs sử dụng data bind giống .NET với tính năng liên kết với HTML nên giúp người dùng cảm thấy dễ chịu.
+• Angularjs đang ở giai đoạn thử nghiệm
+• Angularjs có thể chạy trên hầu hết các trình duyệt điện thoại thông minh.
+    Nhược điểm:
+• Không an toàn: Được phát triển từ javascript nên nó không an toàn, phía máy chủ phải thường xuyên xác nhận quyền để hệ thống chạy trơn tru.
+• Phụ thuộc: Nếu người dùng vô hiệu hóa javascript thì coi như đi tong con long bong.
+CHƯƠNG 3: WEBSITE BÁN GIÀY
+3.1 Phát biểu bài toán
+    Hệ thống website bán rượu cung cấp các chức năng như: quản lý chi tiết hóa đơn nhập/bán, quản lý chi tiết kiểm kho, quản lý chi tiết trả hàng nhập/bán, quản lý hàng hóa, quản lý hóa đơn nhập/bán, quản lý khách hàng, quản lý loại hàng, quản lý loại thu chi, quản nhà cung cấp, quản lý trả hàng nhập/bán. Hệ thống giúp nhân viên có thể nhanh chóng tìm được hàng hóa theo tên sản phẩm và nhóm sản phẩm. Cũng dễ dàng hơn cho nhân viên trong việc quản lý các yêu cầu báo cáo hóa đơn.
+    Hệ thống Website bán hàng tạp hóa cần đạt được những mục tiêu sau:
+   1. Hệ thống phải quản lý được thông tin các loại sản phẩm.
+   2. Hệ thống phải quản lý được thông tin khách hàng và nhân viên.
+   3. Hệ thống phải giúp khách hàng tìm kiếm chính xác các sản phẩm dựa vào tên hoặc loại  hoặc nhà cung cấp một cách nhanh nhất.
+   4. Hệ thống phải giúp nhân viên quản lý được các đơn hàng và hóa đơn
+   5. Hệ thống phải kết xuất được những báo cáo cần thiết.
+3.2 Yêu cầu của hệ thống
+    Dựa trên mô tả hoạt động của hệ thống website bán rượu, hệ thống cần phải đáp ứng các yêu cầu sau:
+    3.2.1. Danh sách các yêu cầu trên trang hiển thị
+    3.2.1.1. Đăng nhập
+  • Cung cấp chức năng đăng nhập cho nhân viên
+  • Thông tin đăng nhập bao gồm: tên đăng nhâp, mật khẩu
+  • Yêu cầu nhân viên đăng nhập khi muốn quản lý sản phẩm
+    3.2.2. Danh sách các yêu cầu trên trang quản trị
+    3.2.2.1. Quản lý loại sản phẩm
+• Thêm mới loại sản phẩm
+    - Hệ thống giúp quản trị viên nhập các thông tin về loại sản phẩm. Thông tin bao gồm: mã loại,tên loại
+• Cập nhật thông tin loại sản phâm
+    - Hệ thống phải cung cấp chức năng sửa lại thông tin của loại sản phẩm khi có sự thay đổi.
+• Hiển thị danh sách thông tin loại sản phâm
+    - Hiển thị danh sách tất cả các loại sản phẩm.
+• Xóa loại sản phâm
+    - Xóa thông tin loại sản phẩm khi cần.
+    3.2.2.2. Quản lý nhà cung cấp
+• Thêm mới nhà cung cấp
+    - Hàng hóa được nhập về từ các nhà cung cấp. Các nhà cung cấp này được quản trị viên quản lý. Thông tin gồm: mã nhà cung cấp,tên nhà cung cấp,số điện thoại,địa chỉ,website,trạng thái.
+• Cập nhật thông tin nhà cung cấp
+    Sửa đổi thông tin nhà cung cấp khi cần,cập nhập trạng thái còn cung cấp sản phẩm hay không
+• Xóa thôn tin nhà cung cấp
+    Xóa thông tin nhà cung cấp đã thôi cung cấp khi cần.
+• Hiển thị danh sách nhóm nhà cung
+         Hiển thị danh sách thông tin các nhà cung cấp đang cung cấp sản phẩm
+    3.2.2.3. Quản lý sản phẩm
+• Thêm mới sản phẩm
+   - Hệ thống giúp quản trị viên nhập các thông tin về sản phẩm. Thông tin bao gồm: mã hàng hóa, tên sản phẩm,tên loại,tên nhà cung cấp,số lượng,hình ảnh,giá nhập,giá bán,số lượng đã bán,bảo hành,khuyến mại.
+• Cập nhật thông tin sản phẩm
+    - Hệ thống phải cung cấp chức năng sửa lại thông tin của sản phẩmkhi có sự thay đổi.
+• Xóa sản phẩm
+    -Xóa những sản phẩm không cần thiết hoặc sản phẩm đã quá cũ.
+• Hiển thị danh sách sản phẩm
+    Hiển thị danh sách thông tin các sản phẩm
+    3.2.2.4. Quản lý nhân viên-khách hàng
+• Thêm mới nhân viên-khách hàng
+    Quản trị viên có nhiệm vụ thêm thông tin nhân viên,khách hàng khi có người mới 
+    - Thông tin nhân viên bao gồm: mã, tên, giới tính,ngày sinh,số điện thoại,địa chỉ,email,mật khẩu
+    - Thông tin khách hàng bao gồm: mã, tên, giới tính,ngày sinh,số điện thoại,địa chỉ,email,mật khẩu
+• Cập nhập thông tin nhân viên-khách hàng
+    Sửa đổi thông tin nhân viên – khách hàng và tình trạng đối tượng còn khả dụng hay không.
+• Xóa nhân viên-khách hàng
+    Xóa những nhân viên-khách hàng lâu không còn hoặt động.
+• Hiển thị danh sách nhân viên-khách hàng
+    Hiển thị danh sách thông tin các nhân viên-khách hàng
+    3.2.2.5. Quản lý đơn hàng
+• Thêm đơn hàng
+    Thông tin bao gồm: mã hóa đơn,tên khách hàng,ngày đặt,tổng tiền,trạng thái.
+• Hiển thị danh sách đơn hàng
+    Hiển thị danh sách đơn hàng đã thanh toán và chưa thanh toán
+    3.2.2.6. Quản lý chi tiết đơn hàng
+• Cập nhật thông tin chi tiết đơn hàng
+    Cập nhật thông tin khi có sự thay đổi và sửa đổi trạng thái của chi tiết đơn hàng.
+• Xóa chi tiết đơn hàng
+    Xóa một cho tiết đơn hàng nào đó rồi cập nhập lại đơn hàng.
+• Hiển thị danh sách chi tiết hóa đơn
+    Hiển thị danh sách chi tiết hóa đơn hiện có.
+    
+    3.2.2.7. Quản lý đơn nhập
+• Thêm mới đơn nhập
+    Thông tin bao gồm:Mã đơn nhập,nhà cung cấp,ngày nhập,tổng tiền,trạng thái đã thanh toán chưa.
+• Hiển thị danh sách đơn nhập
+    Hiển thị danh sách thông tin các đơn nhập đã thanh toán và chưa thanh toán
+    3.2.2.8. Quản lý chi tiết đơn nhập
+• Cập nhật chi tiết đơn nhập
+    Sửa đổi thông tin đơn nhập khi cần.
+• Xóa chi tiết đơn nhập
+    Xóa thông tin đơn nhập khi hủy yêu cầu nhập hàng.
+• Hiển thị danh chi tiết đơn nhập
+    Hiển thị danh sách các chi tiết đơn nhập đã thanh toán và chưa thanh toán.
+    3.2.2.9. Chức năng thống kê báo cáo
+• Thống kê các hàng hóa bán được
+• Thống kê doanh thu theo ngày, theo tuần, theo tháng, theo quý, theo năm.
+• Kết xuất các báo cáo cần thiết.
+
+3.3 Biểu đồ UseCase
+3.3.1 Biểu đồ UseCase mức tổng quát
+    
+      Hình 3. 1 Biểu đồ use case tổng quát
+3.3.2 Đặc tả UseCase
+• Đặc tả Use-case “Quản lý loại sản phẩm”
+    Biểu đồ Use case
+
+    Hình 3. 2 Use case “Quản lý loại sản phẩm”
+    Tóm tắt
+    o Người sử dụng: Quản trị viên hoặc nhân viên có quyền
+    o Chức năng:
+• Thêm mới loại sản phẩm
+• Sửa thông tin loại sản phẩm
+• Xóa loại sản phẩm
+• Tìm kiếm thông tin loại sản phẩm
+• Đặc tả Use-case “Quản lý nhà cung cấp”
+    Biểu đồ Use case
+
+    Hình 3. 3 Use case phân rã “Quản lý nhà cung cấp”
+    Tóm tắt
+    o Người sử dụng: Quản trị viên hoặc nhân viên có quyền
+    o Chức năng:
+• Thêm mới thông tin nhà cung cấp
+• Sửa thông tin nhà cung cấp
+• Xóa nhà cung cấp
+• Tìm kiếm thông tin nhà cung cấp
+• Đặc tả Use-case “Quản lý sản phẩm”
+      
+                        Hình 3. 4 Use case phân rã “Quản lý sản phẩm”
+    
+    
+    Tóm tắt
+    o Người sử dụng: Quản trị viên hoặc nhân viên có quyền
+    o Chức năng:
+• Thêm mới thông tin sản phẩm
+• Sửa thông tin sản phẩm
+• Xóa sản phẩm
+• Tìm kiếm thông tin sản phẩm
+• Xuất excel
+• Đọc excel lưu sản phẩm
+• Đặc tả Use-case “Quản lý khách hàng”
+    Biểu đồ Use case
+
+    Hình 3. 5 Use case phân rã “Quản lý khách hàng”
+    Tóm tắt
+    o Người sử dụng: Nhân viên có quyền
+    o Chức năng:
+• Thêm mới thông tin khách hàng
+• Sửa thông tin khách hàng
+• Xóa khách hàng
+• Tìm kiếm khách hàng
+• Đặc tả Use-case “Quản lý đơn bán”
+    Biểu đồ Use case
+
+
+    Hình 3. 6 Use case phân rã “Quản lý đơn hàng”
+    Tóm tắt
+    o Người sử dụng: Quản trị viên hoặc Nhân viên có quyền
+    o Chức năng:
+• Thêm mới hóa đơn hàng
+• Xóa hóa đơn hàng
+• Xác nhận đơn hàng
+• Tìm kiếm hóa đơn 
+• Chỉnh sửa đơn hàng
+• Xuất excel
+• Đặc tả Use-case “Quản lý hóa đơn nhập”
+    Biểu đồ Use case
+
+    Hình 3. 7 Use case phân rã “Quản lý hóa đơn nhập”
+    Tóm tắt
+    o Người sử dụng: Quản trị viên hoặc Nhân viên có quyền
+    o Chức năng:
+• Thêm mới đơn nhập
+• Sửa đơn nhập
+• Xóa hóa đơn nhập
+• Tìm kiếm đơn nhập
+• Xuất excel
+• Đặc tả Use-case “Quản lý nhân viên”
+    Biểu đồ Use case
+
+    Hình 3. 8 Use case phân rã “ Quản lý Nhân viên”
+    Tóm tắt
+    o Người sử dụng: Quản trị viên hoặc nhân viên có quyền
+    o Chức năng:
+• Thêm mới thông tin nhân viên
+• Sửa thông tin nhân viên
+• Xóa nhân viên
+• Tìm kiếm nhân viên
+• Đặc tả Use-case “Quản lý bình luận”
+    Biểu đồ Use case
+
+    Hình 3. 9 Use case phân rã “ Quản lý bình luận”
+    Tóm tắt
+    o Người sử dụng: Quản trị viên hoặc nhân viên có quyền
+    o Chức năng:
+• Xóa bình luận
+• Tìm kiếm bình luận
+• Đặc tả Use-case “Thống kê báo cáo”
+    Biểu đồ Use case
+
+    Hình 3. 10 Use case phân rã “Thống kê báo cáo”
+    Tóm tắt
+    o Người sử dụng: Quản trị viên hoặc nhân viên có quyền
+    o Chức năng:
+• Xem thống kê báo cáo
+• Đặc tả Use-case “Khách hàng đặt hàng”
+    Biểu đồ Use case
+
+    Hình 3. 11 Use case phân rã “Khách hàng đặt hàng”
+    Tóm tắt
+    o Người sử dụng: Khách hàng
+    o Chức năng:
+• Tìm kiếm sản phẩm
+• Xem thông tin sản phẩm
+• Thêm sản phẩm vào giỏ
+• Chỉnh sửa sản phẩm trong giỏ
+• Đặc tả Use-case “Khách hàng quản lý thông tin cá nhân”
+    Biểu đồ Use case
+
+    Hình 3. 12 Use case phân rã “Khách hàng quản lý thông tin cá nhân”
+    Tóm tắt
+    o Người sử dụng: Khách hàng
+    o Chức năng:
+• Kiểm tra thông tin cá nhân
+• Cập nhập thông tin cá nhân
+• Thêm sản phẩm vào giỏ
+• Chỉnh sửa các đơn hàng chưa thanh toán
+• Xóa sản phẩm trong đơn hàng
+
+    
+3.4 Biểu đồ lớp
+3.4.1 Biểu đồ lớp (mức phân tích)
+    
+    Hình 3. 13 Biểu đồ lớp 
+3.4.2 Danh sách các lớp đối tượng và quan hệ
+• Lớp Loại Sản Phẩm
+    	Bảng 3. 1 Mô tả chi tiết lớp Loại sản phẩm
+STTTên thuộc tínhLoạiRàng buộc    Ý nghĩa/ghi chú1. MaLoaiintKhóa chínhMã loại hàng2. TenLoaiNvarchar (max)Not nullTên loại hàng
+• Lớp Nhà cung cấp
+    Bảng 3. 2 Mô tả chi tiết lớp Nhà cung cấp
+STTTên thuộc tính    LoạiRàng buộc    Ý nghĩa/ghi chú1. MaNCC intKhóa chínhMã của nhà cung cấp2. TenNCC nvarchar(100)Not nullTên nhà cung cấp3. SDT intNot nullĐiện thoại4. DiaChi nvarchar(100)Not nullĐịa chỉ5. Website nvarchar(100)Not nullURL nhà cung cấp6. Gmail nvarchar(100)Not nullGmail nhà cung cấp7. TrangThai bitNot nullTrạng thái
+• Lớp Sản phẩm
+    Bảng 3. 3 Mô tả chi tiết lớp sản phẩm
+STTTên thuộc tính    LoạiRàng buộc    Ý nghĩa/ghi chú1. MaSP intKhóa chínhMã của nhà cung cấp2. TenSP Nvarchar (100)Not NullTên sản phẩm3. MaLoai intKhóa ngoạiKhóa chính bảng loại sản phẩm4. MaNCC intKhóa ngoạiKhóa chính bảng nhà cung cấp5. SoLuong intNot nullSố lượng sản phẩm6. HinhAnh Nvarchar(100)Not nullTên hình ảnh7. GiaNhap FloatNot nullGiá nhập sản phẩm8. GiaBan FloatNot nullGiá bán sản phẩm9. SoLuongDaBan IntNot nullSố lượng sản phẩm đã bán10. HeSo Int Not nulHệ số bán sản phẩm11. NeworOld Nvarchar(50)Not nullLoại sản phẩm cũ hay mới…12. ImgNeworOld Nvarchar(200)Not nullLogo sản phẩm mới hay cũ..    
+• Lớp Đơn hàng
+    Bảng 3. 4 Mô tả chi tiết lớp đơn hàng
+STTTên thuộc tính    LoạiRàng buộc    Ý nghĩa/ghi chú1. MaDB IntKhóa chínhMã đơn hàng2. MaKH IntKhóa ngoạiKhóa chính trong bảng khách hàng3. NgayDat DatetimeNot nullNgày đặt hàng4. PhiShip FloatNot nullPhí ship đơn hàng5. TongTien FloatNot nullTổng tiền thanh toán6. PhuongThuc IntNot nullHình thức thanh toán7. TrangThaiThanhToan IntNot nullTrạng thái thanh toán8. TrangThai IntNot nullTrạng thái đơn hàng9. TrangThaiXem IntNot nullĐơn hàng mới đã xem hay chưa    
+• Lớp Chi tiết đơn bán
+    Bảng 3. 5 Mô tả chi tiết lớp chi tiết đơn bán
+STTTên thuộc tính    LoạiRàng buộc    Ý nghĩa/ghi chú1. MaCTDB IntKhóa chínhMã chi tiết đơn bán2. MaDB IntKhóa ngoạiKhóa chính bảng đon bán3. MaSP IntKhóa ngoạiKhóa chính bảng sản phẩm4. SoLuong IntNot nullSố lượng sản phẩm bán5. ThanhTien FloatNot nullTổng tiền sản phẩm6. NgayDat DatetimeNot nullNgày đặt đơn hàng7. TrangThaiThanhToan IntNot nullTrạng thái thanh toán8. TrangThai IntNot nullTrạng thái chi tiết đơn hàng    
+    
+• Lớp Đơn nhập
+    Bảng 3. 6 Mô tả chi tiết lớp đơn nhập
+STTTên thuộc tính    LoạiRàng buộc    Ý nghĩa/ghi chú1. MaDN IntKhóa chínhMã đơn nhập2. MaNCC IntKhóa ngoạiKhóa chính trong bảng nhà cung cấp3. TongTien FloatNot nullTổng tiền đơn nhập4. NgayNhap DatetimeNot nullNgày nhập hàng5. TrangThai IntNot nullTrạng thái đơn nhập    
+• Lớp Chi tiết đơn nhập
+    Bảng 3. 7 Mô tả chi tiết lớp chi tiết đơn nhập
+STTTên thuộc tính    LoạiRàng buộc    Ý nghĩa/ghi chú1. MaCTDN IntKhóa chínhMã chi tiết đơn nhập2. MaDN IntKhóa ngoạiKhóa chính trong bảng đơn nhập3. MaSP IntKhóa ngoạiKhóa chính trong bảng sản phẩm4. SoLuong IntNot nullSố lượng sản phẩm nhập5. NgayNhap DatetimeNot nullNgày nhập hàng6. TrangThai IntNot nullTrạng thái chi tiết đơn nhập    
+    
+    
+• Lớp Mô tả sản phẩm
+    Bảng 3. 8 - Mô tả chi tiết lớp mô tả sản phẩm
+STTTên thuộc tính    LoạiRàng buộc    Ý nghĩa/ghi chú1. MaSP IntKhóa ngoạiKhóa chính bảng sản phẩm2. GioiThieu1 Nvarchar(max)Not nullMô tả sản phẩm3. GioiThieu2 Nvarchar(max)Not nullMô tả sản phẩm    
+• Lớp Bình luận
+    Bảng 3. 9 - Mô tả chi tiết lớp bình luận
+STTTên thuộc tính    LoạiRàng buộc    Ý nghĩa/ghi chú1. MaBinhLuan IntKhóa chínhMã bình luận2. TenNguoiBinhLuan Nvarchar(50)Not nullTên người bình luận3. Gmail Nvarchar(100)Not null or nullGmail bình luận4. NgayBinhLuan DattimeNot nullNgày bình luận5. NoiDung Nvarchar(max)Not nullNội dung bình luận6. Like IntNot nullLượt thích bình luận7. Dislike IntNot nullLượt không thích bình luận8. TrangThai BitNot nullTrạng thái bình luận• Lớp Rep bình luận
+    Bảng 3. 10 - Mô tả chi tiết lớp rep bình luận
+STTTên thuộc tính    LoạiRàng buộc    Ý nghĩa/ghi chú1. MaTraLoiBinhLuan IntKhóa chínhMã trả lời bình luận2. MaBinhLuan IntKhóa ngoạiKhóa chính bảng bình luận3. TenNguoiBinhLuan Nvarchar(50)Not nullTên người bình luận4. Gmail Nvarchar(100)Not null or nullGmail bình luận5. NgayBinhLuan DattimeNot nullNgày bình luận6. NoiDung Nvarchar(max)Not nullNội dung bình luận7. Like IntNot nullLượt thích bình luận8. Dislike IntNot nullLượt không thích bình luận9. TrangThai BitNot nullTrạng thái bình luận    
+    
+• Lớp Nhân viên
+    Bảng 3. 11 - Mô tả chi tiết lớp nhân viên
+STTTên thuộc tính    LoạiRàng buộc    Ý nghĩa/ghi chú1. MaNV IntKhóa chínhMã nhân viên2. TenNV Nvarchar(50)Not nullTên nhân viên3. GioiTinh Nvarchar(3)Not nullGiới tính nhân viên4. NgaySinh DateNot nullNgày sinh nhân viên5. SDT IntNot nullSố điện thoại nhân viên6. Gmail Nvarchar(100)Not nullGmail nhân viên7. QueQuan Nvarchar(100)Not nullQuê quán nhân viên8. AnhDaiDien Nvarchar(100)Not nullẢnh nhân viên9. MaChucVu Int Khóa ngoạiKhóa chính bảng chức vụ10. TaiKhoan Nvarchar(50)Khóa ngoại Khóa chỉnh bảng tài khoản    
+• Lớp Chức vụ	
+    Bảng 3. 12 - Mô tả chi tiết lớp chức vụ
+STTTên thuộc tính    LoạiRàng buộc    Ý nghĩa/ghi chú1. MaChucVu IntKhóa chínhMã chức vụ nhân viên2. TenChucVu Nvarchar(max)Not nullTên chức vụ nhân viên    
+• Lớp Tài khoản
+    Bảng 3. 13 - Mô tả chi tiết lớp tài khoản
+STTTên thuộc tính    LoạiRàng buộc    Ý nghĩa/ghi chú1. TaiKhoan Nvarchar(50)Khóa chínhTên tài khoản2. MatKhau Nvarchar(20)Not nullMật khẩu của tài khoản3. LoaiTK IntNot nullLoại tài khoản nhân viên hoặc khách hàng4. TrangThai IntNot nullTrạng thái tài khoản    
+• Lớp Khách hàng
+    Bảng 3. 14 - Mô tả chi tiết lớp khách hàng
+STTTên thuộc tính    LoạiRàng buộc    Ý nghĩa/ghi chú1. MaKH IntKhóa chínhMã khách hàng2. TenKH Nvarchar(50)Not nullTên khách hàng3. SDT IntNot nullSố điện thoại khách hàng4. GioiTinh Nvarchar(3)Not nullGiới tính khách hàng5. NgaySinh DateNot nullNgày sinh khách hàng6. DiaChi Nvarchar(100)Not nullĐịa chỉ khách hàng7. Gmail Nvarchar(100)Not nullGmail khách hàng8. TaiKhoan Nvarchar(50)Khóa ngoạiTài khoản khách hàng9. MaThanhPho IntKhóa ngoạiKhóa chính trong bảng thành phố10. MaHuyen IntKhóa ngoạiKhóa chính trong bảng huyện    
+• Lớp Thành phố
+    Bảng 3. 15 - Mô tả chi tiết lớp thành phố
+STTTên thuộc tính    LoạiRàng buộc    Ý nghĩa/ghi chú1. MaThanhPho IntKhóa chínhMã thành phố2. TenThanhPho Nvarchar(100)Not nullTên thành phố    
+    
+• Lớp Huyện
+    
+    Bảng 3. 16 - Mô tả chi tiết lớp huyện
+STTTên thuộc tính    LoạiRàng buộc    Ý nghĩa/ghi chú1. MaHuyen IntKhóa chínhMã huyện2. TenHuyen Nvarchar(100)Not nullTên huyện    
+3.5 Biểu đồ diagram
+    
+    Hình 3. 14- Biểu đồ diagram
+    
+3.6 Biểu đồ tuần tự
+3.6.1 Biểu đồ tuần tự Thêm loại sản phẩm
+
+    Hình 3. 15 - Biểu đồ tuần tự Thêm mới loại sản phẩm
+3.6.2 Biểu đồ tuần tự Sửa loại sản phẩm
+    Hình 3. 16 - Biểu đồ tuần tự Sửa loại sản phẩm
+
+3.6.3 Biểu đồ tuần tự xóa loại sản phẩm
+    Hình 3. 17 - Biểu đồ tuần tự Xóa loại sản phẩm
+3.6.4 Biểu đồ tuần tự tìm kiếm loại sản phẩm
+    Hình 3. 18  - Biểu đồ tuần tự Tìm kiếm loại sản phẩm
+
+3.6.5 Biểu đồ tuần tự Thêm nhà cung cấp
+
+    Hình 3. 19 - Biểu đồ tuần tự Thêm nhà cung cấp
+3.6.6 Biểu đồ tuần tự Sửa thông tin nhà cung cấp
+
+    Hình 3. 20 - Biểu đồ tuần tự Sửa thông tin nhà cung cấp
+3.6.7 Biểu đồ tuần tự Xóa nhà cung cấp
+
+    Hình 3. 21 - Biểu đồ tuần tự Xóa nhà cung cấp
+3.6.8 Biểu đồ tuần tự tìm kiếm nhà cung cấp
+
+    Hình 3. 22 - Biểu đồ tuần tự tìm kiếm nhà cung cấp
+    
+3.6.9 Biểu đồ tuần tự Thêm mới sản phẩm
+
+    Hình 3. 23 - Biểu đồ tuần tự Thêm sản phẩm
+3.6.10 Biểu đồ tuần tự Sửa sản phẩm
+
+    Hình 3. 24 - Biểu đồ tuần tự Sửa sản phẩm
+3.6.11 Biểu đồ tuần tự Xóa sản phẩm
+
+    Hình 3. 25 - Biểu đồ tuần tự Xóa sản phẩm
+3.6.12 Biểu đồ tuần tự tìm kiếm sản phẩm
+
+    Hình 3. 26 - Biểu đồ tuần tự tìm kiếm sản phẩm
+3.6.13 Biểu đồ tuần tự xuất file excel sản phẩm
+
+    Hình 3. 27 - Biểu đồ tuần tự xuất file excel sản phẩm
+3.6.14 Biểu đồ tuần tự nhập file excel sản phẩm
+
+    Hình 3. 28 - Biểu đồ tuần tự nhập file excel sản phẩm
+    
+3.6.15 Biểu đồ tuần tự Thêm mới khách hàng
+     Hình 3. 29 - Biểu đồ tuần tự Thêm khách hàng
+3.6.16 Biểu đồ tuần tự Sửa thông tin khách hàng
+
+    Hình 3. 30 - Biểu đồ tuần tự Sửa thông tin khách hàng
+3.6.17 Biểu đồ tuần tự xóa khách hàng
+
+    Hình 3. 31 - Biểu đồ tuần tự xóa khách hàng
+3.6.18 Biểu đồ tuần tự tìm kiếm khách hàng
+
+    Hình 3. 32 - Biểu đồ tuần tự tìm kiếm khách hàng
+    
+3.6.19 Biểu đồ tuần tự thêm đơn hàng
+
+    Hình 3. 33 - Biểu đồ tuần tự thêm đơn hàng
+3.6.20 Biểu đồ tuần tự sửa đơn hàng
+
+    Hình 3. 34 - Biểu đồ tuần tự sửa đơn hàng
+    
+    
+3.6.21 Biểu đồ tuần tự xóa đơn hàng
+
+    Hình 3. 35 - Biểu đồ tuần tự xóa đơn hàng
+    
+3.6.22 Biểu đồ tuần xác nhận đơn hàng
+
+    Hình 3. 36 - Biểu đồ tuần tự xác nhận đơn hàng
+3.6.23 Biểu đồ tuần tự tìm kiếm đơn hàng
+
+    Hình 3. 37 - Biểu đồ tuần tự tìm kiếm
+    
+3.6.24 Biểu đồ tuần tự thêm đơn nhập
+
+    Hình 3. 38 - Biểu đồ tuần tự thêm đơn nhập
+3.6.25 Biểu đồ tuần tự sửa đơn nhập
+
+    Hình 3. 39 - Biểu đồ tuần tự sửa đơn nhập
+    
+3.6.26 Biểu đồ tuần tự xác nhận đơn nhập
+
+    Hình 3. 40 - Biểu đồ tuần tự xác nhận đơn nhập
+3.6.27 Biểu đồ tuần tự tìm kiếm đơn nhập
+
+    Hình 3. 41 - Biểu đồ tuần tự tìm kiếm đơn nhập
+    
+3.6.28 Biểu đồ tuần tự xuất file excel đơn nhập
+
+    Hình 3. 42 - Biểu đồ tuần tự xuất file excel đơn nhập
+    
+3.6.29 Biểu đồ tuần tự thêm nhân viên
+
+    Hình 3. 43 - Biểu đồ tuần tự thêm nhân viên
+    
+    
+3.6.30 Biểu đồ tuần tự sửa nhân viên
+
+    Hình 3. 44 - Biểu đồ tuần tự sửa nhân viên
+    
+3.6.31 Biểu đồ tuần tự xóa nhân viên
+
+    Hình 3. 45 - Biểu đồ tuần tự xóa nhân viên
+    
+3.6.32 Biểu đồ tuần tự xem thống kê
+
+    Hình 3. 46 - Biểu đồ tuần tự xem thống kê
+    
+    
+    
+3.7 Các module của hệ thống
+3.7.1 Module Quản lý sản phẩm
+• Phương thức Thêm thông tin sản phẩm
+• Phương thức Sửa thông tin sản phẩm
+• Phương thức Xóa thông tin sản phẩm
+• Phương thức Hiển thị sản phẩm
+3.7.2 Module Quản lý loại sản phẩm
+• Phương thức Thêm loại sản phẩm
+• Phương thức Sửa loại sản phẩm
+• Phương thức Xóa loại sản phẩm
+• Phương thức Hiển thị loại sản phẩm
+3.7.3 Module Tìm kiếm 
+• Phương thức tìm kiếm theo tên sản phẩm
+• Phương thức tìm kiếm theo tên loại sản phẩm
+3.7.4 Module Quản lý khách hàng
+• Phương thức Thêm thông tin khách hàng
+• Phương thức Sửa thông tin khách hàng
+• Phương thức Xóa thông tin khách hàng
+• Phương thức Hiển thị thông tin khách hàng
+3.7.5 Module Quản lý nhà cung cấp
+• Phương thức Thêm thông tin nhà cung cấp
+• Phương thức Sửa thông tin nhà cung cấp
+• Phương thức Xóa thông tin nhà cung cấp
+• Phương thức Hiển thị thông tin nhà cung cấp
+3.7.6 Module Bán hàng
+• Phương thức Hiển thị thông tin sản phẩm
+• Phương thức Chọn sản phẩm
+• Phương thức đặt hàng
+• Phương thức Thanh toán
+3.7.7 Module Quản lý đơn bán
+• Phương thức Hiển thị thông tin đơn bán
+• Phương thức thêm đơn bán
+• Phương thức sửa đơn bán
+• Phương thức xóa đơn bán
+3.7.8 Module Quản lý đơn nhập
+• Phương thức Hiển thị thông tin đơn nhập
+• Phương thức thêm đơn nhập
+• Phương thức sửa đơn nhập
+• Phương thức xóa đơn nhập
+3.7.9 Module Thống kê, báo cáo
+• Phương thức báo cáo tổng hợp doanh thu cuối ngày
+• Phương thức báo cáo doanh thu tổng hợp theo ngày
+• Phương thức báo cáo doanh thu chi tiết theo ngày
+• Phương thức báo cáo doanh thu chi tiết theo quý năm
+• Phương thức báo cáo chi tiết hóa đơn theo ngày
+• Phương thức bán hàng tổng hợp theo ngày
+• Phương thức báo cáo chi tiết hóa đơn theo ngày
+• Phương thức bán hàng chi tiết theo ngày
+3.8 Thiết kế đặc tả giao diện
+3.8.1 Một số giao diện chính của hệ thống
+• Trang danh mục sản phẩm
+          • Mô tả: Trang danh mục sản phẩm hiển thị thông tin sản phẩm bao gồm: Hình ảnh, nhà cung cấp,tên loại…
+    
+    Hình 3. 47 - Giao diện danh mục sản phẩm
+• Model thêm sản phẩm
+• Mô tả: Model thêm sản phẩm thêm thông tin một sản phẩm bao gồm: Hình ảnh, nhà cung cấp,tên loại…
+
+    Hình 3. 48 - Giao diện model thêm sản phẩm
+• Trang danh mục đơn hàng bán
+• Mô tả: Danh mục đơn hàng bán hiển thị các thông tin đơn hàng như:Tên khách hàng,ngày đặt,trạng thái thanh toán….
+
+    Hình 3. 49 - Giao diện danh mục đơn hàng bán
+
+• Giao diện trang chủ website
+• Mô tả: Hiển thị tất cả sản phẩm đang bán
+
+    Hình 3. 50 - Giao diện trang chủ website bán giầy
+    
+• Giao diện model hiển thị chi tiết sản phẩm
+• Mô tả: Hiển thị toàn bộ thông tin chi tiết của từng sản phẩm.
+
+    Hình 3. 51- Giao diện hiển thị thông tin chi tiết sản phẩm
+
+• Giao diện thanh toán
+• Mô tả: Giao diện thanh toán của khách hàng
+
+    Hình 3. 52 - Giao diện thanh toán
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+- Tìm hiểu, sử dụng các công cụ thiết kế web, công cụ lập trình visual studio.
+- Hoàn thành một số chức như:
+o Trang Quản trị:
+• Quản lý loại sản phẩm
+• Quản lý nhà cung cấp
+• Quản lý sản phẩm
+• Quản lý đơn hàng
+• Quản lý nhập hàng
+• Quản lý khách hàng
+• Thống kê
+o Trang khách hàng , giao diện website bán hàng:
+• Trang chủ,trang chi tiết sản phẩm
+• Trang quản lý thông tin khách hàng
+• Đặt hàng,trang quản lý giỏ hàng
+• Thanh toán và xem thông tin đơn hàng
+- Xây dựng website giúp cho chủ cửa hàng bán lẻ có thể quản lý việc kinh doanh một cách thuận tiện và chính xác, hơn nữa giúp tiết kiệm thời gian công sức.
+4.2 : Thăm dò ý kiến Hạn chế của đề tài
+    Website giầy bao gồm chức năng cơ bản của hệ thống bản lẻ, chưa có nhiều chức năng tiện ích cho người dùng như khách hàng
+    Giao diện hệ thống còn đơn giản
+4.3 Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, em đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+- Xây dựng thêm các Control làm phong phú trên việc tùy biến giao diện của Website.
+- Bổ sung các Module hỗ trợ cho các Website. 
+- Hoàn thiện đề tài trên nền tảng mobile.
+TÀI LIỆU THAM KHẢO
+[1]Phạm Hữu Khang, Lập trình ASP.NET 2.0. Hà Nội, Việt Nam: Nhà xuất bản Lao Động Xã Hội, 2005.[2]Nguyễn Văn Quyết, Giáo trình Công nghệ Web và ứng dụng.Khoa Công nghệ Thông tin - UTEHY, 2010.[3]Giáo trình ASP Net MVC: Khoa Công nghệ Thông tin - UTEHY.[4]WebSite https://support.microsoft.com/vi-vn.[5]Website https://angularjs.org.[6]Website https://stackoverflow.com[7]Website https://www.w3schools.com/
+    13
+
+    

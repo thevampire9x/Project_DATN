@@ -1,0 +1,313 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Ngày nay, ngành công nghiệp game đang ngày càng phát triển cao hơn với với những “gã khổng lồ” như EA, Blizzard,… và mỗi sản phẩn giống như một tác phẩm nghệ thuật của bộ môn nghệ thuật thứ tám của thế giới, đem đến cho người chơi những trải nghiệm, những suy ngẫm, những bài học sâu sắc không thua kém gì những tác phẩm văn học, những bộ phim,….
+    Bác Hồ từng nói: “Dân ta phải biết sử ta” và lịch sử dân tộc ta thật sự là những bản hùng ca hùng tráng thấm đẫm xương máu ông cha mà mỗi khi nhắc đến đều làm cho mỗi người con yêu nước không khỏi dưng dưng. Tuy nhiên, ý thức học và tìm hiểu lịch sử nước nhà của một bộ phận lớn giới trẻ hiện nay còn vô cùng hạn chế, thậm chí có những bạn trẻ còn am hiểu lịch sử nước ngoài hơn cả lịch sử nước ta.
+    Với giới trẻ Việt Nam hiện nay, game đang cực kỳ phổ biến với số lượng người chơi cực lớn và đa phần là giới trẻ, ví dụ điểm hình như game eSport số một thế giới hiện tại là League of Legend thì cộng động Việt Nam là cộng đồng lớn thứ hai thế giới chỉ sau đất nước tỷ dân là Trung Quốc.
+
+    Hình 1.1: Hình ảnh game League of Legends
+    Vậy thực tế đặt ra là tại sao không kết hợp game và lịch sử, sử dụng công cụ truyền tải đang được ưa chuộng vô cùng lớn đó để truyền đạt những thú vị, những ý nghĩa, những niềm tự hào dân của lịch sử dân tộc ta, từ đó hình thành ý tưởng xây dựng Đại Chiến Sông Bạch Đằng.
+1.2 Mục tiêu của đề tài
+    Nghiên cứu, học hỏi, xây dựng một tựa game mô tả lại càng nhiều càng tốt diễn biến của trận đại chiến trên sông Bạch Đằng năm 1288 trong cuộc chiến chống lại xâm lược của nhà Nguyên lần 3 cùng những diễn biến liên quan mật thiết đến sự kiện trên.
+    Xây dựng game với Unity 3D cùng và học hỏi cách sử dụng các công cụ hỗ trợ thiết kế và xây dựng game như MagicaVoxel, Blender, Photoshop.
+1.3 Giới hạn và phạm vi của đề tài
+    Game sẽ chỉ sử dụng đồ họa theo phong cách pixel 3D, hiệu ứng đơn giản để giảm yêu cầu về phần cứng giúp phần tăng độ phổ biến cho game.
+    Game sẽ không miêu tả chi tiết từng diễn biến nhỏ của cuộc chiến trên sông Bạch Đằng năm 1288 mà sẽ tập chung vào những chi tiết chính như nguyên nhân dẫn đến trận bạch đằng hay quân ta đã dẫn dụ quân Nguyên vào bẫy như thế nào.
+    Game sẽ sử dụng Unity 3D, MagicaVoxel, Blender, Photoshop để thực hiện thiết kế và xây dựng game.
+1.4 Nội dung thực hiện
+    Thực hiện game thể hiện diễn biến của trận chiến trên sông Bạch Đằng năm 1288 trong cuộc chiến chống xâm lược Nguyên lần thứ 3 cùng với những sự kiện quan trọng dẫn đến trận chiến trên .
+    	Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Nghiên cứu các sự kiện lịch sử trong cuộc chiến chống xâm lược Nguyên lần 3 nói chung và đại chiến sông Bạch Đằng nói riêng.
+- Cân nhắc, đưa các nội dung vào Cutsence hoặc gameplay cho hợp lý.
+- Thiết kế các model.
+- Xây dựng, tìm các hiệu ứng âm thanh phù hợp.
+- Thiết kế môi trường, địa hình trong game.
+- Lập trình các tương tác, sự kiện trong game.
+- Ghép các sence 
+- Tạo GUI
+- Hoàn thiện game
+1.5 Phương pháp tiếp cận
+- Cách tiếp cận : Nghiên cứu tài liệu về đại chiến sông bạch đằng năm 1288, tìm hiểu cách xây dựng, triển khai một game lịch sử.
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu;
+o Phương pháp phân tích mẫu các game với chủ đề tương tự;
+o Phương pháp thực nghiệm.
+1.6 Công nghệ sử dụng
+- Unity 3D
+- Visual Studio
+- Blender
+- MagicaVoxel
+- Photoshop
+
+CHƯƠNG 2:  CƠ SỞ LÝ THUYẾT
+2.1. Tổng quan về Unity
+2.1.1. Unity là gì?
+    Unity là một phần mềm làm game đa nền tảng được phát triển bởi Unity Technologies, mà chủ yếu để phát triển video game cho máy tính, consoles và điện thoại. Lần đầu tiên nó được công bố chạy trên hệ điều hành OS X, tại Apple's Worldwide Developers Conference vào năm 2005, đến nay đã mở rộng 27 nền tảng.
+    6 phiên bản chính của phần mềm này đã được phát hành. Tại triển lãm WWDC năm 2006, Apple đã trao thưởng giải Best Use of Mac OS X Graphics cho ứng dụng này.
+    Unity hỗ trợ đồ họa 2D và 3D, các chức năng được viết chủ yếu qua ngôn ngữ C#. Hai ngôn ngữ lập trình khác cũng được hỗ trợ: Boo, đã bị loại cùng với việc phát triển Unity 5 và UnityScript bị loại vào tháng 8 năm 2017 sau khi phát hành Unity 2017.1. UnityScript là một ngôn ngữ lập trình độc quyền có cú pháp tương tự JavaScript. Phần mềm nhắm mục tiêu các đồ họa APIs sau: Direct3D trên Windows và Xbox One; OpenGL trên Linux, macOS, và Windows; OpenGL ES trên Android và iOS; WebGL trên web; và APIs độc quyền trên các máy chơi video game. Ngoài ra, Unity hỗ trợ APIs cấp thấp như Metal trên iOS và macOS và Vulkan trên Android, Linux, và Windows, cũng như Direct3D 12 trên Windows và Xbox One. Trong 2D games, Unity cho phép nhập sprites và một renderer thế giới 2D tiên tiến. Đối với 3D games, Unity cho phép thiết lập các đập điểm kĩ thuật của các kết cấu và độ phân giải mà công cụ trò chơi hỗ trợ, cung cấp các hỗ trợ cho bump mapping, reflection mapping, parallax mapping, cảnh không gian ambient occlusion (SSAO), hiệu ứng bóng đổ bằng cách sử dụng shadow maps, render thiết lập toàn cảnh đến hiệu ứng. Unity cũng cung cấp các dịch vụ cho nhà phát triển, bao gồm: Unity Ads, Unity Analytics, Unity Certification, Unity Cloud Build, Unity Everyplay, Unity API, Unity Multiplayer, Unity Performance Reporting and Unity Collaborate.
+    Unity nổi bật với khả năng xây dựng trò chơi chạy trên nhiều nền tảng. Các nền tảng được hỗ trợ hiện nay là Android, Android TV, Facebook Gameroom, Fire OS, Gear VR, Google Cardboard, Google Daydream, HTC Vive, iOS, Linux, macOS, Microsoft HoloLens, Nintendo 3DS family, Nintendo Switch, Oculus Rift, PlayStation 4, PlayStation Vita, PlayStation VR, Samsung Smart TV, Tizen, tvOS, WebGL, Wii U, Windows, Windows Phone, Windows Store, và Xbox One. Unity trước đây cũng đã hỗ trợ 7 nền tảng khác chạy trên Unity Web Player. Unity Web Player là một plugin của trình duyệt chạy trên Windows và OS X, đã bị gỡ bỏ vì lợi ích của WebGL.
+    Unity là bộ công cụ phát triển phần mềm mặc định (SDK) cho máy chơi game video game Wii U của Nintendo, kèm theo bản miễn phí của Nintendo với mỗi giấy phép phát triển Wii U. Unity Technologies gọi việc kết hợp sản xuất SDK với một bên thứ ba là "industry first" [1]. 
+2.1.2. Tại sao sử dụng Unity
+    Một hệ sinh thái game cần phải có các chức năng cơ bản như: cung cấp công cụ dựng hình (kết xuất đồ họa) cho các hình ảnh 2D hoặc 3D, công cụ vật lý (tính toán và phát hiện va chạm), âm thanh, mã nguồn, hình ảnh động, trí tuệ nhân tạo, phân luồng, tạo dò nguồn dữ liệu xử lý, quản lý bộ nhớ, dựng ảnh đồ thị và kết nối mạng. Unity là engine đáp ứng đầy đủ các yêu cầu đó.
+
+    Hình 2.1: Giao diện tổng Unity
+    Ngoài những chức năng cơ bản của một hệ sinh thái đó, Unity còn có những ưu việt vượt trội so với các engine khác:
+Sử dụng ngôn ngữ lập trình phổ biến tại Việt Nam là C#.
+    Hỗ trợ đa nền tảng: Lập trình viên dùng Unity3D Engine và ngôn ngữ C# hoặc script để phát triển game hoàn thiện, sau đó Unity cho phép bạn “build” ra các phiên bản cho các nền tảng khác mà không cần viết thêm dòng code nào, giúp bạn rút ngắn rất nhiều thời gian xây dựng game cũng như nâng cao mức độ an toàn khi lập trình game. Những nền tảng mà Unity đang hỗ trợ gồm PlayStation 3, Xbox 360, Wii U, iOS, Android, Windows, Blackberry 10, OS X, Linux, trình duyệt web.
+    Dễ sử dụng, ngay cả với Lập trình viên nghiệp dư, do Unity3D được xây dựng trong một môi trường phát triển tích hợp, cung cấp một hệ thống toàn diện cho các lập trình viên, từ soạn thảo mã nguồn, xây dựng công cụ tự động hóa đến trình sửa lỗi.
+    Tính kinh tế cao: Những cá nhân và doanh nghiệp có doanh thu dưới 100.000 USD/năm được dùng miễn phí Unity3D, và Unity Technology chỉ thu phí 1.500 USD/năm cho bản Pro- một con số rất khiêm tốn so với những gì engine này mang lại.
+    Rất được ưa chuộng tại Việt Nam, ngay cả trong các game studio lớn như VTC, VNG, Glass-Egg.
+    Thư viện phong phú, đa dạng: Unity có nhiều thư viện, các công cụ hỗ trợ làm game nhanh hơn, thông minh hơn, các đối tượng được tạo sẵn, và tất cả các thư viện này đều “mở”, cho phép cộng đồng tự do sử dụng và sáng tạo nên các sản phẩm của chính mình, thậm chí có thể bán trên Asset Store của Unity.
+    Cộng đồng rất lớn mạnh: là engine phổ biến nhất trên thế giới, Unity có cộng đồng sử dụng rất lớn mạnh. Mọi thắc mắc của bạn về Unity đều sẽ được trả lời trên website cộng đồng http://answers.unity3d.com.
+    Hỗ trợ Networking để phát triển MMO game
+2.2. Tổng quan về Blender
+2.2.1. Blender là gì?
+    Blender là một phần mềm đồ họa 3D miễn phí và nguồn mở, được sử dụng để làm phim hoạt hình, kỹ xảo, ảnh nghệ thuật, mẫu in 3D, phần mềm tương tác 3D và Video game. Các tính năng của Blender bao gồm tạo mẫu 3D, UV unwrapping, áp vân bề mặt, mô phỏng khói, chất lỏng, hạt và chuyển động cơ thể, điêu khắc, hoạt họa, phối hợp chuyển động, camera tracking, rendering và chỉnh sửa video.
+    Blender tương thích với một số hệ điều hành như Linux, Mac OS X, và Microsoft Windows [2]. 
+2.2.2. Tại sao sử dụng Blender?
+    Blender hoàn toàn miễn phí: Bạn sẽ dễ dàng nhận ra rằng Blender là phần mềm hoàn toàn miễn phí. Tất nhiên ở Việt Nam hiện nay rất “chuộng” crack mọi phần mềm nên dần dần chúng ta luôn đi tìm thứ gì đó miễn phí đúng không nào? Với Blender thì bạn không tốn công crack, dễ dàng download và cài đặt. Những phần mềm thiết kế 3D khác có thể kể đến như Maya hay 3DS Max bạn không chỉ tốn tiền bản quyền phần mềm mà bạn còn phải đăng ký tài khoản trước đó nữa. Tất nhiên cũng có những phiên bản miễn dành cho sinh viên nhưng hết sinh viên rồi chúng ta sẽ làm sao? Một quan niệm sai lầm rất phổ biến là nếu cái gì miễn phí thì đều không tốt. Mặc dù, nó có thể đúng với một số thứ. Tuy nhiên, bạn có thể yên tâm điều này thật sự không đúng đối với trường hợp của Blender.
+    Blender có mã nguồn mở: Đầu tiên chúng ta cần quan tâm đến khái niệm: Freeware và Open-source. Những phần mềm, ứng dụng miễn phí mà chúng ta hay xài (không tính đến việc crack) thường sẽ có thời hạn sử dụng hoặc giới hạn chức năng nhất định. Đó gọi là Freeware. Open-source là dạng phần mềm mở mã nguồn tức là công khai các mã nguồn lập trình bên trong nó. Dạng này là miễn phí tận cùng vì tất cả mọi người đều có thể lấy mã nguồn đó nghiên cứu, thay đổi và cải tiến phần mềm, và phân phối phần mềm ở dạng chưa thay đổi hoặc đã thay đổi. Hiện nay phần mềm mã nguồn mở được phát triển rộng rãi và thay thế hầu hết các phần mềm thương mại với tính năng tương đương, thậm chí tốt hơn, có thể kể đến như WordPress, Opencart… Việc phần mềm Blender miễn phí và có mã nguồn mở dẫn đến việc hình thành cộng động người sử dụng trở nên đông đảo hơn, các tài nguyên, tài liệu cũng được chia sẻ chi tiết.
+    Blender có đầy đủ tính năng của các phần mềm 3D khác: Blender có mọi thứ các phần mềm thương mại khác có như viewport realtime, hỗ trợ path tracing, sử dụng vật liệu dạng node base, công cụ tạc tượng, vẽ texture 3D, smoke/fire/fluid simulation, hỗ trợ python scripting, công cụ retopology và camera matching, dựng phim, hậu kỳ, animation curve, dope sheet. Có thể Blender không bằng Maya trong việc diễn hoạt Animation, hay cũng không bằng 3Ds Max trong việc làm kiến trúc nhưng Blender có nhiều hơn những thứ kể trên. Đặc biệt với phiên bản 2.8 (ra đời năm 2018) có hỗ trợ real time EEVEE, nó hoạt động như một phần mềm chỉnh sửa clip.
+    Dễ dàng chuyển đổi sang các phần mềm 3D khác: Chính bởi việc học 3D với Blender có thể giúp bạn tinh thông hầu hết các công cụ, tính năng, ứng dụng mà các phần mềm 3D khác đều có, cho nên sau này khi bạn muốn chuyển đổi sang một phần mềm khác cũng không quá tốn nhiều thời gian để làm quen và tìm hiểu. Giao diện có thể khác nhưng quan trọng là việc bạn tư duy sử dụng công cụ như thế nào mới quan trọng. Ông bà ta có câu “Nhất nghệ tinh, nhất thân vinh”, bạn chỉ cần giỏi 1 phần mềm là cũng đã đạt được nhiều thành công trong công việc rồi. Chưa kể là học 3D với Blender là một sự khởi đầu dễ thở nhất dành cho những ai mới bước chân vào bộ môn này. Từ đó tiếp tục niềm đam mê và phát triển xa hơn [3]. 
+2.3. Tổng quan về MagicaVoxel
+2.3.1. MagicaVoxel là gì?
+    MagicaVoxel là một ứng dụng thú vị cho phép bạn tạo hình ảnh 3D dựa trên các khối theo phong cách của 3D pixel. Có thể cài đặt trên cả Windows và macOS
+    
+    
+2.3.2. Tại sao nên dùng MagicaVoxel
+   MagicaVoxel là một ứng dụng thú vị cho phép bạn tạo hình ảnh 3D dựa trên các khối theo phong cách của 3D pixel. Nó là một phần mềm cực nhẹ, dễ sử dụng, hoàn toàn miễn phí, nó có tích hợp với Unity.
+2.4. Shader trong Unity
+2.4.1. Shader trong Unity là gì?
+    Shader là các đoạn script nhỏ có chứa những cái tính toán về toán học, thuật toán để tính toán màu sắc cho từng pixel rendered, dựa trên ánh sáng và những tùy chỉnh Material.
+   Unity có hỗ trợ 3 loại Shader. Nhưng chỉ có 2 loại thường được sử dụng đó là Suface Shader và Fragment and Vertex Shaders, loại còn lại là Fixed Function Shader, nhưng loại này giờ hầu như không còn được sử dụng nữa bởi vì nó đã quá lỗi thời so với các loại Shader đang sử dụng hiện giờ [4]. 
+2.4.2. Phân loại Shader trong Unity
+   Trong những ngày đầu khi mà phần cứng đồ họa chưa phát triển mạnh như bây giờ thì Shader chỉ có một loại đó là Fixed Function shader với rất nhiều hạn chế khi nó được thiết lập sẵn trên các card đồ họa. Hiện nay, phần cứng đồ họa đã trở nên mạnh mẽ rất nhiều, nhiều bộ nhớ hơn, khả năng tính toán mạnh hơn cùng với đó thì các lập trình viên cũng được tiếp cận với nhiều loại Shader hơn và người ta gọi chung các loại Shader mới này là Programmable Shader còn Fixed Function shader là loại Non-Programmable Shader. Dựa trên tính năng và mục đích của shader mà chúng được phân loại như sau: Vertex shader, Pixel shader, Geometry shader, Compute shader, Tessellation shader.
+2.5. Tổng quan về Visual Studio
+2.5.1.	Visual Studio là gì?
+   Microsoft Visual Studio là một môi trường phát triển tích hợp (IDE) từ Microsoft. Nó được sử dụng để phát triển chương trình máy tính cho Microsoft Windows, cũng như các trang web, các ứng dụng web và các dịch vụ web. Visual Studio sử dụng nền tảng phát triển phần mềm của Microsoft như Windows API, Windows Forms, Windows Presentation Foundation, Windows Store và Microsoft Silverlight. Nó có thể sản xuất cả hai ngôn ngữ máy và mã số quản lý.
+   Visual Studio bao gồm một trình soạn thảo mã hỗ trợ IntelliSense cũng như cải tiến mã nguồn. Trình gỡ lỗi tích hợp hoạt động cả về trình gỡ lỗi mức độ mã nguồn và gỡ lỗi mức độ máy. Công cụ tích hợp khác bao gồm một mẫu thiết kế các hình thức xây dựng giao diện ứng dụng, thiết kế web, thiết kế lớp và thiết kế giản đồ cơ sở dữ liệu. Nó chấp nhận các plug-in nâng cao các chức năng ở hầu hết các cấp bao gồm thêm hỗ trợ cho các hệ thống quản lý phiên bản (như Subversion) và bổ sung thêm bộ công cụ mới như biên tập và thiết kế trực quan cho các miền ngôn ngữ cụ thể hoặc bộ công cụ dành cho các khía cạnh khác trong quy trình phát triển phần mềm.
+   Visual Studio hỗ trợ nhiều ngôn ngữ lập trình khác nhau và cho phép trình biên tập mã và gỡ lỗi để hỗ trợ (mức độ khác nhau) hầu như mọi ngôn ngữ lập trình. Các ngôn ngữ tích hợp gồm có C, C++ và C++/CLI (thông qua Visual C++), VB.NET (thông qua Visual Basic.NET), C# (thông qua Visual C#) và F# (như của Visual Studio 2010). Hỗ trợ cho các ngôn ngữ khác như J++/J#, Python và Ruby thông qua dịch vụ cài đặt riêng rẽ. Nó cũng hỗ trợ XML/XSLT, HTML/XHTML, JavaScript và CSS.
+   Microsoft cung cấp phiên bản "Express" (đối với phiên bản Visual Studio 2013 trở về trước) và "Community" (đối với bản Visual Studio 2015 trở về sau) là phiên bản miễn phí của Visual Studio [5]. 
+2.5.2	Cấu trúc của Visual Studio
+   Các Visual Studio không hỗ trợ cho bất kỳ ngôn ngữ lập trình nào về giải pháp hoặc công cụ thực chất, thay vào đó nó cho phép cắm chức năng được mã hóa như là một VSPackage. Khi cài đặt, các chức năng có sẵn như là một dịch vụ. IDE cung cấp ba dịch vụ: SVsSolution cung cấp khả năng liệt kê các dự án và các giải pháp; SVsUIShell cung cấp cửa sổ và giao diện người dùng và SVsShell. Ngoài ra, IDE cũng có trách nhiệm điều phối và cho phép truyền thông giữa các dịch vụ. Tất cả các biên tập viên, nhà thiết kế, các loại dự án và các công cụ khác được thực hiện theo VSPackages. Visual Studio sử dụng COM để truy cập VSPackages. Visual Studio SDK cũng bao gồm Managed Package Framework (MPF) là một tập hợp quản lý bao bọc quanh các COM-interfaces cho phép các gói được viết bằng bất kỳ ngôn ngữ nào. Tuy nhiên, MPF không cung cấp tất cả các chức năng bộc lộ trong Visual Studio COM-interfaces.[9] Các dịch vụ có thể được tiêu thụ để tạo ra các gói khác, để thêm chức năng cho Visual Studio IDE.
+   Hỗ trợ cho các ngôn ngữ lập trình được thêm vào bằng cách sử dụng một VSPackage đặc biệt được gọi là một dịch vụ ngôn ngữ. Một dịch vụ ngôn ngữ định nghĩa giao tiếp khác nhau mà việc thực hiện VSPackage có thể thực hiện để hỗ trợ thêm cho các chức năng khác nhau. Các chức năng có thể được thêm vào theo cách này bao gồm cú pháp màu, hoàn thành báo cáo kết quả, kết hợp đôi, công cụ chú giải tham số thông tin, danh sách thành viên và đánh dấu lỗi trên nền biên dịch. Nếu giao diện được thực hiện, các tính năng sẽ có sẵn ngôn ngữ. Dịch vụ ngôn ngữ sẽ được thực hiện trên cơ sở mỗi ngôn ngữ. Việc triển khai có thể tái sử dụng mã từ phân tích cú pháp hoặc trình biên dịch cho ngôn ngữ. Dịch vụ ngôn ngữ có thể được triển khai hoặc trong mã nguồn gốc hoặc mã số quản lý. Đối với mã nguồn gốc, thì cả COM-interfaces gốc hoặc Babel Framework (một phần của Visual Studio SDK) đều có thể được sử dụng. Đối với mã số quản lý thì các MPF sẽ bao hàm các dịch vu quản lý văn bản. 
+   Visual Studio không bao gồm bất kỳ Hệ thống quản lý phiên bản hỗ trợ kiểm soát mã nguồn nhưng nó xác định hai cách thay thế cho các hệ thống kiểm soát mã nguồn để tích hợp với IDE. Một VSPackage kiểm soát mã nguồn có thể cung cấp giao diện người dùng tùy chỉnh của riêng mình. Ngược lại, một plugin kiểm soát mã nguồn bằng cách sử dụng MSSCCI (Microsoft Source Code Control Interface) cung cấp một tập các chức năng được sử dụng để thực hiện chức năng kiểm soát mã nguồn khác nhau, với một giao diện người dùng Visual Studio tiêu chuẩn. MSSCCI lần đầu tiên được sử dụng để tích hợp Visual SourceSafe với Visual Studio 6.0 nhưng sau đó được mở ra thông qua Visual Studio SDK. Visual Studio.NET 2002 dùng MSSCCI 1.1, và Visual Studio.NET 2003 dùng MSSCCI 1.2. Visual Studio 2005, 2008 và 2010 dùng MSSCCI 1.3. 
+   Visual Studio hỗ trợ chạy nhiều cá thể của môi trường (tất cả đều có VSPackages riêng của mình). Những trường hợp sử dụng các registry hives khác nhau để lưu trữ trạng thái cấu hình và được phân biệt bởi AppID (Application ID). Các trường hợp được đưa ra bởi một AppId-specific.exe cụ thể mà lựa chọn AppID, thiết lập các hive gốc và khởi chạy IDE. VSPackages đăng ký một AppID được tích hợp với VSPackages khác cho AppID đó. Các phiên bản sản phẩm khác nhau của Visual Studio được tạo ra bằng cách sử dụng AppIds khác nhau. Các sản phẩm phiên bản Visual Studio Express được cài đặt với AppIds riêng nhưng với các sản phẩm Standard, Professional và Team Suite chia sẻ cùng AppID. Do đó, người ta có thể cài đặt các phiên bản Express song song với các phiên bản khác, không giống như các phiên bản khác cập nhật các cài đặt tương tự. Phiên bản Professional bao gồm các VSPackages khổng lồ trong phiên bản Standard và Team. Hệ thống AppID được thừa hưởng bởi Visual Studio Shell trong Visual Studio 2008.
+2.6. Unity Cinemachine là gì?
+   Sử dụng Unity Package Manager (trong menu trên cùng: Window > Package Manager) để chọn Cinemachine để cài đặt. Nếu bạn không thấy gói, hãy tìm một menu dropdown phía trên danh sách và chọn All packages.
+   Cinemachine là miễn phí và có sẵn cho bất kỳ dự án nào. Nếu bạn đã cài đặt nó, bạn có thể cập nhật lên phiên bản mới nhất.
+   Cinemachine tăng tốc độ phát triển trò chơi. Nó giải phóng nhóm của bạn khỏi sự phát triển camera-logic expensive và cho phép bạn lặp lại và thử nghiệm các ý tưởng mới một cách nhanh chóng trong khi lưu các cài đặt trong chế độ chơi. Từ game bắn súng góc nhìn thứ nhất để theo dõi cam, từ 2D đến 3D, từ chơi thời gian thực đến cắt cảnh, các mô-đun máy ảnh Cinemachine đã được hoàn thiện trong nhiều năm.
+   Cinemachine là virtual DP, biết nơi nhắm và tập trung. Thử nghiệm với dollies, tracking, shake và post-FX trong thời gian thực. Đó là phương pháp, vì vậy thay đổi hoạt động. Thay đổi hình ảnh động sau khi bố cục không có vấn đề gì - Cinemachine biết bạn muốn ảnh của mình như thế nào và điều chỉnh linh hoạt, ngay cả khi hiệu suất thay đổi. Cinemachine đã giành giải Emmy vì cách mạng hóa lĩnh vực điện ảnh.
+   Cinemachine cung cấp rất nhiều tính năng mạnh mẽ. Nhắm mục tiêu, chuyển vị, nhóm, tiếng ồn, tích hợp hậu xử lý, chia màn hình, mixing, blending… [6].
+2.7. Particle System trong Unity
+2.7.1. Particle System trong Unity là gì?
+   Particle system là một hệ thống các hạt dùng để tạo ra các hiệu ứng trong game như mưa, tuyết rơi, khói, lửa, hiệu ứng phép…, giúp làm cho game trở nên sinh động hơn, nhất là đối với game 3D.
+   Cách sử dụng của Particle System
+2.7.2. Shape
+   Hình dạng của nguồn phát ra hạt là điều chúng ta cần quan tâm đầu tiên khi làm việc với particle system. Tất nhiên trước bắt tay vào tạo ra hiệu ứng của riêng mình thì bạn đã phải có ý tưởng hoặc concept cho fx đó rồi. Hãy tính toán xem bạn sẽ dùng shape gì, nguồn phát ra hạt sẽ ảnh hưởng khá nhiều đến kết quả. Bạn không thể tạo ra một hiệu ứng tuyết rơi mà nguồn phát ra hạt của bạn lại chỉ từ một điểm phải không?
+2.7.3. Emission
+   Về cơ bản thì thằng này cho phép bạn kiểm soát tỉ lệ hạt bung ra theo thời gian hoặc theo chiều sâu. Các thông số về Burst cho phép chúng ta ép particle system sinh ra bao nhiêu hạt vào chính xác thời điểm mà chúng ta muốn
+2.7.4. Duration
+   Thông số tiếp theo là thời gian sinh ra hạt. Nó hoàn toàn khác với Start Lifetime.Ví dụ nôm na cho dễ hiểu thì Duration là khoảng thời gian mang thai của một người mẹ thì Start Lifetime là khoảng thời gian sống trên đời của đứa trẻ sau khi nó được sinh ra.
+2.7.5. Size hạt
+   Kích thước một hạt particle trong Unity được điều chỉnh dựa trên 2 thông số đó là Start Size và Size Over Lifetime. Start Size cho phép chúng ta xác định kích thước của một hạt particle trước khi nó được bung ra còn Size Over Lifetime cho phép ta điều chỉnh kích thước của hạt sau khi nó được sinh ra. Bạn có thể xem thêm video mình hướng dẫn làm hiệu ứng hạt lấp lánh để hiểu hơn về cách điều chỉnh kích thước hạt – <Dust Effect – Sử dụng Size Over Lifetime trong Particle System>
+2.7.6. Rotation
+   Tương tự như Size hạt bên trên. Rotation cho phép chúng ta điều chỉnh về góc xoay của hạt trước và sau khi hạt được sinh. Cả Rotation và Size đều có thể tùy chỉnh random để cho các hạt sinh ra được tự nhiên chứ không bị đều đều.
+2.7.7. Physic
+   Về mặt vật lý thì mình nói chung cho cả 2 tab là Velocity over Lifetime và Force over Lifetime. Hai thuộc tính này gần như tương đồng nhau, Velocity cho phép bạn kiểm soát quỹ đạo bay của từng hạt particle trong khi đó Force kiểm soát lực đẩy của từng hạt trong suốt quá trình hạt hiển thị.
+2.7.8. Color
+   Việc kiểm soát màu sắc khi làm Game effect trong Unity 3d còn phụ thuộc vào nhiều yếu tố khác ngoài particle system. Nhưng về cơ bản thì particle chi ra thành Start color và Color over Lifetime. Bảng màu của Unity cũng cho phép chúng ta kiểm soát được opacity của texture bằng kênh Alpha.
+
+2.7.9. Noise
+   Thuộc tính noise được Unity thêm vào từ bản update 2017. Thuộc tính này về cơ bản sẽ tạo ra Turbulance cho những effect nào có nhiều hạt. Ví dụ như khi tạo hiệu ứng những tàn lửa bay lên trong không khí mà thiếu Turbulance sẽ không tạo ra cảm giác chân thực. Mặc dù mình có nhiều cách để giả Turbulance nhưng yếu tố này thực sự rất quan trọng khi làm việc với particle system. Nó còn là yếu tố không thể thiếu trong các phần khác. Mình vẫn không hiểu tại sao Unity họ không update thuộc tính quan trọng này mà lại thay bằng Noise. Tuy nhiên Noise vẫn thực hiện tốt nhiệm vụ của nó. Nếu bạn làm effect game mobile bằng Unity 3D thì nên hạn chế sử dụng thuộc tính này
+2.7.10.  Collision
+   Là thuộc tính thể hiện sự va chạm của hạt với các object khác trong Scene đồng thời kiểm soát được những gì xảy ra sau sự va chạm đó. Ví dụ sau khi hạt chạm vào mặt đất thì hạt đó biến mất ngay hoặc hạt đó sinh ra một Particle System mới. Điều đó tùy thuộc vào ý đồ của bạn. Đây cũng là một thuộc tính quan trọng khi làm Game effect với Unity 3d.
+2.7.11.  Texture Sheet Animation
+   Thuộc tính dùng để kiểm soát việc hiển thị của texture. Có nhiều effect trong game phải sử dụng texture frame by frame hoặc có những effect cần phải random giữa nhiều texture khác nhau. Thuộc tính này chỉ hoạt động với 1 tấm texture là prite sheet. 
+2.7.12.  Renderer
+   Việc kiểm soát hình ảnh hiển thị ra màn hình thực sự phức tạp hơn những gì chúng ta nhìn thấy và nó không chỉ phụ thuộc vào mỗi Renderer của particle system mà còn phụ thuộc vào setup ánh sáng và camera trong Scene. Cơ bản thì bạn chỉ cần quan tâm đến Render Mode mà thôi, bao gồm : Billboard (texture luôn hướng theo góc quay của camera) Stretched Billboard (texture bị kéo dãn) Horizontal Billboard (texture nằm ngang song song với mặt đất) Vertical Billboard (texture vuông góc với mặt đất) Mesh (texture hiển thị theo bề mặt của vật thể 3d).
+2.8. Scriptable Object trong Unity
+2.8.1. Scriptable Object trong Unity là gì?
+   Scriptable object đơn giản giống như là một object trong Unity, tuyên nhiên chức năng chính của Scriptable object là để lưu dữ liệu game như audio, text, film. Một game ngoài gameplay hay và các asset siêu đẹp thì những dữ liệu như audio, text, short film cũng rất quan trọng và scriptable object sẽ là nơi chứa tất cả các thứ đó.
+2.8.2. Cách sử dụng Scriptable Object	
+   Các trường hợp sử dụng chính cho ScripableObject là:
+• Lưu trữ dữ liệu và Asset trong Editor session
+• Lưu dữ liệu dưới dạng Asset trong Project của bạn để sử dụng  trong thời gian chạy
+• Để sử dụng ScriptableObject, hãy tạo tập lệnh trong application’s thư mục Asset của bạn và làm cho nó kế thừa từ class Scriptable Object. Bạn có thể sử dụng thuộc tính CreateAssetMenu để dễ dàng tạo tài sản tùy chỉnh bằng lớp của bạn.
+2.9. Khái niệm Render Pipeline trong Unity3D
+2.9.1. Render Pipeline là  gì?
+   Một cách đơn giản, Render Pipeline là một nhóm các kỹ thuật mà Unity dùng để vẽ một hay nhiều objects lên màn hình sao cho đơn giản nhưng đẹp và tối ưu nhất có thể, các kỹ thuật có thể phân thành 3 loại chính theo thứ tự:
+• Culling: chọn object nào để đưa lên màn hình (object quá xa, object không nằm trong vùng camera, object bị che…)
+• Rendering Objects: vẽ objects lên.
+• Post Processing: xử lý hình ảnh sau khi đã vẽ các vật thể lên bộ nhớ đệm, trước khi vẽ lên màn hình.
+   Với Culling: Bởi chi phí khi render nhiều objects không hề nhỏ nên để tối ưu, khi bắt đầu Render thì Culling là quá trình đầu tiên nhằm xác định và lọc các objects nào sẽ được vẽ, quá trình này sẽ trả về một list các gameObjects và lights (ánh sáng) hợp lệ để áp dụng vào Render pipeline. trong Unity có 2 loại Culling chính:
+• Frustum Culling: tính toán chỉ render các vật thể nằm trong vùng từ Clipping Planes (Near – Far) của Unity, nằm ngoài 2 khoảng này thì sẽ bị cull (loại bỏ).
+
+
+Hình 2.2: Loại bỏ các vật thể nằm ngoài vùng Clipping Planes
+
+• Occlusion Culling: kỹ thuật cull các vật thể bị che khuất phía sau các vật thể khác.
+
+Hình 2.3: Loại bỏ các vật thể bị che khuất
+2.9.2. Rendering Objects
+    Sau quá trình Culling, chúng ta đã có list các vật thể cần vẽ lên màn hình, điều tiếp theo chúng ta cần xác định đó là mục tiêu mà chúng ta vẽ lên có cấu hình như thế nào, phần cứng của máy, hệ điều hành, 2D hay 3D… để chọn các kỹ thuật render cũng như xử lý ảnh khác nhau [7]. 
+    Một số tiêu chuẩn:
+• HDR (High Dynamic Range) hay LDR (Standard/ Low Dynamic Range)
+• Linear hay Gamma Color Space
+• MSAA hay Post-AA
+• PBR Materials vs Simple Materials
+• Có xài Lighting hay không, nếu sử dụng thì dùng kỹ thuật nào?
+• … 
+
+CHƯƠNG 3:  NỘI DUNG THỰC HIỆN
+3.1. Mô tả game Đại chiến sông Bạch Đằng
+3.1.1. Cốt truyện game
+    Câu truyện game tường thuật lại những diễn biến chính của trận Đại chiến sông Bạch Đằng cùng với tóm tắt diễn biến trước đó dẫn đến trận chiến sông Bạch Đằng. Game sẽ cho bạn tham gia vào những trận Vân Độn, trận chiến mà quân ta đã mai phục, tấn công, tịch thu và tiêu diệt đoàn thuyền lương thực của quân Nguyên, kết quả của trận chiến này là một phần cực kỳ quan trọng không những dẫn đến trận đại chiến trên sông Bạch Đằng mà còn là chiến thắng của dân tộc ta trong cả cuộc trống xâm lược Mông-Nguyên lần 3.Ngoài ra chúng ta còn được tham gia vào trận phục kích trên sông Bạch Đằng, tại đây chúng ta sẽ vào vai đội máy bắn đá bên bờ sông tiêu diệt hỏa lực của địch vẫn đang trống trả quyết liệt trên những chiến thuyển đang mắc kẹt giữa bãi cọc, không những thế ta còn được vào vai Dã Tượng, đột kích từ phía sau đội quân Nguyên đã dạt lên bờ sông với nhiệm vụ vượt qua lực lược của địch và tiêu diệt tướng của địch.
+3.1.2. Các sences trong game
+• Sence 1: Cutsence giới thiệu về quân Nguyên khi tiến hành xâm lược nước ta lần thứ 3.
+• Sence 2: Trận Vân Đồn, chúng ta sẽ nhập vai vào quân phục kích bên bờ sông tấn công đoàn thuyền lương của quân Nguyên trước khi chúng tiêu diệt đội thuyền của ta đang chặn đường.
+• Sence 3: Cutsence thể hiện quân Nguyên rút lui khi thiếu lương thực rồi bị quân ta dẫn dụ vào bãi cọc ngầm và phục kích tấn công
+• Sence 4: Trận chiến trên sông Bạch Đằng, ta sẽ vào vai quân Đại Việt tấn công những hỏa lực còn chống cự của quân địch trên những chiến thuyển.
+• Sence 5: Vào vai Dã Tượng chiến đấu xuyên qua đội quân đang đội mắc kẹt trên bờ sông
+• Sence 6: Vào vai Dã Tượng chiến đấu với tướng của quân Nguyên là Omar
+3.1.3. Các nhân vật có thể điều khiển
+• Đội máy bắn đá bên bờ sông: Chúng ta sẽ điểu khiển đội máy bắn đá ở sence Vân Đồn, ta có thể xoay trái hoặc phải để chỉnh tâm của những chiếc máy bắn đá.
+• Dã Tượng: Ta có thể điều khiển nhân vật này khi đến sence trận chiến trên sông Bạch Đằng và sence chiến đấu với tướng của quân Nguyên trong sence cuối. Ta có thể di chuyển các hướng khác nhau cũng như tấn công cận chiến đối phương.
+3.1.4. Các kẻ địch
+• Thuyền địch: Trong sence Vân Đồn đã sẽ phải tiêu giệt hết thuyền địch trước khi chúng đánh bại đội thuyền quân của ta đang chặn trên sông.
+• Lính địch: Trong sence trận chiến trên sông Bạch Đằng, đây sẽ là những quân định mà chúng ta phải tiêu giệt, chúng sẽ phát hiện và tấn công ta khi khoảng cách đủ gần.
+• Tướng địch: Ở sence cuối cùng ta sẽ phải chiến đấu với tướng địch, tướng địch ngoài chiến đấu như lính thường còn có skill bắn ra ba mũi tên ra ba hướng.
+• Máy bắn đá của địch: Là những chiếc máy bắn đá của quân Nguyên ở trên những chiếc chuyến thuyền đang mắc kẹt giữa bãi cọc
+3.2. Phân tích thiết kế hệ thống.
+3.2.1. Biểu đồ use-case
+    
+
+      Use-case player
+
+Hình 3.1: Use-case player
+      Miêu tả: Player trong game có hai chức năng tương đương với hai use-case đó là Di chuyển và tấn công.
+      Use-case melee enemy
+
+Hình 3.2: Use-case melee enemy
+      Miêu tả: Melee Enemy trong game có hai chức năng tương đương với ba use-case đó là di chuyển, xác định vị trí player và tấn công.
+	Use-case range enemy
+
+Hình 3.3: Use-case range enemy
+      Miêu tả: Melee Enemy trong game có hai chức năng tương đương với ba use-case đó là di chuyển, xác định vị trí player và tấn công.
+3.2.2. Các thuộc tính
+Bảng Dã Tượng
+STTTên thuộc tínhKiểu dữ liệuMô tả1HealthFloatLượng máu của nhân vật2SpeedFloatTốc độ di chuyển của nhân vật3isAttackBoolQuyết định nhân vật có đang trong trạng thái sẵn sàng tấn công hay khôngBảng 3.1: Các thuộc tính của Dã Tượng
+Bảng Máy bắn đá quân Đại Việt
+STTTên thuộc tínhKiểu dữ liệuMô tả1HealthFloatLượng máu của nhân vật2RotSpeedFloatTốc độ quay của máy bắn đá3isFireBoolQuyết định nhân vật có đang trong trạng thái sẵn sàng để thực hiện đòn tấn công hay không4BulletSpeedFloatTốc độ của viên đạn được bắn ra    Bảng 3.2: Các thuộc tính của máy bắn đá quân Đại Việt
+Bảng melee enemy
+STTTên thuộc tínhKiểu dữ liệuMô tả1HealthFloatLượng máu của melee enemy2DistFloatKhoảng cách từ bản thân tới Player3isAttackingBoolQuyết định có đang trong trạng thái sẵn sàng để thực hiện đòn tấn công hay không4HowcloseFloatKhi khoảng cách của bản thân và nhân vật đạt tới con số này hoặc nhỏ hơn thì melee enemy sẽ đuổi theo Player5StopDisFloatKhi khoảng cách từ bản thân tới Player nhỏ hơn hoặc bằng con số này thì melee enemy sẽ dừng lại và thực hiện tấn công6MoveSpeedFloatTốc độ di chuyển của melee enemy    Bảng 3.3: Bảng thuộc tính melee enemy
+Bảng range enemy
+STTTên thuộc tínhKiểu dữ liệuMô tả1HealthFloatLượng máu của range enemy2DistFloatKhoảng cách từ bản thân tới Player3isAttackingBoolQuyết định có đang trong trạng thái sẵn sàng để thực hiện đòn tấn công hay không4HowcloseFloatKhi khoảng cách của bản thân và nhân vật đạt tới con số này hoặc nhỏ hơn thì range enemy sẽ đuổi theo Player5StopDisFloatKhi khoảng cách từ bản thân tới Player nhỏ hơn hoặc bằng con số này thì range enemy sẽ dừng lại và thực hiện tấn công6MoveSpeedFloatTốc độ di chuyển của range enemy7BSpeedFloatTốc độ của đạn khi được bắn ra    Bảng 3.4: Bảng thuộc tính range enemy
+    
+    
+    
+    
+Bảng Thuyền Đại Việt
+STTTên thuộc tínhKiểu dữ liệuMô tả1HealthFloatLượng máu của thuyển    Bảng 3.5: Bảng thuộc tính thuyền Đại Việt
+Bảng máy bắn đá quân Nguyên
+STTTên thuộc tínhKiểu dữ liệuMô tả1HealthFloatLượng máu của máy bắn đá2BSpeedFloat Tốc độ của đạn khi bắn ra3DistFloatKhoảng cách từ bản thân tới Player4isAttackingBoolQuyết định có đang trong trạng thái sẵn sàng để thực hiện đòn tấn công hay không5HowcloseFloatKhi khoảng cách của bản thân và nhân vật đạt tới con số này hoặc nhỏ hơn thì sẽ đuổi theo Player6StopDisFloatKhi khoảng cách từ bản thân tới Player nhỏ hơn hoặc bằng con số này thì sẽ dừng lại và thực hiện tấn công    Bảng 3.6: Bảng thuộc tính máy bắn đá quân Nguyên
+Bảng boss
+STTTên thuộc tínhKiểu dữ liệuMô tả1HealthFloatLượng máu của boss2DistFloatKhoảng cách từ bản thân tới Player3isAttackingBoolQuyết định có đang trong trạng thái sẵn sàng để thực hiện đòn tấn công hay không4HowcloseFloatKhi khoảng cách của bản thân và nhân vật đạt tới con số này hoặc nhỏ hơn thì boss sẽ đuổi theo Player5StopDisFloatKhi khoảng cách từ bản thân tới Player nhỏ hơn hoặc bằng con số này thì boss sẽ dừng lại và thực hiện tấn công6MoveSpeedFloatTốc độ di chuyển của boss    Bảng 3.7: Bảng thuộc tính Boss
+3.3. Thiết kế các model.
+
+    Hình 3.4: Dã tượng
+	Miêu tả: Model được vẽ bằng MagicaVoxel và tinh chỉnh bằng blender. Trong game ta có thể điều khiển nhân vật này di chuyển bằng các phím A, S, D, W theo mọi hướng với góc nhìn từ trên xuống và tấn công bằng Mouse0.
+
+Hình 3.5: Máy bắn đá 1
+
+Hình 3.6: Máy bắn đá 2
+    Miêu tả: Model được vẽ bằng MagicaVoxel và tinh chỉnh bằng blender. Trong game ta sẽ có cả máy bắn đá quân địch và máy bắn đá quân ta, máy bắn đá quân địch sẽ tự động nhận mục tiêu là máy bắn đá của ta và tấn công, còn máy bắn đá của ta có thể tấn công địch bằng các xoay, ngắm bằng hai phím A, D tấn công bằng phím Space.
+
+Hình 3.7: Lính Nguyên
+
+Hình 3.8: Lính Nguyên
+    Miêu tả: Model được vẽ bằng MagicaVoxel và tinh chỉnh bằng blender. Trong game ta sẽ gặp và chiến đấu với kẻ địch này trong màn chiến đấu với quân Nguyên mắc kẹt trên bờ sông trong trận chiến sông Bạch Đằng. Kẻ địch này có thể phát hiện người chơi trong một khoảng cách nhất định và tiến tới tấn công.
+
+Hình 3.9: Tướng Nguyên
+    
+Hình 3.10: Tướng Nguyên
+    Miêu tả: Model được vẽ bằng MagicaVoxel và tinh chỉnh bằng Blender. Trong game ta sẽ đối đầu với tướng của quân Nguyên trong màn đấu Boss cuối cùng. Nó có khả năng tấn công như những tên lính bình thường nhưng được được nâng cấp và lượng máu cũng lớn hơn.
+
+Hình 3.11: Lính Nguyên bắn cung
+
+Hình 3.12: Lính Nguyên bắn cung
+    Miêu tả: Model được vẽ bằng MagicaVoxel và tinh chỉnh bằng blender. Trong game ta sẽ gặp và chiến đấu với kẻ địch này trong màn chiến đấu với quân Nguyên mắc kẹt trên bờ sông trong trận chiến sông Bạch Đằng. Kẻ địch này có thể phát hiện người chơi trong một khoảng cách nhất định và tiến tới tấn công.
+
+Hình 3.13: Model nước
+    Miêu tả: Model được tạo ta bằng một plane object và shader. Nó là phần cực kỳ quan trọng để tạo nên địa hình trong game.
+
+Hình 3.14: Model đạn thuyền quân Nguyên
+    Miêu tả: Model được tạo ta bằng một sphere object. Nó là đạn của máy bắn đá quân Nguyên.
+
+    Hình 3.15: Thuyền lớn quân Nguyên
+
+Hình 3.16: Thuyền lớn quân Nguyên
+
+Hình 3.17: Thuyền lớn quân Nguyên
+    Miêu tả: Model được vẽ bằng MagicaVoxel và tinh chỉnh bằng blender. Trong game ta sẽ gặp và chiến đấu với kẻ địch này trong màn phục kích tấn công đoàn thuyển ở Vân Đồn. Ngoài ra nó còn xuất hiện nhiều ở những cutsence và background trong game.
+    
+
+Hình 3.18: Đạn máy bắn đá
+
+Hình 3.19: Đạn máy bắn đá vỡ khi va chạm
+    Miêu tả: Model được vẽ bằng MagicaVoxel và tinh chỉnh bằng Blender. Trong game nó là đạn của máy bắn đá quân ta, khi va chạm vào thuyền định sẽ vỡ thành nhiều mảnh.
+
+Hình 3.20: Thuyền nhỏ của quân Nguyên
+
+Hình 3.21: Thuyền nhỏ quân Nguyên
+
+Hình 3.22: Thuyền nhỏ quân Nguyên
+    Miêu tả: Model được vẽ bằng MagicaVoxel và tinh chỉnh bằng blender. Trong game ta sẽ gặp những chiếc thuyền này trong các cảnh cutsence.
+
+Hình 3.23: Tường thành
+    Miêu tả: Model được vẽ bằng MagicaVoxel và tinh chỉnh bằng blender. Trong game ta sẽ gặp những chiếc thuyền này trong cutsence đầu tiền.
+    
+
+    Hình 3.24: Thuyền của quân Đại Việt
+
+Hình 3.25: Thuyền của quân Đại Việt
+
+    Hình 3.26: Thuyền của quân Đại Việt
+      Miêu tả: Model được vẽ bằng MagicaVoxel và tinh chỉnh bằng Blender. Trong game ta sẽ gặp những chiếc thuyền này trong các cutsence và cả các sence gameplay như một background hoặc mục tiêu cần bảo vệ.
+
+Hình 3.27: Cọc trên sông Bạch Đằng
+    Miêu tả: Model được vẽ bằng MagicaVoxel và tinh chỉnh bằng Blender. Trong game ta sẽ thấy những bãi cọc trong các cutsence và background.
+
+Hình 3.28: Địa hình
+    Miêu tả: Đây là địa hình tạo nên bằng object terrain, model nước và thuyền.
+3.4. Thiết kế UI
+
+Hình 3.29: Main Menu
+    Miêu tả: Đây là màn hình Main Menu của game. Bao gồm hình nền, tên game, hai nút Play và Exit.
+    
+
+CHƯƠNG 4:  KẾT LUẬN
+4.1. Kết quả đạt được của đề tài
+      Sau thời gian nghiên cứu và phát triển, đã hoàn thành cơ bản các mục tiêu ban đầu đề ra của đề tài. Đã tạo ra một game với bối cảnh lích sử Việt Nam và ở đây là Đại chiến sông Bạch Đằng nhằm tăng sự thích thú của những người trẻ với lịch sử nước nhà.
+      Game có nhiều sence, miêu tả những diễn biến chính mang ý nghĩa quan trọng nhất tới cuộc chống xâm lược Nguyên lần ba cũng như nguyễn nhân và kết thúc của trận chiến trên sông Bạch Đằng năm 1288.
+      Game được tạo ra với 6 sence, trong đó có 2 cutsence thể hiện lực lược và kế hoạch bước đầu của quân Nguyên khi tiến hành xâm lược nước ta, kế hoạch rút lui của quân Nguyên và quân ta đã dụ kẻ địch vào bẫy như thế nào. 4 sence còn lại là trận Vân Đồn, trận chiến mà quân ta đã chặn đánh đoàn thuyền lương thực của quân Nguyên, khiến quân Nguyên gặp nhiều khó khăn phải rút lui. Hai Sence trận chiến trên sông Bạch Đằng thể hiện trận chiến khi quân Nguyên bị dụ mắc bẫy cọc ngầm và quân ta sẽ từ bên bờ sông tấn công tiêu giệt quân Nguyên đang ở trên các chiến thuyền. Sence cuối cùng, ta sẽ đối đầu với tướng quân của quân Nguyên, sence này có vai trò giống như một màn đánh Boss, khi tướng của quân Nguyên sẽ có thanh máu lớn cùng khả năng bắn ra 3 mũi tên về ba hướng khác nhau.
+      Game đã thành công trong việc sử dụng đồ họa 3D pixel để thiết kế xây dựng game với số lượng model tương đối lớn và các animation thanh thoát.
+4.2. Hạn chế của đề tài
+      Thời lượng chơi của mỗi màn chơi cũng như từng sence là không lớn, các tương tác của nhân vật với môi trường xung quanh hạn chế. Cơ chế hoạt động của quân định còn đơn giản, dễ đoán.
+      Âm thanh trong game chưa đủ để truyền cảm hứng cho người chơi cũng khi khơi dậy cảm xúc trong những thời khắc kịch tính.
+      Game không có khả năng lưu trữ, tính điểm, xếp hạng với những lượt chơi khác nhau.
+      Game mới chỉ thể hiện một phần của cuộc chiến, vẫn còn những phần khác có thể tận dụng để xây dựng trong game
+4.3. Hướng phát triển của đề tài
+    Hướng phát triển tiếp theo của đề tài như sau:
+• Tiến hành nâng cấp các model 
+• Thay đổi hệ thống âm thanh sao cho phù hợp nhất với một game lịch sử
+• Tạo ra một game lớn với nhiều sự kiện lịch sử nước ra từ trước tới nay chứ không dừng lại ở trận chiến trên sông Bạch Đằng năm 1288
+• Nâng cấp AI của quân địch giúp game trở nên chuyên nghiệp và thú vị hơn
+• Thêm độ khó cho game thông qua các màn chơi cùng như Boss.
+TÀI LIỆU THAM KHẢO
+[1]Wikipedia: https://vi.wikipedia.org/wiki/Unity_(phần_mềm_làm_game)[2]Wikipedia: https://vi.wikipedia.org/wiki/Blender_(phần_mềm)[3]Học Đồ Họa Blog: http://hocdohoa.edu.vn/4-ly-do-ban-nen-bat-dau-hoc-3d-voi-blender/[4]viblo.asia: https://viblo.asia/p/shader-in-unity-DKBvdxaPvdX[5]Wikipedia: https://vi.wikipedia.org/wiki/Microsoft_Visual_Studio[6]Unity.com: https://unity.com/unity/features/editor/art-and-design/cinemachine[7]Phuongne technical blog: https://phuongne.com/render-pipeline-unity3d/
+Xây dựng game Đại chiến sông Bạch Đằng
+    
+    
+8
+    
+    

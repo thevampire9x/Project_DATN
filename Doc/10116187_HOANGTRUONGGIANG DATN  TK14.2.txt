@@ -1,0 +1,742 @@
+﻿CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
+1.1 Lý do chọn đề tài
+      Cùng với sự phát triển mạnh mẽ của nền kinh tế, một trong những lĩnh vực đang phát triển nhanh nhất hiện nay là Công nghệ thông tin. Trong hệ thống ngành nghề được đào tạo ở các bậc Đại học, Cao đẳng Công nghệ thông tin luôn được xem là sự lựa chọn thông minh của các học sinh phổ thông và các bậc phụ huynh trong việc hướng nghiệp cho con em mình.
+      Ngày nay, con người có nhiều điều kiện tiếp cận với công nghệ thông tin. Hầu như ngành nghề, lĩnh vực hay hoạt động nào trong xã hội hiện đại cũng cần tới sự góp mặt của Công nghệ thông tin. Bởi sự đa dạng ấy, đối tượng phục vụ của Công nghệ thông tin ngày càng phong phú, từ một cá nhân muốn có chiếc máy vi tính, đến một công ty muốn xây dựng Website giới thiệu sản phẩm của công ty mình và rộng hơn là một quốc gia muốn xây dựng chính phủ điện tử hay cả thị trường rộng lớn trên toàn thế giới.
+      Máy tính có thể trợ giúp rất đắc lực cho con người trong nhiều lĩnh vực của cuộc sống, đặc biệt là trong việc lưu trữ, quản lý, trong các dịch vụ tra cứu, tìm kiếm, học tập và thậm chí cả sản xuất kinh doanh. Sau một quá trình học chuyên ngành công nghệ thông tin tại trường thì em muốn thực hiện một đề tài trong đó trình bày những gì mình đã được học, được hướng dẫn có tính áp dụng cao vào thực tiễn.
+      Nhờ sự gợi ý và định hướng của thầy NGUYỄN THỊ THANH HUỆ em đã chọn đề tài “Thiết kế hệ thống mạng cho Trường THPT KHOÁI CHÂU”. Hi vọng với sự góp ý của thầy đồ án của em có được nhiều cơ hội ứng dụng trong tương lai cho việc triển khai hệ thống mạng cho trường học.
+1.2 Mục tiêu của đề tài
+- Hiểu được từng bước trong quy trình thiết kế một hệ thống mạng cho trường học theo yêu cầu của trường học.
+- Biết cách thu thập ý kiến khách hàng.
+- Thiết kế được hệ thống mạng cho Trường THPT KHOÁI CHÂU.
+1.3 Giới hạn phạm vi của đề tài
+	Trong đồ án này em tập chung nghiên cứu các vấn đề sau:
+- Tìm hiểu kiến thức về mạng LAN cơ bản.
+- Tìm hiểu về quy trình thiết kế một hệ thống mạng.
+- Áp dụng quy trình đó để xây dựng hệ thống mạng cho Trường THPT KHOÁI CHÂU
+1.4 Nội dung thực hiện
+- Tìm hiểu về mạng LAN cơ bản.
+- Tìm hiểu về cách cấu hình các thiết bị mạng.
+- Tìm hiểu lý thuyết chung căn bản về quản trị mạng doanh nghiệp .
+- Tìm hiểu các bước thiết kế một hệ thống mạng cho doanh nghiệp.
+1.5 Phương pháp tiếp cận
+- Khảo sát yêu cầu trường học và quy mô của nơi cần thiêt kế hệ thống mạng. Từ đó phân tích nhưng yêu cầu của trường học để thiết kế hệ thống mạng phù hợp với yêu cầu, hoạt động tốt, tính bảo mật cao.
+- Tham khảo một số hệ thống mạng qua sách, báo, internet.
+- Đọc giáo trình, tìm hiểu trên Internet những dịch vụ và công nghệ mạng đang được các trường học sử dụng phổ biến hiện nay.
+- Tìm hiểu kỹ về chức năng, các thông số kỹ thuật của các thiết bị để lựa chọn được thiết bị phù hợp với hệ thống mạng và tối ưu nhất.
+- Tham khảo nhiểu website bán thiết bị mạng cần cho hệ thống để so sánh về chất lượng cũng như giá cả. Từ đó đưa ra được sự lựa chọn hợp lý.
+
+
+CHƯƠNG 2: 
+TÌM HIỂU HỆ THỒNG MẠNG & THIẾT BỊ MẠNG
+2.1 Tìm hiểu hệ thống mạng LAN
+2.1.1 Mạng máy tính
+      Mạng máy tính là tập hợp các máy tính độc lập được kết nối với nhau thông qua các đường truyền vật lý và tuân theo các quy ước truyền thông nào đó nhằm mục đích chia sẻ tài nguyên giữa các máy tính.
+	Các thành phần của mạng máy tính bao gồm: 
+- Các thiết bị đầu cuối: Là các thiết bị có khả năng kết nối vào mạng máy tính như máy tính, PDA...
+- Môi trường truyền dẫn: Là môi trường mà các thao tác truyền thông được thực hiện qua đó. Môi trường truyền dẫn có thể là các loại dây dẫn (dây cáp), sóng điện từ (kết nối không dây).
+- Giao thức truyền thông: Là các quy tắc, quy định cách trao đổi dữ liệu giữa các thiết bị trong mạng máy tính.
+2.2 Khái niện mạng LAN, VLAN
+      LAN (viết tắt của từ tiếng anh Local Area Network, “mạng máy tính cục bộ”) là một hệ thống mạng dùng để kết nối các máy tính trong 1 phạm vi nhỏ (nhà ở, phòng làm việc, trường học..). Các máy tính trong mạng LAN có  thể chia sẻ tài nguyên với nhau, mà điển hình là chia sẻ tệp tin...
+      VLAN là cụm từ viết tắt của Virtual Local Area Network (hay virtual LAN) hay còn được gọi là mạng LAN ảo. VLAN là một kỹ thuật cho phép tạo lập các mạng LAN độc lập một cách logic trên cùng một kiến trúc hạ tầng vật lý. Việc tạo lập nhiều mạng LAN ảo trong cùng một mạng cục bộ (giữa các khoa trong một trường học, giữa các cục trong một công ty,...) giúp giảm thiểu miền quảng bá cũng như tạo thuận lợi cho việc quản lý một mạng cục bộ rộng lớn. VLAN tương đương như mạng con.
+	Phân loại VLAN:
+- VLAN dựa trên địa chỉ vật lý MAC: Mỗi địa chỉ MAC được gán tới một VLAN nhất định. Cách cấu hình này rất phức tạp và khó khăn trong việc quản lý.
+- VLAN dựa trên cổng: Mỗi cổng (Ethernet hoặc Fast Ethernet) được gắn với một VLAN xác định. Do đó mỗi máy tính/thiết bị host kết nối với một cổng của switch đều thuộc một VLAN nào đó. Đây là cách cấu hình VLAN đơn giản và phổ biến nhất.
+- VLAN dựa trên giao thức: Tương tự với VLAN dựa trên địa chỉ MAC nhưng sử dụng địa chỉ IP thay cho địa chỉ MAC. Cách cấu hình này không được thông dụng.
+	Ưu điểm của VLAN: 
+- Tăng khả năng bảo mật: Các VLAN khác nhau không truy cập được vào nhau (trừ khi có khai báo định tuyến).
+- Tiết kiệm băng thông của mạng: Do VLAN có thể chia nhỏ LAN thành các đoạn (là một vùng quảng bá). Khi một gói tin quảng bá, nó sẽ được truyền chỉ trong một VLAN duy nhất, không truyền ở các VLAN khác nên giảm được lưu lượng quảng bá, tiết kiệm được băng thông đường truyền.
+- Mạng có tính linh động cao.
+- Dễ dàng thêm hay bớt các máy tính vào VLAN: Trên một switch nhiều cổng, có thể cấu hình VLAN khác nhau cho từng cổng, do đó dễ dàng kết nối thêm các máy tính với các VLAN.
+2.3 Tìm hiểu về các thiết bị mạng
+2.3.1 Bộ định tuyến (Router)
+      Router hay thiết bị định tuyến hoặc bộ định tuyến, là một thiết bị mạng máy tính dùng để chuyển các gói dữ liệu qua một liên mạng và đến các đầu cuối, thông qua một tiến trình được gọi là định tuyến. Định tuyến xảy ra ở tầng 3 tầng mạng của mô hình OSI 7 tầng.
+	Cấu tạo của router gồm:
+- CPU : Thực thi các câu lệnh của hệ điều hành để thực hiện các nhiệm vụ sau: Khởi động hệ thống, định tuyến, điều khiển các cổng giao tiếp mạng. CPU là một bộ giao tiếp mạng. Trong các Router lớn có thể có nhiều CPU.
+- RAM : Được sử dụng để lưu bảng định tuyến, cung cấp bộ nhớ cho chuyển mạch nhanh, chạy tập tin cấu hình và cung cấp hàng đợi cho các gói dữ liệu. Trong đa số router, hệ điều hành Cisco IOS chạy trên RAM. RAM thường được chia thành hai phần: phần bộ nhớ xử lý chính và phần bộ nhớ chia sẻ xuất/nhập. Phần bộ nhớ chia sẻ xuất/nhập được chia cho các cổng giao tiếp làm nơi lưu trữ tạm các gói dữ liệu.Toàn bộ nội dung trên RAM sẽ bị xoá khi tắt điện. Thông thường, RAM trên router là loại RAM động và có thể nâng thêm RAM.
+- NV-RAM: Lưu lại thông tin cấu hình ngay cả khi bị mất điện. NV-RAM chứa file cấu hình startup cho hầu hết các loại router. Chứa Software Configuration Register, sử dụng để xác định IOS image dùng trong quá trình boot của router.
+- Flash: Bộ nhớ Flash được sử dụng để lưu toàn bộ phần mềm hệ điều hành Cisco IOS. Mặc định là router tìm IOS của nó trong flash. Bạn có thể nâng cấp hệ điều hành bằng cách chép phiên bản mới hơn vào flash. Phần mềm IOS có thể ở dưới dạng nén hoặc không nén. Đối với hầu hết các router, IOS được chép lên RAM trong quá trình khởi động router. Còn có một số router thì IOS có thể chạy trực tiếp trên flash mà không cần chép lên RAM.  
+- Bus: Phần lớn các router đều có bus hệ thống và CPU bus. Bus hệ thống  được sử dụng để thông tin liên lạc giữa CPU với các cổng giao tiếp và các khe mở rộng. Loại bus này vận chuyển dữ liệu và các câu lệnh đi và đến các địa chỉ của ô nhớ tương ứng.
+- ROM: Là nơi lưu đoạn mã của chương trình kiểm tra khi khởi động. Nhiệm vụ chính của Rom là kiểm tra phần cứng của router khi khởi động, sau đó chép phần mền IOS từ flash vào Ram. Nội dung trong Rom không thể xóa được.
+	Nguyên lý hoạt động:
+- Router hoạt động dựa vào bảng định tuyến, bảng định tuyến được lưu trữ trong ram. 
+- Mặc định bẳng định tuyến của router chỉ chứa các mạng kết nối trực tiếp.
+- Khi router nhận được 1 gói tin, router sẽ kiểm tra IP đích của gói tin so sánh nói với bảng định tuyến. 
+- Nếu địa chỉ IP đích có trọng bảng định tuyến thì router sẽ chuyến gói tin đến các cổng tương ứng.
+- Nếu không có thì router sẽ loại bỏ gói tin.
+2.3.2 Thiết bị chuyến mạch Switch
+      Switch hay còn gọi là thiết bị chuyển mạch, là một thiết bị dùng để kết nối các đoạn mạng với nhau theo mô hình mạng hình sao. Theo mô hình này, switch đóng vai trò là thiết bị trung tâm, tất cả các máy tính đều được nối về đây.
+                                                                        
+	Phân loại Switch chia thành 3 loại:
+- Workgroup switch: Bộ chuyển mạch làm việc theo nhóm.
+- Segment switch: Bộ chuyến mạch nhánh mạng.
+- Backbone switch: bộ chuyển mạch đường trục.
+	Nguyên lý hoạt động: 
+- Switch hoạt động dựa vào bảng cơ sở dữ liệu chuyến mạch và địa chỉ MAC của khung dữ liệu.
+- Switch hoạt động giống như hub dữ liệu nhận vào từ một cổng và chuyển ra các cổng còn lại khi:
+   o Địa chỉ MAC đích không có trong bảng cơ sở dữ liệu chuyển mạch. 
+   o Bảng cơ sở dữ liệu bị tràn.
+- Khi switch nhận được một khung dữ liệu:
+   o Kiểm tra địa chỉ MAC đích và so sánh với bảng cơ sở dữ liệu chuyển mạch.
+   o Nếu có trong bảng nn chuyển ra cổng tương ứng. 
+   o Nếu không có uu chuyển ra tất cả các cổng còn lại.
+- Kiểm tra địa chỉ MAC nguồn và so sánh trong bảng cơ sở dữ liệu chuyển mạch:
+   o Nếu có trong bảng thì không làm gì cả.
+o Nếu chưa có trong bảng thì thêm địa chỉ MAC nguồn tương ứng vào port nhận được vào bảng.
+2.4 Tường lửa:  
+      Tường lửa là một bức rào chắn giữa mạng nội bộ với một mạng khác (chẳng hạn như Internet), điều khiển lưu lượng ra vào giữa hai mạng này. Nếu như không có tường lửa thì lưu lượng ra vào mạng nội bộ sẽ không chịu bất kỳ sự điều tiết nào, còn một khi tường lửa được xây dựng thì lưu lượng ra vào sẽ do các thiết lập trên tường lửa quy định.
+	Phân loại: 
+- Firewall thì được chia ra làm 2 loại đó là: Personal firewall và Network firewall.
+o Personal Firewall: Loại này được thiết kế để bảo vệ một máy tính trước sự truy cập trái phép từ bên ngoài. Bên cạnh đó thì Personal Firewall còn được tích hợp thêm tính năng như theo dõi các phần mềm chống virus, phần mềm chống xâm nhập để bảo vệ dữ liệu. Một số Personal Firewall thông dụng như: Microsoft Internet connection firewall, Symantec personal firewall, Cisco Security Agent…. Loại Firewall này thì thích hợp với cá nhân bởi vì thông thường họ chỉ cần bảo vệ máy tính của họ, thường được tích hợp sẵn trong máy tính Laptop, máy tính PC..
+o Network Firewalls: Được thiết kế ra để bảo vệ các host trong mạng trước sự tấn công từ bên ngoài. Chúng ta có các Appliance-Based network Firewallsnhư Cisco PIX, Cisco ASA, Juniper NetScreen firewall, Nokia firewalls, Symantec’s Enterprise Firewall. Hoặc một số ví dụ về Software-Base firewallsinclude Check Point’s Firewall, Microsoft ISA Server, Linux-based IPTables.
+	=>  Điểm khác nhau giữa 2 loại Firewall này đó là số lượng host được Firewall bảo vệ. Bạn hãy nhớ 1 điều là Personal firewall chỉ bảo vệ cho một máy duy nhất còn Network firewall lại khác, nó sẽ bảo vệ cho cả một hệ thống mạng máy tính.
+- Trong đó, hệ thống Network Firewall được cấu tạo bởi các thành phần chính như sau:
+o Bộ lọc Packet (Packet- Filtering Router)
+o Cổng ứng dụng ( đó là Application-Level Gateway hay Proxy Server).
+o Cổng mạch (Circuite Level Gateway).
+	Nhiệm vụ chính của Firewall:
+      Firewall hỗ trợ máy tính kiểm soát luồng thông tin giữa intranet và internet, Firewall sẽ quyết định dịch vụ nào từ bên trong được phép truy cập ra bên ngoài, những người nào bên ngoài được phép truy cập vào bên trong hệ thống, hay là giới hạn truy cập những dịch vụ bên ngoài của những người bên trong hệ thống, mình lấy ví dụ như giới hạn trang Facebook, tất cả những người trong hệ thống sẽ không thể truy cập vào được mạng xã hội này. Sau đây là một số nhiệm vụ chính của Firewall:
+o Cho phép hoặc vô hiệu hóa các dịch vụ truy cập ra bên ngoài, đảm bảo thông tin chỉ có trong mạng nội bộ.
+o Cho phép hoặc vô hiệu hóa các dịch vụ bên ngoài truy cập vào trong.
+o Phát hiện và ngăn chặn các cuộc tấn công từ bên ngoài.
+o Hỗ trợ kiểm soát địa chỉ truy cập (bạn có thể đặt lệnh cấm hoặc là cho phép).
+o Kiểm soát truy cập của người dùng.
+o Quản lý và kiểm soát luồng dữ liệu trên mạng.
+o Xác thực quyền truy cập.
+o Hỗ trợ kiểm soát nội dung thông tin và gói tin lưu chuyển trên hệ thống mạng.
+o Lọc các gói tin dựa vào địa chỉ nguồn, địa chỉ đích và số Port ( hay còn cổng), giao thức mạng.
+o Người quản trị có thể biết được kẻ nào đang cố gắng để truy cập vào hệ thống mạng.
+o Firewall hoạt động như một Proxy trung gian.
+o Bảo vệ tài nguyên của hệ thống bởi các mối đe dọa bảo mật.
+o Cân bằng tải: Bạn có thể sử dụng nhiều đường truyền internet cùng một lúc, việc chia tải sẽ giúp đường truyền internet ổn định hơn rất nhiều.
+o Tính năng lọc ứng dụng cho phép ngăn chặn một số ứng dụng mà bạn muốn. Ví dụ như Facebook Messenger, Skype, Zalo…
+2.5 Máy chủ:
+	Máy chủ (Tiếng anh là Server) là một máy tính được kết nối với một mạng máy tính hoặc internet, có IP tĩnh, có năng lực xử lý cao và trên đó người ta cài đặt các phần mềm để phục vụ cho các máy tính khác truy cập để yêu cầu cung cấp các dịch vụ và tài nguyên.
+	Phân Loại:
+- Theo phương pháp tạo ra máy chủ:
+o Máy chủ riêng:  Là máy chủ chạy trên phần cứng và các thiết bị hỗ trợ riêng biệt gồm: HDD, CPU, RAM, Card mạng, . Việc nâp cấp hoặc thay đổi cấu hinh của máy chủ riêng đòi hỏi phải thay đổi phần cứng của máy chủ
+o Máy chủ ảo: Là dạng máy chủ được tạo thành bằng phương pháp sử dụng công nghệ ảo hóa để chia tách từ một máy chủ riêng thành nhiều máy chủ ảo khác nhau. Các máy chủ ảo có tính năng tương tự như một máy chủ riêng, nhưng chạy chia sẻ tài nguyên từ máy chủ vật lý gốc. Việc nâng cấp hoặc thay đổi cấu hình của máy chủ ảo rất đơn giản, có thể thay đổi trực tiếp trên phần mềm quản lý hệ thống. Tuy nhiên việc thay đổi tài nguyên của máy chủ ảo phụ thuộc và bị giới hạn bởi tài nguyên của máy chủ vật lý. 
+o Máy chủ đám mây: Là máy chủ được kết hợp nhiều từ máy chủ vật lý khác nhau cùng với hệ thống lưu trữ SAN với tốc độ truy xuất vượt trội giúp máy chủ hoạt động nhanh, ổn định, hạn chế mức thấp tình trạng downtime. Máy chủ Cloud được xây dựng trên nền công nghệ điện toán đám mây nên dễ dàng nâng cấp từng phần thiết bị trong quá trình sử dụng mà không làm gián đoạn quá trình sử dụng máy chủ.
+- Theo công dụng và chức năng của máy chủ:
+o Máy chủ web là máy chủ mà trên đó cài đặt phần mềm phục vụ web, đôi khi người ta cũng gọi chính phần mềm đó là web server. Tất cả các web server đều hiểu và chạy được các file *.htm và *.html. Tuy nhiên mỗi web server lại phục vụ một số kiểu file chuyên biệt chẳng hạn như llS của Microsoft dành cho *.asp, *.aspx…; Apache dành cho *.php…; Sun Java system web server của SUN dành cho *.jsp…
+o Máy chủ cơ sở dữ liệu: Máy chủ mà trên đó có cài đặt phần mềm Hệ quản trị cơ sở dữ liệu. Chúng ta có hệ quản trị CSDL chẳng hạn như: SQL server, MySQL, Oracle…
+o Máy chủ FTP:  FTP (Giao thức truyền tập tin) thường được dùng để trao đổi tập tin qua mạng lưới truyền thông dùng giao thức TCP/IP (chẳng hạn như Internet - mạng ngoại bộ - hoặc intranet - mạng nội bộ). Hoạt động của FTP cần có hai máy tính, một máy chủ và một máy khách). Máy chủ FTP dùng chạy phần mềm cung cấp dịch vụ FTP, gọi là trình chủ, lắng nghe yêu cầu về dịch vụ của các máy tính khác trên mạng lưới. Máy khách chạy phần mềm FTP dành cho người sử dụng dịch vụ, gọi là trình khách, thì khởi đầu một liên kết với máy chủ.
+o Máy chủ SMTP: SMTP (giao thức truyền tải thư tín đơn giản) là một chuẩn truyền tải thư điện tử qua mạng Internet. SMTP server là máy chủ giúp bạn gửi mail đến các địa chỉ email khác trên internet.
+o Máy chủ DNS: Là máy chủ phân giải tên miền. Mỗi máy tính, thiết bị mạng tham gia vào mạng Internet đều kết nối với nhau bằng địa chỉ IP. Để thuận tiện cho việc sử dụng và dễ nhớ ta dùng tên để xác định thiết bị đó. Hệ thống tên miền DNS được sử dụng để ánh xạ tên miền thành địa chỉ IP.
+o Máy chủ DHCP: DHCP (giao thức cấu hình động máy chủ) là một giao thức cấu hình tự động địa chỉ IP. Máy tính được cấu hình một cách tự động vì thế sẽ giảm việc can thiệp vào hệ thống mạng. DHCP server là máy chủ có cài đặt dịch vụ DHCP, nó có chức năng quản lý sự cấp phát địa chỉ IP động và các dữ liệu cấu hình TCP/IP. Ngoài ra còn có nhiệm vụ trả lời khi DHCP Client có yêu cầu về hợp đồng thuê bao.
+2.6 Chu trình thiết kế hệ thống mạng
+   	Chu trình vòng đời của một hệ thống mạng được chia thành các bước còn gọi là PPDIO2 cụ thể như sau : 
+
+    Hình 2- 1: Chu trình vòng đời một hệ thống mạng
+    
+      Chu trình PPDIO2 gồm 6 bước, theo thứ tự sau đây: Chuẩn bị; Lập kế hoạch; Thiết kế; Triển khai; Vận hành; Tối ưu hệ thống. Mỗi bước sau kế thừa và phục thuộc kết quả từ lớp trước đó. Trong đó: 
+	
+Giai đoạn 1: Chuẩn bị
+      Gồm các công việc liên quan đến việc thiết lập với tổ chức, làm rõ các yêu cầu kinh doanh, vấn đề, chiến lược, kiến trúc thiết kế và các vấn đề tài chính lien quan đến hệ thống mạng. Một công việc đặc biệt quan trọng trong bước này là làm rõ vấn đề thiết kế hệ thống mạng và khảo sát thực địa hệ thống.
+	Giai đoạn 2: Lập kế hoạch 
+      Bước lập kế hoạch làm rõ các yêu cầu đối với hệ thống mạng dựa trên mục đích, vấn đề thiết kế hệ thống. Kết quả của bước này là một bảng phân tích hệ thống dựa trên các thông tin thu được từ bước 1, trong đó có cân đối giữa các yếu tố về quy mô, tài chính và nhân lực để liên quan đến dự án.
+	Giai đoạn 3: Thiết kế
+      Dựa trên các yêu cầu đối với hệ thống thu nhận được từ các bước trước và các giải pháp kỹ thuật, kết quả của bước thiết kế là các bản vẽ và tài liệu kỹ thuật gồm:
+- Sơ đồ tổng quan hệ thống.
+- Sơ đồ địa chỉ IP.
+- Sơ đồ triển khai chi tiết (đi dây/ vật lý).
+- Danh mục thiết bị và đặc tính kỹ thuật.
+      Các bản vẽ phải được trình bày rõ ràng, đúng quy chuẩn để người triển khai khi nhìn vào bản vẽ có thể thi công hệ thống đúng các thông số kỹ thuật. Việc thiết kế hệ thống phải đảm bảo các vấn đề về độ tin cậy, bảo mật, khả năng mở rộng và hiệu suất.
+	Giai đoạn 4: Thực thi
+      Các thiết bị phải được cài đặt và cấu hình đúng các tham số và chỉ dẫn trong bản thiết kế. Trong các trường hợp cần có sự thay đổi nhỏ về cài đặt thiết bị, cần có biên bản với cấp có thẩm quyền phê duyệt. Khi xảy ra lỗi trong quá trình cấu hình, cần quay lại các bước trên để kiểm tra các tài liệu tham khảo. Trước khi chuyểnsang bước vận hành, hệ thống cũng cần được hoạt động thử nghiệm để xử lý các sự cố nếu có.
+	Giai đoạn 5: Vận hành
+      Bước vận hành thường là bước có thời gian lâu nhất trong chu trình
+PPDIOO2 hệ thống mạng được vận hành ngày qua ngày để phục vụ công việc quản
+lý và kinh doanh của doanh nghiệp. Bước này bao gồm các hoạt động quản lý và
+kiểm soát thiết bị mạng, duy trình định tuyến, xác định và xử lý sự cố mạng. Trong
+suốt quá trình hoạt động, hiệu suất hệ thống mạng thường xuyên được đánh giá, đến
+một ngưỡng nào đó. Hệ thống cần được tối ưu, đây là hoạt động của bước 6.
+	Giai đoạn 6: Tối ưu
+      Bước “Tối ưu” nhằm chủ động xác định các vấn đề làm giảm hiệu suất hoặc hay gây các sự cố đối với hệ thống mạng. Bước tối ưu có thể tạo ra các thay đổi về kiến trúc mạng để cải thiện hiệu suất của mạng hoặc nhằm giải quyết các ứng dụng phát sinh. Các yêu cầu thay đổi về kiến trúc thiết kế hệ thống và cải thiện hiệu suất sau một vài lần thực hiện sẽ dẫn đến chu trình vòng đời mạng mới xuất hiện.
+
+
+CHƯƠNG 3: 
+THIẾT KẾ HT MẠNG TRƯỜNG THPT KHOÁI CHÂU
+3.1 Giới thiệu về trường THPT KHOÁI CHÂU
+- Địa chỉ: ĐẠI HƯNG – KHOÁI CHÂU – HƯNG YÊN 
+- Nhiệm vụ và chức năng:
+o Thực hiện chức năng quản lý và giáo dục học sinh THPT trong phạm vi nhà trường
+o Tổ chức thực hiện duy trì và rèn luyện thường xuyên các hoạt động của thầy và trò.
+3.2 Khảo sát và thu thập yêu cầu của khách hàng
+    - Ưu điểm: của hệ thống cũ
+✔  Chi phí thấp
+✔ Dễ cấu hình
+✔ Dễ quản lí
+✔ Tốc độ cao
+      - Nhược điểm:
+✔ Dữ liệu không được lưu trữ tập trung.
+✔ Độ an toàn và tính bảo mật không cao: vì tất cả người dùng trong mạng có thể tự mình thiết lập hệ thống mật mã riêng, và việc chia sẻ tài nguyên có thể xảy ra ở bất cứ máy nào nên khó điều khiển, hơn nữa việc xuất hiện các loại virus lây lan qua mạng hết sức nguy hiểm ảnh hưởng đến tài nguyên và bảo trì hệ thống.
+✔ Không có công tác quản trị và kiểm soát người dùng cũng như quản lý các máy tính trong mạng.
+
+
+3.2.1 Sơ đồ mặt cắt trường THPT KHOÁI CHÂU
+		Kích thước: 
+			Chiều dài:  110 mét
+			Chiều rộng: 80 mét		
+
+    Hình 3- 1: Sơ đồ mặt cắt trường THPT KHOÁI CHÂU
+
+
+    
+▪ Sơ đồ tổng quát:
+	- Gồm các phòng ban sẽ thiết kế và lắp đặt hệ thống mạng
+
+    Hình 3- 2: Sơ đồ tổng quát hệ thống mạng trường THPT KHOÁI CHÂU
+    
+ 	
+    
+Trường THPT KHOÁI CHÂU gồm:
+- Dãy phòng học 
+- Dãy phòng tin học
+- Phòng ban giám hiệu và văn phòng đoàn
+- Khu để xe
+- Căng tin
+- Phòng bảo vệ
+	Phòng thực hành tin học:
+- Chức năng :
+o Gồm 3 phòng, mỗi phòng có 1 máy quản lý và 28 máy tính dùng để học sinh thực hành có chức năng như nhau.
+o Giảng dạy tin học cho học sinh
+o Tổ chức thi các kì thi tin học, toán học, tiếng anh,.. trên máy tính
+- Yêu cầu :
+o 3 phòng gồm 3 máy quản lý và 84 máy tính để bàn chạy hệ điều hành windows 7, office 2010, phần mềm pascal và các phần mềm học tập khác cần thiết…
+o 4 witch 32 port. 
+	Ban giám hiệu và văn phòng Đoàn Trường:
+- Chức năng:
+o Xây dựng tổ chức bộ máy nhà trường.
+o Xây dựng kế hoạch và tổ chức thực hiện nhiệm vụ năm học.
+o Quản lý mọi mặt chung của trường.
+o Nơi ký kết các văn bản, chứng từ quan trọng 
+o Nơi quản lí các hoạt động về đoàn viện thanh niên trong nhà trường
+o Nơi lưu trữ nhưng sổ sách chấm điểm chuyên cần của từng lớp hàng ngày, nhằm xét điểm thi đua
+o Nơi đưa ra các chương trình, hoạt động thi đua cho giáo viện của nhiệm, từng em học sinh trong trường.
+- Yêu cầu sửa dụng:
+o Gồm 7 phòng: Phòng hiệu trưởng, 3 phòng phó hiệu trưởng, phòng tài vụ, phòng y tế, văn phòng đoàn.  Mỗi phòng cần 1 máy tính để bàn, 1 wifi.
+o Phòng hội đồng 2 wifi.
+o  Máy tính cần chạy windows 7 và bộ phần mềm office 2010, bộ gõ tiếng Việt Unikey và 1 số phần mềm chuyên môn khác.
+o Kết nối Internet: Xem, tra cứu, gửi nhận dữ liệu trên mạng tới các GV chủ nhiệm của từng lớp.
+3.3 Phân tích yêu cầu khách hàng
+    Bảng 1: Phân tích yêu cầu khách hàng
+STTYêu cầu của nhà trườngKết quả phân tích    1   Chia sẻ dữ liệu giữa các phòng, các tổ, các máy tính trong trường.    Chia Vlan cho từng khu vực, thực hiện định tuyến để các thiết bị kết nối với nhau.    2   Yêu cầu quản lý thời gian truy cập internet, bảo vệ hệ thống.    Triển khai máy chủ firewall để kiểm soát lưu lương dữ liệu và thời gian truy cập internet và bảo vệ hệ thống.    3   Các thiết bị không tập trung tại một điểm mà phần ra nhiều nơi khác nhau.    Ta sẽ đặt các switch ở trung tâm để chia ra các mạng cọn tiện cho việc quản lý cũng như tiết kiệm chi phí.    4   Phòng thực hành tin giáo viên muốn điều khiển các máy tính còn để quản lý học sinh.    Ta sẽ thiết kế và cấu hình theo mô hình client/server.    9   Triển khai máy chủ firewall.    Đây là mô hình mạng vừa lên ta sử dụng máy chỉ để quản lý và cài đặt firewall, mềm trên máy chủ đó để bảo vệ và quản lý cho toàn bộ hệ thống,     10   Yêu cầu sử dụng mạng của trường.    Ta sử dụng gói mạng Fast 60 của VPNT. Tốc độ 60MBPS trong nước + 1MBPS nước ngoài. Miễn phí một Ip tĩnh
+        11   Phòng thức hình tin và một phòng thức hành ngoại ngữ.    Ta sử dụng 3 switch 48 cổng để tiện cho việc nâng cập thiết bị sau này.    12   Nhà trường muốn các vị trị trong trường đều có mạng     Ta sẽ lắp đặt wifi tại những vị trí trung tâm trong trường để giáo viên và học sinh có thể truy cập được internet.    13   Chia vlan:
+   Vlan10: Giáo viên
+   Vlan20: Phòng tin học
+   Vlan30: Ban giám hiệu
+       Ta sử dụng switch Cisco SRW2016 (SG300-20)- 16 Port - LAYER 3. Ta có thể chia vlan cho từng khu vực của trường. Thức hiện cấu hình định tuyến cho các vlan để chúng có thể kết nói và truyền dữ liệu cho nhau    14   Các giáo viên sử dụng máy tính sách tay có thể sử dụng được internet không dây từ ở nhiều khu vực trong khuân viên trường.    Ta thiết kế các wifi ở những vị trí,phân bố đều trong các vu vực có nhiều người truy cập để cung cấp internet cho giáo viên, học sinh trong trường.    15   Cài đặt các dịch vụ cơ bản cho máy tính     Các phần mềm cơ bản như netop school, unikey, ….    16   cấu hình DHCP và chia nhiệm vụ cho từng máy    Ta phân quyền và cấp quyền cho từng máy của các giáo viên trong nhóm bộ môn trên máy chủ        
+3.4 Thiết kế hệ thống mạng cho trường THPT KHOÁI CHÂU
+3.4.1 Thiết kế sơ đồ Logic
+
+  
+    Hình 3- 3: Sơ đồ logic trường THPT KHOÁI CHÂU
+
+
+3.4.2 Thiết kế sơ đồ vật lý từng phòng
+Văn phòng đoàn:
+
+    Hình 3- 4:  Sơ đồ vật lý văn phòng đoàn
+▪ Phòng tài vụ
+
+    Hình 3- 5: Sơ đồ vật lý vật lý phòng tài vụ
+▪ Phòng y tế:
+  
+    Hình 3- 6: Sơ đồ vật lý phòng y tế
+
+
+▪ Phòng hiệu trưởng
+
+    Hình 3- 77:  Sơ đồ vật lý phòng hiệu trưởng
+▪ Phòng hiệu phó:
+	3 phòng hiệu phó có chức năng  giống nhau  và thiết kế giống nhau
+
+    Hình 3- 8: Sơ đồ vật lý phòng phó hiệu trưởng 
+
+
+▪ Phòng hội đồng:
+
+    Hình 3- 9: Sơ đồ vật lý phòng hội đồng
+
+
+▪ Phòng tin học:
+
+    Hình 3- 10: Sơ đồ vật lý phòng thực hành tin học số 1
+
+    Hình 3- 11: Sơ đồ vật lý phòng thực hành tin học số 2
+
+
+    Hình 3- 12: Sơ đồ vật lý phòng thực hành tin học số 3
+3.4.3. Bảng danh mục báo giá thiết bị hệ thống
+    Bảng 2: Danh mục báo giá thiết bị hệ thống
+STTTên sản phẩmThông sốVị tríSố lượngĐơn giáThành tiền    1Bộ phát WIFI TP-Link 850n- Khoảng cách phát tối đa: 100m. Tốc độ truyền Wifi tối đa: 300Mbps. Số cổng kết nối: 4 LAN Tốc độ 10/100Mbps + 1 WAN Tốc dộ 10/100Mbps Hỗ trợ chuẩn không dây : IEEE 802.11n*, IEEE 802.11g, iEEE 802.11bPhòng BGH, Phòng hội đồng,…10 250.0002.500.000    2Switch SH-7322B 32 
+Port 10/100Mbps Dual-Speed 
+- 32 cổng RJ45 tốc độ 10/100Mbps
+- Hoạt động Haft và Full duplex
+- Plug and Play tự động nhận biết tốc độ và kênh hoạt động
+- True non - blocking architecture for full wire speed forwarding
+- Store-and-forward switching mechanism
+- Back pressure and IEEE 802.3x compliant flow control
+- Hỗ trợ 32K MAC Address
+- Embedded 4Mbits buffer memory
+- Provide 6.4G back-plane bandwidth
+- Rack mount gắn vào tủ rack 19"
+- Vỏ bằng kim loại và được sơn tĩnh điệnPhòng thực hành  học4 3.150.000
+ 12.600.000    3Cisco SRW2018 (SG300-20)- 16 Port - LAYER 3- Hỗ trợ 18 cổng tự động MDI / MDIX.
+- 18 cổng tốc độ 10/100/1000 Mbps.
+- Hỗ trợ IEEE 802.3x 
+- tốt độ cao nhất đạt được
+40Gbps Switching
+Switch tổng1 7.550.000
+  7.550.000
+     4-Máy tính để bàn VietcomS16M + màn hình Led AOC 2369
++Bộ bàn phím, chuột-Máy tính:
++Chipset Intel H61 chipset
++Ram 2GB DDR3-1333
++CPU Dual-Core 2.8GHz/2M (G1630)
++HDD SATA2, 320GB
++Case Tower mATX
++Lan 100/1000
++VGA Onboard.
+-Màn hình: 
++Loại màn hình: LED
++ Loại bảng điều khiển: AH-IPSKích thước màn hình: 23 inch
++ Độ phân giải: 1920 * 1080 (Full HD)Tỷ lệ màn hình: 16: 9
++ Độ sáng trung bình: 250cd / m2
++Loại giao diện: VGA DVI
++ Mô hình: I2369V6 / WWThương hiệu: AOC
++ Mô hình TPV: I2369V6
+- Bàn phím chuột FulhenPhòng BGH, Phòng thực hành tin,…95 6.500.000 617.500.000    5Dây cáp mạng (LB-LINK Cat5e UTP 305m màu xanh)-Chiều dài mỗi cuộn là 305mét. Có số mét in trên dây mạng.
+-Đáp ứng tiêu chuẩn CE, ISO 9001-2008, FLUKE, ROHS.
+-Vỏ bọc bên ngoài làm bằng nhựa PVC nguyên chất màu xanh dương có khả năng chống cháy và bảo vệ môi trường.
+-Dây dù trợ lực bên trong dây giúp tăng độ bền và khả năng chịu tải
+3 750.000 2.250.000    6Đầu bấm mạng - Đầu bấm mạng (RJ45 cat5e AMP commscope)1005000500.000    7Máng ghen, dây điện,..Máng ghen, dây điện, các vật tư nhỏ lẻ và kinh phí lắp đặt phòng mạng10.000.000    8Gói mạngSử dụng mạng cáp quang gói Fast 60MB/s của VNPT1 năm8.448.0008.448.000    9Máy chủ server240.000.00040.000.000
+    10Tổng chi phí700.400.000    3.5 Lắp đặt phần cứng và cài đặt hệ thống mạng
+3.5.1 Lắp đặt phần cứng
+- Tiến hành thi công cáp mạng
+- Triển khai các thiết bị dẫn (ống nhựa, nẹp,..)
+- Lắp đặt các máy tính, thiết bị ngoại vi đúng vị trí như trong sơ đồ vật lý.
+- Đánh dấu sợi dây và kết nối vào switch để tiện cho việc lắp đặt và bảo trì, sửa chữa sau này.
+3.5.2 Cài đặt và cấu hình mạng
+Cấu hình chia VLAN 
+- Cài phần mềm giả lập Cisco packet tracer để bắt đầu chia VLan 
+
+    Hình 3- 13: Phần mềm Cisco
+
+    Hình 3- 14: Sơ đồ chia VLAN cho hệ thống mạng trường THPT KHOÁI CHÂU
+    
+	Để cấu hình được VLAN trước tiên chúng phải đặt địa chỉ IP cho các máy tính. Yêu cầu các mánh tính máy serve trong cùng 1 VLAN phải cùng 1 dải địa chỉ IP (cùng 1 Getway). 
+
+
+● Chia Vlan10, 30, 40 tại Multiayer Switch 
+      Switch>ena
+      Switch#config
+      Switch(config)#vlan 10
+      Switch (config-vlan)#name giaovien
+      Switch (config-vlan)#exit
+      
+      Switch (config)#vlan 30
+      Switch (config-vlan)#name BGH
+      Switch (config-vlan)#exit
+      
+      Switch (config)#vlan 40 
+      Switch (config-vlan)#name phongtin
+      Switch (config-vlan)#exit
+
+
+    Hình 3- 15: Chia VLAN tại Switch tổng
+
+
+● Cấu hình địa chỉ IP cho VLAN
+	Switch#configure 
+      Switch(config)#int vlan10
+      Switch(config-if)#ip add 192.168.1.1 255.255.255.0
+      Switch(config-if)#no shut
+      Switch(config-if)#exit
+      
+      Switch(config)#int vlan30
+      Switch(config-if)#ip add 192.168.2.1 255.255.255.0
+      Switch(config-if)#no shut
+      Switch(config-if)#exit 
+      
+      Switch(config)#int vlan40
+      Switch(config-if)#ip add 192.168.3.1 255.255.255.0
+      Switch(config-if)#no shut
+      Switch(config-if)#exit 
+
+
+    Hình 3- 16: Cấu hình địa chỉ IP cho các VLAN
+
+
+● Gán port cho các VLAN
+      Switch (config)#int range f0/1-3
+      Switch (config-if-range)#switchport access vlan 10
+      Switch (config-if-range)#no shut
+      Switch (config-if-range)#exit
+      
+      Switch (config)#int range f0/4-7
+      Switch (config-if-range)#switchport access vlan 30
+      Switch (config-if-range)#no shut
+      Switch (config-if-range)#exit
+      
+      Switch (config)#int range f0/8-10
+      Switch (config-if-range)#sw acc vlan 40
+      Switch (config-if-range)#no shut
+      Switch (config-if-range)#exit	
+
+
+    Hình 3- 17: Gán port cho các VLAN
+
+Làm tương tự vi các switch nhánh gán các cổng (port) kết nối với PC :
+	- Với switch các phòng tin :
+ Tạo lại Vlan tại switch, gán địa chỉ IP và gán cổng cho từng switch của phòng tin:
+      Switch>ena
+      Switch#config
+      Switch(config)#vlan 40
+      Switch(config-vlan)#name phongtin
+      Switch(config-vlan)#exit
+      Switch(config)#int vlan 40
+      Switch(config-if)#
+      Switch(config-if)#ip add 192.168.3.1 255.255.255.0
+      Switch(config-if)#no shut 
+      Switch(config-if)#exit
+      Switch(config)#int range f0/2
+      Switch(config-if-range)#sw acc vlan 40
+      Switch(config-if-range)#no shut
+      Switch(config-if-range)#exit
+
+
+
+    Hình 3- 18: Cấu hình với switch phòng tin 1 
+
+- Tương tự, cấu hình với 2 switch ở 2 phòng còn lại.
+Cấu hình AD
+- Vào Start VV All Programs    Chọn Manage Your Server
+    
+    Hình 3- 19: Cấu hình AD
+- Cửa sổ của Manage Your Server được mở ra.
+    
+    Hình 3- 20: Cửa sổ của Manage Your Server được mở ra
+- Click chọn Add or Remove a role.
+    
+    Hình 3- 21: Click chọn Add or Remove a role
+- Cửa sổ Preliminary Steps được mở ra đđ Chọn Next.
+    
+    Hình 3- 22: Cửa sổ Preliminary Steps được mở ra đđ Chọn Next.
+
+
+- Cửa sổ Server Role xuất hiện.
+    
+    Hình 3- 23: Cửa sổ Server Role xuất hiện
+- Chọn Domain Controller (Active Directory) DD Next…
+    
+    Hình 3- 24: Chọn Domain Controller (Active Directory) DD Next…
+    
+    
+    Hình 3- 25: Chọn next
+    
+    Hình 3- 26: Click Next
+- Đọc các thông tin trong trang này và nhấn Next. Trang Domain Controller Type (Kiểu máy chủ quản trị miền) hiện ra.
+    
+    Hình 3- 27: Chọn “Select Domain...”
+- Giữ nguyên giá trị mặc định “Domain Controller For A New Domain” (Máy chủ quản trị miền cho một miền mới) được lựa chọn và nhấn Next. Trang Create New Domain (Tạo miền mới) xuất hiện .
+    
+    Hình 3- 28: Chọn Next
+- Giữ nguyên giá trị mặc định “Domain In A New Forest” (Miền trong một rừng mới) được lựa chọn và nhấn Next. Trang New Domain Name (Tên miền mới) xuất hiện, bạn gõ vào tên miền của mình:
+     	 Ví dụ: utehy.edu.vn
+    
+    Hình 3- 29: Nhập tên Domain
+- Giữ nguyên giá trị mặc định, nhấn Next:
+    
+    Hình 3- 30: Chọn Next
+- Bạn có thể tuỳ chọn nơi lưu giữ database và log của AD, tuy nhiên nên giữ giá trị mặc định và nhấn Next.
+- Nhấn Next để chập nhận vị trí mặc định của thư mục hệ thống chia sẻ. Trang DNS Registration Diagnostics (Chẩn đoán đăng ký DNS) xuất hiện nn Next….
+    
+    Hình 3- 31: Chọn Next
+    
+    Hình 3- 32: Chọn “Pemissions compatble...”
+- Trang “Summary” (Tổng kết) xuất hiện.
+    
+    Hình 3- 33: Tổng kết chọn “Next”
+- Nhấn Next và đợi quá trình cài đặt kết thúc. 
+    Hình 3- 34: Chờ quá trình cài đặt
+- Đợi quá trình hoàn thành, nhấn Finish và Restart lại máy tính. Hoàn thành công việc cài đặt AD và dịch vụ DNS.
+Cấu hình DNS
+● Cài đặt DNS
+Vào Server Manager VV Roles   Add Roles.Tại bảng Select Server Roles, chọn DNS Server.ư
+    
+    Hình 3- 35:Cài đặt Server Role DNS
+    Sau đó nhấn Next để tiếp tục.
+- Chọn Instal. Tại bảng Confirm Installation Seles xác nhận việc cài đặt.
+
+    Hình 3- 36: Cài đặt DNS Server.
+- Chọn Close để hoàn tất cài đặt.
+
+    Hình 3- 37: Cài đặt thành công DNS Server.
+● Cấu hình DNS
+    Tạo Forward lookup zone:
+- Click chuột phải vào Forward lookup zone chọn New Zone.
+    
+    Hình 3- 38: Tạo Zone thuận
+- Click Next để tiếp tục.
+    
+    Hình 3- 39: Cấu hình Zone thuận
+    	Vì đây là DNS đầu tiên nên chọn Primary zone. Trong DNS, có 3 loại zone là Primary zone là máy chủ DNS chính, Secondary zone là máy chủ DNS dùng để cân bằng tải cho DNS chính. Và Stub zone, đây là loại rất đặc biệt, nó chỉ tạo 1 bản copy tự DNS chính 3 loại bản ghi là NS, SOA, New host A.
+    
+    Hình 3- 40: Cấu hình Zone Type thuận
+- Điển tên domain vào, ở đây domain tạo là ntp.com.vn
+    
+    Hình 3- 41: Đặt tên cho Zone
+- Để mặc định sau đó click Next.
+    
+    Hình 3- 42: Cài đặt Dynamic Update trong DNS
+- Click Finish để kết thúc quá trình tạo zone.
+    
+    Hình 3- 43: Thông báo cài đặt thành công
+● Tạo Reverse lookup zones
+- Click chuột phải vào Reverse lookup zone sau đó chọn new zone.
+    
+    Hình 3- 44:Tạo zone ngược
+
+
+- Click Next.
+    
+    Hình 3- 45: Cấu hình zone ngược
+- Click chọn “Primary zone”.
+    
+    Hình 3- 46: Chọn giao thức trong Primary zone
+    
+
+- Tick chọn IPv4 Reverse lookup zone.
+
+    Hình 3- 47: Chọn giao thức IP
+-  Điền giải mạng mà DNS server đang sử dụng sau đó click Next.
+- Điền địa chỉ IP của máy cần phân giải sau đó click nút Browse.
+
+    Hình 3- 48: Điền địa chỉ IP cho bản ghi
+
+
+- Trỏ đến bản ghi A là bản ghi của máy có địa chỉ IP như đã gán ở trên.
+    
+    Hình 3- 49: Trỏ đến bản ghi A
+- Sau đó click OK để hoàn tất.
+    
+    Hình 3- 50: Hoàn tất tạo bản ghi phân giải ngược
+    	Ngoài các bản ghi trên, trong DNS còn có rất nhiều bản ghi khác. Tiện dụng nhất là vẫn các bản ghi vừa tạo và các bản ghi khác như MX.
+● Kiểm tra DNS vừa tạo
+    Vào CMD gõ lệnh nslookup, sau đó các câu lệnh truy vấn để kiểm tra. 
+    
+    Hình 3- 51: Kiểm tra DNS vừa tạo
+
+    Cấu Hình DHCP
+● Cài đặt dịch vụ DHCP
+    	Việc cài đặt dich vụ DHCP Windows Server 2008 DCHP Server hoàn toàn dễ dàng. DHCP Server hiện là một “role” của Windows Server 2008 – chứ không phải là một thành phần riêng biệt như trước kia.
+     	Để cài đặt Windows Server 2008 DCHP Server, bạn cần một hệ thống Windows Server 2008 đã được cài đặt và được cấu hình với địa chỉ IP tĩnh. Cần biết dải địa chỉ IP mạng của mình, dải địa chỉ IP mà bạn muốn sử dụng cho các máy khách, các địa chỉ IP của máy chủ DNS và cổng mặc định. Thêm vào đó, bạn cũng lập kế hoạch cho tất cả các subnet có liên quan, phạm vi mà bạn sẽ định nghĩa và những ngăn chặn nào cần tạo ra.
+- Mở Server Manager từ Administrative Tools, right click Roles, chọn Add Roles
+    
+    Hình 3- 52: Add roles cài đặt DHCP
+- Trong cửa sổ “Before You Begin”, chọn Next
+    
+    Hình 3- 53: Trong cửa sổ “Before You Begin”, chọn Next
+- Trong cửa sổ “Select Server Roles”, đánh dấu chọn vào ô DHCP Server, chọn Next
+    
+    Hình 3- 54: Bảng thông báo chọn dịch vụ cần cài đặt
+- Trong cửa sổ “DHCP Server”, chọn Next.
+    
+    Hình 3- 55: Chọn Next
+- Trong cửa sổ “Select Network Connection Bindings” kiểm tra có đánh dấu chọn vào địa chỉ IP hiện thời của máy Server, chọn Next.
+    
+    Hình 3- 56: Chọn Next
+- Trong cửa sổ “Specify IPv4 DNS Server Settings”, để nguyên cấu hình mặc định, chọn Next.
+    
+    Hình 3- 57: Điền địa chỉ IP của Domain name
+- Trong cửa sổ Specify IPv4 WINS Server Settings, chọn “WINS is not required for applications on this network” chọn Next.
+    
+    Hình 3- 58: Chọn Next
+- Trong cửa sổ “Add or Edit DHCP Scopes”, chọn Add.
+    
+    Hình 3- 59: Trong cửa sổ “Add or Edit DHCP Scopes”, chọn Add.
+
+
+- Trong cửa sổ Add Scope, cấu hình thông số TCP/IP như trong hình, chọn OK.
+
+    Hình 3- 60: Điền thông tin trong Scope
+- Trong cửa sổ “Configure DHCPv6 Stateless Mode”, chọn Disable DHCP stateless mode for this server, chọn Next.
+    
+    Hình 3- 61: Chọn Disable DHCP stateless mode for this server, chọn Next.
+    
+
+
+- Trong cửa sổ “Authorize DHC Server”, giữ cấu hình mặc định, chọn Next.
+    
+    Hình 3- 62: “Authorize DHC Server”, giữ cấu hình mặc định, chọn Next.
+- Trong cửa sổ “Confirm Installation Selections”, chọn Install.
+    
+    Hình 3- 63: Confirm Installation Selections”, chọn Install.
+    
+- Quá trình cài đặt diễn ra
+    
+    Hình 3- 64: Quá trình cài đặt
+- Trong cửa sổ ‘‘Installation Results”, chọn Close.
+    
+    Hình 3- 65: Cài đặt xong. Chọn close để thoát
+- Mở DHCP từ Administrative Tools, kiểm tra đã cài đặt và cấu hình thành công DHCP Server.
+
+    Hình 3- 66: Kiểm tra Scope đã tạo trong DHCP
+
+Cài đặt TMG
+    TMG 2010  
+
+    Hình 3- 67: Tự động cấu hình trước khi cài đặt
+Các bạn chọn ‘‘Run Preparaion Tool’’, nó sẽ tự add và config các phần liên quan trước khi cài đặt.
+
+    Hình 3- 68: Các chính sách khi cài đặt
+
+- Sau khi xong, các bạn chọn ‘‘Run Installation Wizard’’ để bắt đầu quá trình càI đặt TMG.
+
+    Hình 3- 69: Cài đặt dịch vụ và quản lý TMG
+- Chọn như trên màn hình, làm theo các bước.
+
+    Hình 3- 70: Chọn Card mạng khi cài đặt
+- Chọn card Internal, quá trình cài đặt mất khoảng 15 phút.
+    Cấu hình TMG 2010 theo mô hình 3-leg Perimeter 
+- Sau khi cài đặt xong, tại màn hình chính của TMG Launch Getting Started Wizard.
+
+    Hình 3- 71: Cấu hình mạng cho TMG
+- Chọn: Configure network settings.
+
+    Hình 3- 72: Cấu hình mô hình 3-leg perimeter
+- Chọn kiểu 3–Leg perimeter, nhấn Next.
+
+    Hình 3- 73: Cài đặt Card mạng Internal
+
+
+- Chọn Card nốI vào mạng Internal, nhấn Next
+
+    Hình 3- 74: Cài đặt Card Internet
+    Chọn card nối ra Internet, nhấn Next.
+
+    Hình 3- 75: Cài đặt Card DMZ
+Chọn card nốI vào vùng DMZ, và ở bước này tôi chọn Public vì lý do vùng DMZ dùng IP Public., nhấn Next.
+
+    Hình 3- 76: Hoàn tất cà đặt Card mạng trên TMG
+    Nhấn Finish. Quay về màn hình sau:
+
+    Hình 3- 77: Cấu hình hệ thống trên TMG
+- Chọn Configure system settings.
+
+    Hình 3- 78: Các chính sách trước khi cấu hình hệ thống
+- Nhấn Next.
+
+    Hình 3- 79: Xác nhận máy chủ TMG
+
+
+- Nhấn Next.
+
+    Hình 3- 80: Hoàn tất cấu hình hệ thống TMG
+- Nhấn Finish. Quay về màn hình sau để tiếp tục.
+
+    Hình 3- 81: Xác nhận các tùy chọn để cấu hình TMG
+
+
+- Chọn Next.
+
+    Hình 3- 82: Cài đặt cấu hình từ xa TMG
+- Chọn None…
+
+    Hình 3- 83: Hoàn tất cấu hình TMG
+- Nhấn Close, để kết thúc quá trình cấu hình.
+● Cấu hình 1 số luật 
+⮚ Cho phép người dung trong công ty sử dụng Internet
+Click chuột phải Firewall Policy => New => Access ruler..
+
+    Hình 3- 84: Firewall Policy => New => Access ruler
+Nhập tên Ruler
+
+    Hình 3- 85: Nhập tên Ruler
+
+
+- Chọn Allow để truy cập ra bên ngoài
+
+    Hình 3- 86: Chọn Allow để truy cập ra bên ngoài
+- Chọn Next => add DNS,HTTP,HTTPS 
+
+    Hình 3- 87: Chọn Next => add DNS,HTTP,HTTPS 
+
+    
+
+- All Next. Rồi chọn Finish
+
+    Hình 3- 88: Finish
+3.6 Cài đặt 1 số phần mềm, dịch vụ cho các máy PC
+3.6.1 Phần mềm NetOP School:
+	Cài đặt phần mềm: 
+		Tại máy client:
+	Bước 1: Sau khi giải nén chạy file NetOpSchoolStudent_UK.msi trong thư mục NetOP School 6.12 cho máy client.
+	Bước 2: Chọn Next và chọn “I accept the terms in the License Agreement” rồi chọn Next:
+
+    Hình 3- 89: Chọn tích “I accept the terms in the license Agreement”
+ 
+	Bước 3: Điền các thông tin User name, Organization, Serial number và Next. (Ở tab Serial number ta lấy key ở file “keygen” để điền vào.)
+
+    Hình 3- 90: Điền thông tin ở cửa sổ Customer information  
+	Bước 4: Tại cửa sổ Setup type ta chọn Complete chọn next - > Next.
+
+    Hình 3- 91:  Chọn complete ở cửa sổ Setup type  
+
+	Bước 5: Tại cửa sổ Ready to install tích chọn “Save installation files for future ues” rồi click chọn Install
+
+    Hình 3- 92: Tích “Save installation…” chọn Install 
+	Cuối cùng: Chọn Finish để kết thúc quá trình cài đặt
+
+    Hình 3- 93: Chọn finish kết thúc quá trình cài đặt
+ 	
+3.6.2 Phần mềm diệt vi-rút:
+	Tải và mua bản quyền phần mềm Bkav mới nhất tại link: http://www.bkav.com.vn/.
+	Sau khi tải về chúng ta chạy file BkavHome.exe vừa được tải về, cửa sổ Bkav hiện ra để bắt đầu quá trình cài đặt.
+
+    Hình 3- 94: Thiết lập đường dẫn cài đặt Bkav Home 
+	Bạn có thể thay đổi thiết lập đường dẫn thư mục chứa phần mềm Bkav Home và các biểu tượng của Bkav Home trên màn hình, bạn nên để các thông số theo mặc định rồi bấm nút "Cài đặt" để bắt đầu quá trình cài đặt Bkav Home (xem hình trên).
+
+    Hình 3- 95: Kết thúc quá trình cài đặt Bkav 
+
+	Quá trình cài đặt thành công, phần mềm Bkav Home sẽ yêu cầu bạn khởi động lại máy tính để hoàn tất quá trình cài đặt, bạn bấm nút "Khởi động lại" để hoàn thành (xem hình trên).
+	Máy tính được khởi động lại, Chúc mừng, bạn đã cài đặt thành công Bkav Home!Lúc này biểu tượng của Bkav Home sẽ xuất hiện trên màn hình Desktop và khay hệ thống (gần đồng hồ phía dưới cùng bên trái màn hình).
+	Ngoài ra còn 1 số phần mềm khác như: Bộ ứng dụng văn phòng (Office), Phần mềm điều khiển từ xa (Teamview, UltraView)…
+
+
+CHƯƠNG 4: 
+KẾT LUẬN
+4.1 Kết quả đạt được
+	Qua quá trình tìm hiểu, khảo sát quy trình, nghiệp vụ, yêu cầu của trường THPT KHOÁI CHÂU cùng với sự nỗ lực hết mình của bản thân, em đã hoàn thành đề tài đúng thời gian quy định và đạt được một số thành quả như sau:
+- Hiểu được quy trình các bước để thiết kế một mô hình mạng
+o + Khảo sát
+o + Phân tích
+o + Lên kế hoạch
+o + Thiết kế
+o + Thi công
+- Nắm được phần nào công việc quản lý của một nhà thiết kế, quản trị viên tương lai.
+- Củng cố lại kiến thức về thực hành mạng.
+- Nâng cao tinh thần và trách nhiệm làm việc nhóm
+.....
+4.2 Hướng phát triển
+	Để có thể khắc phục được một số mặt hạn chế của đề tài thì có một số hướng phát triển như sau:
+- Xây dựng và triển khai hệ thống thực.
+- Thực hiện cả việc cài đặt lẫn vận hành chứ không chỉ dừng lại ở thiết kế
+- Cần học hỏi kinh nghiệm từ những người đi trước.
+
+
+
+TÀI LIỆU THAM KHẢO
+[1]. ISP Network Design IBM 2010
+[2]. LAN Design Manual. BICSI 2013
+[3]. Giáo trình : Thiết kế và xây dựng mạng LAN và WAN (Chương trình tổng thể của cải cách hành chính của CP giai đoạn 2001-2010). 
+[4]. TCP/IP Network Administration. Craig Hunt, O’Reilly &  Associates  2014
+
+    
+Thiết kế hệ thống mạng cho trường THPT KHOÁI CHÂU
+    
+    
+2
+    
+    

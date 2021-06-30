@@ -1,0 +1,555 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Mạng xã hội ngày càng phổ biến và gần gũi với mọi người, đặc biệt đối với giới trẻ. Những lợi ích của mạng xã hội sẽ đem lại cho chúng ta rất nhiều và tác động tích cực nếu chúng ta biết cách sử dụng chúng một cách hợp lí. Nó có thể giúp chúng ta dễ dàng tìm hiểu, nắm bắt được nhiều thông tin quan trọng, giao lưu kết bạn với tất cả mọi người ở khắp mọi nơi và bạn hoàn toàn có thể tận dụng để giải đáp những thắc mắc.
+    Mạng xã hội là một trong những cách tốt nhất để giới thiệu ứng dụng đến với tất cả mọi người. Nó cũng giúp cho chúng ta tìm hiểu được nhiều thông tin quan trọng mà các phương tiện truyền thông khác không có. Tiếp cận thông tin từ trên mạng xã hội là một cách rất hiệu quả. Bạn có thể học hỏi thêm rất nhiều kiến thức và tìm kiếm những thông tin cần thiết. Mạng xã hội cũng có thể chia sẻ những thông tin, quan điểm của bản thân mình với tất cả mọi người trên mạng xã hội.
+    Nhận thấy nhu cầu của người dùng thông qua thiết bị di động là rất lớn, dưới sự hướng dẫn và chỉ bảo của cô, nhóm em đã thực hiện đồ án với đề tài “XÂY DỰNG ỨNG DỤNG CẨM NANG Y HỌC” nhằm hiểu rõ các kỹ thuật lập trình trên thiết bị di động, đặc biệt là kỹ thuật để có thể xây dựng một ứng dụng hoàn chỉnh.
+1.2 Mục tiêu của đề tài
+        Xây dựng ứng dụng cẩm nang y học trên Android gồm các chức năng: 
+- Xem danh mục thuốc
+- Xem danh mục bệnh
+- Tìm kiếm bài viết theo tên thuốc, tên bệnh
+- Tìm kiếm bệnh viện và nhà thuốc
+- Đọc tin tức ở các chế độ online và offline.
+1.3 Giới hạn và phạm vi của đề tài
+	Đề tài xây dựng ứng dụng cẩm nang y học sử dụng các công nghệ trong lập trình như: 
+-  SQL Server 2012.
+- Công cụ lập trình Visual Studio 2010 và Android Studio.
+- Môi trường lập trình Android Studio.
+1.4 Nội dung thực hiện
+- Xây dựng ứng dụn Một ứng dụng cẩm nang y học gồm các chức năng trên.
+- Một bản báo cáo gồm đầy đủ các phần theo quy định của khoa Công Nghệ Thông Tin - trường Đại học Sư phạm Kỹ thuật Hưng Yên.
+1.5 Phương pháp tiếp cận
+    Sử dụng các phương pháp nghiên cứu: 
+- Phương pháp đọc tài liệu;
+- Phương pháp phân tích mẫu;
+- Phương pháp thực nghiệm.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Android
+2.1.1 Hệ điều hành Android là gì?
+    Android là một mã nguồn mở và dựa trên hệ điều hành Linux, chạy trên các thiết bị di động như điện thoại thông minh và máy tính bảng. Android được phát triển bởi Open Handset Alliance, dẫn đầu bởi Google, và các công ty khác.
+    Android cung cấp một phương pháp tiếp cận thống nhất để lập trình ứng dụng cho các thiết bị di động, nghĩa là các lập trình viên chỉ cần lập trình cho Android, và các ứng dụng của họ sẽ có thể chạy trên các thiết bị khác nhau được hỗ trợ bởi Android.
+    Các phiên bản beta đầu tiên của Software Development Kit Android (SDK) được phát hành bởi Google trong năm 2007 trong khi đó phiên bản thương mại đầu tiên, Android 1.0, được phát hành vào tháng 9 năm 2008.
+    Mã nguồn của Android được phát hành theo giấy phép phần mềm tự do và nguồn mở. Google công khai hầu hết các mã theo giấy phép phiên bản Apache 2.0 và phần còn lại, Linux kernel, theo giấy phép phiên bản GNU General Public 2.
+2.1.2 Tại sao nên sử dụng Android?
+      
+- Open Soure: Mã nguồn mở.
+- Larger Developer and Community Reach: Có những lập trình viên và cộng đồng phát triển lớn.
+- Increased marketing: phát triển thương mại.
+- Inter app integration: ứng dụng hội nhập quốc tế.
+- Reduce cost of development: giảm chi phí phát triển.
+- Higher Success Ratio: Tỷ lệ thành công cao hơn.
+- Rich development Environment:Môi trường phát triển đa dạng
+2.1.3 Giới thiệu về Android studio và Android SDK
+    Android Studio chạy trên Windows, Mac và Linux, nhằm thay thế cho Eclipse Android Development Tool (ADT) vốn được sử dụng làm IDE chính trong các năm trước đó.
+    Một số tính năng nổi bật:
+- Bộ công cụ build ứng dụng dựa trên Gradle (thay vì Maven).
+- Chức năng dò và sửa lỗi nhanh, hướng Android.
+- Công cụ chỉnh sửa màn hình dạng kéo thả tiện lợi.
+- Các wizard tích hợp nhằm giúp lập trình viên tạo ứng dụng từ mẫu có sẵn.
+- Tích hợp Google Cloud Platform, dễ dàng tích hợp với Google Cloud Messaging và App Engine của Google.
+    The Android SDK (software development kit) là một tập hợp các công cụ được sử dụng để phát triển ứng dụng cho Android. 
+    Android SDK bao gồm:
+- Các thư viện đòi hỏi
+- Bộ dò lỗi (Debugger)
+- Thiết bị mô phỏng (emulator)
+- Các tài liệu liên quan cho Android API.
+- Các đoạn code mẫu.
+- Các hướng dẫn cho hệ điều hành Android
+    Nếu Android Studio là trình soạn thảo code (IDE) thì Android SDK là bộ tổng hợp các công cụ để build app, các bản mẫu máy ảo Android (sử dụng để test app) cần thiết để làm ra một ứng dụng Android hoàn chỉnh.
+2.2 Tổng quan về Firebase
+2.2.1 Firebase là gì?
+    Firebase là một nền tảng di động giúp bạn nhanh chóng phát triển các ứng dụng chất lượng cao, phát triển ứng dụng cho người dùng lớn, và kiếm được nhiều tiền hơn. 
+2.2.2  Tại sao nên sử dụng Firebase?
+• Triển khai ứng dụng cực nhanh
+    Với Firebase bạn có thể giảm bớt rất nhiều thời gian cho việc viết các dòng code để quản lý và đồng bộ cơ sở dữ liệu, mọi việc sẽ diễn ra hoàn toàn tự động với các API của Firebase. Không chỉ có vậy Firebase còn hỗ trợ đã nền tảng nên bạn sẽ càng đỡ mất thời gian rất nhiều khi ứng dụng bạn muốn xây dựng là ứng dụng đa nền tảng.
+    Không chỉ nhanh chóng trong việc xây dựng database, Google Firebase còn giúp ta đơn giản hóa quá trình đăng kí và đăng nhập vào ứng dụng bằng các sử dụng hệ thống xác thực do chính Firebase cung cấp.
+• Bảo mật
+    Firebase hoạt động dựa trên nền tảng cloud và thực hiện kết nối thông qua giao thức bảo mật SSL, chính vì vậy bạn sẽ bớt lo lắng rất nhiều về việc bảo mật của dữ liệu cũng như đường truyền giữa client và server. Không chỉ có vậy, việc cho phép phân quyền người dùng database bằng cú pháp javascipt cũng nâng cao hơn nhiều độ bảo mật cho ứng dụng của bạn, bởi chỉ những user mà bạn cho phép mới có thể có quyền chỉnh sửa cơ sở dữ liệu.
+• Tính linh hoạt và khả năng mở rộng
+    Sử dụng Firebase sẽ giúp bạn dễ dàng hơn rất nhiều mỗi khi cần nâng cấp hay mở rộng dịch vụ. Ngoài ra firebase còn cho phép bạn tự xây dựng server của riêng mình để bạn có thể thuận tiện hơn trong quá trình quản lý.
+    Sử dụng Firebase sẽ giúp bạn dễ dàng hơn rất nhiều mỗi khi cần nâng cấp hay mở rộng dịch vụ. Ngoài ra firebase còn cho phép bạn tự xây dựng server của riêng mình để bạn có thể thuận tiện hơn trong quá trình quản lý.
+    Việc Firebase sử dụng NoSQL, giúp cho database của bạn sẽ không bị bó buộc trong các bảng và các trường mà bạn có thể tùy ý xây dựng database theo cấu trúc của riêng bạn.
+
+• Sự ổn định
+    Firebase hoạt động dựa trên nền tảng cloud đến từ Google vì vậy hầu như bạn không bao giờ phải lo lắng về việc sập server, tấn công mạng như DDOS, tốc độ kết nối lúc nhanh lúc chậm, … nữa, bởi đơn giản là Firebase hoạt động trên hệ thống server của Google. Hơn nữa nhờ hoạt động trên nền tảng Cloud nên việc nâng cấp, bảo trì server cũng diễn ra rất đơn giản  mà không cần phải dừng server để nâng cấp như truyền thống.
+• Giá thành 
+    Google Firebase có rất nhiều gói dịch vụ với các mức dung lượng lưu trữ cũng như băng thông khác nhau với mức giá dao động từ Free đến $1500 đủ để đáp ứng được nhu cầu của tất cả các đối tượng. Chính vì vậy bạn có thể lựa chọn gói dịch vụ phù hợp nhất với nhu cầu của mình. Điều này giúp bạn tới ưu hóa được vốn đầu tư và vận hành của mình tùy theo số lượng người sử dụng. Ngoài ra bạn còn không mất chi phí để bảo trì, nâng cấp, khắc phục các sự cố bởi vì những điều này đã có Firebase lo.
+2.3 Tổng quan về Somee
+2.3.1 Somee là gì?
+    Somee.com là một dịch vụ cung cấp host Windows hỗ trợ ASP.NET tốt nhất dành cho ai muốn tìm hiểu mà không muốn mua host đặc biệt là Sinh Viên lập trình web. Ngoài sự hỗ trợ ASP.NET, phiên bản mới nhất Windows Sever 2012 đã được hỗ trợ thêm ngôn ngữ PHP giúp lập trình viên có thể lập trình với ngôn ngữ ASP.NET và PHP. Tuy nhiên trỡ ngại lớn nhất khiến trang web của bạn mất đi sự chuyên nghiệp khi sử dụng dịch vụ host này là QUẢNG CÁO và đi kèm dòng chữ Web hosting by Somme.com.
+    
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Phát biểu bài toán
+    Hoạt động của ứng dụng Cẩm nang Y học hiện tại có thể mô tả như sau:
+- Hiện tại việc tiếp cận thông tin về y tế, sức khỏe của mọi người còn hạn chế, hầu hết mọi người đều xem qua tivi hay sách báo…
+- Hiện nay tuy có một số ứng dụng cẩm nang y học đã có những chức năng như: xem bệnh, thuốc, tìm kiếm.. Tuy nhiên vẫn chưa được đầy .
+- Do vậy cần một ứng dụng cẩm nang y học với nhiều chức năng và phong phú về nội dung: có thể đọc offline, tìm kiếm các bệnh và thuốc nhằm đáp ứng nhu cầu của người dùng và giúp người dùng có thể biết được hơn về y học, đặc biệt ứng dụng có thể mang bên người rất tiện ích cho những bạn  trẻ như: những bạn trẻ thích đi phượt….
+3.1.1 Mô tả hệ thống hiện tại
+3.1.2 Phát biểu bài toán
+    3.1.2.1 Tổng quan về hệ thống mới
+    Từ thực tế đó yêu cầu xây dựng ứng dụng cẩm nang y học giúp mọi người tiếp cận với y học nhiều hơn, ứng dụng được xây dựng trên HĐH Android nhỏ gọn, có thể giúp người dùng mang theo mọi nơi, ngay cả khi di chuyển.
+     Hệ thống gồm các chức năng:
+  •  Danh mục thuốc.
+    Người dùng có thể tra cứu theo tên loại bệnh khác nhau và từ đó hệ thống sẽ hiển thị các tên bệnh tương ứng với loại bệnh vừa được chọn. Khi người dùng nhấn chọn một tên bệnh thì ứng dụng sẽ hiển thị nội dung chi tiết của bệnh đó: định nghĩa, nguyên nhân, triệu chứng, cách phòng chống…
+    
+    
+ •  Danh mục bệnh.
+    Người dùng có thể tra cứu tên loại bệnh, mỗi tên loại bệnh sẽ có nhiều tên thuốc khác nhau. Mỗi một tên thuốc sẽ bao gồm thông tin chi tiết: đơn vị sản xuất, cách sử dụng,..
+ •  Tin tức
+    Ứng dụng sẽ cập nhập những tin tức về sức khỏe của các báo nhằm đáp ứng nhu cầu tìm hiểu thông tin của người dùng.
+ •  Đọc Offline
+    Người dùng có thể thêm các bệnh, thuốc hoặc các bài tin tức vào danh sách offline để đọc trong khi không có mạng hoặc người dùng muốn đọc sau đó.
+ • Xem bản đồ
+    Người dùng có thể xem các bệnh viện và nhà thuốc gần nhất với mình thông qua bản đồ được xây dựng trong ứng dụng. Khi người dùng nhấn, chọn vào biểu tượng của bệnh viện hoặc nhà thuốc thì hệ thống sẽ hiển thị nội dung chi tiết của bệnh viện hoặc nhà thuốc tương ứng với người dùng vừa chọn.
+  • Chia sẻ
+    Người dùng sử dụng chức năng chia sẻ khi người dùng cảm thấy bệnh viện hoặc nhà thuốc đó tốt. Hệ thống sẽ load các ứng dụng mà điện thoại cài đặt, từ đó người dùng chỉ cần chọn một mạng xã hội mà mình muốn chia sẻ như: Facebook, Zalo, Gmail,….
+  • Tìm kiếm
+    Việc tìm kiếm sẽ giúp người dùng có thể tìm kiếm nhanh hơn những thứ mình cần. Ứng dụng hỗ trợ tìm kiếm theo tên thuốc, bệnh và địa điểm của bệnh viện, việc đơn giản cần người dùng thực hiện đó là: nhập tên của loại thuốc, bệnh hoặc địa điểm bệnh viện mình cần thông tin hoặc mình muốn đến.
+    
+
+3.1.2.2  Các mục tiêu chính của hệ thống
+    Hệ thống xây dựng dựng ứng cẩm nang y học cần đạt được những mục tiêu sau:
+- Hệ thống phải quản lý được các chức năng của ứng dụng.
+- Hệ thống được sử dụng trên nền webservice.
+- Hệ thống phải quản lý được các danh mục bệnh và thuốc.
+- Hệ thống phải quản lý được việc cập nhập dữ liệu trên webservice, tìm     kiếm những nhà thuốc và bệnh viện.
+3.1.2.3  Môi trường phát triển
+• Môi trường phần cứng
+- CPU: Pentium IV 3.0 GHz hoặc cao hơn
+- RAM: tối thiểu 512 MB
+- HDD: dung lượng tối thiểu trống 2G
+• Môi trường phần mềm
+- Hệ điều hành: Android
+- Công cụ phát triển: Android  studio
+3.2 Xác định yêu cầu của hệ thống
+3.2.1  Danh sách yêu cầu khách hàng
+a) Danh mục bệnh
+    Ứng dụng cần hỗ trợ chức năng tra cứu các loại bệnh với nhiều loại bệnh khác nhau như: đường hô hấp, tim mạch,….. Sau khi người dùng ấn chọn vào loại bệnh thì ứng dụng sẽ hiển thị các tên bệnh tương ứng.
+    Khi người dùng nhấn vào tên bệnh thì ứng dụng sẽ đưa ra các chức năng của từng bệnh: triệu chứng, cách điều trị và cách phòng ngừa bệnh….
+    
+b) Danh mục thuốc
+    Ứng dụng cần hỗ trợ chức năng tra cứu các loại thuốc với nhiều loại thuốc khác nhau như: chống say xe, chống ung thư,….. Sau khi người dùng ấn chọn vào loại thuốc thì ứng dụng sẽ hiển thị các tên thuốc tương ứng.
+    Khi người dùng nhấn vào tên thuốc thì ứng dụng sẽ đưa ra các chức năng của từng thuốc: cách dùng, cách bảo quản….
+c) Tin tức
+    Ứng dụng cung cấp chức năng đọc tin tức về sức khỏe, y tế từ nhiều báo khác nhau.
+d) Đọc offline
+    Ứng dụng hỗ trợ chức năng đọc offline để người dùng có thể xem lúc không có mạng hoặc muốn lưu lại để đọc sau. Người dùng cần load dữ liệu trước khi thêm vào danh sách.
+e) Xem bản đồ
+    Ứng dụng hỗ trợ chức năng xem bản đồ để giúp người dùng có thể tìm kiếm các bệnh viện hoặc nhà thuốc gần với mìn nhất. Khi người dùng nhấn, chọn vào biểu tượng của bệnh viện hoặc nhà thuốc đó, ứng dụng sẽ lấy dữ liệu từ firebase và hiển thị thông tin bệnh viện tương ứng như: tên, địa điểm, số điện thoại, chia sẻ, chỉ đường.
+    Ứng dụng sẽ hỗ trợ chức năng gọi điện đến bệnh viện đó nếu như người dùng nhấn vào button call trên giao diện.
+    Ứng dụng cũng hỗ trợ chức năng chỉ đường đi ngắn nhất khi người dùng nhấn chọn button chỉ đường. Hệ thống sẽ load dữ liệu và lấy được đường đi ngắn nhất từ vị trí của người dùng đến bệnh viện được chọn.
+f) Chia sẻ
+    Ứng dụng hỗ trợ chức năng chia sẻ khi người dùng muốn chia sẻ lên mạng xã hội. Ứng dụng sẽ lấy các mạng xã hội được cài đặt trong máy tùy vào máy của người dùng được cài đặt những mạng xã hội nào để lấy về như: Facebook, Zalo, Gmail,….
+g) Tìm kiếm
+    Ứng dụng hỗ trợ chức năng tìm kiếm theo tên bệnh, thuốc hoặc tên bệnh viện mà mình cần. Chức năng này giúp cho việc tìm kiếm được nhanh hơn khi người dùng không có thời gian.
+3.2.2  Phạm vi công việc.
+    Dựa trên bản mô tả hệ thống và xác định yêu cầu, ứng dụng Cẩm nang Y học trên Android cần được phát triển trong các phạm vi dưới đây:
+- Các yêu cầu phải được phân tích. Với mỗi yêu cầu phải xác định rõ dữ liệu đầu vào, đầu ra, và quy trình xử lý.
+- Hệ thống phải được lập trình trên nền SDK, ngôn ngữ lập trình java
+- Hệ thống phải được phát triển trên môi trường Android.
+3.3 Phân tích yêu cầu của hệ thống.
+3.3.1 Biểu đồ Use-case
+3.3.1.1 Danh sách các Actor
+    Bảng 1: Danh sách các Actor.
+
+STT    Tên Actor    Ý nghĩa/Ghi chú1    Người dùng    Người sử dụng ứng dụng.2    Người quản lý    Người quản lý ứng dụng.
+    
+    
+
+3.3.1.2 Danh sách các Use-case
+    Bảng 2: Danh sách các Use-case
+STT    Tên Use-case    Ý nghĩa/Ghi chú1 Danh sách bệnhDanh sách các bệnh và thể loại bệnh.2 Danh mục thuốcDanh sách các loại thuốc và thuốc.3 Xem tin tứcXem tin tức liên quan đến sức khỏe.4 Đọc OfflineĐọc offline các bài báo và các bài viết liên quan đến bệnh và thuốc.5 Xem bản đồXem các địa điểm bệnh viện và nhà thuốc.6 Chia sẻChia sẻ thông tin ứng dựng.3.3.2 Biểu đồ Use-case
+    
+    Hình 1: Biểu đồ Use case tổng quát
+    
+
+
+
+
+
+
+
+3.3.3 Đặc tả Use-case
+3.3.3.1 Đặc tả use-case Danh sách bệnh
+a) Biểu đồ Use case của Use case đặc tả
+
+    Hình 2: Biểu đồ use case Danh sách bệnh.
+b) Tóm tắt
+    Người dùng có thể tìm hiểu bệnh theo nhiều thể loại bệnh khác nhau như: 
+- Bệnh hô hấp
+- Bệnh tim mạch
+- Bệnh về mắt…..
+    Khi người dùng nhấn vào loại bệnh thì hệ thống sẽ hiển thị các bệnh của loại bệnh tương ứng.
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+- Hệ thống sẽ load dữ liệu các loại bệnh.
+- Hệ thống lấy thông tin gồm: danh sách các bệnh liên quan đến thể loại vừa được chọn.
+- Khi người dùng nhấn chọn 1 căn bệnh để đọc chi tiết, hệ thống sẽ lấy thông tin, nội dung của căn bệnh đó như: triệu chứng, cách điều trị, cách phòng ngừa.
+➢ Các dòng sự kiện khác
+  “Không có”
+d) Các yêu cầu đặc biệt
+  “Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Điều kiện trước: Người dùng cần xác định căn bệnh mình muốn tìm hiểu thuộc thể loại nào? Từ đó sẽ tìm bệnh một cách chính xác và nhanh nhất.
+- Điều kiện sau
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+- Hệ thống thực hiện thành công : Load được hết nội dung của từng bài viết hay nội dung chi tiết của từng căn bệnh.
+- Hệ thống thực hiện nhiệm vụ thất bại: Thông báo lỗi. Quay lại chức năng trước, chờ người dùng chọn chức năng tiếp theo
+g) Điểm mở rộng
+    “Không có”
+
+
+
+
+
+
+
+
+
+
+
+3.3.3.2 Đặc tả use-case Danh mục thuốc
+a) Biểu đồ Use case của Use case đặc tả
+
+    Hình 3: Biểu đồ use case Danh sách thuốc.
+b) Tóm tắt
+    Người dùng có thể tìm hiểu các loại thuốc theo tên loại thuốc như: 
+- Thuốc chống say xe
+- Thuốc chống dị ứng
+- Thuốc điều trị đau nửa đầu…
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+- Hệ thống sẽ load dữ liệu các loại thuốc.
+- Hệ thống lấy ra thông tin các loại thuốc: tên loại thuốc và tên thuốc.
+- Khi người dùng nhấn chọn 1 loại thuốc thì hệ thống sẽ hiển thị các tên thuốc tương ứng.
+- Khi người nhấn chọn vào tên thuốc thì hệ thống sẽ trả ra các thông tin thuốc bao gồm: 
+- Hình ảnh
+- Tên thuốc
+- Nội dung: SĐK, công dụng,…..
+➢ Các dòng sự kiện khác
+ “Không có”
+d) Các yêu cầu đặc biệt
+ “Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Người dùng cần chọn loại thuốc mình cần.
+- Hệ thống sẽ load dữ liệu của thuốc.
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+- Hệ thống load được hết nội dung của từng loại thuốc hay chi tiết của thuốc.
+g) Điểm mở rộng
+ “Không có”
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.3.3.3 Đặc tả use-case Tin tức
+a) Biều đồ Use case của Use case đặc tả
+
+    Hình 4: Biểu đồ use case Xem tin tức.
+b) Tóm tắt
+    Người dùng có thể đọc tin tức liên quan đến sức khỏe  và y tế của các trang báo.
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+- Người dùng chọn đọc tin tức.
+- Hệ thống lấy về những tin liên quan đến sức khỏe như: hình ảnh, tiêu đề.
+- Khi người dùng muốn đọc nội dung chi tiết hệ thống sẽ hiển thị nội dung bài báo đó trên webview.
+➢ Các dòng sự kiện khác
+	“Không có”
+d) Các yêu cầu đặc biệt
+“Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Người dùng cần chọn tin tức mình muốn đọc.
+- Thực hiện các chức năng của hệ thống.
+
+
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+- Load được nội dung của bài báo và hiển thị đầy đủ thông tin.
+g) Điểm mở rộng
+“Không có”
+3.3.3.4 Đặc tả use-case Đọc offline
+a) Biểu đồ Use case của Use case đặc tả
+
+
+    Hình 5: Biểu đồ use case Đọc Offline.
+b) Tóm tắt
+    Người dùng sử dụng chức năng này để thêm các bài đọc vào danh sách đọc offline để đọc lại khi không có kết nối Internet hoặc lưu lại để đọc sau.
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+- Người dùng chọn chức năng Thêm bài đọc vào danh sách đọc offline.
+- Hệ thống sẽ lưu lại nội dung bài đọc đó và thêm vào danh sách đọc lại sau.
+- Người dùng chọn chức năng Xóa bài đọc khỏi danh sách đọc offline.
+- Hệ thống thực hiện xóa bài đọc khỏi danh sách
+- Người dùng chọn bài đọc trong danh sách đọc offline.
+➢ Các dòng sự kiện khác
+   “Không có”
+d) Các yêu cầu đặc biệt
+   “Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Hệ thống yêu cầu người dùng nhấn chọn thêm vào đọc offline.
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+- Hệ thống trả về kết quả sau khi thực hiện.
+g) Điểm mở rộng
+   	“Không có”
+3.3.3.5 Đặc tả use-case Xem bản đồ
+a) Biểu đồ Use case của Use case đặc tả
+
+    Hình 6: Biểu đồ use case Xem bản đồ.
+b) Tóm tắt
+    Người dùng sử dụng chức năng này để xem các địa điểm của bệnh viện và nhà thuốc gần nhất với mình.
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+- Người dùng chọn chức năng Xem bản đồ.
+- Hệ thống sẽ lấy dữ liệu từ firebase để hiển thị lên bản đồ.
+- Người dùng muốn xem thông tin chi tiết của bệnh viện hoặc nhà thuốc gần mình thì chỉ cần nhấn chạm,ứng dụng sẽ hiện thị thông tin đầy đủ của bệnh viện đó thông qua giao diện mới.
+
+➢ Các dòng sự kiện khác
+     “Không có”
+d) Các yêu cầu đặc biệt
+     “Không có”
+e) Trạng thái hệ thống sau khi thực hiện Use-case
+- Hệ thống yêu cầu người dùng nhấn chọn xem bản đồ.
+- Hệ thống trả về kết quả sau khi thực hiện.
+f) Điểm mở rộng
+     “Không có”
+3.3.3.6 Đặc tả use-case Chia sẻ
+a) Biểu đồ Use case của Use case đặc tả
+
+    Hình 7: Biểu đồ use case Chia sẻ.
+b) Tóm tắt
+    Người dùng sử dụng chức năng này khi muốn chia sẻ bệnh viện hoặc nhà thuốc mà mình muốn đến các ứng dụng xã hội như: facebook, zalo,….
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+- Người dùng chọn chức năng Chia sẻ.
+- Hệ thống sẽ lấy dữ liệu và chia sẻ lên các ứng dụng có sẵn trong điện thoại.
+- Người dùng nhấn chọn mạng xã hội mà mình muốn chia sẻ.
+
+➢ Các dòng sự kiện khác
+    “Không có”
+d) Các yêu cầu đặc biệt
+    “Không có”
+e) Trạng thái hệ thống sau khi thực hiện Use-case
+- Hệ thống yêu cầu người dùng nhấn chọn xem bản đồ.
+- Hệ thống trả về kết quả sau khi thực hiện.
+f) Điểm mở rộng
+    “Không có”
+3.3.3.7 Đặc tả use-case Tìm kiếm
+a) Biểu đồ Use case của Use case đặc tả
+
+    Hình 8: Biểu đồ use case Tìm kiếm.
+b) Tóm tắt
+    Người dùng sử dụng chức năng này khi muốn tìm kiếm thông tin chính xác các loại bệnh, thuốc hoặc địa điểm mình muốn tìm.
+    
+    
+    
+    
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+- Người dùng chọn chức năng Tìm kiếm.
+- Người dùng cần nhập tên loại bệnh, thuốc hoặc địa điểm mình cần tìm.
+- Hệ thống sẽ lấy dữ liệu và hiển thị thông tin.
+- Người dùng nhấn chọn để xem thông tin chi tiết, với địa điểm thì người dùng có thể xem đường đi ngắn nhất đến nơi mình cần tìm.
+➢ Các dòng sự kiện khác
+    “Không có”
+d) Các yêu cầu đặc biệt
+    “Không có”
+e) Trạng thái hệ thống sau khi thực hiện Use case
+- Hệ thống yêu cầu người dùng nhấn chọn xem bản đồ.
+- Hệ thống trả về kết quả sau khi thực hiện.
+f) Điểm mở rộng
+    “Không có”
+3.3.4 Biểu đồ lớp
+
+    Hình 9: Biểu đồ lớp mức phân tích.
+    
+3.3.5 Danh sách các lớp đối tượng và quan hệ
+    Bảng 3: Danh sách các lớp đối tượng
+STTTên lớp/Thuộc tínhLoạiÝ nghĩa/Nghi chú    1ThuocPublicLớp lưu trữ thông tin các loại thuốc.    2CTThuocPublicLớp lưu trữ thông tin chi tiết từng loại thuốc.    3BenhPublicLớp lưu trữ thông tin loại bệnh.    4CTBenhPublicLớp lưu trữ thông tin chi tiết của từng bệnh.
+
+
+3.3.6 Mô tả chi tiết từng lớp đối tượng
+a) Lớp Thuoc
+    Bảng 4: Lớp Thuoc
+STTTên thuộc tínhLoạiRàng buộc    Ghi chú1maLoaiThuocIntPrimary KeyMã loại thuốc.2tenLoaiThuocText Not nullTên Loại Thuốc.b) Lớp CTThuoc
+    Bảng 5: Lớp CTThuoc
+STTTên thuộc tínhLoạiRàng buộc    Ghi chú1maThuocIntPrimary KeyMã thuốc.2maLoaiThuocintForeign KeyMã loại thuốc.3tenThuocText Not nullTên Thuốc.4noiDungText Not nullNội dung chi tiết thuốc.5hinhAnhTextNot nullHình ảnh.c) Lớp Benh
+    Bảng 6: Lớp Benh.
+STTTên thuộc tínhLoạiRàng buộc    Ý nghĩa/ghi chú1maLoaiBenhIntPrimary KeyMã loại bệnh.2tenLoaiBenhText Not nullTên Loại Bệnh.
+    
+
+d) Lớp CTBenh
+    Bảng 7: Lớp CTBenh.
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1maBenhIntPrimary KeyMã bệnh.2maLoaiBenhintForeign KeyMã loại bệnh.3tenBenhText Not nullTên Bệnh.4noiDungText Not nullNội dung chi tiết của bệnh.e) Lớp Bao
+    Bảng 8: Lớp Bao.
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1tieuDeTextNot nullTiêu đề 2LinkText Not nullLink bài báo3hinhAnhTextNot nullHình ảnh4ngayThangText Not nullNgày tháng tương ứng với trang báo
+    
+
+f) Lớp BenhVien
+    Bảng 9: Lớp BenhVien
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1tenBenhVienTextNot nullTên bệnh viện2diaChiText Not nullĐịa chỉ3soDienThoaiTextNot nullSố điện thoại4LatTextNot nullTọa độ5LngTextNot nullTọa độ6hinhAnhTextNot nullHình ảnh3.3.7 Biểu đồ tuần tự
+3.3.7.1  Biểu đồ Danh mục thuốc 
+    
+    Hình 10: Biểu đồ tuần tự Danh sách thuốc
+3.3.7.2  Biểu đồ tuần tự Danh sách bệnh
+
+    Hình 11: Biểu đồ tuần tự Danh sách bệnh.
+3.3.7.3  Biều đồ tuần tự Đọc tin tức
+    
+    Hình 12: Biểu đồ tuần tự Đọc tin tức.
+    
+    
+    
+3.3.7.4  Biều đồ tuần tự Đọc offline
+a) Thêm
+
+    Hình 13: Biểu đồ tuần tự Thêm đọc offline.
+b) Xóa
+
+    Hình 14: Biểu đồ tuần tự Xóa đọc offline.
+3.3.7.5  Biều đồ tuần tự Xem bản đồ
+    
+    Hình 15: Biểu đồ tuần tự Xem bản đồ.
+3.3.7.6  Biều đồ tuần tự Tìm kiếm
+a) Tìm kiếm theo tên bệnh
+
+    Hình 16: Biểu đồ tuần tự Tìm kiếm theo tên bệnh.
+    
+b) Tìm kiếm theo tên thuốc
+
+    Hình 17: Biểu đồ tuần tự Tìm kiếm theo tên thuốc.
+    
+c) Tìm kiêm địa điểm
+
+    Hình 18: Biểu đồ tuần tự Tìm kiếm địa điểm.
+3.3.7.7  Biều đồ tuần tự Chia sẻ
+         
+    Hình 19: Biểu đồ tuần tự Chia sẻ.
+3.4 Thiết kế cơ sở dữ liệu
+3.4.1  Mô hình dữ liệu quan hệ
+3.4.1.1  Lược đồ quan hệ
+    
+    Hình 20: Lược đồ quan hệ.
+3.4.1.2  Danh sách các bảng trong lược đồ quan hệ
+    Bảng 10: Các bảng trong lược đồ.
+STT    Tên bảng    Ý nghĩa/ Ghi chú1tblBenhLưu tên loại bệnh2tbl_CTBenhLưu thông tin chi tiết của bệnh3tblThuocLưu tên thuốc4tbl_CTThuocLưu thông tin chi tiết của thuốc5tblBaoLưu thông của bài báo
+    
+3.4.2  Mô tả chi tiết từng bảng trong CSDL
+a) Bảng Benh
+    Bảng 11: Bảng Benh.
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1maLoaiBenhIntPrimary KeymaLoaiBenh2tenLoaiBenhNvarchar(50)Not nullTên loại bệnhb) Bảng CTBenh
+    Bảng 12: Bảng CTBenh.
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1maBenhintPrimary KeyMã bệnh2maLoaiBenhintForeign Keyid3tenBenhNvarchar(50)Not nullTên bệnh4hinhAnhTextNot nullHình ảnh5noiDungNvarchar(MAX)Not nullNội dung c) Bảng Thuoc
+    Bảng 13: Bảng Thuoc.
+TTTên trườngKiểu dữ liệuRàng buộcMô tả1maLoaiThuocintPrimary KeyMã loại thuốc.2tenLoaiThuocNvarchar(50)Not nullTên loại thuốc.
+    
+
+d) Bảng CTThuoc
+    Bảng 14: Bảng CTThuoc.
+TTTên trườngKiểu dữ liệuRàng buộcMô tả1maThuocintPrimary KeyMã thuốc.2maLoaiThuocintForeign KeyMã loại thuốc.3tenThuocNvarchar(50)Not nullTên thuốc.4hinhAnhTextNot nullHình ảnh.5noiDungNvarchar(MAX) Not nullNội dung .e) Bảng BenhVien
+    Bảng 15: Bảng BenhVien.
+TTTên trườngKiểu dữ liệuRàng buộcMô tả1tenBenhVienNvarchar(25)Not nullTên bệnh viện2diaDiemNvarchar(25)Not nullĐịa điểm3soDienThoaiTextNot nullSố điện thoại4hinhAnhTextNot nullHình ảnh 5LatTextNot nullTọa độ6LngTextNot nullTọa độ
+
+
+
+
+f) Bảng Bao
+    Bảng 16: Bảng Bao.
+TTTên trườngKiểu dữ liệuRàng buộcMô tả1tieuDeNvarchar(25)Not nullTiêu đề 2LinkNvarchar(25)Not nullLink bài báo3ngayThangDateTimeNot nullNgày tháng tương ứng với trang báo4hinhAnhTextNot nullHình ảnh 3.5 Thiết kế giao diện
+3.5.1 Giao diện chính của chương trình
+    
+    Hình 21: Giao diện chính.
+-  Khi người dùng nhấn vào btnBenh: Ứng dụng sẽ hiện thị danh sách các loại bệnh.
+-  Khi người dùng nhấn vào btnThuoc: Ứng dụng sẽ hiện thị danh sách các loại thuốc.
+-  Khi người dùng nhấn vào btnTimKiem: Ứng dụng sẽ hiện thị danh sách các nhà thuốc và bệnh viện.
+-  Khi người dùng nhấn vào btnBao: Ứng dụng sẽ hiện thị danh sách các bài báo liên quan đến y học.
+-  Khi người dùng nhấn vào btnDowload: Ứng dụng sẽ hiện thị danh sách các bài viết mà người dùng đã tải xuống.
+    
+    
+    
+    
+3.5.2 Giao diện danh sách bệnh
+    
+    Hình 22: Giao diện lựa chọn loại bệnh.
+    
+    Hình 23: Giao diện lựa chọn bệnh.
+3.5.3 Giao diện chi tiết bệnh
+
+    Hình 24: Giao diện chi tiết bệnh.
+3.5.4 Giao diện danh sách thuốc
+
+    Hình 25: Giao diện hiển thị loại thuốc.
+
+    Hình 26: Giao diện hiển thị tên thuốc.
+
+
+
+3.5.5 Giao diện chi tiết thuốc
+    
+    Hình 27: Giao diện chi tiết thuốc.
+3.5.6 Giao diện tin tức
+     
+    Hình 28: Giao diện đọc tin tức.
+3.5.7 Giao diện đọc offline
+    
+    Hình 29: Giao diện đọc offline.
+3.5.8 Giao diện Xem bản đồ
+    
+    Hình 30: Giao diện xem bản đồ.
+3.5.9 Giao diện Xem thông tin chi tiết
+    
+    Hình 31: Giao diện xem thông tin trên bản đồ.
+3.5.10 Giao diện Call
+    
+    Hình 32: Giao diện khi nhấn button Call.
+3.5.11 Giao diện Chia sẻ
+    
+    Hình 33: Giao diện chia sẻ.
+3.5.12 Giao diện chỉ đường
+    
+    Hình 34: Giao diện chỉ đường.
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau thời gian nghiên cứu và phát triển, tác giả đã hoàn thành cơ bản các mục tiêu ban đầu đề ra của đề tài. Đã thực hiện nghiên cứu và đề ra giải pháp lấy dữ liệu từ server và firebase để kết nối với android. Bao gồm giải pháp về thiết kế cơ sở dữ liệu, tổ chức dữ liệu trên Host, giải pháp tùy biến giao diện trang web bằng các APIs.
+    Xây dựng Ứng dụng cẩm nang Y học bước đầu cho phép người dùng có thể đọc tin tức và tìm kiếm các loại bệnh và loại thuốc một cách nhanh chóng. Ứng dụng còn hỗ trợ chức năng chỉ đường đi ngắn nhất giúp người dùng có thể thuận tiện hơn trong việc tìm kiếm đường đi. Ngoài ra, còn có thêm tiện gọi điện trực tiếp đến bệnh viện và chia sẻ thông tin bệnh viện đó một cách nhanh nhất nên rất thuận tiện cho các bạn muốn đi xa.
+4.2 Hạn chế của đề tài
+    Ứng dụng Cẩm nang Y học vẫn chưa được tối ưu phần tìm kiếm đường đi.
+4.3 Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, hướng phát triển tiếp theo của đề tài như sau:
+- Xây dựng thêm chức năng đọc offline với toàn bộ hệ thống.
+- Phát triển để tối ưu hóa được chức năng tìm kiếm đường đi.
+    
+TÀI LIỆU THAM KHẢO
+1. Hoàng Quốc Việt, “Lập Trình android cơ bản”.
+2. Nguyễn Thị Hải Năng, “Lập trình đa phương tiện”.
+3. Nguyễn Hoàng Điệp, “Dịch vụ mạng trên Adroid”.
+4. Harvey M. Deitel, Paul J. Deitel “How To program java 8th”, amazon,2008.
+5.  “https://www.dieutri.vn/”.
+6.  “http://vietnamnet.vn/rss/suc-khoe.rss”.
+x
+x
+    
+PHỤ LỤC
+    Bảng phân chia công việc
+TTThành viênCác công việcGhi chú1Nguyễn Thị ThảoHiển thị được nội dung:
+- Danh sách bệnh
+- Danh mục thuốc
+- Tin tức
+- Hiển thị bản đồ
+Đọc Offline
+Tìm kiếm
+Chia sẻ    
+    
+Xây dựng ứng dụng Cẩm nang Y học
+    
+    
+21
+    
+    

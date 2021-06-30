@@ -1,0 +1,615 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Trong những năm gần đây việc xã hội toàn cầu hoá, học tập là việc cần làm cần thiết hàng ngày hàng giờ, không chỉ để đứng vững trong thị trường việc làm đầy cạnh tranh mà còn giúp nâng cao kiến thức văn hoá, xã hội của mỗi con người. Chúng ta cần học hỏi những kỹ năng mới và nhanh hơn để học những kỹ năng này.
+    Nền kinh tế thế giới đang bước vào giai đoạn kinh tế tri thức. Vì vậy, việc nâng cao hiệu quả chất lượng giáo dục, đào tạo là nhân tố sống còn quyết định sự tồn tại và phát triển. Hơn nữa, việc học tập không chỉ bó gọn trong việc học theo từng cấp, mà còn xuyên suốt cuộc đời mỗi người. Chính vì vậy Website học trực tuyến là một giải pháp hữu hiệu để giải quyết vấn đề này.
+    Sự phát triển mạnh mẽ của Công nghệ Web đã chiếm lĩnh đa số thị trường sản phẩm phần mềm. Số lượng các cá nhân, tổ chức sử dụng website ngày càng nhiều, một đơn vị thiết kế website cần có một giải pháp tối ưu cho việc tạo ra website một cách nhanh nhất đáp ứng yêu cầu của khách hàng.
+    Cuối cùng thì Website học trực tuyến toán lớp 1 là một đề tài có tiềm năng phát triển và có thể giúp ích cho tương lai ở tại Việt Nam.
+1.2 Mục tiêu của đề tài
+    Nghiên cứu và đề ra giải pháp thiết kế web trên nền tảng công nghệ .NET là công nghệ mạnh nhất hiện nay của Microsoft, là một nền tảng mở, khả chuyển, dễ tích hợp, có khả năng mở rộng. Giúp tiết kiệm chi phí phát triển về sau cho đơn vị phát triển phần mềm triển khai phần mềm.  
+    Thiết kế được một Website học toán lớp 1, bước đầu cho phép người dùng tận dụng sự tiến bộ của Internet tiếp cận tới các kiến thức, kỹ năng về môn học Toán lớp 1 một cách dễ dãng nhất. Xây dựng được giao diện thân thiện, dễ sử dụng và thu hút được các em học sinh.
+    Tiếp là hỗ trợ quản trị viên dễ dàng quản lý các bài giảng, quản lý website, quản lý người dùng tham gia website một cách tối ứu và đơn giản nhất. 
+1.3 Giới hạn và phạm vi của đề tài
+    Đề tài Xây dựng website học trực tuyến Toán lớp 1 sử dụng các công nghệ mới trong lập trình như ASP.NET MVC, LINQ, SQL Server 2014 và Công cụ lập trình Visual Studio 2019.
+    Đề tài bao gồm việc tạo ra sản phẩm là 1 website, đào tạo, bảo hành và bảo trì.
+    Giới hạn về các chức năng cơ bản đề ra cho 1 website, không bao gồm các chức năng nâng cao như: thanh toán online.
+1.4 Nội dung thực hiện
+    Hiện một số giải pháp thiết kế web trên nền tảng công nghệ .NET nhưng còn có những mặt hạn chế nhất định như: thiết kế cồng kềnh và phức tạp, khó khăn trong việc phát triển và bảo trì, đòi hỏi người dùng phải có nhiều kỹ năng về lập trình, thực thi còn chậm. Để tránh sự lặp lại trong công việc thiết kế, tiết kiệm thời gian và giảm chi phí cho đơn vị phát triển phần mềm, tác giả đề xuất giải pháp.
+    Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Thiết kế giao diện người dùng thân thiện với đối tượng thiếu nhi, phân tích được số lượng thông tin bài học mà học sinh muốn học trong 1 bài giảng.
+- Phân tích yêu cầu và giải pháp tối ưu Website trên công nghệ .NET.
+- Thiết kế đặc tả hệ thống.
+- Xây dựng Cơ sở dữ liệu.
+- Lập trình cho các Module của hệ thống
+- Kiểm thử hệ thống.
+- Triển khai thực nghiệm hệ thống trên mạng Internet.
+1.5 Phương pháp tiếp cận
+- Cách tiếp cận : Tìm hiểu và áp dụng ASP.NET MVC, Entity Framework, CSS, Bootstrap, Jquery, Javascript vào trong dự án.
+- Nghiên cứu và tham khảo các cách tổ chức website trên các nền tảng ứng dụng, website khác cùng chủ đề.
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu;
+o Phương pháp phân tích mẫu;
+o Phương pháp thực nghiệm.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về ASP.NET
+2.1.1 Giới thiệu về ASP.NET
+    Đầu năm 2002, Microsoft giới thiệu một kỹ thuật lập trình Web khá mới mẻ với tên gọi ban đầu là ASP+, tên chính thức sau này là ASP.Net. Với ASP.Net, không những không cần đòi hỏi bạn phải biết các tag HTML, thiết kế web, mà nó còn chăm sóc mạnh lập trình hướng đối tượng trong quá trình xây dựng và phát triển ứng dụng Web.ASP.Net là kỹ thuật lập trình và phát triển ứng dụng web ở phía Server (Server-side) dựa trên nền tảng của Microsoft .Net Framework.
+Hầu hết, những người mới đến với lập trình web đều bắt đầu tìm hiểu những kỹ thuật ở phía Client (Client-side) như: HTML, Java Script, CSS (Cascading Style Sheets). Khi Web browser yêu cầu một trang web (trang web sử dụng kỹ thuật client-side), Web server tìm trang web mà Client yêu cầu, sau đó gởi về cho Client. Client nhận kết quả trả về từ Server và hiển thị lên màn hình.
+ASP.Net sử dụng kỹ thuật lập trình ở phía server thì hoàn toàn khác, mã lệnh ở phía server (ví dụ: mã lệnh trong trang ASP) sẽ được biên dịch và thi hành tại Web Server. Sau khi được Server đọc, biên dịch và thi hành, kết quả tự động được chuyển sang HTML/JavaScript/CSS và trả về cho Client. Tất cả các xử lý lệnh ASP.Net đều được thực hiện tại Server và do đó, gọi là kỹ thuật lập trình ở phía server.
+2.1.2 Mô hình lập trình MVC trong ASP.NET
+    Mẫu kiến trúc Model – View – Controller được sử dụng nhằm chi ứng dụng thành ba thành phần chính: model, view và controller. Nền tảng ASP.NET MVC giúp cho chúng ta có thể tạo được các ứng dụng web áp dụng mô hình MVC thay vì tạo ứng dụng theo mẫu ASP.NET Web Forsm. Nền tảng ASP.NET MVC có đặc điểm nổi bật là nhẹ (lighweigt), dễ kiểm thử phần giao diện (so với ứng dụng Web Forms), tích hợp các tính năng có sẵn của ASP.NET. Nền tảng ASP.NET MVC được định nghĩa trong namespace System.Web.Mvc và là một phần của name space System.Web.
+      MVC là một mẫu thiết kế (design pattern) chuẩn mà nhiều lập trình viên đã quen thuộc. Một số loại ứng dụng web sẽ thích hợp với kiến trúc MVC. Một số khác vẫn thích hợp với ASP.NET Web Forms và cơ chế postbacks. Đôi khi có những ứng dụng kết hợp cả hai kiến trúc trên.
+       Nền tảng MVC bao gồm các thành phần dưới đây:
+    
+    Models: Các đối tượng Models là một phần của ứng dụng, các đối tượng này thiết lập logic của phần dữ liệu của ứng dụng. Thông thường, các đối tượng model lấy và lưu trạng thái của model trong CSDL. Ví dụ như, một đối tượng Product (sản phẩm) sẽ lấy dữ liệu từ CSDL, thao tác trên dữ liệu và sẽ cập nhật dữ liệu trở lại vào bảng Products ở SQL Server. 
+    Trong các ứng dụng nhỏ, model thường là chỉ là một khái niệm nhằm phân biệt hơn là được cài đặt thực thụ, ví dụ, nếu ứng dụng chỉ đọc dữ liệu từ CSDL và gởi chúng đến view, ứng dụng khong cần phải có tầng model và các lớp liên quan. Trong trường hợp này, dữ liệu được lấy như là một đối tượng model (hơn là tầng model
+          Views: Views là các thành phần dùng để hiển thị giao diện người dùng (UI). Thông thường, view được tạo dựa vào thông tin dữ liệu model. Ví dụ như, view dùng để cập nhật bảng Products sẽ hiển thị các hộp văn bản, drop-down list, và các check box dựa trên trạng thái hiện tại của một đối tượng Product.
+          Controllers: Controller là các thành phần dùng để quản lý tương tác người dùng, làm việc với model và chọn view để hiển thị giao diện người dùng. Trong một ứng dụng MVC, view chỉ được dùng để hiển thị thông tin, controller chịu trách nhiệm quản lý và đáp trả nội dung người dùng nhập và tương tác với người dùng. Ví dụ, controller sẽ quản lý các dữ liệu người dùng gởi lên (query-string values) và gởi các giá trị đó đến model, model sẽ lấy dữ liệu từ CSDL nhờ vào các giá trị này.
+    Mẫu MVC giúp bạn tạo được các ứng dụng mà chúng phân tách rạch ròi các khía cạnh của ứng dụng (logic về nhập liệu, logic xử lý tác vụ và logic về giao diện). Mẫu MVC chỉ ra mỗi loại logic kể trên nên được thiếp lập ở đâu trên ứng dụng. Logic giao diện (UI logic) thuộc về views. Logic nhập liệu (input logic) thuộc về controller. Và logic tác vụ (Business logic – là logic xử lý thông tin, mục đích chính của ứng dụng) thuộc về model. Sự phân chia này giúp bạn giảm bớt được sự phức tạp của ứng dụng và chỉ tập trung vào mỗi khía cạnh cần được cài đặt ở mỗi thời điểm. Ví dụ như bạn chỉ cần tập trung vào giao diện (views) mà không phải quan tâm đến logic xử lý thông tin của ứng dụng.
+    Để quản lý sự phức tạp của ứng dụng, mẫu MVC giúp cho chúng ta có thể kiểm thử ứng dụng dễ dàng hơn hẳn so với khi áp dụng mẫu Web Forms. Ví dụ, trong một ứng dụng ASP.NET Web Forms, một lớp thường được sử dụng để hiển thị thông tin xuất ra cho người dùng và đồng thời xử lý thông tin người dùng nhập. Việc xây dựng các bộ test tự động cho ứng dụng Web Forms là rất phức tạp, bởi để kiểm thử mỗi trang web, bạn phải khởi tạo đối tượng trang, khởi tạo tất cả các control được sử dụng trong trang và các lớp phụ thuộc trong ứng dụng. Và bởi vì có quá nhiều lớp cần được khởi tạo để chạy được trang, thật khó để có thể viết các test chỉ tập trung vào một khía cạnh nào đó của ứng dụng. Và vì thế, kiểm thử đối với các ứng dụng dứa trên nền tảng Web Forms sẽ khó khăn hơn nhiều so với khi áp dụng trên ứng dụng MVC. Hơn thế nữa, việc kiểm thử trên nền tảng Web Forms yêu cầu phải sử dụng đến web server. 
+    Nền tảng MVC phân tách các thành phần và sử dụng các interface (khái niệm giao diện trong lập trình hướng đối tượng), và nhờ đó có thể kiểm thử các thành phần riêng biệt trong tình trạng phân lập với các yếu tố còn lại của ứng dụng.
+Sự phân tách rạch ròi ba thành phần của ứng dụng MVC còn giúp cho việc lập trình diễn ra song song. Ví dụ như một lập trình viên làm việc với view, lập trình viên thứ hai lo cài đặt logic của controller và lập trình viên thứ ba có thể tập trung vào logic tác vụ của model tại cùng một thời điểm.
+Bạn cần phải xem xét kỹ càng việc áp dụng mô hình ASP.NET MVC hay mô hình ASP.NET Web Forms khi xây dựng một ứng dụng. Mô hình MVC không phải là mô hình thay thế cho Web Forms, bạn có thể dùng một trong hai mô hình.
+Trước khi quyết định sử dụng MVC hay Web Forms cho một web site cụ thể, bạn cần phải phân tích lợi ích khi chọn một trong hai hướng.
+Một ứng dụng web được phát triển theo mô hình MVC, có nguyên lý hoạt động xử lý yêu cầu của người dùng như sau:
+- Khi có yêu cầu phát sinh từ người dùng (phía Client), yêu cầu này sẽ được gửi đến phía Server, tại đây Controller sẽ tiếp nhận yêu cầu để xử lý.
+- Bên trong Controller chứa nhiều phương thức (action), mỗi action tương ứng với một yêu cầu cụ thể từ phía người dùng.Controller sẽ lựa chọn action phù hợp với yêu cầu để xử lý. Trong quá trình xử lý, Controller sẽ tương tác với Model để có được dữ liệu mà người dùng mong muốn.
+- Sau khi Controller làm việc với Model để có được dữ liệu theo yêu cầu, Controller sẽ gửi về cho View thành phần Data Model và nhiệm vụ của View là chuyển Data Model nhận được thành dữ liệu ứng dụng và gửi trả về phía Client để hiển thị kết quả yêu cầu.
+
+2.1.3 Ưu điểm của ASP.NET
+      ASP.NET được xây dựng với bộ thư viện đa dạng và phong phú của .Net Framewrork, chăm sóc vượt trội về XML và khả năng truy cập cơ sở dữ liệu qua ADO.net. Bên cạnh đó, ASP và ASPX có thể hoạt động trong cùng một ứng dụng mang lại hiệu năng cao cho website. Có thể nhận thấy ASP.NET mang một phong cách hoàn toàn mới, bạn có thể tách giao diện và code thành 2 phần khác biệt. Điều này giúp cho cho việc quản lý và bảo trì trở nên rõ ràng và đơn giản hơn.
+      Thiết kế web bằng ASP.NET giúp cho hệ điều hành hoạt động trơn tru cũng như tăng tốc độ tải cho trang web của bạn. Với kiến trúc tương tự như các ứng dụng trên Windows, việc sử dụng cũng trở nên dễ dang hơn rất nhiều. Bên cạnh đó ASP.NET có khả năng tự động tạo ra mã HTML cho các Server để website có thể hoạt động trên hầu hết các trình duyệt được khách hàng sử dụng. Đặc biệt, ASP.NET là một ngôn ngữ mất phí nên bạn có thể hoàn toàn yên tâm về vấn đề bảo mật của nó. Với những ưu điểm vượt trội như vậy, ASP.NET luôn được rất nhiều nhà thiết kế web chuyên nghiệp ưa chuộng và sử dụng. Tuy nhiên, nó vẫn còn một số nhược điểm cần khắc phục mà bạn cần chú ý khi xây dựng web doanh nghiệp.
+2.1.4 Ưu điểm của ASP.NET MVC
+• Dễ dàng quản lý sự phức tạp của ứng dụng bằng cách chia ứng dụng thành ba thành phần model, view, controller.
+• Nó không sử dụng view state hoặc server-based form. Điều này tốt cho những lập trình viên muốn quản lý hết các khía cạnh của một ứng dụng.
+• Nó sử dụng mẫu Front Controller, mẫu này giúp quản lý các requests (yêu cầu) chỉ thông qua một Controller. Nhờ đó bạn có thể thiết kế một hạ tầng quản lý định tuyến. Để có nhiều thông tin hơn, bạn nên xem phần Front Controller trên web site MSDN.
+• Hỗ trợ tốt hơn cho mô hình phát triển ứng dụng hướng kiểm thử (TDD).
+• Nó hỗ trợ tốt cho các ứng dụng được xây dựng bởi những đội có nhiều lập trình viên và thiết kế mà vẫn quản lý được tính năng của ứng dụng.
+2.1.5 Các tính năng của nền tảng ASP.NET MVC
+• Tách bạch các tác vụ của ứng dụng (logic nhập liệu, business logic, và logic giao diện), dễ dàng kiểm thử và mặc định áp dụng hướng phát triển TDD. Tất cả các tính năng chính của mô hình MVC được cài đặt dựa trên interface và được kiểm thử bằng cách sử dụng các đối tượng mocks, mock object là các đối tượng mô phỏng các tính năng của những đối tượng thực sự trong ứng dụng. Bạn có thể kiểm thử unit-test cho ứng dụng mà không cần chạy controller trong tiến trình ASP.NET, và điều đó giúp unit test được áp dụng nhanh chóng và tiện dụng. Bạn có thể sử dụng bất kỳ nền tảng unit-testing nào tương thích với nền tảng .NET.
+• MVC là một nền tảng khả mở rộng (extensible) & khả nhúng (pluggable). Các thành phần của ASP.NET MVC được thiết kể để chúng có thể được thay thế một cách dễ dàng hoặc dễ dàng tùy chỉnh. Bạn có thể nhúng thêm view engine, cơ chế định tuyến cho URL, cách kết xuất tham số của action-method và các thành phần khác. ASP.NET MVC cũng hỗ trợ việc sử dụng Dependency Injection (DI) và Inversion of Control (IoC). DI cho phép bạn gắn các đối tượng vào một lớp cho lớp đó sử dụng thay vì buộc lớp đó phải tự mình khởi tạo các đối tượng. IoC quy định rằng, nếu một đối tượng yêu cầu một đối tượng khác, đối tượng đầu sẽ lấy đối tượng thứ hai từ một nguồn bên ngoài, ví dụ như từ tập tin cấu hình. Và nhờ vậy, việc sử dụng DI và IoC sẽ giúp kiểm thử dễ dàng hơn.
+• ASP.NET MVC có thành phần ánh xạ URL mạnh mẽ cho phép bạn xây dựng những ứng dụng có các địa chỉ URL xúc tích và dễ tìm kiếm. Các địa chỉ URL không cần phải có phần mở rộng của tên tập tin và được thiết kế để hỗ trợ các mẫu định dạng tên phù hợp với việc tối ưu hóa tìm kiếm (URL) và phù hợp với lập địa chỉ theo kiểu REST.
+• Hỗ trợ sử dụng đặc tả (các thẻ) của các trang ASP.NET(.aspx), điều khiển người dùng (.ascx) và trang master page (.marter). Bạn có thể sử dụng các tính năng có sẵn của ASP.NET như là sử dụng lồng các trang master page, sử dụng in-line expression (<%= %>), sử dụng server controls, mẫu, data-binding, địa phương hóa (localization) và hơn thế nữa.
+• Hỗ trợ các tính năng có sẵn của ASP.NET như cơ chế xác thực người dùng, quản lý thành viên, quyền, output caching và data caching, seession và profile, quản lý tình trạng ứng dụng, hệ thống cấu hình…
+• ASP.NET MVC 5 còn bổ sung một view engine mới là Razor View Engine cho phép thiết lập các view nhanh chóng, dễ dàng và tốn ít công sức hơn so với việc sử dụng Web Forms view engine.
+2.2 Tổng quan về Entity Framework
+2.2.1 Entity Framework là gì?
+    Entity Framework (EF) là một framework ánh xạ quan hệ đối tượng (ORM) dành cho ADO.NET, là 1 phần của .NET Framework. EF cho phép các nhà phát triển Web tương tác với dữ liệu quan hệ theo phương pháp hướng đối tượng đặc trưng. Lợi ích lớn nhất của EF là giúp lập trình viên giảm thiểu việc lập trình mã nguồn cần thiết để truy cập và tương tác với cơ sở dữ liệu. EF được Microsoft hỗ trợ phát triển lâu dài và bền vững, vì vậy EF là 1 framework mạnh nhất hiện nay để phát triển ứng dụng Web với sự hỗ trợ đông đảo của các nhà phát triển Web.
+2.2.2 Vị trí của Entity Framework trong mô hình Web
+      Chắc hẳn, bạn đã biết về mô hình Web 3 tầng (n tầng) khi đọc sách, giáo trình, bài giảng về nội dung lập trình Web. Tuy nhiên, vấn đề bạn cần phải hiểu rõ là: việc định rõ số lượng các tầng và các mối liên hệ giữa các tầng trong mô hình phát triển Web cũng rất đa dạng, tùy theo cách hiểu các lập trình viên và dự án Web. Do đó, việc hiểu Entity Frameword nằm ở đâu trong mô hình Web 3 tầng cũng không hoàn toàn dễ dàng. Trong phần này, tôi có tham khảo từ Stephen M. Redd nhằm giúp các bạn hiểu rõ bản chất vấn đề hơn.
+      
+Đầu tiên, chúng ta có vị trí của EF trong mô hình dự án Web ASP.NET MVC.
+
+    Trong mô hình trên, chúng ta thấy vị trí của EF nằm trọn trong tầng Data Access Layer, tức là EF đóng vai trò là nơi trung gian để tương tác dữ liệu từ database với các tầng cao hơn, chẳng hạn như Business Layer. Hay nói cách khác, EF đóng vai trò như là phiên bản mới của ADO.NET. Tuy nhiên vị trí của EF trong mô hình này chỉ có trên lý thuyết.
+Thật sự, khi bắt tay xây dựng nhiều dự án Web, vị trí thường thấy EF ở các dự án website trên thực tế như mô hình sau.
+
+Trong hình trên, EF dường như có vị trí rất tự do, xuất hiện ở cả 3 tầng Data Access Layer, Business Layer, và cả Presentation Layer. Các bạn có thể hình dung EF như là 1 thư viện, hễ tầng nào cần thì chỉ cần gọi đến. Mô hình này xuất phát có thể là sự cẩu thả của lập trình viên khi không thích tuân theo tiêu chuẩn quan hệ giữa các tầng hoặc cách giải thích khác là sự lỏng lẻo giúp cho việc lập trình thuận tiện hơn. Trong vài mô hình người ta gom tầng Data Access Layer và Business Layer chỉ làm tầng Data Model, và vị trí EF cũng bao hàm tầng Data Model và Presentation Layer.
+      
+      Đến đây, bạn có thể hiểu 1 cách chung nhất EF có vị trí trung gian, đóng vai trò kết nối giữa cơ sở dữ liệu và các thành phần khác của 1 dự án Web khi cần đến. Ngoài ra, có nhiều cách hiểu về vị trí của EF ở đâu trong mô hình Web, bạn sẽ dần khám phá để đưa ra cách hiểu và định nghĩa riêng trong quá trình thiết kế và xây dựng dự án Web ASP.NET.
+      
+2.2.3 Cài đặt Entity Framework
+a) Cách 1: Sử dụng EF Tool
+    EF nằm trong EF Tools (các công cụ EF) có sẵn trong Visual Studio 2013. Nếu bạn sử dụng Visual Studio 2012, bạn có thể tải công cụ ở địa chỉ https://www.microsoft.com/en-us/download/details.aspx?id=40762 sau đó cài đặt.
+b) Cách 2: EF Runtime
+    Phiên bản mới nhất của EF có sẵn tại gói EntityFramework tại Nuget (http://nuget.org/packages/EntityFramework/).
+Để cài Entity Framework, bạn nhấn chuột phải vào thư mục References (hoặc bin) trong dự án Web và chọn Manage NuGet Packages.
+    
+Sau đó, bạn tìm và cài đặt gói Entity Framework vào dự án Web.
+
+c) Cách 3: Cài đặt gói EF bằng dòng lệnh (Package Manager Console)
+    Bạn chọn thư mục cần cài đặt EF (bin hoặc References), sau đó chọn menu Tools -> Library Package Manager -> Package Manager Console như trong hình.
+    
+Ở phần dòng lệnh dưới đáy bộ công cụ, bạn gõ: Install-Package EntityFramework.
+
+2.3 Tổng quan về SQL Server
+2.3.1 SQL là gì?
+    SQL là viết tắt của Structured Query Language là ngôn ngữ truy vấn có cấu trúc. Nó là một ngôn ngữ, là tập hợp các lệnh để tương tác với cơ sở dữ liệu. Dùng để lưu trữ, thao tác và truy xuất dữ liệu được lưu trữ trong một cơ sở dữ liệu quan hệ. Trong thực tế, SQL là ngôn ngữ chuẩn được sử dụng hầu hết cho hệ cơ sở dữ liệu quan hệ. Tất cả các hệ thống quản lý cơ sở dữ liệu quan hệ (RDMS) như MySQL, MS Access, Oracle, Postgres và SQL Server… đều sử dụng SQL làm ngôn ngữ cơ sở dữ liệu chuẩn.
+Hầu như công ty nào lớn cũng cần xây dựng một hệ thống để lưu trữ cơ sở dữ liệu. Mọi thứ trong cơ sở dữ liệu này sẽ được diễn tả ra thành nhiều bảng, có mối quan hệ với nhau. Để truy vấn và lấy dữ liệu từ các bảng này nhằm tổng hợp thành thông tin nào đó, người ta dùng đến SQL thông qua các câu query.
+SQL bắt đầu từ những năm 1970, khi các kỹ sư của IBM là Donald Chamberlin và Raymond Boyce thiết kế phiên bản đầu tiên để tương tác và lấy dữ liệu được lưu trữ trong hệ thống cơ sở dữ liệu của công ty. Họ gọi nó là SEQUEL, mặc dù sau đó họ buộc phải thay đổi nó do các vấn đề bản quyền.
+2.3.2 Tại sao sử dụng SQL và nó lại quan trọng
+SQL được sử dụng phổ biến vì nó có các ưu điểm sau:
+Cho phép truy cập dữ liệu trong các hệ thống quản lý cơ sở dữ liệu quan hệ.
+Cho phép mô tả dữ liệu.
+Cho phép xác định dữ liệu trong cơ sở dữ liệu và thao tác dữ liệu đó.
+Cho phép nhúng trong các ngôn ngữ khác sử dụng mô-đun SQL, thư viện và trình biên dịch trước.
+Cho phép tạo và thả các cơ sở dữ liệu và bảng.
+Cho phép tạo chế độ view, thủ tục lưu trữ, chức năng trong cơ sở dữ liệu.
+Cho phép thiết lập quyền trên các bảng, thủ tục và view.
+Thường thì doanh nghiệp luôn cần một hệ thống để quản trị thông tin, họ phải thiết kế ra một cơ sở dữ liệu để lưu trữ thông tin. Nếu họ lưu trữ ở dạng giấy hoặc excel thì sẽ chứa nhiều rủi ro bảo mật thông tin như bị mất, sửa, xóa…
+    SQL sẽ giúp quản lý hiệu quả và truy vấn thông tin nhanh hơn, giúp bảo trì, bảo mật thông tin dễ dàng hơn.
+Ví dụ:  trước đây, trường đại học thường lưu trữ thông tin sinh viên bằng hồ sơ giấy. Sau đó, cất giữ hồ sơ trong kho. Khi cần tìm kiếm hoặc thêm/xóa/sửa thông tin nào đó, họ phải mất rất nhiều thời gian để lục tìm lại hồ sơ.
+Trong khi, nếu lưu trữ thông tin vào một hệ thống cơ sở dữ liệu, họ chỉ cần gõ một câu lệnh SQL ngắn là đã có thể trích xuất được thông tin cần. Việc thêm/xóa/sửa cũng được thực hiện một cách dễ dàng, nhanh chóng.
+2.3.3 Các câu lệnh trong SQL
+Các lệnh SQL tiêu chuẩn để tương tác với cơ sở dữ liệu quan hệ là CREATE, SELECT, INSERT, UPDATE, DELETE và DROP. Các lệnh này có thể được phân thành các nhóm sau dựa trên bản chất của chúng.
+DDL – Ngôn ngữ định nghĩa dữ liệu(Data Definition Language)
+LệnhMô TảCREATETạo ra một bảng mới hoặc các đối tượng khác trong cơ sở dữ liệu.ALTERSửa đổi một đối tượng cơ sở dữ liệu hiện có, chẳng hạn như một bảng.DROPXoá toàn bộ một bảng hoặc các đối tượng khác trong cơ sở dữ liệu.DML – Ngôn ngữ thao tác dữ liệu (Data Manipulation Language)
+LệnhMô TảSELECTLấy ra các bảng ghi nhất định từ một hoặc nhiều bảng.INSERTTạo một bảng ghi.UPDATEChỉnh sửa bảng ghi.DELETEXóa bảng ghi.DCL – Ngôn ngữ điều khiển dữ liệu (Data Control Language)
+LệnhMô TảGRANTCung cấp một quyền cho người dùng.REVOKELấy lại các quyền được cấp từ người dùng.2.4 Một số thư viện chính được sử dụng trong hệ thống
+2.4.1 Giới thiệu về Bootstrap
+a) Bootstrap là gì?
+    Bootstrap là 1 framework HTML, CSS, và JavaScript cho phép người dùng dễ dàng thiết kế website theo 1 chuẩn nhất định, tạo các website thân thiện với các thiết bị cầm tay như mobile, ipad, tablet, ...
+    Tại sao lại như vậy?
+    Bootstrap bao gồm những cái cơ bản có sẵn như: typography, forms, buttons, tables, navigation, modals, image carousels và nhiều thứ khác. Trong bootstrap có thêm nhiều Component, Javascript hỗ trợ cho việc thiết kế reponsive của bạn dễ dàng, thuận tiện và nhanh chóng hơn.
+b) Tại sao nên sử dụng Bootstrap?
+    Bootstrap là một trong những framework được sử dụng nhiều nhất trên thế giới để xây dựng nên một website. Bootstrap đã xây dựng nên 1 chuẩn riêng và rất được người dùng ưa chuộng. Chính vì thế, chúng ta hay nghe tới một cụm từ rất thông dụng "Thiết kế theo chuẩn Bootstrap".
+Từ cái "chuẩn mực" này, chúng ta có thể thấy rõ được những điểm thuận lợi khi sử dụng Bootstrap.
+Rất dễ để sử dụng: Nó đơn giản vì nó được base trên HTML, CSS và Javascript chỉ cẩn có kiến thức cơ bản về 3 cái đó là có thể sử dụng bootstrap tốt.
+Responsive: Bootstrap xây dựng sẵn reponsive css trên các thiết bị Iphones, tablets, và desktops. Tính năng này khiến cho người dùng tiết kiệm được rất nhiều thời gian trong việc tạo ra một website thân thiện với các thiết bị điện tử, thiết bị cầm tay.
+Tương thích với trình duyệt: Nó tương thích với tất cả các trình duyệt (Chrome, Firefox, Internet Explorer, Safari, and Opera). Tuy nhiên, với IE browser, Bootstrap chỉ hỗ trợ từ IE9 trở lên. Điều này vô cùng dễ hiểu vì IE8 không support HTML5 và CSS3.
+c) Cài đặt Bootstrap?
+    Có 2 cách để bạn có thể sử dụng Bootstrap trên web của bạn.
+• Download Bootstrap packet từ getbootstrap.com
+• Thêm Bootstrap từ CDN
+
+2.4.2 Giới thiệu về JavaScript
+a) JavaScript là gì?
+    JavaScript là một ngôn ngữ lập trình của HTML và WEB. Nó là nhẹ và được sử dụng phổ biến nhất như là một phần của các trang web, mà sự thi hành của chúng cho phép Client-Side script tương tác với người sử dụng và tạo các trang web động. Nó là một ngôn ngữ chương trình thông dịch với các khả năng hướng đối tượng.
+    JavaScript được biết đến đầu tiên với tên Mocha, và sau đó là LiveScript, nhưng công ty Netscape đã đổi tên của nó thành JavaScript, bởi vì sự phổ biến như là một hiện tượng của Java lúc bấy giờ. JavaScript xuất hiện lần đầu trong Netscape 2.0 năm 1995 với tên LiveScript. Core đa năng của ngôn ngữ này đã được nhúng vào Netscape, IE, và các trình duyệt khác.
+    ECMA-262 Specification định nghĩa một phiên bản chuẩn của ngôn ngữ JavaScript như sau:
+• JavaScript là một ngôn ngữ chương trình thông dịch, nhẹ.
+• Được thiết kế để tạo các ứng dụng mạng trung tâm.
+• Bổ sung và tích hợp với Java.
+• Bổ sung và tích hợp với HTML.
+• Mở và đa nền tảng.
+b) Client-side JavaScript
+    Client-Side JavaScript là Form phổ biến nhất của ngôn ngữ này. Script nên được bao gồm trong một tài liệu HTML cho việc mã hóa để được thông dịch bởi trình duyệt.
+Nghĩa là một trang web không cần là một HTML tĩnh, nhưng có thể bao gồm các chương trình mà tương tác với người dùng, điều khiển trình duyệt, và tạo nội dung HTML động.
+Kỹ thuật Client-Side JavaScript cung cấp nhiều lợi thế hơn các CGI Server-Side Script. Ví dụ, bạn có thể sử dụng JavaScript để kiểm tra nếu người sử dụng đã nhập một địa chỉ Email hợp lệ trong một trường Form.
+JavaScript code được thực thi khi người sử dụng đệ trình Form, và chỉ nếu tất cả đầu vào là hợp lệ, chúng sẽ được đệ trình tới Web Server.
+JavaScript có thể được sử dụng để nắm bắt các sự kiện được khởi tạo từ người sử dụng như nhấp chuột, điều hướng link, và các hoạt động khác mà người dùng khởi tạo.
+c) Các lợi thế của JavaScript
+Các lợi thế của việc sử dụng JavaScript là:
+Sự tương tác Server ít hơn: Bạn có thể xác nhận đầu vào (input) người sử dụng trước khi gửi trang tới Server. Điều này làm tiết kiệm lưu lượng tải ở Server, nghĩa là Server của bạn tải ít hơn.
+Phản hồi ngay lập tức tới khách truy cập: Họ không phải chờ cho một trang web tải lại để thấy xem nếu họ đã quên nhập cái gì đó.
+Khả năng tương tác tăng lên: Bạn có thể tạo các giao diện mà phản ứng lại khi người sử dụng rê chuột qua chúng hoặc kích hoạt chúng thông qua bàn phím.
+Giao diện phong phú hơn: Bạn có thể sử dụng JavaScript để bao gồm những mục như các thành phần Drag và Drop (DnD) và các con trượt (Slider) để cung cấp một Rich Interface (Giao diện giàu tính năng) tới site khách truy cập của bạn.
+d) Hạn chế của JavaScript
+Chúng ta không thể đối xử JavaScript như là một ngôn ngữ chương trình chính thức (full-fledged). Nó thiếu các tính năng quan trọng sau:
+• Client-side JavaScript không cho phép đọc và ghi các file, bởi vì lý do bảo mật.
+• JavaScript không được sử dụng cho việc kết nối mạng các ứng dụng bởi vì không có những hỗ trợ có sẵn.
+• JavaScript không có bất kỳ khả năng đa luồng hoặc đa xử lý.
+Một lần nữa, JavaScript là một ngôn ngữ chương trình thông dịch, nhẹ mà cho phép bạn xây dựng khả năng tương tác trong các trang HTML tĩnh.
+
+e) Công cụ phát triển JavaScript
+    Một trong những điểm mạnh lớn nhất của JavaScript là nó không yêu cầu các công cụ phát triển tốn kém. Bạn có thể bắt đầu với một bộ biên soạn (Editor) văn bản đơn giản như Notepad. Khi nó là một ngôn ngữ thông dịch bên trong context của một trình duyệt web, bạn không cần phải mua một Complier (bộ phiên dịch).
+Để làm cuộc sống của bạn đơn giản hơn, nhiều nhà cung cấp đã cho ra đời các công cụ chỉnh sửa JavaScript đẹp, được liệt kê dưới đây:
+Microsoft FrontPage Microsoft đã phát triển một HTML Editor phổ biến được gọi là FrontPage. FrontPage cũng cung cấp cho nhà lập trình các công cụ JavaScript để giúp đỡ tạo các Website có tính tương tác.
+Macromedia Dreamweaver MX Macromedia Dreamweaver MX là một HTML và JavaScript Editor rất phổ biến trong cộng đồng lập trình web chuyên nghiệp. Nó cung cấp các thành phần JavaScript đã xây dựng trước mà thuận tiện, tích hợp tốt với cơ sở dữ liệu, và theo các chuẩn mới như XHTML và XML.
+Macromedia HomeSite 5 HomeSite 5 là một HTML và JavaScript Editor từ Macromedia mà có thể được sử dụng để quản lý các Website cá nhân một cách hiệu quả.
+2.4.3 Giới thiệu về jQuery
+a) jQuery là gì?
+    jQuery là một thư viện JavaScript đa tính năng, nhỏ gọn, nhanh, được tạo bởi John Resig vào năm 2006 với một phương châm hết sức ý nghĩa: Write less, do more - Viết ít hơn, làm nhiều hơn.
+jQuery đơn giản hóa việc duyệt tài liệu HTML, xử lý sự kiện, hoạt ảnh và tương tác Ajax để phát triển web nhanh chóng. Các phân tích web đã chỉ ra rằng, jQuery là thư viện JavaScript được triển khai rộng rãi nhất.
+jQuery là một bộ công cụ JavaScript được thiết kế để đơn giản hóa các tác vụ khác nhau bằng cách viết ít code hơn. Dưới đây liệt kê một số tính năng tối quan trọng được hỗ trợ bởi jQuery:
+Thao tác DOM − jQuery giúp dễ dàng lựa chọn các phần tử DOM để traverse (duyệt) một cách dễ dàng như sử dụng CSS, và chỉnh sửa nội dung của chúng bởi sử dụng phương tiện Selector mã nguồn mở, mà được gọi là Sizzle.
+Xử lý sự kiện − jQuery giúp tương tác với người dùng tốt hơn bằng việc xử lý các sự kiện đa dạng mà không làm cho HTML code rối tung lên với các Event Handler.
+Hỗ trợ AJAX − jQuery giúp bạn rất nhiều để phát triển một site giàu tính năng và phản hồi tốt bởi sử dụng công nghệ AJAX.
+Hiệu ứng động − jQuery đi kèm với rất nhiều hiệu ứng động đẹp mà bạn có thể sử dụng cho các website của mình.
+Gọn nhẹ − jQuery là thư viện gọn nhẹ - nó chỉ có kích cỡ khoảng 19KB (gzipped).
+Được hỗ trợ hầu hết bởi các trình duyệt hiện đại − jQuery được hỗ trợ hầu hết bởi các trình duyệt hiện đại, và làm việc tốt trên IE 6.0+, FF 2.0+, Safari 3.0+, Chrome và Opera 9.0+.
+Cập nhật và hỗ trợ các công nghệ mới nhất − jQuery hỗ trợ CSS3 Selector và cú pháp XPath cơ bản.
+b) Cách sử dụng jQuery
+• Cài đặt jQuery nội bộ - Bạn có thể tải jQuery Library trên máy của bạn và đưa nó vào trong code HTML.
+• Sử dụng từ CDN (CDN Based Version) − Bạn có thể đưa thư viện jQuery vào trong code HTML một cách trực tiếp từ Content Delivery Network (CDN).
+c) Cách để gọi một hàm thư viện jQuery
+    Cũng tương tự như JavaScript, trước khi chúng ta sử dụng các đoạn code của jQuery để đọc hay chỉnh sửa các đối tượng DOM, chúng ta cần đảm bảo rằng chúng ta bắt đầu thêm các sự kiện ngay sau khi DOM sẵn sàng.
+Nếu bạn muốn một sự kiện làm việc trên trang của bạn, bạn nên gọi nó bên trong Hàm $(document).ready(). Mọi thứ bên trong sẽ tải ngay sau khi DOM được tải và trước khi nội dung trang được tải.
+Để làm điều này, chúng ta đăng ký một sự kiện đã sẵn sàng cho tài liệu như sau:
+
+Để gọi bất kỳ hàm thư viện jQuery nào, sử dụng các thẻ HTML script như dưới đây:
+
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Khảo sát phân tích yêu cầu
+3.1.1 Thời gian, địa điểm khảo sát
+- Tham khảo một số website trên mạng như: toantieuhoc.vn
+3.1.2 Thông tin liên hệ
+- Bộ môn CNPM – Khoa Công Nghệ Thông Tin – Trường ĐHSPKT Hưng Yên - Hưng Yên.
+3.1.3 Thông tin dự án
+- Tên dự án: “XÂY DỰNG WEBSITE HỌC TRỰC TUYẾN TOÁN LỚP 1”
+- Người thực hiện: Nguyễn Văn Lợi
+- Người hướng dẫn: Thạc sĩ Nguyễn Thị Hải Năng.
+- Ngày thực hiên: 02/03/2020.
+- Dự kiến ngày hoàn thành: 30/06/2020.
+3.1.4 Yêu cầu của hệ thống sau khảo sát
+    Bảng 3-1: Bảng yêu cầu của khách hàng
+STT    Tên yêu cầu1Đăng nhập vào hệ thống quản trị2Hiển thị nội dung các chương lên website 3Hiển thị nội dung các bài học lên website4Hiển thị thông tin chi tiết về câu hỏi lên website5Hiển thị thông tin kết quả tìm kiếm6Quản lý thành viên7Quản lý tài khoản8Quản lý phân quyền9Quản lý chương10Quản lý câu hỏi11Quản lý bài học12Quản lý bài thi3.1.5  Mô tả yêu cầu của hệ thống
+• Các yêu cầu chức năng
+    Bảng 3-2: Bảng đặc tả yêu cầu chức năng
+STT    Tên yêu cầu    Mô tả yêu cầuICác yêu cầu chức năng nghiệp vụLà các chức năng của phần mềm tương ứng với các công việc trong thế giới thực.1Module bài họcHiển thị thông tin và phân loại bài học. Bài học hiển thị lên website được hiển thị đầy đủ thông tin như: Hình ảnh, tên bài học, đặc điểm nổi bật, các câu hỏi liên quan.2Module đăng kýKhi có thành viên mới tham gia vào website, cần thực hiện đăng ký hồ sơ thành viên để có thể thao tác với các chức năng trên website.3Module đăng nhập hệ thống 
+    Mỗi người dùng hệ thống có quyền đăng ký một tài khoản riêng. Tài khoản này được sử dụng khi hệ thống yêu cầu. Môt tài khoản người dùng đăng ký sẽ lưu trữ các thông tin của một thành viên.4Module tìm kiếm
+    Giúp nguời dùng tìm nhanh hơn, chỉ cần nhập tên gần đúng, hệ thống sẽ trả về danh sách gần đúngIICác yêu cầu chức năng hệ thốngLà các chức năng của phần mềm được phát sinh thêm khi thực hiện một công việc trên máy tính.1Quản lý hệ thống+ Quản lý thông tin tài khoản
++ Thêm tài khoản
++ Phân quyền tài khoản2Quản lý bài học+ Quản lý các chương
++ Quản lý bài học
++ Quản lý câu hỏi
++ Quản lý bài thi4Quản lý thành viên+ Quản lý quyền
++ Quản lý tài khoản
+• Các yêu cầu phi chức năng
+    Bảng 3-3: Bảng yêu cầu phi chức năng
+STTTên yêu cầuMô tả yêu cầu1Giao diệnGiao diện hệ thống phải dễ sử dụng, trực quan, thân thiện với mọi người dùng.2Tốc độ xử lýHệ thống phải xử lý nhanh chóng và chính xác.3Bảo mật dữ liệuTính bảo mật và độ an toàn cao.4Tương thíchTương thích với đa phần các trình duyệt web hiện tại.3.2 Phân tích thiết kế với UML.
+3.2.1 Tổng quan về UML
+• UML (Unified Model Language) là một ngôn ngữ dùng cho phân tích thiết
+kế hướng đối tượng (OOAD – Object Oriented Analys and Design).
+• UML được duy trì và phát triển bởi OMG (Object Management Group), do
+Jacobson, Booch, Rumbaugh sáng lập. Ngoài ra còn có hàng trăm các tập
+đoàn lớn khác bảo trợ phát triển.
+• Các biểu đồ UML cho ta cái nhìn rõ hơn về hệ thống (cái nhìn tĩnh và động).
+• Hiện nay UML được sử dụng rất phổ biến trong các dự án phần mềm.
+• UML thể hiện phương pháp phân tích hướng đối tượng nên không lệ thuộc
+ngôn ngữ lập trình.
+• Có rất nhiều công cụ phần mềm hỗ trợ phân tích thiết kế dùng UML.
+• Nhiều công cụ có thể sinh ra mã từ UML và ngược lại.
+• UML không phải là ngôn ngữ lập trình.
+• UML là một ngôn ngữ dùng để:
+   - Trực quan hóa (Visualizing):
++ Dùng tập các ký hiệu đồ họa phong phú để biểu diễn hệ thống đang
+được nghiên cứu.
++ Hệ thống ký hiệu đều có ngữ nghĩa chặt chẽ, có thể hiểu bởi nhiều
+công cụ khác nhau.
++ Giúp cho các nhà thiết kế, nhà lập trình khác biệt về ngôn ngữ đều có
+thể hiểu được.
+    - Đặc tả (Specifying):
++ UML giúp xây dựng các mô hình chính xác, đầy đủ và không nhập nhằng.
++ Tất cả các công đoạn từ phân tích, thiết kế cho đến triển khai đều có
+các biểu đồ UML biểu diễn.
++ Use case (dùng cho phân tích); Class, Sequence, Activity... (cho thiết
+kế); Component, Deployment (cho triển khai).
+- Xây dựng (Constructing):
++ Các mô hình của UML có thể kết nối với nhiều ngôn ngữ lập trình.
+Tức là có thể ánh xạ các mô hình UML về một ngôn ngữ lập trình như C++,
+Java...
++ Việc chuyển các mô hình trong UML thành Code trong ngôn ngữ lập
+trình → Forward engineering.
++ Việc chuyển ngược trở lại code trong một ngôn ngữ lập trình thành
+UML → Reverse Engineering.
++ Cần công cụ để chuyển đổi “xuôi” &amp; “ngược”.
++ Tài liệu triển khai – Deployment ...
+• Một số biểu đồ UML cơ bản
+• Biểu đồ Ca sử dụng Use Case Diagram
+- Use case (Use Case Diagram) cung cấp một bức tranh toàn cảnh về những gì đang xảy ra trong hệ thống hiện tại hoặc những gì sẽ xảy ra trong hệ thống mới.
+- Use case mô tả một chuỗi các hành động mà hệ thống sẽ thực hiện để đạt được kết quả có ý nghĩa đối với một tác nhân.
+- Các use case được tạo ra ở giai đoạn đầu của một dự án. Các use case cũng có thể được dung ở giai đoạn sau của qui trình phát triển dự án, ví dụ để đặc tả các tình huống kiểm tra. Use case đưa ra cơ sở để xác định giao tiếp người-máy đối với hệ thống. Để người dùng cuối có thể hiểu được  và có thể giao tiếp với hệ thống ở mức tổng thể.
+- Actor là người hoặc hệ thống tương tác với các use case. Thường actor là người dùng hệ thống. Trong biểu đồ use case, mỗi actor được vẽ bằng một biểu tượng hình người với tên vai trò (role name) đặt bên dưới.
+- Khi actor là người thì tên actor là tên vai trò mà actor đảm nhiệm chứ   không phải là tên công việc.
+• Biểu đồ lớp Class Diagram
+- Biểu đồ lớp (Class Diagram) cho ta một khung nhìn tĩnh của các lớp trong mô hình hoặc một phần của mô hình. Nó chỉ cho ta thấy các thuộc tính và các thao tác của lớp, cũng như các loại quan hệ giữa các lớp.
+- Có rất nhiều kiểu lớp dùng trong biểu đồ lớp, ở đây chúng ta chỉ xét đến và sử dụng 3 loại lớp chính là : lớp biên (phần giao diện), lớp điều khiển và lớp cơ sở dữ liệu:
+    + Lớp biên: là lớp thể hiện phần giao diện mà người dùng trực tiếp tương tác với hệ thống qua những giao diện của lớp này.
+    + Lớp thực thể (lớp cơ sở dữ liệu): là lớp biểu diễn cho những thực thể có mối quan hệ với nhau và liên quan đến hệ thống.
+    + Lớp điều khiển: là lớp trung gian giữa lớp biên và lớp thực thể. Lớp này đóng vai trò lấy và xử lý dữ liệu để hiện thị ra lớp biên.
+• Biểu đồ tuần tự Sequence Diagram
+    Biểu đồ tuần tự (Sequence Diagram) mô tả sự tương tác của các đối tượng theo trình tự về thời gian.Có sự liên kết chặt chẽ với biểu đồ lớp và mô tả thứ tự của tương tác bằng cách đánh số thứ tự các thông điệp. Mỗi biểu đồ tuần tự mô tả một tình huống xử lý.
+3.2.2 Biểu đồ Use-Case
+   Qua khảo sát hiện trạng thực tế, kết hợp với, việc tham khảo tài liệu và phân tích ý kiến của người dùng, hệ thống quản lý đồ án có các tác nhân sau:
+    Bảng 3-4: Bảng xác định tác nhân
+STTTác Nhân    Diễn Giải1       Những người thuộc nhóm quyền này có thể tạo tài khoản người dùng và phẩm quyền cho từng tài khoản đó2      Những người thuộc quyền này sẽ được Admin kiểm duyệt tài khoản và thao tác trên trang chủ.    Bảng 3-5: Bảng xác định quyền sử dụng
+STTTác nhân chính    Tên Use case1Admin Thực hiện các chức năng như quản lý tài khoản, quản lý thành viên, quản lý phân quyền, quản lý chương, quản lý bài học, quản lý câu hỏi, quản lý bài thi. Để thực hiện chức năng này admin phải đăng nhập.2MemberThực hiện các chức năng có sẵn trên giao diện trang người dùng. Để thực hiện chức năng này nhân viên phải đăng nhập.
+
+
+• Biểu đồ Use-case tổng quát
+
+    Hình 3-1: Biểu đồ Use-case tổng quát
+• Biểu đồ Use-case đăng nhập
+
+    Hình 3-2: Biểu đồ Use-case đăng nhập
+Tác nhân: Admin, member
+Mô tả: Use case cho admin, nhân viên đăng nhập vào hệ thống.
+Điều kiện trước: admin, nhân viên chưa đăng nhập vào hệ thống.
+Dòng sự kiện chính:
+- Chọn chức năng đăng nhập.
+- Giao diện đăng nhập hiển thị.
+- Nhập username, mật khẩu vào giao diện đăng nhập.
+- Hệ thống kiểm tra username và mật khẩu nhập của admin, member. Nếu nhập sai username hoặc mật khẩu thì chuyển sang dòng sự kiện rẽ nhánh A1. Nếu nhập đúng thì hệ thống kiểm tra đến quyền, nếu quyền là admin sẽ chuyển tới trang quản trị, quyền là student thì sẽ chuyển sang trang chủ.
+Use case kết thúc.
+Dòng sự kiện rẽ nhánh:
+- Dòng rẽ nhánh A1: admin, nhân viên đăng nhập không thành công.
+- Hệ thống thông báo quá trình đăng nhập không thành công do sai username hoặc mật khẩu.
+- Chọn nhập lại hệ thống yêu cầu nhập lại username, mật khẩu.
+Use case kết thúc.
+    Hậu điều kiện: admin, nhân viên đăng nhập thành công và có thể sử dụng các chức năng tương ứng trong trang quản trị.
+• Biểu đồ Use-case quản lý tài khoản
+
+    Hình 3-3: Biểu đồ Use-case quản lý tài khoản
+Tác nhân: Admin
+Mô tả: use case cho phép xem, thêm, sửa, xóa tài khoản trong hệ thống.
+Điều kiện trước: admin đã đăng nhập vào hệ thống.
+Dòng sự kiện chính: 
+Người sử dụng chọn kiểu tác động: thêm, sửa, xóa thông tin tài khoản.
+- Thêm tài khoản: chọn thêm tài khoản, hệ thống hiển thị giao diện nhập thông tin tài khoản, người sử dụng nhập thông tin tài khoản, nếu thành công hệ thống đưa ra thông báo, nếu sai thực hiện dòng rẽ nhánh A1, lưu thông tin vào danh sách tài khoản.
+- Sửa thông tin tài khoản: hệ thống hiển thị danh sách tài khoản, chọn tài khoản cần sửa, nhập các thông tin cần thay đổi, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách tài khoản.
+- Xóa thông tin tài khoản: hệ thống hiển thị danh sách tài khoản, chọn tài khoản cần xóa, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách tài khoản.
+Use case kết thúc.
+Dòng sự kiện rẽ nhánh A1: hệ thống thông báo việc nhập dữ liệu không hợp lệ, nhập lại thông tin, quay lại bước 1 của dòng sự kiện chính.
+Hậu điều kiện: các thông tin về tài khoản được cập nhật trong cơ sở dữ liệu.
+• Biểu đồ Use-case quản lý thành viên
+
+    Hình 3-4: Biểu đồ Use-case quản lý thành viên
+Tác nhân: Admin
+Mô tả: use case cho phép xem, thêm, sửa, xóa thành viên trong hệ thống.
+Điều kiện trước: admin đã đăng nhập vào hệ thống.
+Dòng sự kiện chính: 
+Người sử dụng chọn kiểu tác động: thêm, sửa, xóa thông tin thành viên.
+- Thêm thành viên: chọn thêm thành viên, hệ thống hiển thị giao diện nhập thông tin thành viên, người sử dụng nhập thông tin thành viên, nếu thành công hệ thống đưa ra thông báo, nếu sai thực hiện dòng rẽ nhánh A1, lưu thông tin vào danh sách thành viên.
+- Sửa thông tin thành viên: hệ thống hiển thị danh sách thành viên, chọn thành viên cần sửa, nhập các thông tin cần thay đổi, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách thành viên.
+- Xóa thông tin thành viên: hệ thống hiển thị danh sách thành viên, chọn thành viên cần xóa, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách thành viên.
+Use case kết thúc.
+Dòng sự kiện rẽ nhánh A1: hệ thống thông báo việc nhập dữ liệu không hợp lệ, nhập lại thông tin, quay lại bước 1 của dòng sự kiện chính.
+Hậu điều kiện: các thông tin về thành viên được cập nhật trong cơ sở dữ liệu.
+• Biểu đồ Use-case quản lý phân quyền
+
+    Hình 3-5: Biểu đồ Use-case quản lý phân quyền
+Tác nhân: Admin
+Mô tả: use case cho phép xem, thêm, sửa, xóa phân quyền trong hệ thống.
+Điều kiện trước: admin đã đăng nhập vào hệ thống.
+Dòng sự kiện chính: 
+Người sử dụng chọn kiểu tác động: thêm, sửa, xóa thông tin phân quyền.
+- Thêm quyền: chọn thêm quyền, hệ thống hiển thị giao diện nhập thông tin quyền, người sử dụng nhập thông tin quyền, nếu thành công hệ thống đưa ra thông báo, nếu sai thực hiện dòng rẽ nhánh A1, lưu thông tin vào danh sách quyền.
+- Sửa thông tin quyền: hệ thống hiển thị danh sách quyền, chọn quyền cần sửa, nhập các thông tin cần thay đổi, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách quyền.
+- Xóa thông tin quyền: hệ thống hiển thị danh sách quyền, chọn quyền cần xóa, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách quyền.
+Use case kết thúc.
+Dòng sự kiện rẽ nhánh A1: hệ thống thông báo việc nhập dữ liệu không hợp lệ, nhập lại thông tin, quay lại bước 1 của dòng sự kiện chính.
+Hậu điều kiện: các thông tin về quyền được cập nhật trong cơ sở dữ liệu.
+• Biểu đồ Use-case quản lý chương bài
+
+    Hình 3-6: Biểu đồ Use-case quản lý chương bài
+Tác nhân: Admin
+Mô tả: use case cho phép xem, thêm, sửa, xóa chương bài trong hệ thống.
+Điều kiện trước: admin đã đăng nhập vào hệ thống.
+Dòng sự kiện chính: 
+Người sử dụng chọn kiểu tác động: thêm, sửa, xóa thông tin chương bài.
+- Thêm chương bài: chọn thêm chương bài, hệ thống hiển thị giao diện nhập thông tin chương bài, người sử dụng nhập thông tin chương bài, nếu thành công hệ thống đưa ra thông báo, nếu sai thực hiện dòng rẽ nhánh A1, lưu thông tin vào danh sách chương bài.
+- Sửa thông tin chương bài: hệ thống hiển thị danh sách chương bài, chọn chương bài cần sửa, nhập các thông tin cần thay đổi, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách chương bài.
+- Xóa thông tin chương bài: hệ thống hiển thị danh sách chương bài, chọn tài khoản cần xóa, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách chương bài.
+Use case kết thúc.
+Dòng sự kiện rẽ nhánh A1: hệ thống thông báo việc nhập dữ liệu không hợp lệ, nhập lại thông tin, quay lại bước 1 của dòng sự kiện chính.
+Hậu điều kiện: các thông tin về chương bài được cập nhật trong cơ sở dữ liệu.
+• Biểu đồ Use-case quản lý bài học
+
+    Hình 3-7: Biểu đồ Use-case quản lý bài học
+Tác nhân: Admin
+Mô tả: use case cho phép xem, thêm, sửa, xóa bài học trong hệ thống.
+Điều kiện trước: admin đã đăng nhập vào hệ thống.
+Dòng sự kiện chính: 
+Người sử dụng chọn kiểu tác động: thêm, sửa, xóa thông tin bài học.
+- Thêm bài học: chọn thêm bài học, hệ thống hiển thị giao diện nhập thông tin bài học, người sử dụng nhập thông tin bài học, nếu thành công hệ thống đưa ra thông báo, nếu sai thực hiện dòng rẽ nhánh A1, lưu thông tin vào danh sách bài học.
+- Sửa thông tin bài học: hệ thống hiển thị danh sách bài học, chọn bài học cần sửa, nhập các thông tin cần thay đổi, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách bài học.
+- Xóa thông tin bài học: hệ thống hiển thị danh sách bài học, chọn bài học cần xóa, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách bài học.
+Use case kết thúc.
+Dòng sự kiện rẽ nhánh A1: hệ thống thông báo việc nhập dữ liệu không hợp lệ, nhập lại thông tin, quay lại bước 1 của dòng sự kiện chính.
+Hậu điều kiện: các thông tin về bài học được cập nhật trong cơ sở dữ liệu.
+• Biểu đồ Use-case quản lý câu hỏi
+
+    Hình 3-8: Biểu đồ Use-case quản lý câu hỏi
+Tác nhân: Admin
+Mô tả: use case cho phép xem, thêm, sửa, xóa câu hỏi trong hệ thống.
+Điều kiện trước: admin đã đăng nhập vào hệ thống.
+Dòng sự kiện chính: 
+Người sử dụng chọn kiểu tác động: thêm, sửa, xóa thông tin câu hỏi.
+- Thêm câu hỏi: chọn thêm câu hỏi, hệ thống hiển thị giao diện nhập thông tin câu hỏi, người sử dụng nhập thông tin câu hỏi, nếu thành công hệ thống đưa ra thông báo, nếu sai thực hiện dòng rẽ nhánh A1, lưu thông tin vào danh sách câu hỏi.
+- Sửa thông tin câu hỏi: hệ thống hiển thị danh sách câu hỏi, chọn câu hỏi cần sửa, nhập các thông tin cần thay đổi, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách câu hỏi.
+- Xóa thông tin câu hỏi: hệ thống hiển thị danh sách câu hỏi, chọn câu hỏi cần xóa, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách câu hỏi.
+Use case kết thúc.
+Dòng sự kiện rẽ nhánh A1: hệ thống thông báo việc nhập dữ liệu không hợp lệ, nhập lại thông tin, quay lại bước 1 của dòng sự kiện chính.
+Hậu điều kiện: các thông tin về câu hỏi được cập nhật trong cơ sở dữ liệu.
+• Biểu đồ Use-case quản lý bài thi
+
+    Hình 3-9: Biểu đồ Use-case quản lý bài thi
+Tác nhân: Admin
+Mô tả: use case cho phép xem, thêm, sửa, xóa bài thi trong hệ thống.
+Điều kiện trước: admin đã đăng nhập vào hệ thống.
+Dòng sự kiện chính: 
+Người sử dụng chọn kiểu tác động: thêm, sửa, xóa thông tin bài thi.
+- Thêm bài thi: chọn thêm bài thi, hệ thống hiển thị giao diện nhập thông tin bài thi, người sử dụng nhập thông tin bài thi, nếu thành công hệ thống đưa ra thông báo, nếu sai thực hiện dòng rẽ nhánh A1, lưu thông tin vào danh sách bài thi.
+- Sửa thông tin bài thi: hệ thống hiển thị danh sách bài thi, chọn bài thi cần sửa, nhập các thông tin cần thay đổi, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách bài thi.
+- Xóa thông tin bài thi: hệ thống hiển thị danh sách bài thi, chọn bài thi cần xóa, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách bài thi.
+Use case kết thúc.
+Dòng sự kiện rẽ nhánh A1: hệ thống thông báo việc nhập dữ liệu không hợp lệ, nhập lại thông tin, quay lại bước 1 của dòng sự kiện chính.
+Hậu điều kiện: các thông tin về bài thi được cập nhật trong cơ sở dữ liệu.
+3.2.3 Biểu đồ lớp
+• Biểu đồ lớp tổng quát
+    
+    Hình 3-10: Biểu đồ lớp tổng quát
+• Danh sách các lớp đối tượng
+    Bảng 3-6: Bảng danh sách các lớp đối tượng
+STTTên thực thểMô tả1AspNetUserRolesMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý phân quyền2AspNetRolesMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý quyền3AspNetUserClaimsMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý user4AspNetUserLoginsMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý xác thực login5AspNetUsersMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý tài khoản6ChaptersMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý chương bài7MembersMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý thông tin thành viên8PostsMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý bài học9QuestionsMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý câu hỏi10MemberTestDetailsMô tả các thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý chi tiết bài thi11QuestionOfTestsMô tả các thuộc tính quản lý câu hỏi cho bài thi12TestsMô tả các thuộc tính liên quan tới bài thi13ScoresMô tả các thuộc tính liên quan quản lý điểm thi3.2.4 Biểu đồ tuần tự
+• Biểu đồ tuần tự chức năng đăng nhập
+
+    Hình 3-11: Biểu đồ tuần tự chức năng đăng nhập
+• Biểu đồ tuần tự chức năng quản lý tài khoản
+
+    Hình 3-12: Biểu đồ tuần tự chức năng quản lý tài khoản
+• Biểu đồ tuần tự chức năng quản lý thành viên
+
+    Hình 3-13: Biểu đồ tuần tự chức năng quản lý thành viên
+• Biểu đồ tuần tự chức năng quản lý phân quyền
+
+    Hình 3-14: Biểu đồ tuần tự chức năng quản lý phân quyền
+• Biểu đồ tuần tự chức năng quản lý chương bài
+
+    Hình 3-15: Biểu đồ tuần tự chức năng quản lý chương bài
+• Biểu đồ tuần tự chức năng quản lý bài học
+
+    Hình 3-16: Biểu đồ tuần tự chức năng quản lý bài học
+• Biểu đồ tuần tự chức năng quản lý câu hỏi
+
+    Hình 3-17: Biểu đồ tuần tự chức năng quản lý câu hỏi
+• Biểu đồ tuần tự chức năng quản lý bài thi
+
+    Hình 3-18: Biểu đồ tuần tự chức năng quản lý bài thi
+3.3 Thiết kế cơ sở dữ liệu
+3.3.1 Các bảng dữ liệu
+    
+    Hình 3-19: Mô hình lưu trữ website trên Database
+• Cấu trúc bảng AspNetRoles
+    Bảng 3-7: Bảng AspNetRoles
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1IdNvarchar(128)Khóa chínhKhóa chính, tự động tăng2NameNvarchar(256)Tên quyền• Cấu trúc bảng AspNetUserClaims
+    Bảng 3-8: Bảng AspNetUserClaims
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1IdIntKhóa chínhKhóa chính, tự động tăng2UserIdNvarchar(128)Not nullId của User3ClaimTypeNvarchar(MAX)NullLoại yêu cầu4ClaimValueNvarchar(MAX)NullGiá trị yêu cầu• Cấu trúc bảng AspNetUserLogins
+    Bảng 3-9: Bảng AspNetUserLogins
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1LoginProviderNvarchar(128)Khóa chínhlogin2ProviderKeyNvarchar(128)Khoá chínhkhoá3UserIdNvarchar(128)Khoá chínhId của User• Cấu trúc bảng AspNetUserRoles
+    Bảng 3-10: Bảng AspNetUserRoles
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1UserIdNvarchar(128)Khóa chínhID User2RoleIdNvarchar(128)Khoá chínhID Role• Cấu trúc bảng AspNetUsers
+    Bảng 3-11: Bảng AspNetUsers
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1IdNvarchar(128)Khóa chínhKhóa chính, tự động tăng2MemberIdIntNot nullID member3EmailNvarchar(256)NullTài khoản email4EmailConfirmedbitNot NullXác thực email5PasswordHashNvarchar(MAX)NullMật khẩu account6SecurityStampNvarchar(MAX)NullBảo mật7PhoneNumberNvarchar(MAX)NullSố điện thoại8PhoneNumberConfirmedBitNot nullXác thực số điện thoại9TwoFactorEnabledBitNot nullXác thực 2 lớp10LockoutEndDateUtcDatetimenullNo11LockoutEnabledBitNot nullNo12AsscessFailedCountIntNot nullNo13UserNameNvarchar(256)Not nullTên người dùng• Cấu trúc bảng Questions
+    Bảng 3-12: Bảng Questions
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1QuestionIdIntKhóa chínhKhóa chính, tự động tăng2QuestionNameNvarchar(255)Not nullTên câu hỏi3PostIdintNot nullId bài học4ImageNvarchar(MAX)NullHình ảnh5ContentNvarchar(MAX)NullNội dung câu hỏi6AnswerANvarchar(MAX)NullCâu trả lời A7AnswerBNvarchar(MAX)NullCâu trả lời B8AnswerCNvarchar(MAX)NullCâu trả lời C9AnswerDNvarchar(MAX)NullCâu trả lời D10AnswerCorrectNvarchar(MAX)NullCâu trả lời đúng11CreatedDateDateTimeNot NullNgày tạo• Cấu trúc bảng Members
+    Bảng 3-13: Bảng Members
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1MemberIdIntKhóa chínhKhóa chính, tự động tăng2MemberNameNvarchar(255)Not nullTên thành viên3AvatarNvarchar(MAX)NullẢnh đại diện4GenderBitNot nullGiới tính5BirthDayDatetimeNot nullNgày sinh6AddressNvarchar(MAX)NullĐịa chỉ7ContactNvarchar(MAX)NullThông tin liên lạc8StatusBitNot nullTrạng thái9CreatedDateDateTimeNot nullNgày tạo thành viên• Cấu trúc bảng QuestionOfTests
+    Bảng 3-14: Bảng QuestionOfTests
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1QuestionOfTestIdIntKhóa chínhKhóa chính, tự động tăng2TestIdIntNot nullId test3QuestionIdIntNot nullId câu hỏi4CreatedDateDateTimeNot nullNgày tạo• Cấu trúc bảng Posts
+    Bảng 3-15: Bảng Posts
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1PostIdIntKhóa chínhKhóa chính, tự động tăng2PostNameNvarchar(255)Not nullTên bài học3DescriptionNvarchar(MAX)NullMô tả4ChapterIdIntNot nullId chương bài5ViewIntNot nullSố lượt xem bài6StatusBitNot nullTrạng thái7CreatedDateDateTimeNot nullNgày tạo• Cấu trúc bảng MemberTestDetails
+    Bảng 3-16: Bảng MemberTestDetails
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1MemberTestDetailIdIntKhóa chínhKhóa chính, tự động tang2MemberIdIntNot nullId thành viên3QuestionIdIntNot nullId câu hỏi4AnswerANvarchar(MAX)NullCâu trả lời A5AnswerBNvarchar(MAX)NullCâu trả lời B6AnswerCNvarchar(MAX)NullCâu trả lời C7AnswerDNvarchar(MAX)NullCâu trả lời D8AnswerStudentNvarchar(MAX)NullCâu trả lời của thành viên9CreatedDateDateTimeNot nullNgày tạo• Cấu trúc bảng Tests
+    Bảng 3-17: Bảng Tests
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1TestIdIntKhóa chínhKhóa chính, tự động tăng2TestNameNvarchar(255)Not nullTên bài test3TotalQuestionIntNot nullSố câu hỏi4TimeToDoIntNot nullTổng thời gian làm bài5NoteNvarchar(MAX)NullGhi chú6StatusBitNot nullTrạng thái7CreatedDateDateTimeNot nullNgày tạo• Cấu trúc bảng Scores
+    Bảng 3-18: Bảng Scores
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1ScoreIdIntKhóa chínhKhóa chính, tự động tăng2MemberIdIntNot nullId thành viên3TestIdIntNot nullId test4ScoreNumberIntNot nullTổng điểm5DetailNvarchar(MAX)NullChi tiết bài thi6CreatedDateDateTimeNot nullNgày tạo• Cấu trúc bảng Chapters
+    Bảng 3-19: Bảng Chapters
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1ChapterIdIntKhóa chínhKhóa chính, tự động tăng2ChapterNameNvarchar(255)Not nullTên chương bài3DescriptionNvarchar(MAX)NullMô tả4StatusBitNot nullTrạng thái5CreatedDateDateTimeNot nullNgày tạo3.4 Thiết kế đặc tả giao diện
+3.4.1. Chức năng hiển thị trang chủ
+• Mục đích
+   Chức năng này cho phép người dùng khi truy cập vào website sẽ hiển thị giao diện với nội dung danh các bài học kiến thức toán lớp 1.
+• Phạm vi
+   Chức năng này sẽ cho phép người dụng truy cập vào website có thể sử dụng.
+• Ràng buộc
+   Người dùng phải truy cập vào website.
+• Giao diện của chức năng
+• Mô tả chức năng
+   Khi người dùng truy cập vào website, trang chủ sẽ hiển thị ra với các nội dung bao gồm: khung tìm kiếm; danh sách chương bài; danh sách bài học; thông tin câu hỏi với nội dung câu hỏi, câu trả lời.
+3.4.2. Chức năng đăng ký
+• Mục đích
+   Chức năng này cho phép người dùng khi truy cập vào website sẽ hiển thị giao diện với khung đăng ký người dùng
+• Phạm vi
+   Chức năng này sẽ cho phép người dụng truy cập vào website có thể sử dụng.
+• Ràng buộc
+   Người dùng phải truy cập vào website.
+• Giao diện của chức năng
+• Mô tả chức năng
+   Khi người dùng truy cập vào website và chọn chức năng đăng ký, trang đăng ký hiển thị nội dung liên quan tới tài khoản, thông tin thành viên.
+3.4.3. Chức năng đăng nhập
+• Mục đích
+   Chức năng này cho phép người dùng khi truy cập vào chức năng đăng nhập ở trên website sẽ hiển thị giao diện với khung đăng nhập.
+• Phạm vi
+   Chức năng này sẽ cho phép người dụng truy cập vào website có thể sử dụng.
+• Ràng buộc
+   Người dùng phải truy cập vào website.
+• Giao diện của chức năng
+• Mô tả chức năng
+   Khi người dùng truy cập vào chức năng đăng nhập ở trên website, trang đăng nhập sẽ xuất hiện để người dùng nhập. Khi nhập đúng thông tin sẽ được chuyển tới trang theo quyền được nhận.
+3.4.4. Chức năng quản lý tài khoản
+• Mục đích
+   Chức năng này cho phép người dùng quản lý tài khoản người dùng.
+• Phạm vi
+   Chức năng này sẽ cho phép quản trị viên truy cập vào website có thể sử dụng.
+• Ràng buộc
+Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng chọn “Quản lý tài khoản” trong mục nhập liệu ở menu.
+• Giao diện của chức năng
+• Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng “Quản lý tài khoản”:
+   -	Chức năng thêm: khi thêm các thông tin về tài khoản khi nhấn vào Thêm tài khoản thì tài khoản mới đã được thêm vào database. 
+   -	Chức năng sửa: khi sửa các thông tin về tài khoản khi nhấn vào nút Sửa tài khoản thì thông tin sửa được lưu vào database. 
+   -  Chức năng xoá khi người sử dụng chọn thông tin dưới danh sách khi chọn xoá thì thông tin sẽ xoá trong danh sách.
+3.4.5. Chức năng quản lý thành viên
+• Mục đích
+   Chức năng này cho phép người dùng quản lý thành viên người dùng.
+• Phạm vi
+   Chức năng này sẽ cho phép quản trị viên truy cập vào website có thể sử dụng.
+• Ràng buộc
+Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng chọn “Quản lý thành viên” trong mục nhập liệu ở menu.
+• Giao diện của chức năng
+• Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng “Quản lý thành viên”:
+   -	Chức năng thêm: khi thêm các thông tin về thành viên khi nhấn vào Thêm thành viên thì thành viên mới đã được thêm vào database. 
+   -	Chức năng sửa: khi sửa các thông tin về tên thành viên khi nhấn vào nút Sửa thành viên thì thông tin sửa được lưu vào database. 
+   -  Chức năng xoá khi người sử dụng chọn thông tin dưới danh sách khi chọn xoá thì thông tin sẽ xoá trong danh sách.
+3.4.6. Chức năng quản lý phân quyền
+• Mục đích
+   Chức năng này cho phép người dùng quản lý tài khoản người dùng.
+• Phạm vi
+   Chức năng này sẽ cho phép quản trị viên truy cập vào website có thể sử dụng.
+• Ràng buộc
+Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng chọn “Quản lý quyền” trong mục nhập liệu ở menu.
+• Giao diện của chức năng
+• Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng “Quản lý quyền”:
+   -	Chức năng thêm: khi thêm các thông tin về tên tên quyền khi nhấn vào Thêm quyền thì quyền mới đã được thêm vào database. 
+   -	Chức năng sửa: khi sửa các thông tin về tên quyền khi nhấn vào nút Sửa quyền thì thông tin sửa được lưu vào database. 
+   -  Chức năng xoá khi người sử dụng chọn thông tin dưới danh sách khi chọn xoá thì thông tin sẽ xoá trong danh sách.
+3.4.7. Chức năng quản lý chương bài
+• Mục đích
+   Chức năng này cho phép người dùng quản lý chương bài người dùng.
+• Phạm vi
+   Chức năng này sẽ cho phép quản trị viên truy cập vào website có thể sử dụng.
+• Ràng buộc
+Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng chọn “Quản lý chương bài” trong mục nhập liệu ở menu.
+• Giao diện của chức năng
+• Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng “Quản lý chương bài”:
+   -	Chức năng thêm: khi thêm các thông tin về chương bài khi nhấn vào Thêm chương bài thì chương bài mới đã được thêm vào database. 
+   -	Chức năng sửa: khi sửa các thông tin về chương bài khi nhấn vào nút Sửa chương bài thì thông tin sửa được lưu vào database. 
+   -  Chức năng xoá khi người sử dụng chọn thông tin dưới danh sách khi chọn xoá thì thông tin sẽ xoá trong danh sách.
+3.4.8. Chức năng quản lý bài học
+• Mục đích
+   Chức năng này cho phép người dùng quản lý bài học người dùng.
+• Phạm vi
+   Chức năng này sẽ cho phép quản trị viên truy cập vào website có thể sử dụng.
+• Ràng buộc
+Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng chọn “Quản lý bài học” trong mục nhập liệu ở menu.
+• Giao diện của chức năng
+• Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng “Quản lý bài học”:
+   -	Chức năng thêm: khi thêm các thông tin về bài học khi nhấn vào Thêm bài học thì bài học mới đã được thêm vào database. 
+   -	Chức năng sửa: khi sửa các thông tin về bài học khi nhấn vào nút Sửa bài học thì thông tin sửa được lưu vào database. 
+   -  Chức năng xoá khi người sử dụng chọn thông tin dưới danh sách khi chọn xoá thì thông tin sẽ xoá trong danh sách.
+3.4.9. Chức năng quản lý câu hỏi
+• Mục đích
+   Chức năng này cho phép người dùng quản lý câu hỏi người dùng.
+• Phạm vi
+   Chức năng này sẽ cho phép quản trị viên truy cập vào website có thể sử dụng.
+• Ràng buộc
+Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng chọn “Quản lý câu hỏi” trong mục nhập liệu ở menu.
+• Giao diện của chức năng
+• Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng “Quản lý câu hỏi”:
+   -	Chức năng thêm: khi thêm các thông tin về câu hỏi khi nhấn vào Thêm câu hỏi thì câu hỏi mới đã được thêm vào database. 
+   -	Chức năng sửa: khi sửa các thông tin về tên quyền khi nhấn vào nút Sửa câu hỏi thì thông tin sửa được lưu vào database. 
+   -  Chức năng xoá khi người sử dụng chọn thông tin dưới danh sách khi chọn xoá thì thông tin sẽ xoá trong danh sách.
+3.4.10.   Chức năng quản lý bài thi
+• Mục đích
+   Chức năng này cho phép người dùng quản lý bài thi người dùng.
+• Phạm vi
+   Chức năng này sẽ cho phép quản trị viên truy cập vào website có thể sử dụng.
+• Ràng buộc
+Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng chọn “Quản lý bài thi” trong mục nhập liệu ở menu.
+• Giao diện của chức năng
+• Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng “Quản lý bài thi”:
+   -	Chức năng thêm: khi thêm các thông tin về tên tên quyền khi nhấn vào Thêm bài thi thì bài thi mới đã được thêm vào database. 
+   -	Chức năng sửa: khi sửa các thông tin về bài thi khi nhấn vào nút Sửa bài thi thì thông tin sửa được lưu vào database. 
+   -  Chức năng xoá khi người sử dụng chọn thông tin dưới danh sách khi chọn xoá thì thông tin sẽ xoá trong danh sách.
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau thời gian nghiên cứu và phát triển, tác giả đã hoàn thành cơ bản các mục tiêu ban đầu đề ra của đề tài. Tác giả đã thực hiện nghiên cứu và áp dụng nền tảng Công nghệ ASP.NET MVC, Entity Framework, HTML, CSS, Bootstrap, jQuery, JavaScript và bao gồm giải pháp về thiết kế cơ sở dữ liệu, thiết kế đặc tả, thiết kế ra các Module, kiểm thử chức năng và triển khai trên website local.
+    Tác giả đã xây dựng được một Website bước đầu cho phép quản trị viên cấu hình, quản lý nhanh chóng. Quản trị viên có thể chỉnh sửa dữ liệu và hiển thị dữ liệu một cách dễ dàng. Hơn nữa, việc thêm hay, xóa một vùng trình bày dữ liệu trên website trở nên đơn giản. Ngoài ra, còn có thêm tiện ích giúp các quản trị viên am hiểu sâu về web có thể tùy biến Style của trang web.
+    Cùng với việc nghiên cứu thị trường và đưa gia các giải pháp tối ưu trang chủ website, đề tài còn xây dựng được hệ quản trị nội dung với giao diện chuyên nghiệp, dễ sử dụng và góp phần làm sinh động website.
+    Xây dựng được 1 website học trực tuyến toán lớp 1 với giao diện dễ sử dụng, không phức tạp ( có trật tự, dễ nhận biết các chức năng, sử dụng ngôn ngữ Tiếng Việt, màu sắc hài hoà sử dụng lâu không bị mỏi ).
+4.2 Hạn chế của đề tài
+    Website mới dừng lại ở các module cơ bản của một website, chưa có nhiều module tiện ích cho người dùng như: Thống kê lượt truy cập theo tháng, thăm dò ý kiến, hỏi đáp, …
+    Website chưa hỗ trợ chức năng đa ngôn ngữ.
+    Kinh nghiệm thiết kế và xây dựng chưa đủ nhiều để đưa ra 1 website hoàn thiện để đưa vào sử dụng thực tế.
+    
+4.3 Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, tác giả đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+• Xây dựng thêm các Control làm phong phú trên việc tùy biến giao diện của website.
+• Bổ sung các Module hỗ trợ cho các website giới thiệu sản phẩm và thương mại điện tử.
+• Nghiên cứu và triển khai đề tài mở rộng thêm các bài giảng cho các bậc cao hơn.
+TÀI LIỆU THAM KHẢO
+x
+[1]Phạm Hữu Khang, Lập trình ASP.NET 2.0. Hà Nội, Việt Nam: Nhà xuất bản Lao Động Xã Hội, 2005.[2]Nguyễn Văn Quyết, Giáo trình Công nghệ Web và ứng dụng. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY, 2010.[3]ASP.NET MVC: https://www.tutorialsteacher.com/mvc/asp.net-mvc-tutorials[4]Entity Framework: https://www.entityframeworktutorial.net/code-first/what-is-code-first.aspx[5]SQL Server: https://www.sqlservertutorial.net/ , https://www.w3schools.com/sql/[6]HTML, CSS: https://www.w3schools.com/html/default.asp , https://www.w3schools.com/css/default.asp[7]Bootstrap 4: https://www.w3schools.com/bootstrap4/default.asp[8]jQuery, JavaScript: https://www.w3schools.com/js/default.asp[9]Stackoverflow: https://stackoverflow.com/x
+
+Xây dựng website học trực tuyến toán lớp 1
+    
+    
+10
+    
+    

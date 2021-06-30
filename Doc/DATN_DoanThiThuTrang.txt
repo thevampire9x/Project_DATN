@@ -1,0 +1,430 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Trong thời đại công nghệ thông tin như hiện nay, sản phẩm công nghệ ngày càng chịu sự đánh giá khắt khe hơn từ phía những người dùng, đặc biệt là về sản phẩm Game thủ, hay chỉ là những người chơi bình thường. Ngành công nghiệp game hiện nay có thể nói là bùng nổ, với tốc độ phát triển chóng mặt, rất nhiều những game hay và hấp dẫn đã được ra đời trong thời gian qua. Phía sau những Game phát triển và nổi tiếng như vậy đều có một Game Engine. Game Engine là một công cụ hỗ trợ, một Middleware giúp người phát triển viết Game một cách nhanh chóng và đơn giản, đồng thời cung cấp khả năng tái sử dụng các tài nguyên và mã nguồn cao do đó có thể phất triển Game từ một Game Engine.
+    Từ xu hướng phát triển và những bất cập trên, đồ án này sẽ khảo sát và nghiên cứu về Engine Unity – một Game Engnie rất phổ biến và không kém mạnh mẽ hiện nay nhằm thực hiện việc phát triển một trò chơi (Demo) Bống Bống Bang Bang 2D, Chuẩn bị kiến thức kĩ năng cho định hướng nghề nghiệp (phát triển Game) sau này của chúng em, góp phần vào sự phát triển của ngành công nghệ Game nước nhà. Các chương đầu trong tài liệu sẽ trình bày lần lượt các khái niệm chưng về Game Engine và thế giới 2D.
+    Các chương tiếp theo sẽ giới thiệu về Engine Unity bao gồm các đặc điểm, tính năng, công cụ và thành phần trong Engine này. Sau những nội dung về thiết kế, tài liệu sẽ trình bày về việc lập trình trên Unity khi giới thiệu về ngôn ngữ lập trình cùng các lớp, hàm trong thư viện dựng sẵn của Unity thông qua các ví dụ thực tế khi phát triển game Bống Bống Bang Bang. Cuối cùng là giới thiệu về bối cảnh, cốt truyện, tài liệu hướng dẫn sử dụng của trò chơi Demo cùng chương tổng kết về các khó khăn và những thành quả trong suốt quá trình phát triển trò chơi Demo trên Unity.
+    
+1.2. Mô hình phát triển 
+    Trò chơi được xây dựng dựa trên mô hình xoắn ốc
+   Mô hình xoắn ốc do Barry Boehm đề xuất năm 1988. Là sự kết hợp tính lặp của mô hình  nguyên mẫu và tính hệ thống của mô  hình thác nước. Về bản chất, mô hình mô tả sự phát  triển của phần mềm qua các giai đoạn  tiến hoá, mỗi giai đoạn được coi như một  mô hình thác nước.
+   Mô hình xoắn ốc là mô hình phát triển phần mềm với trọng tâm là kiểm soát rủi ro qua các chu kỳ phát triển. Nó có hai đặc trưng chính
+- Dùng cách tiếp cận chu kỳ để phát triển dần mức độ  khái niệm và thực thi của hệ thống trong lúc hạn chế tối đa sự rủi ro
+- Tập hợp các mốc thời gian để đảm bảo cam kết của  các bên liên quan để đi đến một giải pháp giúp hệ  thống khả thi và thỏa mãn các yêu cầu
+- Bản chất mô hình xoắn ốc như tên gọi của nó, là  bắt đầu từ những cái khái quát nhất rồi  đi dần đến chi tiết. Trong quá trình đó có lập kế hoạch cho từng giai  đoạn làm chi tiết hóa sản phẩm và nhấn mạnh việc đánh giá rủi   ro. Người ta trì hoãn việc xây dựng chi tiết các yếu tố phần mềm có rủi ro thấp và tránh đổ vỡ không  cần thiết trong thiết kế cho đến khi các yếu tố rủi ro cao trở nên ổn định.
+- Rủi ro là các tình huống hoặc sự kiện làm cho dự  án không đáp ứng được mục đích đặt ra. Để kiểm soát hay hạn chế các rủi ro đó phần mềm được xây dựng theo nhiều chu kỳ. Trước khi bắt đầu mỗi chu kì nào đó,  người ta thường xác định các rủi ro và cách giải quyết có thể, kết thúc mỗi chu kì là xét duyệt và đánh giá
+- Mỗi chu kỳ tương ứng với một sản phẩm  của một giai đoạn phát triển phần mềm. Xác định mục tiêu, các giải pháp khác nhau  để đạt được mục tiêu, các rang  buộc. Phân tích rủi ro và khả năng giải  quyết (thường là xây dựng bản mẫu). Phát triển và kiểm thử sản phẩm của chu kỳ. Lập kế hoạch cho chu kỳ tiếp theo
+- Mô hình xoắn ốc cung cấp cách thức làm  phần mềm bằng cách đưa ra các phiên  bản tăng dần: Đây không phải là bổ sung thêm các thành  phần mới như mô hình tăng dần. Đây là sự tiến hóa: cũng các đặc trưng ấy  nhưng được làm mịn hơn, chi tiết hơn, cũng  như nêu ra được các rủi ro mới cần giải quyết. Phiên bản sau cùng chính là phần mềm hoàn  chỉnh có thể chuyển giao cho khách hàng sử  dụng.
+
+    Hình 1.1. Mô hình xoắn ốc
+- Mô hình này có các rủi ro: thất bại về nhân sự, thời gian biểu và ngân sách không thực tế, phát triển các chức năng không phù hợp, phát triển giao diện người dùng không thích hợp 
+   Để giải quyết các rủi ro trên ta có thể giải quyết như sau:
+➢ Tuyển dụng nhân sự cao cấp, đào tạo lẫn nhau,xây dựng nhóm, có đầy đủ nhân sự với các chức năng khác nhau.
+➢ Thiết lập kế hoạch và đánh giá chi phí thật chi tiết; phát triển dần dần; tái sử dụng; theo sát yêu cầu,...
+➢ Phân tích kĩ tổ chức, nhiệm vụ của phần mềm; xây dựng các khái niệm; thường xuyên trao đổi với người sử dụng và có tài liệu hướng dẫn sử dụng sớm...
+➢ Cần phân tích các công việc, xây dựng các hình mẫu trước; đặc điểm người sử dụng (chức năng, phong cách, khối lượng công việc).
+    Ưu điểm của mô hình
+➢ Hạn chế rủi ro sớm.
+➢ Nhận được phản hồi sớm từ người sử dụng.
+➢ Phân tích rủi ro dự án được đẩy lên làm một phần thiết yếu trong quy trình xoắn ốc để tăng độ tin cậy của dự án.
+➢ Xây dựng dự án có sự kết hợp các mô hình khác vào phát triển (thác nước, mô hình mẫu,…).
+➢ Cho phép thay đổi tùy theo yêu cầu cho mỗi vòng xoắn ốc.
+➢ Nó được xem như là một mô hình tổng hợp của các mô hình
+     khác. Không chỉ áp dụng cho phần mềm mà còn phải cho cả phần cứng
+➢  Một rủi ro nào đó không được giải quyết thì chấm dứt dự án.
+➢  Các vòng tròn được lặp để đáp ứng được thay đổi của người dung.
+➢  Kiểm soát rủi ro ở từng giai đoạn phát triển.
+➢  Đánh giá chi phí chính xác hơn các phương pháp khác. 
+    Nhược điểm của mô hình
+➢ Phức tạp và không thích hợp với các dự án nhỏ và ít rủi ro.
+➢ Yêu cầu thay đổi thường xuyên dẫn đến lặp vô hạn và thất bại.
+➢ Đòi hỏi năng lực quản lý, năng lực phân tích rủi ro cao.
+➢ Chưa được dùng rộng rãi như mô hình thác nước hay là bản mẫu
+
+1.3. Mục tiêu của đề tài
+   Ứng dụng Game Bống Bống Bang Bang cần đạt được những mục tiêu sau:
+- Chuyển động của các nhân vật trong game hoạt động uyển chuyển, mượt mà, linh hoạt, không lặp đi lặp lại hành động gây nhàm chán.
+- Hình ảnh, âm thanh sinh động tạo hứng thú cho người chơi.
+- Hệ thống phải cung cấp chức năng báo điểm, thời gian cho người chơi.
+1.4. Giới hạn và phạm vi của đề tài
+• Môi trường phần cứng
+    o CPU: Snapdrgon 400 trở lên
+    o RAM: tối thiểu 1GB
+    o HDD: dung lượng tối thiểu trống 1GB
+• Môi trường phần mềm
+    o Hệ điều hành: Android
+1.5. Nội dung thực hiện
+    	Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Nghiên cứu công nghệ lập trình Game Unity trên nền tảng C#
+- Thiết kế giao diện, xây dựng đúng chủ đề câu cá .
+- Lập trình chuyển động, âm thanh, hình ảnh, thuộc tính cho các đối tượng có trong Game (VD: Cá, người câu, móc câu)
+- Kiểm thử hệ thống.
+- Triển khai thực nghiệm hệ thống trên mạng Internet.
+1.6. Phương pháp tiếp cận
+- Cách tiếp cận : Nghiên cứu các ngôn ngữ lập trình C#, JavaScritp, java..
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu;
+o Phương pháp phân tích mẫu;
+o Phương pháp thực nghiệm.
+CHƯƠNG 2. CƠ SỞ LÝ THUYẾT
+    TỔNG QUAN VỀ ENGINE UNITY VÀ KHÔNG GIAN 2D, 3D
+2.1. Tổng quan về Engine Unity
+2.1.1. Unity là gì?
+- Unity là một phần mềm làm game đa nền tảng được phát triển bởi Unity Technologies, mà chủ yếu để phát triển videogame cho máy tính, consoles và điện thoại. Lần đầu tiên nó được công bố chạy trên hệ điều hành OS X, tại Apple's Worldwide Developers Conference vào năm 2005, đến nay đã mở rộng 27 nền tảng. 
+- 6 phiên bản chính của phần mềm này đã được phát hành. Tại triển lãm WWDC năm 2006, Apple đã trao thưởng giải Best Use of Mac OS X Graphics cho ứng dụng này.
+- Unity hỗ trợ đồ họa 2D và 3D, các chức năng được viết chủ yếu qua ngôn ngữ C#. Hai ngôn ngữ lập trình khác cũng được hỗ trợ: Boo, đã bị loại cùng với việc phát triển Unity 5 and UnityScript bị loại vào tháng 8 năm 2017 sau khi phát hành Unity 2017.1. 
+- UnityScript là một ngôn ngữ lập trình độc quyền có cú pháp tương tự JavaScript. Phần mềm nhắm mục tiêu các đồ họa APIs sau: Direct3D trên Windows và Xbox One; OpenGLtrên Linux, macOS, và Windows; OpenGL ES trên Android và iOS; WebGL trên web; và APIs độc quyền trên các máy chơi video game. Ngoài ra, Unity hỗ trợ APIs cấp thấp như Metal trên iOS và macOS và Vulkan trên Android, Linux, và Windows, cũng như Direct3D 12 trên Windows và Xbox One. Trong 2D games, Unity cho phép nhập sprites và một renderer thế giới 2D tiên tiến. Đối với 3D games, Unity cho phép thiết lập các đập điểm kĩ thuật của các kết cấu và độ phân giải mà công cụ trò chơi hỗ trợ, cung cấp các hỗ trợ cho bump mapping, reflection mapping, parallax mapping, cảnh không gian ambient occlusion (SSAO), hiệu ứng bóng đổ bằng cách sử dụng shadow maps, render thiết lập toàn cảnh đến hiệu ứng. Unity cũng cung cấp các dịch vụ cho nhà phát triển, bao gồm: Unity Ads, Unity Analytics, Unity Certification, Unity Cloud Build, Unity Everyplay, Unity IAP, Unity Multiplayer, Unity Performance Reporting and Unity Collaborate.
+-   Unity nổi bật với khả năng xây dựng trò chơi chạy trên nhiều nền tảng. Các nền tảng được hỗ trợ hiện nay là Android, Android TV, Facebook Gameroom, Fire OS, Gear VR, Google Cardboard, Google Daydream, HTC Vive, iOS, Linux, macOS, Microsoft HoloLens, Nintendo 3DS family, Nintendo Switch, Oculus Rift, PlayStation 4, PlayStation Vita, PlayStation VR, Samsung Smart TV, Tizen, tvOS, WebGL, Wii U, Windows, Windows Phone, Windows Store, và Xbox One. Unity trước đây cũng đã hỗ trợ 7 nền tảng khác chạy trên Unity Web Player. Unity Web Player là một plugin của trình duyệt chạy trên Windows và OS X, đã bị gỡ bỏ vì lợi ích của WebGL.
+- Unity là bộ công cụ phát triển phần mềm mặc định (SDK) cho máy chơi game video game Wii U của Nintendo, kèm theo bản miễn phí của Nintendo với mỗi giấy phép phát triển Wii U. Unity Technologies gọi việc kết hợp sản xuất SDK với một bên thứ ba là "industry first".
+- Unity có 4 sự lựa chọn đối với người dùng. Đây là danh sách các lựa chọn hiện có:
+
+    Hình 2. 1: Bốn sự lựa chọn của Unity
+- Chỉ với khoản tiền bỏ ra khá khiên tốn (1.500 USD) là phiên bản pro đã nằm trong tay của chúng ta, dĩ nhiên tại Việt Nam số tiền này vẫn là quá lớn nhưng thật may là đã có phiên ban Unity Free. Tuy nhiên, nhiều tính năng quan trọng (Network) bị cắt giảm nhưng đó không phải là vấn đề quá lớn nếu muốn phát triển một ựa game tầm trung.
+      - Vào năm 2009, Unity nằm trong top 5 game engine tốt nhất cho việc sản xuất game với chỉ 4 năm phát triển. Unity đứng thứ 4, xếp sau Unreal Engine 3, Gamebryo Engine (được VTC Studio mua về phát triển SQUAD) và Cry Engine 2. Lượng tài liệu hướng dẫn Unity rất phong phú. Hơn thế nữa nó còn có sẵn một cộng đồng cực lớn với diễn đàn riêng. Bất cứ điều gì không hiểu chúng ta có thể thoải mái hỏi và nhận được câu trả lời nhanh chóng, tận tâm.
+      - Quá trình tạo địa hình cũng như truy xuất từ các phần mềm 3DSMax, Mây, Cinema4D,…rất nhanh chóng. Sức mạnh và sự tiện lợi của Unity là vô cùng lớn.
+           + Sức mạnh: Unity có thể tạo ra được nhiều loại game 2D, 3D đa dạng, dễ sử dụng với người làm game chưa chuyên nghiệp, chất lượng cao, chạy hầu hết trên các hệ điều hành.
+           + Sự tiện lợi: nếu chứng ta là một người chuyên dùng 3Dmax, hay Maya hoặc phần mềm mã nguồn mở Blender thì quả là thật tuyệt, chúng ta sẽ có một lợi thế lớn khi viết game trên Unity này, bởi công việc tạo các mô hình 2D, 3D sẽ trở lên dễ dàng hơn rất nhiều, việc kết hợp lập trình và người thiết kế các mô hình sẽ nhanh và hiệu quả hơn. Trong Unity chúng ta có thể import trực tiếp các file mô hình đang thiết kế sẽ thiết kế hoàn thiện tiếp nếu chưa xong trong khi đó công việc import chỉ diễn ra một lần. Không như việc phải dùng các công cụ khác để thực hiện viết game chúng ta sẽ phải xuất chúng ra một dạng nào đó và mỗi lần sửa lại phần mô hình chúng ta lại phải import lại, và như thế là quá mất thời gian cho việc tạo và chỉnh sửa các mô hình theo ý muốn. Ngoài ra Unity còn cho chúng ta trực tiếp tạo các mô hình nếu muốn. Việc đặt các thuộc tính vật lí trong Unity cũng cực kì dễ dàng và hỗ trợ sẵn nhiều chức năng.
+      
+2.1.2. Sơ lược lịch sử hình thành và phát triển của Unity
+    2.1.2.3. Lịch sử
+- Năm 2012, VentureBeat phát biểu rằng "rất ít công ty đóng góp vào sự phát triển trò chơi độc lập như Unity Technologies.... hơn 1.3 triệu người dùng đang sử dụng Unity để phát triển game trên iOS, Android, máy chơi game, PC, và trò chơi trên web.... Unity sẽ mở ra thời kỳ phát triển công cụ phát triển trò chơi đa nền tảng." 
+- Đối với Apple Design Awards tại cuộc triển lãm thương mại WWDC 2006, Apple, Inc. đã gọi Unity là Best Use of Mac OS X Graphics (tạm dịch: Ứng dụng tốt nhất cho đồ họa trên nền tảng Mac OS X), một năm sau khi Unity ra mắt tại cùng một triển lãm thương mại Unity Technologies cho biết đây là lần đầu tiên một công cụ phát triển game được trao giải thưởng này. Một cuộc khảo sát tháng 5 năm 2012 của tạp chí Game Developer đã khẳng định Unity là công cụ phát triển trò chơi hàng đầu trên di động. Vào tháng 7/2014, Unity đã đạt giải "Best Engine" tại liên hoan trao giải thưởng công nghệ hàng năm của Anh. 
+- Unity 5 cũng nhận được những lời khen tương tự, với The Verge đã nói rằng "Unity giúp việc phát triển game trở nên dễ dàng và phổ biến.... Unity 5 là một biến tiến đáng mong đợi trong tương lai." 
+- Sau khi phát hành Unity 5, Unity Technologies bị chỉ trích rằng khổi lượng lớn các game phát hành trên Steam là của các nhà phát triển thiếu kinh nghiệm. CEO John Riccitiello giải thích trong một cuộc họp báo rằng đây là tác dụng phụ khi chúng ta xã hội hóa việc phát triển game: "If I had my way, I'd like to see 50 million people using Unity – although I don't think we're going to get there any time soon. I'd like to see high school and college kids using it, people outside the core industry. I think it's sad that most people are consumers of technology and not creators. The world's a better place when people know how to create, not just consume, and that's what we're trying to promote." (tạm dịch: nếu chúng tôi có cách, tôi muốn 50 triệu người sử dụng Unity- dù chúng tôi biết rất khó đạt được điều đó. Tôi muốn thấy những đứa trẻ ở trường Trung học và Đại học sử dụng nó, những người ngoài ngành. Tôi nghĩ rằng thật buồn khi hầu hết mọi người là người tiêu dùng về công nghệ, chứ không phải người sáng tạo. Thế giới là một nơi tốt đẹp hơn khi người ta biết làm thế nào để tạo ra, không chỉ tiêu thụ, và đó là những gì chúng tôi đang cố gắng để thúc đẩy.)
+- Vào tháng 12 năm 2016, Unity Technologies thông báo họ sẽ thay đổi hệ thống số phiên bản trên Unity từ định theo thứ tự sang năm phát hành để xắp xếp các phiên bản với nhịp cập nhật thường xuyên hơn
+
+    2.1.2.4. Marketing
+--  16/12/2013, Unity Technologies Japan tiết lộ ảnh chụp màn hình với một nữ nhân vật linh vật chính thức tên Unity-chan (ユニティちゃん Yuniti-chan?), tên thật là Kohaku Ōtori (大鳥 こはく Ōtori Kohaku?) (lồng tiếng bởi Asuka Kakumoto), với triển lãm trong sự kiện Comic Market 85 tại Tokyo Big Sight từ ngày 29 đến ngày 31 tháng 12 cùng năm, Unity-chan sẽ được công bố cùng với lồng tiếng của cô.Dữ liệu trò chơi liên quan đến nhân vật đã được công bố năm 2014. Các nhân vật được thiết kế bởi Unity Technologies Japan phác họa "unity" như một nữ anh hùng. Công ty cho phép sử dụng Unity-chan và các nhân vật liên quan trong một dự án thứ cấp dưới một số licenses. Như là, Unity-chan xuất hiện như là một nhân vật điều khiển được trong game Runbow. Cô trở nên rất nổi tiếng, dẫn đến cô cũng xuất hiện trong VOCALOID, gồm có cả thư viện âm thanh riêng trong VOCALOID4 và một bản đặc biệt của VOCALOID để thích ứng với Unity Engine 5.0 gọi là Unity with VOCALOID.
+
+2.2. Tổng quan về Game Engine
+2.2.1. Khái niệm
+- Một Game Engine ( hay công cụ tạo game/ động cơ game) là một phần mềm được viết cho mục đích thiết kế và phát triển video game. Có rất nhiều loại Game Engine dùng để thiết kế Game cho các hệ máy như hệ Consoles hay máy tính cá nhân (PC). Chức năng cốt lõi của Game Engine phần lớn nằm trong công cụ dựng hình (kết xuất đồ họa) cho các hình ảnh 2 chiều (2D) hay 3 chiều (3D), công cụ vật lý (hay công cụ tính toán và phát hiện va chạm), âm thanh, mã nguồn, hình ảnh động ( Animation), trí tuệ nhân tạo, phân luồng, tạo dòng dữ liệu xử lý, bộ nhớ, dựng ảnh đồ thị, và kết nối mạng. Quá trình phát triển game tiết kiệm được rất nhiều thời gian và kinh phí vào việc tái sử dụng và tái thích ứng một Engine để tạo nhiều Game khác nhau.
+
+2.2.2. Mục đích
+-  Game Engine cúng cấp một bộ dụng cụ phát triển trực quan và có thể tái sử dụng từng thành phấn trong đó. Nói chung các bộ công cụ này cung cấp một môi trường phát triển được đơn giản hóa. Phát triển ứng dụng nhanh (Rapid Application Development) cho game theo cách lập trình hướng dữ liệu. Những Game Engine này đôi khi được gọi là các “ phần mềm trung gian cho Game” ( Game Middleware), như ý nghĩa của thuật ngữ chúng cung cấp một nền tảng phần mềm linh hoạt và dễ dàng sử dụng lại với mọi chức năng cốt lõi cần thiết ngay trong nó để có thể phát triển  một ứng dụng Game đồng thời giảm giá thành, độ phức tạp, và kịp thời hạn phát hành – tất cả các yếu tố quan trọng trong ngành công nghiệp Game, đầy cạnh tranh,
+- Giống như các phần mềm trung gian khác, Game Engine thường cung cấp một nền tảng trìu tượng hóa, cho phép một Game có thể chạy trên nhiều hệ máy bao gồm các hệ console hoặc máy tính các nhân với một vài thay đổi (nếu cần) trong mã nguồn của Game đó. Thông thường, phần mềm trung gian cho Game được thiết kế với một nền tảng kiến trúc dựa trên các thành phần khác, cho phép các hệ thống khác nhau trong Engine có thể thay thế hoặc mở rộng với các phần mềm trung gian khác chuyên biệt hơn như là Havok cho hệ thống vật lý trong game, Miles Sound System cho âm thanh hay Bink cho các đoạn video. 
+- Một số Game Engine chỉ cung cấp khả năng dựng hình (kết xuất) 3D thời gian thực hay một khả năng riêng biệt nào khác thay vì rất nhiều chức năng trong phạm vi rộng mà Game Engine yêu cầu. Loại Engine này thường được gọi là: “Graphics Engine”, “Rendering Engine”, hay “3D Engine” thay vi thuật ngữ bao quát hơn là “Game Engine”. Một vài ví dụ cho các engine đồ họa là: RealmForge, Truevision3D, OGRE, Crystal Space, Genesis3D, Vision Engine, Irrlicht và JMonkey Engine. Game hoặc engine đồ họa ngày nay thường cung cấp bởi một trường đồ thị dựng sẵn, khiến việc biểu diễn hướng đối tượng của thế giới game 3D trong thiết kế được đơn giản hóa và có thể làm cho việc kết xuất thế giới ảo rộng lớn một cách hiệu quả hơn.
+
+2.2.3. Tính năng của Engine 
+  - Môi trường phát triển được tích hợp với tính năng kế thừa, khả năng chỉnh sửa đồ họa, chức năng kiểm tra chi tiết, và đặc biệt là tính năng xem trước game ngay trong lúc xây dựng ( live game preview).
+   - Triển khai được trên nhiều nền tảng:
+       + Chương trình độc lập trên Window và Mac OS.
++ Trên web, thông qua Unity Web Player plugin cho Internet Explorer, Firefox, Safari, Opera, Chrome, cho cả Windows và Mac OS.
++ Trên Mac OS Dashboad widget.
++ Cho Nintendo Wii ( cần mua license thêm).
++ Cho iPhone, iPab application (cần mua license thêm).
++ Cho Google Android (cần mua license thêm).
++ Cho Microsoft Xbox 360 (cần mua license thêm).
++ Cho Sony PlayStation 3 (cần mua license thêm).
+- Tài nguyên ( model, âm thanh, hình ảnh,…) được tải vào trong Unity và tự động cập nhật nếu tài nguyên có sự thay đổi, Unity hỗ trợ các kiểu định dạng từ 3DS Max, Maya, Blender, Cinema 4D và Cheetah3D.
+- Graphics engine sử dụng Direct3D ( Windows), OpenGL(Mac, Windows), OpenGL ES (iPhone OS), và các API khác trên Wii.
+- Hỗ trợ bump mapping, reflection mapping, parallax mapping, Screen Space Ambient Occlusion v…v…
+- Unity Asset Server: Đây là một tính năng khá mới của Unity, theo đó Unity sẽ cung cấp một hệ thống quản lí theo dạng phên bản cho tất cả asset và cả script. Đây là một kho chứa các tài nguyên của asset ngay lập tức được cập nhật. Server chạy trên database opensource PostgreSQL và có thể truy cập đến Mac lẫn Window, Linux, Asset Server đòi hỏi 1 khoản phí phụ trội là $499 cho mỗi bản copy Unity, và một linsenve UnityP
+    
+2.2.4. Ảo hóa phần cứng ( trừu tượng hóa phần cứng – Hardware Abstraction)
+- Thông thường, Engine 3D hay hệ thống hết xuất đồ họa trong Game Engine thường được xây dựng trên một nền tảng giao diện lập trình ứng dụng đồ họa như Direct 3D hay OpenGL cung cấp sẵn một hệ ảo hóa cho GPU hay card đồ họa. Thư viện mã nguồn cấp thấp ( cấp cơ bản) như: DirectX, SDL, và OpenAL ( thư viện âm thanh mã nguồn mở) cũng thường được sử dụng 
+- trong các Game khi chúng cung cấp khả năng truy cập phần cứng độc lập 
+
+2.2.5. Lịch sử
+- Trước khi có game engine, game thường được tạo ra từng phần nhỏ: ví dụ, một game cho hệ máy Atari 2600 phải được thiết kế từ mức cơ bản nhất để tối ưu việc hiển thị phần cứng (hay thiết kế hiển thị lõi-ngày nay người ta dùng từ nhân hệ điều hành). Các hệ máy khác thậm chí còn tiếp cận khó khăn hơn, nhưng kể cả khi việc hiển thị không phải là vấn đề thì việc bộ nhớ hạn chế thường hủy hoại các nỗ lực tạo ra một thiết kế dữ liệu lớn mà một engine yêu cầu. Kể cả trên các hệ thống có bộ nhớ lớn hơn, rất ít trong số chúng có thể sử dụng lại giữa các game. Các tiến bộ nhanh chóng của công nghệ phần cứng -khởi đầu thời kỳ thị trường hóa— có nghĩa là hầu hết các bộ mã nguồn tạo game trước đó sẽ bị quẳng đi sau đó, như các thế hệ game sau này sẽ sử dụng thiết kế khác hoàn toàn và đồng thời tận dụng cả các nguồn tài nguyên ngoài. Do đó phần lớn các game thiết kế trong thập kỷ 80 được tạo ra thông qua một bộ mã nguồn có quy tắc cố định với một lượng nhỏ cấp độ dữ liệu và dữ liệu hình ảnh.
+- Thế hệ đầu tiên của hãng phát triển engine đồ họa (kết xuất hình ảnh) thứ 3 (và tiền thân của game engine) đã thống trị bởi ba phần mềm ứng dụng: BRender từ Argonaut Software, Renderware từ Criterion Software Limited và Reality Lab của RenderMorphic. Reality Lab hoạt động nhanh nhất trong ba phần mềm này và là phần mềm đầu tiên được mua lại trong một động thái tích cực từ Microsoft. Đội ngũ phát triển của RenderMorphics: Servan Keondjian, Kate Seekings và Doug Rabson sau đó tham gia vào dự án của Microsoft và Reality Lab đổi tên thành Direct3D trước khi Keondjian và Rabson rời đi để lập một công ty viết phần mềm trung gian khác:Qube Software. Renderware về sau được EA mua lại nhưng lại bị bỏ mặc bởi "gã khổng lồ game" này.
+- Thuật ngữ "game engine" xuất hiện vào giữa những năm 90, đặc biệt là trong mối quan hệ với game 3D như game bắn súng góc nhìn người thứ nhất(FPS). Như các thương hiệu nổi tiếng của id Sortware: Doom và Quake chẳng hạn, thay vì phải làm việc từ đầu, các nhà phát triển khác (nếu được cấp phép) sẽ có quyền truy nhập vào phần lõi (mã nguồn) của game và thiết kế các hình ảnh, nhân vật, vũ khí, và các màn chơi của riêng họ-gọi là game content(nội dung game) hay "game assets"(tài sản game).Sự tách biệt trong việc làm game
+- Các quy định cụ thể và dữ liệu từ các khái niệm cơ bản như hệ thống vật lý và các thực thể trong game (như nhân vật phụ, đồ vật) có nghĩa rằng các nhóm phát triển có thể tăng lên và chuyên môn hóa dần.
+- Các game sau này, như Quake III Arena và sản phẩm năm 1998 của Epic Games: Unreal (không phải Unreal Tournament) được thiết kế với cách tiếp cận mới này, game engine và nội dung game được chia thành các phần riêng biệt để phát triển. Việc thực hiện cấp phép như cấp phép sử dụng công nghệ đã chứng minh là một nguồn doanh thu phụ trợ hữu dụng cho một số nhà phát triển, như thỏa thuận cấp phép cho một game engine cao cấp có thể nằm trong khoảng 10.000 tới 10 triệu USD, và số lượng các hãng phát triển được cấp phép sử dụng engine có thể lên tới hàng tá (như đã thấy ở Unreal Engine). Và điều cuối cùng, vì engine có thể tái sử dụng khiến việc phát triển game tiếp theo nhanh hơn và dễ dàng hơn, một thuận lợi to lớn trong ngành công nghiệp cạnh tranh này.
+- Game engine hiện đại là một trong những ứng dụng được viết ra (bằng các ngôn ngữ lập trình) phức tạp nhất, thường xuyên phải có rất nhiều tinh chỉnh trong hệ thống để đảm bảo kiểm soát chính xác trải nghiệm người dùng. Sự phát triển liên tục của game engine đã tạo ra một sự phân chia mạnh mẽ giữa dựng hình, kịch bản, thiết kế hình ảnh, và thiết kế cấp độ(các màn chơi...). Bây giờ thông thường nhất là: một đội ngũ phát triển game điển hình phải có số lượng họa sĩ gấp vài lần số lượng lập trình viên.
+- Các game bắn súng góc nhìn người thứ nhất thường chiếm ưu thế về việc sử dụng engine của các hãng thứ 3, nhưng chúng cũng được sử dụng để tạo các game thể loại khác. Ví dụ, game nhập vai: The Elder Scrolls III: Morrowind (của studio Bethesda Softworks) và game MMORPG: Dark Age of Camelot đều được làm trên engine Gamebryo, game MMORPG khác Lineage II đều dựa trên Unreal Engine. Game engines cũng thường được sử dụng để chuyển game sang các hệ máy khác nhau; ví dụ, engine RenderWare được sử dụng trong các thương hiệu như Grand Theft Auto và Burnout.
+- Phân luồng dữ liệu giờ đây hết sức quan trọng do các hệ thống đa nhân hiện đại và để tăng cường tính hiện thực trong game. Một luồng điển hình bao gồm dựng hình, tạo dòng, xử lý âm thanh, và xử lý vật lý(phát hiện va chạm). Game đua xe là điển hình đi đầu trong việc xử lý luồng với hệ thống vật lý chạy với một luồng tách biệt trước khi các hệ thống con khác hoạt động, phải tách riêng vì dựng hình và các nhiệm vụ xử lý liên quan chỉ cần tần số cập nhật khoảng 30–60 Hz trong khi xử lý vật lý lại cần một tần số cao hơn nhiều. Ví dụ, Need For Speed trên hệ máy PlayStation chạy với tần số vật lý cỡ 100 Hz so sánh với Forza Motorsport 2 (hệ máy Xbox 360) có tần số vật lý là 360 Hz.
+- Mặc dù thuật ngữ lần đầu được sử dụng vào những năm 90, nhưng vẫn có một vài hệ thống trước đó trong thập niên 80 cũng được coi như là game engine, như là 2 hệ thống AGI và SCI của Sierra, SCUMM của LucasArts và Freescape engine của Incentive Software. Không như hầu hết các game engine ngày nay, các engine này chưa bao giờ được sử dụng bởi bất kỳ một hãng thứ 3 nào(trừ trường hợp hê thống SCUMM đã được cấp phép và sử dụng bởi Humongous Entertainment).
+
+2.2.6. Xu hướng hiện đại
+- Game engine càng phát triển và trở nên thân thiện hơn với người sử dụng,ứng dụng của nó càng được mở rộng, và giờ đây được sử dụng để tạo các game mang mục đích khác với giải trí đơn thuần như: mô phỏng, huấn luyện ảo, y tế ảo, và mô phỏng các ứng dụng quân sự. Để tạo điều kiện tiếp cận này, các nền tảng phần cứng mới đang là mục tiêu của game engine, kể cả điện thoại di động (ví dụ: iPhone, điện thoại Android) và trình duyệt web (như Shockwave, Flash, WebVision của Trinigy, Silverlight, Unity Web Player, O3D và thuần dhtml).
+- Thêm vào đó, nhiều game engine đang được tạo ra bằng các ngôn ngữ lập trình cấp cao như Java và C# hay .NET (ví dụ TorqueX, và Visual3D.NET) hay Python (Panda3D). Vì hầu hết các game 3D hiện nay đều có giới hạn cho GPU(giới hạn bởi sức mạnh của card đồ họa), khả năng gây chậm máy của các ngôn ngữ lập trình cấp cao trở nên không đáng kể, trong khi việc tăng năng suất được cung cấp bởi các ngôn ngữ này lại có lợi cho các nhà phát triển game engine. Những xu hướng này gần đang được thúc đẩy bởi các hãng như Microsoft để hỗ trợ các nhà phát triển game độc lập. Microsoft phát triển XNA (Microsoft XNA) như là một gói phần mềm phát triển (SDK) cho tất cả các game trên hệ máy Xbox và các sản phẩm liên quan. Nó bao gồm kênh thiết kế XBox Live Indie Games đặc biệt cho các nhà phát triển nhỏ không có nguồn lực mở rộng cần thiết để đóng gói một game để bán trên các giá bán lẻ. Việc này trở nên dễ dàng hơn và rẻ hơn bao giờ hết để phát triển một game đa hệ máy có hỗ trợ managed frameworks.
+
+2.2.7. Phần mềm trung gian
+- Bốn gói phần mềm trung gian được sử dụng rộng rãi nhất mà cung cấp các chức năng trong hệ thống con gồm có Bink của hãng RAD Game Tools, hãng Firelight với FMOD, Havok, và GFx của Scaleform. RAD Game Tools phát triển Bink cho dựng hình video cơ bản, đi cùng với âm thanh Miles, và dựng hình 3D Granny. FMOD của Firelight là một thư viện và bộ công cụ phần mềm âm thanh mạnh mẽ giá rẻ. Havok cung cấp một hệ thống mô phỏng vật lý mạnh, cùng với các bộ phần mềm hình ảnh động và mô phỏng hành vi. Scaleform đem lại GFx dùng cho các biểu diễn cao cấp trên nền giao diện Flash, cùng với các giải pháp trình chiếu video chất lượng cao, và một Input Method Editor (IME) phần bổ sung nhằm hỗ trợ trò chuyện trong game bằng ngôn ngữ châu Á.
+- Một số middleware bao gồm toàn bộ mã nguồn trong nó, số khác chỉ cung cấp một giao diện lập trình ứng dụng dùng để tham khảo như một thư viện mã nhị phân. Mặt khác một số có thể được cấp phép, thường là phải trả một cái giá cao hơn cho toàn bộ mã nguồn.
+
+2.2.8. Phần mềm trung gian cho game trực truyến nhiều người chơi(MMOG)
+- Middleware cho game trực truyến nhiều người chơi phức tạp hơn nhiều so với game chơi đơn. Về mặt kỹ thuật tất cả các game engine thông thường đều có thể sử dụng để thực hiện một game trực tuyến nhiều người chơi bằng cách kết hợp nó với một phần mềm trung gian MMO (MMO middleware). 
+- Sự tăng cường tính phổ biến của các game MMOG thúc đẩy sự phát triển các gói phần mềm trung gian MMO. Một số gói này còn bao gồm luôn cả game engine trong đó, trong khi số khác lai chỉ hỗ trợ mạng và do vậy phải kết hợp với một game engine cùng với nó để tạo một game trực tuyến nhiều người chơi. Một số MMO middleware nổi bật bao gồm:
+• Bigworld Technology
+• Exit Games Neutron
+• HeroEngine
+• Monumental Games
+• Multiverse Network
+• Q (game engine)
+• RedDwarf Server (mã nguồn mở)
+• Vision Engine
+
+CHƯƠNG 3. NỘI DUNG THỰC HIỆN
+3.1. Phát biểu bài toán lập trình game Bống Bống Bang Bang  trên unity
+   3.1.1. Mô tả hệ thống hiện tại
+    Ứng dụng game Bống Bống Bang Bang có thể mô tả như sau:
+• Trò chơi là một biến thể của trò chơi đào vàng. Người chơi dùng phìm Spacebar để thả móc câu. Móc câu sẽ được quay tự động qua lại. Thả móc câu tại góc nào thì móc câu sẽ đi theo hướng đó. Câu trúng vật nào thì sẽ kéo vật đó lên. Nếu câu trúng boom, thì boom sẽ bị nổ và làm nổ các vật xung quanh. Mỗi vật thể (cá, cua, …) có một mức điểm và khối lượng riêng.
+• Để giành chiến thắng người chơi phải cố gắng câu được nhiều cá, cua,… tích lũy đủ điểm trong thời gian quy định. Nếu trong thời gian quy định mà người chơi tích không đủ điểm thì trò chời kết thúc. Hoặc người kéo trúng boom, làm chết cá, cua… dẫn đến số điểm tích lũy không đủ thì người cũng thua và kết thúc trò chơi. Trò chơi được thiết kế với 3 màn chơi: màn 1 có nhiều cá, màn 2 có thêm boom và kho báu, màn 3 có thêm boom di chuyển và cá mập
+• Nếu thắng, người chơi sẽ được quyền chọn chơi màn tiếp theo hoặc chơi lại màn đó hoặc thoát khỏi trò chơi. Nếu thua, người chơi có thể thoát khỏi trò chơi hoặc chơi lại màn đó. Trong lúc chơi, người chơi có thể tạm dừng trò chơi, đổi nhạc nền, tắt mở âm thanh hoắc thoát khỏi trò chơi.
+    3.1.2. Phát biểu bài toán
+    3.1.2.1. Tổng quan về hệ thống mới
+Hiện tại, Bống Bống Bang Bang là một ứng dụng mang lại những trải nhiệm thú vị cho người chơi với rất nhiều thử thách và chướng ngại vật cản trở. Ứng dụng này cũng phất triển dựa trên tinh thần game đào vàng cơ bản, chỉ thay đổi về hình ảnh , cũng như thêm một số vật thể mới trong game nhằm tạo cho game sinh động hơn, đặc biệt là tạo các map chơi mang tính chinh phục, thử thách cho người chơi.
+➢ Người chơi cần điều khiển móc câu vượt qua các màn game. Mỗi màn sẽ có thời gian và nếu hết thời gian mà người chơi không câu đủ số cá tương ứng với số điểm theo như yêu cầu thì sẽ thua, khi người chơi câu đủ số cá thì sẽ chuyển sang màn tiếp theo. Trong thời gian chơi, người chơi sẽ gặp nhiều chướng ngại vật như bom, đá, rong rêu. Khi người chơi câu phải chướng ngại vật sẽ bị trừ điểm.
+    3.1.2.2. Các mục tiêu chính của hệ thống
+   Ứng dụng Bống Bống Bang Bang cần đạt được những mục tiêu sau:
+- Chuyển động của các nhân vật trong game hoạt động uyển chuyển, mượt mà, linh hoạt, không lặp đi lặp lại hành động gây nhàm chán.
+- Hình ảnh, âm thanh sinh động tạo hứng thú cho người chơi.
+- Hệ thống phải cung cấp chức năng báo điểm, thời gian cho người chơi.
+    3.1.2.3. Môi trường phát triển
+• Môi trường phần cứng
+    o CPU: Snapdrgon 400 trở lên
+    o RAM: tối thiểu 1GB
+    o HDD: dung lượng tối thiểu trống 1GB
+• Môi trường phần mềm
+    o Hệ điều hành: Android
+    o Công cụ phát triển: Unity
+    
+    3.2. Xác định yêu cầu khách hàng
+    3.2.1. Danh sách yêu cầu
+    a,  Nhân vật người câu:
+• Nhân vật người câu sẽ được gắn chuyển động quay máy câu và hành động này sẽ lặp lại xuyên xuốt các màn chơi. 
+    b,  Móc câu:
+• Người chơi dùng phím Spacebar để thả móc câu, móc câu sẽ tự động qua lại, thả móc câu tại đâu thì nó sẽ di chuyển theo hướng đó, câu trúng vật nào sẽ kéo vật đó lên. 
+    c,  Vật phẩm:
+• Cá, tôm, cua, cá ngựa, cá mập, mực, sứa: Di chuyển qua lại màn hình, khi móc câu chạm vào các vật phẩm này sẽ kéo chúng lên và người chơi được cộng điểm. Trường hợp người chơi câu hết cá khi chưa hết thời gian thì sẽ được qua màn tiếp theo mà không cần chờ đến khi hết giờ.
+• Kho báu: Giương kho báu được đặt bất kì ở dưới biển, khi móc câu chạm trúng thì người chơi sẽ nhận được phần thưởng bất kì từ giương đó.
+    d,  Chướng ngại vật:
+• Boom: Được đặt bất kì dưới đáy biển, khi móc câu chạm trúng boom sẽ nổ và làm chết cá xung quanh dẫn đến số điểm tích lũy không đủ, khiến người chơi giảm khả năng qua màn
+• Mực, rong rêu: Được đặt bất kì dưới đáy biển, khi móc câu chạm trúng thì sẽ không được cộng điểm và làm mất thời gian câu được cá từ đó giảm khả năng qua màn của người chơi.
+    e,   Màn chơi:
+    Game sẽ có 3 màn chơi:
+    - Màn 1: Xuất hiện nhiều cá và dễ dàng tích lũy đủ điểm qua màn.
+    - Màn 2: Mức độ khó tăng lên, có thêm boom và chướng ngại vật cản trở người chơi.
+    - Màn 3: Mức độ khó nhất,  boom sẽ di chuyển và xuất hiện thêm cá mập, người chơi sẽ dùng trí thông minh để suy đoán hướng di chuyển của boom và cá mập để tránh những chướng ngại vật đó
+    3.2.2. Phạm vi công việc
+      Dựa trên bản mô tả hệ thống và yêu cầu, ứng dụng Game Bống Bống Bang Bang  trên Unity cần được phát triển trong các phạm vi dưới đây:
+1. Các yêu cầu của khách hàng phải được phân tích. Với mỗi yêu cầu phải xác định rõ dữ liệu đầu vào, đầu ra, và quy trình xử lý.
+2. Hệ thống phải được phát triển trên môi trường android.
+3. Hệ thống phải được lập trình trên nền .Net Framework, ngôn ngữ lập trình C#.
+4. Hệ thống phải được phát triển trên môi trường Engine Unity.
+
+3.3. Biểu đồ UseCase
+3.3.1. Danh sách các Actor 
+    STT    Tên Actor    Ý nghĩa/Ghi chú    1    Player    Người chơi    Bảng 3.1. Danh sách Actor
+3.3.2. Danh sách các Use-case
+    STT    Tên Use-case    Ý nghĩa/Ghi chú    1    Manage Score    Quản lý điểm số    2    Manage Time    Quản lý thời gian    3    Manage Items    Quản lý vật phẩm    4    Manage Level    Quản lý màn chơi    5    Manage Obstacle course    Quản lí vật cản     Bảng 3.2. Danh sách các Usecase
+3.3.3. Biểu đồ UseCase mức tổng quát
+    
+    Hình 3. 1: Biểu đồ UseCase mức tổng quát
+3.3.3.1. Đặc tả Use-case Manage Time
+    
+    Hình 3. 2: Đặc tả UseCase Manage Time
+-Tóm tắt:
+• Quản lý thời gian: cho phép người dùng giảm thời gian khi chơi  màn mới và xóa thời gian khi bắt đầu chơi.
+- Dòng sự kiện chính
+Hành động của tác nhânPhản ứng của hệ thốngChọn PlayKhởi tạo lại thời gian bằng 2 phút.Di chuyển nhân vậtKhi di chuyển móc câu, thời gian sẽ chạy ngược lại để cho người chơi biets còn bao nhiêu thời gian sẽ hết giờ từ đó kiểm soát dễ hơn. Khi thời gian quay về 0 thì hiển thị menu game over cho phép chọn Play để chơi lại và Option quay lại menu chính của game.    Bảng 3.3. Dòng sự kiện chính của Manage Time
+- Dòng sự kiện phụ
+• Hệ thống cung cấp giao diện đẹp mắt, dễ sử dụng.
+• Khi điều chỉnh nhân vật sẽ di chuyển theo hướng điều chính của người chơi.
+3.3.3.2.  Đặc tả Use-case Manage Items
+    
+    Hình 3. 3: Đặc tả Use-case Manage Items
+    - Tóm tắt
+• Quản lý vật phẩm: khi bắt đầu vào game và chơi game hệ thống sẽ tự sinh vật phẩm như cá, tôm, cua, khi móc câu va chạm thì vật phẩm bị móc câu kéo lên bờ sau đó tự động biến mất.
+- Dòng sự kiện
+• Dòng sự kiện chính
+    Hành động của tác nhân    Phản ứng của hệ thống    Vào game    Tự động sinh các vật phẩm ở các vị trí khác nhauChơi game    Trong lúc chơi game thì hệ thống vẫn tiếp tục sinh vật phẩm, đồng thời khi móc câu va chạm với vật phẩm thì vật phẩm tự động biến mất.    Bảng 3.4. Dòng sự kiện chính của Manage Items
+• Các dòng sự kiện khác: tự động cập nhật số lượng vật phẩm.
+• Các yêu cầu đặc biệt: 
+• Giảm sự tràn các vật phẩm
+• Tránh việc đơ game khi chơi
+-  Trạng thái hệ thống sau khi bắt đầu thực hiện Use-case
+• Hệ thống không yêu cầu người dùng đăng nhập. 
+• Sinh vật phẩm ở các vị trí khác nhau.
+-  Trạng thái hệ thống sau khi thực hiện Use-case
+• Hiển thị các vật phẩm bơi qua lại.
+• Móc câu được điều khiển bởi người dùng.
+ -  Điểm mở rộng
+• Hạn chế các vật phẩm tồn tại trong game.
+    
+3.3.3.3.  Đặc tả Use-case Manage Boom
+    
+    Hình 3. 4: Đặc tả UseCase Manage Boom
+- Tóm tắt
+• Quản lý vật cản : khi bắt đầu vào game và chơi game hệ thống sẽ tự sinh vật cản , khi móc câu không chánh được vật cản thì sẽ nổ vật cản và tự động xóa vật cản.
+-    Dòng sự kiện
+-Dòng sự kiện chính
+    Hành động của tác nhân    Phản ứng của hệ thống    Vào game    Tự động sinh Boom ở các vị trí khác nhau         Chơi game    Trong lúc chơi game khi móc câu va chạm với Boom thì Boom tự động biến mất và làm nổ các vật phẩm xung quanh nó    Bảng 3.5. Dòng sự kiện chính của Manage Boom
+• Các dòng sự kiện khác: tự động cập nhật số lượng vật cản.
+• Các yêu cầu đặc biệt: 
+• Giảm sự tràn các vật cản
+• Tránh việc đơ game khi chơi
+- Trạng thái hệ thống sau khi bắt đầu thực hiện Use-case
+• Hệ thống không yêu cầu người dùng đăng nhập. 
+• Sinh vật cản ở các vị trí khác nhau.
+- Trạng thái hệ thống sau khi thực hiện Use-case
+• Hiển thị các vật cản chạy.
+• Nhân vật chạy và được điều khiển bởi người dùng.
+- Điểm mở rộng
+• Hạn chế các vật cản tồn tại trong game.
+    
+3.4. Biểu đồ lớp
+3.4.1. Biểu đồ lớp mức phân tích
+
+    Hình 3. 5: Biểu đồ lớp mức phân tích
+3.4.2. Mô tả chi tiết các lớp đối tượng
+3.4.2.1. Danh sách các lớp đối tượng 
+    
+   STT   Tên lớp/quan hệ   Ý nghĩa/Ghi chú   1   Score   Điểm số   2   Hook   Móc câu   3   Level   Màn chơi   4   Obstacle course   Vật cản   5   Items   Vật phẩm    Bảng 3.6. Danh sách các đối tượng và quan hệ
+3.4.2.2. Mô tả chi tiết từng lớp đối tượng
+a, Bảng Score
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1scoreIntĐiểm số2IdIntPrimaryKeyKhóa ngoại tham chiếu từ bảng Yield    Bảng 3.7. Mô tả chi tiết lớp đối tượng Score
+b, Bảng Hook
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1idIntPrimary KeyID của Hook2StateStringTrạng thái của Hook(xoay quanh trục hoặc di chuyển tiến tới chướng ngại vật)    Bảng 3.8. Mô tả chi tiết lớp đối tượng Hook
+c, Bảng Level
+    STT    Tên thuộc tính    Loại    Ràng buộc    Ý nghĩa/ghi chú1idIntPrimary KeyID của Màn chơi2nameStringTên màn chơi3timeDate TimeThời gian chơi trong màn chơi    Bảng 3.9. Mô tả chi tiết lớp đối tượng Level
+      d, Bảng Boom
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1idIntPrimary KeyID của chướng ngại vật2nameStringTên vật chướng ngại vật3LocationintVị trí xuất hiện của chướng ngại vật    Bảng 3.10. Mô tả chi tiết lớp đối tượng Boom
+   e, Bảng Items
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1idIntPrimary KeyID của vật cản2nameStringTên vật cản3LocationStringVị trí xuất hiện của vật phẩm    Bảng 3.11. Mô tả chi tiết lớp đối tượng Items
+3.5. Biểu đồ tuần tự
+3.5.1. Biểu đồ tuần tự Manage score
+ Hình 3. 6: Biểu đồ tuần tự Manage score
+3.5.2. Biểu đồ tuần tự Manage Item
+
+    Hình 3. 7: Biểu đồ tuần tự Manage Items
+3.5.3. Biểu đồ tuần tự Manage Boom
+
+    Hình 3. 8: Biểu đồ tuần tự Boom
+
+
+
+
+
+
+
+
+
+3.6. Thiết kế giao diện
+3.6.1. Một số giao diện chính của chương trình
+3.6.1.1. Giao diện menu
+    
+
+    Hình 3. 10: Giao diện Menu
+    STT    Tên controlSự kiện    Ý nghĩa    1    btnplayClickBắt đầu trò chơi    2    btnhelpClickChức năng hướng dẫn chơi game     3    btnexitClickThoát khỏi trò chơi    4    btnnhacClickTắt/bật âm thanh    5    txttieude    Tiêu đề của game    
+• Chức năng: Giúp người dùng dễ dàng thực hiện việc bắt bầu chơi.
+• Sự kiện: 
+   + Nhấn “Play”: Người dùng có thể bắt đầu start game 
+   + Nhấn “Help”: Hiển thị hướng dẫn trò chơi giúp người dùng dễ hiểu cách chơi hơn khi chưa chơi bao giờ
+   + Nhấn “ Exit”: Thoát khỏi game
+
+3.7.1.2.    Giao diện khi nhấn Exit
+ 
+    Hình 3. 11: Giao diện khi click Exit
+• Chức năng: Giúp người chơi biết rõ về cách chơi, giới thiệu về trò chơi giúp người dùng hiểu luật chơi.
+• Sự kiện: 
+   + Khi nhấn btnExit, hiển thị hình ảnh mô tả về cách thức chơi, luật chơi và hướng dẫn người chơi phải làm thế nào để qua được màn chơi
+    
+3.7.1.3.  Giao diện Level 1
+
+    Hình 3. 12: Giao diện level 1
+    STT    Tên controlSự kiện    Ý nghĩa    1    btnplayClickBắt đầu trò chơi    2    btnpauseClickMàn hình pause hiển thị    3    btnnhacClickTắt/bật âm thanh    4    btnnotnhacClickHiển thị menu nhạc
+• Sự kiện: 
+   + Nhấn “btnpause”: Người dùng có thể bắt đầu start game 
+   + Nhấn “Help”: Hiển thị hướng dẫn trò chơi giúp người dùng dễ hiểu cách chơi hơn khi chưa chơi bao giờ
+   + Nhấn “ Exit”: Thoát khỏi game
+3.7.1.4.  Giao diện Level 2
+
+    Hình 3. 13: Giao diện level 2
+• Chức năng: So với level 1 thì level 2 có thêm boom làm cho việc giành chiến thắng khó khăn hơn
+
+3.7.1.5. Giao diện Level 3 
+
+    Hình 3. 14: Giao diện level 3
+• Chức năng: So với level 2 thì level 3 boom sẽ tự động di chuyển, xuất hiện cá mập làm cho việc giành chiến thắng ngày càng trở lên khó khăn.
+3.7.1.6.     Giao diện khi chiến thắng
+
+    Hình 3. 15: Giao diện khi chiến thắng
+    STT    Tên controlSự kiện    Ý nghĩa    1    btnResumeClickTiếp tục trò chơi    2    btnExitClickThoát khỏi trò chơi    3    btnRestartClickBắt đầu lại trò chơi
+• Sự kiện: 
+   + Nhấn “btnResume”: Người dùng có thể tiếp tục trò chơi với thời gian tiếp tục chạy
+   + Nhấn “btnExit”: Người dùng có thể thoát khỏi trò chơi ngay lập tức
+   + Nhấn “ btnRestart”: Người dùng sẽ được chơi lại trò chơi và setup lại thời gian
+
+3.7.1.7.      Giao diện khi thất bại
+
+    Hình 3. 16: Giao diện khi thất bại
+    STT    Tên controlSự kiện    Ý nghĩa    1    btnRestartLoseClickBắt đầu lại trò chơi    2    btnExitClickThoát khỏi trò chơi
+• Sự kiện: 
+   + Nhấn “btnRestartLose”: Người dùng có thể bắt đầu lại trò chơi
+   + Nhấn “btnExit”: Người dùng có thể thoát khỏi trò chơi ngay lập tức
+
+3.7.1.8.      Giao diện pause
+    
+
+    Hình 3. 17: Giao diện pause
+    STT    Tên controlSự kiện    Ý nghĩa    1    btnResumeClickTiếp tục trò chơi    2    btnExitClickThoát khỏi trò chơi    3    btnRestartClickBắt đầu lại trò chơi
+• Sự kiện: 
+   + Nhấn “btnResume”: Người dùng có thể tiếp tục trò chơi với thời gian tiếp tục chạy
+   + Nhấn “btnExit”: Người dùng có thể thoát khỏi trò chơi ngay lập tức
+   + Nhấn “ btnRestart”: Người dùng sẽ được chơi lại trò chơi và setup lại thời gian
+    
+3.7.1.9.      Giao diện thả câu
+ 
+    Hình 3. 18: Giao diện thả câu
+• Sự kiện: 
+- Khi người dùng nhấn nút Space thì móc câu đi từ trên xuống theo hướng đã quay đến trước đó.
+- Móc câu sẽ quay 1 góc từ -70 đến 70 sau đó đổi chiều quay ngược lại.
+- Móc câu sẽ đi ngược lại nếu vật chạm vào gì đó hoặc đi tới giới hạn của màn hình.
+
+
+3.7.1.10.      Giao diện khi kéo cá lên
+ 
+    Hình 3. 19: Giao diện khi kéo cá lên
+• Sự kiện: 
+- Khi móc câu chạm phải con mồi thì sẽ tự động kéo con mồi lên theo hướng ngược lại, đồng thời tăng điểm số.
+- Từ vào mức độ nặng, nhẹ của từng vật phẩm mà móc câu kéo nhanh hay chậm, ví dụ: khi móc câu kéo phải tảng đá thì móc câu sẽ kéo rất lâu và được cộng điểm ít hơn là câu phải cá, tùy theo độ lớn hay nhỏ của cá mà móc câu di chuyển nhanh hay chậm, tương ứng với số điểm khi hoàn thành hành động kéo cá lên thuyền.
+- Khi cá chạm vào móc câu sẽ lập tức bị kéo lên và dừng trạng thái bơi, chuyển sang trạng thái khác, tương tự như đói với cá items khác như cua, cá ngựa, cá mập, …
+
+3.7.1.11.      Giao diện khi nổ boom
+ 
+ 
+    Hình 3. 20: Giao diện khi nổ boom
+• Sự kiện: 
+- Khi móc câu chạm phải boom thì xảy ra hiện tượng nổ boom và làm biến mất những vật phẩm xung quanh quả boom.
+- Thực hiện xóa những vật phẩm như cá, cua, kho báu, tất cả những gì có trong bán kính 2cm của quả boom, làm khả năng qua màn của bạn, nếu bạn làm nổ hết boom thì chắc chắn không qua được màn chơi vì khi ấy vật phẩm đã bị hủy gần hết, không còn khả năng tăng điểm để qua màn.
+ 
+CHƯƠNG 4. KẾT LUẬN
+4.1. Kết quả đạt được của đề tài
+- Tìm hiểu, nắm bắt được các công cụ thiết kế GUI, công cụ lập trình Unity
+- Biết được cách thiết kế GUI trong lập trình Unity
+- Màu sắc trong game sinh động, bắt mắt 
+- Chuyển động của cá, của lưỡi câu uyển chuyển, không giật, lag.
+- Nhạc nền sinh động, hấp dẫn.
+- Thiết kế nhiều level cho trò chơi không bị nhàm chán.
+4.2. Hạn chế của đề tài
+- Ứng dụng còn hạn chế về mặt chia sẻ điểm số lên các trang mạng xã hội và nhiều tính năng khác như: chưa có các vật dụng để giúp đỡ người chơi khi gặp khó khăn (ví dụ: khi sắp hết thời gian mà người câu phải tảng đá lớn thì sẽ trợ giúp bằng cách cho mua mìn để phá vỡ tảng đá, năng lượng nhân đôi khi kéo phải vật nặng,…), những vật dụng này sẽ được mua bằng số điểm tương ứng với số tiền mà người chơi thắng được qua các màn chơi.
+- Giao diện còn hệ thống còn đơn giản
+4.3. Hướng phát triển của đề tài
+- Trong thời gian nghiên cứu và thực hiện đề tài, tác giả đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+o Xây dựng thêm các Control làm phong phú trên việc tùy biến giao diện của game.
+o Bổ sung các Module hỗ trợ cho các game. 
+o Hoàn thiện đề tài trên nền tảng C#.
+CHƯƠNG 5. TÀI LIỆU THAM KHẢO
+1. Tài liệu lập trinh GameUnity2D cơ bản:
+➢ http://forum.unity3d.com/threads/unity-jump-start-video tutorials.26785/
+➢ http://www.raywenderlich.com/61532/unity-2d-tutorial-getting-started
+2.    Lập Trình Game Mobile Đà Nẵng
+nguon: http://www.unity3d.com.vn/2014/03/tong-hop-tai-lieu-unity3d.html
+3.  Nguyễn Văn Hậu, Java nâng cao. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin- UTEHY.
+4. Cuốn ngôn ngữ lập trình C# của APTECH | TIẾNG VIỆT 
+Link download: 
+https://www.dropbox.com/s/dpf6jt5al2elzs1/NgonngulaptrinhC%23.pdf
+5.  Cuốn PROFESSIONAL PROGRAMMING FOR REAL LIFE C# | TIẾNGVIỆT 
+Link download: 
+https://www.dropbox.com/s/o1wkskck7lj1bwu/PROFESSIONAL%20PROGRAMMING%20FOR%20REAL%20LIFE.pdf
+6. C# 3.0 Cookbook, 3rd Edition của Jay Hilyard, Stephen Teilhet
+Link download: 
+https://www.dropbox.com/s/lnxii4zwefuq128/C%23%203.0%20Cookbook%2C%203rd%20Edition.pdf
+Xây dựng ứng dụng game Bống Bống Bang Bang trên Unity
+    
+    
+    12
+    
+    

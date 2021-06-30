@@ -1,0 +1,1392 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1. Lý do chọn đề tài
+      Trong lĩnh vực công nghệ thông tin nói chung cũng như công nghệ phần mềm nói riêng, phần tử chức năng phần mềm là một phần không thể thiếu và rất quan trọng. Vì chức nănglà phần quan trọng để đánh giá về một phần mềm nên việc kiểm thử chức năng giờ đã trở lên rất cần thiết và được chú trọng. Tuy nhiên chủ yếu để kiểm tra chức năng mọi người hay kiểm thử theo hướng thủ công, bằng cách dùng thời gian để tiếp xúc và tìm lỗi sai. Điều này làm cho chúng ta mất khá nhiều thời gian về công đoạn kiểm thử chức năng. Khi mất thời gian dẫn đến tốn kém cả về chi phí cho phần mềm và kiểm thử thủ công sẽ làm cho chúng ta bỏ sót lỗi. Chưa kể chức năngcủa một dự án còn có thể được dùng với các hệ điều hành cũng như các trình duyệt khác nhau.
+      Vì vậy nếu có thể kiểm phần tử trên thử chức năng một cách tự động là rất cần thiết, vừa tiết kiệm được thời gian chi phí mà còn hạn chế được lỗi cho phần mềm. Với các ứng dụng khác nhau như Web, Android, IOS và các hệ điều hành khác nhau thì vẫn có thể kiểm tra một cách dễ dàng nhất.
+      Sự phát triển mạnh mẽ của công nghệ đã chiếm lĩnh đa số thị trường sản phẩm phần mềm. Số lượng các cá nhân, tổ chức sử dụng phần mềm ngày càng nhiều, vậy để không tốn quá nhiều nhân lực cũng như thời gian cho việc kiểm thử chức năngthì giải pháp dùng công cụ tự động để kiểm thử là rất cần thiết
+1.2. Mục tiêu của đề tài
+      Nghiên cứu và đề ra giải pháp kiểm thử tự động sử dụng mô hình page object model, nhằm giảm thời gian kiểm tra , tránh sự trùng lặp mã code, và có thể tái sử dụng cho các lần sau.
+      Xây dựng framework kiểm thử tự động sử dụng mô hình page object model và sử dụng thành thạo các tính năng cũng như quản lý được framework. Đưa ra kết quả thể hiện sự khác biệt giữa kết quả thực tế và kết quả mong đợi.
+1.3. Giới hạn và phạm vi của đề tài
+      Đề tài xây dựng dựng một công cụ sử dụng các công nghệ trong lập trình như 
+Kiểm thử tự động sử dụng mô hình page object model Trung tâm phần mềm  – Khoa CNTT - Trường Đại Học Sư Phạm Kỹ Thuật Hưng Yên nhằm kiểm thử cũng như thử nghiệm các chức năng phần mềm.
+1.4. Nội dung thực hiện
+      Hiện có nhiều ngôn ngữ để có thể lập trình nhưng còn có những mặt hạn chế nhất định như: thiết kế phức tạp, khó khăn trong việc phát triển, đòi hỏi người dùng phải có nhiều kỹ năng về lập trình, thực thi còn chậm. Để tránh sự lặp lại trong công việc kiểm thử, tiết kiệm thời gian và giảm chi phí cho đơn vị phát triển phần mềm, thì đề xuất giải pháp kiểm thử tự động sử dụng mô hình page object model. Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Nghiên cứu tìm hiểu kiểm thử hướng modul
+- Tìm hiểu mô hình Page Object Model (POM)
+- Tìm hiểu về Selenium WebDriver
+- Tìm hiểu các bước xây dựng test script trên POM trong Selenium WebDriver trên Java
+- Xây dựng Framework kiểm thử POM với Selenium WebDriver trên ứng dụng web
+1.5. Phương pháp tiếp cận
+• Cách tiếp cận : Nghiên cứu tìm hiểu mô hình page object model trên các ngôn ngữ khác nhau như .Net, java...
+• Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu;
+o Phương pháp phân tích mẫu;
+o Phương pháp thực nghiệm.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1. Tổng quan về Kiểm thử tự động
+2.1.1. Kiểm thử tự động là gì?
+      Kiểm thử tự động là quá trình thực hiện một cách tự động các bước trong một TC. Nó sử dụng một công cụ kiểm thử tự động nào đó để rút ngắn thời gian kiểm thử. Kiểm thử tự động hỗ trợ các kiểm thử viên rất nhiều tùy vào công cụ và các nội dung. kiểm thử có thể thực hiện bằng tay hay không. Đối với những nhiệm vụ kiểm tra khó mà thực hiện bằng tay hoặc yêu cầu chi phí về nhân công là quá lớn thì sử dụng tool, framework hỗ trợ là điều hết sức cần thiết.
+2.1.2. Tại sao cần sử dụng kiểm thử tự động
+      Tiết kiệm tiền bạc vời thời gian: Nhận định này đặc biệt đúng nếu xét trong giai đoạn bảo trì của các dự án lớn. Mỗi tuần chúng ta phải thực hiện regression test từ 1 đến 2 lần với số lượng test case rất lớn trong 1 đến 2 ngày. Gần như không thể thực hiện cách thủ công, trong khi với kiểm thử tự động chúng ta hoàn toàn có thể vớinguồn nhân lực vô cùng khiêm tốn.
+    - Chính xác hơn: Nhờ độ ổn định cao, kiểm thử tự động có thể thực thi các test case với độ chính xác cao hơn.
+    - Độ bao phủ cao: Như đã nói ở trên, khi sử dụng kiểm thử tự động, chúng ta có thể thực thi số lượng lớn test case trong một thời gian ngắn. Điều này giúp chúng tatăng độ bao phủ trong giai đoạn regression test (một ví dụ điển hình).
+    - Hoàn thành các công việc mà con người không thể làm được: Nếu chúng ta muốn thực thi load test, performance test, thì kiểm thử tự động là cách duy nhất.
+Ngoài ra còn một số lợi ích khác như:
+• Giảm bớt công sức và thời gian thực hiện quá trình kiểm thử
+• Tăng độ tin cậy.
+• Giảm sự nhàm chán cho con người
+•  Rèn luyện kỹ năng lập trình cho kiểm thử viên
+•  Giảm chi phí cho tổng quá trình kiểm thử.Nguyên tắc thiết kế Web Framework
+2.1.3. Mục tiêu của kiểm thử tự động
+      Phần mềm có khiếm khuyết là thông thường và gây ra thiệt hại về kinh tế theo thời gian. Chính vì vậy các tổ chức về phần mềm dành nhiều thời gian và nguồn lực để phân tích và kiểm thử phần mềm.
+      Ngày nay ứng dụng tự động hóa vào các ngành đa dạng, trong đó có ngành kiểm thử. Trước đây kiểm thử viên kiểm thử bằng tay thực hiện và ghi lại kết quả trên giấy, nhưng với ứng dụng công nghệ thông tin thì các công cụ kiểm thử cũng phát triển từ rất sớm hỗ trợ kiểm thử viên rất nhiều và đặc biệt là các trường hợp kiểm thử đặc biệt mà kiểm thử bằng tay không thể thực hiện được hoặc rất khó khăn để thực hiện. Các tổ chức càng quan tâm đến chất lượng phần mềm thì càng có nhiều chức năng và nội dung được kiểm tra đòi hỏi kiểm thử viên phải thực hiện nhiều công việc hơn vì vậy kiểm thử với sự hỗ trợ của công cụ là rất cần thiết. 
+- Mục tiêu của kiểm thử tự động :
+• Giảm bớt công sức và thời gian thực hiện
+• Tăng độ tin cậy
+•  Giảm sự nhàm chán
+• Giảm chi phí cho tổng quá trình kiểm thử
+- Ưu điểm của kiểm thử tự động:
+• KTPM không cần can thiệp của kiểm thử viên.
+• Giảm chi phí khi thực hiện kiểm tra số lượng lớn TC hoặc TC lặp lại nhiều lần.
+•  Giả lập tình huống khó có thể thực hiện bằng tay
+2.1.4. Quy trình kiểm thử tự động
+    Quy trình kiểm thử tự động phần mềm cũng giống như quy trình thực hiện kiểm thử thủ công chỉ khác ở chỗ kiểm thử tự động có hỗ trợ của công cụ ít hoặc nhiều như tạo test script (có thể bằng tay hoặc công cụ), công cụ hỗ trợ về ghi lại kết quả và lưu trữ kết quả trong máy tính. Quy trình này cũng gần tương tự với quy trình phát triển phần mềm, được thực hiện qua nhiều bước, được tiến hành rất sớm trong quy trình phát triển phần mềm và đội kiểm thử tiến hành gần như song song cùng đội phát triển phần mềm
+    
+    Hình 2. 1: Quy trình KTTĐ trong mối quan hệ với KTPM..
+    Để kiểm thử tự động thì công cụ là thành phần không thể thiếu trong tiến trình này, việc kiểm thử viên thành thạo các công cụ kiểm thử đảm bảo cho quy trình kiểm thử tự động được hiệu quả. 
+    Một công cụ kiểm thử phần mềm tự động yêu cầu phải làm được những công việc sau: 
+• Hiểu các mã assembly được kiểm tra một cách tự động. 
+• Tiến hành các nhiệm vụ đơn giản và lặp đi lặp lại một cách tự động. 
+• Tạo ra các kịch bản và chạy các kịch bản trong những lô lệnh theo một lịch trình đã vạch ra. 
+• Kiểm tra giao diện của các đối tượng COM và các thành phần phần mềm khác với tập dữ liệu được thiết lập sẵn. 
+• Truy cập vào dữ liệu để xác minh lại các kết quả. 
+    .
+2.2. Kiểm thử hướng module ( module-modularity) framework
+    
+    Hình 2. 2: Mô hình hướng module
+    Đặc điểm cơ bản:
+• Các đối tượng được định nghĩa một lần và tái sử dụng trong các phương thức kiểm thử.
+• Các phương thức nhỏ và có mục đích được tạo ra cho những chức năng riêng biệt
+• Kịch bản kiểm thử tự động là một tập hợp các phương thức nhỏ và các đối tượng được định nghĩa từ trước
+• Cho phép chúng ta dễ dàng viết các mã dễ dàng được chỉnh sửa
+• Mục đích chính của mô hình này là việc chỉnh sửa dễ dàng. Nếu có bất kỳ thay đổi nào trên giao diện, chúng ta chỉ cần chỉnh sửa trong các phương thức và đối tượng. Mã kiểm thử chính của chúng ta vẫn hoạt động chính xác. Mô hình POM (Page Object Model) – thường được dùng với Selenium            -Là một dạng của mô hình hướng modul. Toàn bộ trang web sẽ được chia nhỏ thành các trang. Các đối tượng UI của từng trang được định nghĩa bên trong từng lớp của trang đó. Nếu có bất kỳ thay đổi nào trên ứng dụng web, chúng ta chỉ cần chỉnh sửa lớp của trang đó, những lớp của trang khác vẫn giữ nguyên. Kết quả cuối cùng chúng ta sẽ có những đoạn mã được bảo trì tốt hơn và dễ đọc hơn.
+     Điểm yếu của mô hình này là nó yêu cầu một mức độ kỹ năng lập trình và hiểu sâu về hướng đối tượng. Nếu bạn có nó, khuôn mẫu này được khuyến khích sử dụng.
+2.3. Mô hình Page Object Model (POM)
+2.3.1. Giới thiệu về POM
+	POM là một mô hình thiết kế testscript và có các đặc điểm sau:
+- Tạo kho đối tượng (object respository) cho các phần tử giao diện của web.
+- Dưới mô hình này, mỗi trang web trong ứng dụng đang viết có thể tương ứng với một lớp.
+- Lớp này sẽ tìm kiếm tất cả các phần tử của web và chỉ chứa các phương thức để thực hiện vận hành trên các phần tử của trang web đó.
+- Tên phương thức này có thể được đặt như là công việc mà chúng đang thực hiện. Nó rất dễ dàng ánh xạ với các hoạt động xảy ra giao diện vơi người dùng. Ví dụ, muốn nhập user cho textbox user trên một trang, tên phương thức đó có thể là “setUserName”.
+- Phát triển một code tự động duy trì được là một trong những chìa khóa cho một dự án auto test thành công.
+- Code test auto cần được coi là code đưa ra các tiêu chuẩn tương tự và các mẫu nên được áp dụng trong khi phát triển code
+- Trong khi phát triển Test selenium webdriver, chúng tôi có thể sử dụng mô hình mẫu Page object
+- Mô hình này giúp kiểm thử tăng cường, làm cho chúng duy trì cao, giảm trùng code, xây dựng một lớp trừu tượng và giấu việc thực hiện bên trong từ các kiểm thử.
+
+
+2.3.2  Sử dụng mô hình page object modle
+      Bằng cách áp dụng các nguyên tắc phát triển hướng đối tượng, chúng ta có thể phát triển một lớp phục vụ như một giao diện cho một trang web trong ứng dụng, mô hình hóa các thuộc tính và hành vi của nó.
+      Điều này giúp tạo ra một lớp tách biệt giữa code test và code cụ thể cho trang, bằng cách ẩn quá trình triển khai kỹ thuật như bộ định vị được sử dụng để xác định các phần tử trên trang, Bố cục, v.v … Bằng cách giấu việc thực hiện kỹ thuật như locators được sử dụng để xác định các yếu tố trên trang,Bố cục, v.v
+      Mẫu thiết kế Page Object cung cấp kiểm thử cho một giao diện mà một lần kiểm tra có thể hoạt động trên trang đó theo cách thức tương tự như người dùng truy cập trang, nhưng bằng cách ẩn nội bộ của nó
+      Ví dụ, nếu chúng ta xây dựng kiểm thử đối tượng cho một trang đăng nhập, sau đó nó sẽ cung cấp một phương pháp để đăng nhập,
+      Sẽ chấp nhận tên người dùng và mật khẩu và đưa người dùng đến trang chủ của ứng dụng.
+      Thử nghiệm không cần phải lo lắng về việc các điều khiển đầu vào được sử dụng như thế nào cho trang đăng nhập, những chi tiết locator (các định vị)  của chúng,…Các kiểm thử nên sử dụng các đối tượng của một trang ở mức cao,
+      Nơi mà bất kỳ thay đổi bố cục hoặc các thuộc tính được sử dụng cho các trường trong trang bên dưới không nên phá vỡ kiểm thử
+Chương này bao gồm công thức để tạo các kiểm thử sử dụng mô hình Page Oject và thiết kế có liên quan
+1.1.3 Lợi ích của POM
+      Mô hình này làm cho code trở nên rõ ràng và dễ hiểu hơn, nó tránh sự lại nhiều lần trong code. Do đó, mô hình này sẽ trở lên dễ dàng hơn trong việc bảo trì và tái sử dụng.
+      Các kho lưu trữ là độc lập với kịch bản test. Vì vậy, chúng ta có thể sử dụng các kho lưu trữ giống nhau cho các mục đích khác nhau vơi những tool khác nhau.
+
+    Hình 2. 3: Sự khác biệt giữa sử dụng và không sử dụng mô hình POM
+2.4. Giới thiệu về Selenium WebDriver
+2.4.1. Selenium WebDriver là gì?
+      Là một thư viện miễn phí và mã nguồn mở cho trang web kiểm tra tự động
+      Là một khuôn khổ tự động hóa web cho phép bạn thực hiện các kiểm thử của mình trên các trình duyệt khác nhau.
+2.4.2. Tại sao cần phải sử dụng Selenium WebDriver?
+- Người dùng có thể dùng miễn phí
+- Kiến trúc đơn giản:
+• Điều khiển trình duyệt từ hệ điều hành.
+• Bạn chỉ cần IDE và trình duyệt là xong.
+- Ngôn ngữ lập trình hỗ trợ:
+• Web Driver hỗ trợ bạn viết kịch bản kiểm thử bằng các ngôn ngữ khác nhau như Java, .NET, PHP, Python, Perl, Ruby và bạn có thể sử dụng các điều kiện if else, các vòng lặp để tăng tính chính xác cho kịch bản kiểm thử.
+- Tốc độ:
+• Khi so sánh với các công cụ khác của bộ Selenium, WebDriver là công cụ nhanh nhất trong số tất cả do tương tác trực tiếp từ hệ điều hành tới trình duyệt.
+    
+    Hình 2. 4: Mô hình chuển đổi Selenium WebDriver
+
+    
+    Sử dụng Selenium WebDriver ở đâu?
+    
+    Hình 2. 5: Mô hình sử dụng của WebDriver
+2.4.3. Ưu điểm
+      Selenium WebDriver là một công cụ mã nguồn mở:
+      - Selenium WebDriver cho phép chúng ta sử dụng một trong số các ngôn ngữ lập trình như HTML, Java, .Net, Perl, Ruby… để tạo kịch bản test (Test Case) kết hợp với sử dụng các điều kiện, vòng lặp… khiến cho test script trở nên chính xác hơn.
+      - Selenium WebDriver được phát triển tốt hơn để hỗ trợ cho các trang web động (Những trang web mà phần tử trong nó có thể thay đổi ngay cả khi trang đó không được tải lại) Mục đích của WebDriver là hỗ trợ cho các vấn đề về kiểm thử web-app hiện nay.
+      - Selenium hỗ trợ nhiều hệ điều hành: Windows, Linux, Macintosh (viết Test Cases có thể deploy ở các hệ điều hành khác)
+      - Selenium hỗ trợ nhiều trình duyệt lớn (Mozilla, Chrome, IE, Opera, Safari) (viết Test Cases chung và chỉ có browser driver thay đổi)
+      - Selenium là công cụ test tự động recording, editing và debugging tests ưu điểm nổi trội
+2.4.4   Nhược điểm
+      - Không được cung cấp Technical support free và tin cậy vì là mã nguồn mở
+      - Chỉ hỗ trợ các ứng dụng Web
+      - Khó sử dụng, cần có thời gian học viết Test case (Selenium WebDriver chỉ có lập trình giao diện, k IDE; ko có các Tool tính năng như Recording, Checkpoint, Data Table nên phải viết từng bước một cho mỗi task).
+      - Khó cài đặt mội trường Test Selenium hơn UFT, SilkTest
+      - Ít hỗ trợ cho việc Test hình ảnh
+      - Không có tính năng tích hợp cho Test Manager
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1. Tổng quan về đề tài
+      Mục đích của tài liệu này để xác định chức năng và các yêu cầu khác về chương trình quản lý website rao vặt New , bao gồm giới thiệu tổng quát về hệ thống, yêu cầu, tính ứng dụng, độ tin cậy và hiệu suất. Tài liệu này được dùng cho đội dự án để phát triển sản phẩm.
+      SMS là Windows application cung cấp các chức năng quản lý website rao vặt New của 1 trang web trên mạng internet. Website Rao Vặt giúp người dùng có thể sử dụng để đăng tin rao vặt lên internet để có thể trao đổi hàng hóa giữa các người sử dụng với nhau. Các chức năng này phục vụ cho khách hàng để đăng tin. Để sử dụng chương trình thì người dùng (user) sẽ phải login vào hệ thống để đăng tin. Sau khi login thành công thì user sẽ có toàn quyền sử dụng để đăng tin. Khi chưa đăng nhập thì khách hàng có thể xem các tin của người khác đăng tin.
+3.2  Use Case
+      Các chức năng chính của hệ thống được mô tả như sơ đồ dưới đây.
+
+
+    Hình 3. 1: Mô hình sử dụng của WebDriver
+
+    Use case được mô tả như bảng dưới:
+
+
+
+    Bảng 3. 1: Use case tổng quát
+STTUse CaseMô Tả1Duyệt TinChức năng cho phép Admin quản lý thông tin của tin được đăng trên trang, người quản lý có thể xóa, duyệt, bỏ qua tin của khách hàng2Quản lý nhân viênChức năng cho phép Admin quản lý thông tin nhân viên, bao gồm thêm, sửa, xóa, tìm kiếm thông tin nhân viên3Đăng nhập userCho phép user đăng nhập vào hệ thống4Đăng nhập adminCho phép admin đăng nhập vào hệ thống thực hiện các chức năng của ứng dụng1.3 Mô tả chức năng
+3.1.1. Đăng nhập admin
+
+    Hình 3. 2: Màn hình đăng nhập hệ thống
+    Mô tả chức năng:
+   - Tên đăng nhập: Từ 5-25 kí tự, không chứa kí tự đặc biệt, không được để trống, không có khoảng trắng ở đầu
+   - Mật khẩu: Từ 6-25 kí tự, không chứa kí tự đặc biệt, không được để trống, không có khoảng trắng ở đầu.
+   - Đăng nhập: Khi user kích vào button Đăng nhập hệ thống sẽ hiển thị màn hình chính là màn hình trang quản trị. Sau khi user đăng nhập thành công sẽ hiển thị màn hình như sau:
+
+    Hình 3. 3: Màn hình sau khi đăng nhập hệ thống
+      Lúc này user có thể sử dụng các chức năng thông qua menu tương ứng trên màn hình. Admin quản lý thông tin của tin được đăng trên trang, người quản lý có thể xóa, duyệt hoặc bỏ qua tin của khách hàng
+
+    Hình 3. 4: Màn hình hiển thị form “Duyệt Tin” khi  mở
+    
+    Khi Admin muốn duyệt tin mà khách hàng đăng lên thì sẽ chọn menu duyệt tin. Và khi đó website sẽ hiển thị giao diện duyệt tin cho Admin thực hiện. Nếu bạn nhấn nút xóa thì tin đó sẽ không được duyệt và bị xóa khỏi cơ sở dữ liệu. Khi bạn nhấn nút duyệt thì tin đó sẽ chuyển trạng thái từ 0 thành 1 và lưu vào cơ sở dữ liệu. Khi bạn nhấn nút bỏ qua thì tin đó sẽ được bỏ qua và tin khác sẽ hiện lên để cho Admin duyệt tin.
+Admin quản lý thông tin chuyên mục gồm các chức năng: thêm, sửa, xóa và tìm kiếm.
+
+    Hình 3. 5: Màn hình hiển thị form “Quản lý chuyên mục” khi mở
+
+    Hình 3. 6: Màn hình hiển thị giao diện [Thêm Chuyên Mục]
+    
+
+    Hình 3. 7: Màn hình hiển thị giao diện [Sửa Chuyên Mục]
+
+    Hình 3. 8: Màn hình hiển thị giao diện [Xóa Chuyên Mục]
+    
+
+    Hình 3. 9: Màn hình hiển thị giao diện [Tìm kiếm Chuyên Mục]
+      Admin chọn chức năng ”Quản lý chuyên mục” hệ thống sẽ tự động hiển thị toàn bộ thông tin của tất cả các chuyên mục đang có dưới dạng danh, đồng thời cho phép thực hiện các chức năng mở rộng gồm: thêm, sửa và xóa.
+      Admin muốn thêm chuyên mục mới thì admin nhập toàn bộ các thông tin về chuyên mục mới đó.
+• Chức năng “Thêm”: sẽ thực hiện kiểm tra dữ liệu. Nếu dữ liệu hợp lệ sẽ lưu vào database và hiển thị xuống cuối danh sách, đồng thời hiển thị chuyên mục mới vào cuối danh sách. Trước khi thêm thì hiển thị thông báo để xác nhận với admin.
+• Nếu dữ liệu không hợp lệ thì hiển thị thông báo cho admin, đồng thời  không lưu vào database và quay lại màn hình giao diện của use case “Quản lý chuyên mục”.
+      Admin chọn chức năng “Sửa” cho phép thay đổi bất cứ thông tin nào của chuyên mục này, trừ “Mã chuyên mục”. Đồng thời cho phép thực hiện chức năng “Cập nhật”.
+• Thực hiện kiểm tra dữ liệu. Nếu dữ liệu hợp lệ sẽ cập nhập lại vào database và hiển thị xuống danh sách. Trước khi cập nhập thì hiển thị thông báo để xác nhận với admin.
+• Nếu dữ liệu không hợp lệ thì hiển thị thông báo cho admin, đồng thời  không lưu vào database và quay lại màn hình giao diện của use case “Quản lý chuyên mục” .
+      Admin chọn chức năng “Xóa” cho phép admin xóa các chuyên mục được chọn. Trước khi xóa phải hiển thị thông báo để xác nhận với hệ thống.
+      Admin chọn chức năng “Tìm kiếm” cho phép admin tìm kiếm chuyên mục theo tên, nếu có sẽ hiển thị theo danh sách.
+    Yêu cầu validate data:
+    Bảng 3. 2:Yêu cầu validate chức năng quản lý duyệt tin
+Tên trườngMô tảKiểu Độ dài tố đaBắt buộcMã chuyên mụcMã chuyên mục tự động, không cần nhậpText box    50    YTên chuyên mụcTên chuyên mụcText box     200    YMã chuyên mục chaMã chuyên mục cha, chỉ được chọnDropDownList        YGhi chúGhi chúText box    200    YLoại mua bánLoại mua bán            YẢnhẢnh hiển thị FileUpload        Y
+
+    Bảng 3. 3: Nội dung thông báo chức năng quản lý duyệt tin
+STTTình huống    Thông báo    1.Khi thực hiện  chức năng thêm chuyên mục.Hiển thị thông báo ”Bạn có chắc chắn muốn thêm không?” với button [Lưu] và button [Hủy].    2.Khi không nhập đầy đủ dữ liệu.Hiển thị thông báo “Bạn vui lòng nhập đầy đủ thông tin” với button [OK].		    3.Khi thực hiện chức năng xóa chuyên mục.Hiển thị thông báo ”Bạn có chắc chắn muốn xóa khôn?” với button [OK] và button [Cancel].    4.Khi thực hiện chức năng sửa chuyên mục.Hiển thị thông báo ”Bạn có chắc chắn muốn sửa không?” với button [Lưu] và button [Hủy].    5.Khi chuyên mục thực hiện chức năng tìm kiếm chuyên mục nhưng dữ liệu không tồn tạiHiển thị thông báo “ Không tìm thấy chuyên mục nào”    
+    
+    
+    
+    
+    
+3.1.2. Quản lý đăng nhập người dùng
+
+    Hình 3. 10: Màn hình đăng nhập người dùng
+   - Tên đăng nhập: Từ 2-25 kí tự, không chứa kí tự đặc biệt, không được để trống, tự động cắt khoảng trắng đầu và cuối.
+   - Mật khẩu: Từ 6-25 kí tự, không chứa kí tự đặc biệt, không được để trống, tự động cắt khoảng trắng đầu và cuối.
+   - Đăng nhập: Khi user kích vào button Đăng nhập hệ thống sẽ hiển thị màn hình chính là màn hình trang chủ. Sau khi user đăng nhập thành công sẽ hiển thị màn hình Trang Chủ.
+   Yêu cầu validate
+    Bảng 3. 4: Yêu cầu validate chức năng đăng nhập người dùng
+Tên trườngMô tảKiểuTên đăng nhậpTên đăng nhập, có kí tự nhỏ nhất là 6, không chứa kí tự đặc biệt, không được để trống, tự động cắt khoảng trắng đầu và cuốiText boxMật khẩuCó kí tự nhỏ nhất là 6, không chứa kí tự đặc biệt, không được để trống, tự động cắt khoảng trắng đầu và cuốiText box    Bảng 3. 5: Nội dung thông báo chức năng đăng nhập người dùng
+STTTình huốngThông báo1. Khi đăng nhập không thành công.Hiển thị thông báo “Thông tin đăng nhập chưa chính xác! Vui lòng đăng nhập lại!”2. Khi không nhập đầy đủ dữ liệuHiển thị thông báo “…không để trống”3. Nhập mật khẩu nhỏ hơn 6 kí tựHiển thị thông báo “Mật khẩu lớn hơn 6 kí tự”
+    3.3.3 Quản lý nhân viên
+      Admin quản lý thông tin nhân viên bao gồm các chức năng :thêm mới, sửa, xóa và tìm kiếm
+
+    Hình 3. 11: : Màn hình hiển thị form “Quản lý Nhân Viên” khi mở
+    
+
+    Hình 3. 12: Màn hình hiển thị form “Thêm Nhân Viên” khi mở
+
+
+    Hình 3. 13: Màn hình hiển thị form “Sửa Nhân Viên” khi mở
+
+
+    Hình 3. 14: Màn hình hiển thị form “Xóa Nhân Viên” khi mở
+
+    Hình 3. 15: Màn hình hiển thị form “Tìm kiếm Nhân Viên” khi mở
+      Admin chọn chức năng ”Quản lýnhân viên” hệ thống sẽ tự động hiển thị toàn bộ thông tin của tất cả các nhânviên dưới dạng danh sách, đồng thời cho phép thực hiện các chức năng mở rộng gồm: thêm, sửa xóa và tìm kiếm.
+      Admin muốn thêm nhân viên mới thì admin nhập toàn bộ các thông tin về nhân viên mới đó.
+• Admin chọn chức năng “Thêm”: sẽ thực hiện kiểm tra dữ liệu. Nếu dữ liệu hợp lệ sẽ lưu vào database và hiển thị xuống cuối danh sách, đồng thời hiển thị liên hệ mới vào cuối danh sách. Trước khi thêm thì hiển thị thông báo để xác nhận với admin.
+• Nếu dữ liệu không hợp lệ thì hiển thị thông báo cho admin, đồng thời  không lưu vào database và quay lại màn hình giao diện của use case “Quản lý nhân viên”.
+      Admin chọn chức năng “Sửa” cho phép thay đổi bất cứ thông tin nào của liên hệ này này, trừ “Mã liên hệ”. Đồng thời cho phép thực hiện chức năng “Cập nhật”.
+• Admin chọn chức năng “Cập nhật”: sẽ thực hiện kiểm tra dữ liệu. Nếu dữ liệu hợp lệ sẽ  cập nhập lại vào database và hiển thị xuống danh sách. Trước khi cập nhật thì hiển thị thông báo để xác nhận với admin.
+• Nếu dữ liệu không hợp lệ thì hiển thị thông báo cho admin, đồng thời  không lưu vào Database và quay lại màn hình giao diện của use case “Quản lý nhân viên” .
+      Admin chọn chức năng “Xóa” cho phép admin xóa các liên hệ được chọn. Trước khi xóa phải hiển thị thông báo để xác nhận với hệ thống.
+      Admin chọn chức năng “Tìm kiếm” cho phép admin tìm kiếm các khách hàng theo mã, tên, nếu có sẽ hiển thị theo danh sách.
+Yêu cầu validate data:
+    Bảng 3. 6: Yêu cầu validate chức năng quản lý nhân viên
+Tên trườngMô tảKiểu Độ dài tố đaBắt buộcMã nhân viênMã nhân viên, độ dài nhỏ nhất là 5 kí tựText box    30    YHọ và tênHọ và tên nhân viên không chứa kí tự đặc biệtText box     100    YSố điện thoạiSố điện thoại phải đúng định dạng là kí tự số từ 10-11 số và có số 0 ở đầu, tự động cắt khoảng trắng đầu và cuối.Text box    11    YĐịa chỉ EmailEmail phải đúng định dạng LocalPart@Domail Name, không chứa kí tự đặc biệt trừ kí tự @, tự động cắt khoảng trắng đầu và cuốiText box    200    YTrạng tháiTrạng thái, giá trị mặc định là Hoạt ĐộngRadio button        YQuyền hạnQuyền hạn, chỉ là kí tự sốText box    1    YGhi chúGhi chúText Area    100    YMật khẩuMật khẩu có độ dài nhỏ nhất là 6 kí tự, không chứa kí tự đặc biệt, tự động cắt khoảng trắng đầu và cuốiText box    30    YNhập lại mật khẩuNhập lại mật khẩu phải trùng khớp với ‘Mật Khẩu;Text box        YẢnhẢnh hiển thị FileUpload        Bảng 3. 7: Nội dung thông báo chức năng quản lý nhân viên
+STTTình huốngThông báo1. Khi không nhập đầy đủ dữ liệu.Hiển thị thông báo “…không được trống” với button [OK].		2. Khi thêm mã nhân viên đã có trong cơ sở dữ liệuHiển thị thông báo “Mã đã tồn tại”3. Khi không nhập đúng khoảng dữ liệuHiển thị thông báo “Chỉ chứa…kí tự”4. Khi nhập dữ liệu không đúng định dạngHiển thị thông báo “…chưa đúng định dạng”5. Khi nhập trường ‘Nhập Lại Mật Khẩu’ không khớp với trường ‘Mật Khẩu’Hiển thị thông báo “Mật khẩu nhập lại không đúng”6. Khi thực hiện chức năng xóa nhân viên.Hiển thị thông báo ”Có chắc chắn muốn xóa không?” với button [OK] và button [Hủy].7. Khi thực hiện chức năng sửa nhân viên.Hiển thị thông báo ”Bạn có chắc chắn muốn sửa không?” với button [Lưu] và button [Hủy].8. Khi thực hiện chức năng tìm kiếm nhân viên nhưng dữ liệu không tồn tạiHiển thị thông báo “ Không tìm thấy nhân viên nào”    3.3.4  Quản lý duyệt tin
+      Admin quản lý thông tin của tin được đăng trên trang, người quản lý có thể xóa, duyệt hoặc bỏ qua tin của khách hàng
+
+    Hình 3. 16: Màn hình hiển thị form “Duyệt Tin” khi  mở
+      Khi Admin muốn duyệt tin mà khách hàng đăng lên thì sẽ chọn menu duyệt tin. Và khi đó website sẽ hiển thị giao diện duyệt tin cho Admin thực hiện. Nếu bạn nhấn nút xóa thì tin đó sẽ không được duyệt và bị xóa khỏi cơ sở dữ liệu. Khi bạn nhấn nút duyệt thì tin đó sẽ chuyển trạng thái từ 0 thành 1 và lưu vào cơ sở dữ liệu. Khi bạn nhấn nút bỏ qua thì tin đó sẽ được bỏ qua và tin khác sẽ hiện lên để cho Admin duyệt tin.
+      Admin quản lý thông tin chuyên mục gồm các chức năng: thêm, sửa, xóa và tìm kiếm.
+
+    Hình 3. 17: Màn hình hiển thị form “Quản lý chuyên mục” khi mở
+
+    Hình 3. 18:Màn hình hiển thị giao diện [Thêm Chuyên Mục]
+    
+    
+
+    Hình 3. 19: Màn hình hiển thị giao diện [Sửa Chuyên Mục]
+
+    Hình 3. 20: Màn hình hiển thị giao diện [Xóa Chuyên Mục]
+    
+
+    Hình 3. 21: Màn hình hiển thị giao diện [Tìm kiếm Chuyên Mục]
+3.4 Test Design
+3.4.1 Tổng quát hệ thống
+
+    Hình 3. 22: Gui tổng quát hệ thống
+
+
+3.4.2 Gui – Trang chủ
+
+    Hình 3. 23: Gui trang chủ
+    
+3.4.3 Đăng nhập user
+
+    Hình 3. 24: Đăng nhập  user
+
+
+
+
+3.4.4 Đăng nhập admin
+
+    Hình 3. 25:Đăng nhập  user
+    
+
+
+3.4.5  Quản lý tin
+
+    Hình 3. 26 : Đăng nhập  user
+3.4.6  Quản lý nhân viên
+
+    Hình 3. 27: Gui quản lý nhân viên
+3.5 Test case
+3.5.1  Gui
+Bảng 3. 8: Gui test case
+Đăng nhập Admin                                                                                                         Đăng nhập Admin Tên đăng nhậpTextboxY      Y        56-25PassĐăng nhập Admin Mật khẩuTextboxY      Y       56-25PassĐăng nhập Admin Ghi nhớ đăng nhậpCheckbox                                   Pass      Đăng nhậpButton                                   PassĐăng nhập UserĐăng nhập người dùngTên đăng nhậpTextboxY      Y       56-25PassĐăng nhập người dùngMật khẩuTextboxY      Y       56-25Pass      Đăng nhậpButton                                   PassQuản lý Tin      Trang ChủButton                                   Pass      Đăng TinButton                                   Pass      Tất Cả Các TinButton                                   Pass      Sửa TinButton                                   Pass      Xóa TinButton                                   PassĐăng TinĐăng TinTỉnh/ThànhDropDownList      Y      N                     PassĐăng TinQuận/HuyệnDropDownList      Y      N                     PassĐăng TinChuyên MụcDropDownListY      N                     PassĐăng TinNhóm Sản PhẩmDropDownListY      N                     PassĐăng TinLoại TinRadio buttonY      NCần Bán              PassĐăng TinTiêu ĐềTextboxY      Y       6-100PassĐăng TinNội dungTextboxY      Y       50010-500PassĐăng TinGiáTextboxY      Y                     PassĐăng TinHình ẢnhFileUploadN      Y                     PassĐăng TinNgười Liên HệTextboxY      Y       100       PassĐăng TinĐịa Chỉ Người Liên HệTextboxN      Y                     PassĐăng TinSố Di ĐộngTextboxY      Y       1110-11PassĐăng TinEmailTextbox      Y      Y                     Pass      Đăng TinButton                                   Pass      Trang ChủButton                                   Pass      Tất Cả Các TinButton                                   Pass      Tìm KiếmButton                                   PassSửa TinĐăng TinTỉnh/ThànhDropDownListY      N                     PassĐăng TinQuận/HuyệnDropDownListY      N                     PassĐăng TinChuyên MụcDropDownListY      N                     PassĐăng TinNhómSản PhẩmRadio buttonY      N                     PassĐăng TinTiêu ĐềTextboxY      Y       1006-100PassĐăng TinNội dungTextboxY      Y       50010-500PassĐăng TinGiáTextboxY      Y                     PassĐăng TinHình ẢnhFileUploadN      Y                     PassĐăng TinNgười Liên HệTextboxY      Y       100       PassĐăng TinĐịa Chỉ Người Liên HệTextboxN      Y                     PassĐăng TinSố Di ĐộngTextboxY      Y       1110--11PassĐăng TinEmailTextboxY      Y                     Pass      Đăng TinButton                                   Pass      Trang ChủButton                                   Pass      Tất Cả Các TinButton                                   Pass      Tìm KiếmButton                                   Pass
+
+
+
+Xóa Tin      Đăng TinButton                                   Pass      Trang ChủButton                                   Pass      Tất Cả Các TinButton                                   Pass      Tìm KiếmButton                                   Pass      Xóa TinButton                               PassQuản lý Nhân Viên      ThêmButton                                   Pass      SửaButton                                   Pass      XóaButton                              Pass      Tìm KiếmButton                                   PassThêm Nhân ViênThêm Nhân ViênMã nhân viênTextboxY      Y       305-30PassThêm Nhân ViênHọ và tênTextboxY      Y              100PassThêm Nhân ViênSố điện thoạiTextboxY      Y       1110-11PassThêm Nhân ViênĐịa chỉ EmailTextboxY      Y       200       PassThêm Nhân ViênTrạng tháiRadio buttonY      NHoạt động              PassThêm Nhân ViênQuyền hạnTextboxY      Y             1       PassThêm Nhân ViênGhi chúText AreaY      Y       50       PassThêm Nhân ViênMật khẩuTextboxY      Y       306-30PassThêm Nhân ViênNhập lại mật khẩuTextboxY      Y             3306-30PassThêm Nhân ViênẢnhFileUploadN      Y                     Pass      HủyButton                                   Pass      LưuButton                                   PassSửa Nhân ViênSửa Nhân ViênMã nhân viênTextboxY      N       305-30PassSửa Nhân ViênHọ và tênTextboxY      Y              100PassSửa Nhân ViênSố điện thoạiTextboxY      Y       1110-11PassSửa Nhân ViênĐịa chỉ EmailTextboxY      Y       200       PassSửa Nhân ViênTrạng tháiRadio buttonY      NHoạt động              PassSửa Nhân ViênQuyền hạnTextboxY      Y             1       PassSửa Nhân ViênGhi chúText AreaY      Y       50       PassSửa Nhân ViênMật khẩuTextboxY      Y       306-30PassSửa Nhân ViênNhập lại mật khẩuTextboxY      Y       306-30PassSửa Nhân ViênẢnhFileUploadN      Y                     Pass
+      HủyButton                                   Pass      LưuButton                                   PassXóa Nhân Viên      OKButton                                   Pass      HủyButton                                   Pass      SửaButton                                   Pass      XóaButton                                   Pass      Tìm KiếmButton                                   Pass    3.5.2   Đăng nhập user
+    Bảng 3. 9: Test Case đăng nhập User
+TEST CASE                                                                                         Module Code     Đăng nhập User                              Test requirement                        Pass18Tester     Phạm Thị Chang                   Fail8PassFailUntestedN/ANumber of testcase                        Untesed0     1880026                        N/A0     
+     
+     
+     
+     
+     
+                             
+
+
+IDTest Case DescriptionPre-conditionTest Case ProcedureExpected OutputActual Output                                   Màn hình Đăng Nhập[Gui-1]Kiểm tra màn hình ở trạng thái mặc địnhMở màn hình đăng nhập1. Kiểm tra title của màn hình
+2. Kiểm tra focus của chuột
+3. Kiểm tra các giá trị mặc định của các trường
+4. Kiểm tra header, footerMàn hình chức năng được mở:
+- Hiển thị title của chức năng trên màn hình
+-  Focus được set vào trường đầu tiên có thể edit
+- Hiển thị đầy đủ các trường như trong tài liệu SRS
+- Hiển thị các giá trị mặc định của các trường đúng. 
+ - header, footer hợp lý hoặc theo design có sẵnFail[Gui-2]Kiểm tra tổng thể giao diện màn hình: formMở màn hình đăng nhập1. Kiểm tra form về màu sắc, kích thước
+2. Kiểm tra form về cách bố trí form- Các label, textbox, combo có độ dài, rộng và khoảng cách bằng nhau, không xô lệch
+- Các label sử dụng cùng 1 loại font, cỡ chữ, căn lề trái
+- Form được bố trí hợp lý và dễ sử dụngPass[Gui-3］Kiểm tra tổng thể giao diện màn hình: font chữ, chính tảMở màn hình đăng nhậpKiểm tra các tài nguyên chữ nghĩa về font chữ, chính tả- Không có lỗi về chính tả, cấu trúc câu, ngữ pháp trên màn hìnhPass[Gui-4］Kiểm tra thứ tự di chuyển con trỏ trên màn hình khi nhấn phím TabMở màn hình đăng nhậpNhấn tab liên tục- Con trỏ di chuyển lần lượt theo thứ tự: Từ trên xuống dưới, từ trái qua phảiPass[Gui-5］Kiểm tra thứ tự di chuyển con trỏ trên màn hình khi nhấn phím Shift-TabMở màn hình đăng nhậpNhấn phím Shift-Tab liên tục- Con trỏ di chuyển ngược lại tho thứ tự: Từ dưới lên trên,
+ từ phải qua tráiPass[Gui-6］Kiểm tra giao diện màn hình khi phóng to thu nhỏMở màn hình đăng nhập1.Nhấn phím Ctrl -
+2.Nhấn phim Ctrl +- Màn hình thu nhỏ, phóng to tương ứng và không bị vỡ giao diệnPassĐăng nhập User[Func-7]Kiểm tra dữ liệu đầu vào: các trường đều hợp lệMở màn hình đăng nhập1. Nhập dữ liệu đầu vào: các trường đều hợp lệ
+2. Nhấn [Đăng Nhập]Màn hình trang "Tất Cả Các Tin " được hiển thịPass[Func-8]Kiểm tra tài khoản tồn tại trong cơ sở dữ liệuMở màn hình đăng nhập1. Nhập 'Tên đăng nhập' và 'Mật khẩu' là 1 cặp tồn tại trong cơ sở dữ liệu
+2. Nhấn 'Đăng NhậpĐăng nhập thành công
+Hiển thị màn hình trang 'Tất Cả Các Tin'Pass[Func-9]Kiểm tra dữ liệu đầu vào không hợp lệ: Tên đăng nhậpMở màn hình đăng nhập1. Không nhập 'Tên đăng nhập'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+- Không hiển thị màn hình trang 'Tất Cả Các Tin'
+- Hiển thị thông báo 'Thông tin đăng nhập chưa chính xác! Vui lòng đăng nhập lại!'
+     
+     
+     
+     Fail[Func-10]Kiểm tra dữ liệu đầu vào không hợp lệ: Tên đăng nhậpMở màn hình đăng nhập1. Nhập 'Tên đăng nhập' có chửa khoảng trắng ở đầu
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+- Không hiển thị màn hình trang 'Tất Cả Các Tin'
+- Hiển thị thông báo 'Thông tin đăng nhập chưa chính xác! Vui lòng đăng nhập lại!'Pass[Func-11]Kiểm tra dữ liệu đầu vào không hợp lệ: Tên đăng nhậpMở màn hình đăng nhập1. Nhập 'Tên đăng nhập' có chứa ký tự đặc biệt
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+- Không hiển thị màn hình trang 'Tất Cả Các Tin'
+- Hiển thị thông báo 'Thông tin đăng nhập chưa chính xác! Vui lòng đăng nhập lại!'Pass[Func-12]Kiểm tra validate dữ liệu đầu vào: Tên đăng nhậpMở màn hình đăng nhập1. Nhập 'Tên đăng nhập' < 2 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+- Không hiển thị màn hình trang 'Tất Cả Các Tin'
+- Hiển thị thông báo 'Thông tin đăng nhập chưa chính xác! Vui lòng đăng nhập lại!'Pass[Func-13]Kiểm tra validate dữ liệu đầu vào: Tên đăng nhậpMở màn hình đăng nhập1. Nhập 'Tên đăng nhập' > 25 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+- Không hiển thị màn hình trang 'Tất Cả Các Tin'
+- Hiển thị thông báo 'Thông tin đăng nhập chưa chính xác! Vui lòng đăng nhập lại!'Pass[Func-14]Kiểm tra validate dữ liệu đầu vào: Tên đăng nhậpMở màn hình đăng nhập1. Nhập 'Tên đăng nhập' = 2 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]Đăng nhập thành công
+Hiển thị màn hình trang 'Tất Cả Các Tin'Pass[Func-15]Kiểm tra validate dữ liệu đầu vào: Tên đăng nhậpMở màn hình đăng nhập1. Nhập 'Tên đăng nhập' = 25 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng nhập]Đăng nhập thành công
+Hiển thị màn hình trang 'Tất Cả Các Tin'Pass[Func-16]Kiểm tra dữ liệu đầu vào không tồn tại trong cơ sở dữ liệu: Tên đăng nhậpMở màn hình đăng nhập1. Nhập 'Tên đăng nhập' không tồn tại trong CSDL
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+- Không hiển thị màn hình trang 'Tất Cả Các Tin'
+- Hiển thị thông báo 'Thông tin đăng nhập chưa chính xác! Vui lòng đăng nhập lại!'Pass[Func-17]Kiểm tra dữ liệu đầu vào không hợp lệ: Mật khẩuMở màn hình đăng nhập1. Nhập 'Mật khẩu' để trống
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+- Không hiển thị màn hình trang 'Tất Cả Các Tin'
+- Hiển thị thông báo 'Thông tin đăng nhập chưa chính xác! Vui lòng đăng nhập lại!'Pass[Func-18]Kiểm tra dữ liệu đầu vào không hợp lệ: Mật khẩuMở màn hình đăng nhập1. Nhập 'Mật khẩu' có chửa khoảng trắng ở đầu
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+- Không hiển thị màn hình trang 'Tất Cả Các Tin'
+- Hiển thị thông báo 'Thông tin đăng nhập chưa chính xác! Vui lòng đăng nhập lại!'Fail[Func-19]Kiểm tra dữ liệu đầu vào không hợp lệ: Mật khẩuMở màn hình đăng nhập1. Nhập 'Mật khẩu' có chứa ký tự đặc biệt
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+- Không hiển thị màn hình trang 'Tất Cả Các Tin'
+- Hiển thị thông báo 'Thông tin đăng nhập chưa chính xác! Vui lòng đăng nhập lại!'Fail[Func-20]Kiểm tra mã hóa dữ liệu đầu vào: Mật khẩuMở màn hình đăng nhập1. Nhập 'Mật khẩu'- Mật khẩu được mã hóa dưới dạng *Pass[Func-21]Kiểm tra dữ liệu đầu vào không hợp lệ: Mật khẩuMở màn hình đăng nhập1. Nhập 'Mật khẩu' không tồn tại trong CSDL
+2. Các dữ liệu còn lại nhập hợp lê
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+- Không hiển thị màn hình trang 'Tất Cả Các Tin'
+- Hiển thị thông báo 'Thông tin đăng nhập chưa chính xác! Vui lòng đăng nhập lại!'Fail[Func-22]Kiểm tra validate dữ liệu đầu vào: Mật khẩuMở màn hình đăng nhập1. Nhập 'Mật khẩu' < 6 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+- Không hiển thị màn hình trang 'Tất Cả Các Tin'
+- Hiển thị thông báo 'Thông tin đăng nhập chưa chính xác! Vui lòng đăng nhập lại!'Fail[Func-23]Kiểm tra validate dữ liệu đầu vào: Mật khẩuMở màn hình đăng nhập1. Nhập 'Mật khẩu' >25 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+- Không hiển thị màn hình trang 'Tất Cả Các Tin'
+- Hiển thị thông báo 'Thông tin đăng nhập chưa chính xác! Vui lòng đăng nhập lại!'Fail[Func-24]Kiểm tra validate dữ liệu đầu vào: Mật khẩuMở màn hình đăng nhập1. Nhập 'Mật khẩu' = 6 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]Đăng nhập thành công
+Hiển thị màn hình trang 'Tất Cả Các Tin'Pass[Func-25]Kiểm tra validate dữ liệu đầu vào: Mật khẩuMở màn hình đăng nhập1. Nhập 'Mật khẩu' =25 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]Đăng nhập thành công
+Hiển thị màn hình trang 'Tất Cả Các Tin'Pass[Func-26]Kiểm tra dữ liệu đầu vào không hợp lệ: Mật khẩuMở màn hình đăng nhập1. Nhập 'Mật khẩu' sai
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+- Không hiển thị màn hình trang 'Tất Cả Các Tin'
+- Hiển thị thông báo 'Thông tin đăng nhập chưa chính xác! Vui lòng đăng nhập lại!'Fail    3.5.3  Đăng nhập admin
+    Bảng 3. 10: Test case đăng nhập admin
+     
+     
+TEST CASE                                                                                                                 Module Code     Đăng nhập Admin                                    Test requirement                              Pass66Tester     Phạm Thị Chang                         Fail     2PassFailUntestedN/ANumber of testcase                              Untesed     026     20     028                              N/A     0    
+
+
+IDTest Case DescriptionPre-conditionTest Case ProcedureExpected OutputActual Output                                   Màn hình Đăng Nhập[Gui-1]Kiểm tra màn hình ở trạng thái mặc địnhMở màn hình đăng nhập1. Kiểm tra title của màn hình
+2. Kiểm tra focus của chuột
+3. Kiểm tra các giá trị mặc định của các trường
+4. Kiểm tra header, footerMàn hình chức năng được mở:
+- Hiển thị title của chức năng trên màn hình
+-  Focus được set vào trường đầu tiên có thể edit
+- Hiển thị đầy đủ các trường như trong tài liệu SRS
+- Hiển thị các giá trị mặc định của các trường đúng. 
+ - header, footer hợp lý hoặc theo design có sẵnFail[Gui-2]Kiểm tra tổng thể giao diện màn hình: formMở màn hình đăng nhập1. Kiểm tra form về màu sắc, kích thước
+2. Kiểm tra form về cách bố trí form- Các label, textbox, combo có độ dài, rộng và khoảng cách bằng nhau, không xô lệch
+- Các label sử dụng cùng 1 loại font, cỡ chữ, căn lề trái
+- Form được bố trí hợp lý và dễ sử dụngPass[Gui-3］Kiểm tra tổng thể giao diện màn hình: font chữ, chính tảMở màn hình đăng nhậpKiểm tra các tài nguyên chữ nghĩa về font chữ, chính tả- Không có lỗi về chính tả, cấu trúc câu, ngữ pháp trên màn hìnhPass[Gui-4］Kiểm tra thứ tự di chuyển con trỏ trên màn hình khi nhấn phím TabMở màn hình đăng nhậpNhấn tab liên tục- Con trỏ di chuyển lần lượt theo thứ tự: Từ trên xuống dưới, từ trái qua phảiPass[Gui-5］Kiểm tra thứ tự di chuyển con trỏ trên màn hình khi nhấn phím Shift-TabMở màn hình đăng nhậpNhấn phím Shift-Tab liên tục- Con trỏ di chuyển ngược lại tho thứ tự: Từ dưới lên
+ trên, từ phải qua tráiPass[Gui-6］Kiểm tra giao diện màn hình khi phóng to thu nhỏMở màn hình đăng nhập1.Nhấn phím Ctrl -
+2.Nhấn phim Ctrl +- Màn hình thu nhỏ, phóng to tương ứng và không bị vỡ giao diệnPass[Func-7］Kiểm tra dữ liệu đầu vào: các trường đều hợp lệMở màn hình đăng nhập1. Nhập dữ liệu đầu vào: các trường đều hợp lệ
+2. Nhấn [Đăng Nhập]Màn hình "Trang quản trị " được hiển thịPass[Func-8］Kiểm tra tài khoản tồn tại trong cơ sở dữ liệuMở màn hình đăng nhập1. Nhập 'Tên đăng nhập' và 'Mật khẩu' là 1 cặp tồn tại trong cơ sở dữ liệu
+2. Nhấn 'Đăng Nhập- Đăng nhập thành công
+- Hiển thị màn hình 'Trang quản trị'Pass[Func-9］Kiểm tra dữ liệu đầu vào không hợp lệ: Tên đăng nhậpMở màn hình đăng nhập1. Nhập 'Tên đăng nhập' để trống
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+- Không hiển thị màn hình 'Trang quản trị'
+- Hiển thị thông báo 'Tài khoản hoặc mật khẩu không đúng!'Pass[Func-10］Kiểm tra dữ liệu đầu vào không hợp lệ: Tên đăng nhậpMở màn hình đăng nhập1. Nhập 'Tên đăng nhập' có chửa khoảng trắng ở đầu
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+- Không hiển thị màn hình 'Trang quản trị'
+- Hiển thị thông báo 'Tài khoản hoặc mật khẩu không đúng!'Pass[Func-11］Kiểm tra dữ liệu đầu vào không hợp lệ: Tên đăng nhậpMở màn hình đăng nhập1. Nhập 'Tên đăng nhập' có chứa ký tự đặc biệt
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+- Không hiển thị màn hình 'Trang quản trị'
+- Hiển thị thông báo 'Tài khoản hoặc mật khẩu không đúng!'Pass[Func-12］Kiểm tra validate dữ liệu đầu vào: Tên đăng nhậpMở màn hình đăng nhập1. Nhập 'Tên đăng nhập' < 5 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+- Không hiển thị màn hình 'Trang quản trị'
+- Hiển thị thông báo 'Tài khoản hoặc mật khẩu không đúng!'Pass[Func-13］Kiểm tra validate dữ liệu đầu vào: Tên đăng nhậpMở màn hình đăng nhập1. Nhập 'Tên đăng nhập' >25 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+- Không hiển thị màn hình 'Trang quản trị'
+- Hiển thị thông báo 'Tài khoản hoặc mật khẩu không đúng!'Pass[Func-14］Kiểm tra validate dữ liệu đầu vào: Tên đăng nhậpMở màn hình đăng nhập1. Nhập 'Tên đăng nhập' = 5 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập thành công
+- Hiển thị màn hình 'Trang quản trị'Pass[Func-15］     Kiểm tra validate dữ liệu đầu vào: Tên đăng nhậpMở màn hình đăng nhập1. Nhập 'Tên đăng nhập' = 25 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập thành công
+- Hiển thị màn hình 'Trang quản trị'Pass[Func-6］Kiểm tra dữ liệu đầu vào không tồn tại trong cơ sở dữ liệu: Tên đăng nhậpMở màn hình đăng nhập1. Nhập 'Tên đăng nhập' không tồn tại trong CSDL
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+-Không hiển thị màn hình 'Trang quản trị'
+- Hiển thị thông báo 'Tài khoản hoặc mật khẩu không đúng!'Pass[Func-17］Kiểm tra dữ liệu đầu vào không hợp lệ: Mật khẩuMở màn hình đăng nhập1. Nhập 'Mật khẩu' để trống
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+-Không hiển thị màn hình 'Trang quản trị'
+- Hiển thị thông báo 'Tài khoản hoặc mật khẩu không đúng!'Pass[Func-18］Kiểm tra dữ liệu đầu vào không hợp lệ: Mật khẩuMở màn hình đăng nhập1. Nhập 'Mật khẩu' có chửa khoảng trắng ở đầu
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+- Không hiển thị màn hình 'Trang quản trị'
+- Hiển thị thông báo 'Tài khoản hoặc mật khẩu không đúng!'Pass[Func-19］Kiểm tra dữ liệu đầu vào không hợp lệ: Mật khẩuMở màn hình đăng nhập1. Nhập 'Mật khẩu' có chứa ký tự đặc biệt
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+- Không hiển thị màn hình 'Trang quản trị'
+- Hiển thị thông báo 'Tài khoản hoặc mật khẩu không đúng!'Pass[Func-20]Kiểm tra mã hóa dữ liệu đầu vào: Mật khẩuMở màn hình đăng nhập1. Nhập 'Mật khẩu'- Mật khẩu được mã hóa dưới dạng *Pass[Func-21]Kiểm tra dữ liệu đầu vào không hợp lệ: Mật khẩuMở màn hình đăng nhập1. Nhập 'Mật khẩu' không tồn tại trong CSDL
+2. Các dữ liệu còn lại nhập hợp lê
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+- Không hiển thị màn hình 'Trang quản trị'
+- Hiển thị thông báo 'Tài khoản hoặc mật khẩu không đúng!'Pass[Func-22］Kiểm tra validate dữ liệu đầu vào: Mật khẩuMở màn hình đăng nhập1. Nhập 'Mật khẩu' < 6 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]     - Đăng nhập không thành công
+- Không hiển thị màn hình 'Trang quản trị'
+- Hiển thị thông báo 'Tài khoản hoặc mật khẩu không đúng!'Pass[Func-23］Kiểm tra validate dữ liệu đầu vào: Mật khẩuMở màn hình đăng nhập1. Nhập 'Mật khẩu' >25 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+- Không hiển thị màn hình 'Trang quản trị'
+- Hiển thị thông báo 'Tài khoản hoặc mật khẩu không đúng!'Pass[Func-24］Kiểm tra validate dữ liệu đầu vào: Mật khẩuMở màn hình đăng nhập1. Nhập 'Mật khẩu' = 6 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập thành công
+- Hiển thị màn hình 'Trang quản trị'Pass[Func-25］Kiểm tra validate dữ liệu đầu vào: Mật khẩuMở màn hình đăng nhập1. Nhập 'Mật khẩu' =25 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập thành công
+- Hiển thị màn hình 'Trang quản trị'Pass[Func-26］Kiểm tra dữ liệu đầu vào không hợp lệ: Mật khẩuMở màn hình đăng nhập1. Nhập 'Mật khẩu' sai
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Nhập]- Đăng nhập không thành công
+- Không hiển thị màn hình 'Trang quản trị'
+- Hiển thị thông báo 'Tài khoản hoặc mật khẩu không đúng!'Pass[Func-27］Kiểm tra tài khoản khi nhấn check vào ô 'Ghi nhớ đăng nhập'Mở màn hình đăng nhập1. Nhập các dữ liệu hợp lệ
+2. Kích vào ô 'Ghi nhớ đăng nhập'
+3. Nhấn [Đăng Nhập]- Đăng nhập thành công
+- Hiển thị màn hình 'Trang quản trị'
+- Tài khoản được ghi nhớ ở lần đăng nhập sauFail[Func-28］Kiểm tra tài khoản khi không nhấn check vào ô 'Ghi nhớ đăng nhập'Mở màn hình đăng nhập1. Nhập các dữ liệu hợp lệ
+2. Không kích vào ô 'Ghi nhớ đăng nhập'
+3. Nhấn [Đăng Nhập]- Đăng nhập thành công
+- Hiển thị màn hình 'Trang quản trị'
+- Tài khoản không được ghi nhớ ở lần đăng nhập sauPass    3.5.4  Quản lý duyệt tin
+    Bảng 3. 11: Test case quản lý duyệt tin
+     
+TEST CASE                                                                                         Module Code     Quản lý Tin                              Test requirement                        Pass151Tester     Phạm Thị Chang                   Fail5PassFailUntested0Number of testcase                        Untesed0151500156                        N/A0    
+    
+    
+    
+    
+    
+IDTest Case DescriptionPre-conditionTest Case ProcedureExpected OutputActual Output                              Màn hình Quản Lý Tin[Gui-1]Kiểm tra màn hình ở trạng thái mặc địnhMở màn hình quản lý tin1. Kiểm tra title của màn hình
+2. Kiểm tra focus của chuột
+3. Kiểm tra các giá trị mặc định của các trường
+4. Kiểm tra header, footerMàn hình chức năng được mở:
+- Hiển thị title của chức năng trên màn hình
+-  Focus được set vào trường đầu tiên có thể edit
+- Hiển thị đầy đủ các trường như trong tài liệu SRS
+- Hiển thị các giá trị mặc định của các trường đúng. 
+ - header, footer hợp lý hoặc theo design có sẵnFail[Gui-2]Kiểm tra tổng thể giao diện màn hình: formMở màn hình quản lý tin1. Kiểm tra form về màu sắc, kích thước
+2. Kiểm tra form về cách bố trí form- Các label, textbox, combo có độ dài, rộng và khoảng cách bằng nhau, không xô lệch
+- Các label sử dụng cùng 1 loại font, cỡ chữ, căn lề trái
+- Form được bố trí hợp lý và dễ sử dụngPass[Gui-3］Kiểm tra tổng thể giao diện màn hình: font chữ, chính tảMở màn hình quản lý tinKiểm tra các tài nguyên chữ nghĩa về font chữ, chính tả của message thông báo trên màn hình- Không có lỗi về chính tả, cấu trúc câu, ngữ pháp trên màn hìnhPass[Gui-4］Kiểm tra thứ tự di chuyển con trỏ trên màn hình khi nhấn phím TabMở màn hình quản lý tinNhấn tab liên tục- Con trỏ di chuyển lần lượt theo thứ tự: Từ trên xuống dưới, từ trái qua phảiPass[Gui-5］Kiểm tra thứ tự di chuyển con trỏ trên màn hình khi nhấn phím Shift-TabMở màn hình quản lý tinNhấn phím Shift-Tab liên tục- Con trỏ di chuyển ngược lại tho thứ tự: Từ dưới lên trên, từ phải 
+qua tráiPass[Gui-6］Kiểm tra giao diện màn hình khi phóng to thu nhỏMở màn hình quản lý tin1.Nhấn phím Ctrl -
+2.Nhấn phim Ctrl +- Màn hình thu nhỏ, phóng to tương ứng và không bị vỡ giao diệnPass[Gui-7]Kiểm tra thao tác trên combobox, listboxMở màn hình quản lý tinGõ kí tự vào ô combobox, listboxKhông thể gõ vào list chọnPass[Gui-8]Kiểm tra việc phân chia bố cục trên trangMở màn hình quản lý tinKiểm tra việc phân chia các phần: header, body, footerBố cục 3 phần hợp lý, đơn giảnPass[Gui-9]Kiểm tra kí tự * ở các trường bắt buộcMở màn hình quản lý tinKiểm tra các trường bắt buộc nhập phải có kí tự *Tất cả các trường bắt buộc đều phải có kí tự *Pass[Gui-10]Kiểm tra chuyển sang màn hình Trang ChủMở màn hình quản lý tinNhấn vào button 'Trang Chủ'Chuyển đến màn hình 'Trang Chủ'Pass[Gui-11]Kiểm tra chuyển sang màn hình Tất Cả Tin Rao VặtMở màn hình quản lý tinNhấn vào button 'Tất Cả Tin Rao Vặt'Chuyển đến màn hình 'Tất Cả Tin Rao Vặt'Pass[Gui-12]Kiểm tra màn hình Tìm KiếmMở màn hình quản lý tin1. Nhập giá trị tìm kiếm
+2. Nhấn [Tìm Kiếm]Hiển thị thông tin tìm kiếmPass[Func-13］Kiểm tra dữ liệu đầu vào: các trường đều hợp lệMở màn hình đăng tin1. Nhập dữ liệu đầu vào: các trường đều hợp lệ
+2. Nhấn [Đăng Tin]Đăng tin thành công, Chuyển đến màn hình 'Tất Cả Tin Rao Vặt'Pass[Func-14］Kiểm tra giá trị mặc định: Tỉnh/ThànhMở màn hình đăng tinKiểm tra giá trị mặc định của trường Tỉnh/Thành- Không giá trị nào được chọnPass[Func-15］Kiểm tra hoạt động của combobox Tỉnh/ThànhMở màn hình đăng tinKích vào ô Combobox Tỉnh/ThànhHiển thị danh sách Tỉnh/ThànhPass[Func-16］Kiểm hoạt động của combobox Tỉnh/ThànhMở màn hình đăng tin1. Kích vào ô Tỉnh/Thành
+2. Chọn 1 giá trị có trong ôHiển thị đúng giá trị đã chọn trong combobox lên ô Tỉnh/ThànhPass[Func-17］Kiểm tra dữ liệu đầu vào không hợp lệ: Tỉnh/ThànhMở màn hình đăng tin1. Không chọn Tỉnh/Thành
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được tin vào cơ sở dữ liệu
+- Hiển thị thông báo 'Chọn một Tỉnh/Thành'Pass[Func-18］Kiểm tra giá trị mặc định: Quận/HuyệnMở màn hình đăng tinKiểm tra giá trị mặc định của trường Quận/Huyện-Có đầy đủ các giá trị được thiết kế trong combobox Quận/HuyệnPass[Func-19］Kiểm tra hoạt động của combobox Quận/HuyệnMở màn hình đăng tinKích vào ô Combobox Quận/Huyện- Không giá trị nào được chọnPass[Func-20］Kiểm tra hoạt động của combobox Quận/HuyệnMở màn hình đăng tin1. Kích vào ô Quận/Huyện
+2. Chọn giá trị bất kì-Hiển thị lên ô đúng giá trị vừa chọnPass[Func-21］Kiểm tra dữ liệu đầu vào không hợp lệ:Quận/HuyệnMở màn hình đăng tin1. Không chọn Quận/Huyện
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]-Không thêm được tin vào cơ sở dữ liệu
+- Hiển thị thông báo 'Chọn một Quận/Huyện'Pass[Func-22］Kiểm tra giá trị mặc định: Chuyên MụcMở màn hình đăng tinKiểm tra giá trị mặc định của trường Chuyên Mục- Không giá trị nào được chọnPass[Func-23］Kiểm tra hoạt động của combobox Chuyên MụcMở màn hình đăng tinKích vào ô combobox Chuyên Mục- Hiển thị danh sách Chuyên MụcPass[Func-24］Kiểm tra hoạt động của combobox Chuyên MụcMở màn hình đăng tin1. Kích vào ô Chuyên Mục 
+2. Chọn giá trị bất kì- Hiển thị lên ô đúng giá trị vừa chọnPass[Func-25］Kiểm tra dữ liệu đầu vào không hợp lệ: Chuyên MụcMở màn hình đăng tin1. Không chọn Chuyên Mục
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được tin vào cơ sở dữ liệu
+- Hiển thị thông báo 'Chọn một Chuyên Mục'Pass[Func-26]Kiểm tra giá trị mặc định: Nhóm Sản PhẩmMở màn hình đăng tinKiểm tra giá trị của trường Nhóm Sản Phẩm- Không giá trị nào được chọnPass[Func-27]Kiểm tra hoạt động của combobox Nhóm Sản PhẩmMở màn hình đăng tinKích vào ô combobox Nhóm Sản Phẩm- Hiển thị danh sách Nhóm Sản PhẩmPass[Func-28］Kiểm tra hoạt động của combobox Nhóm Sản PhẩmMở màn hình đăng tin1. Kích vào ô Nhóm Sản Phẩm
+2. Chọn giá trị bất kì- Hiển thị lên ô đúng giá trị vừa chọnPass[Func-29］Kiểm tra dữ liệu đầu vào không hợp lệ: Nhóm Sản PhẩmMở màn hình đăng tin1. Không chọn Nhóm Sản Phẩm
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được tin vào cơ sở dữ liệu
+- Hiển thị thông báo 'Chọn một Nhóm Sản Phẩm!'Pass[Func-30］Kiểm tra giá trị mặc định: Loại TinMở màn hình đăng tinKiểm tra giá trị mặc định của radio Loại Tin-Chọn giá trị Cần bánPass[Func-31］Kiểm tra khi chọn giá trị của radio Loại TinMở màn hình đăng tinKích chọn 1 giá trịCho phép chọn và lưu đúng giá trị đã tích, không cho phép chọn nhiều giá trịPass[Func-32］Kiểm tra dữ liệu đầu vào không hợp lệ: Tiêu ĐềMở màn hình đăng tin1. Không nhập Tiêu Đề 
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được tin vào cơ sở dữ liệu
+- Hiển thị thông báo ' Tiêu đề không được để trống'Pass[Func-33］Kiểm tra nhập khoảng trắng ở đầu và cuối của Tiêu ĐềMở màn hình đăng tin1. Nhập Tiêu Đề có khoảng trắng ở đầu và cuối
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Tự động cắt khoảng trắng ở đầu và cuối
+- Thêm tin vào cơ sở dữ liệuPass[Func-34］Kiểm tra validate dữ liệu đầu vào: Tiêu ĐềMở màn hình đăng tin1. Nhập 'Tiêu Đề' < 6 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được tin vào cơ sở dữ liệu
+- Hiển thị thông báo ' Tiêu đề chỉ chứa từ 6-100 kí tự'Pass[Func-35]Kiểm tra validate dữ liệu đầu vào: Tiêu ĐềMở màn hình đăng tin1. Nhập 'Tiêu Đề' > 100 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được Tin vào cơ sở dữ liệu
+- Hiển thị thông báo 'Tiêu đề chỉ chứa từ 6-100 kí tự'Pass[Func-36]Kiểm tra validate dữ liệu đầu vào: Tiêu ĐềMở màn hình đăng tin1. Nhập 'Tiêu Đề' = 6 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Thêm tin thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Tất Cả Tin Rao Vặt'Pass[Func-37]Kiểm tra validate dữ liệu đầu vào: Tiêu ĐềMở màn hình đăng tin1. Nhập 'Tiêu Đề' = 100 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Thêm tin thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Tất Cả Tin Rao Vặt'Pass[Func-38]Kiểm tra nhập kí tự đặc biệt vào trường Tiêu ĐềMở màn hình đăng tin1. Nhập vào trường Tiêu Đề các kí tự đặc biệt
+2. Các dữu liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Hiển thị thông báo ' Không chứa kí tự đặc biệt'Pass[Func-39］Kiểm tra dữ liệu đầu vào không hợp lệ: Nội DungMở màn hình đăng tin1. Không nhập Nội Dung
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được tin vào cơ sở dữ liệu
+- Hiển thị thông báo ' Nội Dung không được để trống'Pass[Func-40］Kiểm tra validate dữ liệu đầu vào: Nội DungMở màn hình đăng tin1. Nhập 'Nội Dung' < 10 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được tin vào cơ sở dữ liệu
+- Hiển thị thông báo ' Tiêu đề chỉ chứa từ 10-500 kí tự'Pass[Func-41]Kiểm tra validate dữ liệu đầu vào: Nội DungMở màn hình đăng tin1. Nhập 'Nội Dung' > 500 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được Tin vào cơ sở dữ liệu
+- Hiển thị thông báo 'Tiêu đề chỉ chứa từ 10-500 kí tự'Pass[Func-42]Kiểm tra validate dữ liệu đầu vào: Nội DungMở màn hình đăng tin1. Nhập 'Nội Dung' = 10 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Thêm tin thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Tất Cả Tin Rao Vặt'Pass[Func-43]Kiểm tra validate dữ liệu đầu vào: Nội DungMở màn hình đăng tin1. Nhập 'Nội Dung' = 500 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Thêm tin thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Tất Cả Tin Rao Vặt'Pass[Func-44]Kiểm tra nhập toàn kí tự đặc biệt vào trường Nội DungMở màn hình đăng tin1. Nhập vào trường Nội Dung toàn các kí tự đặc biệt
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Hiển thị thông báo ' Không chứa kí tự đặc biệt'Pass[Func-45］Kiểm tra nhập khoảng trắng ở đầu và cuối của Nội DungMở màn hình đăng tin1. Nhập Nội Dung có khoảng trắng ở đầu và cuối
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Tự động cắt khoảng trắng ở đầu và cuốiPass[Func-46]Kiểm tra validate dữ liệu đầu vào không hợp lệ: GiáMở màn hình đăng tin1. Không nhập Giá
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được Tin vào cơ sở dữ liệu
+- Hiển thị thông báo 'Giá không được để trống'Pass[Func-47]Kiểm tra dữ liệu đầu vào không hợp lệ: GiáMở màn hình đăng tin1. Nhập 'Giá' là các kí tự bao gồm cả chữ và số
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được tin vào cơ sở dữ liệu
+- Hiển thị thông báo ' Giá chỉ chứa kí tự là số'Pass[Func-48]Kiểm tra dữ liệu đầu vào không hợp lệ: GiáMở màn hình đăng tin1. Nhập 'Giá' là các kí tự chữ
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được tin vào cơ sở dữ liệu
+- Hiển thị thong báo 'Giá chỉ chứa kí tự là số'Pass[Func-49]Kiểm tra nhập kí tự đặc biệt vào trường Giá trừ kí tự .Mở màn hình đăng tin1. Nhập vào trường 'Giá' là các kí tự đặc biệt trừ kí tự .
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Hiển thị thông báo ' Không chứa kí tự đặc biệt'Fail[Func-50］Kiểm tra nhập khoảng trắng ở đầu và cuối của GiáMở màn hình đăng tin1. Nhập 'Giá' có khoảng trắng ở đầu và cuối
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Tự động cắt khoảng trắng ở đầu và cuối
+- Thêm tin vào cơ sở dữ liệuPass[Func-51]Kiểm tra hoạt động của FileUpLoad Hình ẢnhMở màn hình đăng tin1. Nhấn 'Chọn tệp' chọn 1 hình ảnh bất kì
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Hình ảnh được upload lên severPass[Func-52]Kiểm tra hoạt động của FileUpLoad Hình ẢnhMở màn hình đăng tinNhấn 'Chọn tệp' chọn 1 hình ảnh bất kì- Hình ảnh được hiển thị lên ôPass[Func-53］Kiểm tra hoạt động của FileUpLoad Hình ẢnhMở màn hình đăng tinKích chọn nhiều ảnh Không cho phép chọn nhiều hình ảnh lên serverPass[Func-54]Kiểm tra dữ liệu đầu vào không hợp lệ: Người Liên HệMở màn hình đăng tin1. Không nhập 'Người Liên Hệ'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được Tin vào cơ sở dữ liệu
+- Hiển thị thông báo 'Người Liên Hệ không được để trốngPass[Func-55]Kiểm tra nhập toàn kí tự đặc biệt vào trường Người Liên HệMở màn hình đăng tin1. Nhập vào trường Người Liên Hệ toàn các kí tự đặc biệt
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Hiển thị thông báo ' Không chứa kí tự đặc biệt'Pass[Func-56］Kiểm tra nhập khoảng trắng ở đầu và cuối của Người Liên HệMở màn hình đăng tin1. Nhập 'Người Liên Hệ' có khoảng trắng ở đầu và cuối
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Tự động cắt khoảng trắng ở đầu và cuối
+- Thêm tin vào cơ sở dữ liệuPass[Func-57]Kiểm tra validate dữ liệu đầu vào: Người Liên HệMở màn hình đăng tin1. Nhập 'Người Liên Hệ' > 100 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được tin vào cơ sở dữ liệu
+- Hiển thị thông báo ' Người liên hệ chỉ chứa 100 kí tự'Pass[Func-58]Kiểm tra validate dữ liệu đầu vào: Người Liên HệMở màn hình đăng tin1. Nhập 'Người Liên Hệ' = 100 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Thêm tin thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Tất Cả Tin Rao Vặt'Pass[Func-59]Kiểm tra nhập khoảng trắng ở đầu và cuối của Địa Chỉ Người Liên HệMở màn hình đăng tin1. Nhập 'Địa Chỉ Người Liên Hệ' có khoảng trắng ở đầu và cuối
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Tự động cắt khoảng trắng ở đầu và cuối
+- Thêm tin vào cơ sở dữ liệuPass[Func-60]Kiểm tra dữ liệu đầu vào không hợp lệ: Số Di ĐộngMở màn hình đăng tin1. Không nhập 'Số Di Động'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được Tin vào cơ sở dữ liệu
+- Hiển thị thông báo 'Số Di Động không được để trống'Pass[Func-61]Kiểm tra nhập khoảng trắng trong trường Số Di ĐộngMở màn hình đăng tin1. Nhập 'Số Di Động' có chứa khoảng trắng
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được Tin vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Số điện thoại chưa đúng định dạng'Pass[Func-62]Kiểm tra nhập kí tự là chữ trong trường Số Di ĐộngMở màn hình đăng tin1. Nhập 'Số Di Động' là các kí tự chữ
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được Tin vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Số điện thoại chưa đúng định dạng'Pass[Func-63]Kiểm tra nhập kí tự bao gồm cả chữ và số trong trường Số Di ĐộngMở màn hình đăng tin1. Nhập 'Số Di Động' là các kí tự bao gồm cả chữ và số
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được Tin vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Số điện thoại chưa đúng định dạng'Pass[Func-64]Kiểm tra nhập kí tự đặc biệt vào trường Số Di ĐộngMở màn hình đăng tin1. Nhập vào trường 'Số Di Động' là các kí tự đặc biệt
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được Tin vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Số điện thoại chưa đúng định dạng'Pass[Func-65]Kiểm tra định dạng của trường Số Di ĐộngMở màn hình đăng tin1. Nhập kí tự đầu tiên vào trường 'Số Di Động' là kí tự 0
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Thêm được tin vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Tất Cả Tin Rao Vặt'Pass[Func-66]Kiểm tra validate dữ liệu đầu vào: Số Di ĐộngMở màn hình đăng tin1. Nhập 'Số Di Động' < 10 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được tin vào cơ sở dữ liệu
+- Hiển thị thông báo ' Số điện thoại chưa đúng định dạng'Pass[Func-67]Kiểm tra validate dữ liệu đầu vào: Số Di ĐộngMở màn hình đăng tin1. Nhập 'Số Di Động' > 11 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được Tin vào cơ sở dữ liệu
+- Hiển thị thông báo 'Số điện thoại chưa đúng định dạng'Pass[Func-68]Kiểm tra validate dữ liệu đầu vào: Số Di ĐộngMở màn hình đăng tin1. Nhập 'Số Di Động' = 10 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Thêm tin thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Tất Cả Tin Rao Vặt'Pass[Func-69]Kiểm tra validate dữ liệu đầu vào: Số Di ĐộngMở màn hình đăng tin1. Nhập 'Số Di Động' = 11 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Thêm tin thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Tất Cả Tin Rao Vặt'Pass[Func-70]Kiểm tra dữ liệu đầu vào không hợp lệ: EmailMở màn hình đăng tin1. Không nhập 'Email'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được Tin vào cơ sở dữ liệu
+- Hiển thị thông báo 'Email không được để trống'Pass[Func-71]Kiểm tra nhập khoảng trắng trong trường EmailMở màn hình đăng tin1. Nhập 'Email' có chứa khoảng trắng
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được Tin vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Email chưa đúng định dạng'Pass[Func-72]Kiểm tra nhập kí tự đặc biệt vào trường Email trừ kí tự @Mở màn hình đăng tin1. Nhập vào trường 'Email' là các kí tự đặc biệt trừ kí tự @
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Không thêm được Tin vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Email chưa đúng định dạng'Pass[Func-73]Kiểm tra định dạng của trường EmailMở màn hình đăng tin1. Nhập đúng định dạng LocalPart@Domail vào trường Email
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Đăng Tin]- Thêm được tin vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Tất Cả Tin Rao Vặt'Pass[Func-74]Kiểm tra hủy bỏ thao tác Đăng TinMở màn hình đăng tin1. Nhập đầy đủ các dữ liệu
+2. Thoát trang Đăng Tin- Tin không lưu vào cơ sở dữ liệuPass[Func-75]Kiểm tra lưu tin vào databaseMở màn hình đăng tin1. Nhập đầy đủ các dữ liệu đều hợp lệ
+2. Thoát trang Đăng Tin- Tin được lưu vào cơ sở dữ liệuPass[Func-76]Kiểm tra chỉ nhập các trường bắt buộcMở màn hình đăng tin1. Nhập dữ liệu vào các trường bắt buộc
+2. Nhấn [Đăng Tin]- Tin được lưu vào cơ sở dữ liệuPass[Func-77］Kiểm tra dữ liệu đầu vào: các trường đều hợp lệMở màn hình sửa tin1. Nhập dữ liệu đầu vào: các trường đều hợp lệ
+2. Nhấn [Sửa Tin]Sửa tin thành công, Chuyển đến màn hình 'Tất Cả Tin Rao Vặt'Pass[Func-78］Kiểm tra giá trị mặc định: Tỉnh/ThànhMở màn hình sửa tinKiểm tra giá trị mặc định của trường Tỉnh/Thành- Không giá trị nào được chọnPass[Func-79］Kiểm tra hoạt động của combobox Tỉnh/ThànhMở màn hình sửa tinKích vào ô Combobox Tỉnh/ThànhHiển thị danh sách Tỉnh/ThànhPass[Func-80］Kiểm tra hoạt động của combobox Tỉnh/ThànhMở màn hình sửa tin1. Kích vào ô Tỉnh/Thành
+2. Chọn 1 giá trị có trong ôHiển thị đúng giá trị đã chọn trong combobox lên ô Tỉnh/ThànhPass[Func-81］Kiểm tra dữ liệu đầu vào không hợp lệ: Tỉnh/ThànhMở màn hình sửa tin1. Không chọn Tỉnh/Thành
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Không Sửa được tin vào cơ sở dữ liệu
+- Hiển thị thông báo 'Chọn một Tỉnh/Thành'Pass[Func-82］Kiểm tra giá trị mặc định: Quận/HuyệnMở màn hình sửa tinKiểm tra giá trị mặc định của trường Quận/Huyện-Có đầy đủ các giá trị được thiết kế trong combobox Quận/HuyệnPass[Func-83］Kiểm tra hoạt động của combobox Quận/HuyệnMở màn hình sửa tinKích vào ô Combobox Quận/HuyệnHiển thị danh sách Quận/HuyệnPass[Func-84］Kiểm tra hoạt động của combobox Quận/HuyệnMở màn hình sửa tin1. Kích vào ô Quận/Huyện
+2. Chọn giá trị bất kì-Hiển thị lên ô đúng giá trị vừa chọnPass[Func-85］Kiểm tra dữ liệu đầu vào không hợp lệ:Quận/HuyệnMở màn hình sửa tin1. Không chọn Quận/Huyện
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]-Không Sửa được tin vào cơ sở dữ liệu
+- Hiển thị thông báo 'Chọn một Quận/Huyện'Pass[Func-86］Kiểm tra giá trị mặc định: Chuyên MụcMở màn hình sửa tinKiểm tra giá trị mặc định của trường Chuyên Mục- Không giá trị nào được chọnPass[Func-87］Kiểm tra hoạt động của combobox Chuyên MụcMở màn hình sửa tinKích vào ô combobox Chuyên Mục- Hiển thị danh sách Chuyên MụcPass[Func-88］Kiểm tra hoạt động của combobox Chuyên MụcMở màn hình sửa tin1. Kích vào ô Chuyên Mục 
+2. Chọn giá trị bất kì- Hiển thị lên ô đúng giá trị vừa chọnPass[Func-89］Kiểm tra dữ liệu đầu vào không hợp lệ: Chuyên MụcMở màn hình sửa tin1. Không chọn Chuyên Mục
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Không Sửa được tin vào cơ sở dữ liệu
+- Hiển thị thông báo 'Chọn một Chuyên Mục'Pass[Func-90]Kiểm tra giá trị mặc định: Nhóm Sản PhẩmMở màn hình sửa tinKiểm tra giá trị của trường Nhóm Sản Phẩm- Không giá trị nào được chọnPass[Func-91]Kiểm tra hoạt động của combobox Nhóm Sản PhẩmMở màn hình sửa tinKích vào ô combobox Nhóm Sản Phẩm- Hiển thị danh sách Nhóm Sản PhẩmPass[Func-92］Kiểm tra hoạt động của combobox Nhóm Sản PhẩmMở màn hình sửa tin1. Kích vào ô Nhóm Sản Phẩm
+2. Chọn giá trị bất kì- Hiển thị lên ô đúng giá trị vừa chọnPass[Func-93］Kiểm tra dữ liệu đầu vào không hợp lệ: Nhóm Sản PhẩmMở màn hình sửa tin1. Không chọn Nhóm Sản Phẩm
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Không Sửa được tin vào cơ sở dữ liệu
+- Hiển thị thông báo 'Chọn một Nhóm Sản Phẩm!'Pass[Func-94］Kiểm tra giá trị mặc định: Loại TinMở màn hình sửa tinKiểm tra giá trị mặc định của radio Loại Tin-Chọn giá trị Cần bánPass[Func-95］Kiểm tra khi chọn giá trị của radio Loại TinMở màn hình sửa tinKích chọn 1 giá trịCho phép chọn và lưu đúng giá trị đã tích, không cho phép chọn nhiều giá trịPass[Func-96］Kiểm tra dữ liệu đầu vào không hợp lệ: Tiêu ĐềMở màn hình sửa tin1. Không nhập Tiêu Đề 
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Không Sửa được tin vào cơ sở dữ liệu
+- Hiển thị thông báo ' Tiêu đề không được để trống'Pass[Func-97］Kiểm tra nhập khoảng trắng ở đầu và cuối của Tiêu ĐềMở màn hình sửa tin1. Nhập Tiêu Đề có khoảng trắng ở đầu và cuối
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Tự động cắt khoảng trắng ở đầu và cuối
+- Sửa tin vào cơ sở dữ liệuPass[Func-98］Kiểm tra validate dữ liệu đầu vào: Tiêu ĐềMở màn hình sửa tin1. Nhập 'Tiêu Đề' < 6 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Không Sửa được tin vào cơ sở dữ liệu
+- Hiển thị thông báo ' Tiêu đề chỉ chứa từ 6-100 kí tự'Pass[Func-99]Kiểm tra validate dữ liệu đầu vào: Tiêu ĐềMở màn hình sửa tin1. Nhập 'Tiêu Đề' > 100 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Không Sửa được Tin vào cơ sở dữ liệu
+- Hiển thị thông báo 'Tiêu đề chỉ chứa từ 6-100 kí tự'Pass[Func-100]Kiểm tra validate dữ liệu đầu vào: Tiêu ĐềMở màn hình sửa tin1. Nhập 'Tiêu Đề' = 6 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Sửa tin thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Tất Cả Tin Rao Vặt'Pass[Func-101]Kiểm tra validate dữ liệu đầu vào: Tiêu ĐềMở màn hình sửa tin1. Nhập 'Tiêu Đề' = 100 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Sửa tin thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Tất Cả Tin Rao Vặt'Pass[Func-102]Kiểm tra nhập kí tự đặc biệt vào trường Tiêu ĐềMở màn hình sửa tin1. Nhập vào trường Tiêu Đề các kí tự đặc biệt
+2. Các dữu liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Hiển thị thông báo ' Không chứa kí tự đặc biệt'Pass[Func-103］Kiểm tra dữ liệu đầu vào không hợp lệ: Nội DungMở màn hình sửa tin1. Không nhập Nội Dung
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Không Sửa được tin vào cơ sở dữ liệu
+- Hiển thị thông báo ' Nội Dung không được để trống'Pass[Func-104］Kiểm tra validate dữ liệu đầu vào: Nội DungMở màn hình sửa tin1. Nhập 'Nội Dung' < 10 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Không Sửa được tin vào cơ sở dữ liệu
+- Hiển thị thông báo ' Tiêu đề chỉ chứa từ 10-500 kí tự'Pass[Func-105]Kiểm tra validate dữ liệu đầu vào: Nội DungMở màn hình sửa tin1. Nhập 'Nội Dung' > 500 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Không Sửa được Tin vào cơ sở dữ liệu
+- Hiển thị thông báo 'Tiêu đề chỉ chứa từ 10-500 kí tự'Pass[Func-106]Kiểm tra validate dữ liệu đầu vào: Nội DungMở màn hình sửa tin1. Nhập 'Nội Dung' = 10 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Sửa tin thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Tất Cả Tin Rao Vặt'Pass[Func-107]Kiểm tra validate dữ liệu đầu vào: Nội DungMở màn hình sửa tin1. Nhập 'Nội Dung' = 500 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Sửa tin thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Tất Cả Tin Rao Vặt'Pass[Func-108]Kiểm tra nhập toàn kí tự đặc biệt vào trường Nội DungMở màn hình sửa tin1. Nhập vào trường Nội Dung toàn các kí tự đặc biệt
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Hiển thị thông báo ' Không chứa kí tự đặc biệt'Pass[Func-109］Kiểm tra nhập khoảng trắng ở đầu và cuối của Nội DungMở màn hình sửa tin     1. Nhập Nội Dung có khoảng trắng ở đầu và cuối
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Tự động cắt khoảng trắng ở đầu và cuốiPass[Func-110]Kiểm tra validate dữ liệu đầu vào không hợp lệ: GiáMở màn hình sửa tin1. Không nhập Giá
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Không Sửa được Tin vào cơ sở dữ liệu
+- Hiển thị thông báo 'Giá không được để trống'Pass[Func-111]Kiểm tra dữ liệu đầu vào không hợp lệ: Giá     Mở màn hình sửa tin     1. Nhập 'Giá' là các kí tự bao gồm cả chữ và số
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]     - Không Sửa được tin vào cơ sở dữ liệu
+- Hiển thị thông báo ' Giá chỉ chứa kí tự là số'Pass[Func-112]Kiểm tra dữ liệu đầu vào không hợp lệ: GiáMở màn hình sửa tin1. Nhập 'Giá' là các kí tự chữ
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Không Sửa được tin vào cơ sở dữ liệu
+- Hiển thị thong báo 'Giá chỉ chứa kí tự là số'Pass[Func-113]Kiểm tra nhập kí tự đặc biệt vào trường Giá trừ kí tự .Mở màn hình sửa tin1. Nhập vào trường 'Giá' là các kí tự đặc biệt trừ kí tự .
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Hiển thị thông báo ' Không chứa kí tự đặc biệt'Pass[Func-114］Kiểm tra nhập khoảng trắng ở đầu và cuối của GiáMở màn hình sửa tin1. Nhập 'Giá' có khoảng trắng ở đầu và cuối
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Tự động cắt khoảng trắng ở đầu và cuối
+- Sửa tin vào cơ sở dữ liệuPass[Func-115]Kiểm tra hoạt động của FileUpLoad Hình ẢnhMở màn hình sửa tin1. Nhấn 'Chọn tệp' chọn 1 hình ảnh bất kì
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Hình ảnh được upload lên severPass[Func-116]Kiểm tra hoạt động của FileUpLoad Hình ẢnhMở màn hình sửa tinNhấn 'Chọn tệp' chọn 1 hình ảnh bất kì- Hình ảnh được hiển thị lên ôPass[Func-117］Kiểm tra hoạt động của FileUpLoad Hình ẢnhMở màn hình sửa tinKích chọn nhiều ảnh Không cho phép chọn nhiều hình ảnh lên serverPass[Func-118]Kiểm tra dữ liệu đầu vào không hợp lệ: Người Liên HệMở màn hình sửa tin1. Không nhập 'Người Liên Hệ'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Không Sửa được Tin vào cơ sở dữ liệu
+- Hiển thị thông báo 'Người Liên Hệ không được để trốngPass[Func-119]Kiểm tra nhập toàn kí tự đặc biệt vào trường Người Liên HệMở màn hình sửa tin1. Nhập vào trường Người Liên Hệ toàn các kí tự đặc biệt
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Hiển thị thông báo ' Không chứa kí tự đặc biệt'Pass[Func-120］Kiểm tra nhập khoảng trắng ở đầu và cuối của Người Liên HệMở màn hình sửa tin1. Nhập 'Người Liên Hệ' có khoảng trắng ở đầu và cuối
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Tự động cắt khoảng trắng ở đầu và cuối
+- Sửa tin vào cơ sở dữ liệuPass[Func-121]Kiểm tra validate dữ liệu đầu vào: Người Liên HệMở màn hình sửa tin1. Nhập 'Người Liên Hệ' > 100 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Không Sửa được tin vào cơ sở dữ liệu
+- Hiển thị thông báo ' Người liên hệ chỉ chứa 100 kí tự'Pass[Func-122]Kiểm tra validate dữ liệu đầu vào: Người Liên HệMở màn hình sửa tin1. Nhập 'Người Liên Hệ' = 100 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Sửa tin thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Tất Cả Tin Rao Vặt'Pass[Func-123]Kiểm tra nhập khoảng trắng ở đầu và cuối của Địa Chỉ Người Liên HệMở màn hình sửa tin1. Nhập 'Địa Chỉ Người Liên Hệ' có khoảng trắng ở đầu và cuối
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Tự động cắt khoảng trắng ở đầu và cuối
+- Sửa tin vào cơ sở dữ liệuPass[Func-124]Kiểm tra dữ liệu đầu vào không hợp lệ: Số Di ĐộngMở màn hình sửa tin1. Không nhập 'Số Di Động'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Không Sửa được Tin vào cơ sở dữ liệu
+- Hiển thị thông báo 'Số Di Động không được để trống'Pass[Func-125]Kiểm tra nhập khoảng trắng trong trường Số Di ĐộngMở màn hình sửa tin1. Nhập 'Số Di Động' có chứa khoảng trắng
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Không Sửa được Tin vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Số điện thoại chưa đúng định dạng'Pass[Func-126]Kiểm tra nhập kí tự là chữ trong trường Số Di ĐộngMở màn hình sửa tin1. Nhập 'Số Di Động' là các kí tự chữ
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Không Sửa được Tin vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Số điện thoại chưa đúng định dạng'Pass[Func-127]Kiểm tra nhập kí tự bao gồm cả chữ và số trong trường Số Di ĐộngMở màn hình sửa tin1. Nhập 'Số Di Động' là các kí tự bao gồm cả chữ và số
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Không Sửa được Tin vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Số điện thoại chưa đúng định dạng'Pass[Func-128]Kiểm tra nhập kí tự đặc biệt vào trường Người Liên HệMở màn hình sửa tin1. Nhập vào trường 'Số Di Động' là các kí tự đặc biệt
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Không Sửa được Tin vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Số điện thoại chưa đúng định dạng'Pass[Func-129]Kiểm tra định dạng của trường Số Di ĐộngMở màn hình sửa tin1. Nhập kí tự đầu tiên vào trường 'Số Di Động' là kí tự 0
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Sửa được tin vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Tất Cả Tin Rao Vặt'Pass[Func-130]Kiểm tra validate dữ liệu đầu vào: Số Di ĐộngMở màn hình sửa tin1. Nhập 'Số Di Động' < 10 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Không Sửa được tin vào cơ sở dữ liệu
+- Hiển thị thông báo ' Số điện thoại chưa đúng định dạng'Pass[Func-131]Kiểm tra validate dữ liệu đầu vào: Số Di ĐộngMở màn hình sửa tin1. Nhập 'Số Di Động' > 11 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Không Sửa được Tin vào cơ sở dữ liệu
+- Hiển thị thông báo 'Số điện thoại chưa đúng định dạng'Pass[Func-132]Kiểm tra validate dữ liệu đầu vào: Số Di ĐộngMở màn hình sửa tin1. Nhập 'Số Di Động' = 10 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Sửa tin thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Tất Cả Tin Rao Vặt'Pass[Func-133]Kiểm tra validate dữ liệu đầu vào: Số Di ĐộngMở màn hình sửa tin1. Nhập 'Số Di Động' = 11 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Sửa tin thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Tất Cả Tin Rao Vặt'Pass[Func-134]Kiểm tra dữ liệu đầu vào không hợp lệ: EmailMở màn hình sửa tin1. Không nhập 'Email'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Không Sửa được Tin vào cơ sở dữ liệu
+- Hiển thị thông báo 'Email không được để trống'Pass[Func-135]Kiểm tra nhập khoảng trắng trong trường EmailMở màn hình sửa tin1. Nhập 'Email' có chứa khoảng trắng
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Không Sửa được Tin vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Email chưa đúng định dạng'Pass[Func-136]Kiểm tra nhập kí tự đặc biệt vào trường Email trừ kí tự @Mở màn hình sửa tin1. Nhập vào trường 'Email' là các kí tự đặc biệt trừ kí tự @
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Không Sửa được Tin vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Email chưa đúng định dạng'Pass[Func-137]Kiểm tra định dạng của trường EmailMở màn hình sửa tin1. Nhập đúng định dạng LocalPart@Domail vào trường Email
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Sửa Tin]- Sửa được tin vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Tất Cả Tin Rao Vặt'Pass[Func-138]Kiểm tra hủy bỏ thao tác Đăng TinMở màn hình sửa tin1. Nhập đầy đủ các dữ liệu
+2. Thoát trang Sửa Tin- Tin không lưu vào cơ sở dữ liệuPass[Func-139]Kiểm tra lưu tin vào databaseMở màn hình sửa tin1. Nhập đầy đủ các dữ liệu đều hợp lệ
+2. Thoát trang Sửa Tin- Tin được lưu vào cơ sở dữ liệuPass[Func-140]Kiểm tra chỉ nhập các trường bắt buộcMở màn hình sửa tin1. Nhập dữ liệu vào các trường bắt buộc
+2. Nhấn [Sửa Tin]- Tin được lưu vào cơ sở dữ liệuPass[Func-141］Kiểm tra button xóa hoạt động đúngMở màn hình tất cả các tin1. Chọn Tin muốn xóa
+2. Nhấn [Xóa Tin]
+3. Nhấn [OK]- Hiển thị thông báo 'Có chắc chắn muốn xóa không?'
+- Tin không còn trong cơ sở dữ liệuPass[Func-142］Kiểm tra thông báo khi xóaMở màn hình tất cả các tin1. Chọn bất kí 1 Tin muốn xóa
+2. Nhấn [Xóa Tin]- Hiển thị thông báo 'Có chắc chắn muốn xóa không?
+- Chọn 'OK' nếu đồng ý xóa
+- Chọn 'Hủy' nếu trì hoãn việc xóaPass[Func-143］Kiểm tra hủy bỏ thao tác XóaMở màn hình tất cả các tin1. Chọn Tin muốn xóa
+2. Nhấn [Xóa Tin]
+3. Chọn nút 'Hủy'- Tin vẫn còn trong cơ sở dữ liệuPass[Func-144］Kiểm tra xóa 1 bản ghiMở màn hình tất cả các tin1.Chọn 1 Tin muốn xóa 
+2. Nhấn [Xóa Tin]
+3. Nhấn [OK]- Hiển thị thông báo 'Có chắc chắn muốn xóa không?
+- Tin không còn trong cơ sở dữ liệuPass[Func-145］Kiểm tra xóa nhiều bản ghi trong cùng 1 lầnMở màn hình tất cả các tin1. Chọn nhiều Tin muốn xóa- Không chọn được nhiều tin trong cùng 1 lầnPass[Func-146］Kiểm tra xóa 1 bản ghi ở 2 trình duyệt khác nhauMở màn hình tất cả các tin1. Mở Google Chrome và Internet Explorer cùng lúc
+2. Chọn 1 Tin trong trình duyệt Google Chrome, nhấn 'Xóa'-> nhấn [OK]
+3. Trong trình duyệt Internet Explorer, chọn Tin giống ở trình duyệt Google Chrome, nhấn 'Xóa' 
+-> nhấn [OK]- Ở trình duyệt Internet Explorer hiển thị thông báo "Tin không tồn tại"Fail[Func-147］Kiểm tra dữ liệu đầu vào: từ khóa tìm kiếm hợp lệ      1. Nhập từ khóa tìm kiếm hợp lệ
+2. Nhấn [Tìm Kiếm]- Trả về thông tin của Tin có chứa từ khóa tìm kiếm Pass[Func-148］- Hiển thị thông báo 'Không tìm thông tin trên'      1. Không nhập từ khóa tìm kiếm
+2. Nhấn [Tìm Kiếm]- Hiển thị thông báo 'Không tìm thông tin trên'Pass[Func-149］Kiểm tra nhập khoảng trắng ở đầu và cuối: Từ khóa tìm kiếm      1. Nhập khoảng trắng ở đầu và cuối từ khóa tìm kiếm
+2. Từ khóa tìm kiếm nhập hợp lệ
+2. Nhấn [Tìm Kiếm]- Tự động cắt khoảng trắng ở đầu và cuối
+- Hiển thị kết quả theo đúng từ khóa tìm kiếmPass[Func-150］Kiểm tra nhập ký tự đặc biệt cho textbox Tìm Kiếm      1.Nhập ký tự đặc biệt 
+2. Nhấn [Tìm Kiếm]- Hiển thị thông báo 'Không tìm thấy thông tin cần tìm'Pass[Func-151］Kiểm tra nhập chuỗi ký tự hoa, thường cho textbox Tìm Kiếm      1. Nhập từ khóa Tìm Kiếm là chuỗi ký tự chữ hoa và chữ thường
+2. Từ khóa hợp lệ
+3. Nhấn [Tìm Kiếm]- Không phân biệt chữ hoa chữ thường
+- Hiển thị thông tin của tin phù hợp với từ khóa tìm kiếmPass[Func-152］Kiểm tra nhập chuỗi ký tự không dấu      1. Nhập từ khóa tìm kiếm là chuỗi ký tự không dấu
+2. Nhấn [Tìm Kiếm]- Hiển thị thông báo 'Không tìm thấy thông tin cần tìm'Fail[Func-153］Kiểm tra dữ liệu đầu vào hợp lệ vào textbox Tìm Kiếm      1.Nhập từ khóa tìm kiếm là chuỗi ký tự có dấu
+2. Nhấn [Tìm Kiếm]- Hiển thị thông tin của tin phù hợp với từ khóa tìm kiếmPass[Func-154］Kiểm tra nhập chuỗi ký tự chữ hoa cho textbox Tìm Kiếm      1. Nhập từ khóa Tìm Kiếm là chuỗi ký tự chữ hoa
+2. Từ khóa hợp lệ
+3. Nhấn [Tìm Kiếm]- Không phân biệt chữ hoa
+- Hiển thị thông tin của tin phù hợp với từ khóa tìm kiếmPass[Func-155］Kiểm tra nhập chuỗi ký tự chữ thường      1. Nhập từ khóa tìm kiếm là chuỗi ký tự chữ thường
+2. Từ khóa hợp lệ
+3. Nhấn [Tìm Kiếm]- Hiển thị thông tin của tin phù hợp với từ khóa tìm kiếmPass[Func-156］Kiểm tra nhập chuỗi ký tự số      1. Nhập từ khóa tìm kiếm = '123'
+2. Nhấn [Tìm Kiếm]- Hiển thị thông báo 'Không tìm thấy thông tin cần tìm'Fail     
+3.5.5  Quản lý nhân viên
+    
+    
+    
+    
+    
+    
+    Bảng 3. 12: Test case quản lý nhân viên
+TEST CASE                                                                                                                      Module Code     Quản lý nhân viên                                    Test requirement                              Pass112Tester     Phạm Thị Chang                        Fail22PassFailUntestedN/ANumber of testcase                              Untesed     01122200134                              N/A     0    
+IDTest Case DescriptionPre-conditionTest Case ProcedureExpected OutputActual Output                                   Màn hình Quản Lý Nhân Viên[Gui-1]Kiểm tra màn hình ở trạng thái mặc địnhMở màn hình quản lý Nhân Viên1. Kiểm tra title của màn hình
+2. Kiểm tra focus của chuột
+3. Kiểm tra các giá trị mặc định của các trường
+4. Kiểm tra header, footerMàn hình chức năng được mở:
+- Hiển thị title của chức năng trên màn hình
+-  Focus được set vào trường đầu tiên có thể edit
+- Hiển thị đầy đủ các trường như trong tài liệu SRS
+- Hiển thị các giá trị mặc định của các trường đúng. 
+ - header, footer hợp lý hoặc theo design có sẵnFail[Gui-2]Kiểm tra tổng thể giao diện màn hình: formMở màn hình quản lý Nhân Viên1. Kiểm tra form về màu sắc, kích thước
+2. Kiểm tra form về cách bố trí form     - Các label, textbox, combo có độ dài, rộng và khoảng cách bằng nhau, không xô lệch
+- Các label sử dụng cùng 1 loại font, cỡ chữ, căn lề trái
+- Form được bố trí hợp lý và dễ sử dụngPass[Gui-3］Kiểm tra tổng thể giao diện màn hình: sự kiện của menu buttonMở màn hình quản lý Nhân ViênNhấn vào các button có trong menu- Chuyển đến trang đã nhấn vào buttonPass[Gui-4］Kiểm tra thứ tự di chuyển con trỏ trên màn hình khi nhấn phím TabMở màn hình quản lý Nhân ViênNhấn tab liên tục- Con trỏ di chuyển lần lượt theo thứ tự: Từ trên xuống dưới, từ trái qua phảiPass[Gui-5］Kiểm tra thứ tự di chuyển con trỏ trên màn hình khi nhấn phím Shift-TabMở màn hình quảnNNhân ViênNhấn phím Shift-Tab liên tục- Con trỏ di chuyển ngược lại tho thứ tự: Từ dưới lên trên, từ phải qua tráiPass[Gui-6］Kiểm tra giao diện màn hình khi phóng to thu nhỏMở màn hình quản lý Nhân Viên1.Nhấn phím Ctrl -
+2.Nhấn phim Ctrl +- Màn hình thu nhỏ, phóng to tương ứng và không bị vỡ giao diệnPass[Gui-7]Kiểm tra thao tác trên combobox, listboxMở màn hình quản lý Nhân ViênGõ kí tự vào ô combobox, listboxKhông thể gõ vào list chọnPass[Gui-8]Kiểm tra việc phân chia bố cục trên trangMở màn hình quản lý Nhân ViênKiểm tra việc phân chia các phần: header, body, footerBố cục 3 phần hợp lý, đơn giảnPass[Gui-9]Kiểm tra kí tự * ở các trường bắt buộcMở màn hình quản lý Nhân ViênKiểm tra các trường bắt buộc nhập phải có kí tự *Tất cả các trường đều phải có kí tự *Pass[Gui-10]Kiểm tra nội dung message boxMở màn hình quản lý Nhân ViênKiểm tra nội dung các thông báo trên trangCác nội dung trong câu thông báo phải đúng 
+chính tả, ngữ pháp,  đúng yêu cầu của từng 
+chức năngPass[Gui-11]Kiểm tra title trên các trangMở màn hình quản lý Nhân ViênKiểm tra title trên từng trangMỗi trang đều có title tương ứng với từng 
+chức năngFail[Gui-12]Kiểm tra image trên các trangMở màn hình quản lý Nhân ViênKiểm tra image trên từng trangImage hiển thị đúng, không bị lỗi, không bị 
+vỡ ảnhPass     Thêm Nhân Viên[Func-13］Kiểm tra dữ liệu đầu vào: các trường đều hợp lệMở màn hình Thêm nhân viên1. Nhập 'Mã Nhân Viên' là duy nhất
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]Thêm nhân viên  thành công,
+ Chuyển đến màn hình 'Quản lý Nhân Viên'Pass[Func-14］Kiểm tra Mã Nhân Viên đã tồn tạiMở màn hình Thêm nhân viên1. Nhập 'Mã Nhân Viên' có trong cơ sở dữ liệu
+2. Các dữ liệu còn lại nhập hợp lệ
+2. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Mã đã tồn tại'Pass[Func-15]Kiểm tra dữ liệu đầu vào không hợp lệ: Mã Nhân ViênMở màn hình Thêm nhân viên1. Không nhập 'Mã Nhân Viên'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Mã Nhân Viên không được để trống'Pass[Func-16］Kiểm tra validate dữ liệu đầu vào: Mã Nhân ViênMở màn hình Thêm nhân viên1. Nhập 'Mã Nhân Viên' < 5 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Mã nhân viên chỉ chứa từ 5-30 kí tự'Fail[Func-17]Kiểm tra validate dữ liệu đầu vào: Mã Nhân ViênMở màn hình Thêm nhân viên1. Nhập 'Mã Nhân Viên' > 30 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Mã nhân viên chỉ chứa từ 5-30 kí tự'Fail[Func-18]Kiểm tra validate dữ liệu đầu vào: Mã Nhân ViênMở màn hình Thêm nhân viên1. Nhập 'Mã Nhân Viên' = 5 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Thêm nhân viên thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viên'Pass[Func-19]Kiểm tra validate dữ liệu đầu vào: Mã Nhân ViênMở màn hình Thêm nhân viên1. Nhập 'Mã Nhân Viên' = 30 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Thêm nhân viên thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viên'Pass[Func-20]Kiểm tra dữ liệu đầu vào không hợp lệ: Họ Và TênMở màn hình Thêm nhân viên1. Không nhập 'Họ Và Tên'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Họ Và Tên không được để trống'Pass[Func-21]Kiểm tra nhập kí tự đặc biệt vào trường Họ Và TênMở màn hình Thêm nhân viên1. Nhập vào trường 'Họ Và Tên' là các kí tự đặc biệt 
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Không chứa kí tự đặc biệt'Pass[Func-22]Kiểm tra validate dữ liệu đầu vào: Họ Và TênMở màn hình Thêm nhân viên1. Nhập 'Họ và tên' > 100 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Chỉ chứa từ 100 kí tự'Pass[Func-23]Kiểm tra validate dữ liệu đầu vào: Họ và tênMở màn hình Thêm nhân viên1. Nhập 'Họ và tên' = 100 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Thêm nhân viên thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viên'Pass[Func-24]Kiểm tra dữ liệu đầu vào không hợp lệ: Số Số Điện ThoạiMở màn hình Thêm nhân viên1. Không nhập 'Số Điện Thoại'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Số Điện Thoại không được để trống'Pass[Func-25]Kiểm tra nhập khoảng trắng trong trường Số Điện ThoạiMở màn hình Thêm nhân viên1. Nhập 'Số Điện Thoại' có chứa khoảng trắng
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Số Điện Thoại chưa đúng định dạng'Pass[Func-26]Kiểm tra nhập kí tự là chữ trong trường Số Điện ThoạiMở màn hình Thêm nhân viên1. Nhập 'Số Điện Thoại' là các kí tự chữ
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Số Điện Thoại chưa đúng định dạng'Pass[Func-27]Kiểm tra nhập kí tự bao gồm cả chữ và số trong trường Số Điện ThoạiMở màn hình Thêm nhân viên1. Nhập 'Số Điện Thoại' là các kí tự bao gồm cả chữ và số
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Số Điện Thoại chưa đúng định dạng'Pass[Func-28]Kiểm tra nhập kí tự đặc biệt vào trường Số Điện ThoạiMở màn hình Thêm nhân viên1. Nhập vào trường 'Số Điện Thoại' là các kí tự đặc biệt
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Số Điện Thoại chưa đúng định dạng'Pass[Func-29]Kiểm tra định dạng của trường Số Điện ThoạiMở màn hình Thêm nhân viên1. Nhập kí tự đầu tiên vào trường 'Số Điện Thoại' là kí tự 0
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Thêm được nhân viên vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viên'Pass[Func-30]Kiểm tra validate dữ liệu đầu vào: Số Điện ThoạiMở màn hình Thêm nhân viên1. Nhập 'Số Điện Thoại' < 10 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo ' Số Điện Thoại chưa đúng định dạng'Pass[Func-31]Kiểm tra validate dữ liệu đầu vào: Số Điện ThoạiMở màn hình Thêm nhân viên1. Nhập 'Số Điện Thoại' > 11 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Số Số Điện Thoại chưa đúng định dạng'Pass[Func-32]Kiểm tra validate dữ liệu đầu vào: Số Điện ThoạiMở màn hình Thêm nhân viên1. Nhập 'Số Điện Thoại' = 10 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Thêm nhân viên thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viênt'Pass[Func-33]Kiểm tra validate dữ liệu đầu vào: Số Điện ThoạiMở màn hình Thêm nhân viên1. Nhập 'Số Điện Thoại' = 11 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Thêm nhân viên thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viênt'Pass[Func-34]Kiểm tra dữ liệu đầu vào không hợp lệ: Địa Chỉ EmailMở màn hình Thêm nhân viên1. Không nhập 'Địa Chỉ Email'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Địa Chỉ Email không được để trống'Pass[Func-35]Kiểm tra nhập khoảng trắng trong trường Địa Chỉ EmailMở màn hình Thêm nhân viên1. Nhập 'Địa Chỉ Email' có chứa khoảng trắng
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Địa Chỉ Email chưa đúng định dạng'Pass[Func-36]Kiểm tra nhập kí tự đặc biệt vào trường Địa Chỉ Email trừ kí tự @Mở màn hình Thêm nhân viên1. Nhập vào trường 'Địa Chỉ Email' là các kí tự đặc biệt trừ kí tự @
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Địa Chỉ Email chưa đúng định dạng'Pass[Func-37]Kiểm tra định dạng của trường Địa Chỉ EmailMở màn hình Thêm nhân viên1. Nhập đúng định dạng LocalPart@Domail vào trường Địa Chỉ Email
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Thêm được nhân viên vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viênt'Pass[Func-38]Kiểm tra validate dữ liệu đầu vào: Địa Chỉ EmailMở màn hình Thêm nhân viên1. Nhập 'Địa Chỉ Email' > 200 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Địa Chỉ Email chỉ chứa 200 kí tự'Pass[Func-39]Kiểm tra validate dữ liệu đầu vào: Địa Chỉ EmailMở màn hình Thêm nhân viên1. Nhập 'Địa Chỉ Email' = 200 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Thêm nhân viên thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viên'Pass[Func-40］Kiểm tra giá trị mặc định: Trạng TháiMở màn hình Thêm nhân viênKiểm tra giá trị mặc định của radio Trạng Thái-Chọn giá trị Hoạt ĐộngPass[Func-41］Kiểm tra khi chọn giá trị của radio Trạng TháiMở màn hình Thêm nhân viên1.Kích chọn 1 giá trị
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]Cho phép chọn và lưu đúng giá trị đã tíchPass[Func-42]Kiểm tra chọn nhiều giá trị: Trạng TháiMở màn hình Thêm nhân viên1. Kích chọn cả 2 giá trị
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không cho phép chọn nhiều giá trịPass[Func-43]Kiểm tra dữ liệu đầu vào không hợp lệ: Quyền HạnMở màn hình Thêm nhân viên1. Không nhập 'Quyền Hạn'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Quyền không để trống'Pass[Func-44]Kiểm tra nhập kí tự là chữ trong trường Quyền HạnMở màn hình Thêm nhân viên1. Nhập 'Quyền Hạn' là các kí tự chữ
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Quyền Hạn chưa đúng định dạng'Pass[Func-45]Kiểm tra nhập kí tự bao gồm cả chữ và số trong trường Quyền HạnMở màn hình Thêm nhân viên1. Nhập 'Quyền Hạn' là các kí tự bao gồm cả chữ và số
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Quyền Hạn chưa đúng định dạng'Pass[Func-46]Kiểm tra validate dữ liệu đầu vào: Quyền HạnMở màn hình Thêm nhân viên1. Nhập 'Quyền Hạn' > 1 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Quyền không đúng định dạng'Pass[Func-47]Kiểm tra validate dữ liệu đầu vào: Quyền HạnMở màn hình Thêm nhân viên1. Nhập Quyền Hạn' = 1 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Thêm nhân viên thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viên'Pass[Func-48]Kiểm tra dữ liệu đầu vào không hợp lệ: Ghi ChúMở màn hình Thêm nhân viên1. Không nhập 'Ghi Chú'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Ghi Chú không được để trống'Pass[Func-49]Kiểm tra validate dữ liệu đầu vào: Ghi ChúMở màn hình Thêm nhân viên1. Nhập 'Ghi Chú' > 100 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Ghi Chú chỉ chứa 100 kí tự'Fail[Func-50]Kiểm tra validate dữ liệu đầu vào: Ghi ChúMở màn hình Thêm nhân viên1. Nhập 'Ghi Chú' = 100 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Thêm nhân viên thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viên'Pass[Func-51]Kiểm tra dữ liệu đầu vào không hợp lệ: Mật KhẩuMở màn hình Thêm nhân viên1. Không nhập 'Mật Khẩu'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Mật Khẩu không được để trống'Pass[Func-52]Kiểm tra nhập khoảng trắng đầu và cuối  trong trường Mật KhẩuMở màn hình Thêm nhân viên1. Nhập 'Mật Khẩu' có chứa khoảng trắng ở đầu và cuối
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Tự động cắt khoảng trắng ở đầu và cuối
+- Thêm được nhân viên vào cơ sở dữ liệu Pass[Func-53]Kiểm tra nhập kí tự đặc biệt vào trường Mật KhẩuMở màn hình Thêm nhân viên1. Nhập vào trường 'Mật Khẩu' là các kí tự đặc biệt 
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Không chứa kí tự đặc biệt'Pass[Func-54］Kiểm tra validate dữ liệu đầu vào: Mật KhẩuMở màn hình Thêm nhân viên1. Nhập 'Mật Khẩu' < 6 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Mật Khẩu chỉ chứa từ 6-30 kí tự'Fail[Func-55]Kiểm tra validate dữ liệu đầu vào: Mật KhẩuMở màn hình Thêm nhân viên1. Nhập 'Mật Khẩu' > 30 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Mật Khẩu chỉ chứa từ 6-30 kí tự'Fail[Func-56]Kiểm tra validate dữ liệu đầu vào: Mật KhẩuMở màn hình Thêm nhân viên1. Nhập 'Mật Khẩu' = 6 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Thêm nhân viên thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viên'Pass[Func-57]Kiểm tra validate dữ liệu đầu vào: Mật KhẩuMở màn hình Thêm nhân viên1. Nhập 'Mật Khẩu' = 30 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Thêm nhân viên thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viên'Pass[Func-58]Kiểm tra nhập 'Nhập Lại Mật Khẩu' không trùng với 'Mật Khẩu'Mở màn hình Thêm nhân viên1. Nhập "Nhập Lại Mật Khẩu' khác 'Mật Khẩu'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo "Mật khẩu nhập lại không đúng'Pass[Func-59］Kiểm tra nhập 'Nhập Lại Mật Khẩu' trùng với 'Mật Khẩu'Mở màn hình Thêm nhân viên1. Nhập "Nhập Lại Mật Khẩu' trùng với 'Mật Khẩu'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Thêm nhân viên thành côngPass[Func-60]Kiểm tra hoạt động của FileUpLoad  ẢnhMở màn hình Thêm nhân viên1. Nhấn 'Chọn tệp' chọn 1 hình ảnh bất kì
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn 'Đăng Tin'- Hình ảnh được upload lên severPass[Func-61]Kiểm tra hoạt động của FileUpLoad ẢnhMở màn hình Thêm nhân viênNhấn 'Chọn tệp' chọn 1 hình ảnh bất kì- Hình ảnh được hiển thị lên ôPass[Func-62]Kiểm tra hoạt động của FileUpLoad  ẢnhMở màn hình Thêm nhân viênKích chọn nhiều ảnh Không cho phép chọn nhiều hình ảnh lên serverPass[Func-63]Kiểm tra hủy bỏ thao tác ThêmMở màn hình Thêm nhân viên1. Nhập đầy đủ các dữ liệu
+2. Nhấn [Hủy]- Nhân Viên không lưu vào cơ sở dữ liệuPass[Func-64]Kiểm tra lưu Nhân Viên vào databaseMở màn hình Thêm nhân viên1. Nhập đầy đủ các dữ liệu đều hợp lệ
+2. Nhấn [Lưu]- Nhân Viên được lưu vào cơ sở dữ liệuPass[Func-65]Kiểm tra chỉ nhập các trường bắt buộcMở màn hình Thêm nhân viên1. Nhập dữ liệu vào các trường bắt buộc
+2. Nhấn Lưu- Nhân Viên được lưu vào cơ sở dữ liệuPass     Sửa Nhân Viên[Func-66］Kiểm tra dữ liệu đầu vào: các trường đều hợp lệMở màn hình Sửa nhân viên1. Chọn ' Nhân Viên'  có trong cơ sở dữ liệu
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]Sửa nhân viên  thành công,
+ Chuyển đến màn hình 'Quản lý Nhân Viên'Pass[Func-67］Kiểm tra Sửa Nhân viên thành công: Mã nhân viênMở màn hình Sửa nhân viên1. Chọn 'Nhân Viên' có trong cơ sở dữ liệu, không Lưu được mã nhân viên
+2. Các dữ liệu còn lại nhập hợp lệ
+2. Nhấn [Lưu]- Sửa nhân viên vào cơ sở dữ liệuPass[Func-68]Kiểm tra dữ liệu đầu vào không hợp lệ: Mã Nhân ViênMở màn hình Sửa nhân viên1. Không nhập 'Mã Nhân Viên'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Mã Nhân Viên không được để trống'Pass[Func-69］Kiểm tra validate dữ liệu đầu vào: Mã Nhân ViênMở màn hình Sửa nhân viên1. Nhập 'Mã Nhân Viên' < 5 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không thêm được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Mã nhân viên chỉ chứa từ 5-30 kí tự'Fail[Func-70]Kiểm tra validate dữ liệu đầu vào: Mã Nhân ViênMở màn hình Sửa nhân viên1. Nhập 'Mã Nhân Viên' > 30 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Mã nhân viên chỉ chứa từ 5-30 kí tự'Fail[Func-71]Kiểm tra validate dữ liệu đầu vào: Mã Nhân ViênMở màn hình Sửa nhân viên1. Nhập 'Mã Nhân Viên' = 5 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Sửa nhân viên thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viên'Pass[Func-72]Kiểm tra validate dữ liệu đầu vào: Mã Nhân ViênMở màn hình Sửa nhân viên1. Nhập 'Mã Nhân Viên' = 30 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Sửa nhân viên thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viên'Pass[Func-73]Kiểm tra dữ liệu đầu vào không hợp lệ: Họ Và TênMở màn hình Sửa nhân viên1. Không nhập 'Họ Và Tên'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Họ Và Tên không được để trống'Pass[Func-74]Kiểm tra nhập kí tự đặc biệt vào trường Họ Và TênMở màn hình Sửa nhân viên1. Nhập vào trường 'Họ Và Tên' là các kí tự đặc biệt 
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Không chứa kí tự đặc biệt'Pass[Func-75]Kiểm tra validate dữ liệu đầu vào: Họ Và TênMở màn hình Sửa nhân viên1. Nhập 'Họ và tên' > 100 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không sửa được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Chỉ chứa từ 100 kí tự'Pass[Func-76]Kiểm tra validate dữ liệu đầu vào: Họ và tênMở màn hình Sửa nhân viên1. Nhập 'Họ và tên' = 100 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Sửa nhân viên thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viên'Pass[Func-77]Kiểm tra dữ liệu đầu vào không hợp lệ: Số Số Điện ThoạiMở màn hình Sửa nhân viên1. Không nhập 'Số Điện Thoại'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Số Điện Thoại không được để trống'Pass[Func-78]Kiểm tra nhập khoảng trắng trong trường Số Điện ThoạiMở màn hình Sửa nhân viên1. Nhập 'Số Điện Thoại' có chứa khoảng trắng
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Số Điện Thoại chưa đúng định dạng'Pass[Func-79]Kiểm tra nhập kí tự là chữ trong trường Số Điện ThoạiMở màn hình Sửa nhân viên1. Nhập 'Số Điện Thoại' là các kí tự chữ
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Số Điện Thoại chưa đúng định dạng'Pass[Func-80]Kiểm tra nhập kí tự bao gồm cả chữ và số trong trường Số Điện ThoạiMở màn hình Sửa nhân viên1. Nhập 'Số Điện Thoại' là các kí tự bao gồm cả chữ và số
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Số Số Điện Thoại chưa đúng định dạng'Pass[Func-81]Kiểm tra nhập kí tự đặc biệt vào trường Số Điện ThoạiMở màn hình Sửa nhân viên1. Nhập vào trường 'Số Điện Thoại' là các kí tự đặc biệt
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Số Điện Thoại chưa đúng định dạng'Pass[Func-82]Kiểm tra định dạng của trường Số Điện ThoạiMở màn hình Sửa nhân viên1. Nhập kí tự đầu tiên vào trường 'Số Điện Thoại' là kí tự 0
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Sửa được nhân viên vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viên'Pass[Func-83]Kiểm tra validate dữ liệu đầu vào: Số Điện ThoạiMở màn hình Sửa nhân viên1. Nhập 'Số Điện Thoại' < 10 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo ' Số Điện Thoại chưa đúng định dạng'Pass[Func-84]Kiểm tra validate dữ liệu đầu vào: Số Điện ThoạiMở màn hình Sửa nhân viên1. Nhập 'Số Điện Thoại' > 11 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3 Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Số Điện Thoại chưa đúng định dạng'Pass[Func-85]Kiểm tra validate dữ liệu đầu vào: Số Điện ThoạiMở màn hình Sửa nhân viên1. Nhập 'Số Điện Thoại' = 10 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Sửa nhân viên thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viên'Pass[Func-86]Kiểm tra validate dữ liệu đầu vào: Số Điện ThoạiMở màn hình Sửa nhân viên1. Nhập 'Số Điện Thoại' = 11 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Sửa nhân viên thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viên'Pass[Func-87]Kiểm tra dữ liệu đầu vào không hợp lệ: Địa Chỉ EmailMở màn hình Sửa nhân viên1. Không nhập 'Địa Chỉ Email'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Địa Chỉ Email không được để trống'Pass[Func-88]Kiểm tra nhập khoảng trắng trong trường Địa Chỉ EmailMở màn hình Sửa nhân viên1. Nhập 'Địa Chỉ Email' có chứa khoảng trắng
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Địa Chỉ Email chưa đúng định dạng'Pass[Func-89]Kiểm tra nhập kí tự đặc biệt vào trường Địa Chỉ Email trừ kí tự @Mở màn hình Sửa nhân viên1. Nhập vào trường 'Địa Chỉ Email' là các kí tự đặc biệt trừ kí tự @
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Địa Chỉ Email chưa đúng định dạng'Pass[Func-90]Kiểm tra định dạng của trường Địa Chỉ EmailMở màn hình Sửa nhân viên1. Nhập đúng định dạng LocalPart@Domail vào trường Địa Chỉ Email
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Sửa được nhân viên vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viên'Pass[Func-91]Kiểm tra validate dữ liệu đầu vào: Địa Chỉ EmailMở màn hình Sửa nhân viên1. Nhập 'Địa Chỉ Email' > 200 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Địa Chỉ Email chỉ chứa 200 kí tự'Pass[Func-92]Kiểm tra validate dữ liệu đầu vào: Địa Chỉ EmailMở màn hình Sửa nhân viên1. Nhập 'Địa Chỉ Email' = 200 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Sửa nhân viên thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viên'Pass[Func-93］Kiểm tra giá trị mặc định: Trạng TháiMở màn hình Sửa nhân viênKiểm tra giá trị mặc định của radio Trạng Thái-Chọn giá trị Hoạt ĐộngPass[Func-94］Kiểm tra khi chọn giá trị của radio Trạng TháiMở màn hình Sửa nhân viên1.Kích chọn 1 giá trị
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]Cho phép chọn và lưu đúng giá trị đã tíchPass[Func-95]Kiểm tra chọn nhiều giá trị: Trạng TháiMở màn hình Sửa nhân viên1. Kích chọn cả 2 giá trị
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không cho phép chọn nhiều giá trịPass[Func-96]Kiểm tra dữ liệu đầu vào không hợp lệ: Quyền HạnMở màn hình Sửa nhân viên1. Không nhập 'Quyền Hạn'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Quyền không được để trống'Pass[Func-97]Kiểm tra nhập kí tự là chữ trong trường Quyền HạnMở màn hình Sửa nhân viên1. Nhập 'Quyền Hạn' là các kí tự chữ
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Quyền chưa đúng định dạng'Pass[Func-98]Kiểm tra nhập kí tự bao gồm cả chữ và số trong trường Quyền HạnMở màn hình Sửa nhân viên1. Nhập 'Quyền Hạn' là các kí tự bao gồm cả chữ và số
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Quyền chưa đúng định dạng'Pass[Func-99]Kiểm tra validate dữ liệu đầu vào: Quyền HạnMở màn hình Sửa nhân viên1. Nhập 'Quyền Hạn' > 1 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Quyền chưa đúng định dạng'Pass[Func-100]Kiểm tra validate dữ liệu đầu vào: Quyền HạnMở màn hình Sửa nhân viên1. Nhập Quyền Hạn' = 1 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Sửa nhân viên thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viên'Pass[Func-101]Kiểm tra dữ liệu đầu vào không hợp lệ: Ghi ChúMở màn hình Sửa nhân viên1. Không nhập 'Ghi Chú'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Ghi Chú không được để trống'Pass[Func-102]Kiểm tra validate dữ liệu đầu vào: Ghi ChúMở màn hình Sửa nhân viên1. Nhập 'Ghi Chú' > 200 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Ghi Chú chỉ chứa 200 kí tự'Pass[Func-103]Kiểm tra validate dữ liệu đầu vào: Ghi ChúMở màn hình Sửa nhân viên1. Nhập 'Ghi Chú' = 200 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Sửa nhân viên thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viên'Pass[Func-104]Kiểm tra dữ liệu đầu vào không hợp lệ: Mật KhẩuMở màn hình Sửa nhân viên1. Không nhập 'Mật Khẩu'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Mật Khẩu không được để trống'Pass[Func-105]Kiểm tra nhập khoảng trắng đầu và cuối  trong trường Mật KhẩuMở màn hình Sửa nhân viên1. Nhập 'Mật Khẩu' có chứa khoảng trắng ở đầu và cuối
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Tự động cắt khoảng trắng ở đầu và cuối
+- Sửa được nhân viên vào cơ sở dữ liệu Pass[Func-106]Kiểm tra nhập kí tự đặc biệt vào trường Mật KhẩuMở màn hình Sửa nhân viên1. Nhập vào trường 'Mật Khẩu' là các kí tự đặc biệt 
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu 
+- Hiển thị thông báo 'Không chứa kí tự đặc biệt'Pass[Func-107］Kiểm tra validate dữ liệu đầu vào: Mật KhẩuMở màn hình Sửa nhân viên1. Nhập 'Mật Khẩu' < 6 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Mật Khẩu chỉ chứa từ 6-30 kí tự'Fail[Func-108]Kiểm tra validate dữ liệu đầu vào: Mật KhẩuMở màn hình Sửa nhân viên1. Nhập 'Mật Khẩu' > 30 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không Sửa được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo 'Mật Khẩu chỉ chứa từ 6-30 kí tự'Fail[Func-109]Kiểm tra validate dữ liệu đầu vào: Mật KhẩuMở màn hình Sửa nhân viên1. Nhập 'Mật Khẩu' = 6 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Sửa nhân viên thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viên'Pass[Func-110]Kiểm tra validate dữ liệu đầu vào: Mật KhẩuMở màn hình Sửa nhân viên1. Nhập 'Mật Khẩu' = 30 kí tự
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Sửa nhân viên thành công vào cơ sở dữ liệu
+- Chuyển đến màn hình 'Quản lý nhân viên'Pass[Func-111]Kiểm tra nhập 'Nhập Lại Mật Khẩu' không trùng với 'Mật Khẩu'Mở màn hình Sửa nhân viên1. Nhập "Nhập Lại Mật Khẩu' khác 'Mật Khẩu'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Không sửa được nhân viên vào cơ sở dữ liệu
+- Hiển thị thông báo "Mật khẩu nhập lại không đúng'Pass[Func-112］Kiểm tra nhập 'Nhập Lại Mật Khẩu'  trùng với 'Mật Khẩu'Mở màn hình Sửa nhân viên1. Nhập "Nhập Lại Mật Khẩu' trùng 'Mật Khẩu'
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Sửa nhân viên thành côngPass[Func-113］Kiểm tra hoạt động của FileUpLoad ẢnhMở màn hình Sửa nhân viên1. Nhấn 'Chọn tệp' chọn 1 hình ảnh bất kì
+2. Các dữ liệu còn lại nhập hợp lệ
+3. Nhấn [Lưu]- Hình ảnh được upload lên severPass[Func-114］Kiểm tra hoạt động của FileUpLoad ẢnhMở màn hình Sửa nhân viênNhấn 'Chọn tệp' chọn 1 hình ảnh bất kì- Hình ảnh được hiển thị lên ôPass[Func-115］Kiểm tra hoạt động của FileUpLoad  ẢnhMở màn hình Sửa nhân viênKích chọn nhiều ảnh Không cho phép chọn nhiều hình ảnh lên serverPass[Func-116］Kiểm tra hủy bỏ thao tác SửaMở màn hình Sửa nhân viên1. Nhập đầy đủ các dữ liệu
+2. Nhấn [Hủy]- Nhân Viên không lưu vào cơ sở dữ liệuPass[Func-117］Kiểm tra lưu Nhân Viên vào databaseMở màn hình Sửa nhân viên1. Nhập đầy đủ các dữ liệu đều hợp lệ
+2. Nhấn [Lưu]- Nhân Viên được lưu vào cơ sở dữ liệuPass[Func-118］Kiểm tra chỉ nhập các trường bắt buộcMở màn hình Sửa nhân viên1. Nhập dữ liệu vào các trường bắt buộc
+2. Nhấn Lưu- Nhân Viên được lưu vào cơ sở dữ liệuPass     Xóa Nhân Viên[Func-119］Kiểm tra button xóa hoạt động đúngMở màn hình quản lý Nhân Viên1. Chọn Nhân Viên muốn xóa
+2. Nhấn [Xóa]
+3. Nhấn [OK]- Hiển thị thông báo 'Có chắc chắn muốn xóa không?'
+- Nhân Viên không còn trong cơ sở dữ liệuPass[Func-120］Kiểm tra thông báo khi xóaMở màn hình quản lý Nhân Viên1. Chọn bất kí 1 Nhân Viên muốn xóa
+2. Nhấn [Xóa]- Hiển thị thông báo 'Có chắc chắn muốn xóa không?
+- Chọn 'OK' nếu đồng ý xóa
+- Chọn 'Hủy' nếu trì hoãn việc xóaPass[Func-121］Kiểm tra hủy bỏ thao tác XóaMở màn hình quản lý Nhân Viên1. Chọn Nhân Viên muốn xóa
+2. Nhấn [Xóa]
+3. Chọn nút [Hủy]- Nhân Viên vẫn còn trong cơ sở dữ liệuPass[Func-122］Kiểm tra xóa 1 bản ghiMở màn hình quản lý Nhân Viên1.Chọn 1 Nhân Viên muốn xóa 
+2. Nhấn [Xóa]
+3. Nhấn [OK]- Hiển thị thông báo 'Có chắc chắn muốn xóa không?
+- Nhân Viên không còn trong cơ sở dữ liệuPass[Func-123］Kiểm tra xóa nhiều bản ghi trong cùng 1 lầnMở màn hình quản lý Nhân Viên1. Chọn nhiều Nhân Viên muốn xóa- Không chọn được nhiều Nhân Viên trong cùng 1 lầnPass[Func-124］Kiểm tra xóa 1 bản ghi ở 2 trình duyệt khác nhauMở màn hình quản lý Nhân Viên1. Mở Google Chrome và Internet Explorer cùng lúc
+2. Chọn 1 Nhân Viên trong trình duyệt Google Chrome, nhấn [Xóa]-> nhấn [OK]
+3. Trong trình duyệt Internet Explorer, chọn Nhân Viên giống ở trình duyệt Google Chrome, nhấn [Xóa]  -> nhấn [OK]- Ở trình duyệt Internet Explorer hiển thị thông báo "Nhân Viên không tồn tại"FailTìm Kiếm Nhân Viên[Func-125］Kiểm tra dữ liệu đầu vào: từ khóa tìm kiếm hợp lệMở màn hình quản lý Nhân Viên1. Nhập từ khóa tìm kiếm hợp lệ
+2. Nhấn [Tìm Kiếm]- Trả về thông tin Nhân Viên của Nhân Viên có chứa từ khóa tìm kiếm Fail[Func-126］Kiểm tra dữ liệu đầu vào không hợp lệ: Từ khóa tìm kiếmMở màn hình quản lý Nhân Viên1. Không nhập từ khóa tìm kiếm
+2. Nhấn [Tìm Kiếm]- Hiển thị thông báo 'Không tìm thấy nhân viên nào'Fail[Func-127］Kiểm tra nhập khoảng trắng ở đầu và cuối: Từ khóa tìm kiếmMở màn hình quản lý Nhân Viên1. Nhập khoảng trắng ở đầu và cuối từ khóa tìm kiếm
+2. Từ khóa tìm kiếm nhập hợp lệ
+2. Nhấn [Tìm Kiếm]- Tự động cắt khoảng trắng ở đầu và cuối
+- Hiển thị kết quả theo đúng từ khóa tìm kiếmFail[Func-128］Kiểm tra nhập ký tự đặc biệt cho textbox Tìm KiếmMở màn hình quản lý Nhân Viên1.Nhập ký tự đặc biệt 
+2. Nhấn [Tìm Kiếm]- Hiển thị thông báo 'Không tìm thấy nhân viên nào'Fail[Func-129］Kiểm tra nhập chuỗi ký tự hoa, thường cho textbox Tìm KiếmMở màn hình quản lý Nhân Viên1. Nhập từ khóa Tìm Kiếm là chuỗi ký tự chữ hoa và chữ thường
+2. Từ khóa hợp lệ
+3. Nhấn [Tìm Kiếm]- Không phân biệt chữ hoa chữ thường
+- Hiển thị thông tin Nhân Viên của Nhân Viên phù hợp với từ khóa tìm kiếmFail[Func-130］Kiểm tra nhập chuỗi ký tự không dấuMở màn hình quản lý Nhân Viên1. Nhập từ khóa tìm kiếm là chuỗi ký tự không dấu
+2. Nhấn [Tìm Kiếm]- Hiển thị thông báo 'Không tìm thấy nhân viên nào'Fail[Func-131］Kiểm tra dữ liệu đầu vào hợp lệ vào textbox Tìm KiếmMở màn hình quản lý Nhân Viên1.Nhập từ khóa tìm kiếm là chuỗi ký tự có dấu
+2. Nhấn [Tìm Kiếm]- Hiển thị thông tin của Nhân Viên phù hợp với từ khóa tìm kiếmFail[Func-132］Kiểm tra nhập chuỗi ký tự chữ hoa cho textbox Tìm KiếmMở màn hình quản lý Nhân Viên1. Nhập từ khóa Tìm Kiếm là chuỗi ký tự chữ hoa
+2. Từ khóa hợp lệ
+3. Nhấn [Tìm Kiếm]- Không phân biệt chữ hoa
+- Hiển thị thông tin tin của Nhân Viên phù hợp với từ khóa tìm kiếmFail[Func-133］Kiểm tra nhập chuỗi ký tự chữ thườngMở màn hình quản lý Nhân Viên1. Nhập từ khóa tìm kiếm là chuỗi ký tự chữ thường
+2. Từ khóa hợp lệ
+3. Nhấn [Tìm Kiếm]- Hiển thị thông tin của Nhân Viên phù hợp với từ khóa tìm kiếmFail[Func-134］Kiểm tra nhập chuỗi ký tự sốMở màn hình quản lý Nhân Viên1. Nhập từ khóa tìm kiếm = '123'
+2. Nhấn [Tìm Kiếm]- Hiển thị thông báo 'Không tìm thấy nhân viên nào'Fail
+3.6   Kiểm thử tự động ứng dụng theo mô hình POM
+3.6.1  Các cài đặt liên quan
+Bước 1: Cài đặt Java trên máy tính của bạn:
+Tải về và cài đặt Bộ phát triển phần mềm Java (JDK) tại đường link: http://www.oracle.com/technetwork/java/javase/downloads/index.html
+    
+Tiếp đó ta thực hiện:
+    
+Phiên bản JDK này đi kèm với Java Runtime Environment (JRE) vì vậy bạn không cần phải tải xuống và cài đặt JRE riêng.
+Bước 2: Cài đặt Eclipse IDE
+Bạn có thể tải xuống "Eclipse IDE for Java Developers" tại đường link: http://www.eclipse.org/downloads/. Hãy chắc chắn chọn đúng giữa các phiên bản Windows 32 Bit và 64 Bit.
+    
+    Khi tải xuống tệp exe có tên "eclipse-inst-win64"
+    
+      Nhấp đúp vào tệp tin để Cài đặt Eclipse. Một cửa sổ mới sẽ mở ra. Nhấp vào Eclipse IDE dành cho Nhà phát triển Java.
+    
+    Sau đó, một cửa sổ mới sẽ mở ra nút bấm nào được đánh dấu 1 và thay đổi đường dẫn đến "C: \ eclipse". Đăng nhâp vào nút Install được đánh dấu 2
+    
+    Sau khi hoàn thành thành công thủ tục cài đặt, một cửa sổ sẽ xuất hiện. Trên cửa sổ đó nhấp vào Launch
+    
+    
+    Đây sẽ bắt đầu thực hiện Eclip neon IDE cho bạn
+    Bước 3 - Tải về trình điều khiển máy chủ Java Selenium
+    Bạn có thể tải về Selenium Java Client Driver tại đường link: http://www.seleniumhq.org/download/ . Bạn sẽ tìm thấy trình điều khiển máy khách cho các ngôn ngữ khác ở đó, nhưng chỉ chọn một cho Java.
+    
+    Tải xuống này dưới dạng tệp ZIP có tên "selenium-2.25.0.zip". Để đơn giản, giải nén nội dung của tệp ZIP này trên ổ C của bạn để bạn có thư mục "C: \ selenium-2.25.0 \". Thư mục này chứa tất cả các tệp JAR mà chúng tôi sẽ nhập sau này trên Eclipse.
+    Bước 4 - Cấu hình Eclipse IDE với WebDriver
+a. Khởi chạy tệp "eclipse.exe" bên trong thư mục "eclipse" mà chúng tôi đã giải né  trong bước 2. Nếu bạn thực hiện theo bước 2 một cách chính xác, tệp thi hành phải nằm trên C: \ eclipse \ eclipse.exe.
+b. Khi được yêu cầu chọn không gian làm việc, chỉ cần chấp nhận vị trí mặc định.
+
+c. Tạo một dự án mới thông qua File> New> Java Project. Tên dự án là "newproject".
+
+    
+d. Một cửa sổ pop-up mới sẽ mở ra nhập chi tiết như sau:
+• Tên dự án
+• Vị trí để tiết kiệm dự án
+• Chọn một JRE thực hiện
+• Chọn tùy chọn dự án bố cục
+• Nhấp vào nút Finish
+
+    
+e. Trong bước này:
+• Nhấp chuột phải vào dự án vừa được tạo và
+• Chọn New> Package, và đặt tên cho gói đó là "newpackage".
+
+    Một cửa sổ pop-up sẽ mở ra để đặt tên gói:
+• Nhập tên gói
+• Nhấp vào nút Finish
+
+    
+f. Tạo một lớp Java mới dưới newpackage bằng cách nhấp chuột phải vào nó và sau đó chọn New> Class, sau đó đặt tên là "MyClass". IDE Eclipse của bạn sẽ giống như hình ảnh dưới đây
+
+Khi bạn nhấp vào Lớp, một cửa sổ bật lên sẽ mở ra, nhập các thông tin như
+• Tên lớp
+• Nhấp vào nút Finish
+
+    
+      Đây là hình ảnh của nó sau khi tạo lớp
+    Bây giờ, Selenium WebDriver thành Java Build Path
+    Trong bước này,
+• Nhấp chuột phải vào "newproject" và chọn Properties.
+• Trên hộp thoại Properties, nhấp vào "Java Build Path".
+• Nhấp vào tab Thư viện, và sau đó
+• Nhấp chuột vào "Add External JARs .."
+
+      Khi bạn nhấp vào "Add External JARs." Nó sẽ mở ra một cửa sổ pop-up. Chọn tệp JAR bạn muốn thêm.
+
+      Sau khi chọn tập tin jar, nhấp chuột vào nút OK.
+
+g. Thêm tất cả các tệp JAR bên trong và bên ngoài thư mục "libs". Hộp thoại Thuộc tính của bạn bây giờ trông giống như hình ảnh dưới đây.
+h. 
+
+i. Cuối cùng, nhấn OK và chúng tôi đã thực hiện nhập thư viện Selenium vào dự án của chúng tôi.
+  3.6.2Các bước xây dựng test script trên POM bằng ngôn ngữ Java cho trang đăng nhập user của ứng dụng
+   Bước 1: Tạo ra một project có tên là POMFirts.
+ Bước 2: tạo Package có tên là pageObjects và một package có tên là Test
+o Gói pageObject : là gói chứa các class tương ứng với từng trang của website.
+o Gói Test: là gói chứa các class là các kịch bản test.
+
+
+Bước 3: chọn website “ http://raovat.somee.com ” để thực hiện demo của mình.
+Website này gồm 2 trang Login và Home. Như vậy, sẽ tạo ra 2 POM class là: LoginPage và HomePage.
+      Tại trang LoginPage sẽ thực hiện xác định các đối tượng của trang bằng cách lấy các phần tử locator và xây dựng các phương thức tương ứng.
+Demo trang Homepage
+package pageObject;
+import org.openqa.selenium.By;
+
+import org.openqa.selenium.WebDriver;
+
+publicclass RaovatHomePage {
+
+    WebDriver driver;
+   By Raovathomepage = By.name("col-xs-12 col-md-12");
+
+public RaovatHomePage(WebDriver driver){
+
+this.driver = driver;
+
+    }
+
+    //Get the User name from Home Page
+
+public String getHomePageDashboardUserName(){
+
+return    driver.findElement(Raovathomepage).getText();
+
+        }
+}
+Demo của trang LoginPage:
+package pageObject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class RaovatLogin {
+
+ WebDriver driver;
+ By userRaovatName = By.name("ctl00$ContentPlaceHolder1$txtTenDangNhap");
+ By passwordRaovat = By.name("ctl00$ContentPlaceHolder1$txtMatKhau");
+By login = By.name("ctl00$ContentPlaceHolder1$btnDangNhap");
+public RaovatLogin(WebDriver driver){
+ this.driver = driver;
+}
+
+ //Set user name in textbox
+public void setUserName(String strUserName){
+driver.findElement(userRaovatName).sendKeys(strUserName);
+}
+   //Set password in password textbox
+ public void setPassword(String strPassword){
+driver.findElement(passwordRaovat).sendKeys(strPassword);
+}
+
+//Click on login button
+   public void clickLogin(){
+driver.findElement(login).click();
+    }
+
+
+
+/**
+
+ * This POM method will be exposed in test case to login in the application
+
+* @param strUserName
+
+* @param strPasword
+
+* @return
+
+*/
+public void loginToRaovat(String strUserName,String strPasword){
+//Fill user name
+ this.setUserName(strUserName);
+//Fill password
+this.setPassword(strPasword);
+//Click Login button
+this.clickLogin();     
+    }
+
+}
+Bước 4: Chọn kịch bản test là:
+1. Vào website: http://raovat.somee.com
+2. Login vào trong ứng dụng
+3. Nhập Username 
+4. Nhập Password
+5. Click button Đăng Nhập
+6. Kiểm tra title của trang HomePage sau khi đăng nhập xem có hiển thị nội dung “WelcomeTo Raovat”
+Demo của trang TestLogin
+package Tests;
+
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+importorg.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import pageObject.RaovatHomePage;
+import pageObject.RaovatLogin;
+publicclass TestRaovatLogin {
+WebDriver driver;
+RaovatLogin objLogin;
+RaovatHomePage objHomePage;
+@BeforeTest
+publicvoid setup(){
+driver = new FirefoxDriver();
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+driver.get("http://raovat.somee.com/DangNhap.aspx");
+  }
+
+ /**
+* This test case will login in http://raovat.somee.com/DangNhap.aspx
+
+* Login to application
+
+* Verify the home page using Dashboard message
+
+*/
+@Test(priority=0)
+
+publicvoid test_Home_Page_Appear_Correct(){
+//Create Login Page object
+objLogin = new RaovatLogin(driver);
+//Create Home page object
+objHomePage = new RaovatHomePage(driver);
+
+
+//String loginPageTitle = objLogin.getLoginTitle();
+//Verify login page title
+//Assert.assertTrue(loginPageTitle.toLowerCase().contains("guru99 bank"));
+
+//login to application
+objLogin.loginToRaovat("KH001","123456");
+}
+@AfterTest
+publicvoid teardown(){
+//driver.quit();
+    }
+}
+Như vậy, Kịch bản này sẽ tạo một class để xác minh những yêu câu và đặt tên cho class này là TestLogin.
+
+CHƯƠNG 4 : KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+- Tìm hiểu và nắm rõ được lý thuyết về kiểm thử hướng module
+- Cài đặt và sử dụng được mô hình POM
+- Tạo chương trình tự động cho đề tài
+- Áp dụng kiểm thử vào nhiều giao diện trên các trang Web khác nhau
+4.2 Hạn chế của đề tài
+- Kết quả mới chỉ đạt được ở một khía cạnh đơn giản cần nâng cao và chi tiết hơn nữa.
+- Nên áp dụng nhiều thao tác tự động hơn nữa để phục vụ tốt hơn cho việc kiểm thử chức năng
+4.3 Hướng phát triển của đề tài
+   Trong thời gian nghiên cứu và thực hiện đề tài, tôi đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+- Áp dụng thử nghiệm kiểm tra chéo trên các trình duyệt khác nhau như firefox, internet-explorer…
+- Thử nghiệm trên các hệ điều hành khác như: Android, IOS…
+- Ưng dụng mô hình POM vào các trang web và ứng dụng khác nhau.
+	
+
+
+
+
+
+	TÀI LIỆU THAM KHẢO
+1. Học liệu bắt buộc
+[1] Khoa Công nghệ thông tin, Đề cương Kiểm thử phần mềm tự động, Trường Đại học SPKT Hưng Yên, 2016
+2. Học liệu tham khảo
+[2]. Yujun Liang & Alex Collins, Selenium WebDriver From Foundations To Framework, LearnPub, 2016
+[3]. Unmesh Gundecha, Selenium Testing Tools Cookbook Second Edition, PACK Publishing, 2015
+ [4] Zhimin Zhan, Selenium WebDriver Recipes in C#: Second Edition, Apress, 2012
+    Kiểm thử tự động ứng web sử dụng mô hình Page Object Model
+    
+    
+8
+    
+    

@@ -1,0 +1,561 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+      Hiện nay, sự phát triển mạnh mẽ không ngừng của công nghệ thông tin trên khắp thế giới đã làm thay đổi đời sống kinh tế của mọi người trên khắp các quốc gia. Công nghệ thông tin đã và đang đi sâu vào mọi lĩnh vực của đời sống xã hội và ngày càng khẳng định được tính phổ dụng, tiện lợi, nhanh chóng và rẻ tiền mà không một hình thức xử lý thông tin nào khác có được. Nhưng việc ứng dụng công nghệ thông tin chỉ được áp dụng ơt những doanh nghiệp lớn và vừa. Đối với những cửa hàng vừa và nhỏ kinh doanh về ẩm thực lại ít được áp dụng công nghệ thông tin. Việc kinh doanh một cách thủ công sẽ gây tốn kém chi phí, giảm năng suất dẫn đến giảm lợi nhuận.
+      Đặc biệt đối với nhà hàng vừa và nhỏ thì việc khách gọi đồ ăn, thức uống thì nhân viên sẽ phải nhận order của khách và ghi ra giấy sau đó chuyển order cho quầy chế biến, rồi sau chuyển order lên cho khách, khi khách dùng xong sẽ thanh toán. Trường hợp khách hàng muốn ăn tại nhà thì khách hàng phải đến cửa hàng, đặt mua đồ ăn tại quầy và đợi nhân viên chế biến, sau đó thanh toán và mang về. Điều đó làm tốn thời gian và công sức của khách hàng rất nhiều việc quản lý thực đơn, hóa đơn,….. Tất cả những việc đó đều phải làm một cách thủ công dẫn đến mất rất nhiều thời gian và chi phí cho nhân công và khách hàng cũng không hài lòng khi phải chờ lâu
+      Việc ứng dụng công nghệ thông tin và việc tin học hóa là một trong những yếu tố mang tính quyết định trong cuộc sống hàng ngày, nó đóng vai trò hết sức quan trọng, có thể tạo ra những bước đột phá. Việc xây dựng ứng dụng đặt mua đồ ăn để hỗ trợ cho những cửa hàng vừa và nhỏ là nhu cầu tất yếu. Việc mua bán sẽ trở nên dễ dàng và nhanh hơn, thuận tiện hơn. Giúp cửa hàng có thể giảm được chi phí kinh doanh, năng suất cao hơn vào lợi nhuận tăng cao.
+    Đặc biệt đối với nhà hàng vừa và nhỏ thì việc khách gọi đồ ăn, thức uống thì nhân viên sẽ phải nhận order của khách và ghi ra giấy sau đó chuyển order cho quầy chế biến, rồi sau chuyển order lên cho khách, khi khách dùng xong sẽ thanh toán. Việc quản lý thực đơn, hóa đơn,….. Tất cả những việc đó đều phải làm một cách thủ công dẫn đến mất rất nhiều thời gian và chi phí cho nhân công và khách hàng cũng không hài long khi phải chờ lâu.
+    Chính vì vậy, là sinh viên ngành CNTT, em luôn mong muốn mình sẽ làm được gì đó để ứng dụng những kiến thức đã học xây dựng được những sản phẩm có ứng dụng thực tế. Với mong muốn áp dụng những kiến thức mình đã học được tạo ra sản phẩm hoàn thiện có tính thục tế, đồng thời giúp nâng cao khả năng lập trình và đúc kết được nhiều kinh nghiệm cho những công việc trong tương lai sau khi ra trường, cùng với sự đồng ý của giáo viên hướng dẫn đề tài, em quuyết định lựa chọn đề tài “Xây dựng ứng dụng đặt mua đồ ăn cho cửa hàng Bookto trên mobile” để làm đề tài đồ án tốt nghiệp.
+1.2 Mục tiêu của đề tài
+      Ứng dụng đặt mua đồ ăn cần dạt được những mục tiêu sau:
+- Hệ thống phải cho phép khách hàng xem được thông tin, tìm kiến được thông tin của món ăn và mua được những món ăn đó.
+- Hệ thống phải cho phép khách hàng chọn những món ăn yêu thích, đánh giá và comment những món ăn mà khách hàng đã mua.
+- Hệ thống phải cho phép khách hàng nhận được thông báo về trạng thái của đơn hàng và phải gửi thông báo các đơn hàng được tạo mới cho nhân viên.
+- Hệ thống phải cho phép nhân viên quản lí được các chức năng thêm, sửa, xóa, xem các thông tin của các món ăn.
+Ngoài ra hệ thống phải cho phép người sử dụng xem được những video liên quan về món ăn
+1.3 Giới hạn và phạm vi của đề tài
+    Đề tài xây dựng dựng ứng dụng đặt mua đồ ăn cho của hàng Bookto trên mobile sử dụng các công nghệ mới trong lập trình như Java, Nodejs Công cụ lập trình Android Studio, Visual Studio Code. Sử dụng thư viện hỗ trợ Socket.IO
+
+
+1.4 Nội dung thực hiện
+      Ứng dụng đặt mua đồ ăn được thực hiện, nghiên cứu như sau:
+- Tìm hiểu về mô hình hoạt động, quá trình mua bán đồ ăn của cửa hàng Bookto
+- Nghiên cứu công nghệ lập trình mobile với Android bằng ngôn ngữ lập trình java. Các ngôn ngữ khác như NodeJS, và thư viện Socket.IO
+- Phân tích các nghiệp vụ, chức năng của hệ thống.
+- Tìm hiểu các công nghệ áp dụng vào hệ thống.
+- Xây dựng cơ sở dữ liệu.
+- Xây dựng giao diện chó ứng dụng.
+1.5 Phương pháp tiếp cận
+- Cách tiếp cận : Nghiên cứu NodeJS, Javascripts, Socket.IO
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu;
+o Phương pháp phân tích mẫu;
+o Phương pháp thực nghiệm.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Android
+2.1.1 Android là gì?
+      Android là một hệ điều hành dựa trên nền tảng Linux được thiết kế dành cho các thiết bị di động có màn hình cảm ứng như điện thoại thông minh và máy tính bảng. Ban đầu, Android được phát triển bởi Tổng công ty Android, với sự hỗ trợ tài chính từ Google và sau này được chính Google mua lại vào năm 2005. Android ra mắt vào năm 2007 cùng với tuyên bố thành lập Liên minh thiết bị cầm tay mở: một hiệp hội gồm các công ty phần cứng, phần mềm, và viễn thông với mục tiêu đẩy mạnh các tiêu chuẩn mở cho các thiết bị di động. Chiếc điện thoại đầu tiên chạy Android được bán vào năm 2008.
+      Android có mã nguồn mở và Google phát hành mã nguồn theo Giấy phép Apache. Chính mã nguồn mở cùng với một giấy phép không có nhiều ràng buộc đã cho phép các nhà phát triển thiết bị, mạng di động và các lập trình viên nhiệt huyết được điều chỉnh và phân phối Android một cách tự do. Ngoài ra, Android còn có một cộng đồng lập trình viên đông đảo chuyên viết các ứng dụng để mở rộng chức năng của thiết bị, bằng một loại ngôn ngữ lập trình Java có sửa đổi. Vào tháng 10 năm 2012, có khoảng 700.000 ứng dụng trên Android, và số lượt tải ứng dụng từ Google Play, cửa hàng ứng dụng chính của Android, ước tính khoảng 25 tỷ lượt.
+      Android cung cấp một phương pháp tiếp cận thống nhất để lập trình ứng dụng cho các thiết bị di động, nghĩa là các lập trình viên chỉ cần lập trình cho Android, và các ứng dụng của họ sẽ có thể chạy trên các thiết bị khác nhau được hỗ trợ bởi Android.
+      Những yếu tố này đã giúp Android trở thành nền tảng điện thoại thông minh phổ biến nhất thế giới, vượt qua Symbian OS vào quý 4 năm 2010, và được các công ty công nghệ lựa chọn khi họ cần một hệ điều hành không nặng nề, có khả năng tinh chỉnh, và giá rẻ chạy trên các thiết bị công nghệ cao thay vì tạo dựng từ đầu. Kết quả là mặc dù được thiết kế để chạy trên điện thoại và máy tính bảng, Android đã xuất hiện trên TV, máy chơi game và các thiết bị điện tử khác. Bản chất mở của Android cũng khích lệ một đội ngũ đông đảo lập trình viên và những người đam mê sử dụng mã nguồn mở để tạo ra những dự án do cộng đồng quản lý. Những dự án này bổ sung các tính năng cao cấp cho những người dùng thích tìm tòi hoặc đưa Android vào các thiết bị ban đầu chạy hệ điều hành khác.
+      Android chiếm 87,7% thị phần điện thoại thông minh trên toàn thế giới vào thời điểm quý 2 năm 2017, với tổng cộng 2 tỷ thiết bị đã được kích hoạt và 1,3 triệu lượt kích hoạt mỗi ngày. Sự thành công của hệ điều hành cũng khiến nó trở thành mục tiêu trong các vụ kiện liên quan đến bằng phát minh, góp mặt trong cái gọi là "cuộc chiến điện thoại thông minh" giữa các công ty công nghệ
+2.1.2 Tại sao cần sử dụng Android?
+- Web Open Soure: Mã nguồn mở
+- Larger Developer and Community Reach: Có những lập trình viên và cộng đồng phát triển lớn.
+- Increased marketing: phát triển thương mại.
+- Inter app integration: ứng dụng hội nhập quốc tế.
+- Reduce cost of development: giảm chi phí phát triển.
+- Higher Success Ratio: Tỷ lệ thành công cao hơn.
+- Rich development Environment: Môi trường phát triển đa dạng.
+
+
+2.1.3 Các tính năng của Android
+      Android là một hệ điều hành mạnh cạnh tranh với Apple 4GS và hỗ trợ các tính năng tuyệt vời. Một phần trong số đó được liệt kê dưới đây:
+    Bảng 21: Tính năng của Android
+STTTính năng và Mô tả1Giao diện người dùng đẹp: Màn hình cơ bản hệ điều hành Android cung cấp một giao diện người dùng đẹp và trực quan.2Kết nối: GSM/EDGE, IDEN, CDMA, EV-DO, UMTS, Bluetooth, Wi-Fi, LTE, NFC and WiMAX.3Lưu trữ: SQLite, một cơ sở dữ liệu quan hệ nhẹ, được sử dụng cho mục đích lưu trữ dữ liệu.4Hỗ trợ phương tiện truyền thông: H.263, H.264, MPEG-4 SP, AMR, AMR-WB, AAC, HE-AAC, AAC 5.1, MP3, MIDI, Ogg Vorbis, WAV, JPEG, PNG, GIF, and BMP.5Tin nhắn: SMS and MMS6Trình duyệt web: Dựa vào cơ chế WebKit mã nguồn mở, kết hợp với công cụ V8 JavaScript của Chrome hỗ trợ HTML5 và CSS3.7Cảm ứng đa điểm: Android có hỗ trợ cho cảm ứng đa điểm mà ban đầu đã được thực hiện có sẵn trong điện thoại như HTC Hero.8Multi-tasking: Người dùng có thể nhảy từ một nhiệm vụ nàyđến nhiệm vụ khác và cùng một thời gian, các ứng dụng khác nhau có thể chạy đồng thời.10Đa ngôn ngữ: Hỗ trợ thư mục đơn và văn bản hai chiều.11GCM: Google Cloud Messaging (GCM) là một dịch vụ cho phép các nhà phát triển gửi tin nhắn dữ liệu lên user của họ trên các thiết bị Android, mà không cần một giải pháp đồng bộ hóa độc quyền.
+2.1.4 Kiến trúc hệ điều hành Android
+      Kiến trúc hệ điều hành Android gồm 4 phần chính, mô hình dưới đây sẽ cho ta cái nhìn tổng quan về kiến trúc Android. Nhân của Android được phát triển dựa vào Kernel Linux 2.6. Mỗi tầng trong kiến trúc Android hoạt động dựa vào tầng bên dưới nó.
+
+Hình 21: Kiến trúc hệ điều hành Android
+      Có thể ban đầu bạn thấy sơ đồ hơi rối mắt nhưng không sao, chúng ta sẽ lần lượt tìm hiểu theo thứ tự từ dưới lên.
+      Nhân Linux (Linux kernel)
+      Nằm ở tầng dưới cùng là lớp Linux kernal – Linux 3.6 với khoảng 115 patches. Lớp này liên hệ với phần cứng và nó chứa tất cả driver phần cứng cần thiết như camera, bàn phím, màn hình…
+      Thư viện Android (Android libraries) và Android Runtime
+      Phía trên tầng Linux kernel là tầng libraries, chứa những thư viện hỗ trợ. Một số có thể kể đến như là bộ máy trình duyệt web mã nguồn mở WebKit, thư viện libc, cơ sở dữ liệu SQLite tiện lợi cho việc lưu trữ và chia sẻ dữ liệu, thư viện hỗ trợ thu phát âm thanh và video, thư viện SSL giúp bảo mật mạng…
+      Tầng này chứa tất cả các thư viện Java, được viết đặc biệt cho Android như các thư viện framework, các thư viện xây dựng giao diện, đồ họa và cơ sở dữ liệu. Dưới đây là một số thư viện quan trọng mà các lập trình viên nên biết:
+- Android.app − Cung cấp quyền truy cập tới mô hình ứng dụng và là nền tảng của mọi ứng dụng Android applications.
+- Android.content − Cho phép truy cập nội dung, phát hành và tin nhắn giữa các ứng dụng và các thành phần trong một ứng dung.
+- Android.database −  Được dùng để truy cập vào dữ liệu được đưa ra bởi bộ phận cung cấp nội dung, bao gồm các lớp quản lý cơ sở dữ liệu SQLite.
+- Android.opengl − Cho phép tương tác với thư viện đồ họa OpenGL ES 3D.
+- Android.os − Giúp ứng dụng truy cập những dịch vụ cơ bản của hệ điều hành bao gồm tin nhắn, dịch vụ hệ thống và liên lạc nội bộ (inter-process communication).
+- Android.text − Được dùng để vẽ và thao tác văn bản trên màn hình.
+- Android.view − Các khối xây dựng cơ bản của giao diện người dùng.
+- Android.widget − Một tập hợp rất nhiều thành phần giao diện được xây dựng sẵn như nút bấm (button), nhãn (label), danh sách hiển thị (list views), quản lý bố cục (layout managers)…
+- Android.webkit − Tập hợp các lớp (classes) cho phép trình duyệt web được nhúng vào ứng dụng.
+      Trong tầng này còn có một phần không kém phần quan trọng là Android runtime, bây giờ chúng ta sẽ tìm hiểu các thư viện C/C++ trong tầng này. Android Runtime chứa Dalvik Virtual Machine (DVM) – một biến thể của Java Virtual Machine, đặc biêt thiết kế và tối ưu hóa cho Android. DVM giúp mỗi ứng dụng Android chạy trong chính tiến trình (process) của nó với một đại diện (instance) của DVM. Ngoài ra, Android Runtime cũng chứa tập hợp các thư viện quan trong cho phép người lập trình viết ứng dụng sử dụng ngôn ngữ lập trình Java.
+
+
+- Application Framework
+      Application Framework cung cấp nhiều dịch vụ cấp cao dưới dạng các lớp viết bằng Java (Java classes) Lập trình viên được phép sử dụng các lớp này để tạo ra các ứng dụng.
+      Android framework chứa các dịch vụ quan trọng như:
+- Activity Manager − Quản lý tất cả các phần của vòng đời (lifecycle) ứng dụng và các hoạt động ngăn xếp (activity stack).
+- Content Providers − Cho phép ứng dụng phát hành và chia sẻ dữ liệu với ứng dụng khác.
+- Resource Manager − Cho phép truy cập tới những tài nguyên không phải là mã nguồn như chuỗi, cài đặt màu, bố cục giao diện.
+- Notifications Manager − Giúp ứng dụng hiển thị thông báo và nhắc nhở người dùng.
+- View System − Một tập hợp mở rộng giúp tạo giao diện người dùng.
+- Ứng dụng (applications)
+Ở tầng trên cùng là các ứng dụng Android đi kèm với hệ điều hành như Contacts Books, Browser, Games… Thiết nghĩ không cần nói nhiều thêm về tầng này.
+2.1.5 Ứng dụng Android
+      Ứng dụng Android thường được phát triển bằng ngôn ngữ Java sử dụng Android Software Development Kit.
+      Sau khi phát triển, ứng dụng Android có thể được đóng gói một cách dễ dàng và được bán ra thông qua một cửa hàng như Google Play, SlideME, Opera Mobile Store, Mobango, F-Droid và Amazon Appstore.
+      Có hàng trăm triệu thiết bị di động Android tại hơn 190 quốc gia trên thế giới. Đó là cơ sở cài đặt lớn nhất của bất kỳ nền tảng di động và phát triển rất nhanh. Mỗi ngày hơn 1 triệu thiết bị Android mới được kích hoạt trên toàn thế giới.
+      Hướng dẫn này được viết với mục đích để dạy cho bạn làm thế nào để phát triển và gói ứng dụng Android. Chúng tôi sẽ bắt đầu từ việc thiết lập môi trường để lập trình ứng dụng Android và sau đó đi sâu xem xét các khía cạnh khác nhau của các ứng dụng Android.
+2.2 Tổng quan về NodeJS
+2.2.1 NodeJS là gì?
+      NodeJS là một môi trường thực thi JavaScript bên ngoài trình duyệt, được xây dựng dựa trên Chrome’s V8 JavaScript engine. Chrome’s V8 JavaScript engine được viết bằng C++, giúp biên dịch code JavaScript thành mã máy một cách nhanh chóng, nên cho tốc độ xử lý và hiệu năng khá cao. NodeJS tạo ra được các ứng dụng có tốc độ xử lý nhanh, realtime thời gian thực.
+      NodeJS áp dụng cho các sản phẩm có lượng truy cập lớn, cần mở rộng nhanh, cần đổi mới công nghệ, hoặc tạo ra các dự án Startup nhanh nhất có thể. NodeJS chứa một thư viện built-in cho phép các ứng dụng hoạt động như một Webserver mà không cần phần mềm như Nginx, Apache HTTP Server hoặc IIS.
+      NodeJS cung cấp kiến trúc hướng sự kiện (event-driven) và non-blocking I/O API, tối ưu hóa thông lượng của ứng dụng và có khả năng mở rộng cao. Mọi hàm trong NodeJS là không đồng bộ (asynchronous). Do đó, các tác vụ đều được xử lý và thực thi ở chế độ nền (background processing).
+2.2.2 Đặc điểm nổi bật của NodeJS
+- NodeJS là không phải là một ngôn ngữ mà nó chỉ là môi trường để chạy javascript phía server. Vì thế NodeJS nó có tất cả các tính chất của javascript.
+- Javascript là Một ngôn ngữ của xử lí bất đồng bộ(Asynchronous). Vì thế, NodeJS cũng xử lý bất đồng bộ.
+- NodeJS chạy đơn luồng. Tức là NodeJS chạy trên 1 CPU core duy nhất.
+- Javascript là ngôn ngữ hướng sự kiện.
+2.3 Tổng quan về Socket.IO
+2.3.1 Khái niệm về Socket.IO
+      Socket.IO là 1 công cụ giúp thực hiện những ứng dụng realtime. Vì thế, không thể sử dụng Socket.IO để thay thế hoàn toàn cho một ngôn ngữ, mà phải sử dụng kết hợp với một ngôn ngữ khác. Ngôn ngữ đó có thể là php, asp.net, nodejs,....
+      Để xây dựng một ứng dụng realtime cần sử dụng Socket.IO. Nó sẽ giúp các bên ở những địa điểm khác nhau kết nối với nhau, truyền dữ liệu ngay lập tức thông qua server trung gian. Socket.IO có thể được sử dụng trong nhiều ứng dụng như chat, game online, cập nhật kết quả của một trận đấu đang xảy ra.
+      Socket.IO là một thư viện Javascript cho các ứng dụng web realtime (web thời gian thực). Nó cho phép giao tiếp hai chiều theo thời gian thực giữa các máy khách và máy chủ web.Nó có hai phần client-side library hoạt động trên trình duyệt, và server-side library cho node.js.
+2.3.2 Đặc điểm nổi bật của Socket.IO
+      Socket.IO hỗ trợ sử dụng rất nhiều các công nghệ realtime như:
+- WebSocket
+- Flash Socket
+- AJAX long-polling
+- AJAX multipart streaming
+- IFrame
+- JSONP polling
+      Nó sẽ tự động chuyển sang Websocket nếu có thể, hầu hết các trình duyệt hiện nay đã hỗ trợ websocket nên việc sử dụng Socket.IO trên trình duyệt cũng là đang sử dụng websocket Việc sử dụng Socke.IO rất đơn giản và giống nhau ở cả client lẫn server nó bao gồm 3 phần chính:
+- Khởi tạo kết nối
+- Lắng nghe event
+- Gửi event
+Riêng ở server thì sẽ không có phần khởi tạo kết nối vì chỉ có client mới cần khởi tạo kết nối đến server Việc dùng Socket.IO đồng bộ ở cả client lẫn server, cú pháp cũng khá đơn giản. Chúng ta sẽ làm một ví dụ nhỏ để làm quen với một số cách gửi và nhận dữ liệu với Socket.IO.
+2.3.3 Cách hoạt động của Socket.IO
+      Socket.IO là một thư viện WebSocket nổi tiếng. Nó rất mạnh mẽ, đơn giản, dễ ứng dụng và được sự hỗ trợ của nhiều nhà phát triển (từ Microsoft Office, Yammer, Zendesk, Trello… tới những đội hackathon, những start up trẻ). Được xây dựng nhằm mục đích tạo ra realtime NodeJS application. Socket.IO cung cấp cho lập trình viên các đặc trưng như event, room và tự động phục hồi lại kết nối.
+      Khi chúng ta include Socket.IO module vào trong ứng dụng của mình nó sẽ cung cấp cho chúng ta hai object đó là: socket server quản lý functionality phía server và socket client điều khiển funtionality phía client.
+      Khi client muốn kết nối tới Socket.IO server, nó sẽ gửi cho server một “handshake HTTP request”. Server sẽ phân tích request đó với những thông tin cần thiết trong suốt quá trình kết nối. Nó sẽ tìm cấu hình của middleware mà đã được đăng ký với server và thực thi chúng trước khi đưa ra sự kiện kết nối. Khi kết nối thành công thì connection event listener được thực thi, tạo ra một instance mới của socket có thể coi như định danh của client mà mỗi một client kết nối tới sẽ có 1 định danh.
+
+Hình 22: Hoạt động của Socket.IO
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Phát biểu bài toán
+3.1.1 Tổng quan về hệ thống mới
+      Đối với khách hàng, hệ thống đặt mua đồ ăn cho cửa hàng Bookto cho phép người mua có thể xem được thông tin của các món ăn và có thể mua các món ăn đó bằng hình thức online. ngoài ra hệ thống còn cho phép người mua xem thông tin, trạng thái đơn hàng mà mình đã mua, ngoài mua đồ ăn ra thì khách hàng còn có thể xem tin tức và video liên quan đến đồ ăn.
+      Đối với nhân viên, hệ thống cho phép quản lí các chủ đề món ăn và các món ăn trong chủ đề đó. Ngoài ra hệ thống còn cho phép nhân viên tiếp nhận đơn hàng, cập nhật trạng thái đơn hàng để khách hàng có thể theo dõi đơn hàng của mình. Chưa hết, nhân viên còn có thể xem video liên quan đến món ăn. nhân viên có thể thêm chanel video youtube để lấy những video video từ chanel đó hiển thị. Tất cả dữ liệu của hệ thống đều được lưu trữ trên MySQL.
+Hệ thống đặt mua đồ ăn cho cửa hàng Bookto trên mobile cung cấp các chức năng:
+a) Về phía khách hàng
+- Hiển thị món ăn
+Hệ thống cung cấp chức năng hiển thị thông tin các món ăn bao gồm: hình ảnh món ăn, tên món ăn, thông tin về món ăn, giá của món ăn, mức giảm giá của món ăn.
+- Tìm kiếm món ăn
+Hệ thống phải cung cấp chức năng tìm kiếm món ăn theo tên khi khách hàng có nhu cầu tìm kiếm một món ăn nào đó.
+- Mua món ăn
+Hệ thống phải cung cấp chức năng mua món ăn khi khách hàng muốn mua một món ăn nào đó kèm theo số lượng món ăn mà khách muốn mua.khi món ăn được chọn mua thì hệ thống phải cho phép thêm món ăn đó vào trong giỏ hàng của khách hàng.
+- Quản lí món ăn yêu thích
+• Thêm món ăn yêu thích
+   Hệ thống cung cấp chức năng thêm món ăn vào danh sách món ăn yêu thích khi khách hàng nhấn yêu thích món ăn nào đó.
+• Xóa món ăn yêu thích
+   Hệ thống cung cấp chức năng xóa món ăn khỏi danh sách yêu thích khi khách hàng không thích món ăn đó nữa.
+- Quản lí giỏ hàng
+• Hiển thị thông tin giỏ hàng
+   Hệ thống phải cung cấp chức năng hiển thị các món ăn mà khách hàng đã chọn mua trong giỏ hàng.
+• Cập nhật thông tin giỏ hàng
+   Hệ thống phải cung cấp chức năng cập nhật số lượng của mỗi món ăn trong giỏ hàng khi người mua muốn giảm hoặc thêm suất ăn.
+• Xóa thông tin giỏ hàng
+   Hệ thống phải cung cấp chức năng xóa các món ăn mà khách hàng đã chọn mua ở trong giỏ hàng khi khách hàng không có nhu cầu mua món đó nữa.
+- Đặt hàng
+   Hệ thống cung cấp chức năng đặt hàng khi khách hàng muốn đặt hàng các món ăn từ giỏ hàng. Trong quá trình đặt hàng, hệ thống phải cung cấp chức năng nhập địa chỉ giao hàng để khách hàng có thể cho nhân viên biết được địa chỉ mà khách hàng muốn nhận đơn hàng đó.
+- Quản lí đơn hàng
+• Hiển thị đơn hàng
+   Hệ thống cung cấp chức năng hiển thị đơn hàng khi khách hàng muốn xem và tra cứu đơn hàng của mình. các đơn hàng sẽ được hiển thị theo trạng thái. điều này sẽ giúp cho khách hàng dễ dàng tra cứu thông tin đơn hàng của mình.
+• Hủy đơn hàng
+   Hệ thống cung cấp chức năng hủy đơn hàng khi khách hàng không muốn mua nhưng món ăn trong đơn hàng đó hoặc hủy đơn hàng vì muốn chọn món ăn khác, vv...
+- Thông báo
+   Hệ thống cung cấp chức năng thông báo cho khách hàng khi có một cập nhật thông tin liên quan đến menu, món ăn hay về trạng thái của đơn hàng.
+- Hiển thị chanel video (youtube)
+   Hệ thống phải cung cấp chức năng hiển thị danh sách các channel youtube để khách hàng có thể lựa chọn.khi khách hàng chọn một channel nào đó thì hệ thống phải hiển thị được tối đa 50 video của channel đó. từ đó khách hàng chó thể chọn video và xem video đó.
+- Quản lí tài khoản
+• Hiển thị thông tin tài khoản
+   Hệ thống phải cung cấp chức năng hiển thị tài khoản ch khách hàng tra cứu. trong đó các thông tin riêng tư và bảo mật gồm có: tên đăng nhập, mật khẩu, câu hỏi bảo mật, câu trả lời.
+• Cập nhật thông tin tài khoản
+   Hệ thống phải cung cấp chức năng cập nhật thông tin tài khoản khi khách hàng có nhu cầu cập nhật thông tin.
+• Xóa thông tin tài khoản
+   Hệ thống phải cung cấp chức năng xóa thông tin tài khoản khi khách hàng không có nhu cầu sử dụng ứng dụng hoặc muốn đổi tải khoản.khi xóa tài khoản hệ thống sẽ xóa toàn bộ dữ liệu của khách hàng. Điều kiện để có thể xóa tài khoản là khách hàng hpari hòn tất toàn bộ các đơn hàng mới có thể xóa tài khoản.
+
+
+- Đăng kí tài khoản
+   Hệ thống cung cấp chức năng đăng kí tài khoản khi có khách hàng có nhu cầu sử dụng phần mềm.
+- Quản lí địa chỉ
+• Hiển thị thông địa chỉ
+   Hệ thống phải cung cấp chức năng hiển thị thông tin địa chỉ cho khách hàng có nhu cầu tra cứu thông tin.
+• Cập nhật thông địa chỉ
+   Hệ thống phải cung cấp chức năng cập nhật thông tin địa chỉ cho khách hàng có nhu cầu muốn sửa thông tin.
+• Xóa thông địa chỉ
+   Hệ thống phải cung cấp chức năng xóa thông tin địa chỉ cho khách hàng muốn xóa địa chỉ đó vì không có nhu cầu dùng tới.
+• Thêm thông địa chỉ
+   Hệ thống phải cung cấp chức năng thêm thông tin địa chỉ cho khách hàng có nhu cầu muốn thêm thông tin.
+b) Về phí nhân viên
+- Quản lí chủ đề món ăn
+• Thêm chủ đề món ăn
+   Hệ thống cung cấp chức năng thêm chủ đề món ăn khi nhà hàng có thêm chủ đề món ăn mới. Các thông tin cần thêm bao gồm: Tên chủ đề, ảnh.
+• Cập nhật chủ đề món ăn
+   Hệ thống cung cấp chức năng cập nhật chủ đề món ăn khi hàng hàng muốn sửa thông tin chủ đề món ăn đó. Các thông tin cần cập nhật gồm: tên chủ đề, ảnh.
+• Xóa chủ đề món ăn
+   Hệ thống cung cấp chức năng xóa chủ đề món ăn khi chủ đề đó không được nhà hàng kinh doanh.khi xóa chủ đề món ăn hệ thống phải xóa được hết tất cả các món ăn thuộc chủ đề món ăn đó
+
+- Quản lí món ăn
+• Hiển thị món ăn
+   Hệ thống cung cấp chức năng hiển thị thông tin các món ăn bao gồm: hình ảnh món ăn, tên món ăn, thông tin về món ăn, giá của món ăn, mức giảm giá của món ăn.
+• Thêm món ăn
+   Hệ thống cung cấp chức năng thêm thông tin các món ăn bao gồm: hình ảnh món ăn, tên món ăn, thông tin về món ăn, giá của món ăn, mức giảm giá của món ăn.
+• Cập nhật món ăn
+   Hệ thống cung cấp chức năng cập nhật thông tin các món ăn bao gồm: hình ảnh món ăn, tên món ăn, thông tin về món ăn, giá của món ăn, mức giảm giá của món ăn.
+• Xóa món ăn
+   Hệ thống cung cấp chức năng xóa món ăn khi món ăn đó không còn kinh doanh.
+• Tìm kiếm món ăn
+   Hệ thống phải cung cấp chức năng tìm kiếm món ăn theo tên khi nhân viên/quản lí có nhu cầu tìm kiếm một món ăn nào đó.
+- Quản lí đơn hàng
+• Hiển thị đơn hàng
+   Hệ thống phải cung cấp chức năng hiển thị đơn hàng khi nhân viên/quản lí có nhu cầu xem và tra cứu. Các đơn hàng sẽ được phân chia theo trạng thái. giúp nhân viên có thể tra cứu một cách dễ dàng hơn.
+• Cập nhật trạng thái đơn hàng
+   Hệ thống phải cung cấp chức năng cập nhật trạng thái đơn hàng khi nhân viên/quản lí tiến hành xử lí đơn hàng.khi nhân viên cập nhật đơn hàng của khách hàng, hệ thống sẽ gửi thông báo đơn hàng đó về cho khách hàng. Để khách hàng biết và tra cứu đơn hàng của mình
+- Quản lí chanel video
+• Hiển thị chanel video
+   Hệ thống phải cung cấp chức năng hiển thị thông tin các channel video từ youtube mà nhân viên yêu cầu
+• Cập nhật chanel video
+   Hệ thống phải cung cấp chức năng cập nhật thông tin các chanel video từ youtube mà nhân viên yêu cầu
+• Xóa chanel video
+   Hệ thống phải cung cấp chức năng xóa thông tin các chanel video từ youtube mà nhân viên yêu cầu
+• Thêm chanel video
+   Hệ thống phải cung cấp chức năng thêm các chanel youtube khi nhân viên yêu cầu thêm một kênh chanel video lên hệ thống phục vụ nhu cầu của khách hàng.
+- Quản lí tài khoản
+• Hiển thị thông tin tài khoản
+   Hệ thống phải cung cấp chức năng hiển thị thông tin tài khoản của nhân viên (Lưu ý: chỉ hiển thị thông tin của nhân viên có tài khoản đã đăng nhập).
+• Cập nhật thông tin tài khoản
+   Hệ thống phải cung cấp chức năng cập nhật thông tin tài khoản khi nhân viên có những thông tin cần chỉnh sửa (Lưu ý: chỉ cập nhật được một tài khoản của nhân viên đã đăng nhập).
+• Xóa thông tin tài khoản
+   Hệ thống phải cung cấp chức năng xóa thông tin tài khoản của nhân viên khi nhân viên đó không còn làm việc hoặc có một lí do nào đó (Lưu ý: Chỉ có thể xóa tài khoản của nhân viên đã đăng nhập).
+
+
+• Đăng kí tài khoản 
+   Hệ thống phải cung cấp chức năng đăng kí tài khoản nhân viên cho người mới vào làm. Nhân viên sẽ đăng kí các thông tin của mình và sẽ phải nhập mã xác nhận từ của hàng. nhập đúng mã xác nhận mới có thể đăng kí được tài khoản.Nếu không nhập đúng hệ thống sẽ thông báo tới người dùng mã xác nhận sai, cần kiểm tra lại mã xác nhận.
+- Thông báo
+   Hệ thống cung cấp chức năng thông báo cho nhân viên/quản lí khi có một đơn hàng mới được tạo hoặc một đơn hàng nào đó bị hủy bởi khách hàng.
+3.1.2 Môi trường phát triển
+- Môi trường phần cứng
+• CPU: Pentium IV 3.0 GHz hoặc cao hơn
+• RAM: tối thiểu 4GB
+• HDD: dung lượng tối thiểu trống 16G
+- Môi trường phần mềm
+• Hệ điều hành: Windows hoặc MacOS
+• Công cụ phát triển: android studio 3.1.4 trở lên. 
+    
+    
+    
+    
+    
+
+3.2 Biểu đồ Use-case
+3.2.1 Biểu đồ Use-case tổng quát
+
+Hình 31: Biểu đồ Use-case tổng quát
+3.2.2 Đặc tả Use-case “Quản lí thể loại món ăn”
+
+Hình 32: Đặc tả use-case “quản lí thể loại món ăn”
+Bảng 31: bảng Actor quản lí thể loại món ăn
+STTTên ActorÝ nghĩa/ Ghi chú1adminNhân viên sử dụng2khachhangKhách hàng sử dụng
+Bảng 32: Bảng chức năng quản lí thể loại món ăn
+STTChức năng, nghiêp vụÝ nghĩa/ Ghi chú1hienthiHiển thị thể loại món ăn2themThêm thể loại món ăn3capnhatCập nhật thông tin thể loại món ăn4xoaXóa thể loại món ăn3.2.3 Đặc tả Use-case “Quản lí món ăn”
+
+Hình 33: Đặc tả Use-case “Quản lí món ăn”
+
+
+Bảng 33: Bảng Actor quản lí món ăn
+STTTên ActorÝ nghĩa/ Ghi chú1adminNhân viên sử dụng2khachhangKhách hàng sử dụngBảng 34: Bảng chức năng quản lí món ăn
+STTChức năng, nghiêp vụÝ nghĩa/ Ghi chú1hienthiHiển thị món ăn2themThêm món ăn3capnhatCập nhật thông tin món ăn4xoaXóa món ăn3.2.4 Đặc tả Use-case “Quản lí channel video”
+
+Hình 34: Đặc tả Use-case “Quản lí channel video”
+
+
+Bảng 35: Bảng Actor quản lí channel video
+STTTên ActorÝ nghĩa/ Ghi chú1adminNhân viên sử dụng2khachhangKhách hàng sử dụngBảng 36: Bảng chức năng quản lí channel video
+STTChức năng, nghiêp vụÝ nghĩa/ Ghi chú1hienthiHiển thị channel video2themThêm channel video3capnhatCập nhật thông tin channel video4xoaXóa channel video3.2.5 Đặc tả Use-case “Quản lí món ăn yêu thích”
+
+Hình 35: Đặc tả Use-case “Quản lí món ăn yêu thích”
+
+
+Bảng 37: Bảng Actor quản lí món ăn yêu thích
+STTTên ActorÝ nghĩa/ Ghi chú1khachhangKhách hàng sử dụngBảng 38: Bảng chức năng quản lí món ăn yêu thích
+STTChức năng, nghiêp vụÝ nghĩa/ Ghi chú1hienthiHiển thị món ăn yêu thích2themThêm món ăn yêu thích3xoaXóa thể channel video3.2.6 Đặc tả Use-case “Quản lí giỏ hàng”
+
+Hình 36: Đặc tả Use-case “quản lí giỏ hàng”
+
+
+Bảng 39: Bảng Actor quản lí giỏ hàng
+STTTên ActorÝ nghĩa/ Ghi chú1adminNhân viên sử dụng2khachhangKhách hàng sử dụngBảng 310: Bảng chức năng quản lí giỏ hàng
+STTChức năng, nghiêp vụÝ nghĩa/ Ghi chú1hienthiHiển thị giỏ hàng2themThêm thể giỏ hàng3capnhatCập nhật thông tin giỏ hàng4xoaXóa giỏ hàng3.2.7 Đặc tả Use-case “Quản lí đơn hàng”
+
+Hình 37: Đặc tả Use-case “Quản lí đơn hàng”
+Bảng 311: Bảng Actor quản lí đơn hàng
+STTTên ActorÝ nghĩa/ Ghi chú1adminNhân viên sử dụng2khachhangKhách hàng sử dụngBảng 312: Bảng chức năng quản lí đơn hàng
+STTChức năng, nghiêp vụÝ nghĩa/ Ghi chú1hienthiHiển thị đơn hàng2themThêm thể đơn hàng3capnhatCập nhật thông tin đơn hàng4xoaXóa đơn hàng3.2.8 Đặc tả Use-case “Quản lí địa chỉ”
+
+Hình 38: Đặc tả Use-case “Quản lí địa chỉ”
+
+
+Bảng 313: Bảng Actor quản lí địa chỉ
+STTTên ActorÝ nghĩa/ Ghi chú1khachhangKhách hàng sử dụng    Bảng 314: Bảng Chức năng quản lí địa chỉ
+STTChức năng, nghiêp vụÝ nghĩa/ Ghi chú1hienthiHiển thị địa chỉ2themThêm thể địa chỉ3capnhatCập nhật thông tin địa chỉ4xoaXóa địa chỉ3.2.9 Đặc tả Use-case “Quản lí tài khoản”
+
+Hình 39: Đặc tả Use-case “quản lí tài khoản”
+
+
+Bảng 315: Bảng Actor quản lí tài khoản
+STTTên ActorÝ nghĩa/ Ghi chú1adminNhân viên sử dụng2khachhangKhách hàng sử dụngBảng 316: Bảng chức năng quản lí tài khoản
+STTChức năng, nghiêp vụÝ nghĩa/ Ghi chú1hienthiHiển thị thông tin chi tiết tài khoản2dangkiĐăng kkistafi khoản mới3capnhatCập nhật thông tin tài khoản4xoaXóa tài khoản3.2.10 Đặc tả Use-case “Quản lí thông báo”
+
+Hình 310: Đặc tả Use-case “quản lí thông báo”
+Bảng 317: Bản Actor quản lí thông báo
+STTTên ActorÝ nghĩa/ Ghi chú1adminNhân viên sử dụng2khachhangKhách hàng sử dụngBảng 318: Bảng chức năng quản lí thông báo
+STTChức năng, nghiêp vụÝ nghĩa/ Ghi chú1hienthiHiển thị thông báo2xoaXóa thông báo3.3 Biểu đồ lớp
+
+    Hình 311: Biểu đồ lớp
+3.3.1 Danh sách các lớp đối tượng và quan hệ
+Bảng 319: Danh sách các lớp đối tượng và quan hệ
+STTTên lớp/quan hệLoạiÝ nghĩa/Ghi chú1userPublicLớp tài khoản2categoryPublicLớp thể loại món ăn3foodPublicLớp loại món ăn4CartPublicLớp giỏ hàng5favouritePublicLớp món ăn yêu thích6videoPublicLớp channel video7orderPublicLớp đơn hàng8notificationPublicLớp thông báo9adresspublicLớp địa chỉ3.3.2 Mô tả chi tiết từng lớp đối tượng
+- Lớp tài khoản
+Bảng 320: Lớp tài khoản
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1useridintDuy nhấtMã tài khoản2nameStringTên3genderStringGiới tính4birthdayStringNgày sinh5phoneStringĐiện thoại6emailStringEmail7passwordStringMật khẩu8securityquestionStringCâu hỏi bảo mật9answerStringCâu trả lời10typeintLoại tài khoản- Lớp thể loại món ăn
+Bảng 321: Lớp thể loại món ăn
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1categoryidintDuy nhấtMã thể loại món ăn2nameStringTên thể loại món ăn3descriptionStringThông tin về thể loại4imageStringẢnh thể loại- Lớp món ăn
+Bảng 322: Lớp món ăn
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1foodidintDuy nhấtMã món ăn2categoryidintDuy nhấtMã thể loại món ăn3nameStringTên món ăn4descriptionStringThông tin5priceStringGiá món ăn6discountStringGiảm giá món ăn7imageStringẢnh
+
+- Lớp giỏ hàng
+Bảng 323: Lớp giỏ hàng
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1giohangidintDuy nhấtMã giỏ hàng2foodidObjectMón ăn3amountintSố lượng của món ăn- Lớp món ăn yêu thích
+Bảng 324: Lớp món ăn yêu thích
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1yeuthichidintDuy nhấtMã2foodobject    món măn- Lớp channel video
+Bảng 325: Lớp channel video
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1videoidintDuy nhấtMã2nameStringTên3linkStringMã kênh4imageStringẢnh
+
+
+- Lớp đơn hàng
+Bảng 326: Lớp đơn hàng
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1orderidIntDuy nhấtMã2nameStringTên người nhận3phoneStringSố điện thoại người nhận4dateStringThời gian5diachiStringĐịa chỉ người nhận6diachicutheStringĐịa chỉ chi tiết người nhận7statusintTrạng thái8chuthichStringChú thích9moneypayStringTiền thanh toán10moneycommodityStringTổng tiền của tất cả món ăn11moneyshipStringPhí vận chuyển12descriptionStringDanh sách món ăn được lưu dưới dạng chuỗi13noteString
+
+
+- Lớp thông báo
+    Bảng 327: Lớp thông báo
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1notificationidintDuy nhấtMã thông báo2titleStringTên3descriptionStringThông tin4categoryStringThể loại thông báo5categoryidStringintMã đối tượng thông báo6statusintTrạng thái- Lớp địa chỉ
+Bảng 328: Lớp địa chỉ
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1 adressidintKhóa chínhMã địa chỉnameStringTênphoneStringĐiện thoạiprovinceStringTỉnh/Thành phốdistrictStringQuận/HuyệnwardStringXã/PhườngdescriptionStringĐịa chỉ chi tiếtdefaultsintLoại địa chỉ(mặc định)
+3.4 Biểu đồ tuần tự
+3.4.1 Biểu đồ tuần tự thể loại món ăn
+
+Hình 312: Biểu đồ tuần tự thể loại món ăn
+3.4.2 Biểu đồ tuần tự món ăn
+
+Hình 313: Biểu đồ tuần tự món ăn
+3.4.3 Biểu đồ tuần tự giỏ hàng
+
+Hình 314: Biểu đồ tuần tự giỏ hàng
+3.4.4 Biểu đồ tuần tự Món ăn yêu thích
+
+Hình 315: Biểu đồ tuần tự món ăn yêu thích
+3.4.5 Biểu đồ tuần tự đơn hàng
+
+Hình 316: Biểu đồ tuần tự đơn hàng
+3.4.6 Biểu đồ tuần tự video
+
+Hình 317: Biểu đồ tuần tự video
+3.4.7 Biểu đồ tuần tự thông báo
+
+Hình 318: Biểu đồ tuần tự thông báo
+3.4.8 Biểu đồ tuần tự địa chỉ
+
+Hình 319: Biểu đồ tuần tự địa chỉ
+3.4.9 Biểu đồ tuần tự tài khoản
+
+Hình 320: Biểu đồ tuần tự tài khoản
+3.5 Thiết kế cơ sở dữ liệu
+Lược đồ quan hệ:
+
+Hình 321: Lược đồ quan hệ cơ sở dữ liệu
+3.5.1 Bảng Category
+Bảng 329: cơ sở dữ liệu category
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1categoryidINTKhóa chínhDuy nhất, không được để trống.2nameTEXTKhông được để trống3descriptionTEXTKhông được để trống4imageTEXTKhông được để trống3.5.2 Bảng food
+Bảng 330: cơ sở dữ liệu food
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1foodidINTkhóa chínhDuy nhất, không được để trống2categoryidINTKhóa ngoạiKhông được để trống3nameTEXTKhông được để trống4descriptionTEXTKhông được để trống5priceTEXTKhông được để trống6discountTEXTKhông được để trống7imageTEXTKhông được để trống
+
+3.5.3 Bảng cart
+Bảng 331: cơ sở dữ liệu cart
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1giohangidINTKhóa chínhDuy nhất, không được để trống2useridINTKhóa ngoạiKhông được để trốn3foodidINTKhóa ngoạiKhông được để trống4amountINT    Phải nhỏ hơn hoặc bằng 20, không được để trống3.5.4 Bảng favourite
+Bảng 332: cơ sở dữ liệu favourite
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1yeuthichidINTKhóa chínhDuy nhất, không được để trống2useridINTKhóa ngoạiKhông được để trống3foodidINTKhóa ngoạiKhông được để trống
+
+3.5.5 Bảng order
+Bảng 333: cơ sở dữ liệu order
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1donhangidINTKhóa chínhDuy nhất, không được để trống.2useridINTKhóa ngoạiKhông được để trống3nameTEXTKhông được để trống4phoneTEXTKhông được để trống5dateTEXTKhông được để trống6adressTEXTKhông được để trống7adressdescriptionTEXTKhông được để trống8noteTEXTKhông được để trống9statusINTKhông được để trống10moneypayINTKhông được để trống11moneycommodityINTKhông được để trống12moneyshipINTKhông được để trống13descriptionTEXTLưu thông tin món ăn,  không được để trống3.5.6 Bảng video
+Bảng 334: cơ sở dữ liệu video
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1videoidINTKhóa chínhDuy nhất, không được để trống2nameTEXT    Không được để trống3linkTEXT    Không được để trống4imageTEXT    Không được để trống3.5.7 Bảng address
+Bảng 335: cơ sở dữ liệu address
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1adressidINTKhóa chínhDuy nhất, không được để trống.2useridINTKhóa ngoạiKhông được để trống3nameTEXTKhông được để trống4phoneTEXTKhông được để trống5provinceTEXTKhông được để trống6districtTEXTKhông được để trống7wardTEXTKhông được để trống8descriptionTEXTKhông được để trống9defaultsTEXTKhông được để trống3.5.8 Bảng notification
+Bảng 336: cơ sở dữ liệu notification
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1notificationidINTKhóa chínhDuy nhất, không được để trống.2useridINTKhóa ngoạiKhông được để trống3timeTEXT    Không được để trống4statusINT    Không được để trống5categoryTEXT    Không được để trống6categoryidINT    Không được để trống7titleTEXT    Không được để trống8descriptionTEXT    Không được để trống3.5.9 Bảng users
+Bảng 337: cơ sở dữ liệu users
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1useridINTKhóa chínhDuy nhất, không được để trống.2nameTEXTKhông được để trống3genderTEXTKhông được để trống4birthdayTEXTKhông được để trống5phoneTEXTKhông được để trống6emailTEXTKhông được để trống7passwordTEXTKhông được để trống8cauhoibaomatTEXTKhông được để trống9cautraloiTEXTKhông được để trống10imageTEXTKhông được để trống11typeINTKhông được để trống3.6 Thiết kế giao diện
+3.6.1 Giao diện đăng nhập
+
+Hình 322: Giao diện đăng nhập
+Bảng 338: Bảng chức năng đăng nhập
+STTTên controlSự kiệnÝ nghĩa1edtemailNhập tên đăng nhập2edtmatkhauNhập mật khẩu3tvquenmatkhauClickHiển thị dialog nhập tên đăng nhập4tvdangkitaikhoanClickChuyển qua main đăng kí tài khoản
+• Chức năng: Đăng nhập vào hệ thống có kiểm tra và xác nhận quyền người dùng.
+• Sự kiện:
+- Nhấn vào nút “Đăng nhập”: 
+   kiểm tra và xác nhận người dùng. Nếu người dùng hợp lệ, kiểm tra xem đó là khách hàng hay nhân viên.nếu là nhân viên thì chuyển qua giao diện của nhân viên còn nếu là khách hàng thì chuyển qua giao diện của khách hàng.
+- Nhấn vào nút “quên mật khẩu”:
+hiển thị dialog cho người dùng nhập mật khẩu
+         
+Hình 323: Giao diện quên mật khẩu
+- Nhấn vào nút “Đăng kí tài khoản”:
+ chuyển qua activity đăng kí tài khoản. 
+
+3.6.2 Giao diện đăng kí tài khoản
+ 
+Hình 324: Giao diện đăng kí
+    Bảng 339: Bảng chức năng giao diện đăng kí
+STTTên controlSự kiệnÝ nghĩa1edtnameNhập họ tên2edtphoneNhập số điện thoại3tvbirthdayclickChọn ngày sinh5spinnergioitinhChọn giới tính6edtemailNhập email7edtmatkhauNhập mật khẩu8edtcauhoibaomatNhập câu hỏi bảo mật9edtcautraloiNhập câu trả lời10checkboxKiểm tra có là nhân viên không11btndangkiclickKiểm tra các thông tin đã nhập cũng như đăng kí tài khoản
+• Chức năng: Đăng kí tài khoản khách hàng hoặc nhân viên
+• Sự kiện:
+- Nhấn vào nút “Đăng kí”:kiểm tra các thông tin đã nhập xem có hợp lệ hay không và đăng kí tài khoản khách hàng hoặc nhân viên
+- Nhấn vào nút “bạn là nhân viên”:Để giúp người đăng kí tài khoản có thể đăng kí được tài khoản nhân viên.
+3.6.3 Giao diện thể loại món ăn
+
+Hình 325: Giao diện thể loại món ăn
+    Bảng 340: Bảng chức năng giao diện thể loại món ăn
+STTTên controlSự kiệnÝ nghĩa1btnbackclickTrở về
+• Chức năng: Hiển thị chi tiết thể loại món ăn
+• Sự kiện: Nhấn vào nút back để trở về
+3.6.4 Giao diện món ăn
+
+Hình 326: Giao diện món ăn
+Bảng 341: Bảng chức năng giao diện món ăn
+STTTên controlSự kiệnÝ nghĩa1btnbackclickTrở về
+• Chức năng: Hiển thị tất cả món ăn
+• Sự kiện: Nhấn vào nút back để trở về
+3.6.5 Giao diện chi tiết món ăn
+
+Hình 327: Giao diện chi tiết món ăn
+Bảng 342: Bảng chức năng giao diện chi tiết món ăn
+STTTên controlSự kiệnÝ nghĩa1btnbackclickTrở về2btnsoluongclickChọn số lượng món ăn cần mua3btnthemclickThêm vào giỏ hàng4btnyeuthichclickTùy chọn yêu thích món ăn5btngiohangclickChuyển qua activity giỏ hàng
+
+
+• Chức năng: Hiển thị thông tin chi tiết của món ăn
+• Sự kiện:
+- Nhấn vào nút back: Để trở về
+- Nhấn vào nút soluong: Chọn số lượng món ăn cần mua
+- Nhấn vào nút yeuthich: Thêm hoặc xóa món ăn yêu thích
+- Nhấn vào nút giohang: Chuyển qua activity giỏ hàng
+3.6.6 Giao diện khám phá
+
+Hình 328: Giao diện khám phá
+3.6.7 Giao diện video
+
+Hình 329: Giao diện video
+Bảng 343: Bảng chức năng giao diện video
+STTTên controlSự kiệnÝ nghĩa1btnbackTrở về
+• Chức năng: Hiển thị danh sách video của channel
+• Sự kiện: Nhấn vào nút back: để trở về
+3.6.8 Giao diện chi tiết video
+ 
+Hình 330: Giao diện chi tiết video
+3.6.9 Giao diện danh sách thông báo của khách hàng
+
+Hình 331: Giao diện danh sách thông báo của khách hàng
+3.6.10 Giao diện cá nhân của khách hàng
+
+Hình 332: Giao diện cá nhân của khách hàng
+Bảng 344:Bảng chức năng giao diện cá nhân của khách hàng
+STTTên controlSự kiệnÝ nghĩa1btnyeuthichclickChuyển qua dialog yêu thích2btngiohangclickChuyển qua dialog giỏ hàng3btndonhangclickChuyển qua dialog đơn hàng4btnthongbaoclickChuyển qua dialog thông báo5btnsettingclickChuyển qua dialog cài đặt
+• Chức năng: Hiển thị chức năng của khách hàng
+• Sự kiện:
+- Nhấn vào nút “yêu thích”: Hiển thị danh sách món ăn yêu thích
+- Nhấn vào nút “giỏ hàng”: Hiển thị danh sách món ăn trong giỏ hàng
+- Nhấn vào nút “đơn hàng”: Hiển thị danh sách đơn hàng
+- Nhấn vào nút icon cài đặt: Hiển thị thông tin cá nhân kèm tùy chọn chỉnh sửa
+- Nhấn vào nút “thông báo”: Hiển thị thông tin thông báo
+3.6.11 Giao diện món ăn yêu thích
+
+Hình 333: Giao diện món ăn yêu thích
+Bảng 345: Bảng chức năng giao diện yêu thích
+STTTên controlSự kiệnÝ nghĩa1btnbackclickTrở về2btndeleteclickXóa món ăn yêu thích
+• Chức năng: Hiển thị danh sách món ăn yêu thích
+• Sự kiện:
+- Nhấn vào nút “back”: Trở về
+- Nhấn nút hình “trái tim”: Xóa món ăn yêu thích khỏi danh sách
+3.6.12 Giao diện giỏ hàng
+
+Hình 334: Giao diện giỏ hàng
+Bảng 346: Bảng chức năng giao diện giỏ hàng
+STTTên controlSự kiệnÝ nghĩa1btnbackclickTrở về2btnsoluongclickSửa số lượng món ăn3btnxoaclickXóa món ăn khỏi giỏ hàng4btnmuahangclickMua hàng
+• Chức năng: Hiển thị thông tin giỏ hàng
+• Sự kiện:
+- Nhấn vào nút back: Trở về
+- Nhấn vào nút soluong: Cập nhật số lượng món ăn
+- Nhấn vào nút xoa: Xóa món ăn khỏi giỏ hàng
+- Nhấn vào nút mua: Tiến hàng mua hàng
+3.6.13 Giao diện đơn hàng
+
+Hình 335: Giao diện đơn hàng
+Bảng 347: Bảng chứ năng giao diện đơn hàng
+STTTên controlSự kiệnÝ nghĩa1btnbackclickTrở về
+• Chức năng: Hiển thị danh sách đơn hàng
+• Sự kiện: Nhấn vào nút back để trở về
+3.6.14 Giao diện chi tiết đơn hàng của khách hàng
+ 
+Hình 336: Giao diện chi tiết đơn hàng của khách hàng
+Bảng 348: Bảng chức năng giao diện đơn hàng của khách hàng
+STTTên controlSự kiệnÝ nghĩa1btnbackclickTrở về
+• Chức năng: Hiển thị thông tin chi tiết đơn hàng
+• Sự kiện: Nhấn vào nút back để trở về
+3.6.15 Giao diện hồ sơ
+
+Hình 337: Giao diện hồ sơ
+Bảng 349: Bảng chức năng giao diện hồ sơ
+STTTên controlSự kiệnÝ nghĩa1btnbackclickTrở về2btnchinhsuaclickChuyển qua activity cập nhật thông tin cá nhân3btndoimkclickHiển thị dialog đổi mật khẩu4btndoichbmclickHiển thị dialog đổi câu hỏi bảo mật5btnxoatkclickHiển thị dialog xóa tài khoản6btndangxuatclickĐăng xuất tài khoản
+• Chức năng: Hiển thị thông tin tài khoản
+• Sự kiện:
+- Nhấn vào nút back: Trở về
+- Nhấn vào nút “chỉnh sửa thông tin các nhân”: Mở giao diện chỉnh sửa thông tin cá nhân
+
+Hình 338: Giao diện chỉnh sửa thông tin
+- Nhấn vào nút “đổi mật khẩu”: Hiển thị dialog yêu cầu nhập mật khẩu.nếu mật khẩu trùng khớp sẽ cho nhập mật khẩu mới và đổi mật khẩu mới
+ 
+    Hình 339: Giao diện đổi mật khẩu
+- Nhấn vào nút “đổi câu hỏi bảo mật”: Hiển thị dialog cho phép người dùng nhập mật khẩu và câu hỏi bảo mật.nếu nhập đúng sẽ hiển thị dilog cho phép nhập và đổi câu hỏi bảo mật mới.
+ 
+Hình 340: Giao diện đổi câu hỏi bảo mật
+    
+    
+    
+    
+    
+    
+- Nhấn vào nút “xóa tài khoản”: Hiển thị dialog yêu cầu nhập mật khẩu.nếu người dùng nhập mật khẩu trùng khớp sẽ hiển thị lên dialog hỏi người dùng có muốn xóa tài khoản không nếu ấn có thì sẽ xó tài khoản của người đó.
+
+Hình 341: Giao diện xóa tài khoản
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau thời gian nghiên cứu, xây dựng và phát triển, tác giả đã hoàn thành cơ bản các mục tiêu ban đầu đề ra của đề tài. Thực hiện nghiên cứu và đề ra giải pháp thiết kế và xây dựng ứng dụng đặt mua đồ ăn cho cửa hàng Bookto trên mobile Android cụ thể như sau:
+- Xây dựng server xử lí request từ client, kết nối với cơ sở dữ liệu người dùng.
+- Sử dụng Socket.IO để giao tiếp giữa client với server, tạo nên một ứng dụng realtime.
+   - Cho phép người dùng tra cứu thông tin món ăn, cho phép đặt mua món ăn mà mình muốn, ngoài ra còn cho phép thêm món ăn vào mục yêu thích, xem và tra cứu đơn hàng, xem các tin tức cũng như video bổ ích liên quan tới ẩm thực.
+   - Về phía admin. cho phép thêm sửa xóa menu món ăn, món ăn, channel video. ngoài ra còn cho phép tra cứu đơn hàng cả khách hàng cũng như cập nhật trạng thái để khách hàng có thể theo dõi đơn hàng cũng như các menu món ăn hay món ăn của nhà hàng.
+4.2 Hạn chế của đề tài
+- Vẫn còn một số lỗi nhỏ về giao diện cũng như một số lỗi về xử lí tác vụ.
+- Tối ưu hóa thuật toán và dữ liệu chưa tối, đôi khi còn gặp phải một số lỗi như tràn bộ nhớ.
+- Chưa xây dựng được các thuật toán thu thập dữ liệu người dùng để đưa ra các món ăn phù hợp với người dùng dựa vào đơn hàng, giỏ hàng, click xem món ăn hay dựa vào thời gian, thời tiết.
+- Chưa bắt được một số ngoại lệ về nhập thông tin trên edittext.
+
+
+4.3 Hướng phát triển của đề tài
+      Trong thời gian nghiên cứu và thực hiện đề tài, tác giả đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+- Xây dựng thuật toán thông minh cho phép đề xuất món ăn theo thói quen của người sử dụng.
+- Xây dựng thêm một số tính năng mới như đọc tin tức bằng web sever hay rss reader.
+- Xây dựng kênh chát giữa người dùng với nhau.
+    
+TÀI LIỆU THAM KHẢO
+x
+[1]Nguyễn Hoàng Điệp, Lập trình mạng trên android. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY.[2]Hoàng Quốc Việt, Lập trình cơ bản Android. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY.[3]Node.js Module là gì? Cách tạo và sử dụng module trong nodejs, VnTalking, https://vntalking.com/node-js-module-la-gi-cach-tao-va-su-dung-module-trong-nodejs.html[4]Tổng quan về NodeJS và so sánh với  PHP, VIBLO.ASIA, https://viblo.asia/p/tong-quan-ve-nodejs-va-so-sanh-voi-php-gDVK2GOvZLj[5]Cơ bản, tổng quan Socket.IO, VIBLO.ASIA, https://viblo.asia/p/co-ban-ve-socketio-bJzKm0kY59N[6]Tổng quan về Android, tutsplus, https://code.tutsplus.com/vi/articles/android-from-scratch-an-overview-of-android-application-development--cms-25972[7]MVP Pattern for Android, VIBLO.ASIA, https://viblo.asia/p/mvp-pattern-for-android-1qm6RWzOveJE[8]Dialog fragment trong Android, androidcoban.vn, https://androidcoban.com/su-dung-lop-dialog-fragment-trong-android.html[9]Thread, Handler và AsyncTask trong Android, VIBLO.ASIA, https://viblo.asia/p/thread-handler-va-asynctask-trong-android-3P0lPyp85ox[10]YouTube Android Player API, Google Deverloper, https://developers.google.com/youtube/android/playerx
+Xây dựng ứng dụng đặt mua đồ ăn cho của hàng Bookto trên mobile
+    
+    
+10
+    
+    

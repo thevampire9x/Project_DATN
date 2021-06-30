@@ -1,0 +1,455 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI 
+1.1. Lí do chọn đề tài 
+-  Đọc tin tức là một nhu cầu rất lớn, hằng ngày của rất nhiều người trong số chúng ta. Nhiều người có thói quen đọc trực tiếp trên web, một vài người khác lại thích sử dụng ứng dụng hơn vì các tính năng nâng cao mà đọc trên web không có được. Sử dụng ứng dụng đọc tin tức sẽ giúp mọi người tiết kiệm được rất nhiều thứ: thời gian nhanh, thao tác ít, thể loại đa dạng và phong phú, đặc biệt là khả năng tiết kiệm dung lượng 4G nhờ sự tối giản hóa giúp mọi người không cần phải tải về hết mọi thứ không cần thiết khi truy cập địa chỉ website tin tức trên trình duyệt, giúp tăng tốc tải tin… 
+-  Là một sinh viên phần mềm mảng thiết kế mobile, nhận thấy lợi ích của một ứng dụng tin tức, bên cạnh đó cũng là tổng hợp lại kiến thức được học và mong muốn có thể tạo ra một ứng dụng tin tức để mọi người có thể đăng tải bài quảng cáo, thảo luận, phản hồi về bài viết, tìm kiếm và tải ảnh từ thư viện có sẵn. Vì vậy tôi chọn đề tài:  Xây dựng ứng dụng đọc tin tức trên mobile. 
+1.2. Mục đích chọn đề tài 
+- Một diễn đàn, nơi mà mọi người có thể đăng bài để mọi người có thể thảo luận, giải đáp thắc mắc của nhau.
+Mục tiêu chính:
+	-  Xây dựng ứng dụng cập nhật, tìm kiếm và đọc tin tức trên mobile
+	-  Xây dựng server quản lý và lưu trữ dữ liệu
+-  Xây dựng website quản trị. 
+1.3. Giới hạn và phạm vi của đề tài 
+- Đề tài xây dựng dựng một App Mobile sử dụng các công nghệ mới trong lập trình như Ionic Framework 4, Angular 8.
+- Hệ thống App Mobile được triển khai nhằm tạo ra ứng dụng tin tức dạng diễn đàn nhằm phục vụ nhu cầu của toàn thể người sử dụng với từng mục đích khác nhau để phát triển toàn diện trên mọi lĩnh vực ngay cả quảng bá thương hiệu.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT 
+2.1. 	Tổng quan về Ionic Framework
+2.1.1.   Giới thiệu về Ionic Framework
+-	Ionic là một framework dùng để phát triển ứng dụng hybrid dựa trên HTML5. Một ứng dụng hybrid là một ứng dụng di động được xây dựng bằng các công nghệ phát triển web như HTML5, CSS, JavaScript và sau đó được đóng gói trong một môi trường hiển thị nội dung có thể hoạt động trên hầu hết các thiết bị di động giống như trình duyệt web (Native container). Các ứng dụng này sử dụng các thành phần hiển thị nội dung website (các trình duyệt ẩn như UIWebView trên Ios, hay Webview trên Android và các thiết bị khác) để hiển thị các đoạn mã HTML.
+-	Ứng dụng hybrid đem lại nhiều lợi thế như khả năng hiển thị nội dung trên tất cả các thiết bị di động, cũng như tận dụng tối đa các tính năng khác của thiết bị di động như GPS, camera, danh sách liên lạc,… Bên cạnh đó, thời gian và chi phí dùng để tạo nên một ứng dụng hybrid cũng thấp hơn so với các ứng dụng di động thông thường.
+-	Ta có thể coi Ionic như là một bộ khung front-end giúp ta kiểm soát hình ảnh và trải nghiệm trên ứng dụng của ta. Giống như “Bootstrap for Native”, nhưng với sự hỗ trợ của một lượng lớn các thành phần di động, hiệu ứng chuyển động mượt mà và thiết kế đẹp.
+-	Không như các framework khác, Ionic mang đến cho chúng ta những thành phần giao diện và cách bố trí mang phong cách rất giống với như phong cách thiết kế mặc định trên thiết bị di động.
+-	Vì Ionic là một framework HTML5 nên nó cần bộ đóng gói (wrapper) như Cordova hay PhoneGap để có thể chạy được như một ứng dụng di động. Cordova là bộ đóng gói mặc định trong Ionic framework.
+2.1.2 Ưu điểm và nhược điểm: 
+b. Ưu điểm
+• Dễ học, thời gian phát triển nhanh, có thể sử dụng các kỹ năng từ lập trình web
+• Đa nền tảng
+• Khả năng truy cập đến các tính năng của thiết bị và hệ điều hành như bluetooth, camera,..
+• Dễ dàng thiết kế giao diện cho các thiết bị có kích cỡ khác nhau
+• Việc sử dụng AngularJS làm core giúp phần xử lý UI linh động hơn so với javasript hay thư viện Jquery.
+• Việc sử dụng AngularJS làm core cũng mang lại lợi thế lớn so với các framework cho ứng dụng hybrid khác.
+• Ionic cung cấp đầy đủ các thành phần trong giao diện người dùng như Pull-to-Refresh, Infinite-loader, tabs, ..
+b. Nhược điểm
+• Vẫn còn trong giai đoạn phát triển
+• Hiệu năng vẫn chưa cao và ổn định
+• Cộng đồng phát triển ứng dụng vẫn còn chưa đông	
+
+    Hình 1: Một số giao diện ionic
+2.2.  Tính năng
+2.2.1   Cordova
+
+    Hình 2: apache  Cordova
+-  Apache Cordova là một bộ khung để xây dựng ứng dụng di động sử dụng HTML, CSS và Javascript. Apache Cordova bao gồm một tập hợp các API thiết bị cho phép người lập trình di động truy cập, sử dụng các chức năng native của thiết bị như là camera hay cảm biến gia tốc bằng Javascript. Kết hợp với một bộ khung phát triển giao diện như jQuery Mobile or Dojo Mobile hoặc Ionic, cho phép ứng dụng di động có thể được phát triển chỉ dựa trên HTML, CSS và Javascript.
+-  Khi sử dụng Cordova API, một ứng dụng có thể được xây dựng mà không phải sử dụng bất kỳ một đoạn mã native code nào. Thay vào đó, công nghệ web sẽ được sử dụng, và chúng sẽ được tổ chức trên chính ứng dụng đấy chứ không cần thông qua một server nào.
+-  Và bởi vì những API Javascript này là thống nhất trên tất cả các nền tảng thiết bị và được xây dựng trên chuẩn web nên những ứng dụng được viết trên nền tảng này có thể được sử dụng trên các nền tảng khác mà có thể không cần có bất cứ sự thay đổi nào.
+-  Cordova cung cấp một tập hợp các thư viện Javascript đã được chuẩn hóa để có thể sử dụng. Cordova hiện có thể sử dụng cho các nền tảng như iOS, Android, Blackberry, Windows Phone, Palm WebOS, Bada và Symbian.
+-  Kể từ phiên bản 3.0, ta có thể chọn một trong hai quy trình để phát triển một ứng dụng di động. 
+• Cross-platform (CLI) workflow: được sử dụng khi ta muốn xây dựng ứng dụng trên càng nhiều nền tảng càng tốt, mà ít cần quan tâm đến đặc trưng của nền tảng. Trung tâm của quy trình này là CLI (Command-Line Interface), được giới thiệu từ phiên bản Cordova 3.0. CLI là một công cụ ở mức cao cho phép ta xây dựng dự án trên nhiều nền tảng một lần duy nhất, trừu tượng hóa đi nhiều chức năng ở mức thấp. CLI cũng cung cấp một giao diện chung để sử dụng các plug-in vào ứng dụng của ta.
+• Platform-centered workflow: được sử dụng khi ta muốn tập trung phát triển ứng dụng trên một nền tảng cụ thể và muốn can thiệp sâu vào mức thấp ví dụ như khi ta muốn kết hợp một thành phần native đã được tùy biến vào một thành phần web của Cordova. Quy trình này phụ thuộc vào một tập các đoạn mã ở mức thấp được thiết kế riêng cho mỗi nền tảng được hỗ trợ. Vì vậy khi sử dụng cách phát triển này sẽ có thể gặp nhiều khó khăn hơn bởi vì sự thiếu hụt của những công cụ ở mức cao nhưng ta sẽ có được sự tự do hơn trong việc phát triển ứng dụng.
+2.2.2   Mô hình phát triển ứng dụng MV Pattern
+-  Angular JS được sử dụng trong Ionic là một MVC framework, nhưng theo thời gian thì nó trở nên thân thuộc hơn với khái niệm MVVM trong đó đối tượng $scope hoạt động như một ViewModel, sử dụng và thao tác trong các Controller.
+
+    Hình 3: Mô hình phát triển ứng dụng MV Pattern
+-  Các developer có thể linh hoạt sử dụng MVC hoặc là MVVM theo ý thích của họ, miễn là đạt được mục tiêu: Việc tách phần trình bày giao diện khỏi tầng nghiệp vụ logic thúc đẩy hiệu suất phát triển sản phẩm và bảo trì.
+Thao tác với DOM
+-  Về khả năng tương tác với các thành phần DOM của webView. Angular nhúng jqLite, là một phần nhỏ gọn của thư viện jQuery cho phép thao tác DOM trong các trình duyệt theo cách tương thích, và không phụ thuộc vào trình duyệt.
+2.2.3   Giao diện người dùng UI
+-  Ionic thể hiện được tiềm năng của nó. là sự đơn giản. Giống như phong cách của Google, nó dựa trên sự tồn tại của HTML5 và CSS3 để cung cấp những trải nghiệm nhanh chóng. Chính xác là tốc độ có trong sự đơn giản của nó – không có bóng đổ hay góc tròn, chỉ đơn giản là phẳng – Như vậy, Ionic không hứa hẹn có được giao diện người dùng bóng bẩy, nhưng nó cung cấp giao diện một cách nhanh chóng và nhất quán, thậm chí là chúng ta sử dụng trên các thiết bị với khả năng thông dịch HTML5 chậm trong các ứng dụng Ionic.
+
+    Hình 4: Giao diện người dùng UI
+-  Sass là một ngôn ngữ mở rộng của CSS – Cascading Style Sheets – cho phép Ionic thêm các biến số và khả năng lồng cú pháp để mở rộng sự xuất hiện của giao diện ứng dụng. Ngoài ra, Ionic còn được đóng gói thêm các thư viện icon nguồn mở, khoảng 440 icons.
+2.2.4  Giao diện dựng sẵn Widgets
+-  Các thành phần của Ionic cực kỳ đơn giản và mạnh mẽ. Chúng là các phần tử HTML phức hợp, được gọi là các directives, Ionic cũng cung cấp các Controller để bổ sung cho cấu hình và tương tác. Ionic cung cấp các khối xây dựng có phần đơn giản mà có thể được kết hợp để cung cấp giao diện người dùng phong phú.
+
+    Hình 5: Giao diện dựng sẵn Widgets
+-  Ở phiên bản hiện tại v1.2.8, Ionic cung cấp một loạt các thành phần giao diện thiết kế sẵn bao gồm: form elements, header and footer bars, buttons, simple list, grid elements và các thành phần phổ biến khác nữa.
+
+
+
+2.2.5   Pairing with AngularJS
+
+    Hình 6: Pairing with Angular JS
+-  AngularJS là một dự án mã nguồn mở của Google đã trở nên khá phổ biến đối với những nhà phát triển ứng dụng web trong thời gian gần đây. AngularJS cung cấp cho người phát triển khả năng hoàn thiện ứng dụng web một cách nhanh chóng và tạo cấu trúc hợp lí cho ứng dụng. Các framework cho ứng dụng web dùng Javascript như AngularJS cho phép ta xây dựng các ứng dụng phức tạp ngay trong trình duyệt mà không cần dựa trên server. Đây chắc chắn là một lợi thế cho các nhà phát triển ứng dụng hybrid, bởi trình duyệt là nền tảng để tạo nên những ứng dụng này. Nếu ta quen thuộc với AngularJS hoặc các framework Javascript khác như Ember, ta sẽ dễ dàng làm quen với việc phát triển ứng dụng di động bằng Ionic.
+-  Ionic sử dụng AngularJS để tạo ra một framework tốt nhất cho việc xây dựng các ứng dụng di động đa nền tảng, nó cung cấp một bộ giao diện người dùng (UI) mã nguồn mở miễn phí đi cùng với các tính năng của AngularJS.
+-  Việc xây dựng ứng dụng dựa trên AngularJS đòi hỏi mã nguồn phải có khả năng mở rộng cao để bổ sung các tính năng mới. Tuy nhiên với Ionic, người ta có thể tái sử dụng các chức năng trong ứng dụng trên các nền tảng khác nhau đồng thời vẫn có thể tùy chỉnh giao diện người dùng cho mỗi nền tảng riêng biệt. Các thành phần trong Ionic như danh sách, slide,.. chính là các directive(các thuộc tính của thẻ HTML dùng trong Angular) của AngularJS. Đó là lí do khiến cho Ionic và AngularJS kết hợp rất tốt với nhau.
+
+
+2.2.6   Performance obsessed
+-  Ionic rất chú trọng đến hiệu suất, mặc dù nó ra đời chưa lâu. Ionic có một giao diện ổn định và tốc độ tốt, với các hiệu ứng chuyển động được áp dụng kỹ thuật tăng tốc phần cứng (hardware accelerating) và tối giản các thao tác với DOM. Ionic cũng không cần sử dụng đến jQuery, mặc dù người sử dụng có thể thêm vào nếu muốn. Ionic có thể tạo ra các ứng dụng phức tạp chạy trên cả iOS và Android.
+-  Một điểm thú vị của Ionic đồng thời giúp tăng hiệu suất hoạt động của nó, đó là Ionic không cố gắng tự mình thực hiện tất cả các công việc. Để đóng gói ứng dụng, Ionic sử dụng Cordova và tận dụng cấu trúc thư mục mặc định của nó.
+2.2.7   Application scripting
+-  Ionic không những mang đến cho ta CSS và markup tùy biến cao mà còn những mẫu thiết kế (design pattern) Javascript để giúp chúng ta xây dựng những ứng dụng giống nhất với những ứng dụng native trên Android và iOS. Ionic muốn giải phóng những ứng dụng web ra khỏi thanh địa chỉ và hướng đến những tương tác giao diện mạnh mẽ như mà side menu hay view controllers.
+2.2.8  Open-source
+
+Hình 7: Open source
+-   Mục đích của Ionic framework không chỉ là xây dựng một bộ khung phát triển ứng dụng di động đa nền tảng mà còn muốn xây dựng một nền tảng để chia sẻ các kiến thức cho các nhà phát triển, tạo ra một cách để đưa ra những design pattern tốt nhất để xây dựng các ứng dụng di động. Vì vậy, Ionic là một framework mở hoàn toàn cho phép tất cả mọi người có thể chia sẻ những kiến thức, kinh nghiệm để xây dựng những ứng dụng di động tuyệt vời trên nền tảng HTML5.
+-  Ionic sẽ đặt nền tảng cho ứng dụng của ta dựa trên HTML5, CSS và Javascript. Thay vì mỗi lập trình viên phải tự tìm tòi những khuyết điểm của việc phát triển ứng dụng di động trên HTML5 thì Ionic sẽ cho ta CSS cơ bản và tạo cho ta 1 kiến trúc tốt để phát triển phía trên nó.
+2.2.9   Pros and Cons
+Sử dụng Ionic mang lại nhiều lợi ích, trong đó có các lợi thế từ ứng dụng hybrid như:
+• Người phát triển có thể sử dụng các kỹ năng từ lập trình web, giúp giảm thiểu thời gian cũng như chi phí đào tạo nói riêng và thời gian cũng như chi phí dành cho dự án nói chung.
+• Chỉ một bộ mã lệnh có thể sử dụng trên nhiều hệ điều hành khác nhau.
+• Khả năng truy cập đến các tính năng của thiết bị và hệ điều hành.
+• Khả năng sử dụng trong chế độ offline.
+• Việc thiết kế giao diện cho các thiết bị có kích cỡ khác nhau trở nên dễ dàng với thiết kế tùy ứng (responsive design) của web.
+• Việc sử dụng AngularJS làm core cũng mang lại lợi thế lớn so với các framework cho ứng dụng hybrid khác.
+• Ionic cung cấp đầy đủ các thành phần trong giao diện người dùng như Pull-to-Refresh, Infinite-loader, tabs, ..
+• Một lợi thế khác khi sử dụng Ionic là nó có một cộng đồng người dùng lớn mạnh, giúp cho việc tìm hiểu và hỗ trợ dễ dàng hơn.
+Tuy vậy Ionic cũng có các mặt bất lợi của nó:
+• Vẫn còn trong giai đoạn beta, vẫn còn có thể xuất hiện bugs.
+• Các hiệu ứng và khả năng chuyển đổi giữa các trang có hiệu suất chưa cao.
+2.3  Tổng quan về Angular JS
+2.3.1   Lịch sử ra đời và khái niệm về Angular JS
+
+Hình 8: Angular JS
+
+-  AngularJS là một framework ứng dụng web có mã nguồn mở. Nó đã được phát triển vào năm 2009 bởi Misko Hevery và Adam Abrons.Tính đến thời điểm hiện tại nó đang được duy trì bởi Google.
+ Ta có thể hiểu định nghĩa cụ thể về AngularJS như sau:
+-   AngularJS là một framework có cấu trúc cho các ứng dụng web động. Nó cho phép ta sử dụng HTML như là ngôn ngữ mẫu và cho phép ta mở rộng cú pháp của HTML để diễn đạt các thành phần ứng dụng của ta một cách rõ ràng và súc tích. Hai tính năng cốt lõi: Data binding và Dependency injection của AngularJS loại bỏ phần lớn code mà ta thường phải viết. Nó xảy ra trong tất cả các trình duyệt, làm cho nó trở thành đối tác lý tưởng của bất kỳ công nghệ Server nào.
+2.3.2   Các đặc tính của Angular JS
+• AngularJS là một Framework phát triển mạnh mẽ dựa trên JavaScript để tạo các ứng dụng RICH Internet Application (RIA).
+• AngularJS thường dùng để phát triển frontend (giao diện khách hàng) thông qua các API để gọi data, sử dụng mô hình MVC rất mạnh mẽ
+• Angular là mã nguồn mở, hoàn toàn miễn phí và được phát triển bởi hàng ngàn các lập trình viên trên thế giới.
+• Các ứng dụng được viết bởi AngularJS tương thích với nhiều phiên bản trình duyệt web. AngularJS tự động xử lý mã JavaScript để phù hợp với mỗi trình duyệt.
+• AngularJS cung cấp cho lập trình viên những tùy chọn để viết các ứng dụng client-side trong mô hình MVC (Model View Controller) một cách rõ ràng.
+2.3.3.  Các tính năng chính của Angular JS
+
+Hình 9: Các tính năng của Angular JS
+• Data-binding: Tự động đồng bộ hóa dữ liệu giữa Model và View.
+• Module: dùng để định nghĩa một ứng dụng AngularJS. Module giống như một chiếc hộp để chứa các thành phần khác của ứng dụng bên trong nó.Module còn được gọi là một container của ứng dụng.
+• Scope: Là những đối tượng hướng đến model. Nó là cầu nối giữa Controller và View.
+• Controller: Là những hàm JavaScrip xử lí kết hợp với Scope.
+• Service: AngularJS sử dụng các API được xây dựng từ các web service để thao tác với Database.
+• Filters: Bộ lọc để lọc ra các thành phần của một mảng và trả về một mảng mới.
+• Directives: Đánh dấu vào các yếu tố của DOM, nghĩa là sẽ tạo ra các thẻ HTML tùy chỉnh.
+• Template: Các rendered view với các thông tin từ controller và model có thể sử dụng trong các file riêng biệt hoặc với view với trang sử dụng Partials.
+• Routing: Chuyển đổi giữa các action trong Controller.
+• Model View Controller: Mô hình chia thành phần riêng biệt thành Model, View, Controller. Đây là một mô hình khá hay nhưng trong Angular thì nó được chế biến lại một chút thành Model View View Model.
+• Deep Linking: Liên kết sâu cho phép mã hóa trạng thái của ứng dụng trong các URL để nó có thể đánh dấu được với công cụ tìm kiếm.
+• Dependency Injection: Giúp các nhà phát triển tạo ứng dụng dễ dàng hơn.
+2.3.4.  Ưu điểm và nhược điểm của AngularJS
+a. Ưu điểm:
+• Cho phép tạo ra các ứng dụng một cách đơn giản, code sạch.
+• Sử dụng data bind giống .NET với tính năng liên kết với HTML nên giúp người dùng cảm thấy dễ sử dụng.
+• Có thể chạy trên hầu hết các trình duyệt điện thoại thông minh.
+• Cung cấp khả năng tái sử dụng các component.
+• Code dễ dàng khi unit test.
+b. Nhược điểm:
+• Không an toàn: Được phát triển từ javascript nên nó không an toàn, phía máy chủ phải thường xuyên xác nhận quyền để hệ thống chạy ổn định.
+• Nếu người sử dụng ứng dụng vô hiệu hóa JavaScript thì họ chỉ nhìn được trang cơ bản, không thấy gì thêm.
+
+
+2.3.5.  Components trong AngularJS
+a.  ng-app
+-  Trong một website thì ng-app đóng vai trò là một main module, nếu Angular nó nhận thấy ta khai báo ng-app ngay tại vị trí nào thì nó sẽ tự hiểu là tất cả các thẻ con bên trong sẽ sử dụng AngularJS.
+b.  ng-model
+-  Ng-model là một directive dùng để liên kết dữ liệu với client, một số người gọi nó là ngModel. Người ta thường dùng nó trong các form html để cho user nhập liệu. Chắc ta còn nhớ ở các bài trước mình đã làm một số ví dụ với ng-model, ở các bài đó mình đã kết hợp ng-model với các directive khác để xây dựng các ứng dụng nho nhỏ.
+-  Định nghĩa thì nói chính hơn là ng-model sẽ liên kết với thuộc tính scope sử dụng ngModelController (được khởi tạo và bởi ng-model). Ngoài ra nói 1 chút về ng-bin thì đây là directive sử dụng để liên kết dữ liệu với ng-model, mình sẽ có 1 bài nâng cao hơn về directive này.
+Nhiệm vụ của ng-model:
+-  Trong angularJS thì ng-model có các nhiệm vụ sau : Liên kết view trong model và các directive khác như input, textarea, select. Cung cấp các thao tác validate dữ liệu Kiểm tra và thông báo lỗi cho user Thiết lập các CSS class và hiệu ứng thông báo trong thẻ HTML (ng-valid, ng-invalid, ng-dirty, ng-touched, ng-ungtouched) Ng-model sẽ liên kết với các giá trị được khai báo ví dụ {{email}}, trường hợp nếu không tồn tại thì nó sẽ được tạo ngầm và lưu vào scope. Nếu ta khai báo ng-model=”something” thì khi chạy ứng dụng, trong $scope sẽ tồn tại một giá trị $scope.something. Vậy nên trong controller muốn xử lý gán giá trị cho model thì chỉ cần dùng $scope để thay đổi. Mình sẽ có ví dụ đề cập đến vấn đề này.
+Danh sách các CSS được ng-model thêm vào:
+-  Ng-valid: model is valid ng-invalid: model is invalid ng-valid-[key]: for each valid key added by $setValidity ng-invalid-[key]: for each invalid key added by $setValidity ng-pristine: the control hasn't been interacted with yet ng-dirty: the control has been interacted with ng-touched: the control has been blurred ng-untouched: the control hasn't been blurred ng-pending: any $asyncValidators are unfulfilled Để hiểu rõ hơn về ý nghĩa của từng class thì ta có thể xem ví dụ ở bên dưới.
+c.  ng-bind
+-  Ng-bind được biên dịch ở cấp đầu tiên của ứng dụng nghĩa là cấp độ 0. Trong 1 thẻ HTML có sử dụng ng-bind thì AngularJS sẽ tìm và thay thế nội dụng trong thẻ HTML bằng với giá trị mà có cùng tên định nghĩ trong ng-bind.
+-  Trong thực tế không nên sử dụng ng-bind 1 các trực tiếp (VD: <div ng-bind="result"></div>) vì đôi khi sẽ gây ra các lỗi phát sinh không cho phép nội dung trong HTML được cập nhật. Thay vào đó ta nên sử dụng standard class attributes (<div class="ng-bind : result"></div>) Lúc này giá trị của class attributes là tên của directive.
+-  Ta nên sử dụng ng-bind trong trường hợp liên kết dữ liệu với ng-model và muốn quản lý quá trình lưu model vào $scope. còn không chúng ta sử dụng {{}} sẽ tốt hơn.
+2.4  Tổng quan về SQL Server
+2.4.1  Định nghĩa
+-  SQL Server là một hệ quản trị cơ sở dữ liệu quan hệ được phát triển bởi Microsoft. Là một máy chủ cơ sở dữ liệu, nó là một sản phẩm phần mềm có chức năng chính là lưu trữ và truy xuất dữ liệu theo yêu cầu của các ứng dụng phần mềm khác.
+2.4.2  Một số đặc điểm chính của SQL Server
+-  SQL là một ngôn ngữ đòi hỏi có tính tương tác cao: Người dùng có thể dễ dàng trao đổi với các tiện ích thông qua các câu lệnh của SQL đến cơ sở dữ liệu và nhận kết quả từ cơ sở dữ liệu.
+-  SQL là một ngôn ngữ lập trình cơ sở dữ liệu: Các lập trình viên có thể xây dựng các chương trình ứng dụng giao tiếp với cơ sở dữ liệu bằng cách nhúng các câu lệnh SQL vào trong ngôn ngữ lập trình.
+-  SQL là một ngôn ngữ lập trình quản trị cơ sở dữ liệu: Người quản trị cơ sở dữ liệu có thề quản lý, định nghĩa và điều khiển truy cập cơ sở dữ liệu thông qua SQL.
+-  SQL là một ngôn ngữ lập trình cho các hệ thống chủ khách: SQL được sử dụng như là một công cụ giao tiếp với các trình ứng dụng trong hệ thống cơ sở dữ liệu khách chủ.
+-  SQL là ngôn ngữ truy cập dữ liệu trên Internet: SQL được sử dụng với vai trò tương tác với dữ liệu trong hầu hết các máy chủ web và máy chủ Internet.
+-  SQL là ngôn ngữ cơ sở dữ liệu phân tán: Với vai trò giao tiếp với các hệ thống trên mạng, gửi và nhận các yêu cầu truy xuất dữ liệu với nhau.
+2.4.3   Các tính năng của SQL Server
+- Cho phép tạo nhiều cơ sở dữ liệu
+- Duy trì lưu trữ bền vững
+- Bảo mật cao
+- SSAS - SQL Server Analysis Services
+- Tạo được báo cáo bằng SSRS - SQL Server Reporting Services
+- Thực hiện quá trình ETL (Extract-Transform-Load) bằng SSIS - SQL Server Integration Services.
+2.5   Các công cụ hỗ trợ
+2.5.1   Visual Studio
+-  Microsoft Visual Studio là một môi trường phát triển tích hợp từ Microsoft. Nó được sử dụng để phát triển chương trình máy tính cho Microsoft Windows, cũng như các trang web, các ứng dụng web và các dịch vụ web. Visual Studio sử dụng nền tảng phát triển phần mềm của Microsoft như Windows API, Windows Forms, Windows Presentation Foundation, Windows Store và Microsoft Silverlight. Nó có thể sản xuất cả hai ngôn ngữ máy và mã số quản lý. 
+    
+    Hình 10: Visual Studio
+    
+-  Visual Studio bao gồm một trình soạn thảo mã hỗ trợ IntelliSense cũng như cải tiến mã nguồn. Trình gỡ lỗi tích hợp hoạt động cả về trình gỡ lỗi mức độ mã nguồn và gỡ lỗi mức độ máy. Công cụ tích hợp khác bao gồm một mẫu thiết kế các hình thức xây dựng giao diện ứng dụng, thiết kế web, thiết kế lớp và thiết kế giản đồ cơ sở dữ liệu. Nó chấp nhận các plug-in nâng cao các chức năng ở hầu hết các cấp bao gồm thêm hỗ trợ cho các hệ thống quản lý phiên bản (như Subversion) và bổ sung thêm bộ công cụ mới như biên tập và thiết kế trực quan cho các miền ngôn ngữ cụ thể hoặc bộ công cụ dành cho các khía cạnh khác trong quy trình phát triển phần mềm.
+2.5.2  Microsoft SQL Server Management Studio 18
+-  SQL Server là một hệ quản trị cơ sở dữ liệu quan hệ (Relational Database Management System (RDBMS) ) sử dụng câu lệnh SQL (Transact-SQL) để trao đổi dữ liệu giữa máy Client và máy cài SQL Server. Một RDBMS bao gồm databases, database engine và các ứng dụng dùng để quản lý dữ liệu và các bộ phận khác nhau 
+trong RDBMS.
+    
+    Hình 11: SQL Server
+-  SQL Server được tối ưu để có thể chạy trên môi trường cơ sở dữ liệu rất lớn (Very Large Database Environment) lên đến Tera-Byte và có thể phục vụ cùng lúc cho hàng ngàn user. SQL Server có thể kết hợp “ăn ý” với các server khác như Microsoft Internet Information Server (IIS), E-Commerce Server, Proxy Server…. 
+2.5.3   Visual Studio Code
+-  Visual Studio Code là trình chỉnh sửa mã nguồn nhẹ nhưng mạnh mẽ chạy trên máy tính để bàn của bạn và có sẵn cho Windows, macOS và Linux. Nó đi kèm với sự hỗ trợ tích hợp cho JavaScript, TypeScript và Node.js và có một hệ sinh thái mở rộng phong phú cho các ngôn ngữ khác (như C ++, C #, Java, Python, PHP, Go) và thời gian chạy (như .NET và Unity) 
+
+Hình 12: Visual Code
+2.5.4   Visual Paradigm
+-  Visual Paradigm là một công cụ quản lý và thiết kế mạnh mẽ, đa nền tảng và dễ sử dụng cho các hệ thống Công nghệ thông tin. Visual Paradigm cung cấp cho các nhà phát triển phần mềm nền tảng phát triển tiên tiến để xây dựng các ứng dụng chất lượng nhanh hơn, tốt hơn và rẻ hơn! Nó tạo điều kiện cho khả năng tương tác tuyệt vời với các công cụ CASE khác và hầu hết các IDE hàng đầu, vượt trội toàn bộ quy trình phát triển Mô hình-Mã-Triển khai của bạn trong giải pháp một cửa này.
+
+Hình 13: Visual Paradigm
+CHƯƠNG 3: PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG
+3.1  Khảo sát, xác định yêu cầu
+3.1.1  Mô tả hệ thống 
+   Hoạt động modular tin tức, tiện ích và khảo sát có thể mô tả như sau:
+● Đọc tin tức là một nhu cầu rất lớn, hằng ngày của rất nhiều người trong số chúng ta. Nhiều người có thói quen đọc trực tiếp trên web, một vài người khác lại thích sử dụng ứng dụng hơn vì các tính năng nâng cao mà đọc trên web không có được. Sử dụng ứng dụng đọc tin tức sẽ giúp mọi người tiết kiệm được rất nhiều thứ: thời gian nhanh, thao tác ít, thể loại đa dạng và phong phú, đặc biệt là khả năng tiết kiệm dung lượng 4G nhờ sự tối giản hóa giúp mọi người không cần phải tải về hết mọi thứ không cần thiết khi truy cập địa chỉ website tin tức trên trình duyệt, giúp tăng tốc tải tin… Chính vì vậy em muốn xây dựng 1 ứng dựng đọc tin tức trên mobile.
+● Khảo sát luôn là yếu tố cần thiết để phát triển, có nhiều kiểu khảo sát khác nhau trên mỗi ứng dụng, nhưng mục đích chung của khảo sát là muốn phát triển 1 phần nào đó, ví dụ trên ứng dụng tin tức khảo sát người dùng về ứng dụng sẽ giúp phát triển ứng dụng hơn để phù hợp với nhu cầu người dùng.
+● Tiện ích là những phần cần thiết sẽ hỗ trợ người dùng trong việc sử dụng ứng dụng, giúp người dùng có trải nghiệm tốt nhất. 
+3.1.2  Phát biểu bài toán
+3.1.2.1  Tổng quan về hệ thống mới
+-  Phần mềm ứng dụng Men Watch cung cấp các chức năng đơn giản, dễ sử dụng và cần thiết giúp người dùng sử dụng phần mềm một cách tối ưu nhất. Giao diện với các hình ảnh sản phẩm trân thật màu nền nhẹ nhàng giúp trải nghiệm một cách thoải mái nhất.
+3.1.2.2  Các mục tiêu chính của hệ thống
+   -  Hệ thống ứng dụng tin tức cần đạt được những mục tiêu sau:
+• Hệ thống phải đáp ứng hệ thống thông tin sản phẩm phải đầy đủ và hình ảnh chất lượng tốt giúp người dùng có trải nghiệm tốt nhất .
+• Hệ thống phải có giao diện bắt mắt và đơn giản. 
+• Hệ thống phải đầy đủ các chức năng cần thiết.
+3.1.2.3  Môi trường phát triển
+● Môi trường phần cứng
+○ CPU: Intel core i3 hoặc cao hơn
+○ RAM: tối thiểu 8GB
+○ HDD: dung lượng tối thiểu trống 50GB
+● Môi trường phần mềm
+○ Hệ điều hành: Windows 7 hoặc cao hơn
+3.1.3  Danh sách các yêu cầu khách hàng
+3.1.3.1 Chưc năng hiển thị tin tức
+● Chức năng hiển thị tin tức người dùng
+-  Hệ thống hiện ra danh sách các tin tức được cập nhật trên cơ sở dữ liệu do admin quản lý.
+● Tin tức admin
+-  Hệ thống quản lý danh sách các tin bài và duyệt bài.
+3.1.3.2  Chức năng khảo sát
+● Khảo sát người dùng
+-  Hệ thống cung cấp dữ liệu khảo sát phù hợp với từng phần trong ứng dụng do admin quản lý .
+● Khảo sát Admin
+-  Hệ thống cần cung cấp chức năng quản lý khảo sát trên hệ thống.
+3.1.3.2  Phạm vi công việc
+-  Dựa trên bản mô tả hệ thống và yêu cầu của người dùng, hệ thống phần ứng dụng tin tức cần được phát triển trong các phạm vi dưới đây:
+• Các yêu cầu của người dùng phải được phân tích. Với mỗi yêu cầu phải xác định rõ dữ liệu đầu vào, đầu ra, và quy trình xử lý.
+• Với mỗi yêu cầu phức tạp, quy trình xử lý cần được minh hoạ bằng lưu đồ giải thuật.
+• Hệ thống phải được lập trình trên hệ điều hành android.
+• Hệ thống phải được phát triển trên môi trường android.
+• Dữ liệu phải được lưu trong cơ sở dữ liệu SQLite
+3.2  Phân tích và thiết kế hệ thống
+3.2.1  Danh sách các Actor
+Bảng 1: Danh sách các actor
+STTTên ActorÝ nghĩa/Ghi chú1Người dùngNgười sử dụng phần mềm2AdminNgười quản lý sử dụng phần mềm
+
+
+
+3.2.2  Danh sách các Use-case
+Bảng 2: Danh sách các Use-cse
+STTTên Use-caseÝ nghĩa/Ghi chú1Use Case Diagram 1Biểu đồ tổng quát2TinTucQuản lý danh sách tin tức3KhaoSatChức năng khảo sát người dùng4TienIchQuản lý tiện ích3.2.3   Biểu đồ Use-case
+
+Hình 14: Biểu đồ Use Case “Tổng quát”
+
+Hình 15: Biểu đồ Use Case “QuanLyTinTuc”
+
+Hình 16: Biểu đồ Use Case “QuanLyTienIch” 
+
+Hình 17: Biểu đồ Use Case “ QuanLyKhaoSat”
+3.2.4  Đặc tả Use-case 
+3.2.4.1  Đặc tả Use-case: “Use Case Diagram 1”
+3.2.4.1.1 Biểu đồ Use case của Use case đặc tả
+
+
+
+3.2.4.1.2 Tóm tắt
+-  Use case có 2 Actor đó là Admin và Nguoidung  chức năng lớn đó là: quản lý tin tức, quản lý khảo sát, quản lý tiện ích. Chức năng quản lý tin tức gồm thêm tin tức, sửa tin tức, xóa tin tức. 
+-  Biểu đồ Use case xây dựng ứng dụng tin tức phân tách ra hai đối tượng sử dụng là admin và nguoidung. Biểu đồ Use case chỉ ra một số lượng các tác nhân ngoại cảnh và mối liên kết của chúng với Use case mà hệ thống đã cung cấp. Dùng Use case để chỉ ra mối liên kết giữa các actor(người quản lí, người dùng) đối với các chức năng của hệ thống như(quản lý tin tức, khảo sát, tiện ích)
+ -  Biểu đồ Use case giúp cho người quản lí dễ dàng phân tích dược mối liên kết giữa các tác nhân và use case trong hệ thống từ đó đưa ra được phương pháp để giải quyết một cách dễ dàng nhất.
+3.2.4.1.3 Dòng sự kiện
+3.2.4.1.3.1 Dòng sự kiện chính
+• Người dùng chọn một trong số các chức năng lớn
+• Người dùng chọn các chức năng nhỏ (nếu có)
+• Hệ thống xử lý công việc.
+3.2.4.1.3.2   Các dòng sự kiện khác
+      (Không có)
+3.2.4.1.3.3  Các yêu cầu đặc biệt
+(Không có)
+3.2.4.1.3.4   Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+• Màn hình bắt đầu.
+3.2.4.1.3.5   Trạng thái hệ thống sau khi thực hiện Use-case
+• Giữ giao diện chức năng vừa sử dụng trước đó.
+3.2.4.1.3.6  Điểm mở rộng
+• Khi người dùng chọn các chức năng chia nhỏ từ các chức năng lớn.
+3.2.4.2  Đặc tả Use-case : “ Quản lý TienIch Use Case Diagram” 
+3.2.4.2.1 Biểu đồ Use case của Use case đặc tả
+
+3.1.4.2.2  Tóm tắt
+-  Use case có 2 Actor đó là Admin(Người quản lý) và Nguoidung (Người Dùng), chức năng quản lý sẽ gồm 4 chức năng nhỏ đó là hiển thị tiện ích, thêm thêm tiện ích, sửa tiện ích, xóa tiện ích với các chức năng tương ứng với tên gọi của nó.
+3.1.4.2.3  Dòng sự kiện
+3.2.4.2.3.1  Dòng sự kiện chính
+• Admin chọn chức năng thêm để tiến hành cập nhật thêm tiện ích mới.
+• Admin chọn tiện ích nhấn sửa để sửa thông tin tiện ích.
+• Admin chọn tiện ích nhấn xóa để xóa tiện ích đó.
+• Người dùng nhấn chọn vào tiện ích để hiển thị chi tiết thông tin của tiện ích.
+3.2.4.2.3.2  Các dòng sự kiện khác
+      (Không có)
+3.2.4.2.3.3  Các yêu cầu đặc biệt
+      (Không có)
+3.2.4.2.3.4  Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+• Màn hình tổng quát
+3.2.4.2.3.5  Trạng thái hệ thống sau khi thực hiện Use-case
+• Màn hình tổng quát
+3.2.4.2.3.6  Điểm mở rộng
+3.2.4.3  Đặc tả Use-case : “ Quản lý TinTuc Use Case Diagram” 
+3.2.4.3.1  Biểu đồ Use case của Use case đặc tả
+
+3.2.4.3.2  Tóm tắt
+-  Use case có 2 Actor đó là Admin(Người quản lý) và Nguoidung (Người Dùng), chức năng quản lý sẽ gồm 4 chức năng nhỏ đó là hiển thị tin tức, thêm thêm tin tức, sửa tin tức, xóa tin tức với các chức năng tương ứng với tên gọi của nó.
+3.2.4.3.3  Dòng sự kiện
+3.2.4.3.3.1 Dòng sự kiện chính
+• Admin chọn chức năng thêm để tiến hành cập nhật thêm tin tức mới.
+• Admin chọn tin tức nhấn sửa để sửa thông tin tin tức.
+• Admin chọn tin tức nhấn xóa để xóa tin tức đó.
+• Người dùng nhấn chọn vào tin tức để hiển thị chi tiết thông tin của tin tức.
+3.2.4.3.3.2  Các dòng sự kiện khác
+      (Không có)
+3.2.4.3.3.3  Các yêu cầu đặc biệt
+      (Không có)
+3.2.4.3.3.4  Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+• Màn hình tổng quát
+3.2.4.3.3.5  Trạng thái hệ thống sau khi thực hiện Use-case
+• Màn hình tổng quát
+ 3.2.4.3.3.6  Điểm mở rộng
+3.2.4.4  Đặc tả Use-case : “ Quản lý KhaoSat Use Case Diagram” 
+3.2.4.4.1  Biểu đồ Use case của Use case đặc tả
+
+3.2.4.4.2  Tóm tắt
+-  Use case có 2 Actor đó là Admin(Người quản lý) và Nguoidung (Người Dùng), chức năng quản lý sẽ gồm 4 chức năng nhỏ đó là hiển thị khảo sát, thêm khảo sát, sửa khảo sát, xóa khảo sát với các chức năng tương ứng với tên gọi của nó.
+3.2.4.4.3  Dòng sự kiện
+3.2.4.4.3.1  Dòng sự kiện chính
+• Admin chọn chức năng thêm để tiến hành cập nhật thêm khảo sát mới.
+• Admin chọn khảo sát nhấn xóa để xóa khảo sát đó.
+• Người dùng xem chi tiết nội dung của khảo sát.
+• Người dùng nhấn chọn để hoàn thiện khảo sát để gửi chi tiết nội dung khảo sát cho Admin.
+3.2.4.4.3.2   Các dòng sự kiện khác
+      (Không có)
+3.2.4.4.3.3  Các yêu cầu đặc biệt
+      (Không có)
+3.2.4.4.3.4  Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+• Màn hình tổng quát
+3.2.4.4.3.5  Trạng thái hệ thống sau khi thực hiện Use-case
+• Màn hình tổng quát
+3.2.4.4.3.6  Điểm mở rộng
+3.2.5   Biểu đồ lớp
+
+
+
+3.2.5.1  Danh sách các lớp đối tượng và quan hệ
+Bảng 3: Các lớp đối tượng và quan hệ
+STTTên lớp/quan hệLoạiÝ nghĩa/Ghi chú1TinTucTin tức2TienIchTiện ích
+3.2.5.2   Mô tả chi tiết từng lớp đối tượng
+• Lớp TienIch
+Danh sách các thuộc tính:
+    Bảng 4: Các thuộc tính lớp TienIch
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ ghi chú1KeyIntNot nullTừ khóa tiện ích2RouterlinkStringLink liên kết3IconStringIcon tương ứng 4BackgroudStringGiao diện nền5TitleStringTên tiện ích6BackgroudcolorStringMàu nền7ColorStringmàu
+Danh sách các phương thức:
+- HienThi(): Hiển thị ra danh sách các tiện ích của hệ thống
+- Them(): Thực hiện thêm một tiện ích vào hệ thống( quyền Admin ) 
+- Sua(): sửa nội dung tiện ích(quyền Admin ) 
+- Xoa(): Xóa tiện ích khỏi hệ thống(quyền Admin ) 
+• Lớp TinTuc
+Danh sách các thuộc tính
+
+
+    Bảng 5: Các thuộc tính lớp TinTuc
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ ghi chú1IdIntNot nullId tin tức2TitleNvarchar250Tiêu đề tin tức3SummaryNvarchar250Tóm tắt  4ContentNvarcharNội dung5PublishedDateDatetimeThời gian đăng bài6CategoryNameNvarchar250Tên danh mục7WriterFullNameNvarchar250Tên người đăngDanh sách các phương thức:
+- HienThi(): Hiển thị ra danh sách các tin tức của hệ thống
+- Them(): Thực hiện thêm một tin tức vào hệ thống(quyền Admin ) 
+- Sua(): sửa nội dung tin tức(quyền Admin ) 
+- Xoa(): Xóa tin tức khỏi hệ thống(quyền Admin )
+• Lớp KhaoSat
+Danh sách các thuộc tính
+    Bảng 6: Các thuộc tính lớp KhaoSat
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ ghi chú1Survey_IDVarchar36Id khảo sát2Survey_NameNvarchar500Tên khảo sát3Survey_ContentsNvarchar4000Nội dung khảo sát4Survey_TypeIntKiểu khảo sát5Survey_StartDateDatetimeNgày bắt đầu6Survey_EndDateDatetimeNgày kết thúc
+Danh sách các phương thức:
+- HienThi(): Hiển thị ra nội dung khảo sát của hệ thống
+- Them(): Thực hiện thêm một khảo sát vào hệ thống
+- Sua(): sửa nội dung tin tức(quyền Admin ) 
+- Xoa(): Xóa tin tức khỏi hệ thống(quyền Admin )
+3.2.6   Biểu đồ tuần tự
+3.2.6.1  Biểu đồ tuần tự thứ 1
+
+    Hình 18: Biểu đồ tuần tự giao diện tiện ích
+
+
+3.2.6.2  Biểu đồ tuần tự thứ 2
+
+    Hình 19: Biểu đồ tuần tự giao diện tin tức
+3.2.6.3  Biểu đồ tuần tự thứ 3
+
+    Hình 20: Biểu đồ tuần tự giao diện quản lý tin tức
+
+3.2.6.4  Biểu đồ tuần tự thứ 4
+
+    Hình 21: Biểu đồ tuần tự giao diện quản lý tin tức
+
+3.2.7   Cơ sở dữ liệu của hệ thống
+
+    Bảng 7: Bảng tbl_TinTuc
+Tên trườngKiểu dữ liệuKích thướcRàng buộcGhi chúIdIntNot nullId tin tứcTitleNvarchar250Tiêu đề tin tứcSummaryNvarchar250Tóm tắtContentNvarcharNội dungPublishedDateDatetimeThời gian đăng bàiCategoryNameNvarchar250Tên danh mụcWriterFullNameNvarchar250Tên người đăng    Bảng 8: Cấu trúc dữ liệu bảng tbl_TienIch
+Tên trườngKiểu dữ liệuKích thướcRàng buộcGhi chúKeyInt50Not nullTừ khóa tiện íchRouterlinkString250Link liên kếtIconStringIcon tương ứngBackgroudStringGiao diện nềnTitleString250Tên tiện íchBackgroudcolorStringMàu nềnColorStringmàu    
+    Bảng 9: Cấu trúc dữ liệu bảng tbl_KhaoSat
+Tên trườngKiểu dữ liệuKích thướcRàng buộcGhi chúSurvey_IDVarchar36Not nullId khảo sát Survey_NameNvarchar500Tên khảo sátSurvey_ContentsNvarchar4000Nội dung Survey_TypeIntKiểu khảo sátSurvey_StartDateDatetimeNgày bắt đầuSurvey_EndDateDatetimeNgày kết thúc
+
+
+3.2.8  Một số hình ảnh ứng dụng
+
+Hình 22: Giao diện các chức năng  chính của hệ thống
+
+Hình 23: Giao diện danh sách tin tức
+
+Hình 24: Giao diện danh sách tin tức tiếp
+
+Hình 25: Giao diện chi tiết tin tức
+
+Hình 26: Giao diện tin tức tiếp
+
+Hình 27: Giao diện khảo sát 
+
+ Hình 28: Giao diện khảo sát tiếp
+
+Hình 29: Giao diện menu bên
+
+Hình 30: Giao diện danh sách các tiện ích
+CHƯƠNG 4:  KẾT LUẬN
+4.1  Kết quả đạt được của đề tài
+- Tìm hiểu về Ionic framework và Angular 
+- Tìm hiểu, nắm bắt được các công cụ Visual Studio Code, hệ quản trị CSDL SQL Server và Visual Studio.
+- Rèn luyện phân tích thiết kế hướng đối tượng
+- Tìm hiểu và nắm được nghiệp vụ của bài toán
+- Vận dụng được các công nghệ mới vào ứng dụng.
+- Học và tổ chức được dữ liệu cho bài toán theo thiết kế 
+- Xây dựng được ứng dụng với các chức năng cơ bản
+- Nâng cao khả năng tư duy logic, kỹ năng lập trình, phát hiện và sửa lỗi.
+4.2  Hạn chế của đề tài
+- Code còn chưa được tối ưu.
+- Thiết kế giao diện còn đơn giản
+
+ 
+ 
+ 
+ 
+ 
+ 
+	 
+TÀI LIỆU THAM KHẢO
+    x
+    x
+[1] Khóa học Angular 2, ASP.NET CORE trên https://tedu.com.vn/
+[2] Tài liệu về Ionic Framework: https://ionicframework.com/
+[3] Github: https://github.com/
+[4] W3schools: https://www.w3schools.com/
+[5] Stackoverflow: https://stackoverflow.com
+[6] Topdev: https://topdev.vn/
+ 
+58 
+ 
+
+18 
+ 
+
+58 
+ 
+

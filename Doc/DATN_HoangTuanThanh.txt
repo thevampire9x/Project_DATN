@@ -1,0 +1,346 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+- Các thiết bị di động, thiết bị mang theo ngày càng phát triển. .
+- Do nhu cầu của người sử dụng cần những game đẹp hơn, chân thực hơn và hơn nữa phải phù hợp với những thiết bị ngày càng mạnh mẽ hơn.
+- Game Ghost Rider mang lại cho người sử dụng những phút giây giải trí tuyệt vời sau những giờ làm việc, học tập căng thẳng
+1.2 Mục tiêu của đề tài
+- Trình bày được các vấn đề liên quan đến lập trình game trên Unity và ứng dụng vào xây dựng Game với ngôn ngữ lập trình C #
+- Triển khai cài đặt Game trong môi trường Unity và 1 số môi trường di động khác
+- Xây dựng được Game cho người sử dụng giải trí, cho phép người chơi lưu điểm, lưu 1 số thông tin về trò chơi. 
+1.3 Giới hạn và phạm vi của đề tài
+Đề tài xây dựng game Ghost Rider sử dụng một số công nghệ lập trình như C#, Render, Animation, Sound,… và Công cụ lập trình Visual Studio 2017, Unity, Adobe Photoshop 2018, ….
+1.4 Nội dung thực hiện
+	Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Nghiên cứu công nghệ lập trình Game trên nền tảng Unity.
+- Phân tích yêu cầu, giải pháp game trên Unity.
+- Thiết kế giao diện, các chức năng trong game.
+- Thiết kê đồ họa trong game như : các bản đồ, đường đua và các phương tiện di chuyển trong game.
+- Test game.
+- Tiến hành cài đặt trên PC cũng như trên các thiết bị di động khác.
+1.5 Phương pháp tiếp cận
+- Cách tiếp cận : Nghiên cứu các ngôn ngữ lập trình game như C#, JavaScritp,…
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu;
+o Phương pháp phân tích mẫu;
+o Phương pháp thực nghiệm.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về C#
+2.1.1 Khái niệm và nguồn gốc xuất xứ
+C# (đọc là “C thăng” hay “C sharp” (“xi-sáp”)) là một ngôn ngữ lập trình hướng đối tượng được phát triển bởi Microsoft, là phần khởi đầu cho kế hoạch .NET của họ. Tên của ngôn ngữ bao gồm ký tự thăng theo Microsoft nhưng theo ECMA là C#, chỉ bao gồm dấu số thường. Microsoft phát triển C# dựa trên C++ và Java. C# được miêu tả là ngôn ngữ có được sự cân bằng giữa C++,Visual Basic, Delphi và Java.
+C# được thiết kế chủ yếu bởi Anders Hejlsberg kiến trúc sư phần mềm nổi tiếng với các sản phẩm Turbo Pascal, Delphi, J++, WFC.
+2.1.2 Những ưu điểm nổi bật của C#
+Các đặc điểm để làm cho C# là ngôn ngữ lập trình chuyên nghiệp được sử dụng rộng rãi:
+- C# là ngôn ngữ đơn giản.
+Như ta đã biết thì ngôn ngữ C# dựng trên nền tảng C++ và Java nên ngôn ngữ C# khá đơn giản. Nếu chúng ta thân thiện với C và C++ hoậc thậm chí là Java, chúng ta sẽ thấy C# khá giống về diện mạo, cú pháp, biểu thức, toán tử và những chức năng khác được lấy trực tiếp từ ngôn ngữ C và C++, nhưng nó đã được cải tiến để làm cho ngôn ngữ đơn giản hơn. Một vài trong các sự cải tiến là loại bỏ các dư thừa, hay là thêm vào những cú pháp thay đổi.
+- C# là ngôn ngữ hiện đại
+Một vài khái niệm khá mới mẻ khá mơ hồ với các bạn vừa mới học lập trình, như xử lý ngoại lệ, những kiểu dữ liệu mở rộng, bảo mật mã nguồn..v..v... Đây là những đặc tính được cho là của một ngôn ngữ hiện đại cần có. Và C# chứa tất cả các đặt tính ta vừa nêu trên. Các bạn sẽ dần tìm hiểu được các đặt tính trên qua các bài học trong series này.
+- C# là một ngôn ngữ lập trình thuần hướng đối tượng
+Lập trình hướng đối tượng(tiếng Anh: Object-oriented programming, viết tắt: OOP) là một phương pháp lập trình có 4 tính chất. Đó là tính trừu tượng (abstraction), tính đóng gói (encapsulation), tính đa hình (polymorphism) và tính kế thừa (inheritance). C# hỗ trợ cho chúng ta tất cả những đặc tính trên. Và để hiểu rõ hơn thì chúng ta sẽ có một chương trình bày về phần này.
+- C# là một ngôn ngữ ít từ khóa
+C được sử dụng để mô tả thôn# là ngôn ngữ sử dụng giới hạn những từ khóa (gồm khoảng 80 từ khóa và mười mấy kiểu dữ liệu xây dựng sẵn). Nếu bạn nghĩ rằng ngôn ngữ có càng nhiều từ khóa thì sẽ càng mạnh mẽ hơn. Điều này không phải sự thật, lấy ví dụ ngôn ngữ C# làm điển hình nhé. Nếu bạn học sâu về C# bạn sẽ thấy rằng ngôn ngữ này có thể được sử dụng để làm bất cứ nhiệm vụ nào.
+- Ngoài những đặc điểm trên thì còn một số ưu điểm nổi bật của C#:
+C# có cấu trúc khá gần gũi với các ngôn ngữ lập trình truyền thống, nên cũng khá dể dàng tiếp cận và học nhanh với C#.
+C# có thể biên dịch trên nhiều nền tảng máy tính khác nhau.
+C# được xây dựng trên nền tảng của C++ và Java nên nó được thừa hưởng những ưu điểm của ngôn ngữ đó.
+C# là một phần của .NET Framework nên được sự chống lưng khá lớn đến từ bộ phận này.
+C# có IDE Visual Studio cùng nhiều plug-in vô cùng mạnh mẽ.
+2.2 Tổng quan về lập trình Unity
+2.2.1 Giới thiệu
+Unity3D là phần mềm làm games trực tiếp theo thời gian thực, mà không cần render, cho phép người  design game có thể thiết kế InterfaceGraphic, map hay character … từ một phần mềm thứ 2 (thường là các phần mềm thiết kế đồ họa chuyên nghiệp như 3Dsmax, Blender, Maya, XSL,Cinema4D,Cheetah3D, Modo, Autodesk FBX, LightWave…) sau đó chỉ việc import nó vào trong Unity với định dạng của tập tin là *.FBX hay *.dae, *.3DS, *.dxf và *.obj, nhưng định dạng *.FBX hay được dùng vì được tối ưu hóa hơn, còn dùng các định dạng khác ngoài FBX thì phải cài phần mền thiết kế character tưng ứng thì mới dùng được (tức là dùng Maya có định dạng *.mb, *.ma thì muốn dùng được phải cài Maya)
+Ngoài ra khi bạn design được một game thì bạn có thể xuất được ra một file.exe và có thể chạy và chơi được trên PC khác.
+Một thế mạnh nữa của Unity là bạn có thể chạy demo game của bạn ngay trongkhi design, nó có hỗ trợ hai chế độ là Scene và Game, rất thuận tiện cho việc test thử các modulGame.
+Unity3D có 2 loại phiên bản, một cho người dùng free, và một phiên bản pro thì mất phí.
+Khi tải Unity về các bạn cài đặt bình thường, đến khi kết thúc cài đặt nền các bạn chọn phiên bản Pro thì cần phải mua, còn nếu là người dùng free thì các bạn chọn kích  hoạt qua web, chỉ cần có kết nối mạng internet, sau đó chọn cài đặt thủ công và nhập mail, chọn free là bạn có thể sử dụng một bản Unity free.
+2.2.2 Lịch sử phát triển của Unity
+Năm 2012, VentureBeat phát biểu rằng "rất ít công ty đóng góp vào sự phát triển trò chơi độc lập như Unity Technologies.... hơn 1.3 triệu người dùng đang sử dụng Unity để phát triển game trên iOS, Android, máy chơi game, PC, và trò chơi trên web.... Unity sẽ mở ra thời kỳ phát triển công cụ phát triển trò chơi đa nền tảng."
+Đối với Apple Design Awards tại cuộc triển lãm thương mại WWDC 2006, Apple, Inc. đã gọi Unity là Best Use of Mac OS X Graphics (tạm dịch: Ứng dụng tốt nhất cho đồ họa trên nền tảng Mac OS X), một năm sau khi Unity ra mắt tại cùng một triển lãm thương mại Unity Technologies cho biết đây là lần đầu tiên một công cụ phát triển game được trao giải thưởng này. Một cuộc khảo sát tháng 5 năm 2012 của tạp chí Game Developer đã khẳng định Unity là công cụ phát triển trò chơi hàng đầu trên di động. Vào tháng 7/2014, Unity đã đạt giải "Best Engine" tại liên hoan trao giải thưởng công nghệ hàng năm của Anh.
+Unity 5 cũng nhận được những lời khen tương tự, với The Verge đã nói rằng "Unity giúp việc phát triển game trở nên dễ dàng và phổ biến.... Unity 5 là một biến tiến đáng mong đợi trong tương lai.”
+Sau khi phát hành Unity 5, Unity Technologies bị chỉ trích rằng khổi lượng lớn các game phát hành trên Steam là của các nhà phát triển thiếu kinh nghiệm. CEO John Riccitiello giải thích trong một cuộc họp báo rằng đây là tác dụng phụ khi chúng ta xã hội hóa việc phát triển game: "If I had my way, I'd like to see 50 million people using Unity – although I don't think we're going to get there any time soon. I'd like to see high school and college kids using it, people outside the core industry. I think it's sad that most people are consumers of technology and not creators. The world's a better place when people know how to create, not just consume, and that's what we're trying to promote." (tạm dịch: nếu chúng tôi có cách, tôi muốn 50 triệu người sử dụng Unity- dù chúng tôi biết rất khó đạt được điều đó. Tôi muốn thấy những đứa trẻ ở trường Trung học và Đại học sử dụng nó, những người ngoài ngành. Tôi nghĩ rằng thật buồn khi hầu hết mọi người là người tiêu dùng về công nghệ, chứ không phải người sáng tạo. Thế giới là một nơi tốt đẹp hơn khi người ta biết làm thế nào để tạo ra, không chỉ tiêu thụ, và đó là những gì chúng tôi đang cố gắng để thúc đẩy.)
+Vào tháng 12 năm 2016, Unity Technologies thông báo họ sẽ thay đổi hệ thống số phiên bản trên Unity từ định theo thứ tự sang năm phát hành để xắp xếp các phiên bản với nhịp cập nhật thường xuyên hơn
+2.2.3 Kiến trúc của Unity
+
+2.2.4 Các thành phần cơ bản của một ứng dụng Unity
+• Assets
+Assets là tài nguyên xây dựng nên một dự án trên Unity. Những tài nguyên có thể là hình ảnh, âm thanh, mô hình 3D, chất liệu (material), texture,  … hoặc cả một project hoàn chỉnh.
+Các asset do chính những nhà phát triển game tạo ra và có thể được download miễn phí hoặc trả phí trên Unity Asset Store. Đây là một trong những tính năng rất hay của Unity. Các asset này sẽ giúp giảm thiểu rất nhiều thời gian cho việc thiết kế và lập trình game.
+Các asset được đăng tải trên trang chính thức: https://www.assetstore.unity3d.com/en - 16/04/2016.
+  
+Hình 2.1:Unity Asset Store
+• Scenes
+Trong Unity, một cảnh chơi (hoặc một phân đoạn) là những màn chơi riêng biệt, một khu vực trong game hoặc thành phần có trong nội dung của trò chơi (các menu). Các thành phần này được gọi là Scene. Bằng cách tạo ra nhiều Scenes, chúng ta có thể phân phối thời gian và tối ưu tài nguyên, kiểm tra các phân đoạn trong game một cách độc lập.
+  
+Hình 2.2 : Một cảnh trong Scene
+• Game Objects
+Khi Asset được sử dụng trong các Scene, Unity định nghĩa đó là Game Object. Đây là một thuật ngữ thông dụng, đặc biệt trong mảng lập trình. Tất cả các Game Object đều chứa ít nhất một thành phần cơ bản là Transform, lưu trữ thông tin về vị trí, góc xoay và tỉ lệ của Game Object. Thành phần Transform có thể được tuỳ biến và chỉnh sửa trong quá trình lập trình.
+• Components
+Components là các thành phần trong game, bổ sung tính năng cho các Game Object. Mỗi Component có chức năng riêng biệt. Đa phần các Component phụ thuộc vào Transform, vì nó lưu trữ các thông số cơ bản của Game Object.
+Bản chất của Game Object là không có gì cả, các đặc tính và khả năng của Game Object nằm hoàn toàn trong các Component. Do đó chúng ta có thể xây dựng nên bất kỳ Game Object nào trong game mà chúng ta có thể tưởng tượng được.
+                  
+                    Hình 2.3:Các thành phần của một Game Object
+• Scripts
+Scripts được Unity xem như một Component. Đây là thành phần thiết yếu trong quá trình phát triển game. Bất kỳ một game nào, dù đơn giản nhất đều cần đến Scripts để tương tác với các thao tác của người chơi, hoặc quản lý các sự kiện để thay đổi chiều hướng của game tương ứng với kịch bản game. Unity cung cấp cho lập trình viên khả năng viết Script bằng các ngôn ngữ: JavaScript, C#. Unity không đòi hỏi lập trình viên phải học cách lập trình trong Unity, nhưng trong nhiều tình huống, chúng ta cần sử dụng Script trong mỗi phần của kịch bản game. Để viết Script, chúng ta có thể làm việc với một trình biên tập Script độc lập của Unity, hoặc làm việc trên Mono Developer được tích hợp vào Unity trong những phiên bản gần đây. Mono Developer là một IDE khá tốt, cung cấp nhiều chức năng tương tự Visual Studio. Mã nguồn viết trên Mono Developer sẽ đươc cập nhật và lưu trữ trong dự án trên Unity.
+• Prefabs
+Prefabs thực chất là Game Object được lưu trữ lại để tái sử dụng. Các Game Object được nhân bản từ một prefab sẽ giống nhau hoàn toàn, ngoại trừ thành phần Transform để phân biệt và quản lý được tốt hơn.
+Để tạo ra một prefab, ta đơn giản chỉ cần kéo một Game Object vào cửa sổ Project.
+
+        
+Hình 2.4: Prefab trong Unity
+2.3 Tổng quan về lập trình android
+2.3.1 Giới thiệu
+      Android là một hệ điều hành dựa trên nền tảng Linux được thiết kế dành cho các thiết bị di động có màn hình cảm ứng như điện thoại thông minh và máy tính bảng. Ban đầu, Android được phát triển bởi Tổng công ty Android, với sự hỗ trợ tài chính từ Google và sau này được chính Google mua lại vào năm 2005. Android ra mắt vào năm 2007 cùng với tuyên bố thành lập Liên minh thiết bị cầm tay mở: một hiệp hội gồm các công ty phần cứng, phần mềm, và viễn thông với mục tiêu đẩy mạnh các tiêu chuẩn mở cho các thiết bị di động. Chiếc điện thoại đầu tiên chạy Android được bán vào tháng 10 năm 2008.
+      Android có mã nguồn mở và Google phát hành mã nguồn theo Giấy phép Apache. Chính mã nguồn mở cùng với một giấy phép không có nhiều ràng buộc đã cho phép các nhà phát triển thiết bị, mạng di động và các lập trình viên nhiệt huyết được điều chỉnh và phân phối Android một cách tự do. Ngoài ra, Android còn có một cộng đồng lập trình viên đông đảo chuyên viết các ứng dụng để mở rộng chức năng của thiết bị, bằng một loại ngôn ngữ lập trình Java có sửa đổi. Vào tháng 10 năm 2012, có khoảng 700.000 ứng dụng trên Android, và số lượt tải ứng dụng từ Google Play, cửa hàng ứng dụng chính của Android, ước tính khoảng 25 tỷ lượt.
+      Những yếu tố này đã giúp Android trở thành nền tảng điện thoại thông minh phổ biến nhất thế giới, vượt qua Symbian vào quý 4 năm 2010, và được các công ty công nghệ lựa chọn khi họ cần một hệ điều hành không nặng nề, có khả năng tinh chỉnh, và giá rẻ chạy trên các thiết bị công nghệ cao thay vì tạo dựng từ đầu. Kết quả là mặc dù được thiết kế để chạy trên điện thoại và máy tính bảng, Android đã xuất hiện trên TV, máy chơi game và các thiết bị điện tử khác. Bản chất mở của Android cũng khích lệ một đội ngũ đông đảo lập trình viên và những người đam mê sử dụng mã nguồn mở để tạo ra những dự án do cộng đồng quản lý. Những dự án này bổ sung các tính năng cao cấp cho những người dùng thích tìm tòi hoặc đưa Android vào các thiết bị ban đầu chạy hệ điều hành khác.
+      Android chiếm 75% thị phần điện thoại thông minh trên toàn thế giới vào thời điểm quý 3 năm 2012, với tổng cộng 500 triệu thiết bị đã được kích hoạt và 1,3 triệu lượt kích hoạt mỗi ngày. Sự thành công của hệ điều hành cũng khiến nó trở thành mục tiêu trong các vụ kiện liên quan đến bằng phát minh, góp mặt trong cái gọi là "cuộc chiến điện thoại thông minh" giữa các công ty công nghệ.
+2.3.2 Lịch sử phát triển hệ điều hành android
+      Tổng công ty Android (Android, Inc.) được thành lập tại Palo Alto, California vào tháng 10 năm 2003 bởi Andy Rubin (đồng sáng lập công ty Danger), Rich Miner (đồng sáng lập Tổng công ty Viễn thông Wildfire), Nick Sears (từng là Phó giám đốc T-Mobile), và Chris White (trưởng thiết kế và giao diện tại WebTV) để phát triển, theo lời của Rubin, "các thiết bị di động thông minh hơn có thể biết được vị trí và sở thích của người dùng". DÙ những người thành lập và nhân viên đều là những người có tiếng tăm, Tổng công ty Android hoạt động một cách âm thầm, chỉ tiết lộ rằng họ đang làm phần mềm dành cho điện thoại di động. Trong năm đó, Rubin hết kinh phí. Steve Perlman, một người bạn thân của Rubin, mang cho ông 10.000 USD tiền mặt nhưng từ chối tham gia vào công ty.
+      Google mua lại Tổng công ty Android vào ngày 17 tháng 8 năm 2005, biến nó thành một bộ phận trực thuộc Google. Những nhân viên của chủ chốt của Tổng công ty Android, gồm Rubin, Miner và White, vẫn tiếp tục ở lại công ty làm việc sau thương vụ này. Vào thời điểm đó không có nhiều thông tin về Tổng công ty, nhưng nhiều người đồn đoán rằng Google dự tính tham gia thị trường điện thoại di động sau bước đi này. Tại Google, nhóm do Rubin đứng đầu đã phát triển một nền tảng thiết bị di động phát triển trên nền nhân Linux. Google quảng bá nền tảng này cho các nhà sản xuất điện thoại và các nhà mạng với lời hứa sẽ cung cấp một hệ thống uyển chuyển và có khả năng nâng cấp. Google đã liên hệ với hàng loạt hãng phần cứng cũng như đối tác phần mềm, bắn tin cho các nhà mạng rằng họ sẵn sàng hợp tác với các cấp độ khác nhau.
+      Ngày càng nhiều suy đoán rằng Google sẽ tham gia thị trường điện thoại di động xuất hiện trong tháng 12 năm 2006. Tin tức của BBC và Nhật báo phố Wall chú thích rằng Google muốn đưa công nghệ tìm kiếm và các ứng dụng của họ vào điện thoại di động và họ đang nỗ lực làm việc để thực hiện điều này. Các phương tiện truyền thông truyền thống lẫn online cũng viết về tin đồn rằng Google đang phát triển một thiết bị cầm tay mang thương hiệu Google. Một vài tờ báo còn nói rằng trong khi Google vẫn đang thực hiện những bản mô tả kỹ thuật chi tiết, họ đã trình diễn sản phẩm mẫu cho các nhà sản xuất điện thoại di động và nhà mạng. Tháng 9 năm 2007, InformationWeek đăng tải một nghiên cứu của Evalueserve cho biết Google đã nộp một số đơn xin cấp bằng sáng chế trong lĩnh vực điện thoại di động.
+      Ngày 5 tháng 11 năm 2007, Liên minh thiết bị cầm tay mở (Open Handset Alliance), một hiệp hội bao gồm nhiều công ty trong đó có Texas Instruments, tập đoàn Broadcom, Google, HTC, Intel, LG, tập đoàn Marvell Technology, Motorola, Nvidia, Qualcomm, Samsung Electronics, Sprint Nextel và T-Mobile được thành lập với mục đích phát triển các tiêu chuẩn mở cho thiết bị di động. Cùng ngày, Android cũng được ra mắt với vai trò là sản phẩm đầu tiên của Liên minh, một nền tảng thiết bị di động được xây dựng trên nhân Linux phiên bản 2.6. Chiếc điện thoại chạy Android đầu tiên được bán ra là HTC Dream, phát hành ngày 22 tháng 10 năm 2008. Biểu trưng của hệ điều hành Android mới là một con rôbốt màu xanh lá cây do hãng thiết kế Irina Blok tại California vẽ.
+      Từ năm 2008, Android đã trải qua nhiều lần cập nhật để dần dần cải tiến hệ điều hành, bổ sung các tính năng mới và sửa các lỗi trong những lần phát hành trước. Mỗi bản nâng cấp được đặt tên lần lượt theo thứ tự bảng chữ cái, theo tên của một món ăn tráng miệng; ví dụ như phiên bản 1.5 Cupcake (bánh bông lan nhỏ có kem) tiếp nối bằng phiên bản 1.6 Donut (bánh vòng). Phiên bản mới nhất hiện nay là 6.0 Marshmallow (kẹo dẻo) và 7.0 Nougat Beta. Vào năm 2010, Google ra mắt loạt thiết bị Nexus - một dòng sản phẩm bao gồm điện thoại thông minh và máy tính bảng chạy hệ điều hành Android, do các đối tác phần cứng sản xuất. HTC đã hợp tác với Google trong chiếc điện thoại thông minh Nexus đầu tiên, Nexus One. Kể từ đó nhiều thiết bị mới hơn đã gia nhập vào dòng sản phẩm này, như điện thoại Nexus 4 và máy tính bảng Nexus 10, lần lượt do LG và Samsung sản xuất. Google xem điện thoại và máy tính bảng Nexus là những thiết bị Android chủ lực của mình, với những tính năng phần cứng và phần mềm mới nhất của Android.
+2.3.3 Kiến trúc hệ điều hành android
+      Kiến trúc hệ điều hành Android gồm 4 phần chính, mô hình dưới đây sẽ cho ta cái nhìn tổng quan về kiến trúc Android. Nhân của Android được phát triển dựa vào Kernel Linux 2.6. Mỗi tầng trong kiến trúc Android hoạt động dựa vào tầng bên dưới nó.
+
+Hình 2.5 – Kiến trúc hệ điều hành android
+      Có thể ban đầu bạn thấy sơ đồ hơi rối mắt nhưng không sao, chúng ta sẽ lần lượt tìm hiểu theo thứ tự từ dưới lên.
+Nhân Linux (Linux kernel)
+      Nằm ở tầng dưới cùng là lớp Linux kernal – Linux 3.6 với khoảng 115 patches. Lớp này liên hệ với phần cứng và nó chứa tất cả driver phần cứng cần thiết như camera, bàn phím, màn hình…
+Thư viện Android (Android libraries) và Android Runtime
+      Phía trên tầng Linux kernel là tầng libraries, chứa những thư viện hỗ trợ. Một số có thể kể đến như là bộ máy trình duyệt web mã nguồn mở WebKit, thư viện libc, cơ sở dữ liệu SQLite tiện lợi cho việc lưu trữ và chia sẻ dữ liệu, thư viện hỗ trợ thu phát âm thanh và video, thư viện SSL giúp bảo mật mạng…
+      Tầng này chứa tất cả các thư viện Java, được viết đặc biệt cho Android như các thư viện framework, các thư viện xây dựng giao diện, đồ họa và cơ sở dữ liệu. Dưới đây là một số thư viện quan trọng mà các lập trình viên nên biết:
+• android.app − Cung cấp quyền truy cập tới mô hình ứng dụng và là nền tảng của mọi ứng dụng Android applications.
+• android.content − Cho phép truy cập nội dung, phát hành và tin nhắn giữa các ứng dụng và các thành phần trong một ứng dung.
+• android.database −  Được dùng để truy cập vào dữ liệu được đưa ra bởi bộ phận cung cấp nội dung, bao gồm các lớp quản lý cơ sở dữ liệu SQLite.
+• android.opengl − Cho phép tương tác với thư viện đồ họa OpenGL ES 3D.
+• android.os − Giúp ứng dụng truy cập những dịch vụ cơ bản của hệ điều hành bao gồm tin nhắn, dịch vụ hệ thống và liên lạc nội bộ (inter-process communication).
+• android.text − Được dùng để vẽ và thao tác văn bản trên màn hình.
+• android.view − Các khối xây dựng cơ bản của giao diện người dùng.
+• android.widget − Một tập hợp rất nhiều thành phần giao diện được xây dựng sẵn như nút bấm (button), nhãn (label), danh sách hiển thị (list views), quản lý bố cục (layout managers)…
+• android.webkit − Tập hợp các lớp (classes) cho phép trình duyệt web được nhúng vào ứng dụng.
+      Trong tầng này còn có một phần không kém phần quan trọng là Android runtime, bây giờ chúng ta sẽ tìm hiểu các thư viện C/C++ trong tầng này.
+      Android Runtime chứa Dalvik Virtual Machine (DVM) – một biến thể của Java Virtual Machine, đặc biêt thiết kế và tối ưu hóa cho Android. DVM giúp mỗi ứng dụng Android chạy trong chính tiến trình (process) của nó với một đại diện (instance) của DVM.
+      Ngoài ra, Android Runtime cũng chứa tập hợp các thư viện quan trong cho phép người lập trình viết ứng dụng sử dụng ngôn ngữ lập trình Java.
+Application Framework
+      Application Framework cung cấp nhiều dịch vụ cấp cao dưới dạng các lớp viết bằng Java (Java classes) Lập trình viên được phép sử dụng các lớp này để tạo ra các ứng dụng.
+      Android framework chứa các dịch vụ quan trọng như:
+• Activity Manager − Quản lý tất cả các phần của vòng đời (lifecycle) ứng dụng và các hoạt động ngăn xếp (activity stack).
+• Content Providers − Cho phép ứng dụng phát hành và chia sẻ dữ liệu với ứng dụng khác.
+• Resource Manager − Cho phép truy cập tới những tài nguyên không phải là mã nguồn như chuỗi, cài đặt màu, bố cục giao diện.
+• Notifications Manager − Giúp ứng dụng hiển thị thông báo và nhắc nhở người dùng.
+• View System − Một tập hợp mở rộng giúp tạo giao diện người dùng.
+Ứng dụng (applications)
+Ở tầng trên cùng là các ứng dụng Android đi kèm với hệ điều hành như Contacts Books, Browser, Games… Thiết nghĩ không cần nói nhiều thêm về tầng này.
+
+2.3.4 Các thành phần cơ bản của một ứng dụng android
+
+
+
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Phát biểu bài toán
+3.2 Yêu cầu của hệ thống
+Hệ thống game đua xe Ghost Rider cung cấp các chức năng các thao tác như điều khiển phương tiện, chọn hệ thống map đua, chọn thiết bị tham gia đua,… Hệ thống thao tác 1 cách dễ dàng và tương thích tốt với nhiều đối tượng khác nhau cùng với 1 giao diện đẹp mắt dễ sử dụng. Game sẽ đáp ứng được nhu cầu giải trí của người chơi.
+Ứng dụng game Ghost Rider trên Unity cần đạt được những mục tiêu sau:
+Hệ thống báo lượng tiền khi kết thúc màn đua
+Hệ thống cung cấp đánh giá màn chơi thông qua thứ hạng khi về đích của người chơi(1st, 2nd, 3rd )
+Hệ thống cung cấp chức năng cho phép di chuyển phương tiện khi tham gia màn chơi cũng như di chuyển trong đường đua
+Hệ thống cung cấp việc tạm dừng
+Xử lý hiệu ứng va chạm tóe lửa khi va chạm vào phương tiện khác hoặc giải phân cách.
+Xử lý game khi hoàn thành vòng đua
+3.3 Yêu cầu về các chức năng
+3.3.1 Menu trong game
+Hiển thị menu khi vào game cho phép người chơi chọn chơi(play) hoặc chọn thoát game(quit).
+3.3.2 Chức năng báo tiền cho người chơi
+Cung cấp chức năng tính tiền cho người chơi, mỗi khi hoàn thành màn chơi với những thứ hạng từ 1st, 2nd, 3rd sẽ được thưởng giảm dần nếu hoàn thành với thứ hạng lớn hơn 3 thì sẽ được thưởng bằng nhau và ít hơn 3 thứ hạng đầu. Số tiền này sẽ được lưu lại và hiển thị tại màn hình chọn Map đua cũng như màn hình chọn(mua) phương tiện tham gia đua
+3.3.3 Chức năng đánh giá màn chơi
+Cung cấp chứ năng đánh giá màn chơi khi người chơi chơi qua màn, đánh giá thông qua thứ hạng của người chơi trong cuộc đua
+3.3.4 Chức năng mua các phương tiện tham gia vào màn chơi
+Cung cấp chức năng chọn, mua và sử dụng các thiết bị tham gia vào cuộc đua, mua bằng số tiền kiếm được qua các màn đua trước đó hoặc đua lại những cuộc đua đã hoàn thành để cải thiện thành tích thứ hạng
+3.3.5 Chức năng tạm dùng khi chơi game
+Cho phép người chơi tạm dùng khi đang chơi game và hiển thị bảng chọn(menu). Bảng menu cho phép người chơi chơi tiếp (resume) chơi lại(restart) hoặc thoát về menu chính(exit)
+3.3.6 Hiệu ứng va quẹt, tóe lửa
+Hệ thống cung cấp các hiệu ứng khi phương tiện đua va chạm với nhau cũng như các phương tiện va chạm với dải phân cách
+3.3.7 Kết thúc game 
+Khi người chơi về đích tức là đã hoàn thành màn chơi(màn đua) lúc này thứ tự về đích của người chơi(thứ hạng đua) sẽ được lưu lại.
+3.4 Biểu đồ UseCase
+3.4.1 Biểu đồ UseCase mức tổng quát
+
+                                  Hình 3.1: Biểu đồ Usecae tổng quát
+3.4.2 Đặc tả UseCase
+- UseCase “Choice Car”
+Bảng 3.1 –Đặc tả UseCase Choice Car
+UseCase- Choice CarMô tả- Chọn loại xe mà người chơi sẽ điều khiểnNgười dùng- Tất cả người chơiĐiều kiện đầu- Truy cập vào Mode “Choice Car”Sự kiện chính- Người dùng được chọn loại xe mà mình muốn Điều kiện cuối- Các đặc tính chính của xe
+
+- UseCase “Choice Track”
+Bảng 3.2–Đặc tả UseCase Choice Track
+UseCase- Choice TrackMô tả- Chọn loại màn đua mà người chơi sẽ tham giaNgười dùng- Tất cả người chơiĐiều kiện đầu- Truy cập vào Mode “Choice Track”Sự kiện chính- Người dùng được chọn loại màn đua mà mình sẽ đua Điều kiện cuối- Các đặc tính chính của màn đua
+3.5 Biểu đồ lớp
+3.5.1 Biểu đồ lớp (mức phân tích)
+
+Hình 3.2: Biểu đồ lớp (mức phân tích)
+3.5.2 Danh sách các lớp đối tượng và quan hệ
+Bảng 3.3– Danh sách các lớp đối tượng và quan hệ
+
+STTTên lớp/quan hệLoạiÝ nghĩa/Ghi chú1CarLớp Xe đua2TrackLớp Màn đua 3.5.3 Mô tả chi tiết từng lớp đối tượng
+- Lớp Car
+Bảng 3.4 –Mô tả chi tiết lớp Car
+
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IDCNvarchar(50)Không trùngMã xe đua2NameCNvarchar(50)Tên xe đua3MoneyCNvarchar(50)Giá tiền xe đua4SpeedNvarchar(50)Tốc độ tối đa- Lớp Track
+Bảng 3.5 – Mô tả chi tiết lớp Track
+
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IDTNvarchar(50)Không trùngMã màn đua2NameTNvarchar(50)Tên màn đua3RoundNvarchar(50)Số vòng đua trong màn đua4LengthNvarchar(50)Độ dài màn đua
+
+
+3.6 Biểu tuần tự
+3.6.1 Chọn xe đua
+
+                                  Hình 3.3: Biểu đồ tuần tự chọn xe đua
+3.6.2 Chọn màn đua
+
+
+
+
+                                Hình 3.4: Biểu đồ tuần tự chọn màn đua
+3.7 Các module của hệ thống
+      Bài toán xây dựng game Ghost Rider trên Unity bao gồm các modul chính sau:
+3.7.1 Module chọn xe đua
+- Phương thức chọn xe đua
+3.7.2 Module chọn màn đua
+- Phương thức chọn màn đua
+3.8 Thiết kế đặc tả giao diện
+- Đây là giao diện chính khi ta vào game, trên màn hình này có một số nút chọn cho phép người chơi chọn như: Play Game, Track Select và Quit
+o Nút Play Game cho phép người chơi chọn thẳng vào màn chơi đầu tiên trong lần chơi đầu và màn chơi chưa hoàn thành trước đây nếu đã vào game nhiều lần
+o Nút Track Select cho phép người chơi chọn màn đua mà mình muốn đua
+o Nút Quit cho phép người chơi thoát khỏi game.
+
+
+      Hình 3.5: Menu chính của game
+- Khi người chơi chọn nút “Play Game” trong Menu chính
+
+                                  Hình 3.6: Nút Play Game	
+- Hệ thống sẽ chuyển bạn vào màn chơi đầu tiên “The Forest”
+- Khi bạn bắt đầu màn chơi đồng hồ sẽ đếm ngược trong vòng 3s , sau 3s vòng đua sẽ bắt đầu tính thời gian đua lúc này bạn có thể bắt đầu đua.
+
+  Hình 3.7: Màn đua 1 khi bắt đầu
+- Trong màn đua có 1 số khung hiển thi chính sau:
+• Trên cúng bên trái là khung hiển thị vòng đua, trong khung này có 2 giá trị, giá trị ban đầu hiển thị bạn đã đua được bao nhiêu vòng, giá trị thứ 2 là số vòng đua của màn chơi mà bạn phải hoàn thành
+                                      
+Hình 3.8: Khung Lap
+• Khung ở giữa trên cùng là gương chiếu phía sau của xe, gương này cho phép bạn nhìn về phía sau của xe khi đua, rất hữu hiệu để tránh các pha vượt hay thúc sau của xe đua cùng
+                                    
+                                           Hình 3.9: Gương chiếu sau
+• Khung trên cùng bên trái là khung hiển thị thời gian đua, khung nay hiển thị thời gian của vòng đua cũng như giá trị đua tốt nhất của vòng đua này
+                                   
+      Hình 3.10: Khung hiển thị thời gian
+• Khung dưới cùng bên trái là minimap giúp bạn biết được vị trí của mình trong vòng đua, khung này  là 1 camera được trên cao hướng xuống chiếc xe đua của bạn. 
+               
+                                          Hình 3.11: Khung mini map
+- Và đâu là giao diện khi bạn khi đang tham gia đua, mọi khung sẽ hoạt động như ảnh
+
+Hình 3.12: Màn đua 1 khi đang được chơi
+- Khi bạn kết thúc màn đua là khi bạn đua hết số vòng đua và vượt qua vạch đích (nếu bạn về trước xe đua cùng) thì hệ thống sẽ kết thúc vòng đua đồng thời sẽ phát nhạc và vinh danh người về nhất bằng cách quay vòng quanh chiếc xe đã về nhất đồng thời nếu thời gian đua là nhanh nhất thì hệ thống sẽ ghi lại thời gian đó là thời gian đua nhanh nhất “Best
+
+      Hình 3.13: Khi kết thúc màn 1
+• Nếu như ở Menu chính bạn chọn nút “Track Select”
+                                       
+                                                Hình 3.14: Nút Track Select
+Thì hệ thống sẽ đua bạn đến màn hình và tại đây bạn có thể chọn màn đua mà mình muốn đua
+
+Hình 3.15: Màn hình Track Selection cho phép chọn màn đua
+- Nếu ở đây ta chọn màn đua The Forest thì sẽ giống như khi nhấn nút “Play Game” vừa nãy, vì vậy ta sẽ chọn màn đua Valley.
+Đây là màn hình khi mới bắt đầu của màn đua 2 “Valley”
+
+                                        Hình 3.16: Màn đua 2 khi bắt đầu
+- Mọi chức năng cũng tương tự như màn 1 khác là tại vòng này chúng ta sẽ phải đua 2 vòng
+- Trong màn đua có 1 số khung hiển thi chính sau:
+o Trên cúng bên trái là khung hiển thị vòng đua, trong khung này có 2 giá trị, giá trị ban đầu hiển thị bạn đã đua được bao nhiêu vòng, giá trị thứ 2 là số vòng đua của màn chơi mà bạn phải hoàn thành
+   
+   Hình 3.17: Khung Lap Màn đua 2
+• Khung ở giữa trên cùng là gương chiếu phía sau của xe, gương này cho phép bạn nhìn về phía sau của xe khi đua, rất hữu hiệu để tránh các pha vượt hay thúc sau của xe đua cùng
+
+                                          Hình 3.18: Gương chiếu sau
+• Khung trên cùng bên trái là khung hiển thị thời gian đua, khung nay hiển thị thời gian của vòng đua cũng như giá trị đua tốt nhất của vòng đua này
+   
+Hình 3.19: Khung hiển thị thời gian
+• Khung dưới cùng bên trái là minimap giúp bạn biết được vị trí của mình trong vòng đua, khung này  là 1 camera được trên cao hướng xuống chiếc xe đua của bạn. 
+                  
+                                             Hình 3.20: Khung mini map
+Và đâu là giao diện khi bạn khi đang tham gia đua 2, mọi khung sẽ hoạt động như ảnh
+
+Hình 3.21: Màn đua 2 khi đang được chơi
+- Khi bạn kết thúc màn đua là khi bạn đua hết số vòng đua và vượt qua vạch đích (nếu bạn về trước xe đua cùng) thì hệ thống sẽ kết thúc vòng đua đồng thời sẽ phát nhạc và vinh danh người về nhất bằng cách quay vòng quanh chiếc xe đã về nhất đồng thời nếu thời gian đua là nhanh nhất thì hệ thống sẽ ghi lại thời gian đó là thời gian đua nhanh nhất “Best”
+
+                                       Hình 3.22: Khi kết thúc vòng đua
+Sau khi đua xong màn 2 ”Forest” ta sẽ được chuyển đến đau màn 3 “Lake Trace Track”
+
+               Hình 3.23: Màn đua 3 khi bắt đầu
+Mọi chức năng cũng tương tự như màn 1 và màn 2  khác là tại vòng này chúng ta sẽ phải đua 3 vòng
+- Trong màn đua có 1 số khung hiển thi chính sau:
+• Trên cúng bên trái là khung hiển thị vòng đua, trong khung này có 2 giá trị, giá trị ban đầu hiển thị bạn đã đua được bao nhiêu vòng, giá trị thứ 2 là số vòng đua của màn chơi mà bạn phải hoàn thành
+
+   
+   Hình 3.24: Khung Lap Màn đua 3
+• Khung ở giữa trên cùng là gương chiếu phía sau của xe, gương này cho phép bạn nhìn về phía sau của xe khi đua, rất hữu hiệu để tránh các pha vượt hay thúc sau của xe đua cùng
+
+                                          Hình 3.25: Gương chiếu sau
+• Khung trên cùng bên trái là khung hiển thị thời gian đua, khung nay hiển thị thời gian của vòng đua cũng như giá trị đua tốt nhất của vòng đua này
+   
+Hình 3.26: Khung hiển thị thời gian
+• Khung dưới cùng bên trái là minimap giúp bạn biết được vị trí của mình trong vòng đua, khung này  là 1 camera được trên cao hướng xuống chiếc xe đua của bạn. 
+               
+                                         Hình 3.27: Khung mini map
+Và đâu là giao diện khi bạn khi đang tham gia màn 3, mọi khung sẽ hoạt động như ảnh
+
+Hình 3.28: Màn đua 3 khi đang được chơi
+- Khi bạn kết thúc màn đua là khi bạn đua hết số vòng đua và vượt qua vạch đích (nếu bạn về trước xe đua cùng) thì hệ thống sẽ kết thúc vòng đua đồng thời sẽ phát nhạc và vinh danh người về nhất bằng cách quay vòng quanh chiếc xe đã về nhất đồng thời nếu thời gian đua là nhanh nhất thì hệ thống sẽ ghi lại thời gian đó là thời gian đua nhanh nhất “Best”
+
+                                       Hình 3.29: Khi kết thúc vòng đua
+- Nếu tại màn hình “Track Selection” ta chọn  nút “<<Main Ment ” thì ta sẽ quay lại màn hình Main Menu ban đầu
+                       
+                            Hình 3.30: Nút Back trở lại Main Menu
+- Để thoát game tại màn hình Main Menu ta nhấn chọn Quit
+                      
+                                 Hình 3.31: Nút Quit để thoát game 
+
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+- Tìm hiểu, nắm bắt được các công cụ thiết kế game 
+- Biết được cách thiết kế game động và cách tổ chức dữ liệu
+- Cho phép người dùng lưu điểm khi chơi, chọn loại phương tiện trong game
+- Xử lý các loại va chạm, cháy nổ, địa hình,….
+- Tạo ra một game đua xe khá ưng ý
+- Game tương đối dễ điều khiển phù hợp với nhiều lứa tuổi khác nhau
+- Game chạy mượt mà, không giật lag
+- Có nhiều hiệu ứng trong game
+- Hệ thống báo lượng tiền khi kết thúc màn đua
+- Hệ thống cung cấp đánh giá màn chơi thông qua thứ hạng khi về đích của người chơi(1st, 2nd, 3rd )
+- Hệ thống cung cấp chức năng cho phép di chuyển phương tiện khi tham gia màn chơi cũng như di chuyển trong đường đua
+- Hệ thống cung cấp việc tạm dừng
+- Xử lý hiệu ứng va chạm tóe lửa khi va chạm vào phương tiện khác hoặc giải phân cách.
+- Xử lý game khi hoàn thành vòng đua
+- Hệ thống âm thanh trong game đầy đủ và chân thực
+- Hệ thống map dễ chọn lựa và trực quan.
+4.2 Hạn chế của đề tài
+-	Hệ thống game Ghost Rider  mới dừng lại ở giải các module cơ bản của game, chưa phong phú ở phương tiện di chuyển cũng như địa hình trong game chưa thật phong phú
+-	Giao diện game còn tương đối đơn giản và chưa thật sự phong phú
+4.3 Hướng phát triển của đề tài
+-	Xây dựng thêm các phần bổ trợ thêm cho game cũng như số lượng các loại phương tiện, địa hình. Bổ sung các module hỗ trợ cho các game
+TÀI LIỆU THAM KHẢO
+ [1] Khoa CNTT, Giáo trình Lập trình hướng đối tượng, Đại Học Sư Phạm Kỹ Thuật Hưng Yên.
+ [2]. Dương Quang Thiện, .NET toàn tập. TP.HCM: Nhà xuất bản Tổng hợp TP. HCM, 2005.
+ [3]. Jennifer Greene, Andrew Stellman, Hear First C#. 
+ [4]. Janin Suvak, Lập trình Game với Unity. Trường đại học FPT dịch. - Hà Nội : Bách khoa Hà Nội/Trường đại học FPT, 2015
+ [5] Khoa Phạm, Khóa học lập trình Unity của Khoa Phạm https://online.khoapham.vn/5-Unity
+ [6] Aptech, Ngôn ngữ lập trình C#. http://BackkhoaAptech.com
+ [7] Jay Hilyard, Stephen Teilhet, C# 3.0 Cookbook, 3rd Edition
+x
+x
+
+PHỤ LỤC
+
+STTTên công việcThời gian (ngày)Ngày 
+bắt đầuNgày 
+kết thúcNgười 
+thực hiệnTrạng thái1Phát biểu bài toán1022/01/201831/01/2018Hoàng Tuân ThànhHoàn thành2Xác định yêu cầu1031/01/201809/02/2018Hoàng Tuấn ThànhHoàn thành3Xây dựng biểu đồ usecase309/02/201811/02/2018Hoàng Tuấn ThànhHoàn thành4Xây dựng biểu đồ lớp311/02/201813/02/2018Hoàng Tuấn ThànhHoàn thành5Xây dựng biểu đồ tuần tự313/02/201815/02/2018Hoàng Tuấn ThànhHoàn thành6Coding8915/02/201801/05/2018Hoàng Tuấn ThànhHoàn thành7Viết báo cáo2101/05/201821/05/2018Hoàng Tuấn ThànhHoàn thành
+Xây dựng game Ghost Rider trên Unity
+
+
+

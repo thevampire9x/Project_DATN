@@ -1,0 +1,298 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+    
+1.1 Lý do chọn đề tài
+    Hiện nay, ngành công nghiệp game đang phát triển vượt bậc với những hãng game nổi tiếng như EA, Blizzard, Ubisoft,… và mỗi sản phẩm game được tạo ra cũng giống như một tác phẩm nghệ thuật của bộ môn nghệ thuật thứ tám của thế giới. Với sự phát triển đó trên thế giới xuất hiện các giải đấu hàng triệu đô với nhiều game khác nhau thu hút triệu người trên thế giới tham gia và theo dõi tiêu biểu như DOTA 2, Counter Strike: Globel Offencive, League of Legend,…
+    Ở Việt Nam cũng dần công nhận game và đã có sự cuồng nhiệt từ mọi người mọi lứa tuổi. Số lượng các cá nhân, tổ chức đầu tư vào game ngày càng nhiều điển hình như màn gọi vốn của startup Divine Esport trên chương trình truyền hình Shark Tank. 
+    Thực tế hiện nay, Game cũng có mặt hạn chế nhất định như: ảnh hưởng đến sức khỏe và khả năng giao tiếp, học hành sa sút nếu dành quá nhiều thời gian. Bản chất của game là phương tiện giải trí giúp người chơi giải trí một cách lành mạnh và thoải mái, tránh sa đà. Nếu bạn thích làm việc với các phần mềm game và đi đúng hướng bạn có thể trở thành những nhà lập trình game xuất sắc. Hãy vận dụng tốt ưu điểm và sở thích của mình, đừng lãng phí thời gian vô ích.
+1.2 Mục tiêu của đề tài
+    Xây dựng game mô phỏng chiến dịch Hồ Chí Minh giúp chúng ta giải tỏa áp lực sau một ngày căng thẳng mệt vừa giúp chúng ta được trở về với lịch sử hào hùng của ông cha ta, học mà chơi chơi mà học.
+    Xây dựng game với Unity 3D và học hỏi cách sử dụng các công cụ hỗ trợ thiết kế và xây dựng game như MagicaVoxel, Blender, Photoshop.
+1.3 Giới hạn và phạm vi của đề tài
+    Đề tài xây dựng game mô phỏng chiến dịch Hồ Chí Minh sử dụng Unity, MagicaVoxel, Blender và công cụ lập trình Visual Studio 2019.
+    Game sẽ không miêu tả chi tiết từng diễn biến nhỏ của cuộc chiến dịch Hồ Chí Minh mà chỉ tập trung vào các sự kiến chính.
+1.4 Nội dung thực hiện
+      Nội dung thực hiện/nghiên cứu cụ thể như sau:
+* Nghiên cứu các tựa game fps cùng thể loại
+* Nghiên cứu các sự kiện lịch sử trong chiến dịch Hồ Chí Minh
+* Phân tích yêu cầu và các chức năng trong game
+* Thiết kế đặc tả hệ thống
+* Lập trình cho các chức năng của game
+* Kiểm thử hệ thống
+* Hoàn thành Game
+* Triển khai thực nghiệm game
+1.5 Phương pháp tiếp cận
+* Cách tiếp cận : Nghiên cứu ngôn ngữ C# và các công cụ Unity
+* Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu;
+o Phương pháp phân tích mẫu;
+o Phương pháp thực nghiệm.
+
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Unity
+2.1.1 Unity là gì?
+    Unity là một phần mềm làm game đa nền tảng được phát triển bởi Unity Technologies mà chủ yếu để phát triển video game cho máy tính, consoles và điện thoại. Lần đầu tiên nó được công bố chạy trên hệ điều hành OS X, tại Apple's Worldwide Developers Conference vào năm 2005, đến nay đã mở rộng 27 nền tảng.
+    6 phiên bản chính của phần mềm này đã được phát hành. Tại triển lãm WWDC năm 2006, Apple đã trao thưởng giải Best Use of Mac OS X Graphics cho ứng dụng này.
+    Unity hỗ trợ đồ họa 2D và 3D, các chức năng được viết chủ yếu qua ngôn ngữ C#. Hai ngôn ngữ lập trình khác cũng được hỗ trợ: Boo, đã bị loại cùng với việc phát triển Unity 5 và UnityScript bị loại vào tháng 8 năm 2017 sau khi phát hành Unity 2017.1. UnityScript là một ngôn ngữ lập trình độc quyền có cú pháp tương tự JavaScript. Phần mềm nhắm mục tiêu các đồ họa APIs sau: Direct3D trên Windows và Xbox One; OpenGL trên Linux, macOS, và Windows; OpenGL ES trên Android và iOS; WebGL trên web; và APIs độc quyền trên các máy chơi video game. Ngoài ra, Unity hỗ trợ APIs cấp thấp như Metal trên iOS và macOS và Vulkan trên Android, Linux, và Windows, cũng như Direct3D 12 trên Windows và Xbox One. Trong 2D games, Unity cho phép nhập sprites và một renderer thế giới 2D tiên tiến. Đối với 3D games, Unity cho phép thiết lập các đập điểm kĩ thuật của các kết cấu và độ phân giải mà công cụ trò chơi hỗ trợ, cung cấp các hỗ trợ cho bump mapping, reflection mapping, parallax mapping, cảnh không gian ambient occlusion (SSAO), hiệu ứng bóng đổ bằng cách sử dụng shadow maps, render thiết lập toàn cảnh đến hiệu ứng. Unity cũng cung cấp các dịch vụ cho nhà phát triển, bao gồm: Unity Ads, Unity Analytics, Unity Certification, Unity Cloud Build, Unity Everyplay, Unity API, Unity Multiplayer, Unity Performance Reporting and Unity Collaborate.
+    Unity nổi bật với khả năng xây dựng trò chơi chạy trên nhiều nền tảng. Các nền tảng được hỗ trợ hiện nay là Android, Android TV, Facebook Gameroom, Fire OS, Gear VR, Google Cardboard, Google Daydream, HTC Vive, iOS, Linux, macOS, Microsoft HoloLens, Nintendo 3DS family, Nintendo Switch, Oculus Rift, PlayStation 4, PlayStation Vita, PlayStation VR, Samsung Smart TV, Tizen, tvOS, WebGL, Wii U, Windows, Windows Phone, Windows Store, và Xbox One. Unity trước đây cũng đã hỗ trợ 7 nền tảng khác chạy trên Unity Web Player. Unity Web Player là một plugin của trình duyệt chạy trên Windows và OS X, đã bị gỡ bỏ vì lợi ích của WebGL.
+    Unity là bộ công cụ phát triển phần mềm mặc định (SDK) cho máy chơi game video game Wii U của Nintendo, kèm theo bản miễn phí của Nintendo với mỗi giấy phép phát triển Wii U. Unity Technologies gọi việc kết hợp sản xuất SDK với một bên thứ ba là "industry first". [1]
+2.1.2 Tại sao cần sử dụng Unity
+    Một hệ sinh thái game cần phải có các chức năng cơ bản như: cung cấp công cụ dựng hình (kết xuất đồ họa) cho các hình ảnh 2D hoặc 3D, công cụ vật lý (tính toán và phát hiện va chạm), âm thanh, mã nguồn, hình ảnh động, trí tuệ nhân tạo, phân luồng, tạo dò nguồn dữ liệu xử lý, quản lý bộ nhớ, dựng ảnh đồ thị và kết nối mạng. Unity là engine đáp ứng đầy đủ các yêu cầu đó.
+    Một game cần phải có các chức năng cơ bản như: cung cấp công cụ dựng hình (kết xuất đồ họa) cho các hình ảnh 2D hoặc 3D, công cụ vật lý (tính toán và phát hiện va chạm), âm thanh, mã nguồn, hình ảnh động, trí tuệ nhân tạo, phân luồng, tạo dò nguồn dữ liệu xử lý, quản lý bộ nhớ, dựng ảnh đồ thị và kết nối mạng. Unity đáp ứng được đầy đủ các yêu cầu đó. Unity còn có những ưu điểm vượt trội hơn các engine khác:
+* Sử dụng ngôn ngữ lập trình phổ biến tại Việt Nam là C#
+* Hỗ trợ đa nền tảng
+* Dễ sử dụng, ngay cả với lập trình viên nghiệp dư
+* Rất được ưa chuộng
+* Thư viện phong phú và đa dạng
+* Cộng đồng lớn mạnh
+* Hỗ trợ Networking để phát triển MMO game
+    
+2.2 Tổng quan về Blender
+2.2.1 Blender là gì?
+    Blender là một phần mềm đồ họa 3D miễn phí và nguồn mở, được sử dụng để làm phim hoạt hình, kỹ xảo, ảnh nghệ thuật, mẫu in 3D, phần mềm tương tác 3D và Video game. Các tính năng của Blender bao gồm tạo mẫu 3D, UV unwrapping, áp vân bề mặt, mô phỏng khói, chất lỏng, hạt và chuyển động cơ thể, điêu khắc, hoạt họa, phối hợp chuyển động, camera tracking, rendering và chỉnh sửa video. Blender tương thích với một số hệ điều hành như Linux, Mac OS X, và Microsoft Windows. [2]
+2.2.2 Tại sao cần sử dụng Blender
+    Blender hoàn toàn miễn phí: Bạn sẽ dễ dàng nhận ra rằng Blender là phần mềm hoàn toàn miễn phí. Tất nhiên ở Việt Nam hiện nay rất “chuộng” crack mọi phần mềm nên dần dần chúng ta luôn đi tìm thứ gì đó miễn phí đúng không nào? Với Blender thì bạn không tốn công crack, dễ dàng download và cài đặt. Những phần mềm thiết kế 3D khác có thể kể đến như Maya hay 3DS Max bạn không chỉ tốn tiền bản quyền phần mềm mà bạn còn phải đăng ký tài khoản trước đó nữa. Tất nhiên cũng có những phiên bản miễn dành cho sinh viên nhưng hết sinh viên rồi chúng ta sẽ làm sao? Một quan niệm sai lầm rất phổ biến là nếu cái gì miễn phí thì đều không tốt. Mặc dù, nó có thể đúng với một số thứ. Tuy nhiên, bạn có thể yên tâm điều này thật sự không đúng đối với trường hợp của Blender.
+    Blender có mã nguồn mở: Đầu tiên chúng ta cần quan tâm đến khái niệm: Freeware và Open-source. Những phần mềm, ứng dụng miễn phí mà chúng ta hay xài (không tính đến việc crack) thường sẽ có thời hạn sử dụng hoặc giới hạn chức năng nhất định. Đó gọi là Freeware. Open-source là dạng phần mềm mở mã nguồn tức là công khai các mã nguồn lập trình bên trong nó. Dạng này là miễn phí tận cùng vì tất cả mọi người đều có thể lấy mã nguồn đó nghiên cứu, thay đổi và cải tiến phần mềm, và phân phối phần mềm ở dạng chưa thay đổi hoặc đã thay đổi. Hiện nay phần mềm mã nguồn mở được phát triển rộng rãi và thay thế hầu hết các phần mềm thương mại với tính năng tương đương, thậm chí tốt hơn, có thể kể đến như WordPress, Opencart… Việc phần mềm Blender miễn phí và có mã nguồn mở dẫn đến việc hình thành cộng động người sử dụng trở nên đông đảo hơn, các tài nguyên, tài liệu cũng được chia sẻ chi tiết.
+    Blender có đầy đủ tính năng của các phần mềm 3D khác: Blender có mọi thứ các phần mềm thương mại khác có như viewport realtime, hỗ trợ path tracing, sử dụng vật liệu dạng node base, công cụ tạc tượng, vẽ texture 3D, smoke/fire/fluid simulation, hỗ trợ python scripting, công cụ retopology và camera matching, dựng phim, hậu kỳ, animation curve, dope sheet. Có thể Blender không bằng Maya trong việc diễn hoạt Animation, hay cũng không bằng 3Ds Max trong việc làm kiến trúc nhưng Blender có nhiều hơn những thứ kể trên. Đặc biệt với phiên bản 2.8 (ra đời năm 2018) có hỗ trợ real time EEVEE, nó hoạt động như một phần mềm chỉnh sửa clip.
+    Dễ dàng chuyển đổi sang các phần mềm 3D khác: Chính bởi việc học 3D với Blender có thể giúp bạn tinh thông hầu hết các công cụ, tính năng, ứng dụng mà các phần mềm 3D khác đều có, cho nên sau này khi bạn muốn chuyển đổi sang một phần mềm khác cũng không quá tốn nhiều thời gian để làm quen và tìm hiểu. Giao diện có thể khác nhưng quan trọng là việc bạn tư duy sử dụng công cụ như thế nào mới quan trọng. Ông bà ta có câu “Nhất nghệ tinh, nhất thân vinh”, bạn chỉ cần giỏi 1 phần mềm là cũng đã đạt được nhiều thành công trong công việc rồi. Chưa kể là học 3D với Blender là một sự khởi đầu dễ thở nhất dành cho những ai mới bước chân vào bộ môn này. Từ đó tiếp tục niềm đam mê và phát triển xa hơn. [3]
+2.3 Tổng quan về MagicaVoxel
+2.3.1 MagicaVoxel là gì?
+    MagicaVoxel là một ứng dụng thú vị cho phép bạn tạo hình ảnh 3D dựa trên các khối theo phong cách Pixel3D.
+2.3.2 Tại sao cần sử dụng MagicaVoxel
+    Magicavoxel là một ứng dụng có sẵn cho cả PC và Mac và hoàn toàn miễn phí. Mọi thứ bạn tạo với ứng dụng này sau đó có thể được sử dụng tự do trong tất cả các loại dự án mà không phải trả tiền cho bất kỳ loại giấy phép nào. Điều duy nhất, nếu bạn muốn, là cung cấp tín dụng cho ứng dụng được tạo bởi Ephtvery.
+2.4 Shader trong Unity
+2.4.1 Shader trong Unity là gì?
+    Shader là các đoạn script nhỏ có chứa những cái tính toán về toán học, thuật toán để tính toán màu sắc cho từng pixel rendered, dựa trên ánh sáng và những tùy chỉnh Material.
+    Unity có hỗ trợ 3 loại Shader. Nhưng chỉ có 2 loại thường được sử dụng đó là Suface Shader và Fragment and Vertex Shaders, loại còn lại là Fixed Function Shader, nhưng loại này giờ hầu như không còn được sử dụng nữa bởi vì nó đã quá lỗi thời so với các loại Shader đang sử dụng hiện giờ. [4]
+2.4.2 Phân loại Shader trong Unity
+    Trong những ngày đầu khi mà phần cứng đồ họa chưa phát triển mạnh như bây giờ thì Shader chỉ có một loại đó là Fixed Function shader với rất nhiều hạn chế khi nó được thiết lập sẵn trên các card đồ họa. Hiện nay, phần cứng đồ họa đã trở nên mạnh mẽ rất nhiều, nhiều bộ nhớ hơn, khả năng tính toán mạnh hơn cùng với đó thì các lập trình viên cũng được tiếp cận với nhiều loại Shader hơn và người ta gọi chung các loại Shader mới này là Programmable Shader còn Fixed Function shader là loại Non-Programmable Shader. Dựa trên tính năng và mục đích của shader mà chúng được phân loại như sau: Vertex shader, Pixel shader, Geometry shader, Compute shader, Tessellation shader.
+2.5 Tổng quan về Visual Studio
+2.5.1 Visual Studio là gì?
+    Microsoft Visual Studio là một môi trường phát triển tích hợp (IDE) từ Microsoft. Nó được sử dụng để phát triển chương trình máy tính cho Microsoft Windows, cũng như các trang web, các ứng dụng web và các dịch vụ web. Visual Studio sử dụng nền tảng phát triển phần mềm của Microsoft như Window API, Window Forms, Windows Presentation Foundation, Window Store và Microsoft Silverlight. Nó có thể sản xuất cả hai ngôn ngữ máy và mã số quản lý.
+    Visual Studio bao gồm một trình soạn thảo mã hỗ trợ IntelliSense cũng như cải tiến mã nguồn. Trình gỡ lỗi tích hợp hoạt động cả về trình gỡ lỗi mức độ mã nguồn và gỡ lỗi mức độ máy. Công cụ tích hợp khác bao gồm một mẫu thiết kế các hình thức xây dựng giao diện ứng dụng, thiết kế web, thiết kế lớp và thiết kế giản đồ cơ sở dữ liệu. Nó chấp nhận các plug-in nâng cao các chức năng ở hầu hết các cấp bao gồm thêm hỗ trợ cho các hệ thống quản lý phiên bản (như Subversion) và bổ sung thêm bộ công cụ mới như biên tập và thiết kế trực quan cho các miền ngôn ngữ cụ thể hoặc bộ công cụ dành cho các khía cạnh khác trong quy trình phát triển phần mềm.
+    Visual Studio hỗ trợ nhiều ngôn ngữ lập trình khác nhau và cho phép trình biên tập mã và gỡ lỗi để hỗ trợ (mức độ khác nhau) hầu như mọi ngôn ngữ lập trình. Các ngôn ngữ tích hợp gồm có C, C++ và C++/CLI (thông qua Visual C++), VB.NET (thông qua Visual Basic.NET), C# (thông qua Visual C#) và F# (như của Visual Studio 2010). Hỗ trợ cho các ngôn ngữ khác như J++/J#, Python và Ruby thông qua dịch vụ cài đặt riêng rẽ. Nó cũng hỗ trợ XML/XSLT, HTML/XHTML, JavaScript và CSS.
+    Microsoft cung cấp phiên bản "Express" (đối với phiên bản Visual Studio 2013 trở về trước) và "Community" (đối với bản Visual Studio 2015 trở về sau) là phiên bản miễn phí của Visual Studio. [5]
+2.5.2 Cấu trúc của Visual Studio
+    Các Visual Studio không hỗ trợ cho bất kỳ ngôn ngữ lập trình nào về giải pháp hoặc công cụ thực chất, thay vào đó nó cho phép cắm chức năng được mã hóa như là một VSPackage. Khi cài đặt, các chức năng có sẵn như là một dịch vụ. IDE cung cấp ba dịch vụ: SVsSolution cung cấp khả năng liệt kê các dự án và các giải pháp; SVsUIShell cung cấp cửa sổ và giao diện người dùng và SVsShell. Ngoài ra, IDE cũng có trách nhiệm điều phối và cho phép truyền thông giữa các dịch vụ. Tất cả các biên tập viên, nhà thiết kế, các loại dự án và các công cụ khác được thực hiện theo VSPackages. Visual Studio sử dụng COM để truy cập VSPackages. Visual Studio SDK cũng bao gồm Managed Package Framework (MPF) là một tập hợp quản lý bao bọc quanh các COM-interfaces cho phép các gói được viết bằng bất kỳ ngôn ngữ nào. Tuy nhiên, MPF không cung cấp tất cả các chức năng bộc lộ trong Visual Studio COM-interfaces. Các dịch vụ có thể được tiêu thụ để tạo ra các gói khác, để thêm chức năng cho Visual Studio IDE.
+    Hỗ trợ cho các ngôn ngữ lập trình được thêm vào bằng cách sử dụng một VSPackage đặc biệt được gọi là một dịch vụ ngôn ngữ. Một dịch vụ ngôn ngữ định nghĩa giao tiếp khác nhau mà việc thực hiện VSPackage có thể thực hiện để hỗ trợ thêm cho các chức năng khác nhau. Các chức năng có thể được thêm vào theo cách này bao gồm cú pháp màu, hoàn thành báo cáo kết quả, kết hợp đôi, công cụ chú giải tham số thông tin, danh sách thành viên và đánh dấu lỗi trên nền biên dịch. Nếu giao diện được thực hiện, các tính năng sẽ có sẵn ngôn ngữ. Dịch vụ ngôn ngữ sẽ được thực hiện trên cơ sở mỗi ngôn ngữ. Việc triển khai có thể tái sử dụng mã từ phân tích cú pháp hoặc trình biên dịch cho ngôn ngữ. Dịch vụ ngôn ngữ có thể được triển khai hoặc trong mã nguồn gốc hoặc mã số quản lý. Đối với mã nguồn gốc, thì cả COM-interfaces gốc hoặc Babel Framework (một phần của Visual Studio SDK) đều có thể được sử dụng. Đối với mã số quản lý thì các MPF sẽ bao hàm các dịch vu quản lý văn bản.
+    Visual Studio không bao gồm bất kỳ Hệ thống quản lý phiên bản hỗ trợ kiểm soát mã nguồn nhưng nó xác định hai cách thay thế cho các hệ thống kiểm soát mã nguồn để tích hợp với IDE. Một VSPackage kiểm soát mã nguồn có thể cung cấp giao diện người dùng tùy chỉnh của riêng mình. Ngược lại, một plugin kiểm soát mã nguồn bằng cách sử dụng MSSCCI (Microsoft Source Code Control Interface) cung cấp một tập các chức năng được sử dụng để thực hiện chức năng kiểm soát mã nguồn khác nhau, với một giao diện người dùng Visual Studio tiêu chuẩn. MSSCCI lần đầu tiên được sử dụng để tích hợp Visual SourceSafe với Visual Studio 6.0 nhưng sau đó được mở ra thông qua Visual Studio SDK. Visual Studio.NET 2002 dùng MSSCCI 1.1, và Visual Studio.NET 2003 dùng MSSCCI 1.2. Visual Studio 2005, 2008 và 2010 dùng MSSCCI 1.3.
+    Visual Studio hỗ trợ chạy nhiều cá thể của môi trường (tất cả đều có VSPackages riêng của mình). Những trường hợp sử dụng các registry hives khác nhau để lưu trữ trạng thái cấu hình và được phân biệt bởi AppID (Application ID). Các trường hợp được đưa ra bởi một AppId-specific.exe cụ thể mà lựa chọn AppID, thiết lập các hive gốc và khởi chạy IDE. VSPackages đăng ký một AppID được tích hợp với VSPackages khác cho AppID đó. Các phiên bản sản phẩm khác nhau của Visual Studio được tạo ra bằng cách sử dụng AppIds khác nhau. Các sản phẩm phiên bản Visual Studio Express được cài đặt với AppIds riêng nhưng với các sản phẩm Standard, Professional và Team Suite chia sẻ cùng AppID. Do đó, người ta có thể cài đặt các phiên bản Express song song với các phiên bản khác, không giống như các phiên bản khác cập nhật các cài đặt tương tự. Phiên bản Professional bao gồm các VSPackages khổng lồ trong phiên bản Standard và Team. Hệ thống AppID được thừa hưởng bởi Visual Studio Shell trong Visual Studio 2008.
+2.6 Unity Cinemachine là gì?
+    Sử dụng Unity Package Manager (trong menu trên cùng: Window > Package Manager) để chọn Cinemachine để cài đặt. Nếu bạn không thấy gói, hãy tìm một menu dropdown phía trên danh sách và chọn All packages.
+    Cinemachine là miễn phí và có sẵn cho bất kỳ dự án nào. Nếu bạn đã cài đặt nó, bạn có thể cập nhật lên phiên bản mới nhất.
+    Cinemachine tăng tốc độ phát triển trò chơi. Nó giải phóng nhóm của bạn khỏi sự phát triển camera-logic expensive và cho phép bạn lặp lại và thử nghiệm các ý tưởng mới một cách nhanh chóng trong khi lưu các cài đặt trong chế độ chơi. Từ game bắn súng góc nhìn thứ nhất để theo dõi cam, từ 2D đến 3D, từ chơi thời gian thực đến cắt cảnh, các mô-đun máy ảnh Cinemachine đã được hoàn thiện trong nhiều năm.
+    Cinemachine là virtual DP, biết nơi nhắm và tập trung. Thử nghiệm với dollies, tracking, shake và post-FX trong thời gian thực. Đó là phương pháp, vì vậy thay đổi hoạt động. Thay đổi hình ảnh động sau khi bố cục không có vấn đề gì - Cinemachine biết bạn muốn ảnh của mình như thế nào và điều chỉnh linh hoạt, ngay cả khi hiệu suất thay đổi. Cinemachine đã giành giải Emmy vì cách mạng hóa lĩnh vực điện ảnh.
+   Cinemachine cung cấp rất nhiều tính năng mạnh mẽ. Nhắm mục tiêu, chuyển vị, nhóm, tiếng ồn, tích hợp hậu xử lý, chia màn hình, mixing, blending,... [6]
+2.7 Particle System trong Unity
+2.7.1 Particle System trong Unity là gì?
+    Particle system là một hệ thống các hạt dùng để tạo ra các hiệu ứng trong game như mưa, tuyết rơi, khói, lửa, hiệu ứng phép…, giúp làm cho game trở nên sinh động hơn, nhất là đối với game 3D.
+2.7.2 Shape
+    Hình dạng của nguồn phát ra hạt là điều chúng ta cần quan tâm đầu tiên khi làm việc với particle system. Tất nhiên trước bắt tay vào tạo ra hiệu ứng của riêng mình thì bạn đã phải có ý tưởng hoặc concept cho fx đó rồi. Hãy tính toán xem bạn sẽ dùng shape gì, nguồn phát ra hạt sẽ ảnh hưởng khá nhiều đến kết quả. Bạn không thể tạo ra một hiệu ứng tuyết rơi mà nguồn phát ra hạt của bạn lại chỉ từ một điểm phải không?
+2.7.3 Emission
+    Về cơ bản thì thằng này cho phép bạn kiểm soát tỉ lệ hạt bung ra theo thời gian hoặc theo chiều sâu. Các thông số về Burst cho phép chúng ta ép particle system sinh ra bao nhiêu hạt vào chính xác thời điểm mà chúng ta muốn.
+2.7.4 Duraction
+    Thông số tiếp theo là thời gian sinh ra hạt. Nó hoàn toàn khác với Start Lifetime.Ví dụ nôm na cho dễ hiểu thì Duration là khoảng thời gian mang thai của một người mẹ thì Start Lifetime là khoảng thời gian sống trên đời của đứa trẻ sau khi nó được sinh ra.
+2.7.5 Size hạt
+    Kích thước một hạt particle trong Unity được điều chỉnh dựa trên 2 thông số đó là Start Size và Size Over Lifetime. Start Size cho phép chúng ta xác định kích thước của một hạt particle trước khi nó được bung ra còn Size Over Lifetime cho phép ta điều chỉnh kích thước của hạt sau khi nó được sinh ra. Bạn có thể xem thêm video mình hướng dẫn làm hiệu ứng hạt lấp lánh để hiểu hơn về cách điều chỉnh kích thước hạt – <Dust Effect – Sử dụng Size Over Lifetime trong Particle System>
+2.7.6 Rotation
+    Tương tự như Size hạt bên trên. Rotation cho phép chúng ta điều chỉnh về góc xoay của hạt trước và sau khi hạt được sinh. Cả Rotation và Size đều có thể tùy chỉnh random để cho các hạt sinh ra được tự nhiên chứ không bị đều đều.
+2.7.7 Physic
+    Về mặt vật lý thì mình nói chung cho cả 2 tab là Velocity over Lifetime và Force over Lifetime. Hai thuộc tính này gần như tương đồng nhau, Velocity cho phép bạn kiểm soát quỹ đạo bay của từng hạt particle trong khi đó Force kiểm soát lực đẩy của từng hạt trong suốt quá trình hạt hiển thị.
+2.7.8 Color
+    Việc kiểm soát màu sắc khi làm Game effect trong Unity 3d còn phụ thuộc vào nhiều yếu tố khác ngoài particle system. Nhưng về cơ bản thì particle chi ra thành Start color và Color over Lifetime. Bảng màu của Unity cũng cho phép chúng ta kiểm soát được opacity của texture bằng kênh Alpha.
+2.7.9 Noise
+    Thuộc tính noise được Unity thêm vào từ bản update 2017. Thuộc tính này về cơ bản sẽ tạo ra Turbulance cho những effect nào có nhiều hạt. Ví dụ như khi tạo hiệu ứng những tàn lửa bay lên trong không khí mà thiếu Turbulance sẽ không tạo ra cảm giác chân thực. Mặc dù mình có nhiều cách để giả Turbulance nhưng yếu tố này thực sự rất quan trọng khi làm việc với particle system. Nó còn là yếu tố không thể thiếu trong các phần khác. Mình vẫn không hiểu tại sao Unity họ không update thuộc tính quan trọng này mà lại thay bằng Noise. Tuy nhiên Noise vẫn thực hiện tốt nhiệm vụ của nó. Nếu bạn làm effect game mobile bằng Unity 3D thì nên hạn chế sử dụng thuộc tính này.
+2.7.10 Collision
+    Là thuộc tính thể hiện sự va chạm của hạt với các object khác trong Scene đồng thời kiểm soát được những gì xảy ra sau sự va chạm đó. Ví dụ sau khi hạt chạm vào mặt đất thì hạt đó biến mất ngay hoặc hạt đó sinh ra một Particle System mới. Điều đó tùy thuộc vào ý đồ của bạn. Đây cũng là một thuộc tính quan trọng khi làm Game effect với Unity 3D.
+2.7.11 Texture Sheet Animation
+    Thuộc tính dùng để kiểm soát việc hiển thị của texture. Có nhiều effect trong game phải sử dụng texture frame by frame hoặc có những effect cần phải random giữa nhiều texture khác nhau. Thuộc tính này chỉ hoạt động với 1 tấm texture là prite sheet.
+2.7.12 Renderer
+    Việc kiểm soát hình ảnh hiển thị ra màn hình thực sự phức tạp hơn những gì chúng ta nhìn thấy và nó không chỉ phụ thuộc vào mỗi Renderer của particle system mà còn phụ thuộc vào setup ánh sáng và camera trong Scene. Cơ bản thì bạn chỉ cần quan tâm đến Render Mode mà thôi, bao gồm : Billboard (texture luôn hướng theo góc quay của camera) Stretched Billboard (texture bị kéo dãn) Horizontal Billboard (texture nằm ngang song song với mặt đất) Vertical Billboard (texture vuông góc với mặt đất) Mesh (texture hiển thị theo bề mặt của vật thể 3D).
+2.8 Scriptable Object trong Unity
+2.8.1 Scriptable Object trong Unity là gì?
+    Scriptable object đơn giản giống như là một object trong Unity, tuyên nhiên chức năng chính của Scriptable object là để lưu dữ liệu game như audio, text, film. Một game ngoài gameplay hay và các asset siêu đẹp thì những dữ liệu như audio, text, short film cũng rất quan trọng và scriptable object sẽ là nơi chứa tất cả các thứ đó.
+2.8.2 Cách sử dụng Scriptable Object
+   Các trường hợp sử dụng chính cho ScripableObject là:
+* Lưu trữ dữ liệu và Asset trong Editor session
+* Lưu dữ liệu dưới dạng Asset trong Project của bạn để sử dụng  trong thời gian chạy
+* Để sử dụng ScriptableObject, hãy tạo tập lệnh trong application’s thư mục Asset của bạn và làm cho nó kế thừa từ class Scriptable Object. Bạn có thể sử dụng thuộc tính CreateAssetMenu để dễ dàng tạo tài sản tùy chỉnh bằng lớp của bạn.
+2.9 Khái niệm Render Pipeline trong Unity3D
+2.9.1 Render Pipeline là gì?
+   Một cách đơn giản, Render Pipeline là một nhóm các kỹ thuật mà Unity dùng để vẽ một hay nhiều objects lên màn hình sao cho đơn giản nhưng đẹp và tối ưu nhất có thể, các kỹ thuật có thể phân thành 3 loại chính theo thứ tự:
+* Culling: chọn object nào để đưa lên màn hình (object quá xa, object không nằm trong vùng camera, object bị che…)
+* Rendering Objects: vẽ objects lên.
+* Post Processing: xử lý hình ảnh sau khi đã vẽ các vật thể lên bộ nhớ đệm, trước khi vẽ lên màn hình.
+   Với Culling: Bởi chi phí khi render nhiều objects không hề nhỏ nên để tối ưu, khi bắt đầu Render thì Culling là quá trình đầu tiên nhằm xác định và lọc các objects nào sẽ được vẽ, quá trình này sẽ trả về một list các gameObjects và lights (ánh sáng) hợp lệ để áp dụng vào Render pipeline. trong Unity có 2 loại Culling chính:
+* Frustum Culling: tính toán chỉ render các vật thể nằm trong vùng từ Clipping Planes (Near – Far) của Unity, nằm ngoài 2 khoảng này thì sẽ bị cull (loại bỏ).
+* Occlusion Culling: kỹ thuật cull các vật thể bị che khuất phía sau các vật thể khác.
+2.9.2 Rendering Objects
+    Sau quá trình Culling, chúng ta đã có list các vật thể cần vẽ lên màn hình, điều tiếp theo chúng ta cần xác định đó là mục tiêu mà chúng ta vẽ lên có cấu hình như thế nào, phần cứng của máy, hệ điều hành, 2D hay 3D… để chọn các kỹ thuật render cũng như xử lý ảnh khác nhau. [7]
+    Một số tiêu chuẩn:
+• HDR (High Dynamic Range) hay LDR (Standard/ Low Dynamic Range)
+• Linear hay Gamma Color Space
+• MSAA hay Post-AA
+• PBR Materials vs Simple Materials
+• Có xài Lighting hay không, nếu sử dụng thì dùng kỹ thuật nào?
+• … 
+    
+    
+    
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Xây dựng nội dung
+3.1.1 Cốt truyện
+    Lấy bối cảnh Việt Nam năm 1975 trong chiến dịch cuối cùng của Quân Giải phóng miền Nam Việt Nam – Cuộc tổng tấn công và nổi dậy mùa Xuân năm 1975. Chiến dịch Hồ Chí Minh cho người chơi trở lại với lịch sử hảo hùng của ông cha ta.
+
+Hình 3.1. Bối cảnh game
+    Vào game, người chơi sẽ nhập vai một người lính quân đội nhân dân Việt Nam. Nhiệm vụ của người chơi là tiêu diệt kẻ địch, giải phóng miền Nam.Với cốt truyện này, người chơi được tự mình trải nghiệm chiến dịch Hồ Chí Minh và thêm hiểu biết về lịch sử Việt Nam.
+3.1.2 Các Scenes trong game
+* Scene 1: Main menu của game
+* Scene 2: Trận chiến đợt 1 khu vực Sài Gòn – Gia Định, chúng ta sẽ vào vai một người lính tiêu diệt kẻ địch của quân Mỹ và quân lực của Việt Nam Cộng hòa.
+* Scene 3: Trận chiến đợt 2 khu vực Sài Gòn – Gia Định, Ta sẽ được vào vai xe tăng 390 do Chính trị viên Đại đội Vũ Đăng Toàn chỉ huy chiến đấu với quân địch và húc đổ cổng chính tiến vào Dinh Độc Lập.
+3.1.3 Các nhân vật có thể điều khiển
+* Người lính quân đội giải phóng miền Nam: Vào vai người lính quân đội giải phóng với góc nhìn thứ nhất dùng vũ khí của mình để chiến đấu vói quân địch.
+* Xe tăng: Ta có thể sử dụng xe tăng để di chuyển và tấn công quân địch dưới góc nhìn thứ ba tù trên xuống.
+3.1.4 Kẻ địch
+* Quân địch: Đây sẽ là những quân định mà chúng ta cần tiêu giệt, chúng sẽ phát hiện và tấn công ta khi khoảng cách đủ gần.
+* Xe tăng: Tại scene cuối cùng, đấy xe là kẻ địch chúng ta sẽ đối đầu để có thể tiến tới Dinh Độc lập.
+    
+    
+    
+    
+    
+3.2 Phân tích thiết kế hệ thống
+3.2.1 Biểu đồ Use-case
+    Use-case player
+    2
+Hình 3.2. Use-case Player
+    Miêu tả: Player trong game có hai chức năng tương đương với hai use-case đó là Di chuyển và tấn công.
+    Use-case Enemy
+    
+Hình 3.3. Use-case Enemy
+    Miêu tả: Enemy trong game có hai chức năng tương đương với ba use-case đó là di chuyển, xác định vị trí player và tấn công.
+    
+3.2.2 Xác định yêu cầu hệ thống
+    Hệ thống của game Chiến dịch Hồ Chí Minh bao gồm các chức năng:
+- Di chuyển: Tọa độ và các hình ảnh 3D của nhân vật sẽ di chuyển theo hướng mà người chơi nhấn nút.
+- Tấn công: Người chơi sử dụng vũ khí của mình để tiêu diệt kẻ địch.
+- Trang bị: Người chơi sẽ được trang bị nhiều vũ khí khác nhau để có thể chiến đấu.
+    
+3.2.3 Các thuộc tính
+    Bảng 3.1. Bảng Player
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả1Walkspeed floatTốc độ đi bộ2Runspeed floatTốc độ chạy3Jumpforce float Lực nhảy4Health floatMáu5Aim floatNgắm bắn6ReloadfloatThay Đạn7AmmoIntĐạn    
+
+
+    Bảng 3.2. Bảng Enemy
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả1LookradiusfloatTầm phát hiện người chơi2SpeedfloatTốc độ di chuyển3IdleboolĐứng im4HowClosefloatKhi khoảng cách của bản thân và nhân vật đạt tới con số này hoặc nhỏ hơn thì range enemy sẽ đuổi theo Player5Health floatMáu6StopDisfloatKhi khoảng cách từ bản thân tới Player nhỏ hơn hoặc bằng con số này thì range enemy sẽ dừng lại và thực hiện tấn công    
+    
+    
+    
+    
+    
+    Bảng 3.3. Bảng Xe tăng
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả1Rotation SpeedfloatTốc độ quay của xe tăng2SpeedfloatTốc độ di chuyển3HealthfloatMáu4Bullet speedfloatTốc độ của viên đạn được bắn ra5HowClosefloatKhi khoảng cách của bản thân và nhân vật đạt tới con số này hoặc nhỏ hơn thì range enemy sẽ đuổi theo Player6StopDisfloatKhi khoảng cách từ bản thân tới Player nhỏ hơn hoặc bằng con số này thì range enemy sẽ dừng lại và thực hiện tấn công7IdleboolĐứng im    
+3.3 Thiết kế giao diện hệ thống
+3.3.1 Giao diện chính
+
+Hình 3.4. Main menu
+    Miêu tả: Đây là màn hình Main Menu của game. Bao gồm hình nền, tên game, hai nút Play và Exit.
+3.3.2 Player
+
+Hình 3.5. Player
+    Miêu tả: Model được vẽ và tinh chỉnh bằng blender. Trong game ta có thể điều khiển nhân vật này di chuyển bằng các phím A, S, D, W theo mọi hướng với góc nhìn từ trên xuống và tấn công bằng Mouse0 và một số chức năng khác.
+3.3.3 Enemy
+
+Hình 3.6. Enemy 
+
+Hình 3.7. Enemy
+
+Hình 3.8. Enemy
+
+Hình 3.9. Enemy dạng chiến đấu
+
+Hình 3.10. Enemy dạng chiến đấu
+
+Hình 3.11. Enemy dạng chiến đấu
+    Miêu tả: Model được vẽ bằng MagicaVoxel và tinh chỉnh bằng blender. Trong game ta sẽ gặp và chiến đấu với kẻ địch này trong màn 1 chiến đấu với quân địch của quân Mỹ và quân lực của Việt Nam Cộng hòa.
+3.3.4 Tank
+
+Hình 3.12. Tank
+
+Hình 3.13. Tank
+
+Hình 3.14. Tank
+
+Hình 3.15. Tank
+    Miêu tả: Model được vẽ bằng MagicaVoxel và tinh chỉnh bằng Blender. Trong game xe tăng của ta có thể di chuyển bằng các phím A, D, S, W, tấn công địch bằng cách xoay, ngắm bằng trỏ chuột và tấn công bằng phím Mouse0.
+
+Hình 3.16. Enemy Tank
+
+Hình 3.17. Enemy Tank
+
+Hình 3.18. Enemy Tank 
+
+Hình 3.19. Enemy Tanks
+    Miêu tả: Model được vẽ bằng MagicaVoxel và tinh chỉnh bằng blender. Trong xe tăng quân địch sẽ tự động nhận mục tiêu là xe tăng của ta và tấn công.
+3.3.5 Vũ khí
+
+Hình 3.20. AK
+
+Hình 3.21. AK
+    Miêu tả: Trong game AK được trang bị cho cả quân địch lẫn quân ta có tác dụng để tấn công bên còn lại.
+
+Hình 3.22. Dao
+    Miêu tả: Trong game Dao được trang bị cho nhân vật để tấn công quân địch.
+
+Hình 3.23. Grenade
+    Miêu tả: Trong game Grenade được trang bị cho nhân vật để tấn công quân địch.
+3.3.6 Ammo
+
+Hình 3.24. Tank bullet
+    Miêu tả: Đạn của xe tăng có tác dụng gây sát thương.
+
+Hình 3.25. Bullet
+    Miêu tả: Đạn của súng có tác dụng gây sát thương.
+3.3.7 Dinh Độc lập
+
+Hình 3.26. Dinh Độc lập
+
+Hình 3.27. Rào Dinh Độc lập
+    Miểu tả: Model được vẽ và tinh chỉnh bằng Blender. Trong màn 2 bạn sẽ gặp bức rào này.
+
+Hình 3.28. Cổng Dinh Độc lập
+    Miêu tả: Model được vẽ bằng MagicaVoxel và tinh chỉnh bằng Blender. Trong màn 2 nhiệm vụ của bạn là đâm đổ cánh cổng để hoàn thành game.
+    
+    
+3.3.8 Giao diện gameplay
+
+Hình 3.29. Giao diện gameplay
+
+Hình 3.30. Giao diện gameplay
+
+Hình 3.31. Giao diện gameplay
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau thời gian nghiên cứu và phát triển, đã hoàn thành cơ bản các mục tiêu ban đầu đề ra của đề tài. Đã tạo ra một game với bối cảnh lích sử Việt Nam và ở đây là Chiến dịch Hồ Chí Minh nhằm tăng sự thích thú của những người trẻ với lịch sử nước nhà.
+    Game đã thành công trong việc sử dụng đồ họa 3D pixel để thiết kế xây dựng game với số lượng model tương đối lớn và các animation thanh thoát.
+    Kết quả đã có được các chức năng cơ bản, chạy ổn định và củng cố được kiến thức về lập trình game.
+4.2 Hạn chế của đề tài
+    Hệ thống game Chiến dịch Hồ Chí Minh mới chỉ dừng lại ở các chức năng cơ bản, chưa tối ưu hóa hoàn thiện game, các model trong game được sử dụng hoàn toàn là em tìm kiếm ở mọi nguồn trên Internet chứ chưa thể tự mình thiết kế được.
+    Thời lượng chơi của mỗi màn chơi là không lớn, các tương tác của nhân vật với môi trường xung quanh hạn chế. Cơ chế hoạt động của quân định còn đơn giản, dễ đoán.
+    Game không có khả năng lưu trữ, tính điểm, xếp hạng với những lượt chơi khác nhau.
+      Game mới chỉ thể hiện một phần của chiến dịch, vẫn còn những phần khác có thể tận dụng để xây dựng trong game.
+    
+4.3 Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, tác giả đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+* Xây dựng thêm các chức năng của game
+* Bổ sung các thêm các quân địch và các trang bị mới, giúp trải nghiệm game thêm phong phú hơn
+* Nâng cấp AI của quân địch giúp game trở nên chuyên nghiệp và thú vị hơn
+* Tạo ra một game lớn với nhiều sự kiện lịch sử nước ra từ trước tới nay chứ không dừng lại ở diễn biến tại Sài Gòn – Gia Định
+    
+TÀI LIỆU THAM KHẢO
+[1]Wikipedia: https://vi.wikipedia.org/wiki/Unity_(phần_mềm_làm_game)[2]Wikipedia: https://vi.wikipedia.org/wiki/Blender_(phần_mềm)[3]Học Đồ Họa Blog: http://hocdohoa.edu.vn/4-ly-do-ban-nen-bat-dau-hoc-3d-voi-blender/[4]viblo.asia: https://viblo.asia/p/shader-in-unity-DKBvdxaPvdX[5]Wikipedia: https://vi.wikipedia.org/wiki/Microsoft_Visual_Studio[6]Unity.com: https://unity.com/unity/features/editor/art-and-design/cinemachine[7]Phuongne technical blog: https://phuongne.com/render-pipeline-unity3d/    
+    
+    
+Xây dựng game mô phỏng chiến dịch Hồ Chí Minh
+    
+    
+29
+    
+    

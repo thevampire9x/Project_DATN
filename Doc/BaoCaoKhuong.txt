@@ -1,0 +1,338 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+Trong thời buổi công nghệ thông tin phát triển rất nhanh chóng được áp dụngtrên mọi lĩnh vực của cuộc sống như kinh tế, chính trị, xã hội, tất cả đều cần cócông nghệ thông tin. Như hiện nay chúng ta đã biết lập trình và thiết kế ứngdụng có thể được coi là ngành “hot” mà hiện nay chúng ta đang rất quan tâm.
+Sau khi nghiên cứu tình hình của thị trường em đã đưa ra quyết định “XÂYDỰNG ỨNG DỤNG BÁN BÁNH CHO CỬA HÀNG BÁNH” nhằm đáp ứngnhu cầu của khách hàng. Hiện nay nhu cầu sử dụng thiết bị di động qua internetngày càng nhiều và các hình thức kinh doanh trên mạng ngày càng đa dạngphong phú, rất được nhiều người sử dụng và ưa chuộng. Cho nên khi xây dựngứng dụng này sẽ giúp cho khách hàng thuận lợi hơn cho việc mua các sản phẩmcủa cửa hàng mà không cần phải vất vả đến tận cửa hàng để đặt mua như lúctrước.
+Là sinh viên ngành CNTT, em luôn mong muốn mình sẽ làm được gì đó để ứng dụng những kiến thức đã học xây dựng được những sản phẩm có ứng dụng thực tế. Với mong muốn áp dụng những kiến thức mình đã học được tạo ra sản phẩm hoàn thiện có tính thực tế, đồng thời giúp nâng cao khả năng lập trình và đúc rút được nhiều kinh nghiệm cho những công việc trong tương lai sau khi ra trường, cùng với sự đồng ý của giáo viên hướng dẫn đề tài, em quyết định lựa chọn đề tài “Xây dựng ứng dụng bán bánh cho cửa hàng bánh” để làm đề tài đồ án tốt nghiệp.
+1.2 Mục tiêu của đề tài
+- Phát triển hệ thống quản lý bán hàng.
+- Hệ thống có chức năng quản lý giỏ hàng.
+- Hệ thống chức năng quản lý sản phẩm.
+- Hệ thống có chức năng quản lý thông tin của các loại sản phẩm.
+- Hệ thống có chức năng tìm kiếm sản phẩm.
+1.3 Giới hạn và phạm vi của đề tài
+    Nền tảng phát triển: web service
+-   Giao diện sử dụng: XML
+-   Ngôn ngữ lập trình: Java
+-   Công nghệ phát triển: sử dụng Android studio tích hợp thêm các thư viện hỗ trợ khác.
+-   Công cụ phát triển: Android studio, SQLITE, WEB Server.
+1.4 Nội dung thực hiện
+ 	Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Nghiên cứu công nghệ lập trình webservice trên nền tảng android
+- Phân tích yêu cầu và đề xuất giải pháp trên nền tảng android.
+- Thiết kế đặc tả hệ thống.
+- Xây dựng Cơ sở dữ liệu.
+- Lập trình cho các Module của hệ thống
+- Kiểm thử hệ thống.
+- Triển khai thực nghiệm hệ thống trên mạng Internet.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về lập trình android
+2.1.1 Giới thiệu
+    Android là một hệ điều hành dựa trên nền tảng Linux được thiết kế dành cho các thiết bị di động có màn hình cảm ứng như điện thoại thông minh và máy tính bảng. Ban đầu, Android được phát triển bởi Tổng công ty Android, với sự hỗ trợ tài chính từ Google và sau này được chính Google mua lại vào năm 2005. Android ra mắt vào năm 2007 cùng với tuyên bố thành lập Liên minh thiết bị cầm tay mở: một hiệp hội gồm các công ty phần cứng, phần mềm, và viễn thông với mục tiêu đẩy mạnh các tiêu chuẩn mở cho các thiết bị di động. Chiếc điện thoại đầu tiên chạy Android được bán vào tháng 10 năm 2008.
+    Android có mã nguồn mở và Google phát hành mã nguồn theo Giấy phép Apache. Chính mã nguồn mở cùng với một giấy phép không có nhiều ràng buộc đã cho phép các nhà phát triển thiết bị, mạng di động và các lập trình viên nhiệt huyết được điều chỉnh và phân phối Android một cách tự do. Ngoài ra, Android còn có một cộng đồng lập trình viên đông đảo chuyên viết các ứng dụng để mở rộng chức năng của thiết bị, bằng một loại ngôn ngữ lập trình Java có sửa đổi. Vào tháng 10 năm 2012, có khoảng 700.000 ứng dụng trên Android, và số lượt tải ứng dụng từ Google Play, cửa hàng ứng dụng chính của Android, ước tính khoảng 25 tỷ lượt.
+    Những yếu tố này đã giúp Android trở thành nền tảng điện thoại thông minh phổ biến nhất thế giới, vượt qua Symbian vào quý 4 năm 2010, và được các công ty công nghệ lựa chọn khi họ cần một hệ điều hành không nặng nề, có khả năng tinh chỉnh, và giá rẻ chạy trên các thiết bị công nghệ cao thay vì tạo dựng từ đầu. Kết quả là mặc dù được thiết kế để chạy trên điện thoại và máy tính bảng, Android đã xuất hiện trên TV, máy chơi game và các thiết bị điện tử khác. Bản chất mở của Android cũng khích lệ một đội ngũ đông đảo lập trình viên và những người đam mê sử dụng mã nguồn mở để tạo ra những dự án do cộng đồng quản lý. Những dự án này bổ sung các tính năng cao cấp cho những người dùng thích tìm tòihoặc đưa Android vào các thiết bị ban đầu chạy hệ điều hành khác.
+    Android chiếm 75% thị phần điện thoại thông minh trên toàn thế giới vào thời điểm quý 3 năm 2012,với tổng cộng 500 triệu thiết bị đã được kích hoạt và 1,3 triệu lượt kích hoạt mỗi ngày. Sự thành công của hệ điều hành cũng khiến nó trở thành mục tiêu trong các vụ kiện liên quan đến bằng phát minh, góp mặt trong cái gọi là "cuộc chiến điện thoại thông minh" giữa các công ty công nghệ.
+2.1.2 Lịch sử phát triển hệ điều hành android
+    Tổng công ty Android (Android, Inc.) được thành lập tại Palo Alto, California vào tháng 10 năm 2003 bởi Andy Rubin (đồng sáng lập công ty Danger), Rich Miner (đồng sáng lập Tổng công ty Viễn thông Wildfire), Nick Sears (từng là Phó giám đốc T-Mobile), và Chris White (trưởng thiết kế và giao diện tại WebTV) để phát triển, theo lời của Rubin, "các thiết bị di động thông minh hơn có thể biết được vị trí và sở thích của người dùng". DÙ những người thành lập và nhân viên đều là những người có tiếng tăm, Tổng công ty Android hoạt động một cách âm thầm, chỉ tiết lộ rằng họ đang làm phần mềm dành cho điện thoại di động.Trong năm đó, Rubin hết kinh phí. Steve Perlman, một người bạn thân của Rubin, mang cho ông 10.000 USD tiền mặt nhưng từ chối tham gia vào công ty.
+    Google mua lại Tổng công ty Android vào ngày 17 tháng 8 năm 2005, biến nó thành một bộ phận trực thuộc Google. Những nhân viên của chủ chốt của Tổng công ty Android, gồm Rubin, Miner và White, vẫn tiếp tục ở lại công ty làm việc sau thương vụ này. Vào thời điểm đó không có nhiều thông tin về Tổng công ty, nhưng nhiều người đồn đoán rằng Google dự tính tham gia thị trường điện thoại di động sau bước đi này. Tại Google, nhóm do Rubin đứng đầu đã phát triển một nền tảng thiết bị di động phát triển trên nền nhân Linux. Google quảng bá nền tảng này cho các nhà sản xuất điện thoại và các nhà mạng với lời hứa sẽ cung cấp một hệ thống uyển chuyển và có khả năng nâng cấp. Google đã liên hệ với hàng loạt hãng phần cứng cũng như đối tác phần mềm, bắn tin cho các nhà mạng rằng họ sẵn sàng hợp tác với các cấp độ khác nhau.
+    Ngày càng nhiều suy đoán rằng Google sẽ tham gia thị trường điện thoại di động xuất hiện trong tháng 12 năm 2006. Tin tức của BBC và Nhật báo phố Wall chú thích rằng Google muốn đưa công nghệ tìm kiếm và các ứng dụng của họ vào điện thoại di động và họ đang nỗ lực làm việc để thực hiện điều này. Các phương tiện truyền thông truyền thống lẫn online cũng viết về tin đồn rằng Google đang phát triển một thiết bị cầm tay mang thương hiệu Google. Một vài tờ báo còn nói rằng trong khi Google vẫn đang thực hiện những bản mô tả kỹ thuật chi tiết, họ đã trình diễn sản phẩm mẫu cho các nhà sản xuất điện thoại di động và nhà mạng. Tháng 9 năm 2007, InformationWeek đăng tải một nghiên cứu của Evalueserve cho biết Google đã nộp một số đơn xin cấp bằng sáng chế trong lĩnh vực điện thoại di động.
+    Ngày 5 tháng 11 năm 2007, Liên minh thiết bị cầm tay mở (Open Handset Alliance), một hiệp hội bao gồm nhiều công ty trong đó có Texas Instruments, tập đoànBroadcom, Google, HTC, Intel, LG, tập đoàn Marvell 
+    Technology, Motorola, Nvidia, Qualcomm, Samsung,Electronics, Sprint ,extel và T-Mobile được thành lập với mục đích phát triển các tiêu chuẩn mở cho thiết bị di động. Cùng ngày, Android cũng được ra mắt với vai trò là sản phẩm đầu tiên của Liên minh, một nền tảng thiết bị di động được xây dựng trên nhân Linux phiên bản 2.6. Chiếc điện thoại chạy Android đầu tiên được bán ra là HTC Dream, phát hành ngày 22 tháng 10 năm 2008. Biểu trưng của hệ điều hành Android mới là một con rôbốt màu xanh lá cây do hãng thiết kế Irina Blok tại California vẽ.
+    Từ năm 2008, Android đã trải qua nhiều lần cập nhật để dần dần cải tiến hệ điều hành, bổ sung các tính năng mới và sửa các lỗi trong những lần phát hành trước. Mỗi bản nâng cấp được đặt tên lần lượt theo thứ tự bảng chữ cái, theo tên của một món ăn tráng miệng; ví dụ như phiên bản 1.5 Cupcake (bánh bông lan nhỏ có kem) tiếp nối bằng phiên bản 1.6 Donut (bánh vòng). Phiên bản mới nhất hiện nay là 6.0 Marshmallow (kẹo dẻo) và 7.0 Nougat Beta. Vào năm 2010, Google ra mắt loạt thiết bị Nexus - một dòng sản phẩm bao gồm điện thoại thông minh và máy tính bảng chạy hệ điều hành Android, do các đối tác phần cứng sản xuất. HTC đã hợp tác với Google trong chiếc điện thoại thông minh Nexus đầu tiên, Nexus One. Kể từ đó nhiều thiết bị mới hơn đã gia nhập vào dòng sản phẩm này, như điện thoại Nexus 4 và máy tính bảng Nexus 10, lần lượt do LG và Samsung sản xuất. Google xem điện thoại và máy tính bảng Nexus là những thiết bị Android chủ lực của mình, với những tính năng phần cứng và phần mềm mới nhất của Android.
+2.1.3 Kiến trúc hệ điều hành android
+    Kiến trúc hệ điều hành Android gồm 4 phần chính, mô hình dưới đây sẽ cho ta cái nhìn tổng quan về kiến trúc Android. Nhân của Android được phát triển dựa vào Kernel Linux 2.6. Mỗi tầng trong kiến trúc Android hoạt động dựa vào tầng bên dưới nó.
+      
+Hình 2.1 Kiến trúc hệ điều hành android
+    
+Có thể ban đầu bạn thấy sơ đồ hơi rối mắt nhưng không sao, chúng ta sẽ lần lượt tìm hiểu theo thứ tự từ dưới lên.
+Nhân Linux (Linux kernel)
+Nằm ở tầng dưới cùng là lớp Linux kernal – Linux 3.6 với khoảng 115 patches. Lớp này liên hệ với phần cứng và nó chứa tất cả driver phần cứng cần thiết như camera, bàn phím, màn hình…
+Thư viện Android (Android libraries) và Android Runtime
+Phía trên tầng Linux kernel là tầng libraries, chứa những thư viện hỗ trợ. Một số có thể kể đến như là bộ máy trình duyệt web mã nguồn mở WebKit, thư viện libc, cơ sở dữ liệu SQLite tiện lợi cho việc lưu trữ và chia sẻ dữ liệu, thư viện hỗ trợ thu phát âm thanh và video, thư viện SSL giúp bảo mật mạng…
+Tầng này chứa tất cả các thư viện Java, được viết đặc biệt cho Android như các thư viện framework, các thư viện xây dựng giao diện, đồ họa và cơ sở dữ liệu. Dưới đây là một số thư viện quan trọng mà các lập trình viên nên biết:
+android.app − Cung cấp quyền truy cập tới mô hình ứng dụng và là nền tảng của mọi ứng dụng Android applications.
+android.content − Cho phép truy cập nội dung, phát hành và tin nhắn giữa các ứng dụng và các thành phần trong một ứng dung.
+android.database −  Được dùng để truy cập vào dữ liệu được đưa ra bởi bộ phận cung cấp nội dung, bao gồm các lớp quản lý cơ sở dữ liệu SQLite.
+android.opengl − Cho phép tương tác với thư viện đồ họa OpenGL ES 3D.
+android.os − Giúp ứng dụng truy cập những dịch vụ cơ bản của hệ điều hành bao gồm tin nhắn, dịch vụ hệ thống và liên lạc nội bộ (inter-process communication).
+android.text − Được dùng để vẽ và thao tác văn bản trên màn hình.
+android.view − Các khối xây dựng cơ bản của giao diện người dùng.
+android.widget − Một tập hợp rất nhiều thành phần giao diện được xây dựng sẵn như nút bấm (button), nhãn (label), danh sách hiển thị (list views), quản lý bố cục (layout managers)…
+android.webkit − Tập hợp các lớp (classes) cho phép trình duyệt web được nhúng vào ứng dụng.
+Trong tầng này còn có một phần không kém phần quan trọng là Android runtime, bây giờ chúng ta sẽ tìm hiểu các thư viện C/C++ trong tầng này.
+Android Runtime chứa Dalvik Virtual Machine (DVM) – một biến thể của Java Virtual Machine, đặc biêt thiết kế và tối ưu hóa cho Android. DVM giúp mỗi ứng dụng Android chạy trong chính tiến trình (process) của nó với một đại diện (instance) của DVM.
+Ngoài ra, Android Runtime cũng chứa tập hợp các thư viện quan trong cho phép người lập trình viết ứng dụng sử dụng ngôn ngữ lập trình Java.
+Application Framework
+Application Framework cung cấp nhiều dịch vụ cấp cao dưới dạng các lớp viết bằng Java (Java classes) Lập trình viên được phép sử dụng các lớp này để tạo ra các ứng dụng.
+Android framework chứa các dịch vụ quan trọng như:
+Activity Manager − Quản lý tất cả các phần của vòng đời (lifecycle) ứng dụng và các hoạt động ngăn xếp (activity stack).
+Content Providers − Cho phép ứng dụng phát hành và chia sẻ dữ liệu với ứng dụng khác.
+Resource Manager − Cho phép truy cập tới những tài nguyên không phải là mã nguồn như chuỗi, cài đặt màu, bố cục giao diện.
+Notifications Manager − Giúp ứng dụng hiển thị thông báo và nhắc nhở người dùng.
+View System − Một tập hợp mở rộng giúp tạo giao diện người dùng.
+Ứng dụng (applications)
+Ở tầng trên cùng là các ứng dụng Android đi kèm với hệ điều hành như Contacts Books, Browser, Games… Thiết nghĩ không cần nói nhiều thêm về tầng này.
+2.2 Thư viện Retrofit
+
+ Trước giờ trên Android có nhiều cách để kết nối và lấy dữ liệu từ 1 WebService. Có thể bạn đã từng dùng các lớp trong gói Http Apache (Loại bỏ trên Android 6.0, phải dùng như là 1 thư viện ngoài) hoặc đã từng dùng 1 số thư viện để kết nối với internet và nhận các dữ liệu từ server như Volley (Google), KSOAP ...
+Hôm nay tôi xin giới thiệu một thư viện vô cùng lợi ích cho việc kết nối internet và nhận dữ liệu từ server một cách dễ dàng và viết code theo mô hình chuẩn RESTFul Webservices đó là:
+Retrofit (newest: Ver2.0 beta)
+Retrofit là một Rest Client (Tìm hiểu thêm về chuẩn RESTFul dưới link tham khảo) cho Android và Java và được tạo ra bởi Square. Họ làm cho việc nhận và tải lên JSON (hoặc dữ liệu khác) một cách khá dễ dàng tới một WebService dựa trên mô hình REST.
+Các gói trang bị thêm cho phép sử dụng các bộ chuyển đổi sau đây:
+Gson: com. squareup. retrofit: converter-gson
+Jackson: com. squareup. retrofit: converter- jackson
+Moshi: com. Squareup. retrofit: converter- moshi
+Protobuf: com. squareup. retrofit: converter- protobuf
+Wire: com. squareup. retrofit: converter- wire
+Simple XML: com. squareup. retrofit: converter- simplexml.
+2.2.1 Retrofit với lập trình dịch vụ mạng
+ Việc phát triển thư viện HTTP type-safe của chính bạn để giao tiếp với REST API có thể thật sự là một điều khó khăn: bạn phải xử lý nhiều chức năng chẳng hạn như tạo các kết nối, lưu trữ cach, thử lại các yêu cầu thất bại, phân tích luồng phản hồi, xử lý lỗi, và nhiều hơn nữa. Retrofit, mặt khác, được hoạch định rất tốt, có tài liệu hướng dẫn và kiểm đã được kiểm thử—một thư viện đã được thử nghiệm rất nhiều trong thực tế sẽ giúp bạn tiết kiệm rất nhiều thời gian quý báu và giảm bớt căng thẳng.
+2.2.2 Kết nối client với server
+Server (máy chủ) là một chương trình máy tính hoặc một thiết bị cung cấp chức năng cho các chương trình hoặc các thiết bị khác được gọi là “Clients” (khách hàng), cấu trúc này được gọi là mô hình client - server.  Một máy chủ có thể cung cấp nhiều chức năng khác nhau được gọi là “dịch vụ”, chẳng hạn như chia sẻ dữ liệu, thực hiện công việc tính toán cho một khách hàng… Một máy chủ có thể phục vụ nhiều khách hàng và một khách hàng có thể sử dụng nhiều máy chủ.
+
+
+Các server điển hình:
+• Hiện nay các server điển hình bao gồm:
+• Database servers (máy chủ dữ liệu).
+• File servers (máy chủ file)
+• Mail servers (máy chủ mail)
+• Print servers (máy chủ in)
+• Web servers (máy chủ web)
+• Game servers (máy chủ trò chơi)
+• Application servers (máy chủ ứng dụng)
+Mục đích của một máy chủ là để chia sẻ dữ liệu cũng như chia sẻ tài nguyên và phân chia công việc. Một máy chủ có thể phục vụ nhiều chương trình máy tính riêng của mình, bảng dưới đây sẽ cho các bạn thấy mục đích của các máy chủ.
+Mục đích:
+• Ứng dụng máy chủ trên web (chương trình máy tính chạy trên trình duyệt web) cho phép người dùng trong hệ thống sử dụng nó mà không cần phải cài đặt thêm một bản sao trên máy tính.
+• Cho phép máy tính cá nhân hoặc các thiết bị chơi game chơi cá game trên web
+• Nơi lưu trữ các trang web, một web server có thể làm nên mạng diện rộng toàn cầu (world wide web), mỗi website có thể có một hoặc nhiều web server
+• Chia sẻ một hoặc nhiều máy in trên khắp hệ thống, như vậy có thể tránh được các rắc rối khi truy cập
+• Có thể gửi email với cùng một cách là bưu điện gửi mail qua snail mail
+Chia sẻ file và folder, các file và folder sẽ được lưu trữ trong không gian lưu trữ, hoặc cả 2 thông qua một hệ thống nhất định.
+     Bên phía người dùng:
+• Sử dụng nó với máy tính và một trình duyệt web
+• Cần có máy tính cá nhân hoặc thiết bị chơi game
+• Người dùng cần có máy tính cá nhân và một trình duyệt web
+• Máy tính có kết nối với máy in
+• Hệ thống máy tính có kết nối mạng có khả năng chia sẻ các file với nhau, mặc dù nó có thể chia sẻ thông qua mạng LAN
+• Người gửi và người nhận email.
+Ngày nay hệ thống client-server thường xuyên được thực hiện bởi mô hình request–response (yêu cầu - phản hồi), khi khách hàng gửi một yêu cầu đến máy chủ, qua một số thao tác máy chủ sẽ gửi lại phản hồi cho khách hàng.
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Phát biểu bài toán
+    Hoạt động của website bán hàng online:
+     Khách hàng khi truy cập website có thể xem được các nội dung như danh mụccác sản phẩm, loại sản phẩm trên website.
+     Sản phẩm bao gồm bánh gato, bánh sinh nhật, bánh phục vụ tiệc cưới, hội nghịvà một số bánh cupcake, …
+    Thông tin về sản phẩm bao gồm: mã sản phẩm, tên sản phẩm, chủng loại, hìnhảnh, giá và mô tả sản phẩm.
+    Thông tin hóa đơn bao gồm các thông tin: mã hóa đơn, tổng số lượng sảnphẩm, thanh toán, địa chỉ, ngày nhận hàng.
+    Khi khách hàng chọn một sản phẩm sẽ chuyển tới trang tóm tắt sản phẩm, tại
+đây khách hàng có thể xem các thông tin tóm tắt về sản phẩm, hỗ trợ cách thứcđặt hàng và có thể thêm sản phẩm đó vào giỏ hàng với số lượng mặc định là 1và sẽ tăng thêm số lượng nếu khách hàng cập nhật trong giỏ hàng.
+    Khách hàng có thể chuyển đến giỏ hàng để xem danh mục các sản phẩm đãthêm vào. Khách hàng có thể thay đổi số lượng sản phẩm hoặc xóa bỏ sảnphẩm nào đó ra khỏi giỏ hàng.
+     Khi đã xác định được các mặt hàng và số lượng, khách hàng sẽ tiến hành thanhtoán. Khi thanh toán, nếu chưa có tài khoản thì khách hàng cần đăng ký, saukhi đăng ký sẽ có thể đăng nhập và điền đầy đủ thông tin vào mẫu, bao gồm:họ tên, số điện thoại, địa chỉ nhận, ngày nhận sản phẩm, … Sau đó các thông tinsẽ được gửi lại cho nhân viên để nhân viên kiểm tra và xử lý.
+    Nhân viên sẽ kiểm tra yêu cầu và nếu còn sản phẩm và có điều kiện vận chuyểnthì in hóa đơn và chuyển xuống bộ phận vận chuyển.
+3.2 Yêu cầu của hệ thống
+3.2.1 Yêu cầu về trang hiển thị
+ 3.2.1.1. Đăng ký
+     Cho phép người dùng ẩn danh đăng ký tài khoản mới để trở thành thành viên.
+     Thông tin đăng ký bao gồm: Họ tên, địa chỉ, ngày sinh, tên đăng nhập, Mật khẩu, Hình đại diện, …
+     Sau khi người dùng điền đầy đủ những thông tin hợp lệ và xác nhận đăng ký tài khoản,ứng dụng sẽ hiển thị thông báo đăng ký thành công rồi chuyển người dùng đến trang chủ ứng dụng.
+3.2.1.2. Đăng nhập
+     Cung cấp chức năng đăng nhập cho người dùng.
+3.2.1.3. Hiển thị danh sách các sản phẩm
+     Hiển thị các chủ đề bao gồm các nhóm sản phẩm: Bánh tầng, bánh số, bánh cho trẻ em, bánh in ảnh, vv….
+      Khi người dùng chọn nhóm sản phẩm nào thì ứng dụng sẽ chuyển tới trang hiển thị các sản phẩm đó.
+3.2.1.4. Hiển thị danh sách sản phẩm
+      Đây là danh sách các sản phẩm trên ứng dụng được sắp xếp theo thứ tự trong cơ sở dữ liệu.
+3.2.1.5. Hiển thị quản lý thông tin cá nhân
+     Khi người dùng chọn quản lý thông tin cá nhân thì hệ thống sẽ hiển thị trangquản lý thông tin cá nhân cho người dùng
+     Thêm thông tin cá nhân: Cho phép người dùng thêm thông tin cá nhân ở các trường còn thiếu như: địa chỉ, hình đại diện…
+     Sửa thông tin cá nhân: Cho phép người dùng sửa thông tin cá nhân ở tất cả các trường.
+     Xóa thông tin cá nhân: Cho phép người dùng xóa thông tin cá nhân, xóa tài khoản.
+
+  3.2.1.6. Hiển thị quảng cáo
+     Các banner quảng cáo được đặt phía trên của trang chủ 
+     Các banner này do người quản trị quản lý, cả về vị trí lẫn nội dung.
+  3.2.1.7. Hiển thị bài viết nổi bật
+     Nhóm các sản phẩm nổi bật sẽ được hiển thị các sản phẩm nổi bật
+  3.2.1.8. Hiển thị chi tiết sản phẩm
+     Hiển thị chi tiết của sản phẩm bao gồm hình ảnh, giá, nguyên liệu…
+  3.2.1.9. Hiển thị thông tin liên hệ
+     Thông tin liên hệ của ứng dụng sẽ được hiển thị ở phần dưới
+  3.2.1.10. Chức năng tìm kiếm
+Người dùng có thể tìm kiếm sản phẩm bằng cách nhập các từ khóa tìm kiếm vào ô tìm kiếm.
+     Kết quả tìm kiếm sẽ được hiển thị để người dùng thao tác.
+
+3.3 Biểu đồ UseCase
+3.3.1 Biểu đồ UseCase mức tổng quát
+
+Hình 3.1 UseCase mức tổng quát
+
+
+3.3.2 Đặc tả UseCase
+• UseCase “Quản lý giỏ hàng”
+
+    Hình 3.2 UseCase quản lý giỏ hàng
+    Bảng 3.1 Đặc tả usecase quản lý giỏ hàng
+Mô tả- Cho phép người dùng thêm hoặc xóa sản phẩm muốn đặt mua trong giỏ hàngNgười dùng- Khách hàngSự kiện chính- Đăng nhập vào ứng dụngĐiều kiện cuối- thêm,xóa sản phẩm trong giỏ hàngMô tả- sản phẩm đặt hàng đã được gửi đi
+
+
+• UseCase “Quản lý sản phẩm”
+
+
+    Hình 3.3 UseCase Quản lý sản phẩm
+    Bảng 3.2Đặc tả usecase quản lý sản phẩm
+UseCase- Quản lý sản phẩmMô tả- Quản lý tất cả các sản phẩm theo từng nhóm sản phẩmNgười dùng- Người dùngSự kiện chính- Danh sách các sản phẩm chia thành các nhóm
+Điều kiện cuối- Hiển thị danh sách nhóm sản phẩm    
+
+
+• UseCase “Tìm kiếm sản phẩm”
+    Bảng 3.3Đặc tả UseCase Tìm kiếm sản phẩm
+UseCase- Tìm kiếm sản phẩmMô tả- Tìm kiếm sản phẩm theo tên sản phẩmNgười dùng- Tất cả các loại người dùngSự kiện chính- Người dùng nhập từ khóa vào ô tìm kiếm dữ liệu và nhất nút “Tìm kiếm”Sự kiện phụ- Người dùng bỏ trống ô tìm kiếm, hệ thống gửi thông báo yêu cầu nhập liệu.Điều kiện cuối- Kết quả tìm kiếm sẽ hiển thị với các sản phẩm muốn tìm• UseCase “Đăng ký tài khoản”
+    Bảng 3.4Đặc tả UseCase Đăng ký tài khoản
+UseCase- Đăng ký tài khoảnMô tả- Đăng ký tài khoản mới làm thành viên của ứng dụngNgười dùng- Người dùng ẩn danhSự kiện chính- Người dùng nhấn “Đăng ký’’ Hệ thống sẽ hiển thị thông báo đăng ký tài khoản thành công rồi chuyển người dùng tới trang đăng nhậpSự kiện phụ- Người dùng bỏ trống các trường nhập liệu bắt buộc, thông báo lỗi xuất hiện
+- Người dùng điền những thông tin không hợp lệ, thông báo lỗi xuất hiện
+- Người dùng nhập lại mật khẩu không khớp, thông báo lỗi xuất hiệnĐiều kiện cuối- Tài khoản được tạo mới• UseCase “Xem chi tiết sản phẩm”
+    Bảng 3.5Đặc tả UseCaseXem chi tiết sản phẩm
+UseCase- Xem chi tiết sản phẩmMô tả- Xem chi tiết các sản phẩm trên ứng dụngNgười dùng- Người dùng đã xác thựcSự kiện chính- Người dùng nhấn vào sản phâm để xem chi tiết sản phẩm.
+Gồm giá bán, hình ảnh, …
+Sự kiện phụ- Người dùng không được phép sửa hoặc xóa chi tiết sản phẩmĐiều kiện cuối- Chi tiết sản phẩm được hiển thị3.4 Biểu đồ lớp
+3.4.1 Biểu đồ lớp (mức phân tích)
+    
+    Hình 3.4 Biểu đồ lớp mức phân tích
+3.4.2 Mô tả chi tiết
+    Bảng 3.6 Bảng:users
+STTTên trườngKiểu dữ liệuĐộ dàiGhi chú1user_idint25Khoá chính, mã người dùng2user_emailNvarchar200Id đăng nhập3user_passInt20Pass word4user_roleInt20Vai trò5usergroup_idVarchar25Quyền    Bảng 3.7 Bảng:category
+STTTên trườngKiểu dữ liệuĐộ dàiGhi chú1category_idint 30Khoá chính, mã loại2category_namenvarchar30Tên loại    Bảng 3.8 Bảng:usergroup
+STTTên trườngKiểu dữ liệuĐộ dàiGhi chú1usergroup_idintKhoá chính2usergroup_namenvarchar50Tên nhóm    Bảng 3.9 Bảng:bill
+STTTên trườngKiểu dữ liệuĐộ dàiGhi chú1bill_idint Mã hóa đơn2user_idvarchar200Mã khách hàng3TotalintTổng tiền4PaymentVarchar225Loại thanh toán5AddressVarchar200Địa chỉ6DateDate time200Ngày mua hàng    Bảng 3.10 Bảng:billdetail
+STTTên trườngKiểu dữ liệuĐộ dàiGhi chú1bill_detail_idintKhoá chính,mã chi tiết hóa đơn2bill_idintMã hóa đơn3Product_idintMã sản phẩm4PriceNumeric18,2Giá bán5QuantityintSố lượng
+    Bảng 3.11 Bảng:product
+STTTên trườngKiểu dữ liệuĐộ dàiGhi chú1Product_idint25Khóa chính2Category_idint25Khoá ngoại tham gia vào khoá chính cho biết loại sản phẩm
+
+
+3Product_namevarchar25Tên sản phẩm4Product_imageVarchar25Hình ảnh sản phẩm5Product_pricenumeric18,2Giá sản phẩm6Product_descriptionVarchar 225Thông tin sản phẩm3.5 Biểu tuần tự
+3.5.1 Đăng ký
+    
+Hình 3.5 Biểu đồ tuần tự đăng ký
+    
+
+
+3.5.2 Đặt hàng
+    
+    
+    Hình 3.6 Biểu đồ tuần tự Đặt hàng
+3.5.3 Tìm kiếm
+
+    Hình 3.7 Biểu đồ tuần tự Tìm kiếm
+    
+
+3.6 Mô hình cơ sở dữ liệu
+    
+    Hình 3.8 Mô hình cơ sở dữ liệu
+3.7 Thiết kế đặc tả giao diện
+     Một số giao diện chính của hệ thống:
+     Gồm có các lựa chọn chính:
+     Xem danh mục sản phẩm
+     Xem giỏ hàng
+     Xem thông tin tài khoản
+     Đặt hàng
+
+
+3.7.1 Giao diện trên mobile app:
+     Giao diện đăng ký:
+    
+    Hình 3.9 Giao diện đăng ký
+    Đăng ký tài khoản khách hàng(không bắt buộc)
+
+
+     Giao diện đăng nhập:
+     
+    Hình 3.10 Giao diện đăng nhập
+     Đăng nhập bằng tài khoản đã đăng ký
+
+
+     Giao diện trang chính
+    
+    Hình 3.11 Giao diện trang chủ trên ứng dụng
+     Giao diện chính gồm các nhóm sản phẩm được loard về từ server cho phép người dùng nhấn chọn để xem danh sách sản phẩm từ các nhóm.
+
+
+     Giao diện danh mục sản phẩm:
+
+    Hình 3.12 Giao diện danh mục sản phẩm
+     Giao diện danh mục sản phẩm cho phép người dùng nhấn chọn các sản phẩm muốn mua.
+     Tại đây các bạn cho thể chọn xem từng sản phẩm trong các nhóm danh mục sản phẩm này.
+     Giao diện chi tiết sản phẩm:
+
+    Hình 3.13 Giao diện chi tiết sản phẩm
+
+
+     Giao diện giỏ hàng của bạn:
+
+    Hình 3.14 Giao diện giỏ hàng của bạn
+
+
+     Giao diện tìm kiếm sản phẩm theo tên:
+     
+    Hình 3.15 Giao diện tìm kiếm sản phẩm theo tên
+
+
+     Giao diện đặt hàng:
+
+    Hình 3.16 Giao diện đặt hàng
+
+
+     Giao diện đơn hàng được chuyển lên server:
+
+    Hình 3.17 Giao diện đơn hàng được gửi lên server
+
+
+3.7.2 Giao diện bên phía server
+     Giao diện bên phía server khi khởi động:
+    
+    Hình 3.18 Giao diện phía server bên khởi động
+
+
+     Giao diện bên phía server khi nhận được đơn hàng:
+
+    Hình 3.19 Giao diện khi đơn hàng gửi lên
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+     Tìm hiểu, nắm bắt được các công cụ thiết kếứng dụng bán hàng, công cụ lập trình android studio.
+     Biết được cách thiết kế ứng dụng kết nói cơ sở dữ liệu với service và cách tổ chức dữ liệu.
+     Các dịch vụ trên internet đặc biệt là dịch vụ bán hàng online.
+     Cho phép người dùng tìm kiếm được các sản phẩmtheo tên sản phẩm người dùng cần tìm.
+     Giao diện đẹp mắt và dễ nhìn giúp trưng bày các mẫu sản phẩm hấp dẫn khách hàng đặt mua:
+     Hiển thị các nhóm sản phẩm.
+     Hiển thị danh sách các sản phẩm.
+     Hiển thị chi tiết các sản phẩm.
+     Cho phép thêm sản phẩm vào giỏ hàng.
+     Đơn hàng từ giỏ hàng sẽ được chuyển lên server chờ xử lý.
+     Áp dụng đề tài vào sử dụng trong thực tế cho hệ thống nhỏ.
+4.2 Hạn chế của đề tài
+     Hệ thống ứng dụng bán bánh online cho cửa hàng bánh mới dừng lại ở giải các module cơ bản, chưa có nhiều module tiện ích cho người dùng như: Thống kê doanh thu theo tháng, thăm dò ý kiến, hỏi đáp, chia sẻ…
+     Chức năng đăng ký, đăng nhập cần được bổ sung khi nâng cấp thành hệ thống lớn và chuyên nghiệp hơn.
+     Giao diện còn hệ thống còn đơn giản.
+     Tìm kiếm mới dừng ở mức theo tên chưa tìm kiếm theo giá sản phẩm.
+4.3 Hướng phát triển của đề tài
+Trong thời gian nghiên cứu và thực hiện đề tài, tác giả đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+     Xây dựng thêm các chức năngnhư: Đăng ký, Đăng nhập, chia sẻ, thích, đánh giá, để hệ thống tiện ích và khách hàng dễ dàng sử dụng.
+     Bổ sung các Module hỗ trợ liên hệ nhằm tương tác với các website bán hàng khác.
+     Liên kết với website nhằm mở rộng thị trường kinh doanh.
+     Hoàn thiện đề tài trên nền tảng android.
+TÀI LIỆU THAM KHẢO
+
+[1]Phạm Hữu Khang, Lập trình Android 2.0. Hà Nội, Việt Nam: Nhà xuất bản Lao Động Xã Hội, 2005.[2]Nguyễn Văn Quyết, Giáo trình Công nghệ di động và ứng dụng. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY, 2010.[3]Hoàng Quốc Việt, Giáo trình Lập trình android cơ bản. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY, 2016.
+
+
+
+
+PHỤ LỤC
+1Nguyễn Xuân Khươg- Phát biểu bài toán
+- Xác định yêu cầu khách hàng
+- Phân tích cơ sở dữ liệu
+- Thiết kế và code chức năng hoàn thiện ứng dụng
+    
+Xây dựng ứng dụng bán bánh cho cửa hàng bánh
+    
+    
+28
+    
+    

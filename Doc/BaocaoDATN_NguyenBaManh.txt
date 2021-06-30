@@ -1,0 +1,326 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Công việc kinh doanh buôn bán đã xuất hiện từ rất lâu, trải qua nhiều giai đoạn lịch sử nó mang một hình thức đặc thù riêng. Trước kia, khi các công cụ hỗ trợ công việc mua bán chưa phát triển mạnh, thì người kinh doanh mua bán chỉ diễn ra dưới hình thức mua bán trực tiếp. Từ khi khoa học công nghệ phát triển, nó đã tạo ra phát triển các loại hình thức mua bán mới, điển hình là mua bán trực tuyến. Hình thức mua bán trực tuyến hỗ trợ đắc lực cho người kinh doanh tiếp xúc với được nhiều khách hàng, còn khách hàng thì công việc mua bán được diễn ra nhanh chóng, thuận lợi, tiết kiệm được thời gian.
+    Hiện nay, Thương Mại Điện Tử (TMĐT) đang được nhiều quốc gia quan tâm, coi là một trong những động lực phát triển chủ yếu của nền kinh tế. TMĐT đem lại những lợi ích tiềm tàng, giúp doanh nghiệp thu được thông tin phong phú về thị trường và đối tác, giảm chi phí tiếp thị và giao dịch, tạo dựng và củng cố quan hệ bạn hàng. 
+    Việc mua hàng qua mạng chỉ với thủ tục đăng ký mua sắm đơn giản nhưng đem lại nhiều lợi ích: tiết kiệm và chủ động về thời gian, tránh khỏi những phiền phức khó chịu. Vậy nên việc mua bán hàng qua mạng đang rất được mọi người quan tâm.
+    Trên cơ sở các kiến thức đã được học trong nhà trường và áp dụng các công nghệ mới, em đã quyết định chọn đề tài “Xây dựng ứng dụng đặt đồ ăn nhanh”.
+- Phục vụ tốt hơn nhu cầu của khách hàng và quản lý của nhà hàng trong hoạt động kinh doanh.
+- Khách hàng chỉ cần các thao tác đơn giản trên điện thoại di động là có thể đặt hàng được ngay.
+1.2 Mục tiêu của đề tài
+    Ứng dụng đặt đồ ăn nhanh chạy trên nền tảng Android được xây dựng với hai mục tiêu chính như sau:
+- Thứ nhất là nghiên cứu các công nghệ mới để phát triển ứng dụng Android nhằm mang đến trải nghiệm tốt nhất và sự tiện lợi tối ưu nhất cho người dùng.
+- Thứ hai là phát triển ứng dụng có tính thực tiễn cao, có khả năng triển khai ứng dụng vào thực tế, giúp những người có nhu cầu mua bán thức ăn nhanh có thể thao tác dễ dàng và tiện lợi.
+    Em hy vọng dựa trên nền tảng lý thuyết đã được thầy cô truyền thụ lại, kết hợp với sự tìm hiểu công nghệ của cá nhân, luận văn tốt nghiệp của em sẽ đạt được mục đích mong đợi.
+1.3 Giới hạn và phạm vi của đề tài
+- Load sản phẩm có độ trễ từ server.
+- Thông tin còn tiếng anh, chưa việt hóa 100%.
+1.4 Nội dung thực hiện
+    Đề tài “Xây dựng ứng dụng đặt đồ ăn nhanh” là một ứng dụng chạy trên điện thoại sử dụng hệ điều hành Android. Dưới đây là những chức năng chính mà em dự định phát triển ở phiên bản đầu tiên của ứng dụng này:
+- Tìm hiểu các hoạt động kinh doanh trong thực tế.
+- Tìm hiểu cách thức xây dựng một ứng dụng trên android.
+- Xây dựng thành công ứng dụng mua bán đồ ăn nhanh trên android
+- Quản lý nhà hàng.
+- Quản lý việc đặt hàng, xử lý giỏ hàng,…
+- Quản lý việc giao hàng, thời gian giao, xác định vị trí trên bản đồ,...
+- Xử lý thống kê theo yêu cầu như lịch sử đơn hàng, hóa đơn,...
+- Cho phép tìm kiếm thông tin trong hệ thống,…
+- Giao diện thân thiện, dễ sử dụng.
+1.5 Phương pháp tiếp cận
+- Khảo sát lấy yêu cầu người sử dụng điện thoại về các ứng dụng mua bán trên mobile để xây dựng ý tưởng, khảo sát các ứng dụng tương tự chuyên về kinh doanh.
+- Nghiên cứu công nghệ phát triển ứng dụng chạy trên hệ điều hành Android. Xây dựng phía client một app có thể cài đặt trên điện thoại chạy Android đáp ứng các yêu cầu cơ bản của hệ thống.
+- Nghiên cứu công nghệ xây dựng web server và xây dựng hệ thống quản trị cơ sở dữ liệu, cho phép client lấy dữ liệu về và hiển thị ra cho người dùng.
+- Các công nghệ sử dụng : 
+o Android Jetpack
+o Deploy Webserver Nodejs
+o MongoDB
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Android
+2.1.1 Android là gì?
+    Ban đầu, Android là hệ điều hành cho các thiết bị cầm tay dựa trên lõi Linux do công ty Android Inc. (California, Mỹ) thiết kế. Công ty này sau đó được Google mua lại vào năm 2005 và bắt đầu xây dựng Android Platform. Các thành viên chủ chốt ở Android Inc. gồm có: Andy Rubin, Rich Miner, Nick Sears, and Chris White...
+
+    Hình 21 Android TimeLine
+    Và sau tiếp, vào cuối năm 2007, thuộc về Liên minh Thiết bị Cầm tay Mã Nguồn mở (Open Handset Alliance) gồm các thành viên nổi bật trong ngành viễn thông và thiết bị cầm tay như: Texas Instruments, Broadcom Corporation, Google, HTC, Intel, LG, Marvell Technology Group, Motorola, Nvidia, Qualcomm, Samsung Electronics, Sprint Nextel, T-Mobile, ARM Holdings, Atheros Communications, Asustek Computer Inc, Garmin Ltd, Softbank, Sony Ericsson, Toshiba Corp, and Vodafone Group,… Mục tiêu của Liên minh này là nhanh chóng đổi mới để đáp ứng tốt hơn cho nhu cầu người tiêu dùng và kết quả đầu tiên của nó chính là nền tảng Android. Android được thiết kế để phục vụ nhu cầu của các nhà sản xuất thiết, các nhà khai thác và các lập trình viên thiết bị cầm tay.
+    Phiên bản SDK lần đầu tiên phát hành vào tháng 11 năm 2007, hãng TMobile cũng công bố chiếc điện thoại Android đầu tiên đó là chiếc T-Mobile G1, chiếc smartphone đầu tiên dựa trên nền tảng Android. Một vài ngày sau đó, Google lại tiếp tục công bố sự ra mắt phiên bản Android SDK release Candidate 1.0. Trong tháng 10 năm 2008, Google được cấp giấy phép mã nguồn mở cho Android Platform.
+    Khi Android được phát hành thì một trong số các mục tiêu trong kiến trúc của nó là cho phép các ứng dụng có thể tương tác được với nhau và có thể sử dụng lại các thành phần từ những ứng dụng khác. Việc tái sử dụng không chỉ được áp dụng cho các dịch vụ mà nó còn được áp dụng cho cả các thành phần dữ liệu và giao diện người dùng.
+    Vào cuối năm 2008, Google cho phát hành một thiết bị cầm tay được gọi là Android Dev Phone 1 có thể chạy được các ứng dụng Android mà không bị ràng buộc vào các nhà cung cấp mạng điện thoại di động. Mục tiêu của thiết bị này là cho phép các nhà phát triển thực hiện các cuộc thí nghiệm trên một thiết bị thực có thể chạy hệ điều hành Android mà không phải ký một bản hợp đồng nào. Vào khoảng cùng thời gian đó thì Google cũng cho phát hành một phiên vản vá lỗi 1.1 của hệ điều hành này. Ở cả hai phiên bản 1.0 và 1.1 Android chưa hỗ trợ soft-keyboard mà đòi hỏi các thiết bị phải sử dụng bàn phím vật lý. Android cố định vấn đề này bằng cách phát hành SDK 1.5 vào tháng Tư năm 2009, cùng với một số tính năng khác. Chẳng hạn như nâng cao khả năng ghi âm truyền thông, vật dụng, và các live folder..
+2.1.2 Kiến trúc của Android
+    Mô hình sau thể hiện một cách tổng quát các thành phần của hệ điều hành Android. Mỗi một phần sẽ được đặc tả một cách chi tiết dưới đây:
+
+    Hình 22 Cấu trúc stack của hệ thống Android
+2.1.3 Application Framework
+    Bằng cách cung cấp một nền tảng phát triển mở, Android cung cấp cho các nhà phát triển khả năng xây dựng các ứng dụng cực kỳ phong phú và sáng tạo. Nhà phát triển được tự do tận dụng các thiết bị phần cứng, thông tin địa điểm truy cập, các dịch vụ chạy nền, thiết lập hệ thống báo động, thêm các thông báo để các thanh trạng thái, và nhiều, nhiều hơn nữa.
+    Nhà phát triển có thể truy cập vào các API cùng một khuôn khổ được sử dụng bởi các ứng dụng lõi. Các kiến trúc ứng dụng được thiết kế để đơn giản hóa việc sử dụng lại các thành phần; bất kỳ ứng dụng có thể xuất bản khả năng của mình và ứng dụng nào khác sau đó có thể sử dụng những khả năng (có thể hạn chế bảo mật được thực thi bởi khuôn khổ). Cơ chế này cho phép các thành phần tương tự sẽ được thay thế bởi người sử dụng. Cơ bản tất cả các ứng dụng là một bộ các dịch vụ và các hệ thống, bao gồm:
+- Một tập hợp rất nhiều các View có khả năng kế thừa lẫn nhau dùng để thiết kế phần giao diện ứng dụng như: gridview, tableview, linearlayout,…
+- Một “Content Provider” cho phép các ứng dụng có thể truy xuất dữ liệu từ các ứng dụng khác (chẳng hạn như Contacts) hoặc là chia sẻ dữ liệu giữa các ứng dụng đó.
+- Một “Resource Manager” cung cấp truy xuất tới các tài nguyên không phải là mã nguồn, chẳng hạn như: localized strings, graphics, and layout files.
+- Một “Notifycation Manager” cho phép tất cả các ứng dụng hiển thị các custom alerts trong status bar.
+- Activity Manager được dùng để quản lý chu trình sống của ứng dụng và điều hướng các activity.
+2.1.4 Library
+    Android bao gồm một tập hợp các thư viên C/C++ được sử dụng bởi nhiều thành phần khác nhau trong hệ thống Android. Điều này được thể hiện thông qua nền tảng ứng dụng Android. Một số các thư viện cơ bản được liệt kê dưới đây:
+- System C library: a BSD-derived implementation of the standard C system library (libc), tuned for embedded Linux-based devices.
+- Media Libraries - based on PacketVideo's OpenCORE; the libraries support playback and recording of many popular audio and video formats, as well as static image files, including MPEG4, H.264, MP3, AAC, AMR, JPG, and PNG.
+- Surface Manager – Quản lý việc truy xuất vào hệ thống hiển thị.
+- LibWebCore - a modern web browser engine which powers both the Android browser and an embeddable web view.
+- SGL - the underlying 2D graphics engine.
+- 3D libraries - an implementation based on OpenGL ES 1.0 APIs; the libraries use either hardware 3D acceleration (where available) or the included, highly optimized 3D software rasterizer.
+- FreeType - bitmap and vector font rendering.
+- SQLite - a powerful and lightweight relational database engine available to all applications.
+2.1.5 Android Emulator
+    Android SDK và Plugin Eclipse được gọi là một Android Deverloper Tool (ADT). Các Android coder sẽ cần phải sử dụng công cụ IDE (Integrated Development Enveronment) này để phát triển, debugging và testing cho ứng dụng. Tuy nhiên, các coder cũng có thể không cần phải sử dụng IDE mà thay vào đó là sử dụng command line để biên dịch và tất nhiên là vẫn có Emulator như thường.
+    Android Emulator được trang bị đầy đủ hầu hết các tính năng của một thiết bị thật. Tuy nhiên, một số đã bị giới hạn như là kết nối qua cổng USB, camera và video, nghe phone, nguồn điện giả lập và bluetooth.
+    Android Emulator thực hiện các công việc thông qua một bộ xử lý mã nguồn mở, công nghệ này được gọi là QEMU (http://bellard.org/qemu/) được phát triển bởi Fabrice Bellard.
+2.2 Android Jetpack
+2.2.1 Android Jetpack là gì?
+    Jetpack là một tập hợp các software components Android giúp bạn phát triển các ứng dụng Android tuyệt vời dễ dàng hơn. Các thành phần này giúp bạn thực hiện theo các phương pháp hay nhất, giải phóng bạn khỏi viết mã soạn sẵn và đơn giản hóa các tác vụ phức tạp, vì vậy bạn có thể tập trung vào mã mà bạn quan tâm.
+    Jetpack bao gồm các thư viện gói androidx. *, Không được gộp vào các API platforms. Điều này có nghĩa là nó cung cấp khả năng tương thích ngược và được cập nhật thường xuyên hơn nền tảng Android, đảm bảo bạn luôn có quyền truy cập vào các phiên bản mới nhất và tuyệt vời nhất của các thành phần Jetpack.
+    Android Jetpack ra đời với 3 tiêu chí sau:
+- Tăng tốc độ phát triển
+- Loại bỏ boilerplate code
+- Mạnh mẽ, chất lượng
+Dưới đây là các thành phần cơ bản trong gói Android Jetpack:
+
+    Hình 23 Các thành phần cơ bản của Android Jetpack
+2.2.2 Điểm qua những thành phần mới của Android Jetpack 
+    WorkMananager component là một thư viện cung cấp giải pháp giúp cho các tác vụ chạy nền( background task) được hiệu quả hơn. Đưa một nhiệm vụ cho WorkManager và để cho nó chọn một cách thích hợp để chạy nó trong nền tùy theo điều kiện. Nó thay thế những thứ như jobs hoặc SyncAdapters. WorkManager cung cấp một API có khả năng làm việc trên các thiết bị có hoặc không có Google Play Services. Ngoài ra, WorkManager còn có khả năng tạo biểu đồ công việc và truy vấn trạng thái công việc của bạn.
+    Navigation: Trong khi Activity trong Android được cung cấp để bạn dễ dàng tạo và tương tác với người dùng thông qua UI. Nhưng nó lại không linh hoạt trong việc chia sẻ dữ liệu và chuyển đổi giữa các Activity. Chính vì vậy mà Activity trở thành một cấu trúc kém lý tưởng để xây dựng điều hướng trong ứng dụng. Vì vậy, Google I/O 18 đã giới thiệu Navigation component dưới dạng một famework. Navigation component giúp cho bạn dễ dàng tạo điều hướng trong ứng dụng.
+
+    Hình 24 Navigation trong Android Jetpack
+    Với khả năng hỗ trợ Fragment, bạn sẽ nhận được tất cả các lợi ích từ Architecture Components như Lifecycle và ViewModel trong khi Navigation sẽ xử lý sự phức tạp của FragmentTransilities giùm bạn. Một số tính năng của Navigation:
+- Hỗ trợ hiệu ứng khi bạn điều hướng giữa các màn hình.
+- Tự động xây dựng các hành vi Up và Back.
+- Hỗ trợ đầy đủ cho các liên kết sâu (Deep link).
+- Cung cấp công cụ để kết nối Navigation vào các tiện ích UI thích hợp. Như navigation drawer và Bottom Navigation.
+- Cuối cùng, trình chỉnh sửa Navigation Editor trong Android Studio 3.2 còn cho phép bạn xem và quản lý các navigation properties của mình một cách rất trực quan.
+    Paging: Thông thường, người ta sẽ không tải toàn bộ dữ liệu và hiển thị ra màn hình. Vì điều đó sẽ vừa tốn thời gian lấy dữ liệu, vừa tốn thời gian và tài nguyên để hiển thị. Do vậy, người ta chỉ tải từng phần của dữ liệu. Đây chính là khái niệm paging. Paging component giúp việc tải dữ liệu trở nên dễ dàng. Đồng thời giúp việc hiển thị các tập dữ liệu lớn với tốc độ cuộn nhanh hơn, không giới hạn với RecyclerView. Paging component có thể tải dữ liệu phân trang từ bộ nhớ cục bộ, mạng hoặc cả hai. Nó hoạt động hiệu quả hơn hẳn so với Room, LiveData và RxJava.
+    Slices: Để hoàn thiện bộ các tính năng mới ra mắt của Android Jetpack thì không thể không nhắc đến Slices component. “Slice” là cách để hiển thị UI của ứng dụng bên trong Google Assistant.
+    Android KTX: Và cuối cùng nhưng không kém phần quan trọng trong câu trả lời Android Jetpack là gì, một mục tiêu của Android Jetpack đó là tận dụng các ưu điểm của ngôn ngữ Kotlin giúp bạn làm việc hiệu quả hơn. Nếu cấu trúc của kotlin đã ngắn hơn Java, thì với android ktx, thậm chí nó còn được chuyển đổi ngắn hơn nữa.
+2.3 Webserver với Nodejs + Express
+2.3.1 Nodejs là gì?
+    Node.js là một nền tảng chạy trên môi trường V8 JavaScript runtime - một trình thông dịch JavaScript cực nhanh chạy trên trình duyệt Chrome. Bình thường thì bạn cũng có thể tải bộ V8 và nhúng nó vào bất cứ thứ gì; Node.js làm điều đó đối với các web server. JavaScript suy cho cùng cũng chỉ là một ngôn ngữ - vậy thì không có lý do gì để nói nó không thể sử dụng trên môi trường server tốt như là trong trình duyệt của người dùng được.
+    Trong một môi trường server điển hình LAMP (Linux-Apache-MySQL-PHP), bạn có một web server là Apache hoặc NGINX nằm dưới, cùng với PHP chạy trên nó. Mỗi một kết nối tới server sẽ sinh ra một thread mới, và điều này khiến ứng dụng nhanh chóng trở nên chậm chạp hoặc quá tải - cách duy nhất để hỗ trợ nhiều người dùng hơn là bằng cách bổ sung thêm nhiều máy chủ. Đơn giản là nó không có khả năng mở rộng tốt. Nhưng với Node.js thì điều này không phải là vấn đề. Không có một máy chủ Apache lắng nghe các kết nối tới và trả về mã trạng thái HTTP - bạn sẽ phải tự quản lý kiến trúc lõi của máy chủ đó. May mắn thay, có một số module giúp thực hiện điều này được dễ dàng hơn, nhưng công việc này vẫn gây cho bạn một chút khó khăn khi mới bắt đầu. Tuy nhiên, kết quả thu được là một ứng dụng web có tốc độ thực thi cao.
+2.3.2 Express là gì?
+    ExpressJS là một web framework được xây dựng trên nền tảng NodeJs. Expressjs cung cấp các hàm HTTP và midleware để tạo ra API đơn giản và dễ sử dụng. ExpressJS được phát hành theo giấy phép mã nguồn mở, có cộng đồng hỗ trợ lớn, được phép sử dụng cho ứng dụng có mục đích thương mại. Do vậy bạn hoàn toàn có thể yên tâm sử dụng framework này cho dự án của mình, từ dự án nhỏ tới lớn. Cấu trúc thư mục dự án khi sử dụng ExpressJS được chia là 3 phần: routes, Views và Public. ExpressJS xây dựng ứng dụng web theo đúng mô hình MVC (Model – View – Controller).
+  
+    Hình 25 Mô hình ứng dụng xây dựng bằng Express
+    Một số chức năng chính của ExpressJS:
+- Hỗ trợ middleware để trả về các HTTP request.
+- Định nghĩa route dựa trên các action của HTTP (CRUD).
+- Cho phép trả về các trang html sử dụng các template engine (jade, pug…).
+2.4 MongoDB
+2.4.1 Tổng quan về MongoDB
+    MongoDB là một chương trình cơ sở dữ liệu mã nguồn mở được thiết kế theo kiểu hướng đối tượng trong đó các bảng được cấu trúc một cách linh hoạt cho phép các dữ liệu lưu trên bảng không cần phải tuân theo một dạng cấu trúc nhất định nào. Chính do cấu trúc linh hoạt này nên MongoDB có thể được dùng để lưu trữ các dữ liệu có cấu trúc phức tạp và đa dạng và không cố định (hay còn gọi là Big Data). Những lợi thế của MongoDB so với các cơ sở dữ liệu dạng quan hệ có thể kể đến như:
+- Ít Schema hơn: MongoDB là một cơ sở dữ liệu dựa trên Document, trong đó một Collection giữ các Document khác nhau. Số trường, nội dung và kích cỡ của Document này có thể khác với Document khác.
+- Cấu trúc của một đối tượng là rõ ràng.
+- Không có các Join phức tạp.
+- Khả năng truy vấn sâu hơn. MongoDB hỗ trợ các truy vấn động trên các Document bởi sử dụng một ngôn ngữ truy vấn dựa trên Document mà mạnh mẽ như SQ.
+- MongoDB dễ dàng để mở rộng.
+- Việc chuyển đổi/ánh xạ của các đối tượng ứng dụng đến các đối tượng cơ sở dữ liệu là không cần thiết.
+- Sử dụng bộ nhớ nội tại để lưu giữ phần công việc, giúp truy cập dữ liệu nhanh hơn.
+    Một số đặc điểm khác của MongoDB như:
+- Kho lưu định hướng Document: Dữ liệu được lưu trong các tài liệu kiểu JSON.
+- Lập chỉ mục trên bất kỳ thuộc tính nào.
+- Các truy vấn đa dạng.
+- Cập nhật nhanh hơn.
+2.4.2 So sánh MongoDB với cơ sở dữ liệu quan hệ
+
+    Hình 26 Ràng buộc giữa các bảng trong mô hình dữ liệu dạng quan hệ
+
+    Hình 27 Collection trong MongoDB
+- MongoDB sinh ra để tăng tốc độ truy xuất dữ liệu, phù hợp cho các ứng dụng cần tốc độ phản hồi nhanh(realtime như facebook chẳng hạn). Còn các tác nghiệp cần tính toàn vẹn dữ liệu(trong banking) thì Nosql sẽ ko bao giờ là 1 giải pháp cả mà người ta sẽ dùng Mysql.
+- MongoDB không có tính ràng buộc, một điều tồi tệ trong Database vì vậy sẽ rất cần sự cẩn thận khi thao tác trên các collection có quan hệ dữ liệu với nhau.
+- MongoDB đẩy trách nghiệm thao tác Database cho tầng ứng dụng nên sẽ tốn tài nguyên(tài nguyên bây giờ không còn là vấn đề quá lớn nữa).
+- MongoDb có thể mở trộng theo chiều ngang (scale out) phương pháp tăng cường khả năng lưu trữ và xử lý là dùng nhiều máy tính phân tán. MongoDb còn có thể mở rộng theo chiều dọc (scale up) tăng cấu hình server.
+- MongoDb có thể dùng nhiều máy tính phân tán để lưu trữ dữ liệu nên chi phí sẽ rẻ hơn Mysql. Mysql sử dụng những máy chủ hàng khủng, độc quyền nên sẽ đắt đỏ hơn.
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Xác định yêu cầu hệ thống
+    Đối với tài khoản người dùng bình thường:
+- Đăng ký.
+- Đăng nhập.
+- Tìm kiếm đồ ăn hoặc dịch vụ.
+- Đặt đồ ăn và thanh toán.
+- Giỏ hàng và bản đồ.
+- Lịch sử đơn hàng.
+- Danh sách quán yêu thích.
+- Đánh giá cửa hàng.
+    Đối với cửa hàng:
+- Đăng ký mở cửa hàng.
+- Đăng bán sản phẩm.
+- Quản lý kho hàng.
+- Quản lý đơn hàng.
+    Đối với shipper:
+- Đăng ký tài khoản shipper.
+- Nhận đơn hàng từ quán và giao cho khách.
+- Tính tiền thưởng trên mỗi đơn hàng.
+
+
+3.2 Thiết kế hệ thống
+3.2.1 Biểu đồ Use-case
+a) Biểu đồ Use-case tổng quan hệ thống:
+
+    Hình 31 Biểu đồ Use-case tổng quan hệ thống
+b) Biểu đồ Use-case đăng nhập:
+    
+
+    Hình 32 Biểu đồ Use-case đăng nhập
+- Tóm tắt:
+o Người sử dụng: Tất cả tài khoản.
+o Chức năng: Đăng nhập vào hệ thống ứng dụng.
+- Dòng sự kiện:
+o Users nhập tài khoản và mật khẩu.
+o Hệ thống kiểm tra xem tài khoản và mật khẩu xem có tồn tại trong kho lưu trữ không?
+o Nếu tài khoản không tồn tại, thông báo ra cho người dùng.
+o Nếu tài khoản tồn tại, users được quyền truy cập vào ứng dụng.
+o Ứng dụng load dữ liệu tương ứng từ server về và hiển thị.
+c) Biểu đồ Use-case tìm kiếm:
+
+    Hình 33 Biểu đồ Use-case tìm kiếm
+- Tóm tắt:
+o Người sử dụng: Người dùng.
+o Chức năng: Tìm kiếm sản phẩm hoặc cửa hàng trong hệ thống.
+- Dòng sự kiện:
+o Người dùng nhập từ khóa muốn tìm vào ô tìm kiếm.
+o Ứng dụng gửi request đến server.
+o Server tìm kiếm theo kết quả và trả cho ứng dụng.
+o Ứng dụng hiển thị ra danh sách kết quả.
+
+
+d) Biểu đồ Use-case đặt hàng:
+
+    Hình 34 Biểu đồ Use-case đặt hàng
+- Tóm tắt:
+o Người sử dụng: Người dùng.
+o Chức năng: Đặt đồ ăn được niêm yết trên cửa hàng.
+- Dòng sự kiện:
+o Người dùng sau khi tìm kiếm, hoặc lựa chọn từ danh sách cửa hàng đang được hiển thị sẽ được chuyển vào cửa hàng đó.
+o Cửa hàng hiển thị thông tin, danh sách món ăn, giá món, mô tả.. của món ăn, người dùng bấm chọn món muốn đặt và bấm đặt hàng.
+o Món được đặt sẽ được thêm vào trong giỏ hàng.
+e) Biểu đồ Use-case giỏ hàng:
+
+    Hình 35 Biểu đồ Use-case giỏ hàng
+- Tóm tắt:
+o Người sử dụng: Người dùng.
+o Chức năng: Quản lý danh sách các món hàng được người dùng chọn mua.
+- Dòng sự kiện:
+o Người dùng sau khi đặt đồ, sẽ hiển thị lên giao diện giỏ hàng để quản lý.
+o Giỏ hàng bao gồm thông tin về món hàng như: Tên, giá, số lượng,...
+o Người dùng có thể xóa bớt đi món hàng mình không muốn đặt mua nữa ở ngay tại giao diện giỏ hàng.
+o Sau khi chắc chắn, người dùng sẽ thanh toán.
+o Hệ thống tính tiền hàng và chuyển người dùng sang giao diện thanh toán và nhận hàng.
+o Tại đây sẽ hiển thị bản đồ và khoảng cách từ cửa hàng đến vị trí đặt hàng.
+o Lúc này hệ thống sẽ cộng thêm phí dịch vụ và tiền vận chuyển vào đơn hàng.
+o Người dùng có thể áp dụng voucher (nếu có) để được giảm giá.
+o Sau khi nhận hàng, người dùng sẽ bấm nút “Đã nhận được hàng”.
+o Hệ thống sẽ hiển thị ra giao diện đánh giá chất lượng cửa hàng.
+o Sau khi hoàn tất, người dùng sẽ được chuyển về trang chủ.
+f) Biểu đồ Use-case lịch sử đơn hàng
+
+    Hình 36 Biểu đồ Use-case lịch sử đơn hàng
+- Tóm tắt:
+o Người sử dụng: Người dùng.
+o Chức năng: Quản lý các đơn hàng đã được thanh toán thành công.
+- Dòng sự kiện:
+o Người dùng chọn xem lịch sử đơn hàng.
+o Ứng dụng hiển thị danh sách đơn hàng đã thanh toán.
+g) Biểu đồ Use-case đăng bán
+
+    Hình 37 Biểu đồ Use-case đăng bán
+- Tóm tắt:
+o Người sử dụng: Cửa hàng
+o Chức năng: Cho phép cửa hàng được đăng bán các sản phẩm theo từng loại danh mục.
+- Dòng sự kiện:
+o Cửa hàng đăng nhập vào ứng dụng (hoặc website) quản lý.
+o Người dùng chọn danh mục mặt hàng muốn bán và điền các thông tin liên quan như: Ảnh sản phẩm, thông tin, giá bán,...
+o Submit để gửi dữ liệu lên server.
+h) Biểu đồ Use-case quản lý kho hàng
+
+    Hình 38 Biểu đồ Use-case quản lý kho hàng
+
+- Tóm tắt:
+o Người sử dụng: Cửa hàng.
+o Chức năng: Quản lý số lượng hàng của từng sản phẩm ở trong kho
+- Dòng sự kiện:
+o Cửa hàng sẽ truy cập theo đường dẫn: Cửa hàng -> Thông tin cửa hàng -> Quản lý kho hàng để kiểm tra.
+i) Biểu đồ Use-case quản lý đơn hàng
+
+    Hình 39 Biểu đồ Use-case quản lý đơn hàng
+- Tóm tắt:
+o Người sử dụng: Cửa hàng.
+o Chức năng: Cho phép cửa hàng theo dõi đơn hàng đã hoàn tất và danh thu.
+- Dòng sự kiện:
+o Cửa hàng sẽ truy cập theo đường dẫn: Cửa hàng -> Thông tin cửa hàng -> Quản lý đơn hàng để kiểm tra.
+3.2.2 Biểu đồ lớp
+
+    Hình 310 Biểu đồ lớp
+a) Lớp Người dùng
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa1IdStringDuy nhất trên toàn hệ thống, bắt buộcMã định danh người dùng2NameStringBắt buộcTên người dùng3EmailStringBắt buộcEmail4PhoneStringBắt buộcSố điện thoại5AddressStringBắt buộcĐịa chỉ nhận hàng6ImageImageCó hoặc khôngẢnh người dùng    Bảng 31 Bảng chi tiết lớp người dùng
+
+b) Bảng Cửa hàng
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa1IdStringDuy nhất trên toàn hệ thống, bắt buộc.Mã định danh cửa hàng2NameStringBắt buộcTên cửa hàng.3AddressStringBắt buộcĐịa chỉ cửa hàng4ImageImageBắt buộcẢnh cửa hàng5RatingIntCó hoặc khôngĐánh giá về cừa hàng6VoucherObjectCó hoặc khôngKhuyến mãi của cửa hàng7List of DishesArrayBắt buộcDanh sách sản phẩm của cửa hàng    Bảng 32 Bảng chi tiết lớp cửa hàng
+c) Bảng Dishes
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa1IdStringDuy nhất trong toàn hệ thống, bắt buộcMã định danh sản phẩm2NameStringBắt buộcTên sản phẩm3PriceLongBắt buộcGiá sản phẩm4AmountLongCó hoặc khôngSố lượng sản phẩm5LikeIntCó hoặc khôngLượt thích sản phẩm    Bảng 33 Bảng chi tiết lớp sản phẩm
+
+
+d) Bảng giỏ hàng
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa1List of DishesArrayBắt buộcDanh sách sản phẩm người dụng chọn    Bảng 34 Bảng chi tiết lớp giỏ hàng
+e) Bảng đơn hàng
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa1IdStringDuy nhất trong toàn hệ thống, bắt buộcMã định danh đơn hàng2NameStringBắt buộcTên cửa hàng3PriceLongBắt buộcTổng giá trị đơn hàng4List of DishesArrayBắt buộcDanh sách sản phẩm trong đơn hàng    Bảng 35 Bảng chi tiết lớp đơn hàng
+
+3.2.3 Thiết kế giao diện
+    
+    
+    Hình 311 Giao diện Welcome
+    
+    Hình 312 Giao diện đăng nhập
+    
+    Hình 313 Giao diện đăng ký
+    
+    Hình 314 Giao diện quên mật khẩu
+    
+    Hình 315 Giao diện chính của hệ thống
+    
+    Hình 316 Giao diện bên trong một danh mục
+    
+    Hình 317 Giao diện cửa hàng
+    
+    Hình 318 Giao diện chọn mua sản phẩm
+    
+    Hình 319 Giao diện giỏ hàng
+    
+    Hình 320 Giao diện giỏ hàng 2
+    
+    Hình 321 Giao diện chờ lấy hàng
+    
+    Hình 322 Đánh giá chất lượng sản phẩm
+    
+    Hình 323 Giao diện cảm ơn khách hàng
+    
+    Hình 324 Giao diện lịch sử đơn hàng
+    
+    Hình 325 Giao diện tìm kiếm
+    
+    Hình 326 Giao diện cá nhân
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+- Sản phẩm đáp ứng được các yêu cầu cơ bản của một ứng dụng mua hàng.
+- Nắm được một số thành phần cơ bản của server Nodejs + Express thao tác với RestfulAPI.
+- Deploy được server chạy online.
+- Thao tác cơ bản với MongoDB.
+4.2 Hạn chế của đề tài
+- Load sản phẩm có độ trễ từ server.
+- Thông tin còn tiếng anh, chưa được việt hóa 100%.
+4.3 Hướng phát triển của đề tài
+- Thêm chức năng tìm kiếm nâng cao dựa trên thông tin người dùng.
+- Hoàn thiện app để cửa hàng quản lý thuận tiện hơn.
+- Có app dành riêng cho shipper.
+- Có chức năng translate trong app.
+TÀI LIỆU THAM KHẢO
+[1] Hoàng Quốc Việt, Giáo trình Lập trình android cơ bản. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY, 2016.[2] stackoverflow.com[3]developer.android.com[4]github.com    
+    
+    
+    
+Xây dựng ứng dụng đặt đồ ăn nhanh
+    
+    
+22
+    
+    

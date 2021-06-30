@@ -1,0 +1,1014 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ HỆ THỐNG
+1.1. Giới thiệu đề tài	
+    Hiện nay, việc quản lý những thông tin của giáo viên, sinh viên trong các trường đại học đa phần vẫn còn thực hiện thủ công trên giấy và khó có thể nhất quán về việc quản lý gây nên hiện tượng thất thoát dữ liệu hoặc dữ liệu bị sai lệch.
+    Chính vì nguyên do đó, việc xây dựng hệ thống quản lý công tác của giáo viên chủ nhiệm là thực sự cần thiết trong xã hội 4.0 hiện nay. Nhằm nâng cao khả năng quản lý dữ liệu, sự chuyên nghiệp trong môi trường giáo dục nên hệ thống quản lý công tác giáo là cần thiết phải có.
+    Mô tả hệ thống hiện tại
+     Hoạt động website quản lý lịch công tác giáo viên chủ nhiệm có thể mô tả như sau:
+● Hệ thống được sử dụng nội bộ cho phòng công tác sinh viên.
+● Trang chủ sẽ hiển thì các trình quản lý như : Danh sách lịch công tác, danh sách giáo viên, danh sách sinh viên, ghi chú sự kiện và tiện tích.
+● Danh sách lịch công tác sẽ hiển thị cơ bản :Tên công việc, địa điểm, ngày bắt đầu, ngày kết thúc, giáo viên phụ trách, tình trạng thực hiện.
+● Khi người dùng Click vào tiêu đề lịch công tác, hệ thống sẽ chuyển hướng vào trang chi tiết lịch công tác: Trang này hiển thị chi tiết tất cả các thông tin liên quan đến lịch công tác giáo viên.
+● Danh sách giáo viên: Hiển thị các giáo viên đã được thêm vào hệ thống, khi click vào tên của từng giáo viên, sẽ hiển thị trang chi tiết thông tin giáo viên.
+● Danh sách lớp học: Hiển thị danh sách các lớp học tồn tại trong hệ thống, khi ấn vào tên lớp sẽ hiển thị danh sách sinh viên thuộc lớp đó.
+● Ghi chú công việc: Lịch ghi chú công việc, người dùng có thể ghi chú lại tên công việc trực tiếp lên lịch công tác.
+● Tiện ích: Một số tiện ích như: Thời tiết, chỉnh sửa hình ảnh,…
+
+1.1.1 Tổng quan về hệ thống mới       
+• Giao diện website thiết kế hợp lý, dễ nhìn và thân thiện với người dùng.
+1.1.2 Các mục tiêu chính của hệ thống
+• Yêu cầu về mặt giao diện:
+- Giao diện trang web thân thiện, dễ sử dụng, phân chia trên các thể loại khác nhau
+- Hiển thị định dạng cho các Browser phổ biến hiện nay như FireFox, Chrome, Brave…
+- Tông màu chính trên Website là màu trắng mang lại trải nghệm tốt cho người dùng, dễ dàng tuỳ biến được màu nền, màu chữ của Website.
+- Giao diện có tuỳ biến cho các nên tảng như Window, IOS, Android
+• Yêu cầu về mặt chức năng:
++  Quản lý lịch công tác giáo viên : Chức năng thêm, sửa, xoá các thông tin của lịch công tác giáo viên.
+ + Quản lý sinh viên: Chức năng thêm, sửa, xoá các thông tin của sinh viên.
+ + Quản lý lớp học: Chức nâng thêm, cập nhật, xoá thông tin lớp học.
+ + Quản lý người dùng : Chức năng thêm, cập nhật, xoá thông tin người người.
+ + Quản lý giáo viên: Chức năng thêm, cập nhật, xoá thông tin giáo viên.
+ + Quản lý công việc : Chức năng thêm, cập nhật, xoá thông tin công việc.
+ + Quản lý menu: Chức năng thêm, cập nhật, xoá thông tin menu.
+ + Quản lý khoa: Chức năng thêm, cập nhật, xoá thông tin khoa.
+1.1.3 	Xác định yêu cầu khách hàng
+1.1.4 Danh sách các yêu cầu trên hệ thống
+1. Quản lý lịch công tác giáo viên
+• Hiển thị 
+- Hiển thị danh sách tất cả các lịch công tác giáo viên và phân trang.
+- Người dùng có thể tìm kiếm, sắp xếp các trường thông tin.
+- Tìm kiếm theo các trường thông tin.
+• Xóa 
+- Xoá lịch công tác trên danh sách.
+• Thêm mới
+- Thêm lịch công tác giáo viên bằng Modal Popup.
+• Cập nhật
+- Cập nhật thông tin của sinh viên thông qua Modal popup, sử dụng Ajax để load dữ liệu vào popup.
+2. Quản lý sinh viên
+• Hiển thị 
+- Hiển thị danh sách tất cả các sinh viên, phân trang dữ liệu: 10 item trong một page.
+- Người dùng có thể tìm kiếm, sắp xếp các trường thông tin.
+- Tìm kiếm theo các trường thông tin.
+• Xóa 
+- Xoá lịch sinh viên trên danh sách.
+• Thêm mới
+- Thêm sinh viên bằng Modal Popup.
+• Cập nhật
+- Cập nhật thông tin của sinh viên thông qua Modal popup, sử dụng Ajax để load dữ liệu vào popup.
+3. Quản lý loại lịch công tác
+• Hiển thị 
+- Hiển thị danh sách tất cả các loại lịch công tác, phân trang dữ liệu: 10 item trong một page.
+- Người dùng có thể tìm kiếm, sắp xếp các trường thông tin.
+- Tìm kiếm theo các trường thông tin.
+• Xóa 
+- Xoá lịch loại lịch trên danh sách.
+• Thêm mới
+- Thêm loại lịch công tác bằng Modal Popup.
+• Cập nhật
+- Cập nhật thông tin của loại lịch công tác thông qua Modal popup, sử dụng Ajax để load dữ liệu vào popup.
+    
+    
+    
+    
+    
+4. Quản lý lớp học
+• Hiển thị 
+- Hiển thị danh sách lớp học, phân trang dữ liệu: 10 item trong một page.
+- Người dùng có thể tìm kiếm, sắp xếp các trường thông tin.
+- Tìm kiếm theo các trường thông tin.
+• Xóa 
+- Xoá lớp học trên danh sách.
+• Thêm mới
+- Thêm lớp học bằng Modal Popup.
+• Cập nhật
+- Cập nhật thông tin của lớp học thông qua Modal popup, sử dụng Ajax để load dữ liệu vào popup.
+5. Quản lý người dùng
+• Hiển thị 
+- Hiển thị danh sách người dùng, phân trang dữ liệu: 10 item trong một page.
+- Người dùng có thể tìm kiếm, sắp xếp các trường thông tin.
+- Tìm kiếm theo các trường thông tin.
+• Xóa 
+- Xoá người dùng trên danh sách.
+• Thêm mới
+- Thêm người dùng bằng Modal Popup.
+• Cập nhật
+- Cập nhật thông tin của người dùng thông qua Modal popup, sử dụng Ajax để load dữ liệu vào popup.
+6. Quản lý giáo viên
+• Hiển thị 
+- Hiển thị danh sách giáo viên, phân trang dữ liệu: 10 item trong một page.
+- Người dùng có thể tìm kiếm, sắp xếp các trường thông tin.
+- Tìm kiếm theo các trường thông tin.
+• Xóa 
+- Xoá giáo viên trên danh sách.
+• Thêm mới
+- Thêm giáo viên bằng Modal Popup.
+• Cập nhật
+- Cập nhật thông tin của giáo viên thông qua Modal popup, sử dụng Ajax để load dữ liệu vào popup.
+7. Quản lý công việc
+• Hiển thị 
+- Hiển thị danh sách công việc, phân trang dữ liệu: 10 item trong một page.
+- Người dùng có thể tìm kiếm, sắp xếp các trường thông tin.
+- Tìm kiếm theo các trường thông tin.
+• Xóa 
+- Xoá công việc trên danh sách.
+• Thêm mới
+- Thêm công việc bằng Modal Popup.
+• Cập nhật
+- Cập nhật thông tin của công việc thông qua Modal popup, sử dụng Ajax để load dữ liệu vào popup.
+8. Quản lý menu
+• Hiển thị 
+- Hiển thị danh sách menu, phân trang dữ liệu: 10 item trong một page.
+- Người dùng có thể tìm kiếm, sắp xếp các trường thông tin.
+- Tìm kiếm theo các trường thông tin.
+• Xóa 
+- Xoá menu trên danh sách.
+• Thêm mới
+- Thêm menu bằng Modal Popup.
+• Cập nhật
+- Cập nhật thông tin của menu thông qua Modal popup, sử dụng Ajax để load dữ liệu vào popup.
+9. Quản lý khoa
+• Hiển thị 
+- Hiển thị danh sách khoa, phân trang dữ liệu: 10 item trong một page.
+- Người dùng có thể tìm kiếm, sắp xếp các trường thông tin.
+- Tìm kiếm theo các trường thông tin.
+• Xóa 
+- Xoá khoa trên danh sách.
+• Thêm mới
+- Thêm khoa bằng Modal Popup.
+• Cập nhật
+- Cập nhật thông tin của khoa thông qua Modal popup, sử dụng Ajax để load dữ liệu vào popup.
+10.  Đăng  nhập
+- Người dùng bắt buộc phải đăng nhập để sử dụng hệ thống
+11.  Hiển thị
+- Trang chủ hiển thị các trình quản lý: lịch công tác, danh sách giáo viên, sinh viên, tiện ích, hiển thị real time trên header.
+12. Phạm vi công việc
+      Hệ thống Website quản lý công tác giáo viên chủ nhiệm.
+1. Phải xác định rõ dữ liệu đầu vào, đầu ra, và quy trình xử lý.
+2. Với mỗi yêu cầu phức tạp, quy trình xử lý cần được minh hoạ bằng lưu đồ giải thuật.
+3. Hệ thống phải được lập trình trên nền tảng Visual Studio và SQL server.
+4. Ngôn ngữ lập trình C#, ASP.NET MVC 5
+1.2. Phương pháp nghiên cứ và hướng giải quyết vấn đề
+1.2.1. Công nghệ sử dụng
+1.2.1.1. Ngôn ngữ lập trình
+    Có rất nhiều công nghệ có thể được sử dụng để xây dựng hệ thống phần mềm.Trong khóa luận này để cài đặt chương trình chúng em đã sử dụng ngôn ngữ lập trình C# và mô hình MVC.
+    Công nghệ sử dụng
+     SQL Server 2012 là một hệ thống quản trị cơ sở dữ liệu quan hệ (Relational Database Management System (RDBMS) ) sử dụng Transact-SQL để trao đổi dữ liệu giữa Client computer và SQL Server computer. Một RDBMS bao gồm databases, database engine và các ứng dụng dùng để quản lý dữ liệu và các bộ phận khác nhau trong RDBMS
+1.2.1.2. Giới thiệu về ASP.NET MVC
+    Đầu năm 2002, Microsoft giới thiệu một kỹ thuật lập trình Web khá mới mẻ với tên gọi ban đầu là ASP+, tên chính thức sau này là ASP.Net. Với ASP.Net, không những không cần đòi hỏi bạn phải biết các tag HTML, thiết kế web, mà nó còn chăm sóc mạnh lập trình hướng đối tượng trong quá trình xây dựng và phát triển ứng dụng Web.ASP.Net là kỹ thuật lập trình và phát triển ứng dụng web ở phía Server (Server-side) dựa trên nền tảng của Microsoft .Net Framework.
+    Hầu hết, những người mới đến với lập trình web đều bắt đầu tìm hiểu những kỹ thuật ở phía Client (Client-side) như: HTML, Java Script, CSS (Cascading Style Sheets). Khi Web browser yêu cầu một trang web (trang web sử dụng kỹ thuật client-side), Web server tìm trang web mà Client yêu cầu, sau đó gởi về cho Client. Client nhận kết quả trả về từ Server và hiển thị lên màn hình.
+    ASP.Net sử dụng kỹ thuật lập trình ở phía server thì hoàn toàn khác, mã lệnh ở phía server (ví dụ: mã lệnh trong trang ASP) sẽ được biên dịch và thi hành tại Web Server. Sau khi được Server đọc, biên dịch và thi hành, kết quả tự động được chuyển sang HTML/JavaScript/CSS và trả về cho Client. Tất cả các xử lý lệnh ASP.Net đều được thực hiện tại Server và do đó, gọi là kỹ thuật lập trình ở phía server.
+    Mô hình lập trình web trong ASP.NET
+     Mẫu kiến trúc Model – View – Controller được sử dụng nhằm chi ứng dụng thành ba thành phần chính: model, view và controller. Nền tảng ASP.NET MVC giúp cho chúng ta có thể tạo được các ứng dụng web áp dụng mô hình MVC thay vì tạo ứng dụng theo mẫu ASP.NET Web Forsm. Nền tảng ASP.NET MVC có đặc điểm nổi bật là nhẹ (lighweigt), dễ kiểm thử phần giao diện (so với ứng dụng Web Forms), tích hợp các tính năng có sẵn của ASP.NET. Nền tảng ASP.NET MVC được định nghĩa trong namespace System.Web.Mvc .MVC là một mẫu thiết kế (design pattern) chuẩn mà nhiều lập trình viên đã quen thuộc. Một số loại ứng dụng web sẽ thích hợp với kiến trúc MVC. Một số khác vẫn thích hợp với ASP.NET Web Forms và cơ chế postbacks. Đôi khi có những ứng dụng kết hợp cả hai kiến trúc trên.
+    Nền tảng MVC bao gồm các thành phần dưới đây:
+    
+
+              Models: Các đối tượng Models là một phần của ứng dụng, các đối tượng này thiết lập logic của phần dữ liệu của ứng dụng. Thông thường, các đối tượng model lấy và lưu trạng thái của model trong CSDL. Ví dụ như, một đối tượng Product (sản phẩm) sẽ lấy dữ liệu từ CSDL, thao tác trên dữ liệu và sẽ cập nhật dữ liệu trở lại vào bảng.
+Trong các ứng dụng nhỏ, model thường là chỉ là một khái niệm nhằm phân biệt hơn là được cài đặt thực thụ, ví dụ, nếu ứng dụng chỉ đọc dữ liệu từ CSDL và gởi chúng đến.
+    
+                  Views: Views là các thành phần dùng để hiển thị giao diện người dùng (UI). Thông thường, view được tạo dựa vào thông tin dữ liệu model. Ví dụ như, view dùng để cập nhật bảng Products sẽ hiển thị các hộp văn bản, drop-down list, và các check box.
+                 Controllers: Controller là các thành phần dùng để quản lý tương tác người dùng, làm việc với model và chọn view để hiển thị giao diện người dùng. Trong một ứng dụng MVC, view chỉ được dùng để hiển thị thông tin, controller chịu trách nhiệm quản lý và đáp trả nội dung người dùng nhập và tương tác với người dùng. Ví dụ, controller sẽ quản lý các dữ liệu người dùng gởi lên (query-string values)
+
+          Mẫu MVC giúp bạn tạo được các ứng dụng mà chúng phân tách rạch ròi các khía cạnh của ứng dụng (logic về nhập liệu, logic xử lý tác vụ và logic về giao diện). Mẫu MVC chỉ ra mỗi loại logic kể trên nên được thiếp lập ở đâu trên ứng dụng. Logic giao diện (UI logic) thuộc về views. Logic nhập liệu (input logic) thuộc về controller. Và logic tác vụ (Business logic – là logic xử lý thông tin, mục đích chính của ứng dụng) thuộc về model. Sự phân chia này giúp bạn giảm bớt được sự phức tạp của ứng dụng và chỉ tập trung vào mỗi khía cạnh cần được cài đặt ở mỗi thời điểm. Ví dụ như bạn chỉ cần tập trung vào giao diện (views) mà không phải quan tâm đến logic xử lý thông tin của ứng dụng.
+
+          Để quản lý sự phức tạp của ứng dụng, mẫu MVC giúp cho chúng ta có thể kiểm thử ứng dụng dễ dàng hơn hẳn so với khi áp dụng mẫu Web Forms. Ví dụ, trong một ứng dụng ASP.NET Web Forms, một lớp thường được sử dụng để hiển thị thông tin xuất ra cho người dùng và đồng thời xử lý thông tin người dùng nhập. Việc xây dựng các bộ test tự động cho ứng dụng Web Forms là rất phức tạp, bởi để kiểm thử mỗi trang web, bạn phải khởi tạo đối tượng trang, khởi tạo tất cả các control được sử dụng trong trang và các lớp phụ thuộc trong ứng dụng. Và bởi vì có quá nhiều lớp cần được khởi tạo để chạy được trang, thật khó để có thể viết các test chỉ tập trung vào một khía cạnh nào đó của ứng dụng. Và vì thế, kiểm thử đối với các ứng dụng dứa trên nền tảng Web Forms sẽ khó khăn hơn nhiều so với khi áp dụng trên ứng dụng MVC. Hơn thế nữa, việc kiểm thử trên nền tảng Web Forms yêu cầu phải sử dụng đến web server. 
+              Nền tảng MVC phân tách các thành phần và sử dụng các interface (khái niệm giao diện trong lập trình hướng đối tượng), và nhờ đó có thể kiểm thử các thành phần riêng biệt trong tình trạng phân lập với các yếu tố còn lại của ứng dụng.
+Sự phân tách rạch ròi ba thành phần của ứng dụng MVC còn giúp cho việc lập trình diễn ra song song. Ví dụ như một lập trình viên làm việc với view, lập trình viên thứ hai lo cài đặt logic của controller và lập trình viên thứ ba có thể tập trung vào logic tác vụ của model tại cùng một thời điểm.
+          Bạn cần phải xem xét kỹ càng việc áp dụng mô hình ASP.NET MVC hay mô hình ASP.NET Web Forms khi xây dựng một ứng dụng. Mô hình MVC không phải là mô hình thay thế cho Web Forms, bạn có thể dùng một trong hai mô hình.
+          Trước khi quyết định sử dụng MVC hay Web Forms cho một web site cụ thể, bạn cần phải phân tích lợi ích khi chọn một trong hai hướng.
+              Một ứng dụng web được phát triển theo mô hình MVC, có nguyên lý hoạt động xử lý yêu cầu của người dùng như sau:
+- Khi có yêu cầu phát sinh từ người dùng (phía Client), yêu cầu này sẽ được gửi đến phía Server, tại đây Controller sẽ tiếp nhận yêu cầu để xử lý.
+- Bên trong Controller chứa nhiều phương thức (action), mỗi action tương ứng với một yêu cầu cụ thể từ phía người dùng.Controller sẽ lựa chọn action phù hợp với yêu cầu để xử lý. Trong quá trình xử lý, Controller sẽ tương tác với Model để có được dữ liệu mà người dùng mong muốn.
+- Sau khi Controller làm việc với Model để có được dữ liệu theo yêu cầu, Controller sẽ gửi về cho View thành phần Data Model và nhiệm vụ của View là chuyển Data Model nhận được thành dữ liệu ứng dụng và gửi trả về phía Client để hiển thị kết quả yêu cầu.
+    
+Ưu điểm của ASP.NET
+     ASP.NET được xây dựng với bộ thư viện đa dạng và phong phú của .Net Framewrork, chăm sóc vượt trội về XML và khả năng truy cập cơ sở dữ liệu qua ADO.net. Bên cạnh đó, ASP và ASPX có thể hoạt động trong cùng một ứng dụng mang lại hiệu năng cao cho website. Có thể nhận thấy ASP.NET mang một phong cách hoàn toàn mới, bạn có thể tách giao diện và code thành 2 phần khác biệt. Điều này giúp cho cho việc quản lý và bảo trì trở nên rõ ràng và đơn giản hơn.
+     Thiết kế web bằng ASP.NET giúp cho hệ điều hành hoạt động trơn tru cũng như tăng tốc độ tải cho trang web của bạn. Với kiến trúc tương tự như các ứng dụng trên Windows, việc sử dụng cũng trở nên dễ dang hơn rất nhiều. Bên cạnh đó ASP.NET có khả năng tự động tạo ra mã HTML cho các Server để website có thể hoạt động trên hầu hết các trình duyệt được khách hàng sử dụng. Đặc biệt, ASP.NET là một ngôn ngữ mất phí nên bạn có thể hoàn toàn yên tâm về vấn đề bảo mật của nó. Với những ưu điểm vượt trội như vậy, ASP.NET luôn được rất nhiều nhà thiết kế web chuyên nghiệp ưa chuộng và sử dụng. Tuy nhiên, nó vẫn còn một số nhược điểm cần khắc phục mà bạn cần chú ý khi xây dựng web doanh nghiệp.
+Ưu điểm của ASP.NET MVC
+• Dễ dàng quản lý sự phức tạp của ứng dụng bằng cách chia ứng dụng thành ba thành phần model, view, controller
+• Nó không sử dụng view state hoặc server-based form. Điều này tốt cho những lập trình viên muốn quản lý hết các khía cạnh của một ứng dụng.
+• Nó sử dụng mẫu Front Controller, mẫu này giúp quản lý các requests (yêu cầu) chỉ thông qua một Controller. Nhờ đó bạn có thể thiết kế một hạ tầng quản lý định tuyến. Để có nhiều thông tin hơn, bạn nên xem phần Front Controller trên web site MSDN
+• Hỗ trợ tốt hơn cho mô hình phát triển ứng dụng hướng kiểm thử (TDD)
+• Nó hỗ trợ tốt cho các ứng dụng được xây dựng bởi những đội có nhiều lập trình viên và thiết kế mà vẫn quản lý được tính năng của ứng dụng
+Các chức năng của nền tảng ASP.NET MVC
+• Tách bạch các tác vụ của ứng dụng (logic nhập liệu, business logic, và logic giao diện), dễ dàng kiểm thử và mặc định áp dụng hướng phát triển TDD. Tất cả các tính năng chính của mô hình MVC được cài đặt dựa trên interface và được kiểm thử bằng cách sử dụng các đối tượng mocks, mock object là các đối tượng mô phỏng các tính năng của những đối tượng thực sự trong ứng dụng. Bạn có thể kiểm thử unit-test cho ứng dụng mà không cần chạy controller trong tiến trình ASP.NET, và điều đó giúp unit test được áp dụng nhanh chóng và tiện dụng. Bạn có thể sử dụng bất kỳ nền tảng unit-testing nào tương thích với nền tảng .NET.
+• MVC là một nền tảng khả mở rộng (extensible) & khả nhúng (pluggable). Các thành phần của ASP.NET MVC được thiết kể để chúng có thể được thay thế một cách dễ dàng hoặc dễ dàng tùy chỉnh. Bạn có thể nhúng thêm view engine, cơ chế định tuyến cho URL, cách kết xuất tham số của action-method và các thành phần khác. ASP.NET MVC cũng hỗ trợ việc sử dụng Dependency Injection (DI) và Inversion of Control (IoC). DI cho phép bạn gắn các đối tượng vào một lớp cho lớp đó sử dụng thay vì buộc lớp đó phải tự mình khởi tạo các đối tượng. IoC quy định rằng, nếu một đối tượng yêu cầu một đối tượng khác, đối tượng đầu sẽ lấy đối tượng thứ hai từ một nguồn bên ngoài, ví dụ như từ tập tin cấu hình. Và nhờ vậy, việc sử dụng DI và IoC sẽ giúp kiểm thử dễ dàng hơn.
+• ASP.NET MVC có thành phần ánh xạ URL mạnh mẽ cho phép bạn xây dựng những ứng dụng có các địa chỉ URL xúc tích và dễ tìm kiếm. Các địa chỉ URL không cần phải có phần mở rộng của tên tập tin và được thiết kế để hỗ trợ các mẫu định dạng tên phù hợp với việc tối ưu hóa tìm kiếm (URL) và phù hợp với lập địa chỉ theo kiểu REST.
+• Hỗ trợ sử dụng đặc tả (các thẻ) của các trang ASP.NET(.aspx), điều khiển người dùng (.ascx) và trang master page (.marter). Bạn có thể sử dụng các tính năng có sẵn của ASP.NET như là sử dụng lồng các trang master page, sử dụng in-line expression (<%= %>), sử dụng server controls, mẫu, data-binding, địa phương hóa (localization) và hơn thế nữa.
+• Hỗ trợ các tính năng có sẵn của ASP.NET như cơ chế xác thực người dùng, quản lý thành viên, quyền, output caching và data caching, seession và profile, quản lý tình trạng ứng dụng, hệ thống cấu hình…
+• ASP.NET MVC 3 còn bổ sung một view engine mới là Razor View Engine cho phép thiết lập các view nhanh chóng, dễ dàng và tốn ít công sức hơn so với việc sử dụng Web Forms view engine
+Tạo website với ASP.NET MVC
+     Mở Visual Studio 2019, chọn File -> New -> Project, một cửa sổ New Project sẽ hiện lên. Trong cửa sổ này, phần bên trái, bạn chọn Visual C#, phần bên phải chọn ASP.NET Web Application, đặt tên dự án là DammioMVC.
+    
+     Ở hộp thoại New ASP.NET Project, chọn dự án là kiểu MVC và nhấn OK.
+    
+     Visual Studio sẽ tự động tạo một template mặc định cho ứng ASP.NET MVC bạn vừa tạo ra, vì vậy bạn có ngay 1 dự án đơn giản mà không cần làm gì hết.
+    
+     Trong ứng dụng mặc định, bạn có 3 trang chính Home, About và Contact nằm thanh menu, bạn có thể nhấn vào 3 liên kết để thử nghiệm. Ứng dụng mặc định cũng dùng giao diện Bootstrap, do đó khi bạn phóng to, thu nhỏ hay chạy trên các màn hình có kích thước khác nhau, bạn sẽ thấy giao diện thay đổi đáp ứng theo độ rộng màn hình.
+    
+    
+    Tạm thời dừng Debug (Shift + F5), bạn mở Solution Explorer (View -> Solution Explorer hoặc phím tắt Ctrl + Alt + L) để xem cấu trúc thư mục web.
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    Trong hình trên, một số giải thích cơ bản về cấu trúc thư mục, tập tin là:
+• References: là nơi lưu trữ, thêm/bớt các thư viện DLL có liên quan đến website.
+• App_Data: là nơi chứa cơ sở dữ liệu dạng tập tin .MDF, để làm dự án thuận tiện bạn nên chọn làm cơ sở dữ liệu dạng này.
+• App_Start: chứa các lớp cấu hình sẽ kích hoạt chạy trước khi dự án web chạy.
+• Content: chứa các tập tin nội dung như css, image, … bạn có thể thay đổi tập tin này nếu muốn.
+• Controllers: nơi chứa các lớp điều khiển cho dự án, chính là Controller trong 3 thành phần MVC (model-view-controller)
+• Models: nơi chứa mô hình, cũng là 1 trong 3 thành phần MVC 
+• Fonts, Script: chứa dạng font và mã JavaScript, phần này giúp xây dựng giao diện website, bạn có thể thay đổi tùy ý.
+• Views: chứa các .cshtml để hiển thị giao diện, cũng là 1 trong 3 thành phần MVC 
+• Web.config: chứa cấu hình web, rất quan trọng
+• Global.asax: chứa lớp cấu hình Session, Cookies, Application cho dự án
+    Ngoài ra, bạn có thể xem nội dung các tập tin nếu bạn muốn, trọng tâm xem các tập tin ở 3 thư mục Controllers, Views và Models.
+1.2.2. Phân tích thiết kế bài toán
+    Có nhiều cách để giải quyết vấn đề.Nhưng ở đây, chúng em chọn phân tích- thiết kế hệ thống bằng ngôn ngữ UML – Unified Modeling Language để giải quyết vấn đề đặt ra. Gồm các bước sau:
+• Mô hình hóa nghiệp vụ:
+    Dựa trên quá trình khảo sát thực trạng, chúng em sử dụng công cụ Visual Paradigm thiết kế UML để mô hình hóa chức năng.
+• Phân tích:
+    Phân tích để đưa ra những mô hình tổng quát quan sát trạng thái tĩnh của các chức năng, quy trình của mỗi chức năng và các Actor (tác nhân).
+• Thiết kế:
+    Từ kết quả ở mức phân tích, triển khai thiết kế để đạt được các kết quả sau:
+    Thiết kế cơ sở dữ liệu: SQL SERVER
+    Thiết kế ứng dụng: Sử dụng ngôn ngữ C# , Mô hình MVC và HTML – CSS để thiết kế giao diện và thực hiện chức năng.
+• Cài đặt
+    Thực hiện cài đặt các kết quả đã thiết kế trên Visual Studio.NET 2017 và hệ quản trị cơ sở dữ liệu SQL server 2012.
+• Thử nghiệm
+    Chạy chương trình nhiều lần trên hệ điều hành Windows 10 Pro.
+    Test lỗi và hoàn thiện các chức năng của hệ thống.
+CHƯƠNG 2: PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG
+2.1: Phân tích các chức năng
+     2.1.1: Phân tích yêu cầu
+      2.1.2: Xác định các tác nhân
+     Qua khảo sát hiện trạng thực tế, kết hợp với việc tham khảo tài liệu và phân tích ý kiến của người dùng, hệ thống có các tác nhân sau:
+    Xác định các tình huống sử dụng Usecase
+    Bảng 2: Xác định các tác nhân Usecase
+STT    Tác nhân chính    Tên Use case1    ADMIN    Đăng nhập2    ADMIN    Quản lý lịch công tác giáo viên3    ADMIN    Quản lý sinh viên4    ADMIN    Quản lý lớp học5    ADMIN    Quản lý người dùng6    ADMIN    Quản lý giáo viên7    ADMIN    Quản lý công việc8    ADMIN    Quản lý menu9    ADMIN    Quản lý khoa9    USER     Danh sách lịch công tác10    USER    Danh sách giáo viên 11    USER    Danh sách sinh viên12    USER    Danh sách lớp học 13    USER    Danh sách khoa                                
+    
+2.1.1.3. Tổng quan về UML
+• UML (Unified Model Language) là một ngôn ngữ dùng cho phân tích thiết kế hướng đối tượng (OOAD – Object Oriented Analys and Design)
+• UML được duy trì và phát triển bởi OMG (Object Management Group), do Jacobson, Booch, Rumbaugh sáng lập. Ngoài ra còn có hàng trăm các tập đoàn lớn khác bảo trợ phát triển.
+• Các biểu đồ UML cho ta cái nhìn rõ hơn về hệ thống (cái nhìn tĩnh và động)
+• Hiện nay UML được sử dụng rất phổ biến trong các dự án phần mềm.
+• UML thể hiện phương pháp phân tích hướng đối tượng nên không lệ thuộc ngôn ngữ lập trình.
+• Có rất nhiều công cụ phần mềm hỗ trợ phân tích thiết kế dùng UML.
+• Nhiều công cụ có thể sinh ra mã từ UML và ngược lại.
+•  UML không phải là ngôn ngữ lập trình.
+• UML là một ngôn ngữ dùng để:
+- Trực quan hóa (Visualizing):
+    + Dùng tập các ký hiệu đồ họa phong phú để biểu diễn hệ thống đang được nghiên cứu.
+    + Hệ thống ký hiệu đều có ngữ nghĩa chặt chẽ, có thể hiểu bởi nhiều công cụ khác nhau.
+    + Giúp cho các nhà thiết kế, nhà lập trình khác biệt về ngôn ngữ đều có thể hiểu được. 
+- Đặc tả (Specifying):
+  + UML giúp xây dựng các mô hình chính xác, đầy đủ và không nhập nhằng. 
+    + Tất cả các công đoạn từ phân tích, thiết kế cho đến triển khai đều có các biểu đồ UML biểu diễn. 
+    + Use case (dùng cho phân tích); Class, Sequence, Activity... (cho thiết kế); Component, Deployment (cho triển khai).
+- Xây dựng (Constructing):
+    + Các mô hình của UML có thể kết nối với nhiều ngôn ngữ lập trình. Tức là có thể ánh xạ các mô hình UML về một ngôn ngữ lập trình như C++, Java...
+    + Việc chuyển các mô hình trong UML thành Code trong ngôn ngữ lập trình →Forward engineering
+    + Việc chuyển ngược trở lại code trong một ngôn ngữ lập trình thành UML  → Reverse Engineering.
+     + Cần công cụ để chuyển đổi “xuôi” & “ngược” 
+- Viết tài liệu (Documenting):
+     + Giúp xây dựng tài liệu đặc tả - requirements
+     + Tài liệu kiến trúc (architecture)
+     + Tài liệu thiết kế
+     + Source code
+     + Tài liệu để kiểm thử - Test
+     + Tài liệu mẫu - Prototype
+     + Tài liệu triển khai – Deployment ...
+• Một số biểu đồ UML cơ bản
+• Biểu đồ Ca sử dụng Use Case Diagram
+- Use case (Use Case Diagram) cung cấp một bức tranh toàn cảnh về những gì đang xảy ra trong hệ thống hiện tại hoặc những gì sẽ xảy ra trong hệ thống mới.
+- Use case mô tả một chuỗi các hành động mà hệ thống sẽ thực hiện để đạt được kết quả có ý nghĩa đối với một tác nhân.
+- Các use case được tạo ra ở giai đoạn đầu của một dự án. Các use case cũng có thể được dung ở giai đoạn sau của qui trình phát triển dự án, ví dụ để đặc tả các tình huống kiểm tra. Use case đưa ra cơ sở để xác định giao tiếp người-máy đối với hệ thống. Để người dùng cuối có thể hiểu được  và có thể giao tiếp với hệ thống ở mức tổng thể.
+- Actor là người hoặc hệ thống tương tác với các use case. Thường actor là người dùng hệ thống. Trong biểu đồ use case, mỗi actor được vẽ bằng một biểu tượng hình người với tên vai trò (role name) đặt bên dưới.
+- Khi actor là người thì tên actor là tên vai trò mà actor đảm nhiệm chứ   không phải là tên công việc.
+• Biểu đồ lớp Class Diagram
+- Biểu đồ lớp (Class Diagram) cho ta một khung nhìn tĩnh của các lớp trong mô hình hoặc một phần của mô hình. Nó chỉ cho ta thấy các thuộc tính và các thao tác của lớp, cũng như các loại quan hệ giữa các lớp.
+- Có rất nhiều kiểu lớp dùng trong biểu đồ lớp, ở đây chúng ta chỉ xét đến và sử dụng 3 loại lớp chính là : lớp biên (phần giao diện), lớp điều khiển và lớp cơ sở dữ liệu:
+    + Lớp biên: là lớp thể hiện phần giao diện mà người dùng trực tiếp tương tác với hệ thống qua những giao diện của lớp này.
+    + Lớp thực thể (lớp cơ sở dữ liệu): là lớp biểu diễn cho những thực thể có mối quan hệ với nhau và liên quan đến hệ thống.
+    + Lớp điều khiển: là lớp trung gian giữa lớp biên và lớp thực thể. Lớp này đóng vai trò lấy và xử lý dữ liệu để hiện thị ra lớp biên.
+• Biểu đồ tuần tựSequence Diagram
+    Biểu đồ tuần tự (Sequence Diagram) mô tả sự tương tác của các đối tượng theo trình tự về thời gian.Có sự liên kết chặt chẽ với biểu đồ lớp và mô tả thứ tự của tương tác bằng cách đánh số thứ tự các thông điệp. Mỗi biểu đồ tuần tự mô tả một tình huống xử lý.
+2.1.1.4 Các ký hiệu:
+    Bảng 3: Biểu diễn mô tả các ký hiệu
+         Biểu diễn các Actor (tác nhân) biểu diễn người hay hệ thống khác tương tác với hệ thống hiện tại.         Biểu diễn các Use Case (tình huống sử dụng) biểu diễn chuỗi hành động mà hệ thống thực hiện.        Biểu diễn mối quan hệ giữa Actor (người dùng) và UseCase (chức năng của hệ thống)        Quan hệ <<Include>> thể hiện Use Case này chứa Use Case khác.
+    Use case A được gọi là Include B nếu trong xử lý của A có gọi đến B ít nhất 1 lần.
+            Quan hệ <<Extend>> thể hiện User Case này mở rộng Use Case khác.
+    Use case B được gọi là Exntend A nếu use case B được gọi bởi A nếu thỏa mãn điều kiện nào đó.        Quan hệ tổng quát hóa (thừa kế):
+    Use case A được gọi là Generalization Use Case B nếu Use Case B là một trường hợp riêng của Use Case A.
+            
+     Biểu đồ Lớp ClassDiagram:
+    -  Mô tả các đối tượng và mối quan hệ của chúng trong hệ thống.
+    - Mô tả các thuộc tính và các hành vi (Behavior) của đối tượng.        Quan hệ Generalization: Thể hiện rằng một lớp A kế thừa từ một lớp B (Hay Class A là trường hợp riêng của Class B; Class B là tổng quát của Class A). Gọi là quan hệLà một (Is a)
+            Quan hệ Composition: 
+    Thể hiện rằng một lớp A bao hàm lớp B. Nhưng lớp B không thể tồn tại độc lập (tức không thuộc lớp nào). Tức là, nếu có B thì phải suy ra được A.Biểu đồ tuần tự: 
+    - Mô tả sự tương tác của các đối tượng theo trình tự về thời gian.
+    - Có sự liên kết chặt chẽ với biểu đồ lớp.
+    - Mỗi biểu đồ tuần tự mô tả một tình huống xử lý nhất định.
+        
+    
+2.2.1 Biểu đồ usecase tổng quát
+    
+    Hình 1:Biểu đồ usecase tổng quát
+    
+1.1. Biểu đồ use-case đăng nhập
+                                
+    Hình 2:Biểu đồ usecase đăng nhập
+Mô tả:
+• Khi người quản trị truy cập vào trang quản trị thì phải nhập tài khoản và mật khẩu để có thể tiếp tục truy cập. Nếu admin nhập đúng tài khoản thì hệ thống sẽ trả ra thông báo đăng nhập thành công.
+• Người dùng đăng nhập phải nhập chính xác những thông tin đăng nhập. Nếu không chính xác, hệ thống sẽ thông báo lỗi cho người dùng và yêu cầu nhập lại thông tin.
+1.2. Biểu đồ use-case quản lý lịch công tác giáo viên
+      
+    Hình 3:Biểu đồ usecase lịch công tác giáo viên
+ Mô tả:
+• Khi người quản trị đã đăng nhập vào hệ thống và muốn thay đổi thông tin danh sách thì cần truy cập vào quản lý lịch công tác giáo viên.
+• Chức năng thêm, cập nhật, xoá dữ liệu
+1.3. Biểu đồ use-case quản lý loại lịch công tác
+      
+    Hình 4:Biểu đồ usecase loại lịch công tác giáo viên
+    
+ Mô tả:
+• Khi người quản trị đã đăng nhập vào hệ thống và muốn thay đổi thông tin danh sách thì cần truy cập vào quản lý  loại lịch công tác giáo viên.
+• Chức năng thêm, cập nhật, xoá dữ liệu
+1.4. Biểu đồ use-case quản lý lớp học
+      
+    Hình 5:Biểu đồ usecase quản lý lớp học
+    
+
+
+
+ Mô tả:
+• Khi người quản trị đã đăng nhập vào hệ thống và muốn thay đổi thông tin danh sách thì cần truy cập vào quản lý  loại lịch công tác giáo viên.
+• Chức năng thêm, cập nhật, xoá dữ liệu
+1.5. Biểu đồ use-case quản lý người dùng
+      
+    Hình 6:Biểu đồ usecase quản lý người dùng
+    
+
+ Mô tả:
+• Khi người quản trị đã đăng nhập vào hệ thống và muốn thay đổi thông tin danh sách thì cần truy cập vào quản lý  người dùng.
+• Chức năng thêm, cập nhật, xoá dữ liệu
+
+1.6. Biểu đồ use-case quản lý giáo viên
+      
+    Hình 7:Biểu đồ usecase quản lý giáo viên
+ Mô tả:
+• Khi người quản trị đã đăng nhập vào hệ thống và muốn thay đổi thông tin danh sách thì cần truy cập vào quản lý  giáo viên.
+• Chức năng thêm, cập nhật, xoá dữ liệu
+1.7. Biểu đồ use-case quản lý công việc
+      
+    Hình 8:Biểu đồ usecase quản lý công việc
+
+ Mô tả:
+• Khi người quản trị đã đăng nhập vào hệ thống và muốn thay đổi thông tin danh sách thì cần truy cập vào quản lý công việc
+• Chức năng thêm, cập nhật, xoá dữ liệu
+1.8. Biểu đồ use-case quản lý menu
+      
+    Hình 9:Biểu đồ usecase quản lý menu
+ Mô tả:
+• Khi người quản trị đã đăng nhập vào hệ thống và muốn thay đổi thông tin danh sách thì cần truy cập vào quản lý menu
+• Chức năng thêm, cập nhật, xoá dữ liệu
+1.9. Biểu đồ use-case quản lý khoa
+      
+    Hình 10:Biểu đồ quản lý khoa
+ Mô tả:
+• Khi người quản trị đã đăng nhập vào hệ thống và muốn thay đổi thông tin danh sách thì cần truy cập vào quản lý khoa
+• Chức năng thêm, cập nhật, xoá dữ liệu
+
+2.3. Biểu đồ lớp
+     Biểu đồ lớp mô tả các lớp, là các viên gạch để xây dựng bất kì hệ thống hướng đối tượng nào.Khả năng cộng tác giữa chúng, bằng cách truyền thông điệp, được chỉ ra trong các mối quan hệ giữa chúng.
+     Biểu đồ lớp cho ta một khung nhìn tĩnh của các lớp trong mô hình hoặc một phần của mô hình.Nó chỉ cho ta thấy các thuộc tính và các thao tác của lớp, cũng như các loại quan hệ giữa các lớp.Biểu đồ lớp giống như một tấm bản đồ, với các lớp là các thành phố còn các mối quan hệ là các đường nối giữa chúng.
+2.3.1. Xác định các lớp
+     Từ việc phân tích biểu đồ UseCase ta có các đối tượng sau:
+- Science: Lưu thông tin các khoa trong trường.
+- Class: Lưu thông tin các lớp học.
+- Teacher: Lưu thông tin giáo viên
+- Student: Lưu thông tin sinh viên.
+- CalendarWorking: Lưu thông tin lịch công tác giáo viên.
+- Work: Lưu thông tin công việc.
+- TypeCalendar:Lưu thông tin loại lịch công tác.
+- Menu: Lưu thông tin menu.
+- User : Lưu thông tin người dùng.
+- Role,GroupUser,Credential : Lưu các thông tin về nhóm người dùng, phân quyền.
+2.3.2. Thể hiện biểu đồ lớp
+
+    Hình 11:Biểu đồ lớp website
+2.4. Biều đồ tuần tự
+2.4.1. Biểu đồ tuần tự cho quá trình “ Đăng Nhập”
+
+    Hình 12:Biểu đồ tuần tự chức năng "Đăng nhập"
+2.4.2. Biểu đồ tuần tự cho chức năng quản lý lịch công tác
+• Biểu đồ tuần tự cho chức năng “Thêm mới lịch công tác giáo viên”
+    
+    Hình 13:Biểu đồ tuần tự cho chức năng "Thêm mới lịch công tác giáo viên"
+    
+• Biểu đồ tuần tự cho chức năng “Sửa lịch công tác giáo viên”
+
+    
+    Hình 14:Biểu đồ tuần tự cho chức năng “Sửa lịch công tác giáo viên”
+    
+• Biểu đồ tuần tự cho chức năng “Xoá lịch công tác giáo viên”
+    
+    Hình 15:Biểu đồ tuần tự cho chức năng “Xoá lịch công tác giáo viên”
+    
+2.4.3. Biểu đồ tuần tự cho chức năng quản lý lớp học
+• Biểu đồ tuần tự cho chức năng “Thêm mới lớp học”
+    
+    Hình 16:Biểu đồ tuần tự cho chức năng “Thêm mới lớp học”
+    
+• Biểu đồ tuần tự cho chức năng “Sửa lớp học”
+
+    
+    Hình 17:đồ tuần tự cho chức năng “Sửa lớp học”
+    
+• Biểu đồ tuần tự cho chức năng “Xoá lớp học”
+    
+    Hình 18:Biểu đồ tuần tự cho chức năng “Xoá lớp học”
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+2.4.4. Biểu đồ tuần tự cho chức năng quản lý menu
+• Biểu đồ tuần tự cho chức năng “Thêm mới menu”
+    
+    Hình 19:Biểu đồ tuần tự cho chức năng “Thêm mới menu”
+    
+• Biểu đồ tuần tự cho chức năng “Sửa menu”
+
+    
+    Hình 20:Biểu đồ tuần tự cho chức năng “Sửa menu”
+    
+    
+    
+    
+    
+    
+    
+    
+    
+• Biểu đồ tuần tự cho chức năng “Xoá menu”
+    
+    Hình 21:Biểu đồ tuần tự cho chức năng “Xoá menu”
+    
+2.4.5. Biểu đồ tuần tự cho chức năng quản lý khoa
+• Biểu đồ tuần tự cho chức năng “Thêm mới khoa”
+    
+    Hình 22:Biểu đồ tuần tự cho chức năng “Thêm mới khoa”
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+• Biểu đồ tuần tự cho chức năng “Sửa khoa”
+
+    
+    Hình 23:Biểu đồ tuần tự cho chức năng “Sửa khoa”
+    
+• Biểu đồ tuần tự cho chức năng “Xoá khoa”
+    
+    Hình 24:Biểu đồ tuần tự cho chức năng “Xoá khoa”
+    
+    
+    
+    
+    
+    
+    
+    
+    
+2.4.6. Biểu đồ tuần tự cho chức năng quản lý sinh viên
+• Biểu đồ tuần tự cho chức năng “Thêm mới sinh viên”
+    
+    Hình 25:Biểu đồ tuần tự cho chức năng “Thêm mới sinh viên”
+    
+• Biểu đồ tuần tự cho chức năng “Sửa sinh viên”
+
+    
+    Hình 26:Biểu đồ tuần tự cho chức năng “Sửa sinh viên”
+    
+    
+    
+    
+    
+    
+    
+    
+    
+• Biểu đồ tuần tự cho chức năng “Xoá sinh viên”
+    
+    Hình 27:Biểu đồ tuần tự cho chức năng “Xoá sinh viên”
+    
+2.4.7. Biểu đồ tuần tự cho chức năng quản lý giáo viên
+• Biểu đồ tuần tự cho chức năng “Thêm mới giáo viên”
+    
+    Hình 28:Biểu đồ tuần tự cho chức năng “Thêm mới giáo viên”
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+• Biểu đồ tuần tự cho chức năng “Sửa giáo viên”
+
+    
+    Hình 29:Biểu đồ tuần tự cho chức năng “Sửa giáo viên”
+    
+• Biểu đồ tuần tự cho chức năng “Xoá giáo viên”
+    
+    Hình 30:Biểu đồ tuần tự cho chức năng "Xoá giáo viên"
+    
+    
+    
+    
+    
+    
+    
+    
+    
+2.4.8. Biểu đồ tuần tự cho chức năng quản lý loại lịch công tác
+• Biểu đồ tuần tự cho chức năng “Thêm mới loại lịch công tác”
+    
+    Hình 31:Biểu đồ tuần tự cho chức năng “Thêm mới loại lịch công tác”
+    
+• Biểu đồ tuần tự cho chức năng “Sửa loại lịch công tác”
+
+    
+    Hình 32:Biểu đồ tuần tự cho chức năng “Sửa loại lịch công tác”
+    
+    
+    
+    
+    
+    
+    
+    
+    
+• Biểu đồ tuần tự cho chức năng “Xoá loại lịch công tác”
+    
+    Hình 33:Biểu đồ tuần tự cho chức năng “Xoá loại lịch công tác”
+    
+2.4.9. Biểu đồ tuần tự cho chức năng quản lý người dùng
+• Biểu đồ tuần tự cho chức năng “Thêm mới người dùng”
+    
+    Hình 34:Biểu đồ tuần tự cho chức năng “Thêm mới người dùng”
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+• Biểu đồ tuần tự cho chức năng “Sửa người dùng”
+
+    
+    Hình 35:Biểu đồ tuần tự cho chức năng “Sửa người dùng”
+    
+• Biểu đồ tuần tự cho chức năng “Xoá người dùng”
+    
+    Hình 36:Biểu đồ tuần tự cho chức năng “Xoá người dùng”
+    
+    
+    
+    
+    
+    
+    
+    
+    
+2.4.10. Biểu đồ tuần tự cho chức năng quản lý công việc
+• Biểu đồ tuần tự cho chức năng “Thêm mới công việc”
+    
+    Hình 37:Biểu đồ tuần tự cho chức năng “Thêm mới công việc”
+    
+• Biểu đồ tuần tự cho chức năng “Sửa công việc”
+
+    
+    Hình 38:Biểu đồ tuần tự cho chức năng “Sửa công việc”
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+• Biểu đồ tuần tự cho chức năng “Xoá công việc”
+    
+    Hình 39:Biểu đồ tuần tự cho chức năng “Xoá công việc”
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+CHƯƠNG 3: THIẾT KẾ CƠ SỞ DỮ LIỆU CHO HỆ THỐNG
+3.1. Các bảng dữ liệu
+a. Bảng Science
+    STT    Tên trường    Kiểu dữ liệu    Ràng buộc    Mô tả1.     ID    int    Not null    Khóa chính2.     NameNvarchar(255)    Not null    Tên khoa3.     Address    Nvarchar(255)    Not null    Địa chỉ4.     Description
+        Nvarchar(255)    Not null    Mô tả5.     Founding    datetime    Not null    Ngày thành lập6.     CreatedDate    DatetimeNot null    Ngày tạo7. ModifiedDate    Datetime    Not null    Ngày chỉnh sửa    Bảng 4: Bảng Science
+b. Bảng CalendarWorking
+    STT    Tên trường    Kiểu dữ liệu    Ràng buộc    Mô tả1    ID    int    Not null    Khóa chính2    Name_CalendarWorkingNvarchar(255)    Not null    Tên lịch công tác3    Description    Nvarchar(255)    Not null    Mô tả4    DateStart    Datetime    Not null    Ngày bắt đầu5    DateEnd    Datetime    Not null    Ngày kết thúc6    Address    Nvarchar(255)    Allow null    Địa chỉ7    TeacherID    Int    Not null    Khoá ngoại8    WorkID    Int    Not null    Khoá ngoại9    TypeCalendarID    Int    Not null    Khoá ngoại10    WorkState    Nvarchar(255)    Not null    Tình trạng11    Status    Bit    Null    Trạng thái12    CreatedDate    Datetime    Not null    Ngày tạo13    ModifiedDate    Datetime    Not null    Ngày chỉnh sửa14    Files    Nvarchar(255)    Null    Văn bản đính kèm.    Bảng 5:CalendarWorking
+c. Bảng Class
+    STT    Tên trường    Kiểu dữ liệu    Ràng buộc    Mô tả1.     ID    int    Not null    Khóa chính2.     Name    Nvarchar(100)    Not null    Tên lớp3.     Address    Nvarchar(255)        Địa chỉ4.     TeacherID    Int        Khoá ngoại5.     ScienceID    Int        Khoá ngoại6.     CreatedDate    Datetime        Ngày tạo7.     ModifiedDate    Datetime        Ngày chỉnh sửa    Bảng 6:Class
+d. Bảng Credential
+    
+STT    Tên trường    Kiểu dữ liệu    Ràng buộc    Mô tả1.     UserGroupID    Varchar(50)Not null    Khóa chính2.     RoleID    Varchar(50)        Khoá chính    Bảng 7:Credential
+e. Bảng Events
+STT    Tên trường    Kiểu dữ liệu    Ràng buộc    Mô tả1.     EventID    int    Not null    Khóa chính2.     Subject    Nvarchar(100)        Tên sự kiện3.     Description    Nvarchar(300)        Mô tả4.     Start    Datetime        Ngày bắt đầu5.     End    Datetime        Ngày kết thúc6.     ThemeColor    Nvarchar(10)    Màu7.     IsFullDay    Bit    Cả ngày    Bảng 8:Events
+    
+f. Bảng GroupUser
+    
+STT    Tên trường    Kiểu dữ liệu    Ràng buộc    Mô tả1    ID    intNot null    Khóa chính2    Name_GroupUser    Nvarchar(255)        Tên nhóm người dùng3    CodeRole    Nchar(10)    Not null    Quyền    Bảng 9:GroupUser
+g. Bảng Menu
+STT    Tên trường    Kiểu dữ liệu    Ràng buộc    Mô tả1    ID    int    Not null    Khóa chính2    Name    Nvarchar(255)    Not null    Tên menu3    Description    Nvarchar(255)    Null    Mô tả4    MenuUrl    Nvarchar(255)    Not null    Liên kết5    MenuIcon    Nvarchar(255)    Null    CssClass6    Enable    Bit        Trạng thái7    CreatedDate    Datetime        Ngày tạo8    ModifiedDate    Datetime        Ngày chỉnh sửa    Bảng 10:Menu
+h. Bảng Role
+    
+STT    Tên trường    Kiểu dữ liệu    Ràng buộc    Mô tả1    ID    intNot null    Khóa chính2    Name_Role    Nvarchar(255)        Tên quyền    Bảng 11:Role
+i. Bảng Student
+STT    Tên trường    Kiểu dữ liệu    Ràng buộc    Mô tả1    ID    int        Khóa chính2    Name_Student    Nvarchar(255)        Tên sinh viên3    DateOfBirth    Datetime    Not null    Ngày sinh4    Address    Nvarchar(255)        Địa chỉ5    Email    Nvarchar(100)        Email6    Phone    Nvarchar(50)        Số điện thoại7    ClassID    Int        Khoá ngoại8    CreatedDate    Datetime    Ngày tạo9    ModifiedDate    Datetime    Ngày sửa    Bảng 12:Student
+a. Bảng Teacher
+STT    Tên trường    Kiểu dữ liệu    Ràng buộc    Mô tả1    ID    int        Khóa chính2    Name_Teacher    Nvarchar(255)        Tên giáo viên3    Phone    Nvarchar(nvarchar(255)        Số điện thoại4    Address    Nvarchar(255)        Địa chỉ5    DateOfBirth    datetime        Ngày sinh6    Avatar    Nvarchar(255)    Ảnh đại diện7    Gender    Nvarchar(255)    Giới tính8    IsDelete    Bit    Trạng thái9    ModifiedDate    Datetime    Ngày sửa10    CreatedDate    Datetime    Ngày tạo11    Status    Nvarchar(255)    Tình trạng    Bảng 13:Teacher
+    
+    
+    
+    
+    
+    
+    
+    
+    
+b. Bảng TypeCalendar
+STT    Tên trường    Kiểu dữ liệu    Ràng buộc    Mô tả1    ID    int        Khóa chính2    TypeName    Nvarchar(255)        Tên loại lịch3    TypeDescription    Nvarchar(255)        Mô tả4    Status    Nvarchar(50)        Trạng thái5    CreatedDate    Datetime        Ngày tạo6    ModifiedDate    Datetime        Ngày sửa    Bảng 14:TypeCalendar
+c. Bảng User
+STT    Tên trường    Kiểu dữ liệu    Ràng buộc    Mô tả1    ID    int        Khóa chính2    Name    Nvarchar(255)        Tên người dùng3    UserName    Nvarchar(255)        Tài khoản4    Password    Nvarchar(255)        Mật khẩu5    GroupID    Varchar(50)        Khoá ngoại6    Status    Bit        Trạng thái7    Phone    Nvarchar(50)        Số điện thoại8    Email    Nvarchar(255)        Email9    CreatedDate    Datetime        Ngày tạo10    ModifiedDate    Datetime        Ngày sửa    Bảng 15:User
+    
+    
+    
+    
+    
+    
+    
+    
+    
+d. Bảng Work
+    
+STT    Tên trường    Kiểu dữ liệu    Ràng buộc    Mô tả1    ID    int    Not null    Khóa chính2    Name_Work    Nvarchar(255)    Not null    Tên công việc3    Description_Work    Nvarchar(255)        Mô tả4    Details_Work    Nvarchar(255)        Chi tiết công việc5    DateWorkStart    Datetime        Ngày bắt đầu6    DateWorkEnd    Datetime        Ngày kết thúc7    Note    Nvarchar(255)        Ghi chú8    CreatedDate    Datetime        Ngày tạo9    ModifiedDate    Datetime        Ngày sửa10    Status    Nvarchar(50)        Trạng thái    Bảng 16:Work
+3.2. Biểu đồ cơ sở dữ liệu 
+
+    Hình 40:Biểu đồ cơ sở dữ liệu
+
+
+
+
+
+4.Thiết kế giao diện
+4.1. Giao điện Trang chủ.
+   
+   
+    Hình 41:Thiết kế giao diện trang chủ
+    Mô tả chức năng
+❖ Mục đích
+   Giúp người quản lý năm bắt được các thông tin về lịch công tác giáo viên, danh sách giáo viên, danh sách lớp học, ghi chú công việc, tiện ích.
+❖ Phạm vi
+   Người có tài khoản quản trị trong hệ thống
+4.2. Giao điện chi tiết lịch công tác
+   
+    Hình 42:Giao diện chi tiết lịch công tác cấp 1
+    Mô tả chức năng
+❖ Mục đích
+   Khi người dùng click vào tiêu đề của một lịch công tác có trong danh sách thì hệ thống sẽ chuyển sang trang chi tiết lịch công tác cấp 1. Ở đây sẽ hiển thị một số thông tin cơ bản của lịch công tác.
+❖ Phạm vi
+   Người có tài khoản quản trị trong hệ thống
+    
+   
+   
+   
+    Hình 43:Giao diện chi tiết lịch công tác cấp 2
+    Mô tả chức năng
+❖ Mục đích
+   Khi người dùng đã truy cập vào trang chi tiết lịch công tác cấp 1. Đề xem tất cả các thông tin của lịch công tác giáo viên cần phải click vào button “xem chi tiết” hoặc không muốn xem thông tin có thể chọn “quay lại” để về trang trước.
+❖ Phạm vi
+   Người có tài khoản quản trị trong hệ thống
+    
+4.3. Giao điện trang ghi chú công việc
+   
+    Hình 44:Giao diện trang ghi chú công việc
+    Mô tả chức năng
+❖ Mục đích
+   Ghi chú công việc giúp người dùng dễ dàng thêm các sự kiện chỉ bằng cách nhấp chọn vào ngày muốn thêm sự kiện, các sự kiện cũng có thể dễ dàng thay đổi bằng cách di chuyển sự kiện bằng giữ chuột.
+❖ Phạm vi
+   Người có tài khoản quản trị trong hệ thống
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+4.4.  Giao diện trang đăng nhập
+ 
+ 
+    Hình 45:Giao diện trang đăng nhập
+
+    Mô tả chức năng
+❖ Mục đích
+   Hệ thống chạy nội bộ nên để sử dụng các chức năng của hệ thống thì bắt buộc phải đăng nhập. Hệ thống đăng nhập có validate các trường bắt buộc, kiểm tra thông tin đăng nhập của người dùng được cấp phép vào hệ thống.
+    
+    
+    
+    
+4.5. Giao điện trang danh sách quản lý sinh viên
+
+    Hình 46:Giao diện trang quản lý
+
+    Mô tả chức năng
+❖ Mục đích
+   Trang quản lý danh sách sinh viên, người dùng có thể xem được các thông tin của sinh viên như têm, lớp, số điện, thoại, địa chỉ.
+   Người dùng có thể thêm, cập nhật dữ liệu bằng cách click button “thêm mới” và “Sửa” hoặc xoá dữ liệu bằng cách click vào button “xoá”.
+   Người dùng có thể sắp xếp các trường thông tin thông qua các phím mũi tên trên bảng và tìm kiếm thông tin trong bảng bằng cách nhập thông tin vào textbox tìm kiếm.
+   Dropdownlist “show” là lựa chọn item trên một bảng.
+❖ Phạm vi
+   Người có tài khoản quản trị trong hệ thống
+   
+   
+   
+4.6. Giao diện popup thêm, sửa dữ liệu sinh viên
+
+
+    Hình 47:Thêm, cập nhật dữ liệu sinh viên
+    
+    Mô tả chức năng
+❖ Mục đích
+   Dialog popup dùng để thêm, cập nhật dữ liệu. Các trường dữ liệu được validate:Tên sinh viên (Bắt buộc nhập), Ngày sinh (Bắt buộc nhập và đúng định dạng ngày tháng), Email (Bắt buộc nhập và đúng định dạng email),số điện thoại (bắt buộc nhâp và chỉ cho phép nhập số), lớp (bắt buộc chọn dữ liệu từ select).
+❖ Phạm vi
+   Người có tài khoản quản trị trong hệ thống
+4.7. Giao diện trang quản lý loại lịch công tác
+
+    Hình 48:Giao diện trang quản lý lịch công tác
+    
+    Mô tả chức năng
+❖ Mục đích
+   Trang quản lý danh sách loại lịch công tác người dùng có thể xem được các thông tin của loại lịch công tác như tên công việc, mô tả công việc, trạng thái công việc.
+   Người dùng có thể thêm, cập nhật dữ liệu bằng cách click button “thêm mới” và “Sửa” hoặc xoá dữ liệu bằng cách click vào button “xoá”.
+   Người dùng có thể sắp xếp các trường thông tin thông qua các phím mũi tên trên bảng và tìm kiếm thông tin trong bảng bằng cách nhập thông tin vào textbox tìm kiếm.
+   Dropdownlist “show” là lựa chọn item trên một bảng.
+❖ Phạm vi
+   Người có tài khoản quản trị trong hệ thống
+
+4.8. Giao diện popup thêm, sửa dữ liệu loại lịch công việc
+
+    Hình 49:Giao diện  thêm, sửa dữ liệu loại lịch công việc
+    
+    Mô tả chức năng
+❖ Mục đích
+   Dialog popup dùng để thêm, cập nhật dữ liệu. Các trường dữ liệu được validate:Tên loại công việc (Bắt buộc nhập), Mô tả công việc (Bắt buộc nhập và sử dụng trình soạn thảo Ckeditor)
+   Phạm vi
+   Người có tài khoản quản trị trong hệ thống
+
+4.9. Giao diện trang quản lý danh sách lớp học
+
+    Hình 50:Trang quản lý danh sách lớp học
+    
+    Mô tả chức năng
+❖ Mục đích
+   Trang quản lý danh sách lớp học, người dùng có thể xem được các thông tin của lớp học như tên lớp, giáo viên chủ nhiệm, khoa.
+   Người dùng có thể thêm, cập nhật dữ liệu bằng cách click button “thêm mới” và “Sửa” hoặc xoá dữ liệu bằng cách click vào button “xoá”.
+   Người dùng có thể sắp xếp các trường thông tin thông qua các phím mũi tên trên bảng và tìm kiếm thông tin trong bảng bằng cách nhập thông tin vào textbox tìm kiếm.
+   Dropdownlist “show” là lựa chọn item trên một bảng.
+❖ Phạm vi
+   Người có tài khoản quản trị trong hệ thống
+
+4.10. Giao diện popup thêm, sửa dữ liệu lớp học
+
+    Hình 51:Giao diện trâng thêm, cập nhật dữ liệu lớp học
+    
+    Mô tả chức năng
+❖ Mục đích
+   Dialog popup dùng để thêm, cập nhật dữ liệu. Các trường dữ liệu được validate:Tên lớp (Bắt buộc nhập), địa điểm (Bắt buộc nhập), giáo viên chủ nhiệm (Bắt buộc chọn), khoa (Bắt buộc chọn)
+   Phạm vi
+   Người có tài khoản quản trị trong hệ thống
+
+4.11. Giao diện trang quản lý danh sách người dùng
+
+    Hình 52:Giao diện danh sách người dùng
+    
+    Mô tả chức năng
+❖ Mục đích
+   Trang quản lý danh sách user, người dùng có thể xem được các thông tin của người dùng như tên người dùng,tài khoản, quyền, trạng thái, số điện thoại.
+   Người dùng có thể thêm, cập nhật dữ liệu bằng cách click button “thêm mới” và “Sửa” hoặc xoá dữ liệu bằng cách click vào button “xoá”.
+   Người dùng có thể sắp xếp các trường thông tin thông qua các phím mũi tên trên bảng và tìm kiếm thông tin trong bảng bằng cách nhập thông tin vào textbox tìm kiếm.
+   Dropdownlist “show” là lựa chọn item trên một bảng.
+❖ Phạm vi
+   Người có tài khoản quản trị trong hệ thống
+
+4.12. Giao diện popup thêm, sửa dữ liệu người dùng
+
+    Hình 53:Giao diện thêm, cập nhật người dùng
+❖ Mục đích
+   Dialog popup dùng để thêm, cập nhật dữ liệu. Các trường dữ liệu được validate:Tên người dùng (Bắt buộc nhập), tài khoản (Bắt buộc nhập), mật khẩu(Bắt buộc nhập), quyền (Bắt buộc nhập), số điện thoại (Bắt buộc nhập), Email (Bắt buộc nhập), trạng thái.
+   Phạm vi
+   Người có tài khoản quản trị trong hệ thống
+
+4.13. Giao diện trang quản lý danh sách giáo viên
+
+    Hình 54:Giao diện danh sách giáo viên
+    
+    Mô tả chức năng
+❖ Mục đích
+   Trang quản lý danh sách giáo viên, người dùng có thể xem được các thông tin của giáo viên như tên giáo viên, số điện thoại, địa chỉ, ngày sinh, giới tính.
+   Người dùng có thể thêm, cập nhật dữ liệu bằng cách click button “thêm mới” và “Sửa” hoặc xoá dữ liệu bằng cách click vào button “xoá”.
+   Người dùng có thể sắp xếp các trường thông tin thông qua các phím mũi tên trên bảng và tìm kiếm thông tin trong bảng bằng cách nhập thông tin vào textbox tìm kiếm.
+   Dropdownlist “show” là lựa chọn item trên một bảng.
+❖ Phạm vi
+   Người có tài khoản quản trị trong hệ thống
+   
+   
+   
+
+4.14. Giao diện popup thêm, sửa dữ liệu giáo viên 
+    Mô tả chức năng
+❖ Mục đích
+   Dialog popup dùng để thêm, cập nhật dữ liệu. Các trường dữ liệu được validate:Tên giáo viên(Bắt buộc nhập), Số điện thoại(Bắt buộc nhập), Địa chỉ(Bắt buộc nhập), Ngày sinh (Bắt buộc nhập), ảnh đại diện (Bắt buộc nhập), Giới tính (Bắt buộc nhập), trạng thái, khoa.
+   Phạm vi
+   Người có tài khoản quản trị trong hệ thống.
+   
+    Hình 55:Giao diện thêm, cập nhật dữ liệu giáo viên
+   
+4.15. Giao diện trang quản lý danh sách công việc
+    
+    Hình 56:Giao diện trang danh sách công việc
+    
+    Mô tả chức năng
+❖ Mục đích
+   Trang quản lý danh sách công việc, người dùng có thể xem được các thông tin của giáo viên như tên công việc, mô tả, ngày bắt đầu, ngày kết thúc,ghi chú.
+   Người dùng có thể thêm, cập nhật dữ liệu bằng cách click button “thêm mới” và “Sửa” hoặc xoá dữ liệu bằng cách click vào button “xoá”.
+   Người dùng có thể sắp xếp các trường thông tin thông qua các phím mũi tên trên bảng và tìm kiếm thông tin trong bảng bằng cách nhập thông tin vào textbox tìm kiếm.
+   Dropdownlist “show” là lựa chọn item trên một bảng.
+❖ Phạm vi
+   Người có tài khoản quản trị trong hệ thống
+4.16. Giao diện popup thêm, cập nhật dữ liệu công việc
+    
+    
+    Hình 57:Giao diện trang thêm, cập nhật dữ liệu công việc
+    
+    Mô tả chức năng
+❖ Mục đích
+   Dialog popup dùng để thêm, cập nhật dữ liệu. Các trường dữ liệu được validate:Tên công việc (Bắt buộc nhập), mô tả(Bắt buộc nhập), ngày bắt đầu(Bắt buộc nhập), ngày kết thúc (Bắt buộc nhập), ghi chú (Bắt buộc nhập
+   Phạm vi
+   Người có tài khoản quản trị trong hệ thống
+4.17. Giao diện trang quản lý danh sách menu
+    
+    Hình 58:Giao diện trang danh sách menu
+    
+    Mô tả chức năng
+❖ Mục đích
+   Trang quản lý danh sách menu, người dùng có thể xem được các thông tin của giáo viên như tên menu, mô tả, đường dẫn, trạng thái.
+   Người dùng có thể thêm, cập nhật dữ liệu bằng cách click button “thêm mới” và “Sửa” hoặc xoá dữ liệu bằng cách click vào button “xoá”.
+   Người dùng có thể sắp xếp các trường thông tin thông qua các phím mũi tên trên bảng và tìm kiếm thông tin trong bảng bằng cách nhập thông tin vào textbox tìm kiếm.
+   Dropdownlist “show” là lựa chọn item trên một bảng.
+❖ Phạm vi
+   Người có tài khoản quản trị trong hệ thống
+   
+   
+
+4.18. Giao diện popup thêm, cập nhật dữ liệu menu 
+    
+    
+    Hình 59:Giao diện trang thêm, cập nhật dữ liệu menu
+    
+    Mô tả chức năng
+❖ Mục đích
+   Dialog popup dùng để thêm, cập nhật dữ liệu. Các trường dữ liệu được validate:Tên menu (Bắt buộc nhập),mô tả,liên kết(Bắt buộc nhập), CssClass (Bắt buộc nhập),trạng thái.
+   Phạm vi
+   Người có tài khoản quản trị trong hệ thống
+4.19. Giao diện trang quản lý danh sách khoa
+    
+    Hình 60:Giao diện trang quản lý danh sách khoa
+    Mô tả chức năng
+❖ Mục đích
+   Trang quản lý danh sách khoa, người dùng có thể xem được các thông tin của giáo viên như tên khoa, địa chỉ, mô tả, ngày thành lập.
+   Người dùng có thể thêm, cập nhật dữ liệu bằng cách click button “thêm mới” và “Sửa” hoặc xoá dữ liệu bằng cách click vào button “xoá”.
+   Người dùng có thể sắp xếp các trường thông tin thông qua các phím mũi tên trên bảng và tìm kiếm thông tin trong bảng bằng cách nhập thông tin vào textbox tìm kiếm.
+   Dropdownlist “show” là lựa chọn item trên một bảng.
+❖ Phạm vi
+   Người có tài khoản quản trị trong hệ thống
+4.20. Giao diện popup thêm, cập nhật dữ liệu khoa 
+    
+    Hình 61:Giao diện thêm, cập nhật dữ liệu khoa
+    
+    Mô tả chức năng
+❖ Mục đích
+   Dialog popup dùng để thêm, cập nhật dữ liệu. Các trường dữ liệu được validate:Tên khoa (Bắt buộc nhập),Địa chỉ (Bắt buộc nhập), mô tả.
+   Phạm vi
+   Người có tài khoản quản trị trong hệ thống
+   
+   
+4.21. Giao diện trang quản lý nhật ký sự kiện
+    
+    Hình 62:Giao diện trang quản lý nhật ký sự kiện
+    
+    Mô tả chức năng
+❖ Mục đích
+   Tranh danh sách ghi lại các sự kiện ghi chú thông qua ghi chú công việc từ trang chủ, quản trị viên được phép xoá sự kiện
+   Phạm vi
+   Người có tài khoản quản trị trong hệ thống
+   
+   
+4.22. Giao diện frontend_danh sách khoa
+    
+    Hình 63:Frontend_Danh sách khoa
+    
+    Mô tả chức năng
+❖ Mục đích
+   Trang hiển thị danh sách khoa tồn tại trong hệ thống. Danh sách các lớp hiển thị theo từng khoa.
+   Phạm vi
+   Người có tài khoản quản trị trong hệ thống
+
+CHƯƠNG 4: KẾT LUẬN
+Kết quả đạt được
+   Quá trình nghiên cứu và thực hiện cài đặt chương trình theo sự khảo sát và yêu cầu của người dùng đã hoàn thành và đạt một số kết quả sau:
+• Hiểu được nghiệp vụ của một trang quản lý lịch công tác:
+- Nghiệp vụ quản lý lịch công tác giáo viên.
+- Một số nghiệp vụ khác.
+• Thông qua nghiệp vụ kết hợp với mục đích thực hiện tin học hóa, mô tả chức năng của từng hệ thống, xây dựng các biểu đồ UML và cơ sở dữ liệu thông qua công cụ Visual Diagram.
+• Xây dựng chương trình thông qua kết quả thu thập được qua quá trình khảo sát,phân tích hệ thống và đặc tả giao diện.
+• Thực hiện kiểm thử chương trình ở mức độ lập trình.
+1. Ưu nhược điểm của chương trình
+• Ưu điểm:
+- Website có giao diện thân thiện, dễ sử dụng.
+- Hệ thống quản lý đơn giản hiệu quả.
+• Nhược điểm
+- CSDL của hệ thống chưa được đầy đủ và tối ưu.
+- Tốc độ chưa hiệu quả.
+- Chưa thực hiện được một số chức năng khác.
+2. Hướng phát triển
+    - Với sự nỗ lực, em đã cố gắng hoàn thành yêu cầu đề tài. Do thời gian có hạn, khả năng còn hạn chế nên đề tài mới chỉ đáp ứng được yêu cầu của khách hàng ở mức độ đơn giản và chưa tối ưu.
+    - Mở rộng bài toán để đáp ứng nhiều hơn các chức năng còn thiếu.
+    - Cài đặt hệ thống hoàn chỉnh hơn, để chương trình thực sự hữu ích hơn, đáp ứng những nghiệp vụ phức tạp hơn, dữ liệu lớn hơn.
+3. Đề xuất ý kiến
+    Hệ thống quản lý lịch công tác giáo viên chủ nhiệm do kinh nghiệm và vốn hiểu biết của em còn hạn chế nên chương trình còn sơ sài, chưa đáp ứng đầy đủ hơn những nhu cầu đặt ra cho một ứng dụng hoàn chỉnh. Em mong được các Thầy Cô chỉ bảo, hướng dẫn cho đề tài của em được hoàn thiện tốt hơn.
+    Em xin chân thành cảm ơn!
+    
+    Thiết kế website quản lý công tác giáo viên chủ nhiệm
+    
+    
+    6
+    
+    
+    
+    
+    
+
+    

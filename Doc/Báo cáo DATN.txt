@@ -1,0 +1,451 @@
+﻿CHƯƠNG I: TỔNG QUAN VỀ ĐỀ TÀI
+1.1. Lý do chọn đề tài
+     Hiện nay, cùng với sự bùng nổ của cuộc Cách mạng 4.0 và sự phát triển như vũ bão của công nghệ Trí tuệ nhân tạo lĩnh vực Thị giác máy đang ngày càng được ứng dụng vào nhiều lĩnh vực trong cuộc sống đặc biệt là lĩnh vực Nhận dạng khuôn mặt(Face Recognition). 
+     Ứng dụng của công nghệ nhận diện khuôn mặt hiện nay không thể kể hết, ví dụ như việc kiểm soát an ninh, bảo mật dữ liệu hay đơn giản là các ứng dụng, game dựa vào biểu cảm khuôn mặt...
+     Công nghệ nhận diện khuôn mặt có nhiều lợi thế như không cần tiếp xúc trực tiếp, độ chính xác cao,... cùng với sự phát triển của các thiết bị điện tử thông minh, công nghệ này có rất nhiều tiềm năng để phát triển và ứng dụng trong đời sống hiện tại và tương lai.
+     Với mong muốn tìm hiểu và học hỏi cũng như có được nền tảng các kiến thức về Android, Thị giác máy và Machine Learning để xây dựng những sản phẩm có ứng dụng thực tế tiết kiệm sức lực của con người, tăng tính hiệu quả và khách quan trong công việc điểm danh cùng với sự đồng ý của giáo viên hướng dẫn đề tài, em lựa chọn đề tài “Xây dựng hệ thống điểm danh ứng dụng nhận diện khuôn mặt” làm đề tài nghiên cứu khoa học.
+1.2. Mục tiêu của đề tài
+• Nghiên cứ, tìm hiểu vận dụng được kiến thức về Python, Thị giác máy, Machine learning 
+• Nghiên cứu vềbài toán Face Recognition và đưa ra phương pháp xử lý phù hợp 
+• Xây dựng thành công model nhận diện khuôn mặt với độ chính xác tốt nhất trong phạm vi phần cứng và yêu cầu của bài toán
+• Xây dựng thành công hệ thống điểm danh ứng dụng Nhận diện khuôn mặt
+1.3. Giới hạn và phạm vi của đề tài
+• Giới hạn: 
+o Client hiện tại giới hạn sử dụng trên các thiết bị chạy hệ điều hành Android.
+o Deploy  trên server được dựng bằng FlaskServer trên Python3
+• Phạm vi sử dụng: học sinh, sinh viên và giáo viên.
+1.4. Kết quả dự kiến đạt được
+• Xây dựng được model nhận diện khuôn mặt với độ chính xác tốt
+• Xây dựng được server có độ ổn định cao
+• Xây dựng được cliend trên các thiết bị Android thân thiện, dễ dùng
+• Xây dựng được các chức có sau cho hệ thống: 
+o Đăng nhập: cho phép giảng viên đăng nhập bằng cả tài khoản hoặc khuôn mặt
+o Thực hiện điểm danh:  cho phép sinh viên điểm danh bằng khuôn mặt
+o Xuất file excel: gửi file exel bảng điểm danh đúng theo mẫu đang được sử dụng 
+o Tin tức: Cho phép thông báo và đọc các thông tin từ trang web chính thức của nhà trường ngay trên thiết bị
+1.5. Phương pháp tiếp cận
+• Cách tiếp cận : Nghiên cứu các ngôn ngữ lập trình Python, tìm hiểu Thị giác máy, Machine Learning và các thư viện tensorflow, keras...
+• Sử dụng các phương pháp nghiên cứu như đọc tài liệu, phân tích mẫu và thực nhiệm
+• 
+
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2. 
+2.1. Tổng quát về Trí tuệ  nhân tạo
+    Trí tuệ nhân tạo (thường được dùng với từ viết tắt là AI - Artificial Intelligence) được định nghĩa là trí tuệ phát sinh bởi máy móc, đối lập với trí tuệ tự nhiên phát sinh bởi con người và các loài vật. Theo đó khái niệm trí tuệ nhân tạo được áp dụng khi máy móc bắt chước được các chức năng lý trí gắn với trí tuệ con người, ví dụ như học hỏi hay giải quyết vấn đề.
+    Trí tuệ nhân tạo là một ngành của khoa học máy tính liên quan đến việc tự động hóa các hành vi thông minh. AI là một bộ phận của khoa học máy tính và do đó nó phải được đặt trên những nguyên lý lý thuyết vững chắc, có khả năng ứng dụng được của lĩnh vực này.
+    Bên cạnh đó trong cuốn sách nổi tiếng "Trí tuệ nhân tạo: Hướng tiếp cận mới nhất" (Artificial Intelligence: A modern Approach) tái bản lần 3 của 2 tác giả Stuart Russel và Peter Norvig có tổng hợp một số định nghĩa khác nhau về AI như sau:
+• Trí tuệ nhân tạo là nỗ lực thú vị nhằm khiến suy nghĩ của máy tính có thêm nhận thức, tư duy.
+• Trí tuệ nhân tạo là những hành động của máy móc gắn liền với tư duy của con người, ví dụ như ra quyết định hay giải quyết vấn đề.
+• Trí tuệ nhân tạo là nghiên cứu về năng lực trí tuệ vận hành vào các mô hình tính toán.
+• Trí tuệ nhân tạo là nghiên cứu để máy tính có khả năng nhận thức, nhận định và hành động.
+• Trí tuệ nhân tạo là nghệ thuật tạo ra các cỗ máy có thể thực hiện những chức năng yêu cầu trí tuệ khi thực hiện bởi con người.
+•  Trí tuệ nhân tạo là nghiên cứu cách khiến máy tính làm được điều mà ở thời điểm hiện tại con người vẫn đang làm tốt hơn
+• Các hướng của Trí tuệ nhân tạo đã đạt được một số thành quả nhất định như:
+• Natural language processing: máy có khả năng đọc hiểu và giao tiếp bằng ngôn ngữ tự nhiên với người.
+• Knowledge representation: máy có khả năng lưu trữ tri thức thông qua thị giác, thính giác, hay văn bản.
+• Automated reasoning: máy có khả năng sử dụng tri thức đã lưu trữ để trả lời câu hỏi hay đưa ra kết luận hữu ích.
+• Machine learning: máy có khả năng thích nghi với các điều kiện môi trường xung quanh để rút trích ra các nguyên lý từ tri thức thu nhận được phục vụ cho việc ra quyết định.
+• Computer vision: máy có khả năng quan sát và xác định được các đối tượng xung quanh.
+• Robotics: máy có khả năng tương tác với đối tượng và di chuyển trong môi trường xung quanh.
+2.2. Tổng quan về Machine Learning
+2.2.1. Lịch sử Máy học
+     Máy học được đưa ra năm 1959 bởi Arthur Samuel: “là một lĩnh vực nhằm giúp máy tính có khả năng học mà không được lập trình/chỉ định rõ ràng”. Điều này có nghĩa là kiến thức được máy tính hấp thụ “tự động” mà không cần phải lập trình cho nó. Rất nhiều người nhầm hiểu rằng sự thông minh của máy tính là do con người lập trình. Nếu cặn kẽ, thì có thể nói rằng, con người lập trình để máy tính có thể “tự học”. Giống như việc hướng dẫn một đứa trẻ học vậy, còn trí thông minh là do trẻ tự học mà có được. Do lịch sử, mặc dù những thuật toán Máy học đã có từ rất lâu nhưng gần đây mới thực sự được ứng dụng rộng rãi. Ví dụ Vladimir Vapnik là nhà khoa học thuộc Liên Xô cũ đã đưa ra thuật toán Support Vector Machine (SVM) năm 1963 nhưng không được chú ý cho tới những năm 1990 khi Vapnick sang Mỹ và nghiên cứu ở Bell Labs. Tương tự thuật toán Neuron Netwok được đưa ra những năm 1940, nhưng máy tính lúc đó quá chậm để có thể thực hiện thuật toán. Quan niệm về Máy học đã nhiều lần thay đổi. Mỗi lần như vậy người ta lại nghĩ Máy học chỉ là một hiện tượng tạm thời. Cho tới những năm gần đây, các nền tảng phần cứng phát triển (định luật Moore) đã giúp các nhà khoa học và cả xã hội nhận thấy Máy học là một công cụ thực sự quan trọng và hữu ích. Nó dần khẳng định vai trò không thể thay thế trong nhiều lĩnh vực của xã hội.
+2.2.2. Máy học là gì?
+    Ngoài định nghĩa rất hay nhưng mang tính hình thức của Tom Mitchell trong cuốn sách Machine Learning nổi tiếng, ông có đưa ra khái niệm dễ hiểu về Máy học: “Máy học liên quan tới gốc rễ của vấn đề làm thế nào để xây dựng các chương trình máy tính sao cho nó có thể tự động cải thiện bằng kinh nghiệm”.
+    Trong cuốn sách The Elements of Statistical Learning: Data Mining, Inference, and Prediction. Springer; 2nd ed. 2009 của Trevor Hastie. Robert Tibshirani. Jerome Friedman ba tác giả là ba nhà thống kê (statisticians) của Standford đã đưa ra một định nghĩa về Máy học:  “Một lượng rất lớn dữ liệu được sinh ra bởi nhiều lĩnh vực khác nhau, công việc của các nhà thống kê là tìm ra ý nghĩa của các dữ liệu đó, bằng cách: trích xuất và tìm ra các mẫu (pattern) và các xu hướng, và để hiểu ‘dữ liệu đang nói gì’. Như vậy là chúng ta đang học từ dữ liệu”.
+    Tác giả Stephen Marsland đã cung cấp một nhận định đáng giá trong cuốn sách Stephen Marsland. Machine Learning: An Algorithmic Perspective.: “Một trong những đặc trưng thú vị của Máy học là nó là sự giao thoa của các ngành ngành: khoa học máy tính, thống kê học, toán học, và kĩ thuật”.
+    Trong hình dưới có 3 thành phần chính: 1. Hacking Skills chính là những kĩ năng sử dụng máy tính và lập trình để thao tác và xử lý dữ liệu; 2. Math&Statistics là nền tảng để chúng ta trích xuất những thông tin hữu ích từ dữ liệu; 3. Substantive Expertise là kiến thức của lĩnh vực chúng ta quan tâm. Như chúng ta thấy ở biểu đồ Venn, Máy học cần một phần kĩ năng của khoa học máy tính và một phần của toán học thống kê. 
+    
+
+Hình  1: Biểu đồ Venn của Drew Conway về Data Science
+    
+    Tuy có rất nhiều định nghĩa khác nhau, tùy thuộc vào góc nhìn, tuy nhiên rất nhiều người cho rằng: “Giá trị quan trọng của Máy học là mô hình dự đoán, ở đó chúng ta dùng các dữ liệu quá khứ để huấn luyện mô hình và dùng mô hình để dự đoán”. Hay thậm chí ngắn gọn hơn: “Viết một chương trình mà nó có thể tự học!”
+    Máy học có nhiều tên gọi khác nhau, được đặt bởi những cộng đồng nghiên cứu khác nhau. Khi sử dụng Máy học để nhận dạng các mẫu, Máy học là pattern recognition; khi sử dụng trong khai phá dữ liệu, Máy học là data mining; khi sử dụng trong các mô hình dự đoán, Máy học có tên là redictive analytics hay còn gọi là predictive modeling; khi sử dụng vào phân tích dữ liệu, Máy học có tên gọi là data science; khi sử dụng trong các hệ thống tự thích nghi tương tác với môi trường, Máy học được gọi là adaptive systems; khi sử dụng để khai phá tri thức, Máy học có tên gọi là knowledge discovery; khi sử dụng trong việc phân tích và thống kê dữ liệu, Máy học có tên gọi là statistic learning hay còn gọi là statistic modeling. Ngoài ra còn có thể kể ra rất nhiều tên khác nưa: statistical modeling, self-organizing systems, v.v…  
+
+
+2.2.3. Ứng dụng của Machine learning trong thực tế
+• Xử lý ảnh:
+    Bài toán xử lý ảnh(Image Processing) giải quyết các vấn đề phân tích thông tin từ hình ảnh hay thực hiện một số phép biến đổi. Một số ví dụ là:
+o Gắn thẻ hình ảnh(Image Tagging), giống như Facebook, một thuật toán tự động phát hiện khuôn mặt của bạn và bạn bè trên những bức ảnh. Về cơ bản, thuật toán này học từ những bức ảnh mà bạn tự gắn thẻ cho mình trước đó.
+o Nhận dạng ký tự(Optical Character Recognition), là một thuật toán chuyển dữ liệu trên giấy tờ, văn bản thành dữ liệu số hóa. Thuật toán phải học cách nhận biết ảnh chụp của một ký tự là ký tự nào.
+o Ô tô tự lái(Self-driving cars), một phần cơ chế sử dụng ở đây là xử lý ảnh. Một thuật toán machine learning giúp phát hiện các mép đường, biển báo hay các chướng ngại vật bằng cách xem xét từng khung hình video từ camera.
+• Phân tích văn bản
+    Phân tích văn bản(Text analysis) là công việc trích xuất hoặc phân lọi thông tin từ văn bản. Các văn bản ở đây có thể là các facebook posts, emails, các đoạn chats, tài liệu,… Một số ví dụ phổ biến là:
+o Lọc spam(Spam filtering), là một trong những ứng dụng phân loại văn bản được biết và sử dụng nhiều nhất. Ở đây, phân loại văn bản là xác định chủ đề cho một văn bản. Bộ lọc spam sẽ học cách phân loại một email có phải spam không dựa trên nội dung và tiêu đề của email.
+o Phân tích ngữ nghĩa(Sentiment Analysis), học cách phân loại một ý kiến là tích cực, trung tính hay tiêu cực dựa trên nội dung văn bản của người viết.
+o Khai thác thông tin(Information Extraction), từ một văn bản, học cách để trích xuất các thông tin hữu ích. Chẳng hạn như trích xuất địa chỉ, tên người, từ khóa,…
+• Khai phá dữ liệu
+    Khai phá dữ liệu, sau đây là những ứng dụng của khai phá dữ liệu:
+o Phát hiện bất thường(Anomaly detection), phát hiện các ngoại lệ, ví dụ như phát hiện gian lận thẻ tín dụng. Bạn có thể phát hiện một giao dịch là khả nghi dựa trên các giao dịch thông thường của người dùng đó.
+o Phát hiện các quy luật(Association rules), ví dụ, trong một siêu thị hay một trang thương mại điện tử. Bạn có thể khám phá ra khách hàng thường mua các món hàng nào cùng nhau. Dễ hiểu hơn, khách hàng của bạn khi mua món hàng A thường mua kèm món hàng nào? Các thông tin này rất hữu ích cho việc tiếp thị sản phẩm.
+o Gom nhóm(Grouping), ví dụ, trong các nền tảng SaaS, người dùng được phân nhóm theo hành vi hoặc thông tin hồ sơ của họ.
+o Dự đoán(Predictions), các cột giá trị(của một bản ghi mới trong database). Ví dụ, bạn có thể dự đoán giá của căn hộ dựa trên các dữ liệu về giá các căn hộ bạn đã có.
+• Trò chơi điện tử & Robot
+    Trò chơi điện tử(Video games) và robot(Robotics) là lĩnh vực lớn có sự góp mặt của machine learning. Nếu ta có một nhân vật cần di chuyển và tránh các chướng ngại vật trong game. Machine learning có thể học và giải quyết công việc này thay bạn. Một kỹ thuật phổ biến được áp dụng  trong trường hợp này là Học tăng cường(Reinforcement learning). Ở đó, máy sẽ học tăng cường với mục tiêu là giải quyết nhiệm vụ trên. Học tăng cường là tiêu cực nếu nó va phải chướng ngại vật, là tích cực nếu nó chạm tới đích.
+    Một thành tựu gần đây nhất là cỗ máy Alpha Go của Google DeepMind đã đánh bại kỳ thủ cờ vậy số 1 thế giới. Trong khi cờ vây là một trò chơi có không gian trạng thái cực kỳ lớn.
+2.3. Tổng quan về bài toán Nhận diện khuôn mặt
+2.3.1.  Nhận diện khuôn mặt là gì?
+    Nhận dạng mặt người (Face recognition) là một lĩnh vực nghiên cứu của ngành Computer Vision, và cũng được xem là một lĩnh vực nghiên cứu của ngành Biometrics (tương tự như nhận dạng vân tay – Fingerprint recognition, hay nhận dạng mống mắt – Iris recognition). Xét về nguyên tắc chung, nhận dạng mặt có sự tương đồng rất lớn với nhận dạng vân tay và nhận dạng mống mắt, tuy nhiên sự khác biệt nằm ở bước trích chọn đặt trưng (feature extraction) của mỗi lĩnh vực. 
+    Trong khi nhận dạng vân tay và mống mắt đã đạt tới độ chín, tức là có thể áp dụng trên thực tế một cách rộng rãi thì nhận dạng mặt người vẫn còn nhiều thách thức và vẫn là một lĩnh vực nghiên cứu thú vị với nhiều người. So với nhận dạng vân tay và mống mắt, nhận dạng mặt có nguồn dữ liệu phong phú hơn (và ít đòi hỏi sự tương tác có kiểm soát hơn (để thực hiện nhận dạng vân tay hay mống mắt, dữ liệu input lấy từ con người đòi hỏi có sự hợp tác trong môi trường có kiểm soát). Hiện nay các phương pháp nhận dạng mặt được chia thành nhiều hướng theo các tiêu chí khác nhau: nhận dạng với dữ liệu đầu vào là ảnh tĩnh 2D(still image based FR) là phổ biến nhất, tuy nhiên tương lai có lẽ sẽ là 3D FR (vì việc bố trí nhiều camera 2D sẽ cho dữ liệu 3D và đem lại kết quả tốt hơn, đáng tin cậy hơn), cũng có thể chia thành 2 hướng là: làm với dữ liệu ảnh và làm với dữ liệu video. 
+    Trên thực tế các phương pháp nhận dạng mặt chia làm 3 loại: phương pháp tiếp cận toàn cục (global, như Eigenfaces-PCA, Fisherfaces-LDA), phương pháp tiếp cận dựa trên các đặc điểm cục bộ (local feature based, như LBP, Gabor wavelets) và phương pháp lai (hybrid, là sự kết hợp của hai phương pháp toàn cục và local feature). Phương pháp dựa trên các đặc điểm cục bộ đã được chứng minh là ưu việt hơn khi làm việc trong các điều kiện không có kiểm soát và có thể nói rằng lịch sử phát triển của nhận dạng mặt (A never ending story) là sự phát triển của các phương pháp trích chọn đặc trưng (feature extractrion methods) được sử dụng trong các hệ thống dựa trên feature based. 
+    Các ứng dụng cụ thể của nhận dạng mặt dựa trên 2 mô hình nhận dạng: identification (xác định danh tính, bài toán 1-N), và verification (xác thực danh tính, bài toán 1-1). Trong bài toán identification, ta cần xác định danh tính của ảnh kiểm tra, còn trong bài toán verification ta cần xác định 2 ảnh có cùng thuộc về một người hay không và trong đề tài này ta xử lý bài toán identification để định danh 1 sinh viên qua khuôn mặt đầu vào để điểm danh sinh viên đó có mặt tại buổi học.
+2.3.2.  Các phương pháp nhận diện khuôn mặt
+1. 
+• Phương pháp truyền thống
+    Các phương pháp truyền thống: Xác thực khuôn mặt bằng cách trích xuất ra một land mark cho face. Land mark như là một bản đồ xác định các vị trí cố định trên khuôn mặt của một người như mắt, mũi, miệng, lông mày,….
+    
+Hình 2: Land mark face
+    Như vậy thay land mark face đã loại bỏ những phần thông tin không cần thiết và giữ lại những thông tin chính. Khi đó mỗi khuôn mặt sẽ được nén thành một véc tơ n chiều. Thông thường là 68 chiều.
+    Sử dụng đầu vào là land mark face, áp dụng các thuật toán cổ điển như SVM, k-NN, Naive Bayes, Random Forest, MLP, … để phân loại khuôn mặt cho một người.
+    
+• Nhận diện 3D
+    Kĩ thuật nhận diện 3D sẽ sử dụng không gian 3 chiều để biểu diễn khuôn mặt. Từ thông tin này có thể xác định các đặc trưng khác nhau trên bề mặt khuôn mặt như các đường countour của mắt, mũi, cằm.
+    Một lợi thế của nhận diện khuôn mặt 3D là không bị ảnh hưởng bởi những thay đổi về ánh sáng như các phương pháp 2D. Dữ liệu 3D đã cải thiện đáng kể độ chính xác của nhận dạng khuôn mặt.
+    Để tạo ra một ảnh 3D, một cụm ba camera được áp dụng. Mỗi camera sẽ hướng vào một góc khác nhau. Tất cả các camera này phối hợp cùng nhau trong việc theo dõi khuôn mặt của một người trong thời gian thực và có thể nhận diện chúng.
+    
+Hình 3: 3D Face modeling
+    
+    
+    
+• Các phương pháp nhận diện khác
+    Ngoài ra còn có một số phương pháp nhận diện khuôn mặt như nhận diện cảm biến da và phương pháp kết hợp.
+    Phương pháp kết hợp có thể sử dụng nhiều thông tin từ đồng thời land mark face, nhận diện 3D, nhận diện cảm biến da và mang lại độ chính xác cao hơn vì nó nhận diện tốt được trong các trường hợp khuôn mặt có các biểu cảm như cau mày, chớp mắt, co dãn khi cười, nói và ít nhạy cảm với chiếu sáng.
+2.3.3. Các thuật toán trong nhận diện khuôn mặt
+• One-shot learning
+    One-shot learning là thuật toán học có giám sát mà mỗi một người chỉ cần 1 vài, rất ít hoặc thậm chí chỉ 1 bức ảnh duy nhất (để khỏi tạo ra nhiều biến thể).
+    Từ đầu vào là bức ảnh của một người, chúng ta sử dụng một kiến trúc thuật toán CNN đơn giản để dự báo người đó là ai.
+    Tuy nhiên nhược điểm của phương pháp này là chúng ta phải huấn luyện lại thuật toán thường xuyên khi xuất hiện thêm một người mới vì shape của output thay đổi tăng lên 1. Để khắc phục được vấn đề này, chúng ta sử dụng phương pháp learning similarity.
+• Learning similarity
+    Phương pháp này dựa trên một phép đo khoảng cách giữa 2 bức ảnh, thông thường là các norm chuẩn l1 hoặc l2  sao cho nếu 2 bức ảnh thuộc cùng một người thì khoảng cách là nhỏ nhất và nếu không thuộc thì khoảng cách sẽ lớn hơn.
+   
+   
+
+ 
+Hình 4: Learning Similarity
+.      Thay vì dự báo một phân phối xác suất để tìm ra nhãn phù hợp nhất với ảnh đầu vào. Thuật toán sẽ so sánh khoảng cách giữa ảnh đầu vào (bên phải) với toàn bộ các ảnh còn lại (bên trái). Ta cần chọn một ngưỡng threshold để quyết định ảnh là giống hoặc khác. Giả sử ngưỡng threshold là 0.5. Trong các bức ảnh bên trái thì bức ảnh ở giữa có khoảng cách với ảnh bên phải nhỏ hơn 0.5. Do đó nó được dự báo cùng một người với ảnh bên phải.
+    Learning similarity có thể trả ra nhiều hơn một ảnh là cùng loại với ảnh đầu vào tùy theo ngưỡng threshold.
+    Ngoài ra phương pháp này không bị phụ thuộc vào số lượng classes. Do đó không cần phải huấn luyện lại khi xuất hiện class mới.
+    Điểm mấu chốt là cần xây dựng được một model encoding đủ tốt để chiếu các bức ảnh lên một không gian eucledean n chiều. Sau đó sử dụng khoảng cách để quyết định nhãn của chúng.
+    Như vậy learning similarity có ưu điểm hơn so với one-shot learning khi không phải huấn luyện lại model khi mà vẫn tìm ra được ảnh tương đồng.
+• Siam network
+    Siam network được giới thiệu đầu tiên bởi DeepFace: Closing the Gap to Human-Level - Yaniv Taigman. elt.
+    Kiến trúc của Siam network dựa trên base network là một Convolutional neural network đã được loại bỏ output layer có tác dụng encoding ảnh thành véc tơ embedding. Đầu vào của mạng siam network là 2 bức ảnh bất kì được lựa chọn ngẫu nhiên từ dữ liệu ảnh. Output của Siam network là 2 véc tơ tương ứng với biểu diễn của 2 ảnh input. Sau đó chúng ta đưa 2 véc tơ vào hàm loss function để đo lường sự khác biệt giữa chúng. Thông thường hàm loss function là một hàm norm chuẩn bậc 2.
+    
+
+Hình 5: Mô hình của Siam network
+• Khi x1, x2 là cùng 1 người:
+  
+  phải là một giá trị nhỏ.
+• Khi x1, x2 là 2 người khác nhau:
+  
+  phải là một giá trị lớn.
+    Khi sử dụng siam network chúng ta sẽ không cần phải lo lắng về vấn đề output shape thay đổi vì base network đã được loại bỏ layer cuối.
+    Mục tiêu chính của siam network đó là tìm ra biểu diễn của ảnh trong không gian n chiều nên nhất thiết phải lựa chọn hàm loss function là hàm binary cross entropy như các bài toán phân loại. Trên thực tế lựa chọn loss function là binary cross entropy vẫn tìm ra được biểu diễn tốt cho ảnh. Ngoài ra còn một số các biến thể khác của loss function như sử dụng khoảng cách norm chuẩn l2 đã chuẩn hóa theo phân phối χ2 dạng:
+  
+  
+  hoặc sử dụng norm chuẩn l1l1.
+2.3.4. Thuật toán Facenet
+    Facenet chính là một dạng siam network có tác dụng biểu diễn các bức ảnh trong một không gian eucledean n chiều (thường là 128) sao cho khoảng cách giữa các véc tơ embedding càng nhỏ, mức độ tương đồng giữa chúng càng lớn.
+    	Hầu hết các thuật toán nhận diện khuôn mặt trước facenet đều tìm cách biểu diễn khuôn mặt bằng một véc tơ embedding thông qua một layer bottle neck có tác dụng giảm chiều dữ liệu.
+• Tuy nhiên hạn chế của các thuật toán đó là số lượng chiều embedding tương đối lớn (thường >= 1000) và ảnh hưởng tới performance của thuật toán. Thường chúng ta phải áp dụng thêm thuật toán PCA để giảm chiều dữ liệu.
+• Hàm loss function chỉ đo lường khoảng cách giữa 2 bức ảnh. Như vậy trong một đầu vào huấn luyện chỉ học được một trong 2 khả năng là sự giống nhau nếu chúng cùng 1 class hoặc sự khác nhau nếu chúng khác class giữa 2 bức ảnh.
+    Facenet đã giải quyết cả 2 vấn đề trên bằng các hiệu chỉnh nhỏ nhưng mang lại hiệu quả rất lớn:
+• Base network áp dụng một mạng convolutional neural network và giảm chiều dữ liệu xuống chỉ còn 128 chiều. Do đó thuật toán classification ở những layer sau hoạt động nhanh hơn và đồng thời độ chính xác vẫn được đảm bảo.
+• Sử dụng một hàm loss function đặc biệt có khả năng đánh mức độ khác biệt giữa các bức ảnh sao cho giá trị loss function của chúng càng lớn, sự khác biệt giữa chúng càng cao. Đó chính là triplot loss function.
+• Hàm triplot loss có khả năng học được đồng thời sự giống nhau giữa 2 bức ảnh cùng nhóm và tìm cách phân biệt các bức ảnh nếu chúng không cùng nhóm. Do đó hiệu quả hơn rất nhiều so với các phương phát trước đây.
+    Trong facenet, quá trình encoding của mạng convolutional neural network đã giúp ta mã hóa bức ảnh về 128 chiều. Sau đó những véc tơ này sẽ làm đầu vào cho hàm loss function mà có tác dụng phân biệt tốt các véc tơ giống hoặc khác nhau. Đó chính là hàm loss function và ở đây ta chọn Triple loss
+    Để áp dụng triple loss, chúng ta cần lấy ra 3 bức ảnh trong đó có một bức ảnh là anchor. Trong 3 ảnh thì ảnh anchor được cố định trước. Chúng ta sẽ lựa chọn 2 ảnh còn lại sao cho một ảnh là negative (của một người khác với anchor) và một ảnh là positive (cùng một người với anchor). Kí hiệu ảnh Anchor, Positive, Negative lần lượt là A, P, N.
+    Mục tiêu của hàm loss function là tối thiểu hóa khoảng cách giữa 2 ảnh khi chúng là negative và tối đa hóa khoảng cách khi chúng là positive. Như vậy chúng ta kì vọng rằng:
+• Ảnh Anchor và Positive giống nhau: khoảng cách d(A,P) sẽ nhỏ.
+• Ảnh Anchor và Negative khác nhau: khoảng cách d(A,N) sẽ lớn.
+    Triplot loss function luôn lấy 3 bức ảnh làm input và trong mọi trường hợp ta kì vọng:
+d(A,P) < d(A,N)    (1)
+    Để làm cho khoảng cách giữa vế trái và vế phải lớn hơn, chúng ta sẽ cộng thêm vào vế trái một hệ số α không âm rất nhỏ. Khi đó (1) trở thành:
+ 
+
+    
+    Như vậy hàm loss function sẽ là:
+
+    Với n là số cặp bộ 3 ảnh A, P, N được training
+2.3.5. Đánh giá và triển khai thuật toán Facenet 
+• Facenet là thuật toán mới có nhiều ưu điểm hơn so với các thuật toán và phương pháp nhận diện khuôn mặt trước đây
+• Dựa trên thực tế môi trường phần cứng phát triển và lượng dữ liệu có thể thu thập là rất ít nên phương án được lựa chọn là sử dụng pretrain model có sẵn, sử dụng lại mô hình, tính toán embedding véc tơ và huấn luyện embedding véc tơ bằng một classifier để phân loại classes hay là khuôn mặt của các sinh viên
+• Pretrain model được sử dụng là bản 20180402-114759 được sử dụng mạng  Inception ResNetv1 và dataset là VGGFace2  gồm khoảng 3 triệu ảnh được thu thập từ gần 9000 người để training
+• InceptionResNet là mô hình được xây dựng dựa trên những ưu điểm của Inception và Residual block khi giúp chúng ta không phải tính toán các tham số đầu vào của một Conv layer như kích thước kernel, padding hay striders. Trên tập dữ liệu ImageNet, InceptionResNet đạt 80.3% top 1 accuray trong khi con số này của Inception V3 và ResNet50 lần lượt là: 77.9% và 74.9%
+2.3.6. Thuật toán MTCNN
+• Một công đoạn quan trọng trong bài toán Nhận diện khuôn mặt là phát hiện các khuôn mặt có trong ảnh (Face detection), chỉ có kết quả nhận diện khuôn mặt tốt khi khuôn mặt được phát hiện một cách chính xác, không bị mất chi tiết và quá trình này cũng phải có thời gian xử lý nhanh để đảm bảo thời gian cho toàn bộ quá trình.
+• Sau thời gian nghiên cứu thì phương án được sử dụng để phát hiện khuôn mặt là sử dụng thuật toán MTCNN. 
+• MTCNN hoạt động theo 3 bước, mỗi bước có một mạng neural riêng lần lượt là: P-Net, R-Net và O-net
+
+Hình  6: MTCNN Workflow
+• Với mỗi mỗi bức hình để tìm kiếm khuôn mặt. Sau lớp convolution thứ 3, mạng chia thành 2 lớp. Convolution 4-1 đưa ra xác suất của một khuôn mặt nằm trong mỗi bounding boxes, và Convolution 4-2 cung cấp tọa độ của các bounding boxes.bức ảnh đầu vào, nó sẽ tạo ra nhiều bản sao của hình ảnh đó với các kích thước khác nhau.Tại P-Net, thuật toán sử dụng 1 kernel 12x12 chạy qua 
+
+Hình  7: Mạng P-Net
+• R-Net có cấu trúc tương tự vói P-Net. Tuy nhiên sử dụng nhiều layer hơn. Tại đây, network sẽ sử dụng các bounding boxes đc cung cấp từ P-Net và tinh chỉnh lại tọa độ. Tương tự R-Net chia ra làm 2 layers ở bước cuối, cung cấp 2 đầu ra đó là tọa độ mới của các bounding boxes, cùng độ tin tưởng của nó
+
+
+Hình  8: Mạng R-net
+• O-Net lấy các bounding boxes từ R-Net làm đầu vào và đánh dấu các tọa độ của các mốc trên khuôn mặt. Ở bước này, thuật toán đưa ra 3 kết quả đầu ra khác nhau bao gồm: xác suất của khuôn mặt nằm trong bounding box, tọa độ của bounding box và tọa độ của các mốc trên khuôn mặt (vị trí mắt, mũi, miệng)
+
+
+Hình  9: Mạng O-net
+    
+    
+    
+    Phía dưới là số kết quả thử nghiệm triển khai MTCNN với bộ xử lý i7-3612QM CPU chạy thuần CPU với Tensorfow 1.14 
+Kích thướcSố điểm ảnhThời gian xử lý460x259119,1400.118 giây 561x561314,7210.227 giây667x1000667,0000.456 giây1920x12002,304,0001.093 giâyBảng 1: Thời gian xử lý của MTCNN với ảnh có 1 khuôn mặt chính diện
+
+Kích thướcSố điểm ảnhThời gian xử lý474x224106,1760.185 giây736x348256,1280.290 giây2100x9942,087,4001.286 giâyBảng 2: Thời gian xử lý của MTCNN với ảnh có 10 khuôn mặt chính diện
+    
+    
+    
+    
+    
+    
+CHƯƠNG 3: TRÌNH BÀY VỀ SẢN PHẨM
+3. 
+3.1. Phát biểu về sản phẩm
+    Phát triển sản phẩm cũng là quá trình xử lý bài toán, bài toán được phát biểu như sau:
+3.1.1. Mô tả hệ thống hiện tại và lí do cần thay đổi
+• Trong thực tế điểm danh là một công việc thường xuyên và liên tục có yếu tố vô cùng quan trọng trong việc đánh giá ý thức chuyên cần của học sinh, sinh viên từ đó cũng có thể có cái nhìn toàn cảnh về chất lượng học tập của sinh viên
+• Hiện tại quá trình điểm danh vẫn đang được vận hành thủ công, giảng viên sử dụng những bảng điểm danh trên giấy đánh dấu các sinh viên đi, nghỉ, bỏ tiết theo các ký tự quy định
+• Có thể thấy phương pháp điểm danh hiện nay có nhược điểm rất lớn đó là khả năng mất toàn bộ thông tin điểm danh khi tờ bảng điểm danh bị thất lạc hoặc hỏng hóc, bị sửa chữa kín
+• Phương và pháp điểm danh sử dụng vân tay có độ chính xác cao và tiện lợi nhưng đem lại vấn đề về sức khỏe và khả năng lây lan bệnh dịch qua việc tiếp xúc với máy điểm danh
+• Xu thế hiện tại quá trình số hóa đang được đẩy mạnh, lợi ích của quá trình này là không thể bàn cãi, để xây dựng một trường học số thì một công việc quan trọng như điểm danh cũng cần được thay đổi
+3.1.2. Các mục tiêu chính của hệ thống
+• “Hệ thống điểm danh ứng dụng nhận diện khuôn mặt” cần có các chức năng sau:
+o Cho phép thực hiện đăng nhập bằng tài khoản hoặc khuôn mặt
+o Cho phép sinh viên điểm danh bằng khuôn mặt
+o Cho phép giảng viên xem và cập nhật bảng điểm danh
+o Cho phép export file excel bảng điểm danh và gửi về mail cho giảng viên
+o Cho phép xem các thống kê về số lượt đi, nghỉ của sinh viên
+o Cho phép giảng viên xem các thông tin trên trang web và page facebook
+• Độ chính xác của hệ thống nhận diện khuôn mặt phải có độ chính xác 
+• Giao diện của client phải thân thiện, đem tới trải nghiệm tốt cho người dùng
+3.2. Mô tả quá trình trích xuất và lưu trữ đặc trưng của các đối tượng
+3.2.1 Mô tả quá trình thu thập và xử lý dữ liệu
+3.2.1.1   Thu thập dữ liệu khuôn mặt
+• Dữ liệu cho đề tài là khuôn mặt của sinh viên với 9 góc độ như sau:
+
+Góc mặt  1 Chính diện             Góc mặt  2 Hơi cúi                Góc mặt  3 Hơi ngẩng      Góc mặt  4 Nghiêng trái
+
+Góc mặt  5 Nghiêng phải     Góc mặt  6 Hơi cúi phải           Góc mặt  7 Hơi cúi trái      Góc mặt  8 Hơi ngẩng phải
+
+Góc mặt  9 Hơi ngẩng trái
+
+• Dữ liệu ảnh thu thập phải có chất lượng tốt, rõ nét được chụp tại năng có sáng sáng tốt và khuôn mặt không bị che khuất hay có vật cản như khẩu trang, kính dâm, v.v.v
+3.2.1.2 . Phát hiện và cắt ra vùng có khuôn mặt
+• Các bức ảnh đã được thu thập sẽ được đưa qua MTCNN để phát hiện khuôn mặt trong ảnh sau đó vùng ảnh có khuôn mặt sẽ được cắt và lưu lại phục vụ cho quá trình trích xuất đặc trưng 
+
+Hình 10: Phát hiện và cắt vùng có khuôn mặt
+• Các ảnh khuôn mặt của đối tượng sẽ được lưu trữ vào thư mục có tên là mã sinh viên của đối tượng để phục vụ cho quá trình agument để sinh thêm dữ liệu
+3.2.1.3  Agument sinh thêm dữ liệu
+• Nhằm khắc phục vấn đề mỗi đối tượng có quá ít dữ liệu, các phương pháp agment tạo ra các ảnh mới từ ảnh gốc với các thuộc tính được thay đổi 
+
+Hình 11: Thay đổi độ sáng
+
+Hình 12: Xoay với góc khoảng 15 độ
+    
+
+Hình 13: Làm méo hình
+    
+
+Hình 14: Thu phóng hình
+• Sau quá trình agmument dữ liệu mỗi đối tượng sẽ có 120 ảnh phục vụ training tách các đặc trưng và 30 ảnh phục vụ testing tỷ lệ dữ liệu training và testing là 8:2
+• Các ảnh sẽ được lưu vào folder có tên là mã sinh viên của đối tượng
+3.2.2 Huấn luyện mô hình phân loại (classify model)
+• Sau quá trình chuẩn bị dữ liệu để trainning, ta thực hiện quá trình trích xuất các đặc trưng khuôn mặt của mỗi đối tượng sau để phục cho quá trình huấn luyện mô hình phân loại sử dụng SVM 
+• Mô hình phân loại dử dụng SVM sẽ được lưu lại để phục vụ quá trình phân loại khi có đầu vào 1 vector embbding các đặc trưng của khuôn mặt cần phân loại và đầu ra là tỷ lệ giống nhau của input với các đối tượng trong data
+3.3. Mô tả quá trình nhận diện đối tượng
+• Đầu vào của quá trình nhận diện là ảnh và đầu ra là tỷ lệ và nhãn của đối tượng có tỷ lệ giống nhất với khuôn mặt trong ảnh
+
+• Sau quá trình dự đoán ta lưu tỷ lệ giống nhau vào một list và tìm ra tỷ lệ cao nhất rồi ánh xạ tới đối tượng có tỷ lệ đó 
+
+
+
+3.3 Mô tả quá trình hoạt động của hệ thống
+
+Hình 15: Mô tả hoạt động của hệ thống
+    
+• Hệ thống điểm danh ứng dụng nhận diện khuôn mặt có sẽ sử dụng hình ảnh từ camera ip hay camera RTSP để phục vụ cho quá trình nhận diện khuôn mặt. Ảnh nhận từ camera có thông số 1280x720 và 30 khung hình trên giây
+• Để đảm bảo quá trình thu nhận video stream từ camera ip thì tốc độ mạng là vấn đề vô cùng quan trọng, dựa trên chất lượng ảnh đầu vào là 1280 x 720 thì dung lượng khoảng xấp xỉ 1 Mb( dựa trên thông số thực tế) vậy nên để đạt được hiệu quả thì tốc độ mang yêu cầu phải lớn hơn 1Mb/s 
+• Sau quá trình nhận diện khuôn mặt thông tin của sinh viên được nhận diện sẽ được lưu lại vào database bảng điểm danh và đồng thời được gửi tới client 
+
+
+3.4 Biểu đồ UseCase
+3.4.1 Biểu đồ UseCase mức tổng quát
+
+
+Hình 16: Usecase tổng quát
+    
+3.4.2 Đặc tả UseCase
+• UseCase “Data processing”
+     UseCase     Data processing     Mô tả     - Xử lý phân tích và format tập dữ liệu thô ban đầu     Người dùng     - Hệ thống     Điều kiện đầu     - Có tập dữ liệu thô    Sự kiện chính    - Tiền xử lý dữ liệu    Điều kiện cuối    - Tập dữ liệu sau khi formatBảng  3: Bảng đặc tả UseCase Data processing
+
+    
+• UseCase “Training model”
+     UseCase     Training model     Mô tả     - Xây dựng model từ training datasets     Người dùng     - Hệ thống     Điều kiện đầu     - training datasets     Sự kiện chính     - Training cho model từ training datasets      Điều kiện cuối     - Tạo ra một model đã được trainingBảng 4: Bảng đặc tả UseCase Training model
+
+• UseCase “Predict”
+     UseCase     Predict     Mô tả     - Đưa vào hình ảnh phân tích và dự đoán kết quả     Người dùng     - Hệ thống     Điều kiện đầu     - predict datasets     Sự kiện chính     - Predict data truyền vào từ model     Điều kiện cuối     - Kết quả predictBảng 5: Bảng đặc tả Predict
+• UseCase “DangNhap”
+     UseCase     DangNhap     Mô tả     Người dùng đăng nhập để thao tác với ứng dụng     Người dùng     - GiangVien     Điều kiện đầu     - Tài khoản và mật khẩu của giảng viên được nhập vào hoặc khuôn mặt của giảng viên     Sự kiện chính     - Xác thực đăng nhập     Điều kiện cuối     - Kết quả đăng nhập nếu thông tin tài khoản hoặc khuôn mặt tồn tại thì tiếp thục
+     - Nếu tài khoản và khuôn mặt không có thông tin thì bắt đăng nhập lạiBảng 6: Bảng đặc tả UseCase DangNhap
+
+• UseCase “XemDanhSachDiemDanh”
+     UseCase     XemDanhSachDiemDanh     Mô tả     - Xem danh sách các bảng điểm danh đã tạo     Người dùng     - GiangVien     Điều kiện đầu     - Danh sách các bảng điểm danh trong database
+     - Mã giảng viên, mã lớp và mã môn     Sự kiện chính     - Hiển thị danh sách các bảng điểm danh được tạo bảng giảng viên có mã giảng viên, mã lớp và mã môn giống đầu vào      Điều kiện cuối     Bảng 7: Bảng đặc tả UseCase XemDanhSachDiemDanh
+    
+• UseCase “XemChiTietDiemDanh”
+     UseCase     XemChiTietBangDiemDanh     Mô tả     -Xem chi tiết bảng điểm danh     Người dùng     - GiangVien     Điều kiện đầu     - Bảng điểm danh trong database     Sự kiện chính     - Hiển thị bảng điểm danh gồm danh sách sinh viên cùng trạng thái điểm danh     Điều kiện cuối     Bảng 8: Bảng đặc tả UseCase XemChiTietBangDiemDanh
+    
+• UseCase “CapNhatBangDiemDanh”
+     UseCase     CapNhatBangDiemDanh     Mô tả     - Cập nhật bảng điểm danh     Người dùng     - GiangVien     Điều kiện đầu     - Bảng điểm danh trong database     Sự kiện chính     - Sửa trạng thái điểm danh của sinh viên trong bảng điểm danhvà lưu lại trong database     Điều kiện cuối     - Bảng điểm danh đã được cập nhậtBảng 9: Bảng đặc tả UseCase CapNhatBangDiemDanh
+    
+• UseCase “DiemDanh”
+     UseCase     DiemDanh     Mô tả     - Sinh viên điểm danh bằng khuôn mặt     Người dùng     - SinhVien     Điều kiện đầu     - Dữ liệu khuôn mặt của sinh viên     Sự kiện chính     - Xử lý ảnh đưa vào model để đưa ra sinh viên có khuôn mặt tương ứng     Điều kiện cuối     - Xác nhận sinh viên đã điểm danhBảng 10: Bảng đặc tả UseCase DiemDanh
+    
+• UseCase “XemThongKe”
+     UseCase     XemThongKe     Mô tả     - Xem bảng thống kê số buổi đi, nghỉ của từng sinh viên trong một lớp và một môn học     Người dùng     - GiangVien     Điều kiện đầu     - Danh sách bảng điểm danh và chi tiết điểm danh     Sự kiện chính     - Hiển thị danh sách sinh viên vá số buổi đi, nghỉ, bỏ tiết của sinh viên trong các buổi học của một môn      Điều kiện cuối     Bảng 11: Bảng đặc tả UseCase XemThongKe
+
+• UseCase “XemTinTuc”
+     UseCase     XemTinTuc     Mô tả     - Xem các tin tức từ trang web chính tức và page facebook của nhà trường     Người dùng     - GiangVien     Điều kiện đầu     - Các bài đăng trên trang web và page facebook được crawl     Sự kiện chính     - Hiển thị danh sách các bài đăng trang web và page facebook được crawl     Điều kiện cuối     Bảng 12: Bảng đặc tả UseCase XemTinTuc
+        
+3.4.3 Biểu đồ lớp
+STT Tên lớp/quan hệÝ nghĩa/Ghi chú1 KhoaKhoa2 LopLớp3GiangVienGiảng viên4 SinhVienSinh viên5 MonHocMôn học6 BangDiemDanhBảng điểm danh7 ChiTietDiemDanhChi tiết điểm danh8 FB_PostCác bài post trên facebook9 NewsCác tin tức trên webBảng 13: Bảng danh sách các lớp
+
+
+
+Hình 17: Sơ đồ lớp
+    
+3.4.4 Mô tả chi tiết từng lớp đối tượng
+• Class Khoa
+STTTên thuộc tínhLoại Ràng buộc     Ý nghĩa/ghi chú1MaKhoaVarchar(8)Khóa chínhMã Khoa2TenKhoaNvarchar(300)Tên KhoaBảng 14: Bảng mô tả chi tiết lớp Khoa
+
+• Class Lop
+STTTên thuộc tínhLoạiRàng buộc     Ý nghĩa/ghi chú1MaLopVarchar(8)Khóa chínhMã Lớp2TenLopNvarchar(300)Tên Lớp3MaKhoaVarchar(8)Khóa ngoạiMã KhoaBảng 15: Bảng mô tả chi tiết lớp Lop
+• Class GiangVien
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1MaGvVarchar(8)Khóa chínhMã Giảng viêb2HoTenNvarchar(300)Họ và tên3NgaySinhDateNgày sinh4GioiTinhNVarchar(8)Giới tính5EmailVarchar(300)Email liên hệ6SdtVarchar(11)Số điệ thoại7DiaChiNvarchar(MAX)Địa chỉ8MaKhoaVarchar(8)Khóa ngoạiMã KhoaBảng 16: Bảng mô tả chi tiết lớp GiangVien
+    
+• Class SinhVien
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1MaSvVarchar(8)Khóa chínhMã Sinh viên2HoTenNvarchar(300)Họ và tên3NgaySinhDateNgày sinh4GioiTinhNVarchar(8)Giới tính5MaLopVarchar(8)Khóa ngoạiMã LớpBảng 17: Bảng mô tả chi tiết lớp SinhVien
+
+• Class MonHoc
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1MaMonVarchar(8)Khóa chínhMã Môn2TenMonNvarchar(300)Tên môn3SoTcIntegerSố tín chỉ4MaKhoaVarchar(8)Khóa ngoạiMã KhoaBảng 18: Bảng mô tả chi tiết lớp MonHoc
+
+• Class BangDiemDanh
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1MaBangVarchar(8)Khóa chínhMã bảng2MaGvNvarchar(300)Khóa ngoạiMã Giảng viên3MaLopIntegerKhóa ngoạiMã Lớp4MaMonVarchar(8)Khóa ngoạiMã Môn5NgayLapDatetimeNgày lập
+Bảng 19: Bảng mô tả chi tiết lớp BangDiemDanh
+    
+    
+• Class ChiTietDiemDanh
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1MaBangVarchar(8)Khóa ngoạiMã bảng điểm danh2MaSvNvarchar(300)Khóa ngoạiMã Sinh viên3TrangThaiNvachar(1)Trạng thái4ThoiGianDatetimeThời gian điểm danh
+Bảng 20: Bảng mô tả chi tiết lớp ChiTietDiemDanh
+
+
+• Class Fb_Post
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1idVarchar(8)Khóa chínhMã bài post2linkNvarchar(300)Link bài post3group_nameDateTên group4contentNVarchar(8)Nội dung5num_cmtIntegerSố comment6num_shareIntegerSố lượt share7num_likeIntegerSố like8num_heartIntegerSố heart9num_hahaIntegerSố haha10num_sadIntegerSố sad11num_wowIntegerSố wow12num_angryIntegerSố angryBảng 21: Bảng mô tả chi tiết lớp Fb_post
+    
+• Class News
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1SourceNVarchar(300)Nguồn của bài viết2LinkVarchar(400)Khóa chínhLink bài viết3ContentNvarchar(MAX)Nội dụng bài viết
+Bảng 22: Bảng mô tả chi tiết lớp News
+    
+    
+    
+    
+3.5 Biểu đồ tuần tự
+
+Hình 18: Biểu đồ tuần tự DangNhap
+    
+
+Hình  19: Biểu đồ tuần tự XemBangDiemDanh
+
+Hình 20: Biểu đồ tuần tự XemChiTietDiemDanh
+    
+    
+
+Hình  21: Biểu đồ tuần tự CapNhatBangDiemDanh
+    
+
+Hình  22: Biểu đồ tuần tự ThongKe
+    
+
+Hình  23: Biểu đồ tuần tự XemTinTuc
+3.6 Thiết kế đặc tả giao diện
+
+Hình 24: Splash screen
+    
+
+Hình 25: Màn hình đăng nhập
+    
+- Giảng viên sử dụng có thể đăng nhập bằng tài khoản hoặc có thể đăng nhập bằng khuôn mặt
+    
+    
+Hình 26: Màn hình đăng nhập bằng khuôn mặt
+
+Hình 27: Màn hình chính
+    
+- Màn hình chính chia ra các view rõ ràng thể hiện các chức năng của hệ thống
+
+    
+Hình 28: Màn hình lịch sử điểm danh
+
+- Màn hình cho phép người dùng xem lịch sử điểm danh của sinh viên, thông tin điểm danh được cập nhật liên tục
+    
+Hình 29: Màn hình danh sách bảng điểm danh
+- Danh sách bảng điểm danh hiển thị đầy đủ các bảng điểm danh theo thời gian lập cũng như có khung tìm kiếm cho phép giảng viên dễ dàng tím được bảng điểm danh muốn xem chi tiết. 
+- Người dùng có thể nhấn vào nút export để hệ thống tự tạo file excel bảng điểm danh và gửi về mail cho giảng viên
+    
+
+Hình 30: Màn hình chi tiết bẳng điểm danh
+- Màn hình chi tiết điểm danh cho phép giảng viên thấy chi tiết trang thái điểm danh của sinh viên như đi đủ, nghỉ có phép, không phép, nghỉ ốm và bỏ tiết 
+    
+Hình 31: Hiển thị các sinh viên theo nội dung
+- Giảng viên có thể chọn các tiêu chí để hiển thị các sinh viên có trạng thái điểm danh tương ứng
+
+Hình 32: Màn hình thống kê
+- Người dùng có thể chọn lớp và môn để hiển thị bảng thống kê chi tiết số lượt đi, nghỉ, … của sinh viên trong quá trình học môn được chọn
+
+Hình 33: Biểu đồ biểu diễn chi tiết trạng thái điểm danh của sinh viên
+- Khi giảng viên chọn vào phần biểu đồ hệ thống sẽ sinh ra một biểu đồ cột phân vùng cho phép theo dõi  và so sánh số lượt đi, nghỉ theo từng ngày . Giảng viên cũng có thể ấn nút tải xuống để lấy hình ảnh biểu đồ về máy để sử dụng
+
+
+
+Hình 34: Màn hình thu thập dữ liệu khuôn mặt
+
+- Giảng viên có thể thực hiện thu thập dữ liệu khuôn mặt của mình một cách đơn giản với các chỉ dẫn vô cùng trực quan
+
+
+Hình 35: Màn hình tin tức
+    
+- Giảng viên có thể theo dõi các tin tức từ trang web và group facebook chính thức của trường
+    CHƯƠNG 4: KẾT LUẬN
+4 
+4.2 Kết quả đạt được của đề tài
+- Hiểu rõ khái niệm và các vấn đề về Python, Machine Learning và bài toán Face Recognition.
+- Xây dựng thành công Hệ thống điểm danh ứng dụng nhận dạng khuôn mặt.
+4.3 Hạn chế của đề tài
+- Độ chính xác và hiệu suất của hệ thống chưa cao do môi trường phần cứng phát triển chưa thật sự tốt
+- Do sử dụng pretrain model nên độ chính xác của model chưa thật sự cao và đạt hiểu suất tốt
+4.4 Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, em đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+- Thu thập và xây dựng bộ dữ liệu khuôn mặt riêng để tăng độ chính xác cho mô hình
+- Thay đổi sử dụng các kiến trục mạng CNN có kích thước nhỏ hơn và phù hợp hơn.
+- Xây dựng, tích hợp và hệ thống camera thay cho sử dụng camera của các thiết bị di động khi thực hiện điểm danh
+- Cung cấp các API cho các nền tảng khác.
+    
+
+TÀI LIỆU THAM KHẢO
+1. Giáo trình Lập trình Android – khoa Công nghệ Thông tin, trường Đại học Sư phạm Kỹ thuật Hưng Yên, 2017
+2. Giáo trình Cơ sở dữ liệu – khoa Công nghệ thông Tin, trường Đại học Sư phạm Kỹ thuật Hưng Yên, 2012
+3. Python cơ bản – nhóm tác giá TS.Nguyễn Văn Hậu, TS.Nguyễn Duy Tân, ThS.Nguyễn Hoàng Điệp, Ths.Nguyễn Hải Năng, Nhà xuất bản Đại học Quốc gia Hà nội, 2019
+4. Blog Máy học cho người viêt – ML4vn http://ml4vn.blogspot.com/
+5. Artificial Intelligence: A modern Approach - Stuart Russel,Peter Norvig, 4th  Prentice Hall, 2020.
+6. Deep Learning Face Representation by Joint Identification-Verification - Yi Sun, Xiaogang, Wang, Xiaoou Tang, 	arXiv:1406.4773, 2014
+7. FaceNet: A Unified Embedding for Face Recognition and Clustering - Florian Schroff, Dmitry Kalenichenko, James Philbin, 	arXiv:1503.03832, 2015 
+    
+    Xây dựng hệ thống điểm danh ứng dụng nhận diện khuôn mặt
+    
+8
+    
+    

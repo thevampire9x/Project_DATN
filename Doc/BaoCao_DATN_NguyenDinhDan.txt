@@ -1,0 +1,635 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+      Trong thời buổi công nghệ thông tin phát triển rất nhanh chóng được áp dụng trên mọi lĩnh vực của cuộc sống như kinh tế, chính trị, xã hội, tất cả đều cần có công nghệ thông tin. Như hiện nay chúng ta đã biết lập trình và thiết kế ứng dụng có thể được coi là ngành “hot” mà hiện nay chúng ta đang rất quan tâm.
+      Sau khi nghiên cứu tình hình của thị trường em đã đưa ra quyết định “XÂY DỰNG ỨNG DỤNG CHỢ ĐỒ CŨ” nhằm đáp ứng nhu cầu của khách hàng. Hiện nay nhu cầu sử dụng thiết bị di động qua internet ngày càng nhiều và các hình thức kinh doanh, mua bán trên mạng ngày càng đa dạng phong phú, rất được nhiều người sử dụng và ưa chuộng. Cho nên khi xây dựng ứng dụng này sẽ giúp cho khách hàng mua sắm trao đổi các mặt hàng không dùng đến, mặt hàng cũ một cách thuận tiện nhất.
+      Là sinh viên ngành CNTT, em luôn mong muốn mình sẽ làm được gì đó để ứng dụng những kiến thức đã học xây dựng được những sản phẩm có ứng dụng thực tế. Với mong muốn áp dụng những kiến thức mình đã học được tạo ra sản phẩm hoàn thiện có tính thực tế, đồng thời giúp nâng cao khả năng lập trình và đúc rút được nhiều kinh nghiệm cho những công việc trong tương lai sau khi ra trường, cùng với sự đồng ý của giáo viên hướng dẫn đề tài, em quyết định lựa chọn đề tài “Xây dựng ứng dụng Chợ đồ cũ” để làm đề tài đồ án tốt nghiệp. 
+1.2 Mục tiêu của đề tài
+      Phát triển hệ thống quản lý các mặt hàng, tin đăng gồm các chức năng :
+- Chức năng đăng tin bán các loại mặt hàng.
+- Chức năng hiển thị các tin đăng.
+- Chức năng nhắn tin trao đổi giữa người mua và người bán.
+- Chức năng bình luận về tin đăng.
+- Chức năng báo cáo người dùng.
+- Chức năng hiển thị các sản phẩm mới nhất.
+- Chức năng tìm kiếm tin đăng, tìm kiếm theo tên, danh mục, theo vị trí. 
+- Xem chi tiết tin đăng.
+1.3 Giới hạn và phạm vi của đề tài
+- Nền tảng phát triển: mobile, web service
+- Giao diện sử dụng: HTML, JSX
+- Ngôn ngữ lập trình: JavaScrip, TypeScrip.
+- Công nghệ phát triển: React Native
+- Công cụ phát triển: Visual Studio, GraphQL, MongoDB, Web Server.
+1.4 Nội dung thực hiện
+      Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Nghiên cứu công nghệ để liên kết ứng dụng React Native với Web Service.
+- Xác định yêu cầu hệ thống.
+- Phân tích yêu cầu, thiết kết hệ thống về mặt chức năng và dữ liệu.
+- Lập trình cho các Module của hệ thống.
+- Kiểm thử hệ thống.
+- Triển khai thực hiện hệ thống trên nền tảng Android.
+1.5. Phương pháp tiếp cận
+    Nghiên cứu các thành phần của nền tảng công nghệ GraphQL và MongoDB để thiết kế dữ liệu Server, nghiên cứu và sử dụng các control các thư viện có sẵn trong React Native để thiết kế ứng dụng.
+    
+      Sử dụng các phương pháp để nghiên cứu và thiết kế ứng dụng: 
+- Phương pháp đọc tài liệu, giáo trình lập trình Android đã được học ở các môn chuyên đề.
+- Tìm hiểu các tài liệu về React Native, GraphQL và MongoDB trên Internet.
+- Tham khảo cách lập trình một ứng dụng điện thoại bằng React Native trên Internet.
+- Tham khảo các nguồn tài liệu khác thông qua bạn bè.
+CHƯƠNG 2: TỔNG QUAN VỀ ANDROID VÀ REACT-NATIVE
+2.1 Tổng quan về hệ điều hành Android
+2.1.1 Giới thiệu
+      Android là một hệ điều hành dựa trên nền tảng Linux được thiết kế dành cho các thiết bị di động có màn hình cảm ứng như điện thoại thông minh và máy tính bảng. Ban đầu, Android được phát triển bởi Tổng công ty Android, với sự hỗ trợ tài chính từ Google và sau này được chính Google mua lại vào năm 2005. Android ra mắt vào năm 2007 cùng với tuyên bố thành lập Liên minh thiết bị cầm tay mở: một hiệp hội gồm các công ty phần cứng, phần mềm, và viễn thông với mục tiêu đẩy mạnh các tiêu chuẩn mở cho các thiết bị di động. Chiếc điện thoại đầu tiên chạy Android được bán vào tháng 10 năm 2008.
+      Android có mã nguồn mở và Google phát hành mã nguồn theo Giấy phép Apache. Chính mã nguồn mở cùng với một giấy phép không có nhiều ràng buộc đã cho phép các nhà phát triển thiết bị, mạng di động và các lập trình viên nhiệt huyết được điều chỉnh và phân phối Android một cách tự do. Ngoài ra, Android còn có một cộng đồng lập trình viên đông đảo chuyên viết các ứng dụng để mở rộng chức năng của thiết bị, bằng một loại ngôn ngữ lập trình Java có sửa đổi. Vào tháng 10 năm 2012, có khoảng 700.000 ứng dụng trên Android, và số lượt tải ứng dụng từ Google Play, cửa hàng ứng dụng chính của Android, ước tính khoảng 25 tỷ lượt.
+      Những yếu tố này đã giúp Android trở thành nền tảng điện thoại thông minh phổ biến nhất thế giới, vượt qua Symbian vào quý 4 năm 2010, và được các công ty công nghệ lựa chọn khi họ cần một hệ điều hành không nặng nề, có khả năng tinh chỉnh, và giá rẻ chạy trên các thiết bị công nghệ cao thay vì tạo dựng từ đầu. Kết quả là mặc dù được thiết kế để chạy trên điện thoại và máy tính bảng, Android đã xuất hiện trên TV, máy chơi game và các thiết bị điện tử khác. Bản chất mở của Android cũng khích lệ một đội ngũ đông đảo lập trình viên và những người đam mê sử dụng mã nguồn mở để tạo ra những dự án do cộng đồng quản lý. Những dự án này bổ sung các tính năng cao cấp cho những người dùng thích tìm tòi hoặc đưa Android vào các thiết bị ban đầu chạy hệ điều hành khác.
+      Android chiếm 75% thị phần điện thoại thông minh trên toàn thế giới vào thời điểm quý 3 năm 2012, với tổng cộng 500 triệu thiết bị đã được kích hoạt và 1,3 triệu lượt kích hoạt mỗi ngày. Sự thành công của hệ điều hành cũng khiến nó trở thành mục tiêu trong các vụ kiện liên quan đến bằng phát minh, góp mặt trong cái gọi là "cuộc chiến điện thoại thông minh" giữa các công ty công nghệ.
+2.1.2 Lịch sử phát triển hệ điều hành android
+      Tổng công ty Android (Android, Inc.) được thành lập tại Palo Alto, California vào tháng 10 năm 2003 bởi Andy Rubin (đồng sáng lập công ty Danger), Rich Miner (đồng sáng lập Tổng công ty Viễn thông Wildfire), Nick Sears (từng là Phó giám đốc T-Mobile), và Chris White (trưởng thiết kế và giao diện tại WebTV) để phát triển, theo lời của Rubin, "các thiết bị di động thông minh hơn có thể biết được vị trí và sở thích của người dùng". Dù những người thành lập và nhân viên đều là những người có tiếng tăm, Tổng công ty Android hoạt động một cách âm thầm, chỉ tiết lộ rằng họ đang làm phần mềm dành cho điện thoại di động. Trong năm đó, Rubin hết kinh phí. Steve Perlman, một người bạn thân của Rubin, mang cho ông 10.000 USD tiền mặt nhưng từ chối tham gia vào công ty.
+      Google mua lại Tổng công ty Android vào ngày 17 tháng 8 năm 2005, biến nó thành một bộ phận trực thuộc Google. Những nhân viên của chủ chốt của Tổng công ty Android, gồm Rubin, Miner và White, vẫn tiếp tục ở lại công ty làm việc sau thương vụ này. Vào thời điểm đó không có nhiều thông tin về Tổng công ty, nhưng nhiều người đồn đoán rằng Google dự tính tham gia thị trường điện thoại di động sau bước đi này. Tại Google, nhóm do Rubin đứng đầu đã phát triển một nền tảng thiết bị di động phát triển trên nền nhân Linux. Google quảng bá nền tảng này cho các nhà sản xuất điện thoại và các nhà mạng với lời hứa sẽ cung cấp một hệ thống uyển chuyển và có khả năng nâng cấp. Google đã liên hệ với hàng loạt hãng phần cứng cũng như đối tác phần mềm, bắn tin cho các nhà mạng rằng họ sẵn sàng hợp tác với các cấp độ khác nhau.
+      Ngày càng nhiều suy đoán rằng Google sẽ tham gia thị trường điện thoại di động xuất hiện trong tháng 12 năm 2006. Tin tức của BBC và Nhật báo phố Wall chú thích rằng Google muốn đưa công nghệ tìm kiếm và các ứng dụng của họ vào điện thoại di động và họ đang nỗ lực làm việc để thực hiện điều này. Các phương tiện truyền thông truyền thống lẫn online cũng viết về tin đồn rằng Google đang phát triển một thiết bị cầm tay mang thương hiệu Google. Một vài tờ báo còn nói rằng trong khi Google vẫn đang thực hiện những bản mô tả kỹ thuật chi tiết, họ đã trình diễn sản phẩm mẫu cho các nhà sản xuất điện thoại di động và nhà mạng. Tháng 9 năm 2007, InformationWeek đăng tải một nghiên cứu của Evalueserve cho biết Google đã nộp một số đơn xin cấp bằng sáng chế trong lĩnh vực điện thoại di động.
+      Ngày 5 tháng 11 năm 2007, Liên minh thiết bị cầm tay mở (Open Handset Alliance), một hiệp hội bao gồm nhiều công ty trong đó có Texas Instruments, tập đoàn Broadcom, Google, HTC, Intel, LG, tập đoàn Marvell 
+      Technology, Motorola, Nvidia, Qualcomm, Samsung,Electronics, Sprint ,extel và T-Mobile được thành lập với mục đích phát triển các tiêu chuẩn mở cho thiết bị di động. Cùng ngày, Android cũng được ra mắt với vai trò là sản phẩm đầu tiên của Liên minh, một nền tảng thiết bị di động được xây dựng trên nhân Linux phiên bản 2.6. Chiếc điện thoại chạy Android đầu tiên được bán ra là HTC Dream, phát hành ngày 22 tháng 10 năm 2008. Biểu trưng của hệ điều hành Android mới là một con rôbốt màu xanh lá cây do hãng thiết kế Irina Blok tại California vẽ.
+      Từ năm 2008, Android đã trải qua nhiều lần cập nhật để dần dần cải tiến hệ điều hành, bổ sung các tính năng mới và sửa các lỗi trong những lần phát hành trước. Mỗi bản nâng cấp được đặt tên lần lượt theo thứ tự bảng chữ cái, theo tên của một món ăn tráng miệng; ví dụ như phiên bản 1.5 Cupcake (bánh bông lan nhỏ có kem) tiếp nối bằng phiên bản 1.6 Donut (bánh vòng). Phiên bản mới nhất hiện nay là 6.0 Marshmallow (kẹo dẻo) và 7.0 Nougat Beta. Vào năm 2010, Google ra mắt loạt thiết bị Nexus - một dòng sản phẩm bao gồm điện thoại thông minh và máy tính bảng chạy hệ điều hành Android, do các đối tác phần cứng sản xuất. HTC đã hợp tác với Google trong chiếc điện thoại thông minh Nexus đầu tiên, Nexus One. Kể từ đó nhiều thiết bị mới hơn đã gia nhập vào dòng sản phẩm này, như điện thoại Nexus 4 và máy tính bảng Nexus 10, lần lượt do LG và Samsung sản xuất. Google xem điện thoại và máy tính bảng Nexus là những thiết bị Android chủ lực của mình, với những tính năng phần cứng và phần mềm mới nhất của Android.
+2.2 Tổng quan về React-Native
+2.2.1 Giới thiệu
+
+    Hình  21. React Native
+      React Native được phát triển bởi Facebook với mục đính ban đầu là áp dụng vào mạng xã hội lớn nhất hành tinh: Facebook. Do đặc tính công nghệ của mạng xã hội, Facebook cần phải tạo ra nền tảng phát triển ứng dụng di động đa nền tảng có hiệu năng không thua kém so với ứng dụng được phát triển độc lập cho từng nền tảng. React Native hiện tại chỉ hỗ trợ phát triển ứng dụng di động hệ điều hành Android và iOS, ít hơn so với Ionic (Android, iOS, Windows Phone). React Native chính thức trở thành mã nguồn mở vào tháng 3 năm 2015. Cho đến nay, React Native được áp dụng trong nhiều ứng dụng của ta và cả nước ngoài. Một số ứng dụng nổi tiếng hiệ nay được xây dựng bằng React Native có thể kể đến như: Tiki, Facebook, Skype, Instagram, ….
+2.2.2 Cách hoạt động của React-Native
+      Bằng cách tích hợp 2 thread là Main Thread và JS Thread cho ứng dụng mobile. Với Main Thread sẽ đảm nhận vai trò cập nhật giao diện người dùng(UI). Sau đó sẽ xử lý tương tác người dùng. Trong khi đó, JS Thread sẽ thực thi và xử lý code Javascript. Hai luồng này hoạt động độc lập với nhau.
+      Để tương tác được với nhau hai Thread sẽ sử dụng một Bridge(cầu nối). Cho phép chúng giao tiếp mà không phụ thuộc lẫn nhau, chuyển đổi dữ liệu từ thread này sang thread khác. Dữ liệu từ hai Thread được vận hành khi tiếp nối dữ liệu cho nhau.
+    
+    Hình  22. Cách hoạt động của react-native
+- Main thread (Native Queue): Đây là luồng chính được sinh ra đầu tiên để khởi chạy ứng dụng. Nó được nạp vào ứng dụng và khởi chạy JS thread để thực thi các đoạn mã Javascript. Luồng native cũng sẽ lắng nghe các sự UI như ‘press’, ‘touch’,.. Các sự kiện này được chuyển tới luồng JS qua RN Bridge. Mỗi lần Javascript nạp, luồng JS gửi thông tin những thứ cần thiết để hiện lên màn hình. Những thông tin này được sử dụng bởi shadow node thread để tính toán các bố cục. The shadow thread đơn giản giống như một công cụ toán học đưa ra các quyết định cuối cùng cách tính toán vị trí của view. Các lệnh này sau đó được truyền trả lại cho main thread để hiển thị view lên giao diện.
+- Javascript thread (JS Queue): Đây là hàng đợi luồng được chạy bởi main bundled JS thread đã nói ở bên trên. Luồng này chạy tất cả các business logic,... code được viết bằng React Native.
+- React native bridge là một cầu nối C++/Java giúp giao tiếp giữa luồng native và luồng Javascript. Một giao thức custom sẽ được sử dụng cho việc gửi các messages giữa 2 luồng.
+    
+    Hình  23. Cầu nối RN Bridge
+      Trong hầu hết các trường hợp, các lập trình viên sẽ viết toàn bộ ứng dụng React Native bằng JavaScript. Sau đó để chạy một ứng dụng như vậy, một câu lệnh cần được thực hiên thông qua CLI: react-native run-android hoặc react-native run-ios. Lúc này, React Native CLI sẽ sinh ra một node packager/bundler làm nhiệm vụ đóng gói JS code vào trong một file có tên main.bundle.js. Sau đó, mỗi lần ứng dụng React Native được khởi chạy, thành phần đầu tiên được nạp vào là ngõ vào của native (Đoạn này hiểu lắm, nguyên bản: The first item to be loaded is the native entry point). Native Thread tạo ra một máy ảo JS (JSVM) để chạy JS code đã được đóng gói. JS code đó là toàn bộ business logic của ứng dụng. Luồng Native từ đó sẽ gửi các messages thông qua RN bridge để khởi chạy một ứng dụng JS. Luồng Javascript được sinh ra bắt đầu gửi các lệnh, yêu cầu tới luồng native thông qua RN Bridge. Các lệnh bao gồm các view sẽ được nạp vào, các thông tin nhận từ phần cứng,... Ví dụ, nếu luồng JS muốn một view và text được khởi tạo nó sẽ gửi yêu cầu vào trong một message và gửi nó qua Native thread để render chúng.
+    [ [2,3,[2,'Text',{...}]] [2,3,[3,'View',{...}]] ]
+      Native thread sẽ thực hiện các hoạt động và gửi lại kết quả cho JS để đảm bảo các yêu cầu đã được thực hiện chính xác.
+- View Manager là một native module giúp ánh xạ JSX Views tới Native views. Ví dụ Khi chúng ta viết <Text />, Text View Manager sẽ thực thi new TextView(getContext()) trong trường hợp là Android View Managers là một class đơn giản kế thừa ViewManager trong Android và là một subclasses của RTCViewManager trong IOS.
+2.2.3	Các khái niệm cơ bản của react-native. 
+- Components là một khái niệm cơ bản của cả React và React native. Chính việc chia nhỏ ứng dụng thành các components nhỏ tạo nên tính tái sử dụng cao và khả năng mở rộng của chúng
+- Props là viết tắt của Properties, đây là một dữ liệu immutable, cho nên khi sử dụng chúng ta không nên thay đổi giá trị của nó.
+      Các component nhận props từ component cha. Bạn không được thay đổi giá trị của props trong các component này mà chỉ được phép đọc giá trị ra thôi. Trong React thì dữ liệu sẽ đi theo một chiều, có nghĩa là từ component cha => các component con.
+- State thì hoạt động khác với Props. State là dữ liệu nội bộ của một Component, trong khi props là dữ liệu được truyền cho Component. Chính vì vậy chúng ta hoàn toàn có thể thay đổi state, và coi nó là một kiểu dữ liệu mutable. Vì đặc điểm này nên chúng ta hay sử dụng State để thay đổi dữ liệu của view, binding data lại view khi có thay đổi. Nhưng chúng ta không dùng this.state để gán lại giá trị thay đổi cho nó, mà chúng ta sẽ dùng this.setState. Function này sẽ trigger cho class rằng hãy render lại component và các component con của nó, còn this.state thì không.
+      Đây là một ví dụ về sự dụng state để thay đổi giá trị. Giống như việc bạn truyền datasource cho tableview vậy, ban đầu datasource chính là state này rỗng và sau đó được trả về dự liệu sau khi call api. Và từ đó thay đổi state sẽ làm cho component render lại dữ liệu (tương tự reloadData() thôi).
+
+      Hình  24. Ví dụ về việc sử dụng state
+      Còn đây là hình ảnh consoleLog ở trên debuger, chúng ta có thể thấy rõ ràng lúc đầu state.albums vẫn còn rỗng và sau đó khi call API, và có data trả về, nhờ vào việc setState lại view có thể render và hiển thị ra ngoài.
+
+      Hình  25. ConsoleLog ở trên debugger
+-  Style
+      Style trong react native tất cả cấu trúc, biến, giá trị hầu hết đều giống với CSS.
+2.2.4 Ưu nhược điểm của React Native
+      Ưu điểm của React Native là gì ?
+- Tối ưu thời gian.
+- Cộng đồng lớn mạnh theo thời gian
+- Hiệu năng ổn định.
+- Tiết kiệm chi phí.
+- Đội ngũ phát triển ứng dụng không quá lớn.
+- Ứng dụng tin cậy, ổn định.
+- Xây dựng ứng dụng ít native code nhất cho nhiều hệ điều hành khác nhau.
+- Trải nghiệm người dùng tốt hơn khi so sánh với ứng dụng Hybrid.
+    Nhược điểm của React Native là gì?
+- Yêu cầu Native code.
+- Hiệu năng kém hơn so với Native App.
+- Bảo mật chưa thật sự tốt do dùng JS.
+- Quản lý bộ nhớ.
+- Tùy biến chưa thật sự tốt ở một số module.
+2.3 Tổng quan về MongoDB
+2.3.1 Giới thiệu
+      MongoDB là một chương trình cơ sở dữ liệu mã nguồn mở được thiết kế theo kiểu hướng đối tượng trong đó các bảng được cấu trúc một cách linh hoạt cho phép các dữ liệu lưu trên bảng không cần phải tuân theo một dạng cấu trúc nhất định nào. Chính do cấu trúc linh hoạt này nên MongoDB có thể được dùng để lưu trữ các dữ liệu có cấu trúc phức tạp và đa dạng và không cố định (hay còn gọi là Big Data).
+2.3.2 Lợi thế của MongoDB so với các cơ sở dữ liệu dạng quan hệ (RDBMS) 
+- Ít Schema hơn: MongoDB là một cơ sở dữ liệu dựa trên Document, trong đó một Collection giữ các Document khác nhau. Số trường, nội dung và kích cỡ của Document này có thể khác với Document khác.
+- Cấu trúc của một đối tượng là rõ ràng.
+- Không có các Join phức tạp.
+- Khả năng truy vấn sâu hơn. MongoDB hỗ trợ các truy vấn động trên các Document bởi sử dụng một ngôn ngữ truy vấn dựa trên Document mà mạnh mẽ như SQL.
+- MongoDB dễ dàng để mở rộng.
+- Việc chuyển đổi/ánh xạ của các đối tượng ứng dụng đến các đối tượng cơ sở dữ liệu là không cần thiết.
+- Sử dụng bộ nhớ nội tại để lưu giữ phần công việc, giúp truy cập dữ liệu nhanh hơn
+- Một số đặc điểm của MongoDB:
+- Kho lưu định hướng Document: Dữ liệu được lưu trong các tài liệu kiểu JSON.
+- Lập chỉ mục trên bất kỳ thuộc tính nào.
+- Các truy vấn đa dạng.
+- Cập nhật nhanh hơn.
+2.3.3 Collection
+      Collection  là một nhóm các Document trong MongoDB. Nó tương đương như một bảng trong RDBMS. Do đó, một Collection tồn tại bên trong một cơ sở dữ liệu duy nhất. Các Collection không có ràng buộc Relationship như các hệ quản trị cơ sở dữ liệu khác nên việc truy xuất rất nhanh, chính vì thế mỗi collection có thể chứa nhiều thể loại khác nhau không giống như table trong hệ quản trị mysql là các field cố định. Các Document bên trong một Collection có thể có nhiều trường khác nhau. Đặc biệt, tất cả các Document trong một Collection là tương tự nhau hoặc với cùng mục đích liên quan.
+2.3.4 Document
+      Một Document trong MongoDB, có cấu trúc tương tự như kiểu dữ liệu JSON, là một tập hợp các cặp key-value. Các Document có schema động, nghĩa là Document trong cùng một Collection không cần thiết phải có cùng một tập hợp các trường hoặc cấu trúc giống nhau, và các trường chung trong Document của một Collection có thể giữ các kiểu dữ liệu khác nhau.
+2.4 GraphQL
+2.4.1 Giới thiệu
+      GraphQL là một Graph Query Language được dành cho API. Nó được phát triển bởi Facebook và hiện tại nó được duy trì bởi rất nhiều công ty lớn, và mọi cá nhân trên khắp thế giới. GraphQL từ khi ra đời đã gần như thay thế hoàn toàn REST bởi sự hiệu quả, mạnh mẽ và linh hoạt hơn rất nhiều.
+2.4.2 Những tính năng của GraphQL 
+a) Thay thế cho REST
+      Vấn đề mà REST đang gặp phải là nó việc phản hồi dữ liệu của REST trả về quá nhiều hoặc là quá ít. Trong cả 2 trường hợp thì hiệu suất của ứng dụng đều bị ảnh hưởng khá nhiều. Giải pháp mà GraphQL đưa ra là cho phép khai báo dữ liệu nơi mà một client có thể xác định chính xác dữ liệu mà mình cần từ một API.
+b) Defining Schema and Type system
+      GraphQL có 1 hệ thống riêng dành cho nó được sử dụng để xác định schema của một api. Tất cả type được liệt kê trong một API thì được viết trong schema thì sử dụng GraphQL Schema Definition Language (SDL).
+      Schema này được dùng như là một bản giao dịch giữa client và server để xác định client có thể truy cập dữ liệu như thế nào. Sau đó team frontend có thể mock data để kiểm tra các component, song song đó team back-end cũng chuẩn bị công việc cần thiết cho phía server. Dưới nầy là một ví dụ về cách mà chúng ta có thể sử dụng SDL để xác định loại của User và Message:
+    type User @model {
+      id: ID! @isUnique
+      name: String!
+      messages: [Message] @relation(name: "MessagesFromUser")
+    }
+    type Message @model {
+      id: ID! @isUnique
+      text: String!
+      sentBy: User! @relation(name: "MessagesFromUser")
+    }
+      Như các bạn đã thấy thì User có 4 trường là id, name và messages. Dấu " ! " nghĩa là trường đó bắt buộc phải nhập. @model được xác định đó là 1 model trong cơ sở dữ liêu. @isUnique nghĩa là trường đó không được trùng nhau. Giá trị ID yêu cầu là 1 chuỗi gồm 25 kí tự. Các trường ID là trường được định nghĩa của hệ thống và chỉ được sử dụng nội bộ, do đó không được tạo ra các trường mới với loại ID. Với GraphQL nó có thể tạo ra các mối liên kết giữa các type với nhau. Vì vậy User có trường messages là một mảng của Message và tương tự như Message có trường sentBy liên kết với bảng User. Từ ví dụ trên chúng ta cũng đã tạo ra một đến nhiều mối quan hệ giữa User và Message.
+c) Fetching Data (Query)
+      GraphQL sử dụng việc nạp dữ liệu khác với REST. Nó chí có duy nhất 1 single endpont và hoàn toàn phụ thuộc vào client để xác định những dữ liệu cần thiết. Vì thế client phải chỉ ra các trường cần thiết, như ví dụ dưới đây: 
+    
+    Hình  26. getAllUser trong database với GraphQL
+       Ở ví dụ này, phía bên trái là có gọi allUser là một query mà được sử dụng để muốn biết thông tin của một User. Như bạn có thể thấy trong query này, mình đã định nghĩa trường name, vì vậy ở kêt quả trả về phía bên tay phải chỉ duy nhất 1 trường name mà thôi Và chúng ta có thêm một ví dụ nữa như sau: 
+    
+    Hình  27. Thêm các trường muốn lấy ngoài trường tên
+      Trong ví dụ này, mình đã đưa ra thêm một số trường cần thiết. Chúng ta đã biết messages là một thể hiện của model Message.
+d) Mutations
+      Bây giờ chúng ta đã biết cách fetch dữ liệu với GraphQL. Bây giờ mình sẽ giới thiệu làm sao để gửi một data lên. Trong GraphQL viêc gửi các queries được gọi là mutations. Các mutation này có 3 loại là CREATE, UPDATE và DELETE. Mutation cũng có cú pháp giống như Fetching Data(Query). Nhưng mutation luôn bắt đầu với một từ khóa. Như ví dụ dưới đây: 
+    
+    Hình  28. Thêm mới một người dùng có tên “Bob”
+     Cũng giống như các ví dụ trước đó, mutation cũng có các trường, trong trường hợp này mình gọi nó là createUser, trường này là một tham số để chỉ định một new user.
+e) Subscription and Realtime Updates
+      Một yêu cầu quan trọng khác đối với nhiều ứng dụng đó chính là realtime, để có thể kết nối đến máy chủ để có được thông tin về các event ngay lập tức. Trong trường hợp này, GraphQL cung cấp các khái niệm gọi là subscriptions. Khi 1 client subscriptions một event, nó cũng bắt đầu và giữ các kết nối đến server. Bất cứ khi nào sự kiện đó xảy ra, server sẽ đẩy dữ liệu tương ứng đến client. Không giống như Query và Mutation, nó đi theo kiểu như “request-response-cycle”, nó sẽ subscriptions đại diện của luồng dữ liệu được gửi đến client. Subscriptions được viết bằng cách sử dụng cú pháp như Query và Mutation. Như ví dụ dưới đây:
+      
+    subscription {
+      newUser {
+        name
+      }
+    }
+    Sau khi client gửi một subscription đến server, 1 kết nối sẽ được mở giữa chúng. Sau đó bất cứ khi nào có 1 mutaition được tạo ra bởi một new User, server sẽ gửi thông tin về người dùng đó đến client.
+CHƯƠNG 3: XÂY DỰNG ỨNG DỤNG CHỢ ĐỒ CŨ
+3.1 Phát biểu bài toán
+      Hoạt động của ứng dụng Chợ đồ cũ :
+      Khi người dùng truy cập vào ứng dụng thì sẽ hiện lên giao diện trang chủ gồm danh sách các danh mục và danh sách các tin đăng sản phẩm mới nhất.
+      Khi người dùng muốn đăng một tin bán sản phẩm hoặc chat với người bán để mua sản phẩm khi đó người dùng phải đăng nhập vào ứng dụng.
+      Khi khách hàng đã đăng nhập vào ứng dụng thành công có thể xem và sử dụng được các danh mục sau :
+- Trang chủ : tìm kiếm sản phẩm,các danh mục sản phẩm, sản phẩm mới nhất.
+- Đăng: Đăng tin bán sản phẩm của mình.
+- Chat : Nơi chat, trao đổi thông tin giữa người mua và người bán.
+- Tài khoản : Đăng nhập, đăng kí, quản lý thông tin tài khoản, xem các sản phẩm đã thích,….
+     Các danh mục sản phẩm bao gồm :
+- Đồ điện tử
+- Thời trang & phụ kiện
+- Mỹ phẩm
+- Nhà cửa & nội thất
+- Mẹ & bé
+- Chia sẻ & Tặng Quà
+- Sách
+- Khác
+      Thông tin về tin đăng sản phẩm bao gồm : Tiêu đề, Danh mục, Giá bán, Tình trạng, Mô tả chi tiết, Nơi đăng bán, Bình luận.
+      Thông tin tài khoản bao gồm : mã khách hàng, email, họ & tên, ngày sinh, số điện thoại, địa chỉ.
+      Khi người dùng chọn một tin đăng bán sản phẩm sẽ chuyển tới trang thông tin chi tiết, tại đây người dùng có thể xem các thông tin về tin đăng bán sản phẩm, bình luận về sản phẩm,  các sản phẩm liên quan, người dùng có thể nhắn tin hoặc gọi điện trực tiếp với người bán để trao đổi và mua sản phẩm.
+      Khi người dùng nhấn chọn chat với người bán sẽ chuyển sang màn hình chat, tại đây người mua và người bán có thể trao đổi và thống nhất lại với nhau về giá cũng như hình thức giao hàng,
+      Khi người dùng nhấn chọn gọi điện cho người bán sẽ chuyển sang màn hình gọi điện trực tiếp với người bán để tiến hành mua sản phẩm.
+      Khi người mua chọn chức năng bình luận về tin đăng người dùng có thể bình luận về tin đăng đó.
+3.2 Yêu cầu của hệ thống
+3.2.1 Giao diện đăng ký
+- Cho phép người dùng ẩn danh đăng ký tài khoản mới để trở thành thành viên của ứng dụng.
+- Thông tin đăng ký bao gồm : họ tên, địa chỉ, tên đăng nhập, mật khẩu, số điện thoại.
+- Sau khi người dùng điền đủ thông tin hợp lệ và xác nhận đăng ký tài khoản, ứng dụng phải hiển thị thông báo, nếu đăng ký thành công thì chuyển sản giao diện đăng nhập và nếu tài khoản đã tồn tại thì không cho người dùng đăng ký.
+3.2.2 Giao diện đăng nhập
+- Cho phép người dùng đăng nhập tài khoản, yêu cầu người dùng nhập tên tài khoản và mật khẩu, nếu người dùng không nhập thông tin sẽ thông báo lỗi.
+- Ứng dụng cho phép đăng nhập bằng Google, Facebook, Số điện thoại và tài khoản/mật khẩu.
+- Với hình thức đăng nhập bằng Google, Facebook người dùng chỉ cần chọn và cho phép đăng nhập là có thể đăng nhập vào ứng dụng. 
+- Với đăng nhập bằng số điện thoại khi nhập đúng số điện thoại, hệ thống sẽ gửi cho người dùng 1 tin nhắn mã otp để xác thực, người dùng nhập mã otp đó để đăng nhập ứng dụng.
+3.2.3 Giao diện trang chủ
+      Hiển thị ô tìm kiếm sản phẩm, các danh mục sản phẩm và danh sách các sản phẩm mới nhất có trong hệ thống.
+3.2.4 Giao diện Chi tiết sản phẩm
+- Hiển thị thông tin chi tiết sản phẩm.
+- Hiển thị thông tin người đăng bán sản phấm.
+- Hiển thị các sản phẩm liên quan.
+- Hiển thị các hình thức liên hệ với người bán.
+- Hiển thị bình luận về sản phẩm
+3.2.5 Giao diện đăng bán sản phẩm
+- Cho phép người dùng nhập các thông tin để đăng bán sản phẩm như: ảnh, tiêu đề, giá bán, tình trạng, mô tả,..
+3.2.6 Giao diện chat
+- Hiển thị cuộc trò chuyện giữa người mua và người bán
+3.2.7 Giao diện tìm kiếm
+- Hiển thị giao diện tìm kiếm, tìm kiếm theo tên sản phẩm.
+- Tìm kiếm theo bản đồ : chuyển sang màn hình bản đồ, hiển thị các sản phẩm ở gần vị trí của người dùng
+- Kết quả sẽ được hiển thị lên màn hình.
+3.2.8 Giao diện báo cáo người dùng
+- Cho phép người mua nhập thông tin báo cáo người bán nếu thấy sản phẩm của người bán đăng lên không đảm bảo chất lượng, uy tín. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.3 Biểu đồ Use-case
+3.3.1 Biểu đồ Use-case về phía người dùng	
+Biểu đồ Use-case mức tổng quát
+
+    Hình  31. Biểu đồ usecase Tổng quát
+
+Biểu đồ Use-case phân rã Đăng ký tài khoản
+
+    Hình  32. Biểu đồ Use-case phân giã Đăng ký tài khoản
+a) Tóm tắt
+- Người sử dụng :  người dùng mới..
+- Chức năng :
+o Đăng ký tài khoản.
+o Nhập thông tin.
+o Thông báo.
+- Ý nghĩa : đăng ký tài khoản cho người chưa có tài khoản đăng nhập vào ứng dụng
+b) Dòng sự kiện
+• Dòng sự kiện chính
+- Nhấn đăng ký tài khoản
+• Các dòng sự kiện khác
+Không có.
+• Trạng thái hệ thống khi bắt đầu
+- Hiển thị giao diện đăng ký
+- Cho phép người dùng nhập thông tin.
+• Trạng thái thực hiện khi kết thúc 
+- Hiển thị thông báo nếu các trường thuộc tính trống.
+- Hiển thông báo đăng ký thành công hoặc đăng ký không thành công.
+Biểu đồ Use-case phân rã Tìm kiếm
+
+    Hình  33. Biểu đồ Use-case phân giã Tìm kiếm
+a) Tóm tắt
+- Người sử dụng : người dùng
+- Chức năng :
+o Tìm kiếm theo tiêu đề tin đăng.
+o Tìm kiếm theo vị trí.
+- Ý nghĩa : người dùng tìm kiếm theo tên hoặc bằng scan ảnh.
+    
+b) Dòng sự kiện chính
+• Dòng sự kiện chính
+- Sự kiện nhấn vào tìm kiếm
+- Sự kiện nhấn vào bản đồ.
+• Các dòng sự kiện khác
+Không có.
+• Trạng thái hệ thống sau khi bắt đầu
+- Hiển thị tìm kiếm, cho người dùng nhập.
+• Trạng thái hệ thống sau khi kết thúc
+- Hiển thị sản phẩm tìm kiếm được.
+Biểu đồ Use-case phân rã Quản lý tin đăng
+
+    Hình  34. Biểu đồ Use-case phân giã Quản lý tin đăng
+
+a) Tóm tắt
+- Người sử dụng : người dùng
+- Chức năng :
+o Quản lý tin đăng.
+o Thêm, sửa, xóa.
+o Cập nhật tin đăng.
+- Ý nghĩa : dùng để quản lý các tin đăng, và có thể cập nhật tin đăng.
+b) Dòng sự kiện chính
+• Dòng sự kiện chính
+- Nhập thông tin tin đăng sản phẩm
+• Các dòng sự kiện khác
+- Sự kiện thêm, sửa, xóa
+Biểu đồ Use-case phân rã Quản lý thông tin người dùng
+
+    Hình  35. Biểu đồ Use-case phân giã Quản lý thông tin người dùng
+    
+a) Tóm tắt
+- Người sử dụng : người dùng
+- Chức năng :
+o Hiển thị thông tin người dùng.
+o Quản lý các tin đăng yêu thích.
+o Quản lý các tin đã đăng
+o Hiển thị các tin đã xem.
+- Ý nghĩa : Quản lý tất cả thông tin của người dùng.
+b) Dòng sự kiện
+• Dòng sự kiện chính
+- Sự kiện nhấn vào thông tin tài khoản.
+• Các dòng sự kiện khác
+- Sự kiện nhấn vào tin đăng yêu thích.
+- Sự kiện nhấn vào tin đã đăng.
+- Sự kiện nhấn vào tin đã xem.
+• Trạng thái hệ thống sau khi bắt đầu Use-case
+- Hiển thị giao diện thông tin tài khoản
+- Hiển thị các danh mục tài khoản : tin đã xem, tin đã đăng, tin yêu thích.
+• Trạng thái hệ thống sau khi kết thúc Use-case
+- Hiển thị đầy đủ tất cả thông tin.
+    
+    
+    
+    
+    
+
+
+
+
+
+
+Biểu đồ Use-case phân giã Đăng nhập
+
+    Hình  36. Biểu đồ Use-case phân giã Đăng nhập
+a) Tóm tắt
+- Người sử dụng : người dùng
+- Chức năng :
+o Đăng nhập.
+o Kiểm tra thông tin
+o Nhập dữ liệu
+o Thông báo.
+- Ý nghĩa :
+b) Các dòng sự kiện
+• Dòng sự kiện chính
+- Sự kiện nhấn đăng nhập
+• Các dòng sự kiện
+Không có.
+• Trạng thái hệ thống khi bắt đầu Use-case
+- Thông báo lỗi cho người dùng.
+• Trạng thái hệ thống khi kết thúc Use-case
+- Hiển thị thông báo lỗi.
+- Hiển thị thông tin đăng nhập thành công và chuyển màn hình.
+3.3.2 Biểu đồ Use-case về phía người quản trị
+Biểu đồ Use-case mức tổng quát
+ 
+    Hình  37. Biểu đồ Use-case tổng quát người quả trị
+Biểu đồ Use-case phân giã Quản lý tin đăng
+
+    Hình  38. Biểu đồ Use-case phân giã Quản lý tin đăng
+a) Tóm tắt
+- Người dùng : người quản trị
+- Chức năng :
+o Hiển thị các tin đăng của người dùng.
+o Duyệt tin đăng của người dùng.
+- Ý nghĩa : quản lý các tin đăng của người dùng.
+b) Các dòng sự kiện
+• Dòng sự kiện chính
+- Sự kiện duyệt tin đăng của người dùng.
+• Các dòng sự kiện khác
+Không có.
+• Trạng thái hệ thống khi thực hiện Use-case
+- Hiển thị thông tin.
+- Duyệt tin đăng.
+• Trạng thái hệ thống khi kết thúc Use-case
+Biểu đồ Use-case phân giã Quản lý người dùng
+ 
+    Hình  39. Biểu đồ Use-case phân giã Quản lý người dùng
+    
+a) Tóm tắt
+- Người sử dụng : người quản trị
+- Chức năng :
+o Hiển thị thông tin người mua.
+o Thiết lập trạng thái người dùng
+- Ý nghĩa : quản lý người dùng.
+b) Các dòng sự kiện
+• Dòng sự kiện chính
+- Sự kiện nhấn vào người dùng, thiết lập trạng thái của người dùng.
+• Các dòng sự kiện khác
+• Trạng thái hệ thống khi thực hiện Use-case
+- Hiển thị thông tin người mua..
+• Trạng thái hệ thống khi kết thúc Use-case
+3.4 Biểu đồ lớp
+3.4.1 Biểu đồ lớp ( mức phân tích)
+
+    Hình  310. Biểu đồ lớp
+    
+    
+    
+    
+    
+    
+3.4.2 Mô tả chi tiết
+Mô tả chi tiết lớp “Product”
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa1Product_idstringKhóa chínhId sản phẩm2Category_idStringKhóa phụId loại sản phẩm3User_idStringKhóa phụId người dùng4AdressStringKhôngĐịa chỉ đăng tin5TitleStringKhôngTiêu đề tin đăng6ImagesArrayKhôngCác hình ảnh của tin đăng7DescriptionStringKhôngMô tả về sản phẩm8PriceIntKhôngGiá sản phẩm9ViewlikeIntKhôngLượt yêu thích của tin đăng10ViewtotalIntKhôngLượt xem của tin đăng11StatusStringKhôngTình trạng của sản phẩm12isActiveBooleanKhôngTrạng thái của tin đăng13createAtStringKhôngThời gian đăng tin14LatitudeDoubleKhôngVĩ độ vị trí của tin đăng15LongtitudeDoubleKhôngKinh độ vị trí của tin đăng    Bảng 31. Mô tả chi tiết lớp Product
+Mô tả chi tiết lớp “Category”
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa1category_idintKhóa chínhKhoá chính, mã loại2nameStringKhôngTên loạiBảng 32. Mô tả chi tiết lớp Category
+Mô tả chi tiết lớp “Room”
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa1Room_idstringKhóa chínhId hóa đơn2UsersArrayKhôngDanh sách người dùng trong phòng3MessagesArrayKhôngDanh sách tin nhắn4CreateAtStringKhôngNgày tạo phòng chat5UpdateAtStringKhôngNgày cập nhật phòng chatBảng 33. Mô tả chi tiết lớp Room
+Mô tả chi tiết lớp “Message”
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa1Messsage_idStringKhóa chínhId tin nhắn2Room_idStringKhóa phụId phòng3User_idStringKhóa phụId người dùng4createAtStringKhôngNgày gửi5TextStringKhôngTin nhắn văn bản6ImageStringKhôngTin nhắn ảnhBảng 34. Mô tả chi tiết lớp Message
+    
+Mô tả chi tiết lớp “User”
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa1user_idStringKhóa chínhId người dùng2UsernameStringKhôngTên tài khoản3PasswordStringKhôngMật khẩu4FullnameStringKhôngTên người dùng5PhoneStringKhôngSố điện thoại6FacebookStringKhôngTài khoản facebook của người dùng7GoogleStringKhôngTài khoản google của người dùng8AvatarStringKhôngAvatar9GenderStringKhôngGiới tính10BirthdayStringKhôngNgày sinh11isActiveBooleanKhôngTrạng thái kích hoạt12isOnlineBooleanKhôngTrạng thái hoạt động13RoleStringKhôngQuyền tài khoảnBảng 35. Mô tả chi tiết lớp User
+    
+    
+    
+
+
+
+Mô tả chi tiết lớp  “Comment”
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa1Comment_idStringKhóa chínhid bình luận2User_idStringKhôngid người dùng3Product_idStringid sản phẩm4ContentStringNội dung bình luận5createAtStringNgày bình luận    Bảng 36. Mô tả chi tiết lớp Comment
+3.5 Biểu đồ tuần tự
+3.5.1 Biểu đồ tuần tự “Đăng ký”
+
+    Hình  311. Biểu đồ tuần tự đăng ký
+Đặc tả hành vi đăng kí:
+1. Người dùng chọn chức năng đăng kí thông tin và nhập thông tin đăng kí.
+2. Hệ thống kiểm tra thông tin đăng kí.
+3. Nếu lỗi hiển thị thông báo lỗi.
+4. Nếu đúng lưu dữ liệu người dùng, thông báo đăng kí thành công và gọi màn hình đăng nhập.
+3.5.2  Biểu đồ tuần tự “Tìm kiếm”
+
+    Hình  312. Biểu đồ tuần tự tìm kiếm
+Đặc tả hành vi tìm kiếm:
+1. Người dùng chọn chức năng tìm kiếm và nhập thông tin tìm kiếm.
+2. Hệ thống tìm kiếm tin đăng.
+3. Khi tìm kiếm thấy thông tin đăng hiển thị tin đăng cần tìm. 
+
+
+3.5.3 Biểu đồ tuần tự “Đăng tin”
+
+    Hình  313. Biểu đồ tuần tự Đăng tin
+Đặc tả hành vi đăng tin:
+1. Người dùng chọn chức năng đăng tin rao bán. 
+2. Người dùng nhập thông tin tin đăng.
+3. Hệ thống kiểm tra tin đăng.
+4. Nếu tin đăng không hợp lệ  thông báo duyệt tin thất bại.
+5. Nếu tin đăng hợp lệ lưu tin đăng vào hệ thống, thông báo tin đăng đã được duyệt.
+    
+
+3.6 Cơ sở dữ liệu
+3.6.1 Mô hình cơ sở dữ liệu
+
+    Hình  314. Mô hình cơ sở dữ liệu
+3.6.2 Danh sách các bảng
+STTTên bảngÝ nghĩa/Ghi chú1ProductQuản lý sản phẩm2RoomPhòng chat3MessageTin nhắn4CategoryLoại sản phẩm5UserQuản lý người dùng6CommentBình luận    Bảng 37. Bảng danh sách các đối tượng
+3.6.3 
+Mô tả chi tiết từng bảng
+• Chi tiết bảng “Product” 
+Danh sách các thuộc tính.
+
+STTTên trườngKiểu dữ liệuĐộ dàiGhi chú1Product_idstring50Mã sản phẩm2Category_idString50Mã loại sản phẩm
+
+
+3User_idString50Mã người dùng
+4Adress
+String200Địa chỉ đăng tin5TitleString100Tiêu đề tin đăng6ImagesArrayCác hình ảnh của tin đăng7DescriptionString500Mô tả về sản phẩm8PriceIntGiá sản phẩm9ViewlikeIntLượt yêu thích của tin đăng10ViewtotalIntLượt xem của tin đăng11StatusString50Tình trạng của sản phẩm12isActiveBooleanTrạng thái của tin đăng13createAtStringThời gian đăng tin14LatitudeDoubleVĩ độ vị trí của tin đăng15LongtitudeDoubleKinh độ vị trí của tin đăngBảng 38. Chi tiết bảng Product
+• Chi tiết bảng “Room”
+Danh sách các thuộc tính
+
+STTTên trườngKiểu dữ liệuĐộ dàiGhi chú1Room_idstring 50Khóa chính, mã phòng chat2UsersArrayDanh sách người dùng trong phòng chat3MessagesArrayDanh sách tin nhắn4CreateAtString225Ngày tạo phòng chat5UpdateAtString200Ngày cập nhật phòng chat    Bảng 39. Chi tiết bảng Room
+• Chi tiết bảng “Message”
+Danh sách các thuộc tính
+
+STTTên trườngKiểu dữ liệuĐộ dàiGhi chú1Messsage_idString50Khoá chính, mã tin nhắn2Room_idString50Khóa ngoại, mã phòng3User_idString50Mã người dùng4createAtString50Ngày gửi5TextString500Tin nhắn văn bản6ImageString255Tin nhắn ảnhBảng 310. Chi tiết bảng Message
+    
+    
+• Chi tiết bảng “User”
+Danh sách các thuộc tính
+
+STTTên trườngKiểu dữ liệuĐộ dàiGhi chú1User_idString50Khóa chính, Mã người dùng2UsernameString50Tên tài khoản3PasswordString50Mật khẩu4FullnameString100Tên người dùng5PhoneString12Số điện thoại6FacebookString50Tài khoản facebook của người dùng7GoogleString50Tài khoản google của người dùng8AvatarString10Avatar9GenderString5Giới tính10BirthdayString20Ngày sinh11isActiveBooleanTrạng thái kích hoạt12isOnlineBooleanTrạng thái hoạt động13RoleString5Quyền tài khoản    Bảng 311. Chi tiết bảng User
+    
+    
+    
+• Chi tiết bảng “Category”
+Danh sách các thuộc tính
+
+STTTên trườngKiểu dữ liệuĐộ dàiGhi chú1category_idString20Mã loại2nameString255Tên loạiBảng 312. Chi tiết bảng Category
+    
+• Chi tiết bảng “Comment”
+    Danh sách các thuộc tính
+    
+STTTên trườngKiểu dữ liệuĐộ dàiGhi chú1Comment_idString50Khóa chính, id bình luận2User_idString50Khóa ngoại, id người dùng3Product_idString50Khóa ngoại, id sản phẩm4ContentString100Nội dung bình luận5createAtString12Ngày bình luận    Bảng 313. Chi tiết bảng Comment
+    
+3.7 Thiết kế đặc tả giao diện
+3.7.1 Một số giao diện chính của hệ thống
+Giao diện đăng nhập,đăng ký
+
+    Hình  315. Giao diện đăng ký, đăng nhập
+➢ Chức năng : Đăng nhập và đăng ký tài khoản
+➢ Sự kiện :
+o Khi người dùng nhấn vào ô tài khoản đăng nhập thì người dùng sẽ nhập tên tài khoản và mật khẩu của mình sau khi đã đăng ký là thành viên của ứng dụng.
+o Khi người đã nhập đầy đủ các thông tin thì nhấn vào nút “Đăng nhâp” nếu tài khoản và mật khẩu đúng sẽ chuyển sang giao diện trang chủ, và ngược lại sẽ thông báo lỗi. 
+o Người dùng có thể đăng nhập bằng tài khoản Facebook, Google.
+o Khi người dùng chọn đăng ký tài khoản thì sẽ chuyển sang một giao diện đăng ký, giao diện này người dùng nhập số điện thoại 
+o Sau khi đăng ký thành công hoặc thất bại thì thông báo lỗi, nếu đăng ký thành công thì sẽ chuyển sang giao diện đăng nhập.
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+Giao diện trang chủ
+
+    Hình  316. Giao diện trang chủ
+    
+➢ Chức năng : Hiển thị quảng cáo, hiển thị danh mục tìm kiếm, hiển thị tin đăng mới nhất, danh mục đăng tin, danh mục tin nhắn, danh mục người dùng.
+    
+➢ Sự kiện :
+o Khi người dùng nhấn vào danh mục tìm kiếm sẽ chuyển sang giao diện tìm kiếm.
+o Khi nhấn vào tin đăng sẽ chuyển sang giao diện hiển thị chi tiết tin đăng.
+o Khi nhấn vào danh mục đăng sẽ chuyển sang giao diện đăng tin.
+o Khi nhấn vào chat sẽ chuyển sang giao diện chat với người mua, hoặc bán.
+o Khi nhấn vào tôi thì sẽ hiển thị các thông tin của tài khoản đăng nhập trên ứng dụng.
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+Giao diện Tìm kiếm
+
+    Hình  317. Giao diện giỏ hàng, tài khoản
+    
+➢ Chức năng : Quản lý các tin đăng theo tên, shop và vị trí của tin đăng.
+➢ Sự kiện :
+o Khi người dùng nhập tên sản phẩm, tên người bán vào ô tìm kiếm hệ thống sẽ hiển thị danh sách tương ứng bên dưới.
+o Khi người dùng chọn chức năng tìm kiếm theo bản đồ hệ thống sẽ chuyển sang giao diện bản đồ hiển thị các tin đăng ở gần vị trí của người dùng.
+Giao diện đăng tin
+
+    Hình  318. Giao diện đăng tin
+    
+➢ Chức năng : Người dùng nhập thông tin của một tin đăng để đăng bán sản phẩm
+➢ Sự kiện :
+o Khi nhấn vào nút Thêm video/ảnh người dùng có thể thêm ảnh hoặc video để mô tả cho tin đăng bằng cách chọn ảnh sẵn có hoặc chụp ảnh mới.
+o Người dùng nhập tên sản phẩm vào ô tên sản phẩm
+o Khi người dùng chọn danh mục ứng dụng sẽ hiển thị một popup chọn danh mục của sản phẩm.
+o Người dùng nhập giá của sản phẩm vào ô Giá.
+o Khi người dùng chọn Tình trạng ứng dụng sẽ hiển thị một popup chọn tình trạng của sản phẩm. 
+o Người nhập mô tả về sản phẩm tại ô mô tả sản phẩm.
+o Người dùng nhấn đăng để đăng tin và chờ hệ thống duyệt tin đăng.
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+Giao diện thông tin người dùng
+
+    Hình  319. Giao diện thông người dùng
+➢ Chức năng : Hiển thị và cập nhật thông tin người dùng.
+➢ Sự kiện :
+o Khi nhập thông tin của mình vào các trường để cập nhật thông tin của mình
+Giao diện Chi tiết tin đăng
+
+    Hình  320. Giao diện chi tiết tin đăng
+➢ Chức năng : Hiển thị thông tin tin đăng, bình luận của người dùng về sản phẩm.
+➢ Sự kiện :
+o Người dùng nhấn vào yêu thích tin hệ thống sẽ thêm tin đăng vào mục các tin yêu thích của người dùng.
+o Khi người dùng nhấn vào Trò chuyện ứng dụng chuyển sang giao diện chat để chat với người bán.
+o Người dùng nhập bình luận tại ô bình luận để bình luận về sản phẩm
+o Khi người dùng nhấn vào gọi điện thoại ứng dụng sẽ gọi trực tiếp đến  số điện thoại mà người bán cung cấp.
+Giao diện Chat
+
+    Hình  321. Giao diện chat
+    
+➢ Chức năng : Hiển thị giao diện chat giữa người mua và người bán..
+    
+    
+➢ Sự kiện :
+o Khi người dùng nhấn vào đoạn chat bất kì với một người dùng khác ứng dụng sẽ chuyển sang màn hình chat tương ứng với người dùng đó.
+o Người dùng nhập tin nhắn vào ô nhập tin nhắn
+o Khi người dùng chọn icon ảnh ứng dụng cho phép chọn ảnh có trong thiết bị hoặc chụp ảnh mới để gửi.
+o Khi người dùng nhấn nút gửi hệ thống sẽ gửi đi nội dung tin nhắn vừa nhập tại ô nhập tin nhắn .
+
+CHƯƠNG 4: KẾT LUẬN		
+4.1 Kết quả đạt được của đề tài
+- Tìm hiểu, nắm bắt được các công cụ thiết kế ứng dụng chợ đồ cũ, công cụ lập trình Android Studio.
+- Biết được cách thiết kế ứng dụng kết nối cơ sở dữ liệu với service và cách tổ chức dữ liệu.
+- Các dịch vụ trên Internet đặc biệt là dịch vụ thương mại điện tử .
+- Cho phép người dùng tìm kiếm được các sản phẩm theo tên sản phẩm, vị trí sản phẩm.
+- Hiển thị danh sách các sản phẩm.
+- Hiển thị chi tiết các sản phẩm.
+- Cho phép người dùng bình luận về tin đăng.
+- Cho phép người mua và người bán có thể nhắn tin trao đổi với nhau.
+- Áp dụng đề tài vào sử dụng trong thực tế cho hệ thống nhỏ.
+4.2 Hạn chế của đề tài
+- Hệ thống ứng dụng Chợ đồ cũ mới dừng lại ở giải các module cơ bản, chưa có nhiều module tiện ích cho người dùng như: thăm dò ý kiến, hỏi đáp, chia sẻ.
+- Chức năng đăng ký, đăng nhập cần được bổ sung khi nâng cấp thành hệ thống lớn và chuyên nghiệp hơn.
+- Giao diện còn hệ thống còn đơn giản.
+- Chưa thêm được hình thức hỗ trợ thanh toán và giao hàng dành cho người dùng.
+4.3 Hướng phát triển của đề tài
+      Trong thời gian nghiên cứu và thực hiện đề tài, tác giả đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+- Xây dựng thêm các chức năng như: phương thức thanh toán, giao hàng.
+- Bổ sung các Module hỗ trợ liên hệ nhằm tương tác với các website bán hàng khác.
+- Liên kết với website nhằm mở rộng thị trường kinh doanh.
+- Hoàn thiện đề tài trên nền tảng Android.
+TÀI LIỆU THAM KHẢO
+x
+[1]Phạm Hữu Khang, Lập trình Android 2.0. Hà Nội, Việt Nam: Nhà xuất bản Lao Động Xã Hội, 2005.[2]Nguyễn Văn Quyết, Giáo trình Công nghệ di động và ứng dụng. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY, 2010. [3]Hoàng Quốc Việt, Giáo trình Lập trình android cơ bản. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY, 2016. [4]Viblo, Giới thiệu và làm quen với React Native, https://viblo.asia/p/gioi-thieu-va-lam-quen-voi-react-native-naQZRG6Glvx[5]Documentation React Native , https://reactnative.dev/docs/getting-started[6]Viblo, Tổng quan về MongoDB, https://viblo.asia/p/tong-quan-ve-mongodb-EoDkQoxqGbV[7]TopDev, Cùng tìm hiểu về GraphQL, https://topdev.vn/blog/cung-tim-hieu-ve-graphql/[8] Document MongoDB, https://docs.mongodb.com/manual/core/document[9] Documentation MongoDB,https://graphql.org/learn/x
+
+Xây dựng ứng dụng Chợ đồ cũ
+    
+63
+    
+    

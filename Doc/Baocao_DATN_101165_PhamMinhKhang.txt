@@ -1,0 +1,536 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Trong thời buổi công nghệ thông tin phát triển rất nhanh chóng được áp dụng trên mọi lĩnh vực của cuộc sống như kinh tế, chính trị, xã hội, tất cả đều cần có công nghệ thông tin. Như hiện nay chúng ta đã biết lập trình và thiết kế ứng dụng có thể được coi là ngành “hot” mà hiện nay chúng ta đang rất quan tâm.
+    Sau khi nghiên cứu tình hình của thị trường em đã đưa ra quyết định “XÂY DỰNG HỆ THỐNG BÁN GIÀY CHO CỬA HÀNG MILKY WAY” nhằm đáp ứng nhu cầu của khách hàng. Hiện nay nhu cầu sử dụng thiết bị di động qua Internet ngày càng nhiều và các hình thức kinh doanh, mua bán trên mạng ngày càng đa dạng phong phú, rất được nhiều người sử dụng và ưa chuộng. Cho nên khi xây dựng ứng dụng này sẽ giúp cho khách hàng mua sắm trao đổi các mặt hàng không dùng đến, mặt hàng cũ một cách thuận tiện nhất.
+    Là sinh viên ngành CNTT, em luôn mong muốn mình sẽ làm được gì đó để ứng dụng những kiến thức đã học xây dựng được những sản phẩm có ứng dụng thực tế. Với mong muốn áp dụng những kiến thức mình đã học được tạo ra sản phẩm hoàn thiện có tính thực tế, đồng thời giúp nâng cao khả năng lập trình và đúc rút được nhiều kinh nghiệm cho những công việc trong tương lai sau khi ra trường, cùng với sự đồng ý của giáo viên hướng dẫn đề tài, em quyết định lựa chọn đề tài “Xây dựng hệ thống bán giày cho cửa hàng Milky Way” để làm đề tài đồ án tốt nghiệp. 
+1.2 Mục tiêu của đề tài
+    Xây dựng hệ thống bán giày chạy trên nền tảng Android được xây dựng với hai mục tiêu chính như sau:
+- Thứ nhất là nghiên cứu các công nghệ mới để phát triển ứng dụng Android nhằm mang đến trải nghiệm tốt nhất và sự tiện lợi tối ưu nhất cho người dùng.
+- Thứ hai là phát triển ứng dụng có tính thực tiễn cao, có khả năng triển khai ứng dụng vào thực tế, giúp những người mua có thể thao tác dễ dàng và tiện lợi.
+    Em hy vọng dựa trên nền tảng lý thuyết đã được thầy cô truyền thụ lại, kết hợp với sự tìm hiểu công nghệ của cá nhân, luận văn tốt nghiệp của em sẽ đạt được mục đích mong đợi.
+1.3 Giới hạn và phạm vi của đề tài
+- Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Nền tảng phát triển: Mobile, Web service
+- Ngôn ngữ lập trình: Java, PHP.
+- Công cụ phát triển: Android Studio, Web Server.
+1.4 Nội dung thực hiện
+    Đề tài “Xây dựng hệ thống bán giày cho cửa hàng Milky Way” là một ứng dụng chạy trên Android. Dưới đây là những chức năng chính mà em dự định phát triển ở phiên bản đầu tiên của ứng dụng này:
+- Tìm hiểu các hoạt động kinh doanh trong thực tế.
+- Tìm hiểu cách thức xây dựng một ứng dụng trên android.
+- Xây dựng thành công ứng dụng mua bán giày trên android
+- Quản lý trên App Admin.
+- Quản lý việc đặt hàng, xử lý giỏ hàng,…
+- Ứng dụng thống kê theo sản phẩm, hóa đơn,...
+- Cho phép tìm kiếm thông tin trong hệ thống,…
+- Giao diện thân thiện, dễ sử dụng.
+1.5 Phương pháp tiếp cận
+- Khảo sát lấy yêu cầu người sử dụng điện thoại về các ứng dụng mua bán trên mobile để xây dựng ý tưởng, khảo sát các ứng dụng tương tự chuyên về kinh doanh.
+- Nghiên cứu công nghệ phát triển ứng dụng chạy trên Android. Xây dựng phía client một app có thể cài đặt trên điện thoại chạy Android đáp ứng các yêu cầu cơ bản của hệ thống.
+- Nghiên cứu công nghệ xây dựng web server và xây dựng hệ thống quản trị cơ sở dữ liệu, cho phép client lấy dữ liệu về và hiển thị ra cho người dùng.
+1.6 Kết quả dự kiến của đề tài
+- Xây dựng được ứng dụng hoàn thiện với các chức năng:
+o Đăng ký/ đăng nhập.
+o Lựa chọn, xem thông tin sản phẩm
+o Tìm kiếm sản phẩm.
+o Thêm sản phẩm vào giỏ, quản lý giỏ hàng
+o Đặt hàng, xem thông tin hóa đơn.
+o Quản lý sản phẩm, người dùng trên app admin
+o Thông kê sản phẩm, hóa đơn.
+
+   CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Android
+2.1.1 Giới thiệu
+    Android là một hệ điều hành dựa trên nền tảng Linux được thiết kế dành cho các thiết bị di động có màn hình cảm ứng như điện thoại thông minh và máy tính bảng. Ban đầu, Android được phát triển bởi Tổng công ty Android, với sự hỗ trợ tài chính từ Google và sau này được chính Google mua lại vào năm 2005. Android ra mắt vào năm 2007 cùng với tuyên bố thành lập Liên minh thiết bị cầm tay mở: một hiệp hội gồm các công ty phần cứng, phần mềm, và viễn thông với mục tiêu đẩy mạnh các tiêu chuẩn mở cho các thiết bị di động. Chiếc điện thoại đầu tiên chạy Android được bán vào tháng 10 năm 2008.
+    Android có mã nguồn mở và Google phát hành mã nguồn theo Giấy phép Apache. Chính mã nguồn mở cùng với một giấy phép không có nhiều ràng buộc đã cho phép các nhà phát triển thiết bị, mạng di động và các lập trình viên nhiệt huyết được điều chỉnh và phân phối Android một cách tự do. Ngoài ra, Android còn có một cộng đồng lập trình viên đông đảo chuyên viết các ứng dụng để mở rộng chức năng của thiết bị, bằng một loại ngôn ngữ lập trình Java có sửa đổi. Vào tháng 10 năm 2012, có khoảng 700.000 ứng dụng trên Android, và số lượt tải ứng dụng từ Google Play, cửa hàng ứng dụng chính của Android, ước tính khoảng 25 tỷ lượt.
+    Những yếu tố này đã giúp Android trở thành nền tảng điện thoại thông minh phổ biến nhất thế giới, vượt qua Symbian vào quý 4 năm 2010, và được các công ty công nghệ lựa chọn khi họ cần một hệ điều hành không nặng nề, có khả năng tinh chỉnh, và giá rẻ chạy trên các thiết bị công nghệ cao thay vì tạo dựng từ đầu. Kết quả là mặc dù được thiết kế để chạy trên điện thoại và máy tính bảng, Android đã xuất hiện trên TV, máy chơi game và các thiết bị điện tử khác. Bản chất mở của Android cũng khích lệ một đội ngũ đông đảo lập trình viên và những người đam mê sử dụng mã nguồn mở để tạo ra những dự án do cộng đồng quản lý. Những dự án này bổ sung các tính năng cao cấp cho những người dùng thích tìm tòi hoặc đưa Android vào các thiết bị ban đầu chạy hệ điều hành khác.
+    Android chiếm 75% thị phần điện thoại thông minh trên toàn thế giới vào thời điểm quý 3 năm 2012, với tổng cộng 500 triệu thiết bị đã được kích hoạt và 1,3 triệu lượt kích hoạt mỗi ngày. Sự thành công của hệ điều hành cũng khiến nó trở thành mục tiêu trong các vụ kiện liên quan đến bằng phát minh, góp mặt trong cái gọi là "cuộc chiến điện thoại thông minh" giữa các công ty công nghệ.
+2.1.2 Ưu điểm của Android
+- Ưu điểm nổi bật nhất của Android là hệ điều hành mã nguồn mở cho phép người dùng cũng như những nhà phát triển dễ dàng tùy biến.
+- Giao diện thân thiện, dễ sử dụng.
+- Tương thích với đa dạng hệ thống phần cứng.
+- Hệ thống cửa hàng ứng dụng đa dạng, đồ sộ.
+- Đối với người lập trình, cộng đồng đông đảo là một lợi thế, có thể dễ dàng thêm vào các thư viện cũng như nhận được sự trợ giúp khi gặp khó khăn.
+2.1.3 Lập trình Android
+    Công cụ lập trình Android phổ biến nhất hiện nay là Android Studio, được chính Google phát hành.
+    Lập trình Android hiện nay dựa trên hai ngôn ngữ là Java và Kotlin.
+2.2 Tổng quan về PHP
+2.2.1 Giới thiệu
+      PHP - viết tắt hồi quy của "Hypertext Preprocessor" là ngôn ngữ lập trình mã nguồn mở phía server được thiết kế để dễ dàng xây dựng các trang web động. Mã PHP có thể thực thi trên server để tạo ra mã HTML và xuất ra trình duyệt web theo yêu cầu của người sử dụng. PHP cho phép xây dựng ứng dụng web trên mạng internet tương tác với mọi cơ sở dữ liệu như: MySQL, Oracle,… Ngôn ngữ lập trình PHP được tối ưu hóa cho các ứng dụng web, tốc độ nhanh, nhỏ gọn, cú pháp giống C và Java, dễ học và thời gian xây dựng sản phẩm tương đối ngắn hơn so với các ngôn ngữ khác nên PHP đã nhanh chóng trở thành một ngôn ngữ lập trình phổ biến nhất thế giới.
+2.2.2 Lịch sử phát triển
+    PHP được phát triển từ một sản phẩm có tên là PHP/FI. PHP/FI do Rasmus Lerdorf tạo ra năm 1995. Ban đầu nó được viết bằng C. Và được sửa lại lần nữa năm 1997. Đó là thời kỳ bắt đầu của PHP đầy khó khăn.
+    PHP 3.0: Được Andi Gutmans và Zeev Suraski tạo ra năm 1997 sau khi viết lại hoàn toàn bộ mã nguồn trước đó. Lý do chính mà họ đã tạo ra phiên bản này là do họ nhận thấy PHP/FI 2.0 hết sức yếu kém trong việc phát triển các ứng dụng thương mại điện tử. PHP 3.0 như là phiên bản thế hệ kế tiếp của PHP/FI 2.0, và chấm dứt phát triển PHP/FI 2.0.PHP 3.0 cung cấp cho người dùng cuối một cơ sở hạ tầng chặt chẽ dùng cho nhiều cơ sở dữ liệu, giao thức và API khác nhau. Cho phép người dùng có thể mở rộng theo modul. Chính điều này làm cho PHP3 thành công so với PHP2. Lúc này họ chính thức đặt tên ngắn gọn là 'PHP' ( Hypertext Preprocessor ).
+    PHP4: Được công bố năm 2000 tốc độ xử lý được cải thiện rất nhiều, PHP 4.0 đem đến các tính năng chủ yếu khác gồm có sự hỗ trợ nhiều máy chủ Web hơn, hỗ trợ phiên làm việc HTTP, tạo bộ đệm thông tin đầu ra, nhiều cách xử lý thông tin người sử dụng nhập vào bảo mật hơn và cung cấp một vài các cấu trúc ngôn ngữ mới. Với PHP 4, số nhà phát triển dùng PHP đã lên đến hàng trăm nghìn và hàng triệu site đã công bố cài đặt PHP, chiếm khoảng 20% số tên miền trên mạng Internet. Nhóm phát triển PHP cũng đã lên tới con số hàng nghìn người và nhiều nghìn người khác tham gia vào các dự án có liên quan đến PHP như PEAR, PECL và tài liệu kĩ thuật cho PHP.
+    PHP5: Bản chính thức đã ra mắt ngày 13 tháng 7 năm 2004 sau một chuỗi khá dài các bản kiểm tra thử bao gồm Beta 4, RC 1, RC2, RC3. Mặc dù coi đây là phiên bản sản xuất đầu tiên nhưng PHP 5.0 vẫn còn một số lỗi trong đó đáng kể là lỗi xác thực HTTP.
+    PHP6: Hiện nay phiên bản tiếp theo của PHP đang được phát triển, PHP 6 bản sử dụng thử đã có thể được download tại địa chỉ snaps.php.net. Phiên bản PHP 6 được kỳ vọng sẽ lấp đầy những khiếm khuyết của PHP ở phiên bản hiện tại.
+2.2.3 Ưu điểm của PHP
+- Là một mã nguồn mở (Open source) nên việc sử dụng rất dễ dàng,
+- Sử dụng miễn phí, cấu trúc đơn giản dễ học.
+- Có nhiều thư viện phong phú và được cộng đồng hỗn trợ một cách mạn mẽ.
+- Có khả năng hỗn trợ hầu hết các đặc điểm nổi bật của lập trình hướng đối tượng.
+- Cung cấp nhiều cơ chế cho phép triển khai tính bảo mật cho ứng dụng như session, các hàm filter.
+- Có rất nhiều công cụ lập trình PHP hiện nay có thể kể đến như: PhpStorm, Sublime Text, NetBeans, Eclipse with PDT, Notepad++,…
+2.3 Behavior Component trong Android Jetpack
+2.3.1 Giới thiệu về Android Jetpack
+    Jetpack là một tập hợp các software components Android giúp bạn phát triển các ứng dụng Android tuyệt vời dễ dàng hơn. Các thành phần này giúp bạn thực hiện theo các phương pháp hay nhất, giải phóng bạn khỏi viết mã soạn sẵn và đơn giản hóa các tác vụ phức tạp, vì vậy bạn có thể tập trung vào mã mà bạn quan tâm.
+    Jetpack bao gồm một tập hợp các thư viện Androids kết hợp thực hành tốt nhất và cung cấp khả năng tương thích ngược trong các ứng dụng Android của bạn.
+      Jetpack bao gồm các thư viện gói androidx. *, Không được gộp vào các API platforms. Điều này có nghĩa là nó cung cấp khả năng tương thích ngược và được cập nhật thường xuyên hơn nền tảng Android, đảm bảo bạn luôn có quyền truy cập vào các phiên bản mới nhất và tuyệt vời nhất của các thành phần Jetpack.
+    Các components trong Adroid Jetpack là tập hợp các thư viện được chấp nhận và sử dụng để làm việc cùng nhau.
+2.3.2 Ưu điểm của Android Jetpack
+Tính “mở”: 
+      Để hiểu kỹ hơn và trả lời câu hỏi Android Jetpack là gì? thì hãy xem xét: Các Android Jetpack components được cung cấp dưới dạng các thư viện “mở”, không phải là một phần của nền tảng Android cơ bản. Điều này có nghĩa là bạn có thể dễ dàng áp dụng từng component.
+      Mỗi khi Android Jetpack có thêm một tính năng mới, bạn có thể dễ dàng thêm nó vào trong ứng dụng của mình, triển khai ứng dụng trên Play Store và cung cấp cho người dùng tất cả các tính năng mới chỉ trong một ngày. Các thư viện mở sẽ được chuyển vào androidx.* namespace mới.
+Tính tương thích ngược:
+      Ngoài ra, ứng dụng của bạn có thể chạy mượt mà trên nhiều phiên bản của Android mà không lo lắng về tính tương thích.
+      Vì đơn giản là Android Jetpack được xây dựng dựa trên Support Library. Mà các thư viện này được các nhà phát triển Android  tạo ra để cung cấp các chức năng độc lập với các phiên Android, và có tính tương thích ngược rất tốt.
+      Ví dụ như: Ứng dụng của bạn sử dụng Fragment mà lại muốn hỗ trợ Android 3.0 trở xuống? Chính là lúc bạn nghĩ tới Support Library đấy.
+Dễ dàng testing:
+      Hơn nữa, Android Jetpack còn có thiết kế rất tốt cho việc testing. Nó tách biệt giữa phần chức năng và phần test. Điều này giúp bạn dễ dàng kiểm tra, nâng cao chất lượng ứng dụng.
+Các component độc lập với nhau:
+      Mặc dù các components của Android Jetpack được xây dựng để hoạt động cùng nhau. Ví dụ: lifecycle awareness và live data.
+      Tuy nhiên, bạn không phải bắt buộc phải sử dụng tất cả chúng. Bạn có thể tích hợp từng phần của Android Jetpack để giải quyết một vấn đề của bạn. Điều này giúp cho ứng dụng trở nên nhẹ nhàng.
+2.3.3 Behavior Component
+
+    Hình 2.1 Behavior Component
+	Behavior Component gồm các thành phần hành vi giúp bạn thiết kế các ứng dụng mạnh mẽ, có thể kiểm tra và bảo trì.
+Behavior Component gồm các thành phần như: 
+- Download manager: Đặt lịch & quản lý các tác vụ tải xuống
+- Media & playback: Hỗ trợ tương thích ngược cho việc phát media và routing (bao gồm cả Google Cast)
+- Notifications: Cung cấp các API tương thích ngược cho việc hiển thị thông báo, hỗ trợ cả Wear và Auto
+- Permissions: Cung cấp các API cho việc kiểm tra và yêu cầu các quyền trong android
+- Sharing: Cung cấp các hành động chia sẻ phù hợp với action bar của ứng dụng
+- Slices: Tạo các UI linh hoạt có thể hiển thị dữ liệu ứng dụng bên ngoài ứng dụng
+
+    
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Phát biểu bài toán
+Hoạt động của hệ thống bán giày:
+    Khi người dùng truy cập vào ứng dụng thì sẽ hiện lên giao diện trang chủ gồm danh sách các danh mục và danh sách các sản phẩm.
+    Người dùng có thể tìm kiếm sản phẩm bằng cách truy cập phần tìm kiếm và nhập từ khóa cần tìm.
+    Người dùng xem có thể thông tin sản phẩm tuy nhiên để mua sản phẩm khi đó người dùng phải đăng nhập vào ứng dụng.
+    Khi người dùng có nhu cầu trao đổi có thể truy cập phần liên hệ trong ứng dụng sẽ có địa chỉ, vị trí trên bản đồ, số điện thoại của cửa hàng.
+    Khi khách hàng đã đăng nhập vào ứng dụng thành công có thể xem và sử dụng được các danh mục sau :
+    Tài khoản: Đăng nhập, đăng kí, quản lý thông tin tài khoản, xem hóa đơn,….
+    Hóa đơn: Xem danh sách hóa đơn của mình.
+    Thông tin về sản phẩm bao gồm: mã giày, tên giày, ảnh, mô tả chi tiết, ngày phát hành, màu chính, thương hiệu, màu thường, loại giày, người thiết kế, thể loại, giá bán.
+    Thông tin tài khoản bao gồm : mã khách hàng, họ & tên, email, ngày sinh, số điện thoại, địa chỉ, giới tính, ảnh.
+    Khi người dùng chọn một sản phẩm ứng dụng sẽ chuyển tới trang thông tin chi tiết, tại đây người dùng có thể xem các thông tin về chi tiết về sản phẩm như: tên, màu sắc, mô tả chi tiết, hãng... Người dùng chọn số lượng và size và thêm vào giỏ hàng, tại giỏ hàng người dùng chọn thanh toán để xác nhận mua sản phẩm.
+    
+3.2  Yêu cầu của hệ thống
+3.2.1 Giao diện đăng ký
+- Cho phép người dùng ẩn danh đăng ký tài khoản mới để có thể mua sản phẩm.
+- Thông tin đăng ký bao gồm : họ tên, địa chỉ, tên đăng nhập, mật khẩu, số điện thoại và email.
+- Sau khi người dùng điền đủ thông tin hợp lệ và xác nhận đăng ký tài khoản, ứng dụng phải hiển thị thông báo, nếu đăng ký thành công thì chuyển sản giao diện đăng nhập và nếu tài khoản đã tồn tại thì không cho người dùng đăng ký.
+3.2.2 Giao diện đăng nhập 
+- Cho phép người dùng đăng nhập tài khoản, yêu cầu người dùng nhập tên tài khoản và mật khẩu, nếu người dùng không nhập thông tin sẽ thông báo lỗi.
+- Khi nhập đúng tài khoản và mật khẩu, ứng dụng hiện thông báo đăng nhập thành công và chuyển về màn trang chủ của ứng dụng.
+3.2.3 Giao diện trang chủ
+- Hiển thị danh mục sản phẩm và danh sách các sản phẩm có trong hệ thống.
+3.2.4 Giao diện chi tiết sản phẩm
+- Hiển thị thông tin chi tiết sản phẩm.
+- Hiển thị mô tả sản chi tiết sản phẩm
+- Khi người dùng chọn mua sản phẩm ứng dụng sẽ hiện thông báo cho người dùng chọn số lượng và size.
+3.2.5 Giao diện giỏ hàng
+- Danh sách các sản phẩm mà người dùng chọn mua.
+- Thông tin sản phẩm như: tên, size, số lượng và giá sản phẩm.
+- Hiển thị xác nhận khi người dùng chọn thanh toán.
+3.2.6 Giao diện hóa đơn
+- Hiển thị thông tin hóa đơn: mã đơn, trạng thái.
+- Hiển thị thông tin người dùng: họ & tên, địa chỉ, số điện thoại…
+- Hiển thị thông tin đơn hàng: tên giày, size, số lượng, ảnh.
+3.2.7 Giao diện tìm kiếm
+- Hiển thị giao diện tìm kiếm.
+- Người dùng nhập từ khóa tìm kiếm: tên sản phẩm, hãng, tên người kiết kế,…
+- Kết quả sẽ được hiển thị lên màn hình.
+3.2.8 Giao diện tài khoản
+- Hiển thị thông tin chi tiết người dùng.
+- Cho phép người dùng cập nhật thông tin các nhân.
+3.3 Biểu đồ Use-case
+
+    Hình 3.1 Use-case tổng quát
+3.3.1 Biểu đồ Use-case phía người dùng
+Biểu đồ Use case DangKy
+
+    Hình 3.2 Biểu đồ Use case DangKy
+* Tóm tắt
+o Người sử dụng: user
+o Chức năng: Đăng ký.
+* Dòng sự kiện
+Dòng sự kiện chính:
+1. Người dùng chọn chức năng.
+2. Hệ thống hiển thị giao diện đăng ký.
+3. Người dùng nhập thông tin .
+4. Hệ thống gửi lại thông báo xác nhận.
+Các dòng sự kiện khác
+ Không có
+Biểu đồ Use case DangNhap
+
+    Hình 3.3 Biểu đồ Use case DangNhap
+* Tóm tắt
+o Người sử dụng: user
+o Chức năng: Đăng nhập.
+* Dòng sự kiện
+Dòng sự kiện chính:
+1. Người dùng chọn chức năng.
+2. Hệ thống hiển thị giao diện đăng nhập.
+3. Người dùng nhập thông tin.
+4. Hệ thống gửi kiểm tra thông tin với sever.
+5. Hệ thống xác nhận dăng nhập và chuyển đến giao diện người dùng.
+Các dòng sự kiện khác
+ Không có
+Biểu đồ Use case QuanLyThongTinCaNhan
+
+    Hình 3.4 Biểu đồ Use case QuanLyThongTinCaNhan
+* Tóm tắt
+o Người sử dụng: user
+o Chức năng: Cập nhật thông tin cá nhân, đổi mật khẩu.
+* Dòng sự kiện
+Dòng sự kiện chính:
+1. Người dùng chọn cập nhật thông tin cá nhân.
+2. Hệ thống hiển thị giao diện cập nhật.
+3. Người dùng nhập thông tin và chọn gửi.
+4. Hệ thống kiểm tra và gửi thông tin đến server.
+5. Hệ thống gửi lại thông báo xác nhận cập nhật thành công.
+6. Hệ thống cập nhật thông tin trên ứng dụng
+Các dòng sự kiện khác
+1. Người dùng chọn đổi mật khẩu.
+2. Hệ thống yêu cầu nhập mật khẩu cũ xác nhận.
+3. Người dùng nhập mạt khẩu mới.
+4. Hệ thống kiểm tra và đưa ra thông báo xác nhận.
+Các dòng sự kiện khác
+1. Người dùng chọn xem hóa đơn.
+2. Hệ thống lấy dữ liệu người dùng và hiện thị hóa đơn của người dùng.
+Biểu đồ Use case GioiThieuGiay
+
+    Hình 3.5 Biểu đồ Use case GioiThieuGiay
+* Tóm tắt
+o Người sử dụng: user
+o Chức năng: Xem thông tin giày.
+* Dòng sự kiện
+Dòng sự kiện chính:
+1. Người dùng chọn sản phẩm.
+2. Hệ thống hiển thị thông tin chi tiết sản phẩm.
+Các dòng sự kiện khác
+ Không có
+Biểu đồ Use case QuanLyGioHang
+
+    Hình 3.6 Biểu đồ Use case QuanLyGioHang
+* Tóm tắt
+o Người sử dụng: user
+o Chức năng: Thay đổi số lượng, xóa sản phẩm.
+* Dòng sự kiện
+Dòng sự kiện chính:
+1. Người dùng chọn giày muốn mua.
+2. Hệ thống hiển thị thông báo .
+3. Người dùng nhập size, Số lượng.
+4. Người dùng thêm vào giỏ.tiến hành thanh toán.
+5. Hệ thống gửi thông báo xác nhận.
+Các dòng sự kiện khác
+1.  Người dùng chọn cập nhật số lượng, xóa sản phẩm.
+2.  Hệ thống gửi yêu cầu xác nhận.
+3. Hệ thống xác nhận xóa thành công.
+Biểu đồ Usecase TimKiem
+
+    Hình 3.7 Biểu đồ Usecase TimKiem
+* Tóm tắt
+o Người sử dụng: user
+o Chức năng: Hiển thị danh sách giày, hiển thị chi tiết giày.
+* Dòng sự kiện
+Dòng sự kiện chính:
+1. Người dùng chọn chức năng.
+2. Người dùng nhập từ khóa tìm kiếm.
+3. Hệ thống gửi dữ liệu lên server và kiểm tra.
+4. Hệ thống nhận dữ liệu từ server và hiển thị kết quả
+5. Hệ thống hiển thị danh sách giày theo từ khóa đã nhận .
+6. Người dùng chọn giày muốn xem..
+7. Hệ thống hiện thông tin chi tiết giày.
+Các dòng sự kiện khác
+ Không có
+
+
+3.3.2 Biểu đồ Use-case phía quản lý
+Biểu đồ Usecase QuanLyGiay
+
+    Hình 3.8 Biểu đồ Usecase QuanLyGiay
+* Tóm tắt
+o Người sử dụng: admin
+o Chức năng: Quản lý giày.
+* Dòng sự kiện
+Dòng sự kiện chính:
+1. Admin chọn chức năng.
+2. Hệ thống hiển thị yêu cầu.
+3. Admin nhập thông tin giày, chọn giày nếu muốn xóa .
+4. Hệ thống gửi lại yêu cầu xác nhận.
+Các dòng sự kiện khác
+ Không có
+
+
+Biểu đồ Quản lý hóa đơn
+
+    Hình 3.9 Biểu đồ Quản lý hóa đơn
+* Tóm tắt
+o Người sử dụng: admin
+o Chức năng: Quản lý hóa đơn.
+* Dòng sự kiện
+Dòng sự kiện chính:
+1. Admin chọn chức năng.
+2. Hệ thống hiển thị yêu cầu.
+3. Admin nhập thông tin hóa đơn, chọn hóa đơn nếu muốn xóa .
+4. Hệ thống gửi lại yêu cầu xác nhận.
+Các dòng sự kiện khác
+ Không có
+Biểu đồ Quản lý tài khoản
+
+    Hình 3.10 Biểu đồ Quản lý tài khoản
+* Tóm tắt
+o Người sử dụng: admin
+o Chức năng: Quản lý tài khoản.
+* Dòng sự kiện
+Dòng sự kiện chính:
+1. Admin chọn chức năng.
+2. Hệ thống hiển thị yêu cầu.
+3. Admin nhập thông tin tài khoản, chọn tài khoản đơn nếu muốn xóa .
+4. Hệ thống gửi lại yêu cầu xác nhận.
+Các dòng sự kiện khác
+ Không có
+
+
+3.4 Biểu đồ lớp
+3.4.1 Biểu đồ lớp ( mức phân tích)
+
+    Hình 3.11 Biểu đồ lớp
+
+
+3.4.2 Mô tả chi tiết
+    Bảng Giay
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả1MaGiayintDuy nhất trên toàn hệ thống2TenGiayString3ImageGiayString4ChiTietImageNếu có5NgayPHString6MauChinhString7ThuongHieuString8MauThuongString9LoaiGiayString10NguoiTKString11TheLoaiString12Giaint    Bảng 3.1 Bảng Giay
+    Bảng KhachHang
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả1MaKHint2TaiKhoanString3MatKhauString4HoTenKHString5NgaySinhString6SDTString7DiaChiString8EmailString9GTString10ImageKHString    Bảng 3.2 Bảng KhachHang
+    Bảng HoaDon
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả1MaHDintDuy nhất trên toàn hệ thống2NgayBanString3MaKHString4HoTenKHString5DiaChiString6SDTString7MaGiayString8SizeString9SoLuongString10GiaInt11PhiVCint12TongTienInt13TrangThaiString    Bảng 3.3 Bảng HoaDon
+
+
+    Bảng GioHang
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả1MaGHintDuy nhất trên toàn hệ thống2MaGiayintKhóa ngoại3TenGiayString4Giaint5Sizeint6SoLuongint7ImageGiayString    Bảng 3.4 Bảng GioHang
+    Bảng DonHang
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả1MaDHintDuy nhất trên toàn hệ thống2MaHDintKhóa ngoại3MaGiayintKhóa ngoại4TenGiayString5Giaint6Sizeint7SoLuongint8ImageGiayString    Bảng 3.5 Bảng DonHang
+3.5 Biểu đồ tuần tự
+3.5.1 Biểu đồ tuần tự DangKy
+
+    Hình 3.12 Biểu đồ tuần tự DangKy
+3.5.2 Biểu đồ tuần tự DangNhap
+
+    Hình 3.13 Biểu đồ tuần tự DangNhap
+
+
+3.5.3 Biểu đồ tuần tự QuanLyTTCN
+
+    Hình 3.14 Biểu đồ tuần tự QuanLyTTCN
+3.5.4 Biểu đồ tuần tự GioiThieuGiay
+
+    Hình 3.15 Biểu đồ tuần tự GioiThieuGiay
+3.5.5 Biểu đồ tuần tự QuanLyGioHang
+
+    Hình 3.16 Biểu đồ tuần tự QuanLyGioHang
+3.5.6 Biểu đồ tuần tự TimKiem
+
+    Hình 3.17 Biểu đồ tuần tự TimKiem
+3.5.7 Biểu đồ tuần tự QuanLyGiay
+
+    Hình 3.18 Biểu đồ tuần tự QuanLyGiay
+3.5.8 Biểu đồ tuần tự QuanLyHoaDon
+
+    Hình 3.19 Biểu đồ tuần tự QuanLyHoaDon
+3.5.9 Biểu đồ tuần tự QuanLyTaiKhoan
+
+    Hình 3.20 Biểu đồ tuần tự QuanLyTaiKhoan
+3.6 Cơ sở dữ liệu
+3.6.1 Mô hình cơ sở dữ liệu
+
+    Hình 3.21 Mô hình cơ sở dữ liệu
+3.6.2 Danh sách các bảng
+STTTên bảngÝ nghĩa/Ghi chú1GiayGồm các loại giày2KhachHangChứa thông tin khách hàng3HoaDonChứa thông tin về hóa đơn4GioHangChứa thông tin về giỏ hàng5DonHangChứa thông tin về đơn hàng6TrendChứa thông tin về các sản phẩm theo xu hướng    		Bảng 3.6 Bảng danh sách các đối tượng
+3.6.3 Mô tả chi tiết từng bảng
+Chi tiết bảng Giay
+STTTên trườngKiểu dữ liệuĐộ dàiGhi chú1MaGiayintMã sản phẩm2TenGiayVarchar255Tên sản phẩm
+
+
+3ImageGiayVarchar255Link ảnh
+4ChiTietVarchar255Chi tiết sản phẩm5NgayPHVarchar255Ngày phát hành6MauChinhVarchar255Màu chính7ThuongHieuVarchar255Thương hiệu8MauThuongVarchar255Màu thường9LoaiGiayVarchar255Loại giày10NguoiTKVarchar255Nhà thiết kế11TheLoaiVarchar255Thể loại12GiaintGiá sản phẩm    Bảng 3.7 Chi tiết bảng Giay
+Chi tiết bảng KhachHang
+STTTên trườngKiểu dữ liệuĐộ dàiGhi chú1MaKHintMã khách hàng2TaiKhoanVarchar255Tên tài khoản
+
+
+3MatKhauVarchar255Mật khẩu
+4HoTenKHVarchar255Họ & tên5NgaySinhVarchar255Ngày sinh6SDTVarchar255Số điện thoại7DiaChiVarchar255Địa chỉ8EmailVarchar255Email9GTVarchar255Giới tính10ImageKHVarchar255Link ảnh    Bảng 3.8 Chi tiết bảng KhachHang
+Chi tiết bảng HoaDon
+STTTên trườngKiểu dữ liệuĐộ dàiGhi chú1MaHDintMã hóa đơn2NgayBanVarchar255Ngày bán
+
+
+3MaKHintMã khách hàng
+4HoTenKHVarchar255Họ & tên5DiaChiVarchar255Địa chỉ6SDTVarchar255Số điện thoại7MaGiayintMã Giày8SizeintSize9SoLuongVarchar255Số lượng10GiaintGiá sản phẩm11
+PhiVCintPhí vận chuyển12TongTienintTổng tiền13TrangThaiVarcharTrạng thái    Bảng 3.9 Chi tiết bảng HoaDon
+Chi tiết bảng GioHang
+STTTên trườngKiểu dữ liệuĐộ dàiGhi chú1MaGHintMã giỏ hàng2MaGiayVarchar255Mã giày
+
+
+3TenGiayVarchar255Tên giày
+4GiaintGiá5SizeintSize6SoLuongintSố lượng7ImageGiayVarchar255Link ảnh    Bảng 3.10 Chi tiết bảng GioHang
+Chi tiết bảng DonHang
+STTTên trườngKiểu dữ liệuĐộ dàiGhi chú1MaDHintMã đơn hàng2MaHDintMã hóa đơn
+
+
+3MaGiayintMã Giày
+4TenGiayVarchar255Tên giày5Giaint255Giá sản phẩm6Sizeint255Size7SoLuongintSố lượng8ImageGiayVarcharLink ảnh    Bảng 3.11 Chi tiết DonHang
+Chi tiết bảng Trend
+STTTên trườngKiểu dữ liệuĐộ dàiGhi chú1IdTrendintMã trend2TrendNameVarchar255Tên sản phẩm 
+
+
+3ImageTrendVarchar255Link ảnh sản phẩm
+4ImageBrandVarchar255Link ảnh hãng    Bảng 3.12 Chi tiết bảng Trend
+
+
+3.7 Thiết kế đặc tả giao diện
+Một số giao diện chính của hệ thống
+Giao diện đăng nhập/ đăng ký
+
+    Hình 3.22 Giao diện đăng nhập/ đăng ký
+Giải thích các item của layout:
+STTTên LoạiMô tả1Tài khoảnText fieldInput tài khoản2Mật khẩuText fieldInput mật khẩu3Đăng nhậpButtonThực hiện đăng nhập4Đăng kýButtonChuyển sang màn hình đăng ký5Họ tênText fieldInput họ tên người dùng6Số điện thoạiText fieldInput số điện thoại7EmailText fieldInput email8Tài khoảnText fieldInput tài khoản9Mật khẩuText fieldInput mật khẩu10Đăng kýButtonThực hiện đăng ký    Bảng 3.13 Giải thích các item trên layout dangnhap/ dangky
+Giải thích sử lý màn hình:
+➢ Chức năng : Đăng nhập và đăng ký tài khoản
+➢ Sự kiện :
+o Khi người dùng nhập đầy đủ thông tin thì nhấn “Đăng nhâp” nếu tài khoản và mật khẩu đúng sẽ chuyển sang giao diện trang chủ, và ngược lại sẽ thông báo lỗi. 
+o Khi người dùng chọn đăng ký thì ứng dụng sẽ chuyển sang giao diện đăng ký.
+o Khi đăng ký thất bại thì thông báo lỗi và đăng ký thành công thì sẽ chuyển sang giao diện đăng nhập.
+o Người dùng tiến hành đăng nhập sau khi đã đăng ký thành công.
+
+
+Giao diện trang chủ
+
+    Hình 3.23 Giao diện trang chủ
+Giải thích các item của layout:
+STTTên LoạiMô tả1MenuButtonInput tài khoản2Tìm kiếmButtonInput mật khẩu3Giỏ hàngButtonThực hiện đăng nhập4Sản phẩmItemHiển thị sản phẩm5Màn hình chínhButtonChuyển về giao diện chính6BrandButtonChuyển sang giao brand7TrendButtonChuyển sang giao diện trend8StyleButtonChuyển sang giao diện style    Bảng 3.14 Giải thích các item trên layout main
+Giải thích sử lý màn hình:
+➢ Chức năng : Giao diện chính
+➢ Sự kiện : 
+o Khi người dùng chọn vào icon menu ứng dụng sẽ mở menu hiển thị thông tin người dùng, cài đặt hoặc phần mô tả giới thiệu.
+o Khi người dùng chọn vào 1 sản phẩm ứng dụng sẽ chuyển trang giao diện chi tiết sản phẩm.
+o Khi người dùng chọn vào icon giỏ hàng ứng dụng sẽ chuyển sang giao diện giỏ hàng.
+o Khi người dùng chọn vào icon search ứng dựng sẽ chuyển sang giao diện tìm kiếm sản phẩm.
+o Khi người dùng chọn các icon trên home bottom bar ứng dụng chuyển về giao diện màn hình chính.
+o Khi người dùng chọn icon brand ứng dụng sẽ chuyển đến giao diện lựa chọn sản phẩm theo một số hãng nổi tiếng.
+o Khi người dùng chọn icon trend ứng dụng sẽ chuyển đến giao diện lựa chọn sản phẩm theo các mẫu đang hot hiện nay.
+o Ngoài ra người dùng có thể xem một số kiểu giày khác ở phần style khi người dùng chọn icon style. 
+
+
+    Giao diện chi tiết sản phẩm
+    
+    Hình 3.24 Giao diện chi tiết sản phẩm
+➢ Chức năng : Giao diện chi tiết sản phẩm
+➢ Sự kiện : 
+o Khi người dùng chon “Click để xem thông tin chi tiết” ứng dựng chuyển sang giao diện chi tiết sản phẩm.
+o Khi người dùng chọn thêm vào giỏ, ứng dụng hiện thông báo chọn size và số lượng cho sản phẩm.
+
+
+    Giao diện giỏ hàng
+    
+    Hình 3.25 Giao diện giỏ hàng/ hóa đơn
+➢ Chức năng : Thêm sản phẩm vào giỏ
+➢ Sự kiện : 
+o Khi người dùng xác nhận chọn size và số lượng cho sản phẩm, ứng dung thêm sản phẩm vào giỏ hàng.
+o Khi người dùng chọn thanh toán, ứng dụng hiển thị thông báo xác nhận vào tạo hóa đơn.
+
+
+    Giao diện hóa đơn
+    
+    Hình 3.26 Giao diện hóa đơn
+➢ Chức năng : Thêm sản phẩm vào giỏ
+➢ Sự kiện : 
+o Khi người dùng chọn hóa đơn để xem thông tin chi tiết hóa đơn.
+
+
+    Giao diện tìm kiếm
+    
+    Hình 3.27 Giao diện tìm kiếm
+➢ Chức năng : Thêm sản phẩm vào giỏ
+➢ Sự kiện : 
+o Khi người dùng nhập từ khóa để tim kiếm sản phẩm theo: tên, hãng, người thiết kế,...
+o Ứng dụng hiển thị sản phẩm.
+
+
+    Giao diện menu/ thông tin cá nhân
+    
+    Hình 3.28 Giao diện menu/ thông tin cá nhân
+➢ Chức năng : Menu/ thông tin cá nhân
+➢ Sự kiện : 
+o Phần menu chứa các chức năng như: tài khoản, hóa đơn, liên hệ, giới thiệu.
+o Ứng dụng hiển thị thông tin cá nhân.
+o Khi người dùng nhấp vào icon edit ứng dụng chuyển sang giao diện cập nhật thông tin cho người dùng.
+
+
+    Giao diện map/ gợi ý sản phẩm 
+    
+    Hình 3.29 Giao diện map/ gợi ý sản phẩm
+➢ Chức năng : Giao diện map/ gợi ý sản phẩm
+➢ Sự kiện : 
+o Hiển thị địa chỉ và vị trí trên bản của của hàng trên bản đồ.
+o Giao diện gợi ý sản phẩm để người dùng có thể tham khảo.
+    
+
+
+Giao diện thêm sản phẩm
+
+
+    Hình 3.30 Giao diện thêm sản phẩm app admin
+➢ Chức năng : Giao diện thêm sản phẩm 
+➢ Sự kiện : 
+o Hiển thị danh sách sản phẩm.
+o Khi người dùng chọn thêm sản phẩm, ứng dụng yêu cầu nhập đủ thông tin ứng dụng và thêm sản phẩm
+Giao diện thêm thống kê
+
+    Hình 3.31 Giao diện thống kê sản phẩm
+➢ Chức năng : Giao diện map/ gợi ý sản phẩm
+➢ Sự kiện : 
+o Thống kê sản phẩm theo hãng.
+o Tạo biểu đồ biểu diễn thống kê sản phẩm.
+
+
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+- Tìm hiểu, nắm bắt được các công cụ thiết kế ứng dụng bán giày, công cụ lập trình Android Studio.
+- Biết cách thiết kế ứng dụng kết nối cơ sở dữ liệu với service và cách tổ chức dữ liệu.
+- Xây dựng được một hệ thống bán hàng cơ bản, giúp người dùng có thể mua hàng và giúp quản trị có thể quản lý hệ thống. 
+- Nắm rõ hơn quy trình tạo ra sản phẩm phần mềm.
+- Các dịch vụ trên Internet đặc biệt là dịch vụ thương mại điện tử .
+- Áp dụng đề tài vào sử dụng trong thực tế cho hệ thống nhỏ.
+- Biết được cách thiết kế ứng dụng kết nối cơ sở dữ liệu với service và cách tổ chức dữ liệu.
+- Sản phẩm đáp ứng được như cầu cơ bản của một ứng bán hàng và quản lý.
+4.2 Hạn chế của đề tài
+- Hệ thống bán giày mới dừng lại ở giải các module cơ bản, chưa có nhiều module tiện ích cho người dùng như: thăm dò ý kiến, hỏi đáp, chia sẻ.
+- Tài liệu, bản vẽ thiết kế cho dự án còn chưa chi tiết.
+- Chức năng đăng ký, đăng nhập cần được bổ sung khi nâng cấp thành hệ thống lớn và chuyên nghiệp hơn.
+- Giao diện còn hệ thống còn đơn giản.
+- Chưa thêm được hình thức hỗ trợ thanh toán và giao hàng dành cho người dùng.
+4.3 Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, em đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+- Xây dựng hoàn thiện các chức năng của một ứng dụng bán hàng, quản lý.
+- Tối ưu hóa hệ thống, mở rộng quy mô.
+- Thêm nhiều dữ liệu sản phẩm để ứng dụng đa dạng và phong phú.
+- Liên kết với website nhằm mở rộng thị trường kinh doanh.
+    
+TÀI LIỆU THAM KHẢO
+[1] Phạm Hữu Khang, Lập trình Android 2.0. Hà Nội, Việt Nam: Nhà xuất bản Lao Động Xã Hội, 2005.
+[2] Nguyễn Văn Quyết, Giáo trình Công nghệ di động và ứng dụng. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY, 2010.
+[3] Hoàng Quốc Việt, Giáo trình Lập trình android cơ bản. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY, 2016. 
+[4] https://developer.android.com/docs
+[5] https://stackoverflow.com/
+[6] https://github.com/
+[7] https://about.gitlab.com/
+    
+    
+ Xây dựng hệ thống bán giày cho cửa hàng Milky Way  
+    
+    
+24
+    
+    

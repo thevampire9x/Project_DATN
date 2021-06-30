@@ -1,0 +1,693 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+   Ngày nay khách hàng mong đợi các công ty phần mềm chuyển giao phần mềm chất lượng với chi phí thấp nhất và thời gian ngắn nhất để đáp ứng cho nhu cầu doanh nghiệp của họ. Tuy nhiên nhiều công ty phần mềm chỉ hội tụ vào khía cạnh chức năng qua vài phép kiểm thử như kiểm thử đơn vị, kiểm thử tích hợp, kiểm thử hệ thống... trong môi trường phát triển của họ, ít để ý tới cách phần mềm sẽ làm việc trong môi trường người dùng. Nhiều lần, phần mềm đáp ứng các yêu cầu chức năng nhưng thất bại trong kiểm thử chấp nhận của người dùng vì môi trường kiểm thử không tương hợp. Nắm bắt được yêu cầu thực tế, em chọn đề tài “Kiểm thử chấp nhận tự động với Selenium WebDriver và Specflow cho ứng dụng web” làm đồ án tốt nghiệp của mình.
+1.2 Mục tiêu của đề tài
+- Hiểu được khái quát kiến thức về kiểm thử phần mềm, kiểm thử tự động và kiểm thử chấp nhận.
+- Sử dụng được ngôn ngữ Gherkin, công cụ kiểm thử tự động cho ứng dụng web: “Selenium WebDriver” và “SpecFlow”
+- Sử dụng được ngôn ngữ Gherkin và công cụ mã nguồn mở Selenium WebDriver, SpecFlow để viết kịch bản kiểm thử và chạy ứng dụng.
+- Xây dựng được framework “Kiểm thử chấp nhận tự động với Selenium WebDriver và Specflow cho ứng dụng web”.
+1.3 Giới hạn và phạm vi của đề tài
+- Đề tài “Kiểm thử chấp nhận tự động với Selenium WebDriver và Specflow cho ứng dụng web” được xây dựng trên công cụ mã nguồn mở Selenium WebDriver, SpecFlow, công cụ lập trình Visual Studio 2015 và sử dụng ngôn ngữ Gherkin.
+- Đề tài được triển khai trên web 
+1.4 Nội dung thực hiện
+- Đưa ra báo cáo khái quát kiến thức về kiểm thử phần mềm, kiểm thử tự động và kiểm thử chấp nhận, ngôn ngữ Gherkin và các công cụ kiểm thử tự động cho ứng dụng web Selenium WebDriver và SpecFlow.
+- Sử dụng được ngôn ngữ Gherkin và công cụ mã nguồn mở Selenium WebDriver, SpecFlow để viết kịch bản kiểm thử  và chạy ứng dụng.
+- Xây dựng được Framework “Kiểm thử tự động chấp nhận cho ứng dụng Web”.
+1.5 Phương pháp tiếp cận
+Đề tài đã ứng dụng những kiến thức đã học trong công nghệ phần mềm, kiểm thử phần mềm góp phần nghiên cứu khả năng tự động hóa kiểm thử chấp nhận cho ứng dụng web.
+- Cách tiếp cận: Tìm hiểu về kiểm thử chấp nhận thông qua việc thu thập, nghiên cứu các tài liệu liên quan.
+- Các phương pháp tiếp cận:
++ Phương pháp đọc tài liệu 
++ Phương pháp thực nghiệm.
++ Phương pháp phân tích mẫu
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Kiểm thử phần mềm
+2.1.1 Kiểm thử phần mềm là gì?
+   • Phần mềm (software): 
+    Theo nghĩa thông thường là những chương trình, ứng dụng, website được viết, cài đặt và thực thi trên môi trường điện toán (computing) như: máy tính (computer), điện thoại di động (mobile phone), các hệ thống nhúng (firmware …). Ngoài những điểm trên, khái niệm software trong Kiểm thử phần mềm còn mở rộng ra bao gồm cả các tài liệu (documentation), dữ liệu (data) phù hợp và liên quan đến hoạt động của hệ thống điện toán.
+   • Kiểm thử phần mềm (software testing): 
+   - Kiểm thử phần mềm là quá trình thực thi một chương trình với mục đích tìm lỗi. (Theo “The Art of Software Testing”- Nghệ thuật kiểm thử phần mềm).
+   Có thể định nghĩa một cách dễ hiểu như sau: Kiểm thử phần mềm là hoạt động nhằm tìm kiếm, phát hiện các lỗi của phần mềm được kiểm thử về thiết kế, mã nguồn, chức năng, dữ liệu, bảo mật, thân thiện với người dùng, tài liệu kèm theo, môt trường hoạt động, tốc độ hoạt động, khả năng tải của hệ thống, …
+• Mục tiêu của kiểm thử phần mềm
+- Phát hiện càng nhiều lỗi càng tốt trong thời gian kiểm thử xác định trước.
+- Chứng minh rằng sản phẩm phần mềm phù hợp với các đặc tả yêu cầu của nó.
+- Xác thực chất lượng kiểm thử phần mềm đã dùng chi phí và nỗ lực tối thiểu
+- Tạo các kịch bản kiểm thử (test case) chất lượng cao, thực hiện kiểm thử hiệu quả và tạo ra các báo cáo vấn đề đúng và hữu hạn.
+2.1.2 Phân loại kiểm thử phần mềm
+Kiểm thử phần mềm được chia làm 2 loại: Kiểm thử tĩnh và kiểm thử động.
+   • Kiểm thử tĩnh- Static testing
+Là tester làm mọi công việc hoàn toàn bằng tay, từ viết test case đến thực hiện test, mọi thao tác như nhập điều kiện đầu vào, thực hiện một số sự kiện khác như nhấn nút và quan sát kết quả thực tế, sau đó so sánh kết quả thực tế với kết quả mong đợi trong test case, điền kết quả test.
+   • Các kĩ thuật sử dụng trong kiểm thử tĩnh
+   - Walkthough: Phương pháp review giữa các kiểm thử viên với nhau sẽ phát hiện ra vấn đề và năng lực của từng người để giao nhiệm vụ (task) phù hợp với từng người.
+   - Inspacetion:
+   • Là phương pháp tìm lỗi ở source code
+   • Đảm bảo thực hiện theo bản đặc tả yêu cầu, bản đặc tả hệ thống
+   • Đảm bảo tính đúng đắn và xử lý logic
+   • Kiểm thử động- Dynamic testing
+   Là kiểm thử dựa trên các ca kiểm thử xác định bằng sự thực hiện của đối tượng kiểm thử hay chạy các chương trình.
+   • Các kĩ thuật trong kiểm thử động
+   - Kiểm thử đơn vị( Unit testing): 
+   • Là việc kiểm thử ở mức độ thấp nhất (các phương thức- method, hàm- function, lớp- class trong mã nguồn). Nhằm đảm bảo các thành phần trên hoạt động đúng như yêu cầu. Việc kiểm tra ở mức độ này thường do chính lập trình viên (Deverloper) thực hiện trong quá trình mã hóa (coding, implement).
+   • Các kĩ thuật Unit test:
++ Bao phủ câu lệnh- Statement Coverage: Trong trường hợp test case được thực thi theo cách mà mỗi câu lệnh của code là thực thi ít nhất một lần.
++ Bao phủ nhánh/ quyết định- Branch/ Decision Coverage: Điều kiện bao phủ test yêu cầu đủ các test case như là mỗi điều kiện trong nhánh quyết định lấy tất cả các nhánh có thể ít nhất một lần.
++ Bao phủ đường đi- Path Coverage: Test case được thực thi theo cách mà mỗi đường đi được thực thi ít nhất một lần.
+   - Kiểm thử tích hợp (Intergration Testing): 
+   • Là việc kiểm thử nhằm xem xét các vấn đề có thể xảy ra khi hai hoặc nhiều thành phần (component, module) của hệ thống tương tác với nhau.
+   • 4 loại kiểm thử tích hợp (Intergration Testing)
++ Kiểm thử cấu trúc (structure): kiểm tra nhằm đảm bảo các thành phần bên trong của chương trình chạy đúng.
++ Kiểm thử chức năng (functional): kiểm tra chỉ chú trọng đến chức năng của chương trình mà không quan tâm đến cấu trúc bên trong.
++ Kiểm tra hiệu năng (performance): kiểm tra việc vận hành của hệ thống.
++ Kiểm tra khả năng chịu tải (stress): kiểm tra các giới hạn của hệ thống.
+   • Các kĩ thuật Intergration Test
++ Tích hợp từ trên xuống dưới (Top- Down):gộp dần các module từ trên xuống theo trật tự dòng điều khiển, bắt đầu từ module điều khiển “main”, gắn với module phụ trợ vào module điều khiển thượng cấp.
+   
+Hình 21: Mô hình kĩ thuật tích hợp từ trên xuống dưới (Top- down)
++ Tích hợp từ dưới lên (Bottom- Up): Bắt đầu xây dựng và kiểm thử từ các module nguyên tố ở mức thấp trước.Thông thường, người ta thường nhóm các module tầng dưới thành các nhóm chức năng, tích hợp và kiểm thử chúng theo từng nhóm.
+   
+Hình 22: Mô hình kĩ thuật tích hợp từ dưới lên (Bottom- up)
++ Tích hợp kẹp (Sandwuch): Là một phương pháp kiểm thử kết hợp cả Top- Down và Bottom- Up.
+   Tất cả các module và giao diện đều phải kiểm thử bằng phương pháp Top- Down.
+   Cả Driver và stub đều được sử dụng khi cần thiết.
+   Tất cả các Module đều được xậy dựng và kiểm thử unit bắt đầu từ mức thấp nhất, sử dụng chiến thuật Bottom- Up.
+   - Kiểm thử hệ thống ( system testing)
+   Là mức độ kiểm thử toàn bộ các chức năng của hệ thống phần mềm. Bao gồm tất cả các thành phần tương tác với nhau, và hoạt động trong môi trường giống như môi trường thực tế (hệ điều hành, cơ sở dữ liệu, kết nối mạng, khả năng tương thích với các phần mềm khác …). Bên cạnh đó, kiểm thử hệ thống cũng chú ý đến vấn đề bảo mật, thân thiện, khả năng đáp ứng, tốc độ thực hiện của hệ thống phần mềm.
+   - Kiểm thử chấp nhận ( Acceptance testing)
+   Là việc kiểm thử để chứng minh phần mềm có thỏa mãn tất cả yêu cầu của khách hàng và khách hàng chấp nhận sản phẩm.
+   • So sánh kiểm thử tự động và kiểm thử thủ công
+   - Ưu điểm:
+   • Độ tin cậy cao: Trong trường hợp có quá nhiều test case cần phải thực hiện thì độ tin cậy của kiểm thử tự động thường cao hơn so với kiểm thử thủ công.
+   • Khả năng lặp: Công cụ kiểm thử tự động ra đời để giúp cho các tester không phải lặp đi lặp lại các thao tác như: nhập liệu, click, check kết quả...một cách nhàn chán với độ tin cậy và ổn định cao.
+   • Tốc độ cao: Do thực thi bởi máy nên tốc độ của kiểm thử tự động nhanh hơn nhiều so với tốc độ của con người.
+   • Chi phí thấp: Nếu áp dụng kiểm thử tự động đúng cách có thể tiết kiệm được nhiều chi phí, thời gian và nhân lực.
+   - Nhược điểm:
+   • Khó mở rộng, khó bảo trì: Trong cùng một dự án, để mở rộng phạm vi cho kiểm thử tự động khó hơn nhiều so với kiểm thử thủ công.
+   • Khả năng bao phủ thấp: Do khó ứng dụng, khó mở rộng và đòi hỏi nhiều kỹ thuật lập trình nên độ bao phủ của kiểm thử tự động khá thấp.
+   • Vấn đề công cụ và nhân lực: Hiện nay cũng có nhiều công cụ hỗ trợ kiểm thử tự động khá tốt nhưng vẫn còn nhều hạn chế. Ngoài ra nguồn nhân lực có thể sử dụng thành thạo các công cụ này cũng không nhiều.
+2.1.3 Các chiến lược kiểm thử phần mềm
+   Ba trong số những chiến lược kiểm thử thông thường nhất bao gồm: Kiểm thử hộp trắng, kiểm thử hộp đen, kiểm thử hộp xám.
+   • Kiểm thử hộp đen ( Black Box Testing)
+   Dùng để kiểm tra chức năng mà không xem xét mã nguồn cũng như cấu trúc chương trình bên trong .Công việc cần làm là nhập dữ liệu đầu vào (input) và kiểm tra kết quả trả về có đúng với kết quả mong muốn không.
+   - Kiểm thử hộp đen bao gồm:
+   • Kiểm thử chức năng và kiểm thử hệ thống
+   • Kiểm thử quá tải và kiểm thử hỏng hóc
+   • Kiểm thử hiệu năng
+   - Các kĩ thuật trong kiểm thử hộp đen 
+   o Phân vùng tương đương (Equivalence partitioning)
+   + Ý tưởng: phân hoạch miền dữ liệu vào thành các dữ liệu có liên hệ với nhau.
+   Mỗi lớp dùng để kiểm thử 1 chức năng, gọi là lớp tương đương.
+   + Nguyên tắc phân hoạch các lớp tương đương
+   o Nếu dữ liệu vào thuộc một khoảng, xây dựng:
+   Một lớp các giá trị lớn hơn
+   Một lớp các giá trị nhỏ hơn
+   N các giá trị hợp lệ
+   o Nếu dữ liệu vào là tập hợp các giá trị, xây dựng:
+   Một lớp tập rỗng
+   Một lớp quá nhiều các giá trị
+   Một lớp hợp lệ
+   o Nếu dữ liệu vào là điều kiện ràng buộc, xây dựng:
+   Một lớp với ràng buộc được thỏa mãn
+   Một lớp với ràng buộc không được thỏa mãn
+   • Phân tích giá trị biên (Boundary value analysis )
+   + Ý tưởng: tập chung phân tích các giá trị biên của miền dữ liệu để xây dựng dữ liệu kiểm thử.
+   + Nguyên tắc kiểm thử các dữ liệu bao gồm:
+   Giá trị nhỏ nhất
+   Giá trị gần kề lớn hơn giá trị nhỏ nhất
+   Giá trị bình thường
+   Giá trị gần kề nhỏ hơn giá trị lớn nhất
+   Giá trị lớn nhất
+   • Kiểm thử hộp trắng ( White Box Testing))
+   Kiểm thử hộp trắng xem xét mọi module trong chương trình (mã nguồn, xử lý dữ liệu...). Việc kiểm thử được dựa trên các phân tích về cấu trúc bên trong của thành phần / hệ thống.
+   - Kiểm thử hộp trắng bao gồm:
+   • Kiểm thử đường dẫn (Path test): Kiểm thử bao quát các dòng source code, nhánh và đường dẫn.
+   • Kiểm thử luồng điều khiển (Control flow test): Xác nhận truy cứu các lịch sử thực hiện source code bằng cách sử dụng trình gỡ lỗi.
+   • Kiểm thử nội bộ: Xác nhận các tham số, counter, vòng lặp.
+   • Kiểm thử tính năng: Đo thời gian xử lý của moudel, đường dẫn, dữ liệu cụ thể.
+   • Kiểm thử hộp xám ( Gray Box Testing)
+   Là kĩ thuật kiểm thử dựa trên những đặc tính của cả kiểm thử hộp đen và kiểm thử hộp trắng. Mục đích chính của kiểm thử hộp trắng là kiểm thử các ứng dụng trên nền web.
+2.1.4 Các loại kiểm thử phần mềm
+   • Kiểm thử giao diện( Interface testing)
+   - Khái niệm kiểm thử giao diện : 
+   Kiểm thử giao diện là kiểm tra xem giao diện sử dụng có nhất quán, rõ ràng, có dễ sử dụng và đúng như mong đợi của người sử dụng hay không. Đảm bảo sự giao tiếp giữa người sử dụng và ứng dụng diễn ra ổn thỏa. Người dùng có thể giao tiếp với ứng dụng một cách dễ dàng mà không gặp bất cứ sự khó khăn nào về mặt giao diện.
+   - Một số chú ý khi kiểm thử giao diện:
+   + Khi kiểm thử giao diện nên kiểm thử trên nhiều trình duyệt để đảm bảo sự tin cậy.
+   + Kiểm thử giao diện cần và quan trọng nhất là dựa trên bản đặc tả.
+   • Kiểm thử chức năng( Functional Test)
+   - Khái niệm kiểm thử chức năng:
+   Kiểm thử chức năng là kiểm tra xem các thành phần chức năng của hệ thống hoạt động có đúng đắn hay không, có đúng với mục đích của người sử dụng hay không, đảm bảo cho các thông số kĩ thuật, các dữ liệu đầu ra, đầu vào, chức năng trong hệ thống hoạt động đúng quy tắc nghiệp vụ và chính xác.
+   - Mục đích của test chức năng:
+Đảm bảo mục tiêu đúng đắn của từng chức năng, của mỗi ứng dụng bao gồm định hướng, dữ liệu vào, xử lý và dữ liệu nhận được.
+   • Kiểm thử phi chức năng ( Non- Functional Test)
+   Đề cập đến các khía cạnh của phần mềm có thể không liên quan đến một chức năng cụ thể hoặc hoạt động người dùng, chẳng hạn như khả năng mở rộng và hiệu suất khác, hành vi dưới những hạn chế hoặc bảo mật nhất định.
+   • Kiểm thử cấu hình và khả năng tương thích
+   - Khái niệm kiểm thử cấu hình ( Test configuration) và khả năng tương thích ( Compatibility testing):
+   + Kiểm thử cấu hình: Là kiểm tra hoạt động của phần mềm với tất cả các máy tính.
+   + Kiểm thử khả năng tương thích: Là kiểm tra xem phần mềm có tương tác và chia sẻ thông tin chính xác với các pần mềm khác hay không.Sự tương tác này có thể xảy ra giữa hai chương trình trên cùng máy tính, hoặc trên các máy tính khác nhau được kết nối Internet cách nhau tới hàng nghìn dặm.
+   - Mục đích:
+   Mục đích là để đảm bảo rằng ứng dụng có thể được thực thi với nhiều cấu hình nhất. Với mỗi cấu hình được hỗ trợ, hy vọng rằng ứng dụnghoạt động như người dùng mong đợi.
+   • Kiểm thử hiệu năng (Performance testing)
+   - Khái niệm kiểm thử hiệu năng :
+   + Kiểm thử hiệu năng là một dạng kiểm tra hiệu suất trong đó thời gian phản hồi, tỷ lệ giao dịch và các yêu cầu phụ thuộc thời gian khác được đo đạc và đánh giá.
+   + Performance testing là kiểm tra các yêu cầu về hiệu suất có đạt được hay không.
+   - Các yếu tố quan trọng của kiểm thử hiệu năng:
+   Kiểm thử hiệu năng liên quan đến ba thành phần chính:
+   + Sức tải công việc
+   + Môi trường của hệ thống và nguồn tài nguyên có sẵn
+   + Thời gian đáp ứng của hệ thống
+   - Ba giai đoạn của kiểm thử hiệu năng:
+   Tiến trình của kiểm thử hiệu năng có thể chia thành ba giai đoạn: lập kế hoạch, kiểm thử và phân tích.
+   + Giai đoạn lập kế hoạch:
+   ➢ Định nghĩa các mục tiêu và kết quả, xác định mong đợi.
+   ➢ Thu thập yêu cầu kiểm thử và hệ thống
+   ➢ Định nghĩa sức tải
+   ➢ Chọn đơn vị đo hiệu năng
+   ➢ Xác định các kiểm thử cần thực thi và thiết kế kịch bản người sử dụng và tạo các script kiểm thử.
+   + Giai đoạn kiểm thử
+   ➢ Chuẩn bị sẵn sàng (nghĩa là cài đặt môi trường kiểm thử và các trình giám sát hiệu năng trên mạng và trình chủ).
+   ➢ Thực thi các kiểm thử
+   ➢ Thu thập dữ liệu
+   + Giai đoạn phân tích:
+   ➢ Phân tích kết quả
+   ➢ Thay đổi hệ thống để tối ưu hiệu năng
+   ➢ Thiết kế các kiểm thử mới
+   • Kiểm thử bảo mật ( Security Testing)
+   - Khái niệm kiểm thử bảo mật
+   Là một tiến trình nhằm xác định rằng một hệ thống thông tin bảo mật dữ liệu cần phải đảm bảo tính đồng nhất và duy trì những chức năng như đã chỉ định.
+   - Mục đích của kiểm thử bảo mật
+   + 	Bảo mật mức ứng dụng: Đảm bảo rằng một người dùng chỉ có thể truy cập vào những chức năng hoặc dữ liệu mà nhóm người dùng đó được phép.
+   +   Bảo mật mức hệ thống: Đảm bảo rằng chỉ có những người được phép truy cập hệ thống và ứng dụng được phép truy cập chúng.
+   • Kiểm thử khả năng phục hồi ( Recovery Test):
+   - Khái niệm kiểm thử khả năng phục hồi:
+   Bảo đảm hệ thống có khả năng khôi phục trạng thái ổn định trước đó trong tình huống mất tài nguyên hoặc dữ liệu; đặc biệt quan trọng đối với các hệ thống giao dịch như ngân hàng trực tuyến.
+   - Mục đích của kiểm thử khả năng phục hồi:
+   + Để đảm bảo các hoạt động có thể được tiếp tục sau khi xảy ra thảm họa.
+   + Xác minh quá trình phục hồi và hiệu quả của quá trình phục hồi.
+   + Bảo đảm hệ thống có khả năng khôi phục trạng thái ổn định trước đó trong tình huống mất tài nguyên hoặc dữ liệu.
+   • Kiểm thử Alpha ( Alpha testing)
+   Là việc kiểm thử hoạt động chức năng thực tế hoặc giả lập do người dùng/ khách hàng tiềm năng hoặc một nhóm test độc lập thực hiện tại nơi sản xuất phần mềm. Alpha testing thường dùng cho phần mềm đóng gói sẵn để bán (ví dụ: MS Office, Window, chương trình diệt virus) là một hình thức kiểm thử chấp nhận nội bộ.
+   • Kiểm thử Beta( Beta testing): 
+   Được thực hiện sau Alpha testing. Các phiên bản của phần mềm- được biết là các phiên bản beta- chúng được phát hành đến một số người để test nhiều hơn nữa có thể chắc chắn sản phẩm có một số bug.
+   • Kiểm thử hồi quy( Regression testing):
+    Tập chung vào tìm kiếm lỗi sau khi xảy ra việc thay đổi code. Đặc biệt nó kiểm tra theo cách hồi quy hoặc kiểm tra các bug cũ có bị lại hay không.
+   • Kiểm thử xác nhận( Verification testing): 
+   Phương pháp này được thực hiện để xác nhận một lỗi đã được sửa chữa thật hay chưa.
+2.1.5 Quy trình kiểm thử phần mềm
+   • Phân tích yêu cầu
+   Việc kiểm thử thường sẽ bắt đầu từ pha lấy yêu cầu trong quy trình phát triển phần mềm. Trong pha thiết kế, các tester làm việc với DEV để xác định phần nào của thiết kế có thể test và các thông số mà test sẽ làm việc.
+   • Lập kế hoạch test
+   - Mô tả nhiều việc như chiến lược test, test plan, tạo test case, …
+   - Khi có nhiều hoạt động sẽ thực hiện trong lúc test thì cần phải có kế hoạch
+   • Phát triển test
+   - Viết các test procedure, test case, test dataset, test script để sử dụng cho việc kiểm thử phần mềm
+   • Thực thi test
+   - Các tester thực thi phần mềm dựa trên kế hoạch và các tài liệu test sau đó báo cáo lỗi tìm thấy cho DEV
+   • Báo cáo test
+   - Khi việc kiểm thử kết thúc , các tester sẽ điền kết quả test vào các test case và tạo báo cáo kết quả kết quả test và cho biết phần mềm đã test có sẵn sàng cho phát hành hay chưa.
+2.2 Kiểm thử tự động
+2.2.1 Giới thiệu về lý thuyết kiểm thử tự động
+• Kiểm thử phần mềm tốn nhiều chi phí nhân công, thời gian. Trong một số dự án, chi phí kiểm thử phần mềm chiếm 50% tổng giá trị dự án. Nếu cần ứng dụng an toàn hơn, chi phí kiểm thử còn cao hơn nữa. Do đó một trong các mục tiêu của kiểm thử là tự động hóa nhiều, nhờ đó mà giảm thiểu chi phí, giảm lỗi, đặc biệt giúp việc kiểm tra hồi quy dễ dàng và nhanh chóng hơn. Tự động hóa việc kiểm thử là dùng phần mềm điều khiển việc thi hành kiểm thử, so sánh kết quả có giống với kết quả mong muốn, thiết lập các điều kiện đầu vào, các kiểm soát kiểm thử và các chức năng báo cáo kết quả. Trong lĩnh vực kiểm thử tự động hiện có khá nhiều công cụ test (Test tool) thương mại nổi tiếng như QuickTest Proessional, LoadRunner, WinRunner, Rational Robot, SilkTest, Jtest, Nunit,...Các công cụ này đã hỗ trợ cho Tester rất nhiều trong quá trình kiểm thử, vừa đem lại hiệu quả cao và giảm thiểu chi phí thực hiện.
+• Kiểm thử tự động là quá trình thực hiện một cách tự động các bước trong một kịch bản kiểm thử. Kiểm thử tự động bằng một công cụ nhằm rút ngắn thời gian kiểm thử.
+• Mục tiêu của kiểm thử tự động là:
+- Giảm bớt công sức và thời gian thực hiện quá trình kiểm thử cho cả một kế hoạch kiểm thử.
+- Tăng độ tin cậy 
+- Rèn luyện kĩ năng lập trình cho tester
+- Giảm chi phí cho tổng quá trình kiểm thử
+• Ưu, nhược điểm của kiểm thử tự động là:
+- Các ưu điểm của kiểm thử tự động
++ Kiểm thử chính xác và có thể bao quát thông tin
++ Không cần đến sự can thiệp của kiểm thử viên.
++ Giảm chi phí khi thực hiện kiểm tra số lượng lớn test case hoặc test case lặp lại nhiều lần.
++ Giả lập tình huống khó có thể kiểm thử bằng tay.
++ Theo dõi được chính xác kết quả từng giai đoạn và các báo cáo tổng hợp
+- Các nhược điểm của kiểm thử tự động
++ Chi phí cao cho việc chuyển giao công nghệ và đào tạo nhân viên
++ Tốn chi phí đầu tư lớn cho việc phát triển công cụ kiểm thử tự động
++ Tốn chi phí và thời gian cho việc tạo các kịch bản kiểm thử và bảo trì các kịch bản kiểm thử
++ Giai đoạn chuẩn bị kiểm thử yêu cầu nhiều nhân lực
++ Khu vực kiểm thử tự động có thể không bao quát đầy đủ, không áp dụng được trong việc tìm lỗi mới của phần mềm.
++ Đòi hỏi kiểm thử viên phải có kỹ năng tạo các script kiểm thử tự động.
+• Các trường hợp của kiểm thử tự động
+   - Không đủ tài nguyên
+   - Kiểm tra hồi quy
+   - Kiểm tra khả năng vận hành trong môi trường đặc biệt.
+2.2.2 Phân loại kiểm thử tự động
+   • 	Công cụ kiểm thử tự động mã trình
+   - Bộ phân tích tĩnh: phân tích cấu trúc và định dạng của chương trình.
+   - Bộ kiểm toán mã: xem phần mềm có phù hợp với các chuẩn mã tối thiểu chưa?
+   - Bộ xử lý khai báo: xem những khai báo xử lý ứng xử của chương trình có thật sự phù hợp với sự thực hiện chương trình thực hay không?
+   • 	Công cụ kiểm thử tự động dữ liệu
+   - Bộ sinh tệp kiểm thử: cho ra các giá trị tiền xác định, các tệp vào điển hình cho chương trình chịu kiểm thử.
+   - Bộ sinh dữ liệu thử: giúp lựa chọn dữ liệu để làm chương trình ứng xử theo một cách đặc biệt?
+   - Bộ xác minh kết quả: đưa ra báo cáo giá trị trung bình kết quả cho chuyên gia bảo đảm chất lượng phần mềm.
+   • Công cụ kiểm thử tự động cài đặt
+   - Các trợ giúp cho quá trình kiểm thử
+   + Cài đặt một chương trình dự định trong một môi trường kiểm thử 
+   + Nuôi chương trình đó bằng dữ liệu vào
+   + Mô phỏng ứng xử của các môđun phụ
+   - Bộ so sánh đầu ra
+   + So sánh một tập dữ liệu ra với một tập khác để xác định sự khác biệt
+   - Hệ tiến hành ký hiệu
+   + Dùng đặc tả đại số
+   - Mô phỏng môi trường
+   + Là một hệ thống dựa vào máy tính chuyên biệt có thể kiểm thử các môi trường bên ngoài của phần mềm thời gian thực và vận hành thực tại một cách động.
+   - Bộ phân tích dòng dữ liệu
+   + Phân tích quy mô và tần suất dòng dữ liêu dựa trên việc theo dõi dấu vết luồng dữ liệu đi qua hệ thống.
+2.2.3 Kiến trúc chung của một bộ công cụ kiểm thử tự động
+   Trong thực tế, có rất nhiều bộ công cụ hỗ trợ kiểm thử tự động được phát triển nhằm góp phần giải quyết các vấn đề khó khăn của quy trình kiểm thử. Hình dưới đây mô tả kiến trúc chung nhất của một bộ kiểm thử tự động.
+   Trong kiến trúc này, các công cụ kiểm thử được tích hợp trong một quy trình thống nhất nhằm hỗ trợ đầy đủ các hoạt động kiểm thử trong quy trình kiểm thử các sản phẩm phần mềm.
+   
+Hình 23: Kiến trúc chung của một công cụ kiểm thử tự động
+   • Các công cụ cơ bản trong kiến trúc bao gồm:
+- Quản lý kiểm thử: quản lý việc thực hiện/ thực thi các ca kiểm thử. Nó giám sát việc thực hiện từng ca kiểm thử ứng với bộ giá trị đầu vào, giá trị đầu ra mong muốn và giá trị đầu ra thực tế.
+- Sinh các ca kiểm thử: đây là một trong những công cụ quan trọng nhất của các bộ kiểm thử tự động. Tùy thuộc vào các kỹ thuật kiểm thử được áp dụng, công cụ này sẽ sinh ra tập các ca kiểm thử (chưa gồm giá trị đầu ra mong muốn) cho chương trình/đơn vị chương trình cần kiểm thử. Các ca kiểm thử được sinh ra chỉ chứa giá trị đầu vào để thực hiện nó. Các giá trị này có thể được lựa chọn trong cơ sở dữ liệu hoặc được sinh một cách ngẫu nhiên.
+- Sinh giá trị đầu ra mong muốn: Các ca kiểm thử được sinh ra bởi công cụ trên chỉ chứa các giá trị đầu vào. Công cụ này cho phép sinh ra giá trị đầu ra mong muốn ứng với mỗi bộ dữ liệu đầu vào của mỗi ca kiểm thử. Giá trị đầu ra mong muốn này sẽ được so sánh với giá trị đầu ra thực tế khi thực hiện ca kiểm thử này nhằm phát hiện ra các lỗi/khiếm khuyết của sản phẩm.
+- So sánh kết quả kiểm thử: Công cụ này so sánh giá trị đầu ra thực tế và giá trị đầu ra mong muốn của mỗi ca kiểm thử khi nó được thực hiện trên chương trình/đơn vị chương trình cần kiểm thử.
+- Tạo báo cáo kiểm thử: Một trong những ưu điểm của các bộ công cụ kiểm thử tự động là nó có cơ chế sinh báo cáo kiểm thử một cách chính xác và nhất quán. Dựa vào kết quả của công cụ so sánh kết quả kiểm thử, công cụ này sẽ tự động sinh ra báo cáo kết quả kiểm thử theo định dạng mong muốn của đơn vị phát triển.
+- Phân tích động: Công cụ này cung cấp một cơ chế nhằm kiểm tra việc thực hiện của các câu lệnh của chương trình cần kiểm thử nhằm phát hiện ra các lỗi và phát hiện các câu lệnh/đoạn lệnh không được thực hiện bới một tập các ca kiểm thử cho trước. Công cụ này cũng rất hiệu quả trong việc đánh giá tính hiệu quả của một bộ kiểm thử cho trước.
+- Bộ mô phỏng: Có nhiều loại mình mô phỏng được cung cấp trong các bộ kiểm thử tự động. Mục đích của các công cụ này là mô phỏng quá trình thực hiện của chương trình cần kiểm thử. Ví dụ, các công cụ mô phỏng giao diện người dùng cho phép thực hiện tự động các tương tác giữa người dùng và sản phẩm. Selenium1 là một ví dụ về một công cụ mô phỏng giao diện người dùng cho các ứng dụng Web.
+2.2.4 Quy trình kiểm thử tự động
+   Bảng dưới đây mô tả rõ hơn các bước kiểm thử tự động
+Bảng 21:  Bảng quy trình kiểm thử tự động
+   STT   Bước thực hiện   Mô tả   1   Chuẩn bị   Chuẩn bị môi trường và điều kiện test.   2   Tạo kịch bản test case   Giai đoạn này dùng công cụ kiểm thử để ghi lại các thao tác lên phần mềm cần kiểm tra và tự động sinh ra kịch bản kiểm thử.   3Chỉnh sửa kịch bản kiểm thử   Chỉnh sửa kịch bản kiểm thử thực hiện kiểm tra theo đúng yêu cầu đặt ra. Cụ thể, làm theo trường hợp kiểm thử cần thực hiện.   4   Chạy kịch bản kiểm thử   Chạy kịch bản kiểm thử để kiểm tra phần mềm có đưa ra đúng như kết quả mong muốn không.   5   Đánh giá kết quả   Đánh giá kết quả sau khi chạy kịch bản kiểm thử.2.2.5 Mối tương quan giữa kiểm thử tự động (KTTĐ) và toàn bộ chu trình kiểm thử phần mềm (KTPM)
+
+Hình 24: Mối tương quan KTTĐ và chu trình KTPM
+   • Lập kế hoạch test: 
+   Thu thập các đặc tả yêu cầu, lựa chọn những thành phần cần thực hiện kiểm thử.
+   • Phân tích thiết kế mô hình kiểm thử tự động( thiết kế test case):
+    Xây dựng mô hình phát triển mô hình phát triển kiểm thử tự động, thiết kế và xây dựng các test case để thực thi.
+   • Phát triển TestScript :
+   - Tạo TestScrpit: giai đoan này chúng ta sẽ sử dụng test tool để ghi lại các thao tác lên phần mềm cần kiểm tra và tự động sinh ra test script.
+   - Chỉnh sửa TestScript: chỉnh sửa để testscript thực hiện kiểm tra theo đúng yêu cầu đặt ra, cụ thể là làm theo test case cần thực hiện.
+   - Chạy TestScript: giám sát các hoạt động kiểm thử phần mềm của Testscript.
+   - Kiểm tra kết quả: kiểm tra kết quả thông báo ngay sau khi thực hiện kiểm thử tự động.
+   - Đánh giá kết quả kiểm thử: thông qua báo cáo kết quả kiểm thử, bổ sung, chỉnh sửa những sai sót.
+2.3 Kiểm thử chấp nhận ( Acceptance Testing)
+2.3.1 Khái niệm kiểm thử chấp nhận
+   - Kiểm thử chấp nhận (Acceptance testing) là kiểm thử chức năng, được thực hiện để kiểm tra xem phần mềm đáp ứng các yêu cầu của khách hàng.
+   - Kiểm thử chấp nhận được thực hiện bởi khách hàng, người dùng và các bên liên quan.
+2.3.2 Kịch bản kiểm thử chấp nhận
+Hình dưới đây mô tả kịch bản kiểm thử chấp nhận
+
+Hình 25: Kịch bản kiểm thử chấp nhận
+2.3.3 Các yếu tố trong kiểm thử chấp nhận
+   Kiểm thử chấp nhận là kiểm thử dựa vào:
+   - Các yêu cầu người dùng (User requirements)
+   - Các yêu cầu hệ thống (System requirements)
+   - Các trường hợp sử dụng (Use cases)
+   - Các qui trình xử lý công việc (Business processes)
+   - Các báo cáo phân tích rủi ro (Risk analysis reports)
+2.3.4 Mục tiêu của kiểm thử chấp nhận
+   Mục tiêu của acceptance testing là xác nhận lại sự tin tưởng vào hệ thống, các đặc tính thuộc về chức năng hoặc phi chức năng của hệ thống. Tìm kiếm lỗi không phải là trọng tâm chính của Acceptance testing. Acceptance testing có thể đánh giá sự sẵn sàng của hệ thống để triển khai và sử dụng, mặc dù không nhất thiết phải là mức cuối cùng của việc kiểm thử. Ví dụ, một cuộc kiểm thử tích hợp hệ thống ở quy mô lớn có thể được thực hiện sau khi đã thực hiện acceptance test đối với một hệ thống.
+2.3.5 Một số loại kiểm thử chấp nhận thông thường
+   • User acceptance testing (Kiểm thử chấp nhận người dùng)
+   Thông thường dùng để kiểm tra tính phù hợp với người dùng của hệ thống, công việc này được thực hiện bởi người dùng của doanh nghiệp.
+   • Operational (acceptance) testing (Kiểm thử chấp nhận hoạt động
+   Chấp nhận hệ thống bởi các quản trị viên hệ thống (system administrators), bao gồm:
+   + Kiểm thử phần backup/restore (sao lưu - phục hồi hệ thống)
+   + Khôi phục lại hệ thống sau khi có sự cố (Disaster recovery) như cúp điện, hỏa hoạn...
+   + Quản trị người dùng (User management) như phân quyền, lần lượt login bằng tất cả các quyền.
+   + Các nhiệm vụ bảo trì (Maintenance tasks)
+   + Các nhiệm vụ tải data và di chuyển data. (Data load and migration tasks)
+   + Kiểm tra các lỗ hổng bảo mật định kỳ. (Periodic checks of security vulnerabilities)
+   • Contract and regulation acceptance testing (Kiểm thử chấp nhận hợp đồng và thỏa thuận)
+   Contract acceptance testing được thực hiện với tiêu chí chấp nhận một hợp đồng nâng cấp - phát triển phần mềm. Tiêu chuẩn chấp nhận cần được xác định khi các bên thoả thuận hợp đồng. Điều lệ chấp nhận thử nghiệm được thực hiện đối với bất kỳ quy định phải được dựa vào, chẳng hạn như quy định của chính phủ, pháp luật hoặc các điều lệ an toàn.
+   • Alpha and beta (or field) testing (Kiểm thử alpha và beta)
+   Phát triển của thị trường hoặc COTS, phần mềm thường muốn nhận được phản hồi từ khách hàng tiềm năng hoặc khách hàng trong thị trường của họ trước khi sản phẩm phần mềm được đóng gói để thương mại. Alpha testing được thực hiện tại nơi tổ chức phát triển nhưng không phải do nhóm phát triển test mà do khách hàng thực hiện test. Beta testing hoặc field-testing được thực hiện bởi khách hàng hoặc các khách hàng tiềm năng tại nơi của họ (khách hàng download bản beta và cài vào máy mình rồi sử dụng).
+   
+
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Selenium Webdriver
+3.1.1 Khái quát về Selenium
+3.1.1.1  Selenium là gì?
+   - Selenium là một công cụ kiểm thử phần mềm tự động mã nguồn mở cho việc kiểm thử ứng dụng web. 
+   - Selenium có thể chạy được trên hầu hết các trình duyệt như: IE, Mozilla FireFox, Chrome, Opera; và hầu hết các hệ điều hành như Windows, Mac, Linux.
+3.1.1.2  Đặc điểm của Selenium
+   - Mã nguồn mở: Đây là điểm mạnh của Selenium khi có sự so sánh với các test tool khác. Vì là mã nguồn mở nên có thể sử dụng mà không cần lo lắng về phí bản quyền hay thời hạn sử dụng.
+   - Selenium hỗ trợ nhiều ngôn ngữ lập trình
+   - Selenium hỗ trợ chạy trên nhiều hệ điều hành khác nhau 
+3.1.1.3  Cấu trúc của Selenium
+
+Hình 31: Cấu trúc của Selenium
+   • Selenium gồm 4 thành phần:
+   -  Selenium IDE (Integrated Development Environment) là công cụ cho phép chúng ta Record/Playback một test scrpit. Đây là một add-on hỗ trợ cho FireFox, chúng ta chỉ có thể Record trên trình duyệt FireFox, nhưng lại có thể Playback trên các trình duyệt khác như IE, Chrome, ...
+   -  Selenium RC, Selenium WebDriver: Là một thư viện cho phép chúng ta lập trình (scripting) test script trên các ngôn ngữ khác nhau như Python, Java, C#.
+   -  Selenium Gird: là một hệ thống hỗ trợ người dùng thực thi test script trên nhiều trình duyệt một cách song song mà không cần phải chỉnh sửa test scrpit
+3.1.1.4  Ưu, nhược điểm của Selenium
+   • Ưu điểm
+   - Là công cụ mã nguồn mở 
+   - Đơn giản, dễ cài đặt, dễ làm việc
+   - Sử dụng miễn phí
+   - Dễ dàng ghi và phát lại các thao tác của người dùng với trình duyệt 
+   - Gỡ lỗi hặc thiết lập các điểm dừng
+   - Tự động hoàn chình cho tất cả các lệnh Selenium thường gặp
+   - Hỗ trợ các tệp tin selenium uer-extension.js
+   - Dễ dàng điều chình thông qua các Plugin.
+   • Nhược điểm
+   - Không thể đảm bảo bất kỳ add-in nào được yêu cầu nếu selenium không thể nhận ra các đối tượng
+   - Hỗ trợ được cung cấp cho selenium rất ít.
+3.1.2 Tìm hiểu về Selenium Webdriver
+3.1.2.1 Giới thiệu về Selenium WebDriver
+   - WebDriver là một công cụ để kiểm thử tự động hóa cho ứng dụng web. Nó thường được gọi là Selenium 2.0.
+   - Selenium-WebDriver (aka WebDriver hoặc Selenium 2) là một kế thừa của Selenium RC. Nó thực hiện cùng một công việc, nhưng theo một cách khác: thay vì tiêm một mã JavaScript vào trình duyệt để mô phỏng hành động của người dùng, nó sử dụng các hỗ trợ của trình duyệt để tự động hóa (khác nhau cho mỗi trình duyệt), nó tương tác trực tiếp với các trình duyệt mà không cần bất kỳ trung gian. Ngoài ra, thay vì một API dựa trên từ điển (sử dụng trong Selenium RC), nó cung cấp thuận tiện hơn API hướng đối tượng.
+   - Tính năng chính của Selenium Webdriver là việc tích hợp Webdriver API. Ngoài việc giải quyết một số hạn chế trong Selenium RC API, Selenium Webdriver còn được thiết kế để mang đến một giao diện lập trình đơn giản hơn. Nó cho phép sử dụng một trong số các ngôn ngữ lập trình như HTML, Java, .Net, Ruby... để tạo kịch bản kiểm thử kết hợp với sử dụng các điều kiện, vòng lặp... khiến cho test script trở nên chính xác hơn.
+   - Selenium Webdriver còn được phát triển tốt hơn để hỗ trợ cho các trang Web động do các phần tử trong một trang Web động có thể thay đổi bất cứ lúc nào, ngay cả khi trang đó không được tải lại. Vì vậy, Selenium Webdriver được phát triển để hỗ trợ quá trình kiểm thử mà không cần phải thực hiện lại khi có thay đổi xảy ra.
+   - Selenium Webdriver: sử dụng ngôn ngữ lập trình để tạo ra các Script
+   + Sử dụng điều kiện rẽ nhánh
+   + Sử dụng vòng lặp  
+3.1.2.2 Kiến trúc Selenium Webdriver
+   Slenium Webdriver được giải thích với một sơ đồ kiến trúc đơn giản như hình dưới đây:
+   
+Hình 32: Kiến trúc Selenium WebDriver
+3.1.2.3 So sánh Selenium Webdriver và Selenium RC
+   • Cấu trúc : Cấu trúc của WebDriver đơn giản hơn Selenium RC
+   - WebDriver kiểm soát trình duyệt từ cấp độ OS. Tất cả những gì chúng ta cần khi sử dụng WebDriver cho việc kiểm thử là tập lệnh Selenium và một trình duyệt để thực hiện các lệnh trên.
+
+Ngược lại, Selenium RC có cấu trúc phức tạp hơn rất nhiều. Cụ thể như sau:
+   - Trước khi bắt đầu kiểm thử chúng ta phải chạy một ứng dụng riêng biệt được gọi là Selenium-RC Server. Đây là một ứng dụng hoạt động như một trạm trung gian giữa các selenium command và trình duyệt.
+   - Khi chúng ta bắt đầu thực hiện kiểm thử, Selenium- RC Server (gọi tắt là Server) sẽ truyền một chương trình Javascript gọi là Selenium Core vào trong trình duyệt. Selenium Core sẽ nhận chỉ thị được đưa ra bởi server ( Các chỉ thị được hình thành khi chạy các selenium command)
+   - Tiếp theo Selenium core sẽ thực hiện các chỉ thị này như một lệnh Javascript 
+   - Lúc này, trình duyệt mới nhận được các lệnh từ Selenium Core và phản hồi lại phía server.
+   - Cuối cùng server mới trả về kết quả cho chúng ta. Như vây thay vì việc trực tiếp thực hiện và nhận phản hồi từ trình duyệt như một end-user thông thường, khi sử dụng Selenium RC chúng ta phải qua rất nhiều bước trung gian.
+Để mô tả rõ hơn quy trình, ta xem quy trình dưới đây :
+ 
+   • Tốc độ
+   Như chúng ta đã thấy, từ cấu trúc hoạt động được mô tả như ở trên, chắc chắn tốc độ thực thi và nhận phản hồi từ trình duyệt khi sử dụng WebDriver sẽ nhanh hơn vì nó thực hiện mọi hành động trực tiếp với trình duyệt còn Selenium-RC thì phải thông qua trạm trung gian và mất thời gian hơn cho việc chuyển đổi nên thời gian để nhận phản hồi từ trình duyệt sẽ dài hơn.
+   • Sự tương tác thực tế
+   Webdriver có tính tương tác gần với thực tế hơn vì nó thực hiện các hành động trực tiếp với trình duyệt giống như các end-user trong thực tế. Còn Selenium-RC thì không như vậy, khi sử dụng Selenium-RC, cái trực tiếp tương tác với trình duyệt là Selenium Core và vì vậy sẽ có một số trường hợp kết quả trả về sai so với thực tế. Ví dụ, có một trường trên trang web bị vô hiệu hóa, thực tế end-user không thể nhập bất cứ dữ liệu nào vào trong trường đó. Yêu cầu của chúng ta là phải kiểm tra xem thực tế trường đó đã bị vô hiệu hóa hay chưa?
+   - TH1: sử dụng WebDriver, kết quả trả về là không nhập được dữ liệu vào trường đang kiểm tra.
+   - TH2: Sử dụng Selenium-RC, một số kết quả trả về cho thấy vẫn có trường hợp cho phép nhập dữ liệu vào trường đang vô hiệu hóa.
+3.1.2.4 Đặc điểm của Selenium Webdriver
+   - "Giao diện WebDriver", đại diện cho một trình duyệt web lý tưởng dùng để kiểm tra. Ba loại phương thức trong lớp này:
+   • Điều chỉnh trình duyệt
+   • Lựa chọn các yếu tố của trang web
+   • Debug 
+   - WebDriver để hỗ trợ đa ngôn ngữ cũng như hỗ trợ nhiều trình duyệt có nghĩa là nếu có API hỗ trợ nhiều ngôn ngữ thì đây sẽ tự động dẫn đến nhiều nền tảng.
+   - Hỗ trỡ nhiều ngôn ngữ
+
+
+
+
+
+
+
+
+- Hỗ trợ nhiều trình duyệt
+   
+- Hỗ trợ nhiều nền tảng
+
+3.1.2.5  Các thư viện cần thiết để chạy Selenium Webdriver
+Danh sách các thư viện Selenium WebDriver cần cài đặt:
+
+Hình 33: Các thư viện chạy Selenium Webdriver
+3.1.2.6  Các hàm xử lý chung trong Selenium Webdriver
+   • Locate element sử dụng WebDriver
+Bảng 31: Các hàm xử lý chung trong Selenium Webdriver
+By.classNameValue của class attributefindElement(By.className(“someclassname”))By.cssSelectorLocator bằng cssfindElement(By.cssSelector(“input#email”))By.idValue của id attributefindElement(By.id(“someId”))By.linkTextLocator bằng valuefindElement(By.linkText(“registration”))By.tagNameName của tagfindElement(By.tagName(“div”))By.XpathLocator bằng xpathfindElement(By.Xpath(“//html/body/div”))By.NameValue của name attributefindElement(By.name(“someName”))
+   • 	Các hàm hay sử dụng
+Bảng 32: Các hàm hay sử dụng trong Selenium Webdriver
+Init webdriverWebdriver driver =new ChormeDriver();Open urlDriver.get(baseUrl);Init webelementWebElement 
+element=driver.findElement(By.className(“someclassname”))Click an Element driver.findElement(By.className(“someclassname”)).Click();Type text to textboxdriver.findElement(By.className(“someclassname”)).Senkey(“test”);Refresh current pageDriver.navigate().refresh();
+3.1.2.7  Các câu lệnh trong Selenium Webdriver
+3.1.2.7.1 Các câu lệnh trình duyệt
+   • Câu lệnh [Get]
+   - Mục đích: Câu lệnh này sử dụng để mở một trang web mới trong trình duyệt hiện tại.
+   - Cú pháp: drive.get(URL);
+   -  URL: Là url để tải trang, nên sử dụng một url đầy đủ
+   - Ví dụ: driver.get("wwww.google.com");
+   • Câu lệnh lấy tiêu đề [getTitle]
+   -  Mục đích : Câu lệnh này sử dụng để lấy tiêu đề của trang web hiện tại
+   -  Cú pháp: driver.getTitle();
+   • Câu lệnh đóng trang web [close]
+   -  Mục đích: Câu lệnh này dùng để đóng cửa sổ hiện tại của trình duyệt.
+   - Cú pháp: driver.close();
+3.1.2.7.2 Các câu lệnh Web Element 
+   • Phương thức FindElement  
+   -   Tìm phần từ bằng ID (By ID)
+   + Mục đích: Tìm vị trí của phần tử bằng ID, nếu tìm được id phù hợp sẽ trả về vị trí của phần tử, nếu không có phần từ phù hợp với id sẽ xuất hiện NoSuchElementException
+   + Cú pháp: driver.findElement(By.Id("")); 
+   -  Tìm phần tử bằng Name (By Name)
+   + Mục đích : Tìm vị trí của phần tử bằng name, nếu tìm được giá trị thuộc tính name phù hợp sẽ trả về vị trí của phần tử, nếu không có phần từ phù hợp với thuộc tính name sẽ xuất hiện NoSuchElementException.
+   + Cú pháp: driver.findElement(By.Name(""));
+   -  Tìm phần tử bằng Class Name (className)
+   + Mục đích: Tìm phần tử dựa trên giá trị của thuộc tính “class”.
+   + Cú pháp: driver.findElement(By.className(""));
+   -  Tìm phần tử bằng Tag Name (tagName)
+   + Mục đích: Tìm phần tử dựa vào tag names
+   + Cú pháp: driver.findElement(By.tagName(""));
+3.1.2.7.3 Các câu lệnh chuyển hướng trình duyệt
+   • Câu lệnh To ,Goto
+   -  Mục đích: Lệnh này dùng để chuyển hướng đến trang web hoặc URL yêu cầu.
+   -  Cú pháp : 
+   + driver.Navigate().To(url)
+   + Dirver.navigate().GotoURL (url)
+   Trong đó:
+   url: là url để tải trang, nên sử dụng url đầy đủ
+   • Câu lệnh Forward
+   -  Mục đích: Lệnh này dùng để đi đến trang tiếp theo, giống với nút forward trên trình duyệt.
+   -  Cú pháp : driver.Navigate().Forward()
+3.2 Ngôn ngữ Gherkin
+3.2.1 Khái quát ngôn ngữ Gherkin
+- SpecFlow thực thi các .feature file. Các feature files chứa các đặc tả (step) thực thi, các step này được viết bằng ngôn ngữ “Gherkin”.
+- Gherkin là 1 ngôn ngữ mà SpecFlow đọc ngôn ngữ ấy chuyển thành test. Gherkin khá dễ hiểu, người đọc có thể hiểu kịch bản và hành động mà không cần biết chi tiết chúng được cài đặt như thế nào
+
+Hình 34: Mô tả ngôn ngữ Gherkin
+3.2.2 Mục tiêu của Gherkin
+   • 	Gherkin thỏa mãn 2 mục đích
+   - Cung cấp tư liệu
+   - Test tự động
+3.2.3 Các từ khóa trong ngôn ngữ Gherkin
+3.3.3.1 Từ khóa chính
+   • Feature
+   - Ý nghĩa :Feature là một đoạn text mô tả ngắn gọn về chức năng thực hiện
+   - Ví dụ : 
+ Feature: Google Search
+    To test Google page search functionality
+    We will search as well as navigating to search to search result
+   • Background
+   - Ý nghĩa : cho phép thêm một số ngữ cảnh cho tất cả các Scenario trong feature .Có thể hiểu đơn giản là điều kiện tiên quyết để thực hiện tất cả các Scenario trong feature .
+   • Scenario
+   - Ý nghĩa: kịch bản mô phỏng các bước và kết quả dự kiến cho một trường hợp thử nghiệm cụ thể.
+   - Ví dụ:
+   Scenario: Google Search for Execute Automation
+   	Given I have navigated to Google page 
+        And I see the Google page fully loaded
+        When I type search keyword as VietNam
+   • Given
+   - Ý nghĩa: mô tả điều kiện tiên quyết để thực hiện một Scenario
+   - Ví dụ: 
+          Scenario: GoogleTest
+           Given I have navigated to Google
+           When I have entered into the search field
+           | Keyword            |
+           | Specflow           |
+           And I Click on the Search Button
+   •  When
+   - Ý nghĩa: mô tả các hành động chính (Steps) mà người dùng thực hiện.
+   - Ví dụ:
+   Scenario: GoogleTest
+           Given I have navigated to Google
+           When I have entered into the search field
+           | Keyword            |
+           | Specflow           |
+           And I Click on the Search Button
+   • Then
+   - Ý nghĩa: mô tả kết quả đầu ra mong muốn của Scenario 
+   - Ví dụ: 
+      Scenario: Google Search for Execute Automation
+   	Given I have navigated to Google page 
+             And I see the Google page fully loaded
+   	When I type search keyword as VietNam
+   	Then I should see the result for keyword
+   • And, But (Steps)
+   - Ý nghĩa: thay thế cho các từ khóa Given/When/Then để làm cho kịch bản được mạch lạc hơn.
+   - Ví dụ:
+    Scenario: Google Search for Execute Automation
+   	Given I have navigated to Google page 
+              And I see the Google page fully loaded
+   	When I type search keyword as VietNam
+   	Then I should see the result for keyword
+   • Scenario Outline
+   - Ý nghĩa: để gom nhóm kịch bản có chung các Steps nhưng lại có nhiều input và output. Dữ liệu được cung cấp bởi một cấu trúc dạng bảng được ngăn cách bởi (||).
+   - Ví dụ:
+   Scenario Outline: Successful Login with Valid Credentials
+   	Given User is at the Home Page
+   	And Navigate to LogIn Page
+   	When User enter <username> and <password>
+   	And Click on the LogIn button
+   
+   Examples:
+   | username   | password |
+   | 01632408731 | lanhuong1996|
+   | lanhuongtk121@gmail.com | 2002|
+   • Examples
+   - Ý nghĩa: để khai báo các giá trị cho các biến trong Scenario Outline
+   - Ví dụ:
+   Scenario Outline: Successful Login with Valid Credentials
+   	Given User is at the Home Page
+   	And Navigate to LogIn Page
+      	When User enter <username> and <password>
+   	And Click on the LogIn button
+   
+   Examples:
+   | username   | password |
+   | 01632408731 | lanhuong1996|
+   | lanhuongtk121@gmail.com | 2002|
+3.3.3.2  Các từ khóa khác
+   • """ (Doc Strings)
+   • | (Data Tables)
+   • @ (Tags) 
+   Sử dụng @Tags để tổ chức và sắp xếp các tính năng và kịch bản 
+   • # (Comments)
+3.2.4 Quy tắc viết Gherkin
+   • Các quy tắc khi viết Gherkin:
+   - Một file Gherkin chỉ mô tả cho một feature.
+   - File lưu dưới dạng extension là .feature
+   - Mỗi một file .feature thường gồm một chức năng duy nhất
+   - Một chức năng bao gồm nhiều kịch bản khác nhau với danh sách các bước
+   - Source file Gherkin là .feature
+• Giống như Python và YAML, Gherkin là một ngôn ngữ kịch bản được sử dụng để định nghĩa logic theo cấu trúc. Cũng giống như Ruby, nên thay thế kí tự tab bằng các kí tự space, dòng comment sẽ có kí tự # ở đầu dòng.
+3.2.5 Dạng file Gherkin thông thường
+• File gherkin thường như sau:
+
+Hình 35: Dạng File Gherkin thông thường
+3.3 Tìm hiểu về SpecFlow
+3.3.1 SpecFlow là gì?
+   - Specflow là một công cụ kiểm thử tự động dựa trên việc thực thi các chức năng được mô tả dưới dạng plain-text.
+   -  Các plain-text này có thể được đọc bởi mã nguồn được viết bằng nhiều ngôn ngữ như Java, .Net, Python...
+   - Specflow.Net hỗ trợ các ngôn ngữ Gherkin 
+   - Sử dụng SpecFlow để xác định, quản lý và thực hiện tự động kiểm thử chấp nhận.
+   - SpecFlow tích hợp với Visual Studio 
+   - SpecFlow.NET tự động tạo ra các mã kiểm tra NUnit khi dự án được xây dựng.
+3.3.2 Tính năng của SpecFow
+   - SpecFlow tạo ra một lớp thử nghiệm đơn vị cho các yếu tố tính năng, với tên lớp bắt nguồn từ tên của tính năng này.
+   - SpecFlow tạo ra các bài kiểm tra đơn vị thực thi từ các kịch bản mà đại diện tiêu chuẩn chấp nhận.
+• Sơ đồ wordflow xử lý các steps trong SpecFlow
+
+Hình 37: Workflow trong SpecFlow
+• Cấu trúc dự án cài đặt Specflow
+
+
+Hình 38: Cấu trúc dự án cài đặt SpecFlow
+3.3.3 Ưu điểm 
+Bảng 33: Ưu điểm của Specflow so với các công cụ khác
+SpecFlowQTPSelenium   -  Nó miễn phí  - QTP đắt tiền   - Nó miễn phí   - Đó là một công cụ phát triển hướng hành vi.  - Đó là một công cụ tự động hóa chức năng.   - Đây là một công cụ kiểm tra chức năng và hiệu năng. - Plugin trong SpecFlow hoạt động nhanh hơn.
+
+  - Plugin hoạt động chậm hơn so với SpecFlow và Selenium.   - Plugin hoạt động chậm hơn SpecFlow.   - SpecFlow hỗ trợ các ngôn ngữ khác.   - QTP chỉ hỗ trợ kịch bản ngôn ngữ VB  - Selenium hỗ trợ Java, .Net và nhiều ngôn ngữ khác.   - SpecFlow viết các bước tự động hóa là nỗ lực chung của các nhà kiểm tra và phats triển.   - Trong QTP chỉ kiểm tra viết các bước tự động hóa  - Selenium viết các bước tự động hóa là nỗ lực chung của các nhà kiểm tra và nhà phát triển.   - Dưa chuột chỉ hỗ trợ môi trường web.   - Hỗ trợ web, máy tính ...  - Chỉ hỗ trợ môi trường web.3.3.4 Cài đặt SpecFlow
+   • 	Cài đặt SpecFlow bao gồm hai bước sau:
+   - Cài đặt IDE tích hợp
+   Cài đặt gói tích hợp IDE còn phụ thuộc vào IDE của bạn:
+   ➢ Chọn Tool| Extensions and Updates từ trình đơn trong Visual Studio, chuyển sang tìm kiếm trực tuyến ở bên trái và nhập từ khóa tìm kiếm “Specflow” vào ô tìm kiếm.
+ 
+
+   - Thiết lập dự án Visual Studio để làm việc với SpecFlow
+3.3.5 SpecFlow + Excel
+3.2.8.1 SpecFlow + Excel là gì?
+   SpecFlow + Excel là một plugin SpecFlow cho phép bạn xác định yêu cầu và bộ dữ liệu ví dụ trong các tệp Excel. Các yêu cầu này có thể được sử dụng giống như tệp tin văn bản gốc Gherkin.
+3.2.8.2. Lợi ích của SpecFlow + Excel
+   Có hai cách để sử dụng các tệp Excel để mở rộng các thông số kỹ thuật của bạn:
+- Xác định toàn bộ tệp tin tính năng (feauture file) trong Excel sử dụng các bảng làm kịch bản.
+- Mở rộng các kịch bản phác thảo kịch bản (scenario outline examples) trong các tệp tin tính năng (feature file) với các bảng Excel.
+3.4 Bài toán áp dụng 
+3.4.1 Mô tả tổng quan về chương trình
+Xây dựng framework Kiểm thử chấp nhận tự động với Selenium WebDriver và Specflow cho ứng dụng web là sự kết hợp giữa SpecFlow.Net, Selenium Webdriver và Visual Studio.
+
+Hình 39: Mô hình thành phần ứng dụng
+Trong đồ án này, tôi tiến hành xây dựng framework Kiểm thử chấp nhận tự động với Selenium WebDriver và Specflow cho ứng dụng web”, phương pháp này tôi xây dựng các chương kiểm thử để kiểm tra xem sản phẩm phần mềm (là các trang web) có hoạt động thỏa mãn yêu cầu chấp nhận của người dùng hay không.
+3.4.2 Cài đặt và xây dựng 
+3.4.2.1 Cài dặt
+Để xây dựng chương trình bạn cần cài đặt cho dự án các tệp tin hỗ trợ cho SpecFlow trong Visual Studio:
+   • Download and install SpecFlow from Visual Studio Gallery from  http://visualstudiogallery.msdn.microsoft.com/9915524d-7fb043c3-bb3c-a8a14fbd40ee.
+   • Download and install NUnit Test Adapter from 
+   http://visualstudiogallery.msdn.microsoft.com/9915524d-7fb043c3-bb3c-a8a14fbd40ee.
+3.4.2.2 Xây dựng 
+3.4.2.2.1 Khởi tạo dự án
+   - Bước 1: Mở Visual Studio
+   - Bước 2: Tạo dự án TestProject →Unit Test Project và đặt tên cho dự án là “Flow” như hình dưới đây:
+
+   - Bước 3: Remove UnitTest1.cs from Solution Explorer vì không dùng đến
+
+   - Bước 4: Tiếp theo, thêm SpecFlow.NET, WebDriver, và NUnit sử dụng NuGet. Nhấp chuột phải vào dự án Fows trong Solution Explorer và chọn Manage NuGet Packages ..., như thể hiện trong hình bên dưới:
+
+   - Bước 5 : Trên hộp thoại Fows - Manage NuGet Packages , Kích chuột vào ô Search Online hoặc nhấn tổ hợp Ctrl +E để nhập từ khóa tìm kiếm SpecFlow . Kết quả tìm kiếm sẽ trả về những gợi ý sau đây:
+
+Chọn SpecFlow.NUnit từ danh sách và nhấn vào nút Install. NuGet sẽ tải về và cài đặt SpecFlow.Nunit.
+   - Bước 6: Tiếp theo, tìm kiếm WebDriver trên hộp thoại Flows - Manage NuGet Packages.
+Chọn Selenium WebDriver and Selenium WebDriver Support Classes từ danh sách và nhấn nút Install.
+Chú ý: Cài đặt thành công sẽ xuất hiện dấu tích màu xanh như hình dưới đây:
+
+   - Bước 7: đóng hộp thoại Flow - Manage NuGet Packages
+3.4.2.2.2 Thêm tập tin Feature (Feature File)
+Tập tin .feature là các loại tập tin có chứa các kịch bản mô tả các hành vi mong đợi của phần mềm.
+   - Bước 1: Nhấp chuột phải vào dự án (tên dự án Flow) trong Solution Explorer →click vào Add→New Item.
+   - Bước 2: trong hộp thoại Add New Item-Flow chọn SpecFlow Feature File và đặt tên (DemoGoogleSearch.feature) cho tập tin  ở phía dưới:
+
+   - Bước 3: Nhấn nút Add ở góc dưới bên phải để thêm
+   Theo mặc định, SpecFlow sẽ bổ sung thêm một tính năng giả trong các tính năng của file. 
+   
+   - Bước 4: Thay thế kịch bản kiểm thử của bạn 
+Ví dụ dưới đây là các kịch bản đã được triển khai trong dự án:
+• Kịch bản 1: LoginCustom.feature
+   - Mô tả: kịch bản kiểm thử chấp nhận demo cho chức năng login customer bằng cách lấy dữ liệu từ excel.
+
+• Kịch bản 2: Addcustomer.feature
+   - Mô tả : kịch bản kiểm thử chấp nhận cho chức năng Add Customer bằng cách lấy dữ liệu từ excel:
+
+3.4.2.2.3 Thêm tập tin định nghĩa Sep Defenition
+   - Step Defenition (định nghĩa bước): xác định các bước kiểm tra trong các tệp tin tính năng (được đưa ra bởi Given/ When/ Then) vào mã, nó thực hiện và kiểm tra các kết quả từ hệ thống được kiểm tra. Đối với một định nghĩa bước sẽ được thực hiện, nó phải phù hợp với thành phần nhất định trong một tính năng
+   - Để định nghĩa Feature ta thực hiện: Kích chuột phải vào kịch bản Feature → chọn Generate Step Definitions.
+
+   - Hộp thoại Generate Step Definition Skeleton- SpecFlow xuất hiện chứa định nghĩa các bước trong kịch bản Feature.
+
+
+   - Chọn Generate sau đó một lớp định nghĩa Step Definition được thiết lập mặc định theo các bước trong kịch bản.
+   - Thay đổi nội dung để định nghĩa các bước cho kịch bản 
+   Ví dụ lớp định nghĩa cho Kịch bản 1 LoginCustom.feature trong Feature File
+
+3.4.2.2.4 Chạy ứng dụng test
+   - Bước 1:Chọn Test → Windows trong Main Menu → Test Explorer
+   - Bước 2: Cửa sổ mới Test Explorer hiển thị như hình bên dưới :
+
+   Chọn “Run All” để chạy toàn bộ hoặc chọn chương trình cần chạy →nhấn chuột phải→ chọn Run Selected Test để chạy từng ứng dụng
+- Những chương trình Pass sẽ có dấu tích màu xanh và những chương trình Fail sẽ có dấu X màu đỏ
+
+   - Nhấn click vào Output để xem test case
+
+3.4.2.2.5 SpecFlow Reports
+• SpecFlow + Runner tạo ra một báo cáo thực hiện nâng cao cho mỗi chạy thử nghiệm. Để xem các báo cáo, chọn ‘Test’ trong ‘Show output from ‘ trong cửa sổ Output
+Click vào liên kết đến Resport file để xem báo cáo trong Visual Studio:
+
+
+• SpecFlow sử dụng Extent HTML Report 
+
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+   Sau thời gian nghiên cứu và phát triển, tác giả đã hoàn thành mục tiêu và yêu cầu đặt ra ban đầu.
+- Nắm được kiến thức về kiểm thử chấp nhận tự động phần mềm.
+- Sử dụng được ngôn ngữ Gherkin, công cụ SpecFlow và Selenium WebDriver để kiểm thử chấp nhận tự động cho ứng dụng web.
+- Xây dựng được framework kiểm thử chấp nhận tự động cho ứng dụng web.
+4.2 Hạn chế của đề tài
+- Ứng dụng mới dừng lại ở việc tự động hóa kiểm thử chấp nhận cho ứng dụng web cho 2 chức năng đăng nhập và tìm kiếm.
+4.3 Hướng phát triển của đề tài
+   Trong thời gian nghiên cứu và thực hiện đề tài, tác giả đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+- Xây dựng một kịch bản kiểm thử tổng quát cho mọi chức năng trên mọi trang web nào đó.
+- Xây dựng và mở rộng thêm ứng dụng để thực hiện “Kiểm thử chấp nhận tự động với Selenium WebDriver và Specflow cho ứng dụng web” cho nhiều chức năng phức tạp hơn trên các trang web.
+TÀI LIỆU THAM KHẢO
+x
+[1]Khoa Công nghệ thông tin, Đề cương Kiểm thử phần mềm tự động, Trường Đại học SPKT Hưng Yên, 2016.[2]Unmesh Gundecha,Selenium Testing Tools Cookbook,Packt Publishing,2015.[3]Kanglin Li and Mengqi Wu, Effective Software Test Automation: Developing an Automated Software Testing Tool, Sybex, San Francisco, 2004.[4]
+[5] 
+[6] https://specflow.org/, SpecFlow
+https://www.youtube.com/playlist?list=PL6tu16kXT9Pp3wrsaYyNRnK1QkvVv6qdI
+http://toolsqa.com/specflow/
+x
+
+		PHỤ LỤC
+
+
+
+
+Kiểm thử chấp nhận tự động với Selenium WebDriver và Specflow cho ứng dụng web
+
+
+48
+
+

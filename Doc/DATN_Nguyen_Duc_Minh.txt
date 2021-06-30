@@ -1,0 +1,559 @@
+﻿1 LỜI MỞ ĐẦU
+    Hiện nay, các công nghệ tiên tiến phát triển ngày càng mạnh mẽ và được ứng dụng ngày càng nhiều vào các lĩnh vực kinh tế, sản xuất cũng như đời sống thường nhật của con người. Một điểm tiêu biểu trong việc phát triển các công nghệ đó phải kể đến việc ứng dụng công nghệ thông tin vào hầu khắp các hoạt động. Nhờ đó, các công việc được thực hiện nhanh, chính xác và đạt kết quả cao hơn rất nhiều.
+      Bằng internet, chúng ta đã thực hiện được nhiều công việc với tốc độ nhanh hơn và chi phí thấp hơn nhiều so với cách thức truyền thống.Chính điều này, đã thúc đẩy sự khai sinh và phát triển của thương mại điện tử và chính phủ điện tử trên khắp thế giới, làm biến đổi đáng kể bộ mặt văn hóa, nâng cao chất lượng cuộc sống con người.
+Ứng dụng công nghệ thông tin vào thực tiễn đời sống xã hội giảm thiểu được sức lao động của con người, tăng hiệu quả kinh tế. Bán hàng online cũng là lĩnh vực đang được rất nhiều người quan tâm và được ứng dụng vào thực tế.
+Từ những lý do trên nên em quyết định chọn đề tài:
+   “Xây dựng Website bán đồng hồ Đức Minh Watch”
+Hệ thống được xây dựng theo hai phía chính như sau:
+Quản lý: 
+• Quản lý có thể quản lý các loại sản phẩm: Thêm, sửa , xóa,...
+• Quản lý có thể quản lý sản phẩm: Thêm, sửa , xóa,...
+• Quản lý có thể quản lý hóa đơn: Thêm, sửa , xóa,...
+• Quản lý có thể quản lý khách hàng: Thêm, sửa , xóa,...
+• Quản lý có thể quản lý nhà cung cấp: Thêm, sửa , xóa,...
+• Quản lý có thể phân, cấp quyền: Thêm, sửa , xóa,...
+• Quản lý có thể quản lý user: Thêm, sửa , xóa,...
+ Người dùng: Hệ thống được xây dựng nhằm giúp cho người dùng có một kênh mua sắm bao gồm một số nội dung chính như sau:
+• Xem sản phẩm: Người dùng có thể xem tất cả các sản phẩm có trong cửa hàng trên webstite.
+• Tìm kiếm: Người dùng có thể tìm kiếm các sản phẩm trên website.
+• Đặt mua sản phẩm: Người dùng có thể đặt mua sản phẩm cho mình phù hợp nhất.
+• Đánh giá: Người dùng có thể gửi đánh giá, góp ý về sản phẩm.
+Nội dung đồ án bao gồm các phần sau: 
+Chương 1: Cơ sở lý thuyết
+• Giới thiệu về hệ thống.
+• Tìm hiểu yêu cầu hệ thống.
+• Xác định yêu cầu nghiệp vụ.
+• Công nghệ web sử dụng.
+Chương 2: Phân tích thiết kế hệ thống
+• Xác định và mô tả các tác nhân.
+• Xây dựng bảng thuật ngữ để xác định các lớp.
+• Xác định và mô tả các ca sử dụng.
+• Xây dựng kịch bản.
+• Xây dựng biểu đồ lớp phân tích.
+•  Xác định thuộc tính và gán phương thức.
+• Thiết kế các sơ đồ lớp.
+• Thiết kế sơ đồ cơ sở dữ liệu.
+• Thiết kế các sơ đồ tuần tự.
+Chương 3: Cài đặt hệ thống:
+• Công nghệ sử dụng.
+• Cài đặt.
+Chương 4: Kết luận:
+
+
+
+
+
+1 CHƯƠNG 1. CƠ SỞ LÝ THUYẾT
+   Chương này sẽ bao gồm một số nội dung như sau: Giới thiệu hệ thống, nhu cầu của người dùng đối với hệ thống, lý do chọn đề tài,... Tiếp đó là tìm hiểu về yêu cầu hệ thống, xác định các yêu cầu nghiệp vụ cho hệ thống bán mỹ phẩm trực tuyến.
+1.1 Giới thiệu nhu cầu hệ thống
+1.1.1 Nhu cầu thực tế
+   Cửa hàng đồng hồ Đức Minh Watch vừa được khai trương muốn được quảng bá và bán hàng qua mạng. Vì vậy việc tạo ra 1 hệ thống website bán đồng hồ sẽ giúp giải quyết được vấn đề này.
+1.2 Tìm hiểu yêu cầu hệ thống
+1.2.1 Đối tượng người dùng
+   Tất cả mọi người có thiết bị kết nối internet. 
+   Những người có nhu cầu mua sắm đồng hồ.
+1.2.2 Thông tin trong website:
+• Các thông tin về sản phẩm (Tên sản phẩm, loại, giá,...)
+• Mỗi thông tin có đính kèm hình ảnh của sản phẩm.
+• Người dùng có thể đăng kí thành viên, đăng nhập qua các mạng xã hội khác, chỉnh sửa thông tin cá nhân, xem, đặt hàng, đánh giá sản phẩm,...  
+1.2.3 Các nhóm chức năng hệ thống
+Chức năng hệ thống có thể chia thành các nhóm chính như sau:
+• Nhóm chức năng thành viên đăng ký, đăng nhập
+• Nhóm chức năng xem thông tin gồm: xem thông tin cá nhân, xem chi tiết sản phẩm, xem thông tin giỏ hàng,...
+• Nhóm chức năng quản lý: quản lý user, quản lý sản phẩm,...
+• Nhóm chức năng đặt mua sản phẩm.
+1.2.4 Nghiệp vụ của hệ thống
+   Server:
+• Lưu trữ CSDL 
+• Admin và client sẽ gửi request lên server để thực hiện chức năng của mình.
+   Admin:
+• Quản lý user: Xem danh sách user, xem thông tin của user, xóa user.
+• Quản lý sản phẩm: Admin thêm, xóa sản phẩm, cập nhật thông tin những sản phẩm đã có trong website.
+   Client:
+• Muốn truy cập website cần có kết nối internet.
+• Đăng kí tài khoản: Người dùng truy cập vào website gửi yêu cầu đăng kí tài khoản lên server. Server nhận thông tin tài khoản người dùng đăng ký và lưu vào CSDL. 
+• Đăng nhập: Người dùng sau khi đăng kí tài khoản có thể sử dụng tài khoản đó để đăng nhập. Server sẽ kiểm tra cơ sở dữ liệu để cho phép đăng nhập hay không.
+• Xem thông tin sản phẩm: Người dùng truy cập vào hệ thống có thể xem được thông tin của sản phẩm mà không cần đăng kí cũng như đăng nhập thành viên.
+• Nhận xét sản phẩm: Người dùng sau khi đăng nhập vào hệ thống có thể bình luận để nhận xét sản phẩm và xem được tất cả bình luận của các user khác.
+• Thêm sản phẩm vào giỏ hàng: Người dùng truy cập vào hệ thống và đăng nhập thì có thể chọn sản phẩm để lưu vào giỏ hàng.
+• Đặt mua sản phẩm: Sau khi đã có giỏ hàng chứa mặt hàng mà người dùng muốn đặt mua thì người dùng có thể chọn đặt hàng để đặt sản phẩm.
+• Đánh giá sản phẩm: Người dùng có thể đánh giá sản phẩm bằng cách đưa ra nhận xét công khai trên trang thông tin của sản phẩm, tất cả mọi người khi xem thông tin sản phẩm sẽ xem được các đánh giá đó.
+1.3  Xác định yêu cầu nghiệp vụ
+1.3.1 Xác định yêu cầu chức năng
+   Hệ thống cần xử lý được các chức năng sau:
+• Chức năng đăng nhập, đăng kí thành viên.
+• Chức năng xem thông tin sản phẩm.
+• Chức năng tìm kiếm thông tin về sản phẩm.
+• Chức năng quản lý về sản phẩm..
+• Chức năng tạo giỏ hàng, tạo đơn hàng.
+   Hệ thống cần lưu trữ:
+• Hệ thống phải lưu trữ các thông tin về user.
+• Hệ thống cần lưu trữ thông tin về sản phẩm.
+• Hệ thống cần lưu trữ thông tin về các đơn đặt hàng
+• Hệ thống cần lưu trữ thông tin về các đơn hàng thanh toán.
+
+Bảng 11 Các yêu cầu phi chức năng
+
+
+Yêu cầu phi chức năngMô tảVí dụThao tácMôi trường kỹ thuật và vật lý mà hệ thống sẽ hoạt động.Hệ thống có thể tích hợp với webserver hiện thời, cập nhật dữ liệu tự độngBảo mậtAi có quyền truy cập hệ thống cho 1 số chức năng nào đóNgười dùng chỉ có thể xem sản phẩm, tìm kiếm sản phẩm, bình luận sản phẩm,... Admin có quyền quản lý user, thêm, sửa, xóa sản phẩm,...
+1.4  Công nghệ Web
+1.4.1 Ngôn ngữ lập trình PHP 
+a. Về ngôn ngữ PHP 
+   PHP(viết tắt “PHP: Hypertext Preprocessor” hay còn là viết tắt của Personal Home Page) là ngôn ngữ lập trình kịch bản. Một loại mã lệnh chủ yếu để phát triển các ứng dụng cho máy chủ, mã nguồn mở. Nó dùng cho mục đích tổng quát. Nó rất thích hợp với website và có thể dễ dàng nhúng vào các trang HTML.
+   Ngôn ngữ PHP sử dụng mã nguồn mở nên bạn hoàn toàn có thể sử dụng PHP miễn phí cho việc thực hiện xây dựng các trang website của mình. PHP có thể chạy trên nhiều nền tảng hệ điều hành khác nhau. Do được tối ưu hóa cho web, tốc độ nhanh, nhỏ gọn, thời gian xây dựng sản phẩm tương đối ngắn so với các ngôn ngữ khác nên PHP đã nhanh chóng trở thành ngôn ngữ lập trình phổ biến trên thế giới.
+b.  Điểm mạnh của PHP 
+   - Điều dễ nhận thấy nhất đó là PHP sử dụng miễn phí. Bạn có thể tự học nó mà không phải trả bất kì một chi phí nào.
+   - PHP hoạt động với tốc độ nhanh và hiệu quả, hỗ trợ kết nối đến hàng triệu cơ sở dữ liệu khác nhau.
+   - PHP là ngôn ngữ với cấu trúc đơn giản, dễ hiểu nên sẽ không mất nhiều thời gian để làm quen và hiểu được nó.
+   - PHP có một thư viện phong phú. Cộng đồng hỗ trợ mạnh mẽ nên dễ dàng tìm nguồn tài liệu cũng như nhận được sự hỗ trợ của nhiều design nỏi tiếng.
+   - PHP sử dụng mã nguồn mở nên tạo ra sự linh hoạt cho các lập trình viên trong quá trình sửa chữa và sáng tạo.
+   - PHP phù hợp với các doanh nghiệp có website vừa và nhỏ.
+c. Điểm yếu của PHP
+   - Cấu trúc ngữ pháp không được gọn gàng và đẹp mắt như những ngôn ngữ lập trình khác. Đôi khi còn khá rối mắt cho người mới bắt đầu.
+   - PHP chỉ hoạt động trên các ứng dụng web.
+c. So sánh PHP với các ngôn ngữ lập trình khác 
+ So với ASP.NET 
+   - ASP.NET thường được viết bằng C#. C# được xây dựng trên C nên có thể khó học cho hầu hết người mới bắt đầu. Cú pháp của nó khá phức tạp và khó đọc, ngay cả đối với các lập trình viên có kinh nghiệm. Những người mới tiếp xúc với lập trình sẽ thấy ASP.NET khó học hơn. Mặt khác, PHP là rất dễ học. Bạn có thể chỉ cần học một vài dòng code đơn giản là có thể bắt đầu mày mò với các theme WordPress gần như ngay lập tức. 
+   - Cả ASP.NET và PHP thường cung cấp hiệu suất cao về tốc độ xử lý vì được liến kết với quyền truy cập cơ sở dữ liệu.
+   - Bên trong ASP.NET đi kèm với một bộ xác thực Windows và được cấu hình chặc chẽ từ Micrsoft cho nên bấc kỳ ứng dụng nào từ ASP.NET điều cho thấy sự an toàn vượt trội.
+So với Python 
+   - Python là hướng khía cạnh (AOP), trong khi PHP là hướng đối tượng (OOP).
+   - PHP được mã hoá chặt chẽ, Python rất linh hoạt.
+   - Python hỗ trợ phát triển full-stack, PHP được sử dụng rộng rãi trong back-end cho trang web.
+   - Cú pháp PHP tương tự như ngôn ngữ C, các ký hiệu khác nhau được sử dụng để tích hợp mã, trong khi Python được tích hợp bằng cách sử dụng phím space và tab hơn là các ký hiệu
+1.4.2 Laravel framework 
+a. Giới thiệu về laravel 
+   Laravel là một Framework MVC (Model – View- Controller) với bundles, migrations và Artisan CLI. Laravel cung cấp một bộ công cụ mạnh mẽ và một cấu trúc ứng dụng kết hợp nhiều tính năng nổi trội của các framework khác như là Codeigniter, Yii, Ruby on Rails, ASP.NET MVC, Sinatra và vân vân…
+   Laravel là một framework mã nguồn mở. Nó có một đống các tính năng mà có thể giúp bạn tăng tốc quá trình phát triển website lên một cách nhanh chóng. Nếu như bạn đã rành PHP cơ bản và nâng cao rồi thì khi học Laravel sẽ trở nên dễ dàng hơn rất nhiều. Nó sẽ giúp bạn tiết kiệm một khối lượng thời gian đáng kể nếu như bạn đang có ý định xây dựng một website từ đầu. Không chỉ vậy, website được xây dựng trên nền Laravel cực kì bảo mật tốt. Nó sẽ ngăn chặn được rất nhiều các kiểu tấn công từ bên ngoài tới website của bạn.
+   Laravel đặc điểm nổi bật sau: 
+   - Là một framework xây dựng theo mô hình MVC
+   - Có các tính năng được dựng sẵn
+   - Khả năng test tốt
+   - Quản lý mọi cấu hình (configuration management)
+1.4.3 Tìm hiểu về laravel framework
+a. Laravel framework là gì?
+   Laravel là một PHP Framework mã nguồn mở và miễn phí, được phát triển bởi Taylor Otwell và nhắm mục tiêu hỗ trợ phát triển các ứng dụng web theo cấu trúc model- view- controller (MVC).
+b. Laravel là sự lựa chọn rất tốt cho người mới bắt đầu
+   Laravel Framework là một framework mã nguồn mở, toàn bộ code của nó được đặt trên github, bạn có thể dễ dàng pull về và xem cách nó hoạt động như nào? Code của Laravel trong sáng và dễ đọc nó giúp quá trình viết code của bạn trở nên đơn giản và nhanh chóng. Nó vô cùng đáng tin cậy và số lượng lập trình viên làm việc với nó thực sự lớn, nên tìm tài liệu cũng như là thắc mắc những vấn đề về code luôn tìm được cách giải quyết. Bạn có thể xem hình dưới đây và hiểu tại sau mình nói như vậy. 
+   Laravel được xây dựng dựa trên hơn 20 thư viện khác nhau. Hiểu được cách thiết kế framework khiến các dev hoàn toàn có thể đóng góp cho framework cũng như mở rộng chúng một cách dễ dàng. Dễ hiểu khi Laravel luôn có cộng đồng support đông đảo và "trâu" như vậy. 
+   Laravel sử dụng MVC pattern để xây dựng framework. Nó đảm bảo rằng các code được trình bày logic và hợp lý. Dễ dàng để có thể hiểu được nó. Vì vậy nó làm cho web project của bạn được trở nên dễ quản lý cũng như phát triển rất rất nhiều. 
+   Laravel tạo điều kiện cho các developer có thể thay đổi tùy chọn và cấu hình để phù hợp với nhiều môi trường. Các developer cũng có thể viết các gói ( package ) có thể là một tính năng hay một đoạn code gì đó. Nó dễ dàng được khai báo trong Laravel thông qua các provider. Chính điều này  + với số lượng các developer đông đảo thì số lượng package mà Laravel có ngày càng tăng lên. Bạn có thể dễ dàng tìm được một vài đoạn code cũng như một vài tính năng mà bạn mong muốn trong project của bạn chỉ trong vài phút. Nó tiết kiệm hơn so với việc phải ngồi viết code cho tính năng đó.
+c. Cần bao lâu để làm chủ được Laravel
+   Bạn sẽ cần phải dành ra bao nhiêu thời gian để học mỗi ngày? Tôi tin rằng bạn có thể có được một sự hiểu biết rất tốt về laravel chỉ trong vòng một vài tháng nghiên cứu chuyên tâm.
+   Nhưng để trở thành một chuyên gia thì sẽ mất 10.000 giờ cũng giống như để thông thạo bất kỳ kỹ năng nào khác, do đó, điều tốt nhất bạn có thể làm bây giờ là hãy bắt đầu ngay.
+   Và tất nhiên, mức độ bạn quen thuộc với lập trình nói chung sẽ có một ảnh hưởng lớn đến việc bạn học laravel nhanh ra sao.
+   Nhưng nếu bạn là một người hoàn toàn mới học lập trình, thì laravel là nơi tuyệt vời để bắt đầu.
+   
+d. Sức mạnh của laravel trong việc phát triển web 
+   Laravel cung cấp laracasts không chỉ cung cấp tutorial miễn phí mà nó còn cung cấp các hướng dẫn của cách chuyên gia, giúp các nhà phát triển các vấn đề phức tạp thông qua mã hóa. Nội dung có sẵn trên nền tảng này được phát triển bới các "professionals" và các chuyên gia với các hướng dẫn rõ ràng và có cấu trúc giúp phát triển các giải pháp tối ưu hóa theo yêu cầu. Vì vậy, laracast là một cung cụ hữu ích để học và thực hành laravel một cách.
+   Sự hỗ trợ MVC là một trong những yếu tố quan trọng giúp cho Laravel trở thành framework PHP tốt nhất để phát triển. Hầu hết các nền tảng không cung cấp hỗ trợ MVC, trong khi đó Laravel hỗ trợ mô hình MVC giúp cải thiện hiệu suất tổng thể, tài liệu tốt hơn và cung cấp nhiều chức năng. Điều này làm cho sự phát triển của Laravel khá hấp dẫn và dễ dàng
+   Với Laravel, bạn có Artisan, một môi trường dự án tích hợp của Laravel giúp quản lý mọi thứ dễ dàng hơn cho các nhà phát triển. Nó cũng giúp nhà phát triển thực hiện các nhiệm vụ lập trình dài một cách rắc rối miễn phí bằng cách cung cấp một cách mã hóa có cấu trúc. Việc dễ dàng quản lý cấu trúc cơ sở dữ liệu giúp tiếp tục tạo mã hiệu quả cho một loạt các yêu cầu đa dạng.
+   Khi nói đến phát triển web, có một số lượng lớn nền tảng có sẵn trên thị trường. Thế nhưng để chọn được nền tảng phù hợp với yêu cầu thì Laravel là một nền tảng khá thích hợp với thị trường hiện nay. Laravel không chỉ hỗ trợ một số lượng lớn các tham số mà còn được support bởi một cộng đồng lớn giúp quá trình phát triển trở nên dễ dàng hơn rất nhiều. Vì vậy, đây là một vài lý do tạo sao Laravel lại phù hợp cho các yêu cầu phát triển web.
+1.5 Mô hình MVC
+   MVC là viết tắt của Model – View – Controller. Là một kiến trúc phần mềm hay mô hình thiết kế được sử dụng trong kỹ thuật phần mềm. Nói cho dễ hiểu, nó là mô hình phân bố source code thành 3 phần, mỗi thành phần có một nhiệm vụ riêng biệt và độc lập với các thành phần khác.
+   Model Đây là thành phần chứa tất cả các nghiệp vụ logic, phương thức xử lý, truy xuất database, đối tượng mô tả dữ liệu như các Class, hàm xử lý…
+   View sẽ chịu trách nhiệm tạo ra giao diện người dùng, và giao diện này sẽ dựa trên model.View sẽ lấy dữ liệu từ model và chuyển đổi thành giao diện hiển thị lên cho người dùng. Công việc của view là chỉ có hiển thị chứ không xử lý bất kỳ thao tác nào của người dùng. Một model có thể được truy cập bởi nhiều view. Mọi kết nối tới ứng dụng của người dùng đều thông qua Views. Views là những gì sẽ hiện thị tới người dùng, được viết theo một format nhất định.
+   Controller sẽ chịu trách nhiệm vận hành ứng dụng. Controller sẽ nhận các sự kiện từ bên ngoài, thông thường là từ người dùng, sau đó tương tác với model và gọi view tương ứng để hiển thị.
+
+Hình 11 Mô Hình MVC
+Cách thức mà laravel tương tác với người dùng:
+
+Hình 12 Cách thức mà laravel tương tác với người dùng
+1. Yêu cầu từ người dùng được gửi đến routers
+2. Laravel thông qua routers, request tới action trong controller.
+3. Controller sẽ gửi yêu cầu tới Model để lấy dữ liệu.
+4. Model sẽ lấy toàn bộ users trong cơ sở dữ liệu ra.
+5. Model trả dữ liệu cho controller.
+6. Controller sẽ đưa dữ liệu về users (bằng biến $users ) tới Views.
+7. Views sử dụng format để lấy users và hiển thị trên file html.
+8. Controller trả file html cho browser và hiển thị lên người dùng.
+1.6 Kết  luận chương 1
+   Trong chương 1 của đồ án đã khảo sát bài toán xây dựng website bán đồng hồ cũng như cơ sở lý thuyết để phục vụ cho quá trình thực hiện Website. Chương tiếp theo đồ án sẽ tiến hành phân tích, thiết kế hệ thống Website bán đồng hồ.
+
+2 CHƯƠNG 2. PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG
+   Sau khi tìm hiểu và phân tích các yêu cầu chức năng của hệ thống, đồ án sẽ đi sâu hơn vào phân tích và thiết kế các yêu cầu của hệ thống.
+2.1  Xác định và mô tả các tác nhân (Actor)
+STTTên ActorMô tả1Quản trị hệ thống (Admin)Quản trị viên truy cập vào trang quản trị hệ thống để cập nhật các thông tin liên quan tới hệ thống như thêm, sửa, xóa...
+Là người có quyền cao nhất, quyết định tới vận hành hệ thống.2Người dùng (User)Người dùng truy cập vào website để xem nội dung mà hệ thống cung cấp: Xem sản phẩm, bình luận sản phẩm, đặt mua, thanh toán,...Bảng 21 Các Actor của hệ thống
+2.2  Xây dựng và mô tả các ca sử dụng
+2.2.1 Danh sách các usecase
+STTTên UsecaseMô tả1Đăng kí thành viênNgười dùng có thể đăng kí tài khoản để đăng nhập vào hệ thống.2Đăng nhậpNgười dùng đăng nhập vào hệ thống bằng tài khoản mình đã đăng kí.3Xem thông tin sản phẩmCho phép người dùng xem thông tin về sản phẩm như tên, thương hiệu, giá, mô tả...4Tìm kiếm sản phẩm theo tên, giá Cho phép người dùng tìm kiếm sản phẩm theo tên sản phẩm, giá sản phẩm.5Thêm sản phẩm vào giỏ hàngSau khi đăng nhập người dùng có thêm sản phẩm vào giỏ hàng.6Đặt hàngNgười dùng có thể đặt hàng với những sản phẩm đã được chọn có trong giỏ hàng.7Admin đăng nhậpAdmin có thể đăng nhập vào hệ thống thông qua tài khoản đã được cấp sẵn.8Admin quản lý UsersSau khi đăng nhập thì admin có thể quản lý danh sách các user đã đăng kí tài khoản trên hệ thống.9Quản lý sản phẩmAdmin sau khi đăng nhập có thể quản lý danh sách sản phẩm.10Quản lý đơn hàngAdmin sau khi đăng nhập có thể quản lý đơn hàng.11Thống kêAdmi sau khi đăng nhập có thể thống kê.Bảng 22 Danh sách các use case
+2.3 Xây dựng biểu đồ ca sử dụng
+Biểu đồ Use-case tổng quát:
+
+Hình 21 Sơ đồ Use-case tổng quát
+2.4 Xây dựng kịch bản (Scenario)
+2.4.1 Scenario của Use-case “Đăng nhập”
+
+Tên use caseĐăng nhậpTác nhân chínhUserTiền điều kiệnĐảm bảo thành côngUser đăng nhập thành công vào hệ thốngKích hoạtUser chọn chức năng đăng nhập Chuỗi sự kiện chính:
+      1: Người dùng chọn chức năng đăng nhập trên giao diện chính của hệ thống.
+2: Màn hình hiện lên giao diện và khung đăng nhập.
+3: Người dùng nhập tên đăng nhập cùng password. Nhấn nút “Đăng nhập”.
+4: Hệ thống kiểm tra tên đăng nhập và password, hiển thị thông báo đăng nhập thành công. Ngoại lệ:
+ 4.1: Người dùng nhập thiếu tên đăng nhập hoặc password
+      4.1.1: Hệ thống báo lỗi và yêu cầu nhập đầy đủ thông tin.
+4.2: Người dùng đăng nhập sai tên đăng nhập hoặc mật khẩu
+     4.2.1. Hệ thống thông báo lỗi và yêu cầu nhập lại.Bảng 23 Kịch bản usecase đăng nhập
+2.4.2 Scenario của Use-case “tìm kiếm”
+
+Tên use caseTìm kiếm Tác nhân chínhUser, khách hàngTiền điều kiệnĐảm bảo thành côngKích hoạtUser click vào trường nhập tên, giá sản phẩm để tìm kiếmChuỗi sự kiện chính:
+ 1: User chọn chức năng tìm kiếm trên giao diện chính của hệ thống.
+ 2: Tìm kiếm sản phẩm theo tên, khoảng giá, loại,..Ngoại lệ:
+Bảng 24 Kịch bản usecase tìm kiếm
+2.4.3 Scenario quản lý sản phẩm:
+
+Tên use caseQuản lý sản phẩmTác nhân chínhUserTiền điều kiệnAdminĐảm bảo thành côngAdmin đã đăng nhập vào hệ thốngKích hoạtAdmin xem được xem danh sách, thêm, sửa, xóa tất cả sản phẩm trên hệ thốngChuỗi sự kiện chính:
+1: User sau khi truy cập vào hệ thống click chọn các chức năng quản lý sản phẩm 
+2: Hệ thống thực hiệc các chức năng khi được clickNgoại lệ: Bảng 25 Kịch bản usecase quản lý sản phẩm
+2.4.4 Scenario quản lý loại sản phẩm: 
+
+Tên use caseQuản lý loại sản phâmeTác nhân chínhUserTiền điều kiệnAdminĐảm bảo thành côngAdmin đã đăng nhập vào hệ thốngKích hoạtAdmin xem được xem danh sách, thêm, sửa, xóa tất cả loại sản phẩm trên hệ thốngChuỗi sự kiện chính:
+1: User sau khi truy cập vào hệ thống click chọn các chức năng quản lý sản phẩm 
+2: Hệ thống thực hiệc các chức năng khi được clickNgoại lệ: Bảng 26 Kịch bản usecase quản lý loại sản phẩm
+
+
+
+
+2.4.5 Scenario thêm vào giỏ hàng:
+Tên use caseThêm vào giỏ hàngTác nhân chínhUserTiền điều kiệnUser đã đăng nhập vào hệ thốngĐảm bảo thành côngUser thêm được sản phẩm vào giỏ hàngKích hoạtUser click chọn icon “thêm vào giỏ hàng”Chuỗi sự kiện chính:
+   1: User đăng nhập vào hệ thống
+   2: Hệ thống hiển thị thông báo đăng nhập thành công
+   3: User xem thông tin của sản phẩm, click chọn thêm vào giỏ hàng
+   4: Hệ thống hiển thị thông báo thêm sản phẩm thành công.Ngoại lệ: 
+   2.1: User nhập sai thông tin đăng nhập
+       2.1.1: Hệ thống hiển thị thông báo thông tin được nhập sai và cho phép nhập lại
+   3.1: User chưa đăng nhập
+       3.1.1: Hệ thống hiển thị màn hình đăng nhập và yêu cầu user đăng nhập.Bảng 27 Kịch bản usecase thêm sản phẩm vào giỏ hàng
+
+
+
+
+
+
+
+2.4.6 Scenario đặt hàng sản phẩm
+Tên use caseĐặt hàng sản phẩmTác nhân chínhUserTiền điều kiệnUser đã đăng nhập vào hệ thốngĐảm bảo thành côngUser đặt hàng thành côngKích hoạtUser click chọn “đặt hàng”Chuỗi sự kiện chính:
+   1: User đăng nhập vào hệ thống
+   2: Hệ thống hiển thị thông báo đăng nhập thành công
+   3: User xem thông tin của sản phẩm, click chọn thêm vào giỏ hàng
+   4: Hệ thống hiển thị giỏ hàng
+   5: User nhấp chọn “Đặt hàng”
+   6: Hệ thống hiển thị các thông tin của đơn đặt hàng gồm thông tin của user và một số thông tin cần user nhập vào: Tên, số điện thoại, địa chỉ,...
+   7: Hệ thống hiển thị các hình thức thanh toán để user có thể lựa chọn.
+   8: User lựa chọn hình thức thanh toán 
+   9: User nhấp chọn “Thanh toán” 
+   10: Hệ thống hiển thị thông báo đặt hàng thành công kèm theo đơn hàng bao gồm nút “hủy” cho phép user hủy đơn hàng.Ngoại lệ: 
+   2.1: User nhập sai thông tin đăng nhập
+       2.1.1: Hệ thống hiển thị thông báo thông tin được nhập sai và cho phép nhập lại
+   3.1: User chưa đăng nhập
+       3.1.1: Hệ thống hiển thị màn hình đăng nhập và yêu cầu user đăng nhập.Bảng 28 Kịch bản usecase đặt hàng sản phẩm
+2.4.7  Scenario quản lý khách hàng
+
+Tên use caseQuản lý khách hàng Tác nhân chínhAdminTiền điều kiệnAdmin đã đăng nhập vào hệ thốngĐảm bảo thành côngAdmin xem được danh sách, sửa, xóa tất cả khách hàng trên hệ thốngKích hoạtAdmin click chọn “quản lý khách hàng”Chuỗi sự kiện chính:
+   1: Sau khi đăng nhập, Admin chọn “Quản lý sản phẩm”
+   2: Giao diện hệ thống hiển thị gồm danh sách sản phẩm có trên hệ thống, button “Xóa”, button “Sửa” với mỗi sản phẩm, button “Thêm sản phẩm”Ngoại lệ: Bảng 29 Kịch bản usecase quản lý khách hàng
+
+
+
+
+
+2.4.8   Scenario quản lý user
+Tên use caseQuản lý user Tác nhân chínhAdminTiền điều kiệnAdmin đã đăng nhập vào hệ thốngĐảm bảo thành côngAdmin xem danh sách, thêm, sửa, xóa user thành côngKích hoạtAdmin click chọn “quản lý user’Chuỗi sự kiện chính:
+   1: Sau khi đăng nhập, Admin chọn “Quản lý user”
+   2: Giao diện hệ thống hiển thị gồm danh sách user có trên hệ thống, button “Xóa”, button “Sửa” với mỗi user, button “Thêm user”Ngoại lệ: Bảng 210 Kịch bản của usecase quản lý user
+2.4.9 Scenario quản lý đơn hàng
+Tên use caseQuản lý đơn hàngTác nhân chínhAdminTiền điều kiệnAdmin đã đăng nhập vào hệ thốngĐảm bảo thành côngAdmin xem danh sách, thêm, sửa, xóa đơn hàng thành côngKích hoạtAdmin click chọn “quản lý đơn hàng”Chuỗi sự kiện chính:
+   1: Sau khi đăng nhập, Admin chọn “Quản lý đơn hàng”
+   2: Giao diện hệ thống hiển thị gồm danh sách các đơn hàng mà khách hàng đã đặt có trên hệ thống, button “Xóa”, button “Sửa” với mỗi đơn hàng, button “Thêm đơn hàng”Ngoại lệ: Bảng 211 Kịch bản của usecase admin quản lý đơn hàng
+2.4.10 Scenario thống kê
+
+Tên use caseThống kê Tác nhân chínhAdminTiền điều kiệnAdmin đã đăng nhập vào hệ thốngĐảm bảo thành côngAdmin xem, thêm, sửa, xóa con số thống kê thành côngKích hoạtAdmin click chọn “thống kê”Chuỗi sự kiện chính:
+   1: Sau khi đăng nhập, Admin chọn “thống kê”
+   2: Giao diện hệ thống hiển thị bảng danh sách thống kê.Ngoại lệ: Bảng 212 Kịch bản của usecase admin thống kê
+
+
+
+2.5  Xây dựng sơ đồ lớp phân tích
+2.5.1 Biểu đồ lớp phân tích tổng quát :
+
+Hình 22 Biểu đồ lớp phân tích
+2.5.2 Lược đồ cơ sở dữ liệu
+
+Hình 23 Lược đồ cơ sở dữ liệu
+Xác định các thuộc tính của bảng trong cơ sở dữ liệu:
+
+
+Định nghĩaChứa các thông tin của UserThuộc tính- id: mã user
+- user_name: tên người dùng
+- password : mật khẩu
+- role_id: mã quyền
+- status: trạng thái
+- full name: họ và tên
+- sdt: số điện thoại
+- date_of_birth: ngày sinh
+- address: địa chỉ
+- email: email người dùng 
+- image: hình ảnh
+
+
+Định nghĩaChứa các thông tin khách hàngThuộc tính- id: Mã khách hàng
+- name: tên khách hàng
+- sdt: số điện thoại
+- email: email khách hàng
+-address: địa chỉ
+
+
+
+Định nghĩaChứa các thông tin sản phẩmThuộc tính- id: mã sản phẩm
+-code: mã code
+- name: tên sản phẩm
+- import_price: giá nhập
+- export_price: giá bán
+-quantity: số lượng
+-size: kích thước mặt
+- trademark: thương hiệu
+- country: quốc giá
+- model: kiểu máy
+-frames: khung vỏ
+-strap:chất liệu dây
+- glasses: chất liệu kính
+-ip: độ kháng nước
+- guarantee: bảo hành
+- image: hình ảnh
+- describle: mô tả
+-product_type_id: mã loại
+- sale: khuyến mại
+
+Định nghĩaChứa các thông tin loại sản phẩmThuộc tính- id: mã loại sản phẩm
+- name: tên loại
+
+
+Định nghĩaChứa các thông tin về nhà cung cấp Thuộc tính-  id: mã tin tức
+-  name: tên nhà cung cấp
+- sdt: số điện thoại
+- email: email
+-address: địa chỉ
+
+         
+Định nghĩaChứa các thông tin về slideThuộc tính-  id: mã slide
+-  image: ảnh
+   
+   Định nghĩaChứa thông tin hóa đơn nhậpThuộc tính-  id: mã hóa đơn nhập
+-  code : mã code
+- supplier_id : mã nhà cung cấp
+- date : ngày nhập
+- total_price : tổng tiền
+- user_id : mã user
+
+
+
+Định nghĩaChứa thông tin về chi tiết hóa đơn nhậpThuộc tính- id: mã chi tiết hóa đơn
+- product_id : mã sản phẩm
+- import_invoice_id : mã hóa đơn nhập
+- quantity: số lượng
+
+Định nghĩaChứa thông tin về chi tiết hóa đơn xuấtThuộc tính- id: mã hóa đơn xuất
+-  code : mã code
+- date : ngày nhập
+- total_price : tổng tiền
+-customer_id : mã khách hàng
+
+Định nghĩaChứa thông tin về chi tiết hóa đơn xuấtThuộc tính- id: mã chi tiết hóa đơn
+- product_id : mã sản phẩm
+- id_export_invoice : mã hóa đơn xuất
+- quantity: số lượng
+-price: giá
+
+Định nghĩaChứa thông tin về quyềnThuộc tính- id: mã quyền
+- name : tên quyền
+-describe: mô tả
+
+Định nghĩaChứa thông tin về quyền và vị tríThuộc tính- id: mã 
+-permission_id: mã vị trí
+-role_id: mã quyền
+
+Định nghĩaChứa thông tin về vị tríThuộc tính- id: mã 
+-name: tên vị trí
+-describe: mô tả
+- permission_group: nhóm vị tríBảng 213 Các thuộc tính của bảng trong CSDL
+
+2.6 Sơ đồ tuần tự
+2.6.1 Sơ đồ tuần tự cho chức năng đăng kí
+
+Hình 24 Sơ đồ tuần tự đăng kí tài khoản
+2.6.2 Sơ đồ tuần tự cho chức năng đăng nhập
+
+Hình 25 Sơ đồ tuần tự cho chức năng đăng nhập
+
+2.6.3 Sơ đồ tuần tự cho chức năng xem thông tin sản phẩm
+
+Hình 26 Sơ đồ tuần tự cho chức năng xem thông tin sản phẩm
+
+
+2.6.4 Sơ đồ tuần tự tìm kiếm sản phẩm
+
+Hình 27 Sơ đồ tuần tự tìm kiếm sản phẩm
+
+
+
+2.6.5   Sơ đồ tuần tự cho chức năng thêm mới sản phẩm
+
+
+Hình 28 Sơ đồ tuần tự cho chức năng thêm mới sản phẩm
+
+2.6.6    Sơ đồ tuần tự cho chức năng sửa sản phẩm
+
+Hình 29 Sơ đồ tuần tự cho chức năng sửa sản phẩm
+2.6.7    Sơ đồ tuần tự cho chức năng xóa sản phẩm
+
+Hình 210 Sơ đồ tuần tự cho chức năng xóa sản phẩm
+2.6.8    Sơ đồ tuần tự cho chức năng xóa User
+
+Hình 211 Sơ đồ tuần tự cho chức năng xóa User
+2.6.9    Sơ đồ tuần tự cho chức năng thêm sản phẩm vào giỏ hàng
+ 
+Hình 212 Sơ đồ tuần tự cho chức năng thêm sản phẩm vào giỏ hàng
+2.6.10    Sơ đồ tuần tự cho chức năng đặt hàng
+
+ 
+Hình 213 Sơ đồ tuần tự cho chức năng đặt hàng sản phẩm
+
+2.7 Kết luận chương 2
+   Trong chương 2, đồ án đã xác định các yêu cầu của hệ thống, từ đó xây dựng  Usecase, kịch bản một số chức năng chính của hệ thống, xây dựng sơ đồ tuần tự các chức năng và xác định được các lớp thực thể cũng như quan hệ giữa các lớp.
+   
+CHƯƠNG 3. CÀI ĐẶT HỆ THỐNG
+   Trong chương 3 đồ án sẽ trình bày cài đặt hệ thống và các kết quả đã thực hiện cài đặt hệ thống. 
+3.1  Yêu cầu môi trường cài đặt
+   Để thực hiện cài đặt, các yêu cầu về phần cứng và phần mềm như sau:
+- Công cụ, phần mềm hỗ trợ: Sublime Text, XamPP
+- Cài đặt Laravel Framework
+3.2  Giao diện chương trình
+  3.2.1 Giao diện trang web phía khách hàng
+   3.2.1.1 Giao diện trang chủ 
+
+ 
+Hình 31 Giao diện trang chủ
+   3.2.1.2 Giao diện trang chi tiết sản phẩm
+ 
+Hình 32 Giao diện chi tiết sản phẩm
+
+   3.2.1.3 Giao diện tìm kiếm sản phẩm theo tên
+Người dùng có thể nhập tên sản phẩm muốn tìm. Hệ thống sẽ trả về kết quả sản phẩm có tên chứa các từ khóa tìm kiếm mà người dùng đã nhập.
+
+Hình 33 Giao diện tìm kiếm theo tên sản phẩm
+   3.2.1.4 Giao diện lọc sản phẩm theo loại
+	
+
+Hình 34 Giao diện lọc sản phẩm loại
+
+   3.2.1.5  Giao diện đăng nhập
+
+Hình 35 Giao diện đăng nhập
+   3.2.1.6  Giao diện giỏ hàng
+
+Hình 36 Giao diện giỏ hàng
+   3.2.1.7  Giao diện đặt hàng
+
+
+Hình 3-7 Giao diện đặt hàng sản phẩm
+3.2.2 Giao diện màn hình phía Admin
+   3.2.2.1 Giao diện đăng nhập Admin
+
+Hình 38 Giao diện đăng nhập Admin
+
+   3.2.2.2 Giao diện quản lý danh sách sản phẩm
+
+Hình 39 Giao diện Admin quản lý danh sách sản phẩm
+   3.2.2.3 Giao diện thêm sản phẩm
+
+Hình 310 Giao diện Admin thêm sản phẩm
+   3.2.2.4 Giao diện sửa sản phẩm
+
+Hình 311 Giao diện Admin sửa sản phẩm
+
+   3.2.2.5 Giao diện Admin tìm kiếm sản phẩm
+
+Hình 312 Giao diện Admin tìm kiếm sản phẩm
+
+3.3  Kết luận chương 3
+	Trong chương 3 đồ án đã thực hiện cài đặt hệ thống phần mềm. Từ các kết quả đã thực hiện, có thể đánh giá ưu, nhược điểm của hệ thống đã cài đặt như sau.
+• Ưu điểm của phần mềm:
+- Phần mềm chạy ổn định.
+- Giao diện ưa nhìn, dễ sử dụng.
+- Các chức năng trình bày rõ ràng, cụ thể, dễ hiểu.
+• Nhược điểm của phần mềm:
+- Tốc độ của hệ thống chưa đạt tốc độ như mong muốn.
+ -  Chưa giải quyết tối ưu được vấn đề bảo mật
+
+
+3 CHƯƠNG 4. KẾT LUẬN
+• Kết quả đạt được của đồ án
+      Sau thời gian nghiên cứu và phát triển, em đã hoàn thành cơ bản các mục tiêu ban đầu đề ra của đề tài.
+• Nắm được quy trình bán hàng trực tuyến.
+• Nắm rõ về ngôn ngữ lập trình web 
+• Cơ bản thực hiện tốt chức năng đề ra.
+• Giao diện chương trình thiết kế với phong cách hiện đại, chuyên nghiệp.
+• Đầy đủ các tính năng cần thiết của website bán hàng.
+• Tích hợp bộ lọc và tìm kiếm chính xác.
+• Nội dung website được trình bày hợp lý.
+• Về mặt giao diện
+- Thiết kế được trang web có giao diện thân thiện với người sử dụng. 
+- Bố cục giao diện Website cân đối, hài hòa, phù hợp với nội dung hiển thị của Website.
+- Màu sắc hài hòa, trang nhã giúp cho người dùng không mỏi mắt khi truy cập vào WebSitetrong thời gian dài.
+• Về mặt chức năng Website
+- Do được xây dựng từ các module đơn lẻ, Website có thể dễ dàng nâng cấp các chức năng cho mình trong một thời gian ngắn.
+- Nội dung các sản phẩm, tin tức được phân theo loại danh mục rõ ràng.
+- Nội dung các tin tức hiển thị ngắn gọn, xúc tích mà vẫn giúp cho người dùng hiểu được đầy đủ được nội dung của tin tức đó.
+- Tìm kiếm sản phẩm nhanh chóng qua chức năng tìm kiếm nhanh. 
+• Về mặt dữ liệu 
+- WebSite có khả năng lưu trữ lượng dữ liệu tương đối lớn.
+- Thông tin mật khẩu của user đã được mã hóa.
+• Hạn chế của đồ án
+   Đồ án còn một số hạn chế như: 
+- Một số chức năng còn thiếu xót chưa hoàn hảo.
+- CSDL chưa thực sự tối ưu.
+- Chưa tương thích với một số trình duyệt website.
+- Chưa được ứng dụng và triển khai vào thực tế.
+• Hướng phát triển của đồ án
+- Website sẽ chạy ổn định trên nhiều trình duyệt khác nhau.
+- Tương thích sử dụng cho các dòng điện thoại, máy tính bảng.
+- Xây dựng thêm hệ thống trang diễn đàn để khách hàng có thể trao đổi thông tin.
+- Tối ưu hóa hệ thống để có tốc độ nhanh nhất.
+- Tăng cường tính bảo mật cho website.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TÀI LIỆU THAM KHẢO
+[1]  https://laravel.com/
+[2] https://online.khoapham.vn/
+[3] https://thachpham.com/
+[4] https://viblo.asia/tags/laravel
+
+
+ĐỒ ÁN TỐT NGHIỆP		LỜI MỞ ĐẦU
+
+15
+
+
+ĐỒ ÁN TỐT NGHIỆP  	                                                                 CHƯƠNG 1. CƠ SỞ LÝ THUYẾT
+
+ĐỒ ÁN TỐT NGHIỆP  	                                  CHƯƠNG 2. PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG
+
+ĐỒ ÁN TỐT NGHIỆP  	                                                                 CHƯƠNG 3. CÀI ĐẶT HỆ THỐNG
+

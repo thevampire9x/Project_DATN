@@ -1,0 +1,465 @@
+﻿CHƯƠNG I. MỞ ĐẦU
+1.1 Lý do chọn đề tài
+Thực trạng môi trường sống của chúng ta ngày càng ô nhiễm khiến cho nhiều người mắc các bệnh ung thư, sinh vật thì bị biến đổi gen. 
+Nhằm cảnh báo hậu quả của tình trạng ô nhiễm ngày càng nặng nề, dựa theo series phim bom tấn Godzilla cùng với sự sáng tạo của mình. Em hy vọng game sẽ thu hút người chơi với những màn chiến đấu nảy lửa giữa những quái vật khổng lồ cùng với thông điệp “Hãy chung tay bảo vệ môi trường” để tránh một tương lai như trong trò chơi.
+1.2  Phát biểu bài toán
+Nội dung thực hiện nghiên cứu cụ thể như sau:
+- Nghiên cứu công nghệ lập trình Unity 
+- Đặc tả yêu cầu khách hàng
+- Phân tích yêu cầu và đưa ra yêu cầu cho hệ thống.
+- Đặc tả chức năng, lớp cho hệ thống
+- Thiết kế giao diện cho ứng dụng
+- Lập trình cho các Module của hệ thống
+- Kiểm thử hệ thống.
+- Triển khai thực nghiệm hệ thống máy tính
+1.3  Phương pháp xây dựng/nghiên cứu
+- Cách tiếp cận : 
+o Nghiên cứu ngôn ngữ lập trình C#
+o Nghiên cứu công cụ Unity
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu
+o Phương pháp phân tích
+o Phương pháp thực nghiệm.
+
+1.4  Kết quả dự kiến của đồ án
+ 	Xây dựng được ứng dụng với cac chức năng cơ bản
+       - Công cụ lựa chọn: chơi mới, chơi tiếp 
+       - Thực hiện load dữ liệu lưu trước, lưu dữ diệu
+       - Xây dựng các Animation, Animator cho nhân vật, quái con và boss.
+       - Xây dựng các skill cho nhân vật, quái con và boss.
+       - Thực hiện tự động cho quái con và boss
+       - Xây dựng các item vàng, hp, mp hỗ trợ người chơi cùng các hiệu ứng hình ảnh, âm thanh khi ăn item.
+       - Có các video giới thiệu khi đến màn boss
+       - Xây dưng cửa qua màn khi người chơi tiêu diệt hết quái
+       - Giao diện đẹp, thân thiện, dễ sử dụng.
+CHƯƠNG 2. CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Unity
+2.1.1 Giới thiệu về Unity
+    - Unity là một “cross- flatform game engine” tạm hiểu là công cụ phát triển game đa nền tảng được phát triển bởi Unity Technologies. Game engine này được sử dụng để phát trển game trên PC, consoles, thiết bị di động và trên websites.
+    - Ra mắt đầu tiên vào năm 2005 tại sự kiện Apple’s Worldwide Developer Conference bởi nhà sáng lập David Helgason, trải qua hơn 12 năm phát triển, nay Unity đã có version 5.5 hoàn thiện hơn về rất nhiều mặt. Tháng 5-2012 theo cuộc khảo sát Game Developer Megazine được công nhận là Game engine tốt nhất cho mobile. Năm 2014 Unity thắng giải “Best Engine” tại giải UK’s annual Develop Industry Exellence.
+    - Chỉ với khoản tiền bỏ ra khá khiêm tốn (1.500 USD) là phiên bản pro đã nằm trong tay của chúng ta, dĩ nhiên tại Việt Nam số tiền này vẫn là quá lớn nhưng thật may là đã có phiên bản Unity Free. Tuy nhiên, nhiều tính năng quan trọng (Network) bị cắt giảm nhưng đó không phải là vấn đề quá lớn nếu muốn phát triển một tựa game tầm trung.
+    - Vào năm 2009, Unity nằm trong top 5 game engine tốt nhất cho việc sản xuất game với chỉ sau 4 năm phát triển. Unity đứng thứ 4, xếp sau Unreal Engine 3, Gamebryo Engine (được VTC Studio mua về phát triển SQUAD) và Cry Engine 2. Lượng tài liệu hướng dẫn Unity rất phong phú. Hơn thế nữa nó còn có sẵn một cộng đồng cực lớn với diễn đàn riêng. Bất cứ điều gì không hiểu chúng ta đều có thể thoải mái hỏi và nhận được câu trả lời nhanh chóng, tận tâm.
+    - Quá trình tạo địa hình cũng như truy xuất từ các phần mềm 3DSMax, Maya, Cinema4D... rất nhanh chóng. Sức mạnh và sự tiện lợi của Unity là vô cùng lớn.
+    - Sức mạnh: Unity có thể tạo ra được nhiều loại game 2D, 3D đa dạng, dễ sử dụng với người làm game chưa chuyên nghiệp, chất lượng cao, chạy hầu hết trên các hệ điều hành.
+    - Sự tiện lợi: nếu chúng ta là một người chuyên dùng 3Dmax, hay Maya hoặc phần mềm mã nguồn mở Blender thì quả là thật tuyệt, chúng ta sẽ có một lợi thế lớn khi viết game trên Unity này, bởi công việc tạo các mô hình 2D, 3D sẽ trở lên dễ dàng hơn rất nhiều, việc kết hợp giữa người lập trình và người thiết kế các mô hình sẽ nhanh và hiệu quả hơn. Trong Unity chúng ta có thể import trực tiếp các file mô hình đang thiết kế và sẽ thiết kế hoàn thiện tiếp nếu chưa xong trong khi đó công việc import chỉ diễn ra một lần. Không như việc phải dùng các công cụ khác để thực hiện viết game chúng ta sẽ phải xuất chúng ra một dạng nào đó và mỗi lần sửa lại phần mô hình chúng ta lại phải import lại, và như thế là quá mất thời gian trong việc tạo và chỉnh sửa các mô hình theo ý muốn. Ngoài ra Unity còn cho chúng ta trực tiếp tạo các mô hình nếu muốn. Việc đặt các thuộc tính vật lý trong Unity cũng cực kỳ dễ dàng và hỗ trợ sẵn nhiều chức năng.
+
+
+    - Một số thống kê vè Unity:
+• Tính đến quý 3 năm 2016 đã có 5 tỉ lượt download game và ứng dụng được phát triển bởi Unity
+• 2,4 tỉ thiết bị di động đã từng tải ít nhất 1 ứng dụng bởi unity.
+• Trong top 1000 game Mobiles miễn phí thì số lượng game tạo ra bởi Unity chiếm tới 34%
+• Số lượng người dùng (gamer) của Unity đạt tới con số 770 triệu, trong khi đó số người thường xuyên sử dụng Twitter là 310 triệu người.
+• Sự thay đổi trong cách thức chơi game của người chơi hay nói cách khác là xu hướng mọi người tập trung vào game trên di động nhiều hơn.
+2.1.2 Các thành phần trong Unity
+
+    Hình 1. 3 các thành phần trong unity
+     - Cửa sổ Sences:
+   * Phần này phần hiển thị các đối tượng trong scenes một cách trực quan, có thể lựachọn các đối tượng, kéo thả, phóng to, thu nhỏ, xoay các đối tượng ...
+   * Phần này có để thiết lập một số thông số như hiển thị ánh sáng, âm anh, cách nhìn 2D hay 3D ... -Khung nhìn Scene là nơi bố trí các Game Object như cây cối, cảnh quan, enemy, player, camera, … trong game. Sự bố trí hoạt cảnh là một trong những chức năng quan trọng nhất của Unity.
+ - Cửa sổ Hierarchy:
+   * Tab hierarchy là nơi hiển thị các Game Object trong Sences hiện hành. Khi các đối tượng được thêm hoặc xóa trong Sences, tương ứng với các đối tượng đó trong cửa sổ Hierarchy.
+   * Tương tự trong tab Project, Hierarchy cũng có một thanh tìm kiếm giúp quản lý và thao tác với các Game Object hiệu quả hơn đặc biệt là với các dự án lớn.
+- Cửa sổ Game:
+* Đây là mạn hình demo Game, là góc nhìn từ camera trong game.
+   * Thanh công cụ trong cửa sổ game cung cấp các tùy chỉnh về độ phân giải man hình, thông số (stats), gizmos, tùy chọn bật tắt các component...
+- Cửa sổ Project:
+   * Đây là cưa sổ explorer của Unity, hiển thị thông tin của tất cả các tài nguyên (Assets) trong game của bạn.
+   * Cột bên trái hiển thị assets và các mục yêu thích dưới dạng cây thư mục tương tự như Windows Explorer. Khi click vào một nhánh trên cây thư mục thì toàn bộ nội dung của nhánh đó sẽ được hiển thị ở khung bên phải. Ta có thể tạo ra các thư mục mới bằng cách Right click -> Create -> Folder hoặc nhấn vào nút Create ở góc trên bên trái cửa sổ Project và chọn Folder. Các tài nguyên trong game cũng có thể được tạo ra bằng cách này.
+   * Phía trên cây thư mục là mục Favorites, giúp chúng ta truy cập nhanh vào những tài nguyên thường sử dụng. Chúng ta có thể đưa các tài nguyên vào Favorites bằng thao tác kéo thả.
+   * Đường dẫn của thư mục tài nguyên hiện tại. Chúng ta có thể dễ dàng tiếp cận các thư mục con hoặc thư mục gốc bằng cách click chuột vào mũi tên hoặc tên thư mục.
+- Cửa sổ Inspector:
+   * Cửa sổ Inspector hiển thị chi tiết các thông tin về Game Object đang làm việc, kể cả những component được đính kèm và thuộc tính của nó. Bạn có thể điều chỉnh, thiết lập mọi thông số và chức năng của Game Object thông qua cửa sổ Inspector.
+   * Mọi thuộc tính thể hiện trong Inspector đều có thể dễ dàng tuỳ chỉnh trực tiếp mà không cần thông qua một kịch bản định trước. Tuy nhiên Scripting API cung cấp một số lượng nhiều và đầy đủ hơn do giao diện Inspector là có giới hạn.
+   * Các thiết lập của từng component được đặt trong menu. Các bạn có thể click chuột phải, hoặc chọn icon hình bánh răng nhỏ để xuất hiện menu.
+   * Ngoài ra Inspector cũng thể hiện mọi thông số Import Setting của asset đang làm việc như hiển thị mã nguồn của Script, các thông số animation, …
+2.1.3 Ưu điểm của Unity
+   - Chức năng cốt lõi đa dạng bao gồm: cung cấp công cụ dựng hình (kết xuất đồ họa) cho các hình ảnh 2D hoặc 3D, công cụ vật lý (tính toán và phát hiện va chạm), âm thanh, mã nguồn, hình ảnh động, trí tuệ nhân tạo, phân luồng, tạo dò ng dữ liệu xử lý, quản lý bộ nhớ, dựng ảnh đồ thị và kết nối mạng. Nhờ có các engine mà công việc làm game trở nên ít tốn kém và đơn giản hơn.
+   Hỗ trợ đa nền tảng: Một trong các thế mạnh của Unity3D chính là khả năng hỗ trợ gần như toàn bộ các nền tảng hiện có bao gồm: PlayStation 3, Xbox 360, Wii U, iOS, Android, Windows, Blackberry 10, OS X, Linux, trình duyệt Web và cả Flash. Nói cách khác, chỉ với một gói engine, các studio có thể làm game cho bất kỳ hệ điều hành nào và dễ dàng convert chúng sang những hệ điều hành khác nhau. Đồng thời, đây cũng là giải pháp cho các game online đa nền tảng – có thể chơi đồng thời trên nhiều hệ điều hành, phần cứng khác nhau như Web, PC, Mobile, Tablet….
+
+Hinh 1. 4 hỗ trợ unnity
+   Dễ sử dụng: Unity3D được built trong một môi trường phát triển tích hợp, cung cấp một hệ thống toàn diện cho các lập trình viên, từ soạn thảo mã nguồn, xây dựng công cụ tự động hóa đến trình sửa lỗi. Do được hướng đến đồng thời cả lập trình viên không chuyên và studio chuyên nghiệp, nên Unity3D khá dễ sử dụng. Hơn nữa, đây là một trong những engine phổ biến nhất trên thế giới, người dùng có thể dễ dàng tìm kiếm kinh nghiệm sử dụng của “tiền bối” trên các forum công nghệ.
+   Tính kinh tế cao: Unity Technologies hiện cung cấp bản miễn phí engine Unity3D cho người dùng cá nhân và các doanh nghiệp có doanh thu dưới 100.000 USD/năm. Với bản Pro, người dùng phải trả 1.500 USD/năm – một con số rất khiêm tốn so với những gì engine này mang lại.
+2.2 Lược lịch sử hình thành và phát triển của Unity
+    - Phần lõi của Unity ban đầu được viết bởi Joachim Ante vào năm 2001. Sau đó công ty được hình thành vào năm 2005 và bắt đầu với phiên bản 1.0. Đến năm 2007, Unity được nâng lên phiên bản 2.0. Unity bắt đầu hỗ trợ iPhone vào năm 2008. Vào tháng 6/2010, Unity chính thức hỗ trợ Android và cho ra đời phiên bản 3.0 có hỗ trợ Android vào tháng 9/2010. Có thể thấy tốc độ phát triển của Unity khá nhanh.
+
+    - Năm 2012, Unity đạt 1,3 triệu người sử dụng gồm Bigpoint, Cartoon Network, Coca-Cola, Disney, Electronic Arts, LEGO, Microsoft, NASA, Ubisoft, Warner Bros, các hãng phim lớn nhỏ, các chuyên gia độc lập, sinh viên và những người đam mê
+2.3 Kiến trúc Game Engine
+    - Engine Unity hỗ trợ cho chúng ta UnityAPI để viết script game. UnityAPI là API lập trình game trong Unity rất mạnh. UnityAPI chứa các đối tượng và phương thức hỗ trợ hầu hết các đối tượng và các loại thành phần trong Unity.
+    - Trong một scene thường có nhiều đối tượng game. Mỗi đối tượng này có thể có hoặc không có đoạn script nào gắn lên đó. Nếu muốn gắn script vào đối tượng, ta bắt buộc phải kế thừa class đó từ lớp MonoBehaviour của UnityAPI và tên class phải trùng với tên file script. Mỗi script khi gắn lên đối tượng game đều được đối tượng game xem như một thành phần bên trong và được cấp phát vùng nhớ khi chạy game.
+
+hinh 2. 1 các lớp tron scene
+Bên trong UnityAPI chứa rất nhiều lớp hỗ trợ lập trình game, trong đó có một số lớp quan trọng như :
+* MonoBehaviour: tất cả các script muốn gắn vào một đối tượng game bắt buộc phải kế thừa từ lớp này.
+* GameObject: lớp cha của tất cả các thực thể trong scene.
+* Component: lớp cha của tất cả các thành phần có thể gắn vào đối tượng.
+* Transform: giúp thay đổi vị trí, xoay, biến đổi tỉ lệ mô hình.
+* Input: hỗ trợ lập trình với chuột, cảm ứng đa điểm, cảm biến gia tốc.
+* Camera: giúp lập trình camera.
+* Light: giúp tạo ánh sáng trong game.
+* Projector: giúp chiếu texture lên bề mặ t vậ t thể.
+* ParticleEmitter: hỗ trợ tạo các hiệu ứng particle đẹp mắt.
+* Audio: hỗ trợ lập trình với âm thanh.
+* Animation: chạy chuyển động của mô hình nhân vật.
+* Rigidbody: giúp tạo hiệu ứng vật lý liên quan đến trọng lực như bóng nẩy, lăn, ..
+* CharacterController: giúp điều khiển nhân vật di chuyển theo độ cao địa  hình.
+* Collider: hỗ trợ lập trình va chạm giữa các vật thể.
+* GUI: giúp lập trình giao diện người dùng trên Unity.
+2.4 Các đặc điểm và tính năng của Unity
+2.4.1 Lighting (ánh sáng)
+    Ánh sáng là một điều thiết yếu giúp môi trường trở nên đẹp và thực tế hơn. Unity cũng cung cấp nhiều giải pháp đa dạng cho phép chúng ta áp dụng ánh sáng một cách tốt nhất vào môi trường trong trò chơi với nhiều loại nguồn sáng như ánh sáng có hướng (Directional Light), ánh sáng điểm (Point Light), ... Một số công nghệ và kỹ thuật về ánh sáng được Unity hỗ trợ: Lingtmapping, Realtime Shadows, hiệu ứng Sunshafts và Lens Flares.
+    
+2.4.2 Substances (Texture thông minh)
+Substances có thể hiểu đơn giản là một dạng tùy biến Textures nhằm làm đa dạng chúng trong nhiều điều kiện môi trường khác nhau. Unity cung cấp khả năng này thông qua các API dựng sẵn trong thư viện, hỗ trợ lập trình viên lập trình để tùy biến hình ảnh được kết xuất của Texture
+2.4.3 Pathfinding (tìm đường)
+Đây là một tính năng rất mới mẻ đến từ phiên bản Unity 3.5. Với các phiên bản trước, để phát triển khả năng tìm đường cho trí thông minh nhân tạo (AI), nhà phát triển phải hoàn toàn tự xây dựng cho mình một hệ thống tìm đường riêng biệt. Tuy nhiên ở phiên bản 3.5 đến nay, Unity hỗ trợ cho chúng ta tính năng Pathfinding cho phép tạo ra khả năng tìm đường cho AI nhờ vào khái niệm lưới định hướng (NavMesh).
+2.4.4 Programming (lập trình)
+Lập trình là một trong những yếu tố quan trọng nhất trong phát triển Game. Lập trình cho phép nhà phát triển tạo nên khả năng tương tác, trí thông minh và yếu tố Gameplay cho trò chơi. Unity cho phép chúng ta lập trình bằng nhiều ngôn ngữ mạnh mẽ và phổ biến với các lập trình viên như: C#, Java Scrip và Boo
+2.4.5 Rendering (kết xuất hình ảnh)
+Giống như tất cả các Engine hoàn chỉnh khác, Unity hỗ trợ đầy đủ khả năng kết xuất hình ảnh (Redering) cùng nhiều hỗ trợ cho phép áp dụng các công nghệ phổ biến trong lĩnh vực đồ họa 3D nhằm cải thiện chất lượng hình ảnh. Các phiên bản gần đây nhất của Unity được xây dựng lại thuật toán nhằm cải thiện hiệu suất kết xuất hình ảnh đồng thời tăng cường chất lượng hình ảnh sau khi kết xuất
+2.4.6 Terrains (địa hình)
+Terrains còn gọi chung là địa hình bao gồm phần đất nền của môi trường trong trò chơi cùng các đối tượng gắn liền như cây, cỏ, …
+Unity cung cấp một công cụ hỗ trợ rất tốt khả năng này với tên gọi là Terrains Tools cho phép chúng ta thiết kế địa hình với các công cụ vẽ dưới dạng Brush có nhiều thông số tùy chỉnh để tạo hình và lát Texture cho địa hình. Cùng với Terrain Tools là Tree Creator, một công cụ mạnh mẽ cho phép chúng ta tạo ra cây cối với hình dạng, kích thước và kiểu cách đa dạng.
+2.4.7  Physics (vật lý)
+PhysX là một Engine mô phỏng và xử lí vật lý cực kỳ mạnh mẽ được phát triển bởi nhà sản xuất card đồ họa hàng đầu thế giới NVIDIA. Unity đã tích hợp Engine này vào để đảm nhận mọi vấn đề vật lý
+2.4.8  Networking
+Một số tính tăng cung cấp bởi Networking như: State Synchronization, Realtime Networking, Remote Procedure Calls, Backend Connectivity, Web Browser Integration, Web Connectivity.
+Networking cho phép chúng ta tạo ra các trò chơi trực tuyến (online) – một trong những thể loại trò chơi thu hút được nhiều người chơi nhất. Tính năng này sẽ hỗ trợ đầy đủ để chúng ta tạo nên các khía cạnh phổ biến trong Game online như hệ thống điểm kinh nghiệm , chat và tương tác thời gian thực, …
+2.4.9 Tilemap
+Tilemap là một mạng lưới các gạch được sử dụng để tạo ra map (bản đồ) cho game. Hoặc nói chung là Tilemap dùng để thiết kế level của bạn hoặc có thể hiểu là thiết kế sence của bạn như ngôi nhà, bẫy, mây… là một hệ thống lưu trữ và xử lý Tài sản Ngói để tạo các mức 2D. Nó chuyển thông tin cần thiết từ gạch được đặt trên đó sang  các  thành  phần  liên  quan  khác  như Trình  kết  xuất  Tilemap và Trình    tạo Tilemap Collider 2D
+2.5 Các thành phần chính trong Unity
+2.5.1 Scenes
+Trong Unity, chúng ta cần hiểu một cảnh (hay một phân đoạn) nghĩa là một màn chơi riêng biệt hoặc một khu vực hay thành phần có trong nội dung của trò chơi (ví dụ như Game menu). Bằng cách tạo nên nhiều Scenes cho trò chơi, chúng ta có thể phân phối thời gian tải hoặc kiểm tra các phần khác nhau củ a trò chơi một cách riêng lẽ.
+
+    Hình  2.5. 7 Scenes
+
+2.5.2 Assets
+Assets là những tài nguyên xây dựng nên một dự án Unity. Từ những tập tin hình ảnh, mô hình 3D đến các tập tin âm thanh. Unity gọi các tập tin mà chúng ta dùng để tạo nên trò chơi là tài sản (Assets). Điều này lí giải tại sao tất cả các tập tin, thư mục của các dự án Unity đều được lưu trữ trong một thư mục có tên là “Assets”.
+
+    Hình  2.5. 8 Assets
+2.5.3 Components
+Components có nhiều hình thức khác nhau. Chúng có thể xác định hành vi, cách xuất hiện,… hay ảnh hưởng đến các khía cạnh khác trong chức năng của Game Object trong trò chơi. Bằng cách “gắn” chúng vào trong Game Object, chúng ta ngay lập tức có thể áp dụng tác động của chúng lên đối tượng. Những Components phổ biến trong quá trình phát triển trò chơi đều được Unity hỗ trợ sẵn. Ví dụ như thành phần Rigidbody đã được đề cập hay các yếu tố đơn giản khác như ánh sáng, Camera và nhiều thành phần khác. Để tạo nên các yếu tố tương tác trong trò chơi, chúng ta sẽ sử dụng Script (mã kịch bản), chúng cũng được xem như là một Components trong Unity.
+
+    hình  2.5. 9 Components
+2.5.4 Game Object
+Khi Assets được sử dụng trong Scene, chúng trở thành Game Object – một thuật ngữ được sử dụng trong Unity (đặc biệt là trong mả ng lập trình). Tất cả các Game Object đều chứa ít nhất một thành phần là Transform. Transform là thông tin về vị trí, góc xoay và tỉ lệ của đối tượng, tất cả được mô tả bởi bộ 3 số X, Y, Z trong hệ trục tọa độ . Thành phần này có thể được tùy biến lại trong quá trình lập trình nhằm thay đổi vị trí, góc quay và tỉ lệ của đối tượng qua các đoạn mã. Từ các thành phần cơ bản này, chúng ta sẽ tạo ra Game Object với các thành phần khác, bổ sung chức năng cần thiết để xây dựng nên bất kỳ một thành phần nào trong kịch bản Game mà chúng ta đã tưởng tượng.
+ 
+    hình  2.5. 10 Game Object
+2.5.5 Scripts
+Được Unity xem như một Components, Script là một thành phần thiết yếu trong quá trình phát triển trò chơi và đáng được đề cập đến như một khái niệm “chìa khóa”. Unity cung cấp cho chúng ta khả năng viết Script bằng cả 3 loại ngôn ngữ là: JavaScript, C# và Boo (một dẫn xuất của ngôn ngữ Python).
+Unity không đòi hỏi chúng ta phải học làm thế nào để lập trình trong Unity, nhưng hầu như chúng ta phải sử dụng Script tại mỗi thành phần trong kịch bản mà chúng ta phát triển. Unity đã xây dựng sẵn một tập hợp đa dạng các lớp, hàm mà chúng ta hoàn toàn có thể ứng dụng trong quá trình lập trình cho trò chơi của mình.
+Để viết script, chúng ta sẽ làm việc với một trình biên tập Script độc lập của Unity, hoặc với chương trình Mono Developer được tích hợp và đồng bộ với Unity trong những phiên bản mới nhất hiện nay.
+Mono developer là một IDE khá tốt để lập trình khi cung cấp nhiều chức năng tương tự như Visual studio. Mã nguồn viết trên Mono Developer sẽ được cập nhật và lưu trữ trong dự án Unity.
+
+    Hình  2.5. 11 Scripts
+2.5.6 Camera
+Camera trong Unity dùng để thể hiện khung hình, góc nhìn mà người chơi có thể nhìn thấy được trong game.
+Trong một game có thể thiết lập nhiều camera để chia nhỏ màn hình người chơi, tạo các hiệu ứng, hoặc tùy chỉnh như nhìn được từ phía sau, bản đồ thu nhỏ
+
+    Hình  2.5. 12 Camera
+2.5.7 Light
+Light là một phần thiết yếu của mỗi scene. Light xác định màu sắc và độ sáng của môi trường Game. Việc kết hợp nhiều lights trong scene giúp tạo ra các hiệu ứng ánh sáng phù hợp với từng trò chơi.
+ 
+    Hình  2.5. 13 Light
+2.5.8 Prefabs
+Prefabs cho phép chúng ta lưu trữ các đối tượng với những Components và những thiết đặt hoàn chỉnh. Có thể so sánh với khái niệm cơ bản là MovieClip trong Adobe Flash, Prefabs chỉ đơn giản là một Container (một đối tượng chứa) rỗng mà chúng ta có thể đưa bất kì một đối tượng hay dữ liệu mẫu nào mà chúng ta muốn tái sử dụng về sau
+
+    Hình  2.5. 14 Prefabs
+PHẦN 3.  PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG
+3.1 Phát biểu bài toán
+3.1.1 Kịch bản
+Cốt truyện
+➢ Bối cảnh : 
+      Vào năm 2222, môi trường bị ô nhiễm nặng nề chởi chất thải và chất phóng xạ khiến các quái thú Titan vốn trong giấc ngủ say lần lượt thức tỉnh.
+      Con người bị quái thú tấn công nhưng vũ khí hạt nhân chỉ khiến nó mạnh lên. Trong trận chiến cuối cùng, mặc dù được sự trợ giúp của 3 vệ binh quái thú(King Ghidorah, Mothra, Baragon) nhưng vẫn thất bại. Ba vệ binh quía thú bị hủy diệt nhưng tinh hoa sức mạnh của chúng đã dồn vào 1 quả trứng và chìm sâu vào lòng đất. Con người buộc phải lui xuống lòng đất tránh nạn.
+      5000 năm sau, môi trường Trái Đất dần bị titan hóa, nhân loại trên bờ vực tuyệt vọng. Chỉ có một cách để khôi phục môi trường đó là đánh bại các Titan, một nhóm khảo cổ vẫn luôn tìm kiếm quả trứng trong truyền thuyết- sức mạnh duy nhất có thể đánh bại các Titan.
+      Rồi một ngày, đội trinh sát đã phát hiện một hầm ngục rất nhiều quái vật phía dưới chiến trường cũ. Sau cuộc chiến khốc liệt, nhờ sức mạnh của các chiến binh robot tiên tiến do đội trinh sát điều khiển đã quét sạch quái vật và tìm thấy quả trứng trong truyền thuyết. 
+      Một của hành trình mới bắt đầu, hy vọng khôi phục thế giới cùng các âm mưu, bí mật dần hé lộ.
+➢ GamePlay: 
+      Người chơi trong vai đội trưởng của đội trinh sát cùng người bạn Titan- nakroth (gọi tắt là Na). Nhờ công nghệ đồng bộ hóa với Titan, người chơi sẽ điều khiển nakroth chiến đấu qua các màn chơi với độ khó tăng dần và không ngừng trưởng thành để đánh bại Vua quái thú- Godzilla, khôi phục môi trường Trái Đất, giải phóng nhân loại.
+      
+Kịch bản
+• Nhân vật & Boss
+- Titan nakroth :
+       * Lv1: atk 100, hp 2000, mp 200, tốc độ di chuyển tối đa 3, nhảy cao tối đa 5. Qua mỗi màn: +100 atk, 1000hp. 
+  * Skill: 
+        * Skill 1 “Strike Attack”: sát thương= 100%atk, giúp nhân vật lao đi 1 đoạn ngắn, gây sát thương trên đường bay, cooldown 1s, tốn 0 mp
+        * Skill 2 “Fire Ball”: sát thương= 200%atk, tầm bắn :hết màn hình, cooldown 1s tốn 20 mp
+- Boss Gigan:
+      * Chỉ số: atk 200, hp 8000, tốc độ di chuyển tối đa 3
+      * Skill:
+      * Phun lửa: st= 150%atk, cooldown 2s, kích hoạt khi người chơi cách boss trong khoảng [0m, 1.5m]
+      * Mắt laze: st= 200%atk, cooldown 5s, kích hoạt khi người chơi cách boss trong khoảng (1.5m, 10m]
+- Boss Godzilla:
+      * Chỉ số: atk 300, hp 15000, tốc độ di chuyển tối đa 3
+      * Skill:
+      * Atomic Fire: st= 300% atk, cooldown 2s, kích hoạt khi người chơi cách boss trong khoảng [0m, 3m]
+      * Atomic Heat Ray: st= 250%atk, cooldown 5s, kích hoạt khi người chơi cách boss trong khoảng (3m, 10m]
+- Quái con
+      * Chỉ số: atk 50, hp 1000, tốc độ di chuyển tối đa 3
+      * Skill:
+      * Cắn: st= 100%atk, cooldown 2s, kích hoạt khi người chơi cách quái trong khoảng [0m, 1m]
+      * Phun độc: st= 150%atk, cooldown 5s, kích hoạt khi người chơi cách quái trong khoảng (1m, 10m]
++ Màn chơi
+    -  Người chơi điều khiển nhân vật di chuyển bằng 2 phím mũi tên trái- phải, nhảy bằng phím space, dùng skill 1 phím Q, skill 2 phím W.
+    - Người chơi đi về phía trước tiêu diệt kẻ địch, vượt qua chướng ngại vật để đi đến cổng dịch chuyển cuối map, khi đến nơi thì hoàn thành ải.
+    - Ải gồm: cứ 1 ải thường thì đến 1 ải boss. Quái ải thường là quái con. Khi tiêu diệt hết quái sẽ xuất hiện cửa chuyển màn, người chơi tìm đến cửa mới có thể qua ải.
+    - Qua mỗi ải chỉ số hp,  mp hồi đầy, qua mỗi ải boss chỉ số nhân vật được tăng lên
+    - Kẻ địch gồm 2 loại:
+• Quái con
+• Boss
+    - Người chơi đi đến đâu thì kẻ địch xuất hiện đến đấy
+    - Kẻ địch xuất hiện từ bên phải
+    - Màn 1 “Chuyến đi đầu tiên”: số quái: 2 quái con. Số vàng có thể thu được trong ải 50
+    - Màn 2 “Nguy hiểm! Gigan đột kích”: 1 Boss Gigan. Hoàn thành thưởng 50 vàng.
+    - Màn 3 “Thách thức Godzilla”: số quái: 4 quái con. Số vàng có thể thu được trong ải 50
+    - Màn cuối “Vua quái thú Godzilla”: 1 Boss Godzilla. 
+    * Vật phẩm
+    - Đồng vàng (Xuất hiện trong màn chơi): ăn mỗi đồng vàng người chơi tăng 10 vàng. Dùng 50 vàng để hồi sinh chiến tiếp nếu không sẽ phải quay lại màn đầu.
+    - Item HP:  khi ăn hồi ¼ hp, thời gian làm mới 30s
+- Item MP: khi ăn hồi ¼ mp, thời gian làm mới 30s
+* Trướng ngại vật
+- Plat: bậc thềm người chơi có thể đứng lên
+- Moving Plat: bậc thèm di chuyển ngang
+- Falling Plat: bậc thềm sai khi người chơi đứng lên 1s sẽ tự rơi xuống
+- Trap: gây sát thương bằng 1/10 HP của người chơi
+3.1.2 Các yêu cầu chính của hệ thống
+- Trò chơi được mô tả như sau:
+    1. Người chơi có thể chọn chơi tiếp, chơi mới
+    2.Nếu chọn chơi mới, người chơi tạo nhân vật. Nhân vật sẽ có các thuộc tính bao gồm: tên nhân vật, tiền xu, hp(lượng máu), mp(lượng ma thuật để dùng skill), atk(chỉ số tấn công), tốc độ chạy tối đa, tầm nhảy tối đa. 
+    3. Khi chọn chơi tiếp sẽ bắt đầu trò chơi với các dữ liệu được lưu từ lần lưu trước. 
+Vượt phó bản là hoạt động chiến đấu vượt qua các màn chơi lần lượt theo cốt truyện, đồng thời đem về lượng lớn tiền xu.
+      4. Tiếp tế là chức năng hỗ trợ người chơi trong quá trình chiến đấu, nó sẽ sinh ra các item hp, mp. Sau khi được sử dụng cứ 30s sau sẽ tái tạo lại item ở vị trí cũ.
+- Hoạt động trò chơi cần đạt được những mục tiêu sau:
+      1. Phải có chức năng chơi tiếp
+      2. Phải có chức năng chơi mới 
+      3. Phải có chức năng điều khiển nhân vật
+      4. Phải có chức năng vượt phó bản
+      5. Phải có chức năng tiếp tế
+3.1.3 Danh sách các yêu cầu của khách hàng
+*Chức năng chơi tiếp
+      - Khi khởi động trò chơi, chức năng này giúp người dùng tiếp tục chơi trò chơi với dữ liệu cũ đã được lưu.
+      - Trong trò chơi, chức năng này cho phép lưu lại tiến độ chơi
+       * Chức năng chơi mới
+      - Chức năng này xóa dữ liệu cũ và bắt đầu mới.
+       * Chức năng điều khiển nhân vật
+      - Cho phép người dùng điều khiển titan di chuyển bằng các phím mũi tên trái phải, nhảy phím space, skill 1 phím Q, skill 2 phím W.
+       * Chức năng vượt phó bản
+      - Phó bản gồm nhiều ải, cứ 1 ải phụ là đến 1 ải boss.
+      - Hệ thống cung cấp 1 bản đồ các ải, người chơi phải chinh phục lần lượt theo thứ tự.Thông tin các ải đã qua được hệ thống lưu lại.
+       * Chức năng tiếp tế
+      - Trên bản đồ sẽ xuất hiện các item hp, mp. Người chơi điều khiển nhân vật chạm vào để sử dụng.
+      - Item cứ mỗi 30s sẽ được làm mới.
+
+
+3.2 Phân tích và thiết kế hệ thống
+   3.2.1 Biểu đồ Usecase 
+➢ UC Tổng quát
+
+    Hình 3.2. 1  Usecase tổng quát Player
+➢ Xét UC VuotPhoban phân rã như sau
+
+    Hình 3.2. 2 Usecase VuotPhoban
+    
+
+
+➢ Xét UC Dieukhien phân rã như sau
+
+    hình 3.2. 3 Usecase Dieukhien
+    
+➢ Xét UC Tiepte phân rã như sau
+
+    Hình 3.2. 4  Usecase Tiepte
+3.2.2 Biểu đồ lớp
+
+    Hình 3.2. 5  Biểu đồ lớp
+
+
+STTTên đối tượngThuộc tính1CharacterourHP, maxHP, ourMP, maxMP, Atk, grounded, faceRight, isAttack2PlayerdoubleJump, money3EnemyCurentState, Target, InMelee, InRange 4AchievementcurrentMap5SkillPercentDame6Itemvalue    Bảng 3. 1 Các đối tượng
+
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả1MaxValfloatChỉ số HP tối đa2DamagefloatSát thương gây ra3FacerightboolHướng nhìn4SpeedfloatTốc độ di chuyển    Bảng 3. 2 Thuộc tính Enemy
+
+3.2.3 Thiết kế giao diện cho hệ thống
+    	Giao diện chính của game “Cuộc Chiến Thế Kỷ” như sau:
+    
+    Hình 3.2.6 Giao diện chính 
+    Giao diện chính của game: Khi bắt đầu game người chơi thao tác nhấn nút Play để vào giao diện màn 1 bắt đầu chơi game
+      Màn 1:  “ Chuyến đi đầu tiên ”
+    
+    
+    Hình: 3.2.7 Màn 1:  “ Chuyến đi đầu tiên ”
+Giao diện chính màn 1: cho phép chúng ta điều khiển player di chuyển và tấn công các quái con monter, cũng như thu thập coin làm nhiện vụ nâng điểm số cao nhất có thể
+
+
+Màn 2 : “ Nguy hiển ! Gian nan đột kích ”
+
+    
+
+    Hình: 3.2.8 Màn 2 : “ Nguy hiển ! Gian nan đột kích ”
+    Giao diện chính màn 2: cho phép chúng ta điều khiển player di chuyển và tấn công các quái con monter,số lượng quái thay đổi và quái mạnh hơn, cũng như thu thập coin làm nhiện vụ nâng điểm số cao nhất.
+    
+
+
+Màn 3 : “ Thách thức Godzilla ”
+
+    
+    
+    Hình: 3.2.9 Màn 3 : “ Thách thức Godzilla ”
+    
+
+
+
+Màn cuối : “ vua quái thú Godzilla ”
+    
+    
+    Hình: 3.2.10 Màn cuối : “ vua quái thú Godzilla ”
+
+
+➢ Một số cạm bẫy
+    
+    Hình 3.2. 11 Bãy gai
+
+
+
+
+    Hình 3.2. 12 Bẫy rơi
+➢ 
+Một số boss trong game
+
+
+    Hình 3.2. 13 Quái vật lv1
+
+
+    Hình 3.2. 14 quái vật lv2
+
+
+
+    Hình 3.2. 15 boss lv 2
+
+
+    
+
+    Hình 3.2. 16 boss cuối
+
+
+3.2.4 Nhân vật
+- Idle
+
+    Hình 3.2. 17 Player Idle
+- Jump
+
+    hình 3.2. 18 Player Jump
+- Walk
+
+    Hình 3.2. 19 Player Walk
+
+
+- Skill 1 “Strike Attack”:
+
+    Hinh 3.2. 20  Skill 1 “Strike Attack”
+- Skill 2 “Fire Ball”:
+    
+    hình 3.2. 21 Skill 2 “Fire Ball”
+    
+
+
+- Die
+
+    Hinh 3.2. 22 Player die
+3.2.5 Enemy
+
+    hình 3.2. 23 Boss Gigan Sprites
+
+    Hình 3.2. 24 Boss Godzilla Sprites
+    
+    hình 3.2. 25 Quái con Skill cắn
+    
+    
+    Hình 3.2. 22 Quái con skill phun độc
+
+
+    
+3.2.6 Item và chướng ngại vật
+- Item HP
+
+    Hình 3.2. 23 Item HP
+- Item MP
+
+    Hình 3.2. 24 Item HP
+
+
+- Item Gold
+
+    Hình 3.2. 29 Gold
+    
+- Trap
+
+    Hình 3.2. 30Trap
+    
+- Plat
+
+    Hình 3.2. 31 Plat
+    
+- Falling Plat
+
+    Hình 3.2. 32 Falling Plat
+
+
+- Moving Plat
+
+    Hình 3.2. 533 Moving Plat
+    
+- Door
+
+    Hình 3.2. 34 Door
+CHƯƠNG 4. KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+   - Tìm hiểu, nắm bắt được các công cụ Unity
+      - Rèn luyện phân tích thiết kế hứớng đối tượng
+      - Tìm hiểu và nắm được nghiệp vụ của bài toán
+      - Học và tổ chức được dữ liệu cho bài toán theo thiết kế 
+      - Xây dựng được ứng dụng với các chức năng cơ bản
+      * Công cụ lựa chọn: chơi mới, chơi tiếp 
+      * Thực hiện load dữ liệu lưu trước, lưu dữ diệu
+      * Xây dựng các Animation, Animator cho nhân vật, quái con và boss.
+      * Xây dựng các skill cho nhân vật, quái con và boss.
+      * Thực hiện tự động cho quái con và boss
+      * Xây dựng các item vàng, hp, mp hỗ trợ người chơi cùng các hiệu ứng hình ảnh, âm thanh khi ăn item.
+      * Có các video giới thiệu khi đến màn boss
+      * Xây dưng cửa qua màn khi người chơi tiêu diệt hết quái
+      * Giao diện đẹp, thân thiện, dễ sử dụng.
+       - Nâng cao khả năng tư duy logic, kỹ năng lập trình, phát hiện và sửa lỗi.
+4.2 Hạn chế của đề tài
+- Số map còn hạn chế
+- Chưa có chức năng bảo mật
+- Chưa có thiết lập thông minh
+4.3 Hướng phát triển của đề tài
+- Trong tương lại  em sẽ phát triển thêm:
+- Tăng số lượng quái và map
+- Xây dựng hệ thống skill đa dạng hơn
+- Cải thiện cốt truyện phong phú, hấp dẫn hơn
+TÀI LIỆU THAM KHẢO
+x
+x
+     [1] Giáo trính môn Chuyên đề 4: Learn Unity 3D Programming with UnityScripts, Bộ môn CNPM, Trường ĐHSPKTHY.
+    [2] Giáo trình môn cơ sở kỹ thuật lập trình, Bộ môn CNPM, Trường ĐHSPKTHY.
+    [3] Giáo trình môn cấu trúc dữ liệu giải thuật, Bộ môn CNPM, Trường ĐHSPKTHY.
+    [4] Giáo trính môn C# cơ bản, Bộ môn CNPM, Trường ĐHSPKTHY.
+    [5] Youtobe: 2D platformer. 
+    Link:https://www.youtube.com/playlist?list=PLX-uZVK_0K_6VXcSajfFbXDXndb6AdBLO&fbclid=IwAR0La1-l8mZOwdaeyqOuPzjVm9OFtKgh6qEu-wPljSXZ65ny-NZS6e_U8-w
+    [6] stackoverflow.com, https://stackoverflow.com
+5 
+6 
+Xây dựng Game cuộc chiến thế kỷ
+    
+Xây dựng Game cuộc chiến thế kỷ
+    
+    
+    44
+    
+    
+    47
+    
+    
+    
+    
+    

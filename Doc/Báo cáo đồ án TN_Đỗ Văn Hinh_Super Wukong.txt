@@ -1,0 +1,442 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+- Các thiết bị di động, thiết bị mang theo ngày càng phát triển.
+- Do nhu cầu của người sử dụng cần những game đẹp hơn, chân thực hơn và hơn nữa phải phù hợp với những thiết bị ngày càng mạnh mẽ hơn.
+- Game phiêu lưu mang lại cho người sử dụng những phút giây giải trí tuyệt vời sau những giờ làm việc, học tập căng thẳng.
+1.2 Mục tiêu của đề tài
+- Xây dựng game theo góc nhìn ngang Platfomer 2D, thể loại hành động phiêu lưu theo cốt truyện.
+- Xây dựng trên nền tảng của Unity 2D, code trên ngôn ngữ C#.
+- Xây dựng được Game cho người sử dụng giải trí, cho phép người chơi lưu điểm, lưu 1 số thông tin về trò chơi.
+- Game hành động tiêu diệt quái vật theo cốt truyện, diệt boss, qua màn.
+1.3 Giới hạn và phạm vi của đề tài
+- Đề tài xây dựng phần mềm super wukong sử dụng một số công nghệ như C#, Render,...và công cụ lập trình Visual Studio, Unity.
+- Phần mềm chỉ có trên nền tảng hệ điều hành Android.
+- Môi trường phần cứng:
+o CPU: Pentium IV2.4 GHZ hoặc cao hơn
+o RAM tối thiểu 2Gb
+o HDD dung lượng tối thiểu 10Gb
+- Môi trường phần mềm:
+o Hệ điều hành android
+o Công cụ Unity
+o Visual Studio 2015 hoặc cao hơn
+1.4 Nội dung thực hiện
+- Nội dung thực hiện/nghiên cứu cụ thể như sau:
+o Xây dựng và phân tích cốt truyện trong phần mềm Game
+o Phân tích các tác vụ chính của phần mềm Game
+o Thiết kế đồ họa cho bản đồ của phần mềm Game
+o Thiết kế đồ họa cho nhân vật
+o Phân tích thiết kế thuật toán
+o Phát triển phần mềm game trên nền tảng Mobile
+o Kiểm thử hệ thống.
+o Triển khai thực nghiệm hệ thống thiết bị Android.
+1.5 Phương pháp tiếp cận
+- Cách tiếp cận : Nghiên cứu các game 2D platform đã được xây dựng bằng công cụ Unity
+- Sử dụng các phương pháp nghiên cứu:
+o Phương pháp đọc tài liệu
+o Phương pháp tích mẫu
+o Phương pháp thực nghiệm
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về UnityEngine
+2.1.1 UnityEngine là gì?
+- Unity là một “cross- flatform game engine” tạm hiểu là công cụ phát triển game đa nền tảng được phát triển bởi Unity Technologies. Game engine này được sử dụng để phát trển game trên PC, consoles, thiết bị di động và trên websites.
+- Ra mắt đầu tiên vào năm 2005 tại sự kiện Apple’s Worldwide Developer Conference bởi nhà sáng lập David Helgason, trải qua hơn 12 năm phát triển, nay Unity đã có version 5.5 hoàn thiện hơn về rất nhiều mặt. Tháng 5-2012 theo cuộc khảo sát Game Developer Megazine được công nhận là Game engine tốt nhất cho mobile. Năm 2014 Unity thắng giải “Best Engine” tại giải UK’s annual Develop Industry Exellence.
+- Unity tích hợp nhiều công cụ, công nghệ về graphic rendering (DirectX, OpenGL), physic (NVIDIA PhyX), audio (OpenAL) giúp quá trình phát triển game trở nên nhanh và đơn giản hơn  khi không phải thực hiện và kết hợp nhiều thành phần riêng lẻ lại với nhau thay vào đó là sự gắn kết liền mạch giữa các thành phần một cách trực quan và logic nhờ sự hỗ trợ trực tiếp từ Unity.
+- Một thế mạnh nữa của Unity là bạn có thể chạy demo game của bạn ngay trongkhi design, nó có hỗ trợ hai chế độ là Scene và Game, rất thuận tiện cho việc test thử các modulGame.
+- Một số thống kê về Unity:
+o Tính đến quý 3 năm 2016 đã có 5 tỉ lượt download game và ứng dụng được phát triển bởi Unity
+o 2,4 tỉ thiết bị di động đã từng tải ít nhất 1 ứng dụng bởi unity.
+o Trong top 1000 game Mobiles miễn phí thì số lượng game tạo ra bởi Unity chiếm tới 34%
+o Số lượng người dùng (gamer) của Unity đạt tới con số 770 triệu, trong khi đó số người thường xuyên sử dụng Twitter là 310 triệu người.
+o Sự thay đổi trong cách thức chơi game của người chơi hay nói cách khác là xu hướng mọi người tập trung vào game trên di động nhiều hơn.
+2.1.2 Lịch sử hình thành và phát triển của Unity
+- Phần lõi của Unity ban đầu được viết bởi Joachim Ante vào năm 2001. Sau đó công ty được hình thành vào năm 2005 và bắt đầu với phiên bản 1.0. Đến năm 2007, Unity được nâng lên phiên bản 2.0. Unity bắt đầu hỗ trợ iPhone vào năm 2008. Vào tháng 6/2010, Unity chính thức hỗ trợ Android và cho ra đời phiên bản 3.0 có hỗ trợ Android vào tháng 9/2010. Có thể thấy tốc độ phát triển của Unity khá nhanh.
+- Năm 2012 Unity đạt 1,3 triệu người sử dụng gồm Bigpoint, Cartoon Network, Coca-Cola, Disney, Electronic Arts, LEGO, Microsoft, NASA, Ubisoft, Warner Bros, các hãng phim lớn nhỏ, các chuyên gia độc lập, sinh viên và những người đam mê.
+2.1.3 Kiến trúc Game Engine
+- Unity Engine hỗ trợ cho chúng ta UnityAPI để viết script game. UnityAPI là API lập trình game trong Unity rất mạnh. UnityAPI chứa các đối tượng và phương thức hỗ trợ hầu hết các đối tượng và các loại thành phần trong Unity.
+- Trong một scene thường có nhiều đối tượng game. Mỗi đối tượng này có thể có hoặc không có đoạn script nào gắn lên đó. Nếu muốn gắn script vào đối tượng, ta bắt buộc phải kế thừa class đó từ lớp MonoBehaviour của UnityAPI và tên class phải trùng với tên file script. Mỗi script khi gắn lên đối tượng game đều được đối tượng game xem như một thành phần bên trong và được cấp phát vùng nhớ khi chạy game.
+    
+     Hình 2.1:Tổng quan kiến trúc UnityEngine
+     
+- Bên trong UnityAPI chứa rất nhiều lớp hỗ trợ lập trình game, trong đó có một số lớp quan trọng như :
+o MonoBehaviour: tất cả các script muốn gắn vào một đối tượng game bắt buộc phải kế thừa từ lớp này.
+o GameObject: lớp cha của tất cả các thực thể trong scene.
+o Component: lớp cha của tất cả các thành phần có thể gắn vào đối tượng.
+o Transform: giúp thay đổi vị trí, xoay, biến đổi tỉ lệ mô hình.
+o Input: hỗ trợ lập trình với chuột, cảm ứng đa điểm, cảm biến gia tốc.
+o Camera: giúp lập trình camera.
+o Light: giúp tạo ánh sáng trong game.
+o Projector: giúp chiếu texture lên bề mặ t vậ t thể.
+o ParticleEmitter: hỗ trợ tạo các hiệu ứng particle đẹp mắt.
+o Audio: hỗ trợ lập trình với âm thanh.
+o Animation: chạy chuyển động của mô hình nhân vật.
+o Rigidbody: giúp tạo hiệu ứng vật lý liên quan đến trọng lực như bóng nẩy, lăn, ..
+o CharacterController: giúp điều khiển nhân vật di chuyển theo độ cao địa  hình.
+o Collider: hỗ trợ lập trình va chạm giữa các vật thể.
+o GUI: giúp lập trình giao diện người dùng trên Unity.
+2.1.4 Giới thiệu về các thành phần trong UnityEngine.
+    
+             Hình 2.2 :Các thành phần trong UnityEngine
+    1.Cửa sổ Sences
+- Phần này phần hiển thị các đối tượng trong scenes một cách trực quan, có thể lựa chọn các đối tượng, kéo thả, phóng to, thu nhỏ, xoay các đối tượng ...
+- Phần này có để thiết lập một số thông số như hiển thị ánh sáng, âm anh, cách nhìn 2D hay 3D ... 
+- Khung nhìn Scene là nơi bố trí các Game Object như cây cối, cảnh quan, enemy, player, camera, … trong game. Sự bố trí hoạt cảnh là một trong những chức năng quan trọng nhất của Unity.
+    
+    
+    2.Cửa sổ Hierarchy
+- Tab hierarchy là nơi hiển thị các Game Object trong Sences hiện hành. Khi các đối tượng được thêm hoặc xóa trong Sences, tương ứng với các đối tượng đó trong cửa sổ Hierarchy.
+- Tương tự trong tab Project, Hierarchy cũng có một thanh tìm kiếm giúp quản lý và thao tác với các Game Object hiệu quả hơn đặc biệt là với các dự án lớn.
+    3. Cửa sổ Game
+- Đây là mạn hình demo Game, là góc nhìn từ camera trong game.
+- Thanh công cụ trong cửa sổ game cung cấp các tùy chỉnh về độ phân giải man hình, thông số (stats), gizmos, tùy chọn bật tắt các component...
+    4. Cửa sổ Project
+- Đây là cưa sổ explorer của Unity, hiển thị thông tin của tất cả các tài nguyên (Assets) trong game của bạn.
+- Cột bên trái hiển thị assets và các mục yêu thích dưới dạng cây thư mục tương tự như Windows Explorer. Khi click vào một nhánh trên cây thư mục thì toàn bộ nội dung của nhánh đó sẽ được hiển thị ở khung bên phải. Ta có thể tạo ra các thư mục mới bằng cách Right click -> Create -> Folder hoặc nhấn vào nút Create ở góc trên bên trái cửa sổ Project và chọn Folder. Các tài nguyên trong game cũng có thể được tạo ra bằng cách này.
+- Phía trên cây thư mục là mục Favorites, giúp chúng ta truy cập nhanh vào những tài nguyên thường sử dụng. Chúng ta có thể đưa các tài nguyên vào Favorites bằng thao tác kéo thả.
+- Đường dẫn của thư mục tài nguyên hiện tại. Chúng ta có thể dễ dàng tiếp cận các thư mục con hoặc thư mục gốc bằng cách click chuột vào mũi tên hoặc tên thư mục.
+    5. Cửa sổ Inspector
+- Cửa sổ Inspector hiển thị chi tiết các thông tin về Game Object đang làm việc, kể cả những component được đính kèm và thuộc tính của nó. Bạn có thể điều chỉnh, thiết lập mọi thông số và chức năng của Game Object thông qua cửa sổ Inspector.
+- Mọi thuộc tính thể hiện trong Inspector đều có thể dễ dàng tuỳ chỉnh trực tiếp mà không cần thông qua một kịch bản định trước. Tuy nhiên Scripting API cung cấp một số lượng nhiều và đầy đủ hơn do giao diện Inspector là có giới hạn.
+- Các thiết lập của từng component được đặt trong menu. Các bạn có thể click chuột phải, hoặc chọn icon hình bánh răng nhỏ để xuất hiện menu.
+- Ngoài ra Inspector cũng thể hiện mọi thông số Import Setting của asset đang làm việc như hiển thị mã nguồn của Script, các thông số animation, …
+2.1.5 Các đặc điểm và tính năng của Unity Engine
+- Rendering (kết xuất hình ảnh): giống như tất cả các Engine hoàn chỉnh khác, Unity hỗ trợ đầy đủ khả năng kết xuất hình ảnh (Redering) cùng nhiều hỗ trợ cho phép áp dụng các công nghệ phổ biến trong lĩnh vực đồ họa 3D nhằm cải thiện chất lượng hình ảnh. Các phiên bản gần đây nhất của Unity được xây dựng lại thuật toán nhằm cải thiện hiệu suất kết xuất hình ảnh đồng thời tăng cường chất lượng hình ảnh sau khi kết xuất
+- Lighting (ánh sáng): Ánh sáng là một điều thiết yếu giúp môi trường trở nên đẹp và thực tế hơn. Unity cũng cung cấp nhiều giải pháp đa dạng cho phép chúng ta áp dụng ánh sáng một cách tốt nhất vào môi trường trong trò chơi với nhiều loại nguồn sáng như ánh sáng có hướng (Directional Light), ánh sáng điểm (Point Light), ... Một số công nghệ và kỹ thuật về ánh sáng được Unity hỗ trợ: Lingtmapping, Realtime Shadows, hiệu ứng Sunshafts và Lens Flares.
+- Terrains (địa hình): Terrains còn gọi chung là địa hình bao gồm phần đất nền của môi trường trong trò chơi cùng các đối tượng gắn liền như cây, cỏ, … Unity cung cấp một công cụ hỗ trợ rất tốt khả năng này với tên gọi là Terrains Tools cho phép chúng ta thiết kế địa hình với các công cụ vẽ dưới dạng Brush có nhiều thông số tùy chỉnh để tạo hình và lát Texture cho địa hình. Cùng với Terrain Tools là Tree Creator, một công cụ mạnh mẽ cho phép chúng ta tạo ra cây cối với hình dạng, kích thước và kiểu cách đa dạng.
+- Substances (Texture thông minh): có thể hiểu đơn giản là một dạng tùy biến Textures nhằm làm đa dạng chúng trong nhiều điều kiện môi trường khác nhau. Unity cung cấp khả năng này thông qua các API dựng sẵn trong thư viện, hỗ trợ lập trình viên lập trình để tùy biến hình ảnh được kết xuất của Texture
+- Physics (vậy lý): là một Engine mô phỏng và xử lí vật lý cực kỳ mạnh mẽ được phát triển bởi nhà sản xuất card đồ họa hàng đầu thế giới NVIDIA. Unity đã tích hợp Engine này vào để đảm nhận mọi vấn đề vật lý.
+- Pathfinding (tìm đường): Đây là một tính năng rất mới mẻ đến từ phiên bản Unity 3.5. Với các phiên bản trước, để phát triển khả năng tìm đường cho trí thông minh nhân tạo (AI), nhà phát triển phải hoàn toàn tự xây dựng cho mình một hệ thống tìm đường riêng biệt. Tuy nhiên ở phiên bản 3.5 đến nay, Unity hỗ trợ cho chúng ta tính năng Pathfinding cho phép tạo ra khả năng tìm đường cho AI nhờ vào khái niệm lưới định hướng (NavMesh).
+- Audio (âm thanh): Về âm thanh, Unity tích hợp FMOD – công cụ âm thanh thuộc hàng mạnh nhất hiện nay. Qua đó Unity hỗ trợ chúng ta nhập và sử dụng nhiều định dạng tập tin âm thanh khác nhau.
+- Programming (lập trình): Lập trình là một trong những yếu tố quan trọng nhất trong phát triển Game. Lập trình cho phép nhà phát triển tạo nên khả năng tương tác, trí thông minh và yếu tố Gameplay cho trò chơi. Unity cho phép chúng ta lập trình bằng nhiều ngôn ngữ mạnh mẽ và phổ biến với các lập trình viên như: C#, Java Scrip và Boo.
+- Networking: Networking cho phép chúng ta tạo ra các trò chơi trực tuyến (online) – một trong những thể loại trò chơi thu hút được nhiều người chơi nhất. Tính năng này sẽ hỗ trợ đầy đủ để chúng ta tạo nên các khía cạnh phổ biến trong Game online như hệ thống điểm kinh nghiệm , chat và tương tác thời gian thực, … Một số tính tăng cung cấp bởi Networking như: State Synchronization, Realtime Networking, Remote Procedure Calls, Backend Connectivity, Web Browser Integration, Web Connectivity.
+2.1.6 Ưu điểm của Unity Engine	
+- Chức năng cốt lõi đa dạng bao gồm: cung cấp công cụ dựng hình (kết xuất đồ họa) cho các hình ảnh 2D hoặc 3D, công cụ vật lý (tính toán và phát hiện va chạm), âm thanh, mã nguồn, hình ảnh động, trí tuệ nhân tạo, phân luồng, tạo dò ng dữ liệu xử lý, quản lý bộ nhớ, dựng ảnh đồ thị và kết nối mạng. Nhờ có các engine mà công việc làm game trở nên ít tốn kém và đơn giản hơn.
+- Hỗ trợ đa nền tảng: Một trong các thế mạnh của Unity3D chính là khả năng hỗ trợ gần như toàn bộ các nền tảng hiện có bao gồm: PlayStation 3, Xbox 360, Wii U, iOS, Android, Windows, Blackberry 10, OS X, Linux, trình duyệt Web và cả Flash. Nói cách khác, chỉ với một gói engine, các studio có thể làm game cho bất kỳ hệ điều hành nào và dễ dàng convert chúng sang những hệ điều hành khác nhau. Đồng thời, đây cũng là giải pháp cho các game online đa nền tảng – có thể chơi đồng thời trên nhiều hệ điều hành, phần cứng khác nhau như Web, PC, Mobile, Tablet….
+
+Hình 2.3 :Unity hỗ trợ đa nền tảng
+- Dễ sử dụng: Unity3D được built trong một môi trường phát triển tích hợp, cung cấp một hệ thống toàn diện cho các lập trình viên, từ soạn thảo mã nguồn, xây dựng công cụ tự động hóa đến trình sửa lỗi. Do được hướng đến đồng thời cả lập trình viên không chuyên và studio chuyên nghiệp, nên Unity3D khá dễ sử dụng. Hơn nữa, đây là một trong những engine phổ biến nhất trên thế giới, người dùng có thể dễ dàng tìm kiếm kinh nghiệm sử dụng của “tiền bối” trên các forum công nghệ.
+- Tính kinh tế cao: Unity Technologies hiệnư cung cấp bản miễn phí engine Unity3D cho người dùng cá nhân và các doanh nghiệp có doanh thu dưới 100.000 USD/năm. Với bản Pro, người dùng phải trả 1.500 USD/năm – một con số rất khiêm tốn so với những gì engine này mang lại.
+2.2 Tổng quan về C#
+2.2.1 Giới thiệu
+- C# (hay C sharp) là một ngôn ngữ lập trình đơn giản, được phát triển bởi đội ngũ kỹ sư của Microsoft vào năm 2000, trong đó người dẫn đầu là Anders Hejlsberg và Scott Wiltamuth.
+- C# là ngôn ngữ lập trình hiện đại, hướng đối tượng và nó được xây dựng trên nền tảng của hai ngôn ngữ mạnh nhất là C++ và Java.
+- C# được thiết kế cho CLI, mà gồm Executable Code và Runtime Environment, cho phép chúng ta sử dụng các ngôn ngữ high-level đa dạng trên các nền tảng và cấu trúc máy tính khác nhau.
+- C# với sự hộ trợ mạnh mẽ của .NET Framewwork giúp cho việc tạo một ứng dụng Windowns Forms hay WPF (Windows Presentation Founđation), trở nên rất dễ dàng.
+2.2.2 Những ưu điểm của ngôn ngữ lập trình C#
+- Là ngôn ngữ đơn giản: Như ta đã biết thì ngôn ngữ C# dựng trên nền tảng C++ và Java nên ngôn ngữ C# khá đơn giản. Nếu chúng ta thân thiện với C và C++ hoậc thậm chí là Java, chúng ta sẽ thấy C# khá giống về diện mạo, cú pháp, biểu thức, toán tử và những chức năng khác được lấy trực tiếp từ ngôn ngữ C và C++, nhưng nó đã được cải tiến để làm cho ngôn ngữ đơn giản hơn. Một vài trong các sự cải tiến là loại bỏ các dư thừa, hay là thêm vào những cú pháp thay đổi.
+- Là ngôn ngữ hiện đại: Một vài khái niệm khá mới mẻ khá mơ hồ với các bạn vừa mới học lập trình, như xử lý ngoại lệ, những kiểu dữ liệu mở rộng, bảo mật mã nguồn..v..v... Đây là những đặc tính được cho là của một ngôn ngữ hiện đại cần có. Và C# chứa tất cả các đặt tính ta vừa nêu trên. Các bạn sẽ dần tìm hiểu được các đặt tính trên qua các bài học trong series này.
+- Là ngôn ngữ lập trình thuần hướng đối tượng: Lập trình hướng đối tượng(tiếng Anh: Object-oriented programming, viết tắt: OOP) là một phương pháp lập trình có 4 tính chất. Đó là tính trừu tượng (abstraction), tính đóng gói (encapsulation), tính đa hình (polymorphism) và tính kế thừa (inheritance). C# hỗ trợ cho chúng ta tất cả những đặc tính trên. Và để hiểu rõ hơn thì chúng ta sẽ có một chương trình bày về phần này.
+- Là ngôn ngữ lập trình thuần hướng đối tượng: Lập trình hướng đối tượng(tiếng Anh: Object-oriented programming, viết tắt: OOP) là một phương pháp lập trình có 4 tính chất. Đó là tính trừu tượng (abstraction), tính đóng gói (encapsulation), tính đa hình (polymorphism) và tính kế thừa (inheritance). C# hỗ trợ cho chúng ta tất cả những đặc tính trên. Và để hiểu rõ hơn thì chúng ta sẽ có một chương trình bày về phần này.
+
+
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Phân tích thiết kế 
+3.1.1 Phân tích cốt truyện	
+- Bạch cố tinh là nhân vật xuất hiện trong hồi 27 Tây Du Ký: Thây ma ba lượt trêu tam tạng, Đường Tăng nhiều phen đuổi Ngọ Không. Bạch Cốt Tinh là yêu quái ở động Bạch Hổ đã ba lần biến hóa để lừa bắt Đường Tăng và ba lần bị Tôn Ngộ Không đánh chết:
+o Lần thứ nhất, Bạch Cốt Tinh biến thành một cô thôn nữ. Bạch Cốt Tinh định lừa Đường Tăng nhưng may có Tôn Ngộ Không phát hiện và dùng gậy Như Ý đánh chết. Đường Tăng tức giận liền niệm chú Ngộ Không. Linh hồn cô thôn nữ thoát khỏi thân xác và bay về trời, yêu quái thoát chết.
+o Lần thứ hai biến thành một bà cụ già đi tìm con. Lần này Tôn Ngộ Không chẳng nói năng gì rút gậy sắt ra đánh chết yêu quái, lại bị Đường Tăng niệm chú nhức đầu. Bạch Cốt Tinh lại dùng phép giải thây thoát chết.
+o Lần thứ ba biến thành một ông già. Lần này Tôn Ngộ Không gọi Sơn Thần, Thổ Địa đến rồi vung gậy đánh chết yêu tinh, linh quang bị Sơn Thần Thổ Địa giữ chặt không thoát được nữa.
+o Sau khi ông bị đánh chết, linh hồn vẫn thoát khỏi thân xác. Ngộ không giải vậy bảo vệ được Đường Tăng, thầy trò cùng nhau lên đường tiếp tục thỉnh kinh.
+- Gameplay: Người chơi đóng vai  Wukong vượt qua những cạm bẫy, thử thách của các con thú giữ trong rừng để bảo vệ được Đường Tăn không cho Yêu quái ăn thịt bằng cách vượt qua các màn chơi. Các màn chơi sẽ có độ khó tăng dần, nhân vật Wukong sẽ phải đi tìm coin để tăng điểm đồng thời bảo vệ Đường Tăng .
+3.1.2 Phân tích thiết kế đồ họa	
+- Nhân Vật: Wukong: Damage 20, health 100, tốc độ di chuyển tối đa 3
+- Quái và các chướng ngại vật:
+o TurretAI: Damage 10, health 100. Tấn công theo hướng di chuyển của nhân vật, tốc độ bắn của các trụ tăng dần, càng di chuyển vào sâu tốc độ bắn càng nhanh, hướng di chuyển của đạn cũng chính xác
+o Monster: Attacking 10, health 40, tốc độ di chuyển tối đa 3. Tấn công và bám đuổi theo Player, hút máu nhân vật khi chạm vào
+- Màn chơi:
+o Level 1: Người chơi đóng vai Wukong bắt đầu di chuyển tới các vùng đất của map, người chơi cần phải vượt qua các trướng ngại vật như các zombieblood, turretAi, monster, nhảy, chạy và ăn các coin vàng để tích lũy điểm cho mình. Nếu người chơi không vượt qua các trướng ngại vật thì số coin ăn được sẽ không được cộng thêm.
+o Level 2: Cũng giống như các thử thách ở level 1 nhưng các chướng ngại vật sẽ có độ khó cao hơn và bắt đầu xuất hiện những bẫy gai, nhiều zombie và monster hơn. Đòi hỏi người chơi phải khéo léo vượt qua các thử thách.
+o Level 3: Ở level này người chơi phải đối mặt với nhiều thử thách hơn, map sẽ có boss mạnh nhất từ đầu game và chướng ngại vật hơn, chúng hung hăng và sẽ mạnh mẽ hơn những màn trước khiến người chơi và thật bình tĩnh, xử lý khôn khéo để có thể vượt qua màn này.
+3.2 Thực hiện và triển khai 
+3.2.1 Thiết kế Maps	
+- Map gồm có :
+o Map 1: Khu rừng hắc ám
+* Map đầu tiên, bối cảnh trong rừng, mức độ dễ.
+* Quái vật: xác sống
+* Vực thẳm: hố sâu, vực thẳm
+* Nhiệm vụ: Thu thập Coin.
+o Map 2: Hỏa diệm sơn
+* Bối cảnh trong sa mạc
+* Bẫy: Bẫy gai
+* Quái vật: xác sống
+* Vực thẳm: hố sâu, vực thẳm
+* Nhiệm vụ: Thu thập Coin.
+o Map 3: Thiên cung
+* Bối cảnh trên mây
+* Quái vật: xác sống
+* Mức độ: Trung bình
+* Nhiệm vụ: Giết quái, boss
+* Boss: Bạch Cốt Tinh
+3.2.2 Thiết kế Animations Player & Boss
+- Thiết kế Animation của Player gồm:
+o Đứng yên
+o Chạy
+o Nhảy
+o Tấn công
+o Dùng Skill
+o Rơi tự do
+o Bị thương
+o Chết
+- Thiết kế Animation cho quái vật và Boss :
+o Đứng yên
+o Đi bộ
+o Tấn công
+o Bị thương
+o Chết
+- Thêm Collider cho các Animation để tạo tương tác với các Object khác trong Game.
+- Tạo tương tác giữa các Animation bằng các Transdition trong cửa sổ Animator.
+- Thêm các điều kiện cho Animator.
+3.2.3 Thiết kế hệ thống UI
+- Thiết kế UI Menu tạm dừng
+- Thiết kế UI Túi đồ
+- Thiết kế UI Cửa hàng
+- Thiết kế UI Hành trang
+- Thiết kế UI Xem bản đồ
+- Thiết kế UI Player.
+3.2.4 Thiết kế kịch bản và hành động	
+- Thiết lập tương tác giữa các hành động cho Player gồm: 
+o Đứng yên
+o Chạy
+o Nhảy
+o Tấn công
+o Chết
+- Thiết lập phạm vi tấn công và điểm phóng ra của Skill cho Player.
+- Thiết lập các chỉ số cho Player: 
+o Máu
+o Số lượng Item
+o Lực nhảy
+o Tốc độ
+o Trọng lượng
+- Thiết kế kịch bản tương tự đối với kẻ thù và Boss.
+- Thiết kế kịch bản cho hệ thống nhiệm vụ trong Game theo từng Map
+- Thiết kế kịch bản cho hệ thống UI các bảng chọn: MainMenu, Store, Iventory
+3.3 Các yêu cầu chính của hệ thống
+- Trò chơi được mô tả như sau:
+o Người chơi có thể chọn chơi tiếp, chơi mới
+o Nếu chọn chơi mới, người chơi sẽ trở về vị trí ban đầu, mọi thông số trở về mặc định. 
+o Vượt các màn chơi lần lượt theo cốt truyện, đồng thời đem về lượng lớn tiền xu.
+
+- Hoạt động trò chơi cần đạt được những mục tiêu sau:
+o Phải có chức năng chơi tiếp.
+o Phải có chức năng chơi mới.
+o Phải có chức năng điều khiển nhân vật.
+o Chức năng ăn đồng xu vàng và item.
+o Phải có chức năng tiếp tế.
+
+
+- Biểu đồ Usecase tổng quát
+o Usecase tổng quát Player:
+    
+    Hình 3.1 Usecase tổng quát Player
+
+
+
+
+o Usecase tổng quát Enemy:
+    
+    Hình 3.2 Usecase tổng quát Enemy
+
+
+
+
+
+
+
+- Biểu đồ lớp: 
+    
+    Hình 3.3 Biểu đồ lớp
+3.4 Thiết kế cơ sở dữ liệu
+- Thuộc tính Player
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả1SpeedfloatTốc độ di chuyển2MaxspeedfloatTốc độ di chuyển tối đa3JumpPowfloatLực nhảy4CurrentHealthfloatChỉ số HP hiện tại5GroundedboolKiểm tra nhân vật đang đứng trên mặt đất6FacerightboolKiểm tra hướng nhìn nhân vật7DoubleJumpboolKiểm tra quyền nhảy 2 lần liên tiếp8FireIntervalfloatThời gian ngắn nhất giữa 2 lần tung chiêu liên tiếp9PointsfloatĐiểm số    
+    Bảng 3.1 Thuộc tính Player
+- Thuộc tính Enemy:
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả1MaxValfloatChỉ số HP tối đa2DamagefloatSát thương gây ra3FacerightboolHướng nhìn4SpeedfloatTốc độ di chuyển
+Bảng 3.2 Thuộc tính Enemy
+
+
+
+
+
+
+
+
+
+3.5 Thiết kế giao diện
+- Giao diện chính của game “Super Wukong”:
+
+    Hình 3.4 Giao diện chính
+Giao diện chính của game: Khi bắt đầu game người chơi thao tác nhấn nút Play để vào giao diện màn 1 bắt đầu chơi game.
+
+
+
+
+
+
+
+- Giao diện màn 1: Khu rừng hắc ám
+
+Hình 3.5 Giao diện màn 1 Khu rừng hắc ám
+Giao diện chính màn 1: cho phép chúng ta điều khiển player di chuyển và tấn công các quái con monter, cũng như thu thập coin làm nhiện vụ nâng điểm số cao nhất có thể.
+
+
+
+
+
+
+- Giao diện màn 2: Hỏa Diệm Sơn
+
+Hình 3.6 Giao diện màn 2 Hỏa diệm sơn
+Giao diện chính màn 2: Khi vượt qua màn 1 khu rừng hắc ám người chơi sẽ bước qua màn 2 cho phép chúng ta điều khiển player di chuyển và tấn công các quái con monter, cũng như thu thập coin làm nhiện vụ nâng điểm số cao nhất có thể, độ khó tăng lên so với màn 1.
+
+
+
+
+
+
+- Giao diện màn 3: Thiên Cung
+
+Hình 3.7 Giao diện màn 3 Thiên cung
+Giao diện chính màn 3: Khi vượt qua màn 2 Hỏa diệm sơn người chơi sẽ bước qua màn 3 cho phép chúng ta điều khiển player di chuyển và tấn công các quái con monter, cũng như thu thập coin làm nhiện vụ nâng điểm số cao nhất có thể, độ khó tăng lên so với màn 2.
+
+
+
+
+
+
+
+- Giao diện Paused
+
+Hình 3.8 Giao diện Paused
+Giao diện Paused: Cho phép người chơi tạm dừng trò chơi khi có việc bận đột xuất,…Tại đâu người chơi có thể chọn một trong các lựa chọn như: tiếp tục chơi tiếp, chơi lại từ đầu, và trở lại màn hình chính.
+
+
+
+
+
+
+
+
+- Bẫy Vực Thẳm
+
+Hình 3.9 Bẫy vực thẳm
+Bẫy vực thẳm: một vực sâu chết người bất ngờ dành cho các game thủ, khi người chơi điều khiển player không may rơi xuống vực thẳm này player sẽ mất đi lượt chơi và phải chơi lại từ đầu.
+
+
+
+
+
+
+
+- Quái vật Monter: xác sống
+
+Hình 3.10 Quái vật monter xác sống
+Quái vật monter xác sống: là một trong những quái vật con mak bạch cốt tinh biến hóa ra để làm ngăn cản ngộ không trên con đường giải cứu sư phụ của mình, người chơi sẽ phải điều khiển player đánh và tiêu diệt quái vật monter xác sống để hoàn thành nhiệm vụ.
+
+
+
+
+- Cửa qua màn mới:
+
+Hình 3.11 Cửa qua màn
+Cửa qua màn: Cửa qua màn có chức năng đưa người chơi từ màn 1 đến màn 2, từ màn 2 đến màn 3. Khi người chơi vượt qua được các chướng ngại vật hoàn thành nhiệm vụ và sẽ tới được cuối map chơi, ở đây sẽ có cánh cổng dẫn tới màn chơi tiếp theo để người có thể hoàn thành game.
+
+
+
+
+
+
+- Bẫy gai:
+ 
+Hình 3.12 Bẫy Gai
+Bẫy gai: đây là một bẫy bất ngờ được đưa vào làm tăng phần thú vị cho game. Bẫy gãi sẽ làm mất máu khi người chơi điều khiển player đi vào, dẫm lên bẫy.
+
+
+
+
+
+
+
+- Item HP:
+
+Hình 3.13 Item HP
+Item HP: đây là vật phẩm có thể giúp người chơi tăng, hồi phục máu khi vượt qua các chướng ngại vật, bẫy từ trước.
+
+
+
+
+
+
+
+- Quái vật Boss: Hồ Ly – Bạch Cốt Tinh
+
+Hình 3.14 Boss Hồ Ly – Bạch cốt tinh
+Boss Hồ Ly – Bạch cốt tinh: là trùm boss cuối của Game. Khi người chơi điều khiển player đi tới vùng cận Boss thì Bos Hồ Ly – Bạch cốt tinh sẽ hóa hình và tung ra skill gây sát thương đến player.
+
+
+
+
+
+
+
+
+- Ground
+
+Hình 3.15 Ground
+- Coin
+
+Hình 3.16 Coin
+- Một số object khác
+
+
+Hình 3.17 Một số object khác
+
+
+
+
+- Hình ảnh Boss: Hồ Ly – Bạch Cốt Tinh
+
+Hình 3.18 Hình ảnh Boss: Hồ Ly – Bạch Cốt Tinh
+- Hình ảnh Player
+
+Hình 3.19 Hình ảnh Player
+
+
+- Background màn 1:
+
+Hình 3.20 Background màn 1
+- Background màn 2:
+
+Hình 3.21 Background màn 2
+
+- Background màn 3:
+
+Hình 3.22 Background màn 3
+
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau thời gian nghiên cứu và phát triển, tác giả đã hoàn thành cơ bản các mục tiêu ban đầu đề ra của đề tài. Đã thực hiện nghiên cứu và đề ra giải pháp thiết kế cốt truyện và chức năng cho phần mềm Game.
+    Tác giả đã xây dựng được một phần mềm game super wukong theo góc nhìn ngang 2D Platform hoạt động trên hệ điều hành Android, các sự kiện trong phần mềm game super wukong đều được xây dựng theo cốt truyện đã được xây dựng sẵn.
+    Phần mềm game chạy trên hệ điều hành Android đảm bảo các tiêu chí : Tốc độ ổn định, đồ họa thân thiện, góc nhìn trực quan, tương tác giữa các đối tượng được đảm bảo.
+4.2 Hạn chế của đề tài
+    Phần mềm game super wukong chỉ có trên nền tảng hệ điều hành Android.
+    Dữ liệu của người chơi được lưu trực tiếp trên thiết bị Android.
+4.3 Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, tác giả đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+• Xây dựng Server Online cho phần mềm Game super wukong để có thể lưu trữ dữ liệu người chơi Online và kết nối tương tác giữa các người chơi.
+• Bổ sung các Item mới trong game, bổ sung thêm nhiều ngoại hình nhân vật.
+•   Bổ sung mở rộng cốt truyện và hệ thống nhiệm vụ,…
+•  Xây dựng game trên đa nền tảng. 
+TÀI LIỆU THAM KHẢO
+x
+[1] Kênh yotube Captain Cheesecake – hạng mục game 2D.[2]
+    
+    Tài liệu làm game trên Unity của GV Nguyễn Minh Tiến – UTEHY.
+
+x
+
+
+Xây dựng game Super Wukong
+    
+    
+24
+    
+    

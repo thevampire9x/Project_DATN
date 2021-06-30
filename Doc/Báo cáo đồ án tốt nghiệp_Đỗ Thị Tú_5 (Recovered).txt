@@ -1,0 +1,515 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Hiện nay, việc học tập rất quan trọng nên giáo viên cũng vất vả hơn trong việc giảng dạy và chấm bài thi của học sinh. Với vốn kiến thức khổng lồ, giáo viên muốn kiểm tra tiến độ nắm bắt, hiểu bài của học sinh thì nhất thiết phải thường xuyên làm các bài thi thử. Tuy nhiên, việc chấm bài và đánh dấu các đáp án đúng ở những câu học sinh làm sai để sửa lại, mất rất nhiều thời gian, công sức… nhất là các dịp cận kì thi học kì, cuối cấp. Vì vậy, giáo viên thường cho học sinh làm bài kiểm tra theo hình thức thi trắc nghiệm khách quan để khảo sát được số lượng lớn học sinh và đưa ra kết quả nhanh chóng.
+    Có giáo viên thì cho học sịnh khoanh trực tiếp vào phương án tương ứng trong đề kiểm tra sau đó so đáp án. Cũng có thầy cô thiết kế them phiếu trả lời để học sinh trả lời trên phiếu sau đó chấm bằng phương pháp đục lỗ và soi đáp án. Tuy phương pháp đục lỗ tiết kiệm thời gian và sai sót ít hơn nhưng phải tốn thời gian đục lỗ và thòi gian so bài, …
+    Để đỡ vất vả hơn cho giáo viên đã có 1 số phần mềm chấm điểm thi trắc nghiệm trên máy tính. Thế nhưng để chấm thi trên máy tính cần kết nối với máy scan, nhưng do giá thành của máy scan khá cao (trên 10 triệu đồng/máy) nên giáo viên rất khó để tự trang bị.
+    Phần lớn giáo viên ngày nay đều có SmartPhone vói hệ điều hành Android hoặc IOS. Thầy cô đã có thể chấm bài bằng chính điện thoại của mình thong qua một số phần mềm như ZipGrade, TNMaker,… Các phần mềm này hỗ trợ thầy cô chấm điểm nhanh và chính xác.
+1.2 Mục tiêu của đề tài
+- Trình bày được các vấn đề liên quan đến lập trình Android, vận dụng, nắm bắt được ưu nhược điểm của ngôn ngữ Java.
+- Xây dựng được ứng dụng, triển khai cài đặt và cấu hình trên Smartphone.
+- Xây dựng hệ thống chấm điểm thi trắc nghiệm với giao diện đơn giản dễ sử dụng, hữu ích cho giáo viện khi chấm điểm thi trắc nghiệm thay vì dùng tay hoặc máy quét chuyên dụng. 
+- Ứng dụng giúp giáo viên chấm điểm thi một cách nhanh chóng và chính xác.
+1.3 Giới hạn và phạm vi của đề tài
+    Đề tài xây dựng ứng dụng chấm điểm thi trắc nghiệm sử dụng các công nghệ trong lập trình như Java, Android,…và Công cụ lập trình Android Studio, môi trường lập trình Android. Sử dụng một số thư viện hỗ trợ như OpenCV, …
+1.4 Nội dung thực hiện
+    Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Nghiên cứu về thư viên OpenCV trên các nền tảng công nghệ khác nhau trong việc xử lý hình ảnh.
+- Thiết kế đặc tả hệ thống.
+- Xây dựng Cơ sở dữ liệu.
+- Lập trình cho các chức năng của hệ thống
+- Kiểm thử hệ thống.
+- Triển khai thực nghiệm hệ thống trên nhiều SmartPhone.
+1.5 Phương pháp tiếp cận
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu;
+o Phương pháp phân tích mẫu;
+o Phương pháp thực nghiệm.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Android
+2.1.1 Hệ điều hành Android là gì?
+  Android là một mã nguồn mở và dựa trên hệ điều hành Linux, chạy trên các thiết bị di động như điện thoại thông minh và máy tính bảng. Android được phát triển bởi Open Handset Alliance, dẫn đầu bởi Google, và các công ty khác.
+  Android cung cấp một phương pháp tiếp cận thống nhất để lập trình ứng dụng cho các thiết bị di động, nghĩa là các lập trình viên chỉ cần lập trình cho Android, và các ứng dụng của họ sẽ có thể chạy trên các thiết bị khác nhau được hỗ trợ bởi Android.
+  Các phiên bản beta đầu tiên của Software Development Kit Android (SDK) được phát hành bởi Google trong năm 2007 trong khi đó phiên bản thương mại đầu tiên, Android 1.0, được phát hành vào tháng 9 năm 2008.
+  Mã nguồn của Android được phát hành theo giấy phép phần mềm tự do và nguồn mở. Google công khai hầu hết các mã theo giấy phép phiên bản Apache 2.0 và phần còn lại, Linux kernel, theo giấy phép phiên bản GNU General Public 2.
+2.1.2 Tại sao nên sử dụng Android?
+      
+     Hình 2. 1 Tại sao nên sử dụng Android?
+• Open Soure: Mã nguồn mở.
+• Larger Developer and Community Reach: Có những lập trình viên và cộng đồng phát triển lớn.
+• Increased marketing: phát triển thương mại.
+• Inter app integration: ứng dụng hội nhập quốc tế.
+• Reduce cost of development: giảm chi phí phát triển.
+• Higher Success Ratio: Tỷ lệ thành công cao hơn.
+• Rich development Environment:Môi trường phát triển đa dạng
+2.1.3 Giới thiệu về Android studio và Android SDK
+• Android Studio chạy trên Windows, Mac và Linux, nhằm thay thế cho Eclipse Android Development Tool (ADT) vốn được sử dụng làm IDE chính trong các năm trước đó.
+    Một số tính năng nổi bật:
+- Bộ công cụ build ứng dụng dựa trên Gradle (thay vì Maven).
+- Chức năng dò và sửa lỗi nhanh, hướng Android.
+- Công cụ chỉnh sửa màn hình dạng kéo thả tiện lợi.
+- Các wizard tích hợp nhằm giúp lập trình viên tạo ứng dụng từ mẫu có sẵn.
+- Tích hợp Google Cloud Platform, dễ dàng tích hợp với Google Cloud Messaging và App Engine của Google.
+• The Android SDK (software development kit) là một tập hợp các công cụ được sử dụng để phát triển ứng dụng cho Android. 
+    Android SDK bao gồm:
+- Các thư viện đòi hỏi
+- Bộ dò lỗi (Debugger)
+- Thiết bị mô phỏng (emulator)
+- Các tài liệu liên quan cho Android API.
+- Các đoạn code mẫu.
+- Các hướng dẫn cho hệ điều hành Android
+Nếu Android Studio là trình soạn thảo code (IDE) thì Android SDK là bộ tổng hợp các công cụ để build app, các bản mẫu máy ảo Android (sử dụng để test app) cần thiết để làm ra một ứng dụng Android hoàn chỉnh.
+2.2 Tổng quan về SQLite
+2.2.1 SQLite là gì?
+   Nói một cách đơn giản SQLite là phần mềm quản lý cơ sở dữ liệu (DBMS) tương tự như Mysql, PostgreSQL... Đặc điểm của SQLite là gọn, nhẹ, đơn giản. Chương trình gồm 1 file duy nhất vỏn vẹn chưa đến 400kB, không cần cài đặt, không cần cấu hình hay khởi động mà có thể sử dụng ngay. Dữ liệu Database cũng được lưu ở một file duy nhất. Không có khái niệm user, password hay quyền hạn trong SQLite Database.
+    SQLite không thích hợp với những hệ thống lớn nhưng ở quy mô vừa tầm thì SQLite phát huy uy lực và không hề yếu kém về mặt chức năng hay tốc độ. Với các đặc điểm trên SQLite được sử dụng nhiều trong việc phát triển, thử nghiệm … và là sự lưa chọn phù hợp cho những người bắt đầu học Database.
+   SQLite Engine không là một Standalone Process giống như các cơ sở dữ liệu khác, bạn có thể liên kết nó một cách tĩnh hoặc một cách động tùy theo yêu cầu với ứng dụng của bạn. SQLite truy cập các file lưu giữ của nó một cách trực tiếp.
+2.2.2 Tại sao nên sử dụng SQLite?
+• SQLite không cần cấu hình, nghĩa là không cần thiết phải cài đặt.
+• Một SQLite Database đầy đủ được lưu giữ trong một disk file đơn.
+• SQLite là rất nhỏ gọn, nhỏ hơn 400kB đã đươc cấu hình đầy đủ hoặc nhỏ hơn 250kB khi đã bỏ qua các tính năng tùy ý.
+• SQLite là tự chứa, nghĩa là không có sự phụ thuộc vào ngoại vi.
+• Các Transaction trong SQLite là tuân theo đầy đủ chuẩn ACID, đảm bảo truy cập an toàn từ nhiều tiến trình hoặc thread.
+• SQLite hỗ trợ hầu hết các tính năng của một ngôn ngữ truy vấn trong chuẩn SQL92.
+• SQLite được viết bằng ANSI-C và cung cấp API đơn giản và dễ dàng sử dụng.
+• SQLite là có sẵn trên UNIX (Linux, Mac OS-X, Android, iOS) và Windows (Win32, WinCE, WinRT).
+2.2.3 SQLite trong Android
+• SQLite được nhúng trong các thiết bị Android, sử dụng một cơ sở dữ liệu SQLite trong Android.
+Không yêu cầu thủ tục thiết lập hoặc quản lý cơ sở dữ liệu.
+Bạn chỉ phải xác định các câu lệnh SQL để tạo và cập nhật cơ sở dữ liệu. Sau đó các cơ sở dữ liệuđược quản lý tự động cho bạn bởi các nền tảng Android.
+Truy cập vào một cơ sở dữ liệu SQLite liên quan đến việc truy cập vào hệ thống tập tin. Điều nàycó thể được làm chậm. Vì vậy nó được khuyến khích để thực hiện các hoạt động cơ sở dữ liệu khôngđồng bộ. Nếu ứng dụng của bạn tạo ra một cơ sở dữ liệu, cơ sở dữ liệu này là bởi mặc định được lưu trong thư mục DATA/data/APP_NAME/databases/FILENAME
+• DATA:Là đường dẫn mà bạn có thể get bởi câu lệnh 
+Environment.getDataDirectory().
+• APP_NAME: Là tên ứng dụng của bạn.
+• FILENAME: Là tên cơ dở dữ liệu mà bạn tạo trong ứng dụng.
+2.3 Tổng quan về OpenCV
+2.3.1 OpenCV là gì?
+   OpenCV (OpenSource Computer Vision) là một thư viện mã nguồn mở. OpenCV được phát hành theo giấy phép BSD, do đó nó hoàn toàn miễn phí cho cả học thuật và thương mại. Nó có các interface C++, C, Python, Java và hỗ trợ Windows, Linux, Mac OS, iOS và Android. OpenCV được thiết kế để tính toán hiệu quả và với sự tập trung nhiều vào các ứng dụng thời gian thực. Được viết bằng tối ưu hóa C/C++, thư viện có thể tận dụng lợi thế của xử lý đa lõi. Được sử dụng trên khắp thế giới, OpenCV có cộng đồng hơn 47 nghìn người dùng và số lượng download vượt quá 6 triệu lần. Phạm vi sử dụng từ nghệ thuật tương tác, cho đến lĩnh vực khai thác mỏ, bản đồ trên web hoặc công nghệ robot.
+2.3.2 Các modules OpenCV trong project Android
+    Có khá nhiều modules trong thư viện này nhưng mình sẽ giới thiệu một số module mà chúng ta làm việc thường xuyên nếu chúng ta sử dụng thư viện này
+• Core: đây là module chứa các cấu trúc, class  cơ bản mà OpenCV sẽ sử dụng trong việc lưu trữ và xử lý hình ảnh như Mat, Scale, Point, Vec… và các phương thức cơ bản sử dụng cho các module khác
+• Imgproc: đây là một module xử lý hình ảnh của OpenCV bao gồm các bộ lọc (filter) linear và non-linear và các phép biến đổi hình học (tranformation) như resize hoặc các phép biến đổi affine, chuyển đổi hệ mày và các thuật toán liên quan đến histogram (biểu đồ) của hình ảnh.
+• Highgui: đây là một module cho phép tương tác với người dùng trên UI (User Interface) như hiển thị hình ảnh, video capturing.
+• Features2d: module tìm các đặc trưng (feature) của hình ảnh. Trong module có implement các thuật toán rút trích đặc trưng như PCA…
+• Calib3d: hiệu chuẩn máy ảnh và xây dựng lại 3D.
+• Objdetect: module cho việc phát hiện các đối tượng như khuôn mặt, đôi mắt, cốc, người, xe hơi, vv trong hình ảnh. Các thuật toán được sử dụng trong module này là Haar‐like Features.
+• ML: module này chứa các thuật toán về Machine Learning phục vụ cho các bài toàn phân lớp (Classfitication) và bài toán gom cụm (Clustering). Ví dụ như thuật toán SVM (Support Vector Machine), ANN…
+• Video: module phân tích video gồm ước lượng chuyển động, trừ nền, và các thuật toán theo dõi đối tượng (object tracking).
+
+    
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Phát biểu bài toán
+3.1.1 Mô tả hệ thống hiện tại
+    Hiện nay, việc học tập rất quan trọng nên giáo viên cũng vất vả hơn trong việc giảng dạy và chấm bài thi của học sinh. Với vốn kiến thức khổng lồ, giáo viên muốn kiểm tra tiến độ nắm bắt, hiểu bài của học sinh thì nhất thiết phải thường xuyên làm các bài thi thử. Tuy nhiên, việc chấm bài và đánh dấu các đáp án đúng ở những câu học sinh làm sai để sửa lại, mất rất nhiều thời gian, công sức… nhất là các dịp cận kì thi học kì, cuối cấp. Vì vậy, giáo viên thường cho học sinh làm bài kiểm tra theo hình thức thi trắc nghiệm khách quan để khảo sát được số lượng lớn học sinh và đưa ra kết quả nhanh chóng.
+    Có giáo viên thì cho học sịnh khoanh trực tiếp vào phương án tương ứng trong đề kiểm tra sau đó so đáp án. Cũng có thầy cô thiết kế them phiếu trả lời để học sinh trả lời trên phiếu sau đó chấm bằng phương pháp đục lỗ và soi đáp án. Tuy phương pháp đục lỗ tiết kiệm thời gian và sai sót ít hơn nhưng phải tốn thời gian đục lỗ và thòi gian so bài, …
+    Để đỡ vất vả hơn cho giáo viên đã có 1 số phần mềm chấm điểm thi trắc nghiệm trên máy tính. Thế nhưng để chấm thi trên máy tính cần kết nối với máy scan, nhưng do giá thành của máy scan khá cao (trên 10 triệu đồng/máy) nên giáo viên rất khó để tự trang bị.
+    Phần lớn giáo viên ngày nay đều có SmartPhone vói hệ điều hành Android hoặc IOS. Thầy cô đã có thể chấm bài bằng chính điện thoại của mình thong qua một số phần mềm như ZipGrade, TNMaker,… Các phần mềm này hỗ trợ thầy cô chấm điểm nhanh và chính xác
+
+
+3.1.2 Phát biểu bài toán
+a)  Tổng quan về hệ thống mới
+• Hệ thống chấm điểm thi trắc nghiệm với giao diện đơn giản dễ sử dụng, hữu ích cho giáo viên chấm trắc nghiệm thay vì dùng tay hoặc dùng máy quét chuyên dụng.
+• Chỉ cần sử dụng điện thoại của giáo viên để chấm điểm bài thi trắc nghiệm của học sinh một cách nhanh chóng.
+• Một số chức năng chính: 
+- Quản lý thí sinh: cho phép giáo viên thêm, sửa, xóa học sinh.
+- Quản lý đáp án: cho phép thêm, sửa, xóa đáp án.
+- Download phiếu chấm: cho phép down phiếu chấm từ browser về
+- Quản lý điểm thi: cho phép thêm, sửa, xóa điểm thi
+- Chấm bài: đưa ra điểm của thí sinh.
+b)  Các mục tiêu chính của hệ thống
+  Ứng dụng chấm điểm thi trắc nghiệm cần đạt được những mục tiêu sau:
+- Ứng dụng giúp giáo viên chấm điểm một cách nhanh chóng và chính xác.
+- Hệ thống đưa ra điểm của học sinh
+c)  Môi trường phát triển
+• Môi trường phần cứng
+    CPU: Pentium IV 3.0 GHz hoặc cao hơn
+    RAM: tối thiểu 512 MB
+    HDD: dung lượng tối thiểu trống 2G
+• Môi trường phần mềm
+    Hệ điều hành: Android
+    Công cụ phát triển: Android  studio
+
+
+3.2 Xác định yêu cầu của hệ thống
+3.2.1 Danh sách yêu cầu khách hàng
+a) Quản lý thí sinh
+Ứng dụng chấm điểm thi trắc nghiệm cho phép giáo viêm thêm, sửa, xóa học sinh
++ Thêm học sinh: Hệ thống cho phép nhập vào thông tin học sinh gồm: tên học sinh, số báo danh, lớp.
++ Sửa học sinh: Hệ thống cho phép sửa thông tin học sinh.
++ Xóa học sinh: Hệ thống cho phép xóa thông tin học sinh.
+b) Quản lý đáp án
+Ứng dụng chấm điểm thi trắc nghiệm cho phép giáo viên thêm, sửa, xóa đáp án
++ Thêm đáp án: Hệ thông cho phép nhập đáp án bằng tay hoặc quét bằng camera.
++ Sửa đáp án: Hệ thống cho phép giáo viên sửa lại đáp án nhập bằng tay.
++ Xóa đáp án: Hệ thống cho phép giáo viên xóa các đáp án đã lưu.
+c) Download phiếu chấm
+Ứng dụng chấm điểm thi tắc nghiệm cho phép giáo viên download template phiếu trả lời từ trên browser về.
+d) Quản lý điểm thi
+Ứng dụng chấm điểm thi trắc nghiệm cho phép giáo viên thêm, sửa, xóa điểm thi của học sinh
++ Thêm điểm thi: Hệ thống tự động lưu điểm thi của học sinh khi chấm bài
++ Sửa điểm thi: Hệ thống cho phép giáo viên sửa điểm thi
++ Xóa điểm thi: Hệ thống cho phép xóa thông tin điểm thi đã lưu trữ.
+e) Chấm bài
+Ứng dụng chấm điểm thi trắc nghiệm cho phép giáo viên quét phiếu trả lời học sinh, sau đó đưa ra điểm của học sinh đó.
+3.2.2 Phạm vi công việc
+   Dựa trên bản mô tả hệ thống và xác định yêu cầu, ứng dụng chấm điểm thi trắc nghiệm trên Android cần được phát triển trong các phạm vi dưới đây:
+• Các yêu cầu phải được phân tích. Với mỗi yêu cầu phải xác định rõ dữ liệu đầu vào, đầu ra, và quy trình xử lý.
+• Hệ thống phải được lập trình trên nền tảng Android, ngôn ngữ lập trình Java.
+• Hệ thống phải được phát triển trên môi trường Android.
+3.3 Phân tích yêu cầu hệ thống
+3.3.1 Biểu đồ Use-case
+3.3.1.1  Danh sách các Actor
+STT    Tên Actor    Ý nghĩa/Ghi chú1    Người dùng    Giáo viên      Bảng 3. 1 Danh sách các Actor
+    3.3.1.2 Danh sách Use-case
+STT    Tên Use-case    Ý nghĩa/Ghi chú1Quản lý thí sinhGiáo viên có thể thêm, sửa, xóa thí sinh2Quản lý đáp ánGiáo viên có thể thêm, sửa, xóa đáp án3Download phiếu chấmGiáo viên có thể down template phiếu trả lời từ trên browser về4Quản lý điểm thiGiáo viên có thể thêm, sửa, xóa điểm5Chấm bàiỨng dụng cho phép giáo viên quét phiếu trả lời học sinh      Bảng 3. 2 Danh sách Use-case
+
+
+3.3.1.2  Biểu đồ Use-case
+
+      Hình 3. 1 Biểu đồ Use-case tổng quát
+3.3.1.3  Đặc tả Use-case
+3.3.1.3.1 Đặc tả Use-case quản lý thí sinh
+a) Biểu đồ Use case của Use case đặc tả
+   
+     Hình 3. 2 Đặc tả Use-case quản lý thí sinh
+
+b) Tóm tắt
+      Người dùng có quyền sử dụng chức năng này để thêm, sửa, xóa học sinh
+- Thêm đáp án: nhập vào thông tin của học sinh
+- Sửa đáp án: sửa lại thông tin của học sinh
+- Xóa đáp án: xóa thông tin học sinh đã được lưu trữ
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+      Chọn chức năng quản lý học sinh
+1. Chọn chức năng thêm học sinh
++ Nhập thông tin học sinh gồm: họ tên học sinh, số báo danh, lớp 
+2. Chọn sửa học sinh
+      + Chọn học sinh cần sửa
+      + Sửa lại thông tin học sinh trước đó
+      + Cập nhật thông tin mới của học sinh
+3. Chọn xóa đáp án
+      + Chọn học sinh cần xóa
+      + Xóa học sinh đã chọn
+      + Cập nhật lại CSDL
+➢ Các dòng sự kiện khác
+      “Không có”
+d) Các yêu cầu đặc biệt
+      “Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Hệ thống không yêu cầu đăng nhập
+- Hệ thống có sẵn các chức năng để chọn
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+• Hệ thống lưu lại những học sinh đã được thêm và những học sinh đã sửa thông tin
+• Hệ thống cập nhật lại CSDL sau khi xóa thông tin học sinh
+g) Điểm mở rộng
+    “Không có”
+
+
+3.3.1.3.2 Đặc tả Use-case quản lý đáp án
+a) Biểu đồ Use case của Use case đặc tả
+   
+     Hình 3. 3 Đặc tả Use-case quản lý đáp án
+b) Tóm tắt
+Người dùng có quyền sử dụng chức năng này để thêm, sửa, xóa đáp án
+- Thêm đáp án: Đáp án được nhập bằng tay hoặc quét bằng camera
+- Sửa đáp án: có thể sửa lại đáp án nhập bằng tay
+- Xóa đáp án: Các đáp án đã lưu có thể xóa đi
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+Chọn chức năng quản lý đáp án
+1. Chọn chức năng thêm đáp án
++ Thêm bài kiểm tra cần nhập đáp án
++ Chọn bài kiểm tra
++ Thêm mã đề
++ Chọn mã đê
++ Nhập mã đề
++ Nhập đáp án
+2. Chọn sửa đáp án
++ Chọn bài kiểm tra cần sửa đáp án
++ Chọn mã đề cấn sửa đáp án
++ Cập nhật đáp án sau khi sửa
+3. Chọn xóa đáp án
++ Chọn bài kiểm tra cần xóa đáp án
++ Xóa bài kiểm tra chứa đáp án
+➢ Các dòng sự kiện khác
+“Không có”
+d) Các yêu cầu đặc biệt
+“Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Hệ thống không yêu cầu đăng nhập
+- Hệ thống có sẵn các chức năng để chọn
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+- Hệ thống lưu lại các đáp án đã thêm và các đáp án đã sửa 
+g) Điểm mở rộng
+“Không có”
+3.3.1.3.3 Đặc tả Use-case download phiếu chấm
+a) Biểu đồ Use case của Use case đặc tả
+          
+     Hình 3. 4 Đặc tả Use-case download phiếu chấm
+b) Tóm tắt
+Người dùng có quyền sử dụng chức năng này để download template phiếu chấm
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
++ Người dùng chọn chức năng download phiếu chấm
++ Hệ thống đưa người dùng đến browser đển tải template
++ Download template cần sử dụng
+➢ Các dòng sự kiện khác
+      “Không có”
+d) Các yêu cầu đặc biệt
+“Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Hệ thống không yêu cầu đăng nhập
+- Hệ thống có sẵn các chức năng để chọn
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+- Template phiếu chấm được download về máy
+g) Điểm mở rộng
+    “Không có”
+3.3.1.3.4 Đặc tả Use-case quản lý điểm thi
+a) Biểu đồ Use case của Use case đặc tả
+   
+     Hình 3. 5 Đặc tả Use-case quản lý điểm thi
+b) Tóm tắt
+Người dùng có quyền sử dụng chức năng này để thêm, sửa, xóa điểm thi
+- Thêm điểm thi: Điểm thi của mỗi học sinh được tự động lưu sau khi chấm bài
+- Xóa điểm thi: Các điểm thi đã lưu có thể xóa đi
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+Chọn chức năng quản lý điểm thi
+• Chọn chức năng chấm bài
++ Người dùng chọn chứa năng chấm bài
++ Quét bài thi của thí sinh
++ Kiểm tra đáp án
++ Hiển thị điểm của thí sinh
++ Tự động lưu điểm của thí sinh
+• Chọn xóa điểm thi
++ Chọn học sinh cần xóa điểm thị hoặc chọn xóa tất cả
++ Xóa thông tin điểm thi
+➢ Các dòng sự kiện khác
+“Không có”
+d) Các yêu cầu đặc biệt
+“Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Hệ thống không yêu cầu đăng nhập
+- Hệ thống có sẵn các chức năng để chọn
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+- Hệ thống lưu lại điểm thi của học sinh sau khi chấm bài và cập nhật lại điểm thi đã xóa 
+g) Điểm mở rộng
+ “Không có”
+3.3.1.3.5 Đặc tả Use-case chấm bài
+a) Biểu đồ Use case của Use case đặc tả
+
+     Hình 3. 6 Biểu đồ use case phân rã chấm bài
+b) Tóm tắt
+  Người dùng có quyền sử dụng chức năng chấm bài để quét hình ảnh bài thi, chấm điểm bài thi của học sinh, đưa ra mã đề, số báo danh của học sinh, điểm, số câu trả lời đúng, số câu trả lời sai của bài thi.
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+1. Người dùng chọn chức năng chấm bài
+2. Hiển thị Camera
+3. Quét bài thi của học sinh
+4. Hệ thống kiểm tra đáp án
+5. Hệ thống đưa ra mã đề, số báo danh, điểm, số câu trả lời đúng, số câu trả lời sai của học sinh
+➢ Các dòng sự kiện khác
+“Không có”
+d) Các yêu cầu đặc biệt
+“Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Hệ thống không yêu cầu đăng nhập
+- Hệ thống có sẵn camera cho người dùng
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+- Hệ thống đưa ra điểm của học sinh
+g) Điểm mở rộng
+“Không có”
+
+
+3.3.2 Biểu đồ lớp
+3.3.2.1  Biểu đồ lớp (mức phân tích)
+  
+     Hình 3. 7 Biểu đồ lớp
+3.3.2.2  Danh sách các lớp đối tượng và quan hệ
+STTTên lớp/quan hệLoạiÝ nghĩa/Ghi chú1HocSinhPublicLớp lưu trữ thông tin học sinh2DeThiPublicLớp lưu trữ các đáp án tương ứng với mỗi mã đề3BaiThiPublicLớp lưu trữ thông tin bài thi của học sinh4DiemPublicLớp lưu trữ thông tin điểm thi của học sinh     Bảng 3. 3 Danh sách các lớp đối tượng và quan hệ
+3.3.2.3 Mô tả chi tiết từng lớp đối tượng
+a) Lớp HocSinh
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1SBDPublicNot null    Số báo danh2tenHocSinhPublicNot null    Tên học sinh3LopPublicNot null    Tên lớp     Bảng 3. 4  Lớp HocSinh
+b) Lớp DeThi
+STTTên thuộc tínhLoạiRàng buộc    Ý nghĩa/ghi chú1idPublicNot null    id2maDeThiPublicNot null    Mã đề thi3maBaiThiPublicNot null    Mã bài thi4dapAnPublicNot null    Đáp án     Bảng 3. 5 Lớp DeThi
+c) Lớp BaiThi
+STTTên thuộc tínhLoạiRàng buộc    Ý nghĩa/ghi chú1maBaiThiPublicNot null    Mã bài thi2dsDeThiPublicNot null    Danh sách đề thi3ngayTaoPublicNot null    Ngày tạo4tenBaiThiPublicNot null    Tên bài thi5soCauPublicNot null    Số câu6heDiemPublicNot null    Hệ điểm     Bảng 3. 6 Lớp BaiThi
+d) Lớp Diem
+STTTên thuộc tínhLoạiRàng buộc    Ý nghĩa/ghi chú1idPublicNot null    id2SBDPublicNot null    Số báo danh3maDeThiPublicNot null    Mã đề thi4maBaiThiPublicNot null    Mã bài thi5diemSoPublicNot null    Điểm số6baiLamPublicNot null    Bài làm     Bảng 3. 7 Lớp Diem
+3.3.3 Biểu đồ tuần tự
+3.3.3.1  Biểu đồ tuần tự quản lý học sinh
+a) Biểu đồ tuần tự thêm học sinh
+
+      Hình 3. 8 Biểu đồ tuần tự thêm học sinh
+
+
+b) Biểu đồ tuần tự sửa học sinh
+
+      Hình 3. 9 Biểu đồ tuần tự sửa học sinh
+c) Biểu đồ tuần tự xóa học sinh
+
+    Hình 3. 10 Biểu đồ tuần tự xóa học sinh
+
+
+3.3.3.2  Biểu đồ tuần tự quản lý đáp án
+a) Biểu đồ tuần tự thêm đáp án
+
+     Hình 3. 11 Biểu đồ tuần tự thêm đáp án
+b) Biểu đồ tuần tự sửa đáp án
+
+     Hình 3. 12 Biểu đồ tuần tự sửa đáp án
+
+
+c) Biểu đồ tuần tự xóa đáp án
+
+     Hình 3. 13 Biểu đồ tuần tự xóa đáp án
+3.3.3.3  Biểu đồ tuần tự download phiếu chấm
+
+     Hình 3. 14  Biểu đồ tuần tự download phiếu chấm
+
+
+3.3.3.4  Biểu đồ tuần tự quản lý điểm thi
+a) Biểu đồ tuần tự thêm điểm thi
+
+     Hình 3. 15 Biểu đồ tuần tự thêm điểm thi
+
+b) Biểu đồ tuần tự xóa điểm thi
+
+     Hình 3. 16 Biểu đồ tuần tự xóa điểm thi
+    
+    
+3.3.3.5  Biểu đồ tuần tự chấm bài
+
+     Hình 3. 17  Biểu đồ tuần tự chấm bài
+3.4 Thiết kế cơ sở dữ liệu
+3.4.1 Mô hình dữ liệu quan hệ
+a) Lược đồ quan hệ
+
+     Hình 3. 18 Lược đồ quan hệ
+b) Danh sách các bảng trong lược đồ quan hệ
+STT    Tên bảng    Ý nghĩa/ Ghi chú1HocSinhLớp lưu trữ thông tin học sinh2DeThiLớp lưu trữ các đáp án tương ứng với mỗi mã đề3BaiThiLớp lưu trữ thông tin bài thi của học sinh4DiemLớp lưu trữ thông tin điểm thi của học sinh    Bảng 3. 8 Danh sách các bảng trong lược đồ quan hệ
+3.4.2 Mô tả chi tiết từng bảng trong CSDL
+a) Bảng HocSinh 
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1SBDNvarcharNot null    Số báo danh2tenHocSinhNvarcharNot null    Tên học sinh3lopNvarcharNot null    Tên Lớp      Bảng 3. 9 Bảng HocSinh
+b) Bảng DeThi
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1id IntNot null    id2maDeThiNvarcharNot null    Mã đề thi3maBaiThiInt Not null    Mã bài thi4dapAnNvarcharNot null    Đáp án     Bảng 3. 10 Bảng DeThi
+c) Bảng BaiThi
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1maBaiThi Int Not null    Mã bài thi2dsDeThiNvarcharNot null    Danh sách đề thi3ngayTaoDateNot null    Ngày tạo4tenBaiThiNvarcharNot null    Tên bài thi5soCauInt Not null    Số câu6heDiemInt Not null    Hệ điểm     Bảng 3. 11  Bảng BaiThi
+d) Bảng Diem
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1id Int Not null    id2SBDNvarcharNot null    Số báo danh3maBaiThiInt Not null    Mã đề thi4maDeThiNvarcharNot null    Mã bài thi5baiLamNvarcharNot null    Điểm số6diemSoDoubleNot null    Bài làm     Bảng 3. 12 Bảng Diem 
+3.5 Thiết kế giao diện
+3.5.1 Giao diện chính của chương trình
+      
+    Hình 3. 19 Giao diện chính của ứng dụng
+      
+     Hình 3. 20  Giao diện chính của ứng dụng
+
+STTTên controlSự kiện    Ý nghĩa1menuLeft2itemclickChuyển sang layout chấm bài3btaddclickThêm thông tin bài thi     Hình 3. 21  Danh sách các control điều khiển của giao diện chính
+3.5.2 Giao diện quản lý thí sinh
+      
+     Hình 3. 22  Giao diện quản lý thí sinh
+STTTên controlSự kiện    Ý nghĩa1menuclickHiển thị item xóa2RecyclerView3tv_nameHiển thị thông tin tên học sinh4tv_lopHiển thị tên lớp5tv_sbdHiển thị số báo danh     Bảng 3. 13 Danh sách các control điều khiển của giao diện quản lý thí sinh
+a) Giao diện thêm thí sinh
+      
+     Hình 3. 23 Giao diện thêm thí sinh
+    
+
+STTTên controlSự kiện    Ý nghĩa1tv_name2editNameclickNhập tên học sinh3tv_sbd4editSBDclickNhập số báo danh5tv_lop6editLopclickNhập tên lớp7bthuyclickChọn hủy nêu không muốn thêm8btokclickThêm học sinh    Bảng 3. 14 Danh sách các control điều khiển của giao diện thêm học sinh
+b) Giao diện sửa thí sinh
+
+     Hình 3. 24  Giao diện sửa thí sinh
+STTTên controlSự kiện    Ý nghĩa1tv_name2editNameclickNhập tên học sinh3tv_sbd4editSBDclickNhập số báo danh5tv_lop6editLopclickNhập tên lớp7btxoaclickXóa học sinh8btokclickSửa học sinh     Bảng 3. 15  Danh sách các control điều khiển của giao diện sửa học sinh
+c) Giao diện xóa thí sinh
+      
+     Hình 3. 25 Giao diện xóa thí sinh
+STTTên controlSự kiện    Ý nghĩa1tv_name2editNameclickNhập tên học sinh3tv_sbd4editSBDclickNhập số báo danh5tv_lop6editLopclickNhập tên lớp7btxoaclickXóa học sinh8btokclickSửa học sinh     Bảng 3. 16  Danh sách các control điều khiển của giao diện xóa học sinh
+3.5.3 Giao diện quản lý đáp án
+      
+     Hình 3. 26  Giao diện quản lý đáp án
+    
+STTTên controlSự kiện    Ý nghĩa1txtmade2tvmadeLưu trừ mã đề được người dùng nhập     Bảng 3. 17  Danh sách các control điều khiển của giao diện quản lý đáp án
+a) Giao diện thêm đáp án
+      
+    Hình 3. 27 Giao diện thêm đáp án
+      
+     Hình 3. 28 Giao diện nhập đáp án
+STTTên controlSự kiện    Ý nghĩa1tabclickChuyển sang layout đáp án2item_circleclickChọn đáp án3tvHiển thị đáp án           
+     Bảng 3. 18  Danh sách các control điều khiển của giao diện thêm đáp án
+
+
+b) Giao diện sửa đáp án
+      
+     Hình 3. 29 Giao diện sửa đáp án
+STTTên controlSự kiện    Ý nghĩa1tabclickChuyển sang layout đáp án2item_circleclickChọn đáp án3tvHiển thị đáp án     Bảng 3. 19  Danh sách các control điều khiển của giao diện sửa đáp án
+
+
+c) Giao diện xóa đáp án
+      
+     Hình 3. 30 Giao diện xóa đáp án
+    
+
+STTTên controlSự kiện    Ý nghĩa1tv_tenbai2editNameclickNhập tên nài thi3tv_socau4editSocauclickNhập số câu5tv_heDiem6editheDiemclickNhập hệ điểm7btxoaclickXóa bài kiểm tra8btokclickSửa bài kiểm tra     Bảng 3. 20  Danh sách các control điều khiển của giao diện xóa đáp án
+3.5.4 Giao diện download phiếu chấm
+
+     Hình 3. 31  Giao diện download phiếu chấm
+3.5.5 Giao diện quản lý điểm thi
+           	
+   
+     Hình 3. 32  Giao diện quản lý điểm thi
+    
+3.5.6 Giao diện chấm bài
+      
+    Hình 3. 33 Giao diện chấm bài
+
+STTTên controlSự kiện    Ý nghĩa1cameraQuét phiếu trả lời của học sinhCHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau thời gian nghiên cứu và phát triển, ứng dụng đã hoàn thành cơ bản các mục tiêu ban đầu đề ra của đề tài.
+    + Chức năng quản lý thí sinh: đã thêm, sửa, xóa được thông tin học sinh
+    + Chức năng quản lý đáp án: đã thêm, sửa, xóa được đáp án
++ Chức năng download phiếu chấm: đã download được template phiếu chấm từ browser về.
++ Chức năng quản lý điểm thi: đã thêm và xóa được điểm thi
++ Chức năng chấm bài: đã chấm được bài thi của học sinh
+4.2 Hạn chế của đề tài
+    Ứng dụng chấm điểm thi trắc nghiệm trên mobile còn nhiều hạn chế.
++ Mới chạy được các case normal còn các trường hợp Abnormal thì chưa bắt lỗi được.
++ Chức năng chấm bài chưa được chuẩn, phải chỉnh camera nhiều lần mới bắt được đúng điểm ảnh
++Ứng dụng mới chấm được phiếu chấm 20 câu, chưa linh hoạt trong các loại phiếu chấm
+4.3 Hướng phát triển của đề tài
+  Trong thời gian nghiên cứu và thực hiện đề tài, tác giả đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+- Xây dựng thêm các Control làm phong phú trên việc tùy biến giao diện của ứng dụng
+- Bổ sung thêm các chức năng hỗ trợ cho giáo viên.
+- Nghiên cứu và triển khai đề tài trên nhiều sản phẩm SmartPhone.
+TÀI LIỆU THAM KHẢO
+[1]. Hoàng Quốc Việt, “Lập Trình android cơ bản”, ĐH Sư phạm Kỹ thuật Hưng Yên
+[2]. Nguyễn Thị Hải Năng, “Lập trình đa phương tiện”, ĐH Sư phạm Kỹ thuật Hưng Yên
+[3]. Nguyễn Hoàng Điệp, “Dịch vụ mạng trên Android”, ĐH Sư phạm Kỹ thuật Hưng Yên
+[4]. Harvey M. Deitel, Paul J. Deitel “How To program java 8th”, amazon, 2008
+[5]. Nguyễn Minh Tiến, “Cơ sở kỹ thuật lập trình”, ĐH Sư phạm Kỹ thuật Hưng Yên
+      x
+x
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+PHỤ LỤC
+1. Bảng phân công nhiệm vụ thực hiện đồ án
+TTThành viênCác công việcGhi chú1Đỗ Thị Tú- Phát biểu bài toán
+- Xác đinh yêu cầu khách hàng
+- Phân tích yêu cầu hệ thống
+- Thiết kế giao diện người dùng     
+Xây dựng ứng dụng chấm điểm thi trắc nghiệm 
+    
+2
+    
+    

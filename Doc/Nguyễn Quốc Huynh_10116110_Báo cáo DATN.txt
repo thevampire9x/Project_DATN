@@ -1,0 +1,376 @@
+﻿CHƯƠNG 1: MỞ ĐẦU
+1.1 Lý do chọn đề tài
+    Công nghệ ngày càng phát triển nên ai cũng có cho riêng mình một chiếc smartphone với nhiều mục đích khác nhau, và việc xem tin tức online, phản ánh các hiện tượng thực trạng xã hội, các vấn đề liên quan, và bình chọn những vấn đề trên để giúp cộng đồng trở nên tốt đẹp hơn cũng trở thành thói quen của rất nhiều người, từ đó ứng dụng đọc tin tức trên mobile được ra đời và phát triển.
+    Cùng với đó Hybrid App đang trở thành xu hướng và phát triển mạnh mẽ cùng với Ionic nói riêng và các framework mới nổi nói chung. Tuy mỗi framework có những ưu, nhược điểm khác nhau nhưng chung quy lại đều hướng đến công nghệ mới. Vì vậy đề tài “ Xây dựng ứng dụng đọc tin tức trên Mobile thực hiện bình chọn,khảo sát trên nền tảng Ionic và .Netcore” được ra đời và phát triể.
+    
+1.2 Mục tiêu của đề tài
+- Xây dựng ứng dụng giúp thực hiện khảo sát thông tin của người dùng và thông tin bình chọn trực tuyến của người dùng. 
+- Hiểu sâu hơn về các thành phần trong HTML, CSS, TypeScript.
+- Tìm hiểu vận dụng được các công nghệ mới của Mobile như: Angular,  ASP.Netcore, Ionic.
+    
+1.3 Giới hạn và phạm vi của đề tài
+    
+- Giới hạn: Ứng dụng hiện tại giới hạn sử dụng trên các thiết bị mobile.
+- Phạm vi: mọi người biết dùng smartphone và có mạng internet.
+
+1.4 Kết quả dự kiến của đồ án
+  - Xây dựng ứng dụng đọc tin tức online: 
+  * Nhập thông tin: cho phép người dùng nhập thông tin của mình để đưa dữ liệu vào server.
+  * Thực hiện phần khảo sát, bình chọn.
+  * Thông kê kết quả bình chọn, khảo sát của người dùng.
+  * Quản lý thông tin tài khoản.
+  -  Xây dựng phần mềm sử dụng các công nghệ Ionic, ASP.netcore,…
+1.5 Phương pháp tiếp cận
+- Phương pháp đọc tài liệu
+- Phương pháp thực nghiệm
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Ionic 
+
+2.1.1 Giới thiệu về Ionic 
+ Ionic là một framework dùng để phát triển một ứng dụng Hybrid cho mobile. Hybrid có thể được hiểu là con lai giữa ứng dụng native và web mobile. Bản chất của hybrid là một giao diện được viết bởi HTML, CSS, TypeScript nhưng nó cho phép gọi các api native của hệ thống nên có thể thao tác với hệ điều hành của mobile như các ứng dụng native khác.
+2.1.2 Các phiên bản của  Ionic
+Phiên bảnThời gian ra mắtIonic 12013Ionic 22016Ionic 32017Ionic 42019Ionic 52020    Bảng 2.1 lịch sử Ionic
+* Bản đầu tiên Ionic v1 được phát hành vào tháng 11 năm 2013. Ban đầu framework này không sử dụng các component web.Ionic sử dụng Angular 1 điều khiển để chủ yếu đưa cho bạn một component của Angular thông thường và nó chỉ chạy trong ứng dụng Angular.
+* Bản thứ hai Ionic v2 được giới thiệu vào năm 2016. Nó tiếp tục với phiên bản trước bằng cách đưa ra tương tự Angular 2.Angular 2 lúc đó là phiên bản mới của Angular.Nó khác hoàn toàn so với Angular 1.Đến đây,Ionic 2 lại chỉ đưa ra Angular component,không phải là web component.Nên chúng ta chỉ có thể dùng Ionic 2 trong ứng dụng Angular 2.
+* Bản thứ ba Ionic v3 được giới thiệu vào năm 2017.Nó tiếp tục với bản trước đó và thêm một số tính năng mới.Phiên bản này tiếp làm Ionic nâng cao hơn nhưng vẫn tập trung nhắm vào Angular,đó là Angular 4.Ionic team quyết định rằng Ionic 3 không phải để tối ưu các mục đích tương lai vì không phải tất cả mọi người đều dùng Angular .Nó không cho phép xây dựng một ứng dụng Android gốc hoặc dùng Vue.js và React.js, bạn chỉ có thể dùng Angular.
+* Bản tiếp theo Ionic v4 được giới thiệu vào năm 2019. Ionic và tất cả các phiên bản tiếp theo của Ionic đều dựa trên web component. Nó xây dựng các ứng dụng di động native và những ứng dụng web cải tiến  với công nghệ web JS, HTML, và CSS. Nó hỗ trợ tất cả các trình duyệt cho phép sử dụng HTML, nó có thể chạy với bất cứ framework nào bạn đang sử dụng.Sau đó, web component  và Ionic 4 có thể làm việc  với bất kì framework nào.
+* Bản mới nhất Ionic v5 được ra mắt vào đầu năm 2020 với nhiều cải tiến mới và sửa một số lỗi vá từ bản trước,thêm nhiều tính năng mới,hỗ trợ người dùng mạnh mẽ hơn. 
+• Mỗi phiên bản Ionic mới sẽ được ra mắt mỗi 6 tháng với một số tính năng mới.Những phiên bản mới này không thay đổi  những thứ mà bạn đã học Ionic trước đó.
+2.1.3 Các thành phần trong Ionic 	
+- components: được hiểu là các thành phần ui được viết bằng html như các button, widget, thẻ input...
+- native: Là các api tương tác với hệ điều hành của mobile như tương tác với camera, gps .....
+- Api: Được viết dưới dạng các class như Checkbox, Toggle or Item. Chúng được định nghĩa để sử dụng các components thông qua các hàm event hoặc property....
+- Storage: Tương tác lưu dữ liệu local cho một framework ionic
+- CLI: Có thể tìm hiểu thêm tại document của ionic: 
+https://ionicframework.com/docs/v3/api/
+2.1.4 Ưu điểm của Ionic
+- Đa nền tảng: Có thể lập trình trên nhiều nên tảng khác nhau  mà chỉ cần code 1 lần
+- Chi phí phát triển thấp: Do lập trình đa nền tảng nên chi phí phát triển ứng dụng thấp hơn so với các ứng dụng gốc 
+- Thời gian phát triển ứng dụng ngắn hơn: vì Ionic được phát triển bằng các công nghệ web như: HTML5, JavaScript và CSS. Chúng cho phép chuyển thể ý tưởng sơ bộ sang nguyên mẫu nhanh hơn nhiều so với ngôn ngữ lập trình dành riêng cho nền tảng. 
+- Dễ dàng trong việc thiết kế giao diện: vì phát triển giao diện bằng HTML và CSS nên có thể dễ dàng thiết kế giao diện theo ý thích,đẹp mắt người dùng.
+- Bảo trì ứng dụng đơn giản hơn, giá rẻ hơn: Nếu native apps phải chia thành android và IOS riêng thì Ionic chỉ cần bảo trì  souce code duy nhất.
+- Dễ học, thời gian phát triển nhanh, có thể sử dụng các kỹ năng từ lập trình web.
+- Dễ dàng truy cập các thiết bị đầu vào của thiết bị: Ionic giúp dễ dàng truy cập các tính năng của thiết bị gốc chỉ với một chút JavaScript. Chọn từ thư viện phong phú gồm hơn 120 plugin thiết bị gốc để truy cập Camera, Định vị địa lý, Bluetooth,…
+
+2.2 Tổng quan về SQL Server
+2.2.1 Định nghĩa
+       SQL Server là một hệ quản trị cơ sở dữ liệu quan hệ được phát triển bởi Microsoft. Là một máy chủ cơ sở dữ liệu, nó là một sản phẩm phần mềm có chức năng chính là lưu trữ và truy xuất dữ liệu theo yêu cầu của các ứng dụng phần mềm khác.
+2.2.2 Một số đặc điểm chính của SQL Server
+    SQL là một ngôn ngữ đòi hỏi có tính tương tác cao: Người dùng có thể dễ dàng trao đổi với các tiện ích thông qua các câu lệnh của SQL đến cơ sở dữ liệu và nhận kết quả từ cơ sở dữ liệu.
+    SQL là một ngôn ngữ lập trình cơ sở dữ liệu: Các lập trình viên có thể xây dựng các chương trình ứng dụng giao tiếp với cơ sở dữ liệu bằng cách nhúng các câu lệnh SQL vào trong ngôn ngữ lập trình.
+    SQL là một ngôn ngữ lập trình quản trị cơ sở dữ liệu: Người quản trị cơ sở dữ liệu có thề quản lý, định nghĩa và điều khiển truy cập cơ sở dữ liệu thông qua SQL.
+    SQL là một ngôn ngữ lập trình cho các hệ thống chủ khách: SQL được sử dụng như là một công cụ giao tiếp với các trình ứng dụng trong hệ thống cơ sở dữ liệu khách chủ.
+    SQL là ngôn ngữ truy cập dữ liệu trên Internet: SQL được sử dụng với vai trò tương tác với dữ liệu trong hầu hết các máy chủ web và máy chủ Internet.
+    SQL là ngôn ngữ cơ sở dữ liệu phân tán: Với vai trò giao tiếp với các hệ thống trên mạng, gửi và nhận các yêu cầu truy xuất dữ liệu với nhau.
+2.2.3 Các tính năng của SQL Server
+- Cho phép tạo nhiều cơ sở dữ liệu
+- Duy trì lưu trữ bền vững
+- Bảo mật cao
+- Phân tích dữ liệu bằng SSAS - SQL Server Analysis Services
+- Tạo được báo cáo bằng SSRS - SQL Server Reporting Services
+- Thực hiện quá trình ETL (Extract-Transform-Load) bằng SSIS - SQL Server Integration Services.
+2.3 Một số thư viện được sử dụng trong đồ án
+2.3.1 Capacitor
+    Capacitor là ứng dụng đa nền tảng giúp bạn dễ dàng xây dựng các ứng dụng web chạy tự nhiên trên iOS, Android và web.Gọi các ứng dụng này là "Native Progressive Web Apps" và chúng đại diện cho sự phát triển tiếp theo ngoài các ứng dụng Hybrid.
+    Capacitor cung cấp một bộ API tập trung vào web, cho phép ứng dụng gần với các tiêu chuẩn web nhất có thể, đồng thời truy cập các tính năng của thiết bị gốc phong phú trên các nền tảng hỗ trợ chúng. Thêm chức năng gốc rất dễ dàng với API Plugin đơn giản cho Swift trên iOS, Java trên Android và JavaScript cho web. Tụ điện là sự kế thừa tinh thần của Apache Cordova và Adobe PhoneGap, với cảm hứng từ các công cụ đa nền tảng phổ biến khác như React Native và Turbolinks, nhưng tập trung hoàn toàn vào việc cho phép các ứng dụng web hiện đại chạy trên tất cả các nền tảng chính một cách dễ dàng. Cordova có hỗ trợ tương thích ngược cho nhiều plugin Cordova hiện có.
+2.3.2  Ionicons
+    Ionicons là một biểu tượng hoàn toàn mã nguồn mở với hơn 1.200 biểu tượng được tạo cho các ứng dụng web, iOS, Android và máy tính. Ionicons được tạo ra cho Ionic Framework, một khung ứng dụng Web tiến bộ lai và đa nền tảng.
+2.3.3 Cordova
+Apache Cordova là một bộ khung để xây dựng ứng dụng di động sử dụng HTML, CSS và Javascript. Apache Cordova bao gồm một tập hợp các API thiết bị cho phép người lập trình di động truy cập, sử dụng các chức năng native của thiết bị như là camera hay cảm biến gia tốc bằng Javascript. Kết hợp với một bộ khung phát triển giao diện như jQuery Mobile or Dojo Mobile hoặc Ionic, cho phép ứng dụng di động có thể được phát triển chỉ dựa trên HTML, CSS và Javascript.
+-  Khi sử dụng Cordova API, một ứng dụng có thể được xây dựng mà không phải sử dụng bất kỳ một đoạn mã native code nào. Thay vào đó, công nghệ web sẽ được sử dụng, và chúng sẽ được tổ chức trên chính ứng dụng đấy chứ không cần thông qua một server nào.
+-  Và bởi vì những API Javascript này là thống nhất trên tất cả các nền tảng thiết bị và được xây dựng trên chuẩn web nên những ứng dụng được viết trên nền tảng này có thể được sử dụng trên các nền tảng khác mà có thể không cần có bất cứ sự thay đổi nào.
+-  Cordova cung cấp một tập hợp các thư viện Javascript đã được chuẩn hóa để có thể sử dụng. Cordova hiện có thể sử dụng cho các nền tảng như iOS, Android, Blackberry, Windows Phone, Palm WebOS, Bada và Symbian.
+-  Kể từ phiên bản 3.0, ta có thể chọn một trong hai quy trình để phát triển một ứng dụng di động. 
+• Cross-platform (CLI) workflow: được sử dụng khi ta muốn xây dựng ứng dụng trên càng nhiều nền tảng càng tốt, mà ít cần quan tâm đến đặc trưng của nền tảng. Trung tâm của quy trình này là CLI (Command-Line Interface), được giới thiệu từ phiên bản Cordova 3.0. CLI là một công cụ ở mức cao cho phép ta xây dựng dự án trên nhiều nền tảng một lần duy nhất, trừu tượng hóa đi nhiều chức năng ở mức thấp. CLI cũng cung cấp một giao diện chung để sử dụng các plug-in vào ứng dụng của ta.
+• Platform-centered workflow: được sử dụng khi ta muốn tập trung phát triển ứng dụng trên một nền tảng cụ thể và muốn can thiệp sâu vào mức thấp ví dụ như khi ta muốn kết hợp một thành phần native đã được tùy biến vào một thành phần web của Cordova. Quy trình này phụ thuộc vào một tập các đoạn mã ở mức thấp được thiết kế riêng cho mỗi nền tảng được hỗ trợ. Vì vậy khi sử dụng cách phát triển này sẽ có thể gặp nhiều khó khăn hơn bởi vì sự thiếu hụt của những công cụ ở mức cao nhưng ta sẽ có được sự tự do hơn trong việc phát triển ứng dụng.
+    
+2.4   Các công cụ hỗ trợ
+2.4.1 Microsoft SQL Server Management Studio 18
+    SQL Server là một hệ quản trị cơ sở dữ liệu quan hệ (Relational Database Management System (RDBMS) ) sử dụng câu lệnh SQL (Transact-SQL) để trao đổi \dữ liệu giữa máy Client và máy cài SQL Server. Một RDBMS bao gồm databases, database engine và các ứng dụng dùng để quản lý dữ liệu và các bộ
+phận khác nhau trong RDBMS.
+      SQL Server được tối ưu để có thể chạy trên môi trường cơ sở dữ liệu rất lớn (Very Large Database Environment) lên đến Tera-Byte và có thể phục vụ cùng lúc cho hàng ngàn user. SQL Server có thể kết hợp “ăn ý” với các server khác như Microsoft Internet Information Server (IIS), E-Commerce Server, Proxy Server…. 
+2.4.2 Visual Studio Code
+    Visual Studio Code là trình chỉnh sửa mã nguồn nhẹ nhưng mạnh mẽ chạy trên máy tính để bàn của bạn và có sẵn cho Windows, macOS và Linux. Nó đi kèm với sự hỗ trợ tích hợp cho JavaScript, TypeScript và Node.js và có một hệ sinh thái mở rộng phong phú cho các ngôn ngữ khác (như C ++, C #, Java, Python, PHP, Go) và thời gian chạy (như .NET và Unity) .
+
+2.4.3 Visual Paradigm
+    Visual Paradigm là một công cụ quản lý và thiết kế mạnh mẽ, đa nền tảng và dễ sử dụng cho các hệ thống Công nghệ thông tin. Visual Paradigm cung cấp cho các nhà phát triển phần mềm nền tảng phát triển tiên tiến để xây dựng các ứng dụng chất lượng nhanh hơn, tốt hơn và rẻ hơn! Nó tạo điều kiện cho khả năng tương tác tuyệt vời với các công cụ CASE khác và hầu hết các IDE hàng đầu, vượt trội toàn bộ quy trình phát triển Mô hình-Mã-Triển khai của bạn trong giải pháp một cửa này.
+CHƯƠNG 3: PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG
+3.1 Khảo sát,xác định yêu cầu
+- Khảo sát yêu cầu của khách hàng 
+- Xác định yêu cầu của ứng dụng từ khác hàng
+- Đưa ra đề nghị các chức năng của hệ thống cho khách hàng.
+
+3.1.1 Phân tích thiết kế chức năng của hệ thống
+      Hoạt động đọc tin tức trên  Mobile có thể mô tả như sau:
+• Khi người dùng đăng nhập và nhập thông tin  cá nhân, thông tin cá nhân của người dùng sẽ được lưu vào cơ sở dữ liệu.
+• Chức năng xem tin tức.
+• Chức năng khảo sát qua các câu hỏi và trả lời.
+• Chức năng cho xem kết quả khảo sát sau khi người dùng khảo sát.
+• Chức năng bình chọn đánh giá.
+• Chức năng tiện ích liên kết tới các trang đọc tin tức.
+3.1.2 Thiết kế cơ sở dữ liệu cho hệ thống
+    Thiết kế cơ sở dữ liệu cho hệ thống.Hệ thống đang được chạy trên dữ liệu thực.
+3.1.3 Chức năng cho phép nhập thông tin từ người dùng
+    Sau khi đăng nhập,ứng dụng buộc người dùng nhập thông tin cá nhân của mình để lấy thông tin phục vụ cho việc khảo sát sau đó.
+3.1.4 Quản lý thông tin tài khoản và thông tin người dùng
+    Thông tin cá nhân của từng tài khoản sẽ được lưu trong cơ sở dữ liệu.
+3.1.5 Chức năng xem tin bài
+    Cho phép người dùng đọc các tin tức xã hội của quận.
+3.1.6 Chức năng khảo sát qua các câu hỏi và trả lời
+    Ứng dụng cho phép người dùng thực hiện đánh giá,thực khảo sát về mức độ hài lòng của người dùng 
+3.1.7 Chức năng bình chọn,đánh giá
+    Ứng dụng cho phép người dùng thực hiện bình chọn đánh giá độ hài lòng của mình đối với các cán bộ trong các cơ quan, phòng ban của quận và góp ý đánh giá để các cán bộ thấy để sửa đổi bản thân.
+    
+3.1.8   Chức năng xem kết quả bình chọn,đánh giá
+    Ứng dụng cho phép người dùng xem kết quả khảo sát,để thấy mức độ hài lòng của mọi người đối với cán bộ đó.
+3.1.9 Chức năng đọc tin tức qua các trang báo điện tử khác
+    Liên kết tới các trang đọc tin tức khác để người dùng có thể xem thêm các thông tin sự kiện nổi bật khác qua các trang tin tức online như Dantri, Vietnamnet, Vnexpress,Tuoitre,…
+    
+3.2 Phân tích và thiết kế hệ thống
+3.2.1 Biểu đồ Usecase
+    3.2.1.1 Biểu đồ Use Case tổng quát
+
+    Hình 3.1 Biểu đồ Use Case tổng quát
+    Tóm tắt: Use case có 2 Actor đó là Admin và User  chức năng lớn đó là: cho phép người dùng xem tin tức, thực hiện khảo sát, thực hiện bình chọn, các tiện ích khác.
+    -  Biểu đồ Use case xây dựng ứng dụng tin tức phân tách ra hai đối tượng sử dụng là admin và user. Biểu đồ Use case chỉ ra một số lượng các tác nhân ngoại cảnh và mối liên kết của chúng với Use case mà hệ thống đã cung cấp. Dùng Use case để chỉ ra mối liên kết giữa các actor(admin, user) đối với các chức năng của hệ thống như( tin tức, khảo sát, bình chọn, tiện ích)
+     -  Biểu đồ Use case giúp cho người quản lí dễ dàng phân tích dược mối liên kết giữa các tác nhân và use case trong hệ thống từ đó đưa ra được phương pháp để giải quyết một cách dễ dàng nhất.
+    
+    3.2.1.2 Biểu đồ Use Case xem tin bài
+    
+    Hình 3.2 Use Case xem tin bài
+* Tóm tắt: Chức năng chính là cho phép người dùng xem tin bài gồm danh sách tin bài và chi tiết tin bài khi người dùng nhấn vào một tin bài nào đó trong danh sách
+* Sự kiện chính: người dùng lướt và xem thông tin tổng quan của tin bài, khi muốn xem chi tiết về tin bài đó thì sẽ ấn vào tin bài trên màn hình
+
+
+
+
+
+
+
+
+3.2.1.3 Biểu đồ Use Case thực hiện bình chọn
+    Hình 3.3 Use Case thực hiện bình chọn
+* Tóm tắt: Chức năng chính là cho phép người dùng thực hiện bình chọn, đánh giá độ sự hài lòng của mình đối với các cán bộ hành chính có trong quận.
+* Sự kiện chính: người dùng nhấn vào giao diện bình chọn ở màn hình chính, sau đó hệ thống sẽ hiển thị ra các phòng – ban có trong quận, tiếp theo người dùng sẽ chọn cán bộ trong phòng – ban đó để đánh giá, tại giao diện của mỗi cán bộ, người dùng sẽ thấy được thông tin của cán bộ đó gồm họ tên, chức vụ trong phòng, email, mức độ tín nhiệm. Người dùng có thể chọn hài lòng hoặc không(có thể cho ý kiến) tại giao diện này và sau đó nhấn xác nhận, phiếu bình chọn vừa rồi sẽ được ghi vào dữ liệu và trả kết quả sau khi người dùng thực hiện bình chọn.
+    
+    3.2.1.4 Biểu đồ Use Case thực hiện khảo sát
+    
+    
+    
+    Hình 3.4 Use Case thực hiện khảo sát
+* Tóm tắt: Chức năng chính là cho phép người dùng thực hiện khảo sát, trả lời các câu hỏi về quận.
+* Sự kiện chính: người dùng ấn vào nút khảo sát, hệ thống sẽ hiển thị ra giao diện gồm các câu hỏi và người dùng có thể trả lời câu hỏi qua hình thức trắc nghiệm và 1 ý kiến khác, sau đó nhấn xác nhận, câu trả lời sẽ được ghi nhận và lưu vào cơ sở dữ liệu.
+    
+    3.2.1.5 Biểu đồ Use Case nhập thông tin
+    
+    Hình 3.5 Use Case nhập thông tin
+* Tóm tắt: Chức năng chính là cho phép người dùng cập nhật thông tin cá nhân của mình.
+* Sự kiện chính: người dùng ấn vào nút tiện ích,hệ thống sẽ hiển thị ra các trang báo điện tử gồm cả cổng thông tin tin tức của quận, khi người dùng nhấn vào một trong các tiện ích đó, trang web đó sẽ trước mở ở một cửa sổ mới của trình duyệt.
+    
+    3.2.1.6 Use Case tiện ích
+    
+    Hình 3.6 Use Case tiện ích
+* Tóm tắt: Chức năng chính là cho phép người dùng tham khảo, đọc các trang báo điện tử khác.
+* Sự kiện chính: người dùng ấn vào nút tiện ích,hệ thống sẽ hiển thị ra các trang báo điện tử gồm cả cổng thông tin tin tức của quận, khi người dùng nhấn vào một trong các tiện ích đó, trang web đó sẽ trước mở ở một cửa sổ mới của trình duyệt.
+    
+
+3.2.2 Biểu đồ lớp
+    
+    Hình 3.7 Biểu đồ lớp 
+    
+    
+    
+    
+3.2.3 Biểu đồ tuần tự
+    
+    Hình 3.8 Biểu đồ tuần tự chức năng bình chọn
+    
+    Hình 3.9 Biểu đồ tuần tự chức năng khảo sát
+    	
+    
+    Hình 3.10 Biểu đồ tuần tự chức năng tiện ích
+    
+    
+    Hình 3.11 Biểu đồ tuần tự xem tin bài
+    
+3.2.4 Cơ sở dữ liệu của hệ thống
+Tên trườngKiểu dữ liệuKích thướcRàng buộcGhi chú     ID     int     MaxKhóa chính     Tên phòng ban     Text     500          Mô tả     Text     500          
+    Bảng 3.1 Cấu trúc dữ liệu bảng Departments
+    
+    
+Tên trườngKiểu dữ  liệuKích thướcRàng buộcGhi chúIDintMaxKhóa chínhPhòng banintMaxChức vụintMax    
+    Bảng 3.2 Cấu trúc dữ liệu bảng Departments_Chucvu
+
+Tên trườngKiểu dữ liệuKích  thướcRàng buộcGhi chúIDIntMaxKhóa chínhPhòng banIntMaxChức vụIntMaxUserIDText100    Bảng 3.3 Cấu trúc dữ liệu bảng Departments_Nguoidung
+    
+
+Tên trườngKiểu dữ liệuKích  thướcRàng buộcGhi chúUsernameIDintMaxKhóa chínhUsernameText100FirstnameText50LastnameText50EmailText256DisplaynameText128    Bảng 3.4 Cấu trúc dữ liệu bảng User
+    
+Tên trườngKiểu dữ liệuKích  thướcRàng buộcGhi chúIDintMaxKhóa chínhUserIDintMaxHài lòngintMaxLý dointMaxÝ kiến khácTextMax    Bảng 3.5 Cấu trúc dữ liệu bảng Khaosat_Canbo
+
+
+Tên trườngKiểu dữ liệuKích  thướcRàng buộcGhi chúIDText36Khóa chínhLĩnh vựcText250Cơ sở vật chấtIntMaxTiếp cận ttIntMaxThái độ PVIntMaxSố lần         thực hiệnIntMaxSố CQ        thực hiệnIntMaxKết quảIntMaxTrễ hẹnIntMaxÝ kiến khácTextMax    Bảng 3.6 Cấu trúc dữ liệu bảng Khaosat_Quan
+    
+
+3.3 Một số hình ảnh giao diện ứng dụng
+    
+    Hình 3.12 Giao diện chính
+    
+    
+    	
+    
+    
+    
+    Hình 3.13 Giao diện menu
+    
+    
+    
+    
+    
+    
+    
+    Hình 3.14 Giao diện tin bài
+    
+    
+    
+    
+    Hình 3.15 Giao diện chi tiết tin bài
+    
+    
+    
+    Hình 3.16 Giao diện phần bình chọn
+    
+    
+    
+    Hình 3.17 Giao diện bình chọn cán bộ
+    
+    
+    
+    Hình 3.18 Giao diện đánh giá cán bộ
+    
+    
+    
+    
+    Hình 3.19 Giao diện sau khi bình chọn
+    
+    
+    
+    
+    Hình 3.20 Giao diện phần khảo sát
+
+    
+    Hình 3.21 Giao diện phần khảo sát 2
+    
+    
+    
+    Hình 3.22 Giao diện phần khảo sát 3
+    
+    
+    
+    
+    Hình 3.23 Giao diện phần khảo sát 4
+    
+    
+    
+    Hình 3.24 Giao diện phần tiện ích
+    
+    
+    
+    Hình 3.25 Giao diện phần đăng nhập
+    
+    
+    
+    Hình 3.26 Giao diện đăng kí
+    
+    
+    
+    
+3.4 Cách cài đặt và chạy ứng dụng 
+• Cài đặt môi trường:
+   Tất nhiên, một trình soạn thảo mã cũng được yêu cầu. Visual Studio Code được khuyến nghị. Visual Studio Code là trình soạn thảo văn bản miễn phí, bao gồm pin do Microsoft sản xuất.
+Để có công cụ Visual Studio Code:
+Tải và cài đặt theo đường dẫn: https://code.visualstudio.com
+   Hầu như tất cả các công cụ cho các dự án JavaScript hiện đại đều dựa trên Node.js. Các trang tải đã được xây dựng sẵn các gói cài đặt cho tất cả các nền tảng.
+Tiếp theo tải và cài đặt nodejs: https://nodejs.org
+   Để xem đã cài đặt thành công hay chưa, hãy mở một cửa sổ terminal mới 
+   và chạy:
+          $ node --version
+          $ npm --version
+Mặc dù không bắt buộc, hệ thống kiểm soát phiên bản Git rất khuyến khích.
+• Tải và cài đặt Git: https://git-scm.com/
+• Sau đó cài các extendsion cần thiết phục vụ cho việc code Angular và Ionic như:
+• Angular Essentials
+• Angular Files
+• Angular Switcher
+• Ionic Snippets
+• Ionic2-vscode
+• Giải nén file zip và mở thư mục code bằng công cụ Visual Studio Code
+   Ta mở cửa sổ command bằng cách nhấn phím Ctrl+`, sau đó cửa sổ sẽ hiện ra bên dưới,thực hiện các câu lệnh với command như  sau:
+• Để cài đặt cli-Ionic dùng lệnh:
+     npm install -g @ionic/cli
+• Để chạy ứng dụng trên trình duyệt dùng lệnh:
+     ionic serve
+• Để triển khai ứng dụng lên smartphone android có 2 cách:	
+➢ Cách 1: Cài đặt thư viện Capacitor: npm install @capacitor/cli
+    Nhập lệnh Ionic build để build ứng dụng
+    Đầu tiên phải cài Android SDK(Software Development Kit) và công cụ Android Studio,máy ảo.Nếu không thể tạo máy ảo thì hãy kết nối với thiết bị Android bên ngoài bằng cab USB
+    Sau đó nhập lệnh:
+     	ionic capacitor add android
+     	ionic capacitor open android
+    Android studio sẽ tự mở và ứng dụng sẽ tự chạy trên thiết bị mà bạn đã  cài đặt trước đó.
+➢ Cách 2 Dùng thư viện Cordorva
+Chạy lệnh ionic cordova platform add android
+Sau đó  ionic cordova prepare android và mở Android Studio, và kết nối máy điện thoại tới máy tính sẵn, nhớ để điện thoại ở chế độ nhà phát triển 
+Tiếp theo chạy lệnh cordova platform run android sau đó ứng dụng sẽ được cài đặt trên smartphone của bạn.
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+* Tìm hiểu, nắm bắt được các công cụ Visual Studio Code,hệ quản trị CSDL SQL Server và Visual Studio.
+* Tìm hiểu  framework Ionic và Angular 
+* Rèn luyện phân tích thiết kế hứớng đối tượng
+* Tìm hiểu và nắm được nghiệp vụ của bài toán
+* Vận dụng được các công nghệ mới vào ứng dụng.
+* Học và tổ chức được dữ liệu cho bài toán theo thiết kế 
+* Xây dựng được ứng dụng với cac chức năng cơ bản
+o Cho phép người dùng nhập thông tin cá nhân và lưu thông tin vào cơ sở dữ liệu
+o Cho phép người dùng thực hiện khảo sát và đánh giá các cán bộ
+o Cho phép người dùng xem kết quả khảo sát.
+* Nâng cao khả năng tư duy logic, kỹ năng lập trình, phát hiện và sửa lỗi.
+* Tìm hiểu được về HTML, CSS, TypeScript
+* Vận dụng được các công nghệ mới vào sản phẩm
+
+4.2 Hạn chế của đề tài
+* Chưa có chức năng bảo mật
+* Chưa có thiết lập thông minh
+* Thiết kế giao diện còn đơn giản
+4.3    Hướng phát triển của đề tài
+* Tiếp tục phát triển giao diện thêm đẹp mắt hơn, dễ sử dụng hơn, mang lại trải nghiệm tốt hơn cho người dùng
+* Tối ưu code để ứng dụng gọn nhẹ hơn.
+    
+    
+TÀI LIỆU THAM KHẢO
+x
+x
+     [1] Tài liệu về Ionic: https://ionicframework.com
+    [2] Tài liệu về Angular: https://angular.io/docs
+    [3] Tài liệu về ASP.Net: https://dotnet.microsoft.com/apps/aspnet
+    [4] Tài liệu về Ionicons: https://ionicons.com
+    [5] Stackoverflow: https://stackoverflow.com
+    
+    
+    
+
+
+    
+Xây dựng ứng dụng đọc tin tức trên Mobile thực hiện bình chọn, khảo sát trên nền tảng Ionic và .Net core
+
+
+    
+    16
+    
+    
+    15
+    
+    
+    
+    
+    

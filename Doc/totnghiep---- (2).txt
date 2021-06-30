@@ -1,0 +1,474 @@
+﻿CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
+1.1 Lý do chọn đề tài:
+     Cùng với sự phát triển của công nghệ thông tin, công nghệ mạng máy tính và sự phát triển của mạng internet ngày càng phát triển đa dạng và phong phú. Các dịch vụ trên mạng đã thâm nhập vào hầu hết các lĩnh vực trong đời sống xã hội. Các thông tin trên Internet cũng đa dạng về nội dung và hình thức, trong đó có rất nhiều thông tin cần được bảo mật cao hơn bởi tính kinh tế, tính chính xác và tính tin cậy của nó.
+      Ngày nay, nước ta ngày càng phát triển và nhất là về mặt công nghệ thông tin. Website trở nên phổ biến và trở thành một phần quan trọng của mọi người và nhất là các doanh nghiệp, công ty. Bên cạnh đó lý do an toàn bảo mật cho doanh nghiệp, công ty luôn là vấn đề đáng được quan tâm của mọi người.
+      Chính vì vậy nên em đã chọn đề tài “TÌM HIỂU CÔNG NGHỆ LƯU TRỮ DỮ LIỆU TIÊN TIẾN VÀ BẢO MẬT MÁY CHỦ EMAIL SERVER”.
+1.2 Mục tiêu của đề tài:
+      - Tìm hiểu định nghĩa, lợi ích của Email Server. 
+      - Tìm hiểu các mối đe dọa về vấn đề an toàn thông tin khi chúng ta làm việc hàng ngày, từ đó tìm hiểu Email Server.
+      - Hiểu rõ hơn về các kỹ thuật, cách thức hoạt động và bảo mật của Email Server.
+1.3 Giới hạn và phạm vi của đề tài
+     - Tìm hiểu các kỹ thuật, cách thức hoạt động của Email Server, tìm hiểu sâu về vấn đề lưu trữ và bảo mật thông tin của Email Server.
+     - Tìm hiểu cách bảo mật, phòng thủ các loại tấn công phổ biến trên một cách tổng quan nhất của Email Server.
+1.4 Kết quả đạt được
+     - Hoàn thành quyển báo cáo chi tiết đồ án tốt nghiệp.
+     - Tìm hiểu các kĩ thuật bảo mật thông tin của Email Server.
+     - Tìm hiểu sâu hơn về tính năng của Email Server đối với những công ty, doanh nghiệp.
+
+
+CHƯƠNG 2 : EMAIL SERVER VÀ NGUYÊN LÝ HOẠT ĐỘNG
+2.1 Tổng quan về Email Server
+2.1.1 Khái niệm Email Server
+     Email Server ( hay Mail Server ) là hệ thống máy chủ được cấu hình riêng theo tên miền của doanh nghiệp dùng để gửi và nhận thư điện tử. Bên cạnh tính năng lưu trữ và sắp xếp các Email trên internet, Mail Server là một giao thức chuyên nghiệp để giao tiếp thư tín, quản lý và truyền thông nội bộ, giao dịch thương mại… Không chỉ thao tác với tốc độ nhanh chóng và ổn định, Mail Server còn đảm bảo tính an toàn với khả năng khôi phục dữ liệu cao.
+     Mail Server cơ bản vẫn là Dedicated Server (Server riêng lẻ) hay Cloud Server (Server điện toán đám mây) được cấu hình để biến thành một cỗ máy gửi và nhận thư điện tử. Nó cũng có đầy đủ các thông số như một Server bình thường như Ram, CPU, Storage,… ngoài ra, nó còn có các thông số khác liên quan đến yếu tố Email như số lượng tài khoản Email, Email fowarder, Mail list,…
+2.1.2 Cách thức hoạt động của Mail Server
+Hình 2.1 Cách thức hoạt động Email Server
+
+Mail Server hoạt động dựa trên 3 giao thức cơ bản bao gồm:
+  	Outgoing Mail Server :
+Outgoing Mail Server hay Mail Server gửi đi sử dụng giao thức SMTP (Simple Mail Transfer Protocol). Đây là giao thức dịch chuyển mail đơn giản được dùng để liên lạc với server từ xa. Đồng thời cho phép gửi nhiều thư cùng một lúc tới các server khác nhau.
+  	Incoming Mail Server :
+Giao thức này hay còn được biết đến dưới 2 hình thức:
+▪ POP3 (Post Office Protocol phiên bản 3): chuyển email tới lưu ở máy tính chứa Mail Client, thường là nội bộ máy tính của người dùng thông qua một ứng dụng email như Outlook, Mac Mail, Windows Mail…
+▪ IMAP (Internet Message Access Protocol) là phương thức phức tạp hơn cho phép nhiều client cùng lúc kết nối tới một Mailbox. Email từ Mailbox sẽ được sao chép tới máy client và bản gốc của Email vẫn sẽ được lưu trên Mail Server.
+      Tính năng nổi bật của Mail Server
+      Mail Server mang đến cho người dùng cá nhân và doanh nghiệp nhiều tính năng:
+▪ Cho phép người dùng khi gửi email hay nhận mail có thể thông qua Internet trực tiếp với những tên miền cụ thể của từng tổ chức.
+▪ Hạn chế tối đa các thư spam hoặc chứa virus.
+▪ Đảm bảo sự bảo mật thông tin nội bộ một cách chặt chẽ.
+▪ Có thể thiết lập dung lượng tối đa cho từng người dùng Mail Server.
+▪ Quản lý được toàn bộ nội dung mail của tất cả các thành viên thuộc hệ thống.
+▪ Thiết lập được chức năng sao lưu dữ liệu tự động. Đảm bảo thông tin cần thiết luôn tồn tại.
+      Từ những tính năng nổi bật của Mail Server, chúng ta có thể thấy rằng đây là 1 sự lựa chọn cần thiết cho các doanh nghiệp lớn và nhỏ. Bởi tình trạng spam mail, email gửi kèm những phần mềm độc hại đã làm ảnh hưởng đến tình hình an ninh mạng tại Việt Nam. Vì thế, việc bảo mật và an toàn luôn là vấn đề nhiều doanh nghiệp quan tâm. Và điều này đã khiến Mail Server được đánh giá cao hơn cả so với những máy chủ mail khác. Dưới đây là 1 số ưu điểm nổi trội của Mail Server :
+▪ Email với tên miền riêng của riêng công ty thể hiện sự chuyên nghiệp trong hoạt động.
+▪ Tốc độ, bảo mật cao, kèm theo nhiều tiện ích.
+▪ Kiểm tra mail mọi nơi: tại văn phòng (thông qua phần mềm duyệt mail) và tại bất kỳ nơi đâu (khi đi công tác), trên tất cả các loại trình duyệt mail (Outlook…)
+▪ Có thể tùy biến các thông số và chức năng cho từng User.
+▪ Ngăn chặn spam và virus cực kỳ hiệu quả.
+▪ Có không gian lưu trữ riêng biệt, bất khả xâm phạm.
+▪ Tính bảo mật cao nhờ trang bị giao thức SSL.
+▪ Sử dụng IP riêng nên sẽ chống được việc vô cớ bị vào black list.
+▪ Hỗ trợ tính năng Fowarder Email để cài đặt Email Offline.
+2.2   Tìm hiểu sâu hơn về Email Server
+2.2.1  Nguyên lý hoạt động của Email Server
+    Mail Server gửi (Sender) làm nhiệm vụ nhận thư của người gửi đi. Sender truy vần DNS để tìm MX Record(IP) của domain đích. Sender telnet port 25 của receiver để báo hiệu muốn gửi mail. Receiver kiểm tra một số điều kiện để quyết định có nhận mail của sender ko? Nếu receiver đồng ý thì sender dùng protocol SMTP để gửi mail cho receiver.
+     Vì lý do nào đó, receiver từ chối không nhận mail của sender, sender phải forward mail cần gửi sang một server trung gian để server này gửi giúp, quá trình này gọi là Relay Mail. Có rất nhiều nhà cung cấp dịch vụ Mail Relay. Ví dụ như google,.. Mail Server nhận (receiver) nhận mail từ Sender và để trong box mail (Hộp lưu trữ mail). Khi người nhận muốn đọc thư thì gửi yêu cầu và chuyển về thư về client thông qua giao thức POP3.
+     Có 2 mô hình Mail Server:
+     Mô hình online:  Mail từ internet gửi thẳng về server của ta. Cài mail server nội bộ, publish port 25 của mail server ra firewall, NAT port 25 từ ADSL về Firewall. Tuỳ theo tình huống thực tế sẽ có những điều chỉnh phù hợp, ví dụ Firewall có IP Public thì không cần công đoạn NAT port ...
+     Mô hình offline:  Chúng ta phải thuê server trung gian nào đó đứng ra nhận mail giúp, sau đó ta cấu hình mail server nội bộ kết nối đến server này tải mail về.
+     Ưu nhược điểm của mỗi mô hình:
+     Mail online đòi hỏi phải có 1 hạ tầng hoàn chỉnh và ổn định. Yêu cầu khá tốn kém cả về nhân lực lẫn tài nguyên. Nhưng chúng ta sẽ làm chủ mọi thứ. Từ khâu cấu hình và quản lý…
+     Mail offline thì ko cần những thứ trên nhưng bù lại bạn không làm chủ được mail, ví dụ: rò rỉ thông tin, mất mail ...
+     Các thuật ngữ trong Email Server:
+Các thuật ngữ sau đây rất quan trọng trong việc tìm hiểu hoạt động của mail server:
+     Mail User Agent (MUA): MUA là một thành phần tương tác trực tiếp với người dùng cuối . Ví dụ về MUA là phần mềm Thunderbird, MS Outlook, Zimbra Desktop. Các giao diện web mail như Gmail và Yahoo! cũng là MUA.
+     Mail Transfer Agent (MTA): MTA chịu trách nhiệm chuyển email từ mail server của người gởi thư đến mail server của người nhận thư. Ví dụ về MTA là sendmail và postfix.
+     Mail Delivery Agent (MDA): Trong một mail server nhận thư , local MTA chấp nhận một email đến từ MTA của người gởi . Email sau đó được gửi đến hộp thư của người dùng bởi MDA.
+     POP / IMAP: Giao thức POP và IMAP được sử dụng để tìm nạp email từ hộp thư của máy chủ người nhận tới MUA người nhận.
+     Mail Exchanger Record (MX): MX record có nhiệm vụ là chỉ đường cho email đi đến mail server của bạn ( MX record thường đi kèm theo một A record sẽ trỏ về địa chỉ IP của mail server , và một thông số pref có giá trị số để chỉ ra mức độ ưu tiên của các mail server , giá trị pref càng nhỏ thì mức độ ưu tiên càng cao )
+Hình 2. 2 Nguyên lý hoạt động của Email Server
+      Khi người gửi nhấp vào nút gửi , Simple Mail Transfer Protocol – gửi email ( SMTP ) giúp đảm bảo chắc chắn là email được gửi từ server người gửi tới server người nhận . Khi email đến server người nhận MTA của server nhận sẽ tiếp nhận email của người gởi và chuyển nó cho MDA địa phương . MDA sau đó writes email vào mailbox của người nhận . Khi người nhận dùng MUA để kiểm tra email , MUA sẽ dùng giao thức Post Office Protocol ( POP ) hoặc Internet Message Access Protocol  ( IMAP ) để lấy mail về.
+
+      Sau đây là trình tự hoạt động của mail service trong thực tế :
+      Giả sử rằng userA@exampleA.tst đang cố gắng gửi một email tới userB@exampleB.tst Các sự kiện sau đây sẽ xảy ra tuần tự khi người dùng gửi mail : 
+
+Hình 2.3 Trình tự hoạt động của Email Server
+      MUA của người gửi khởi tạo kết nối tới mail server mail.exampleA.tst bằng giao thức SMTP (thường là TCP Port 25).
+      Mail server mail.exampleA.tst nhận email và biết rằng domain đích cần gởi email tới là exampleB.tst . Server mail.exampleA.tst tạo ra một truy vấn đến máy chủ DNS để hỏi về thông tin record MX của domain exampleB.tst. Giả sử rằng không có thông tin về domain exampleB.tst trong bộ nhớ cache của máy chủ DNS .
+      Máy chủ DNS lần lượt tạo ra một truy vấn đệ quy đối với máy chủ DNS có thẩm quyền và tìm hiểu về chi tiết các record MX của domain exampleB.tst. Thông tin này sẽ được trả về cho server mail.exampleA.tst .
+Bây giờ server mail.exampleA.tst đã có địa chỉ IP của mail server đích , nó sẽ gửi email trực tiếp tới mail server mail.exampleB.tst thông qua Internet. SMTP được sử dụng để liên lạc giữa các mail server nguồn và đích.
+      Email đến được nhận bởi SMTP (MTA) cục bộ trên server mail.exampleB.tst. Sau khi nhận được email, nó được chuyển cho MDA, sau đó gửi thư đến hộp thư của người nhận được lưu trữ trong máy chủ. Máy chủ có các hộp thư riêng biệt cho mỗi người dùng.
+      Khi người nhận kiểm tra email qua giao thức POP hoặc IMAP, email được MUA lấy từ máy chủ về máy tính của user . Tùy thuộc vào cấu hình MUA, email có thể được tải xuống trong máy trạm, bản sao có thể được lưu giữ trong cả máy chủ và máy trạm, hoặc email giữa máy chủ và MUA được đồng bộ hóa , tuỳ thuộc vào bạn chọn giao thức POP hay IMAP .
+      Ngoài ra người ta còn có mail gate nó đứng trước mail server đảm nhận vai trò giống như là một firewall với các khả năng chống phishing , DLP(data loss prevention), và lọc mail cao cấp hơn …
+2.2.2   Những Loại Giao Thức Được Sử Dụng Trong Mail Server
+● Giao thức SMTP ( Simple Mail Transfer Porotocol )
+     SMTP Server hay được nhiều người dùng biết đến là server chuyên dùng để gửi mail. Đây là một trong những dịch vụ cho phép doanh nghiệp có thể dễ dàng gửi đi email với số lượng cực lớn và không bị giới hạn.
+
+Hình 2.4 Giao thức SMTP
+      Điều này giúp SMTP Server vượt trội hơn hẳn so với các hòm mail miễn phí của Gmail hay các mail đi kèm cùng với hosting. Hoặc nói một cách khác đơn giản hơn thì máy chủ có tác dụng giúp bạn gửi mail thì người ta gọi SMTP server. Dịch vụ này sẽ gửi mail cho bạn thông qua TCP hoặc IP nên đảm bảo sự nhanh nhẹn, bảo mật và tiện lợi.
+      Thường thì SMTP Server có thể giúp người dùng có thể thực hiện chuyển mail thông qua cổng Internet 25 (TCP). Thế nhưng hiện nay, tại châu Âu đã có một phương thức giúp người dùng có thể gửi mail một cách tiện lợi hơn là X.400.
+     Bên cạnh đó, có nhiều máy chủ liên quan đến email đã dần được hỗ trợ hình thức chuyển thư một cách đơn giản và mở rộng hơn gọi là ESMTP, giúp người dùng cho phép các tệp đa phương tiện được gửi đi một cách dễ dàng.
+● Giao thức POP 3 ( Post Office Porotocol version 3 ):
+     POP3 là viết tắt của Post Office Protocol version 3 là một giao thức tầng ứng dụng, dùng để lấy thư điện tử từ server mail, thông qua kết nối TCP/IP. POP3 được sử dụng để kết nối tới server email và tải email xuống máy tính cá nhân thông qua ứng dụng email client như Outlook, Thunderbird, Windows Mail, Mac Mail…
+
+Hình 2.5 Giao thức POP 3
+     Thông  thường, email client sẽ có tùy chọn bạn có muốn giữ mail trên server sau khi tải về hay không. Nếu bạn đang truy cập một tài khoản bằng nhiều thiết, chúng tôi khuyên là nên chọn giữ lại bản copy trên server nếu không thiết bị thứ 2 sẽ không thể tải mail về được vì nó đã bị xóa sau khi tải về trên thiết bị 1.
+     Cũng đáng để lưu ý là POP3 là giao thức 1 chiều, có nghĩa là email được “kéo” từ email server từ xa xuống email client.
+Mặc đình, port POP3 là:
+      Port 110 – port không mã hóa
+      Port 995 – SSL/TLS port, cũng có thể được gọi là POP3S
+● Giao thức IMAP ( Internet Message Access Protocol ) :
+
+      IMAP là viết tắt của Internet Message Access Protocol, là giao thức chuẩn Internet được sử dụng bởi các ứng dụng email để truy xuất thư email từ máy chủ thư qua kết nối TCP/IP. Giống như POP3, IMAP cũng  được dùng để kéo email về emails client, tuy nhiên khác biệt với POP3 là nó chỉ kéo email headers về, nội dung email vẫn còn trên server. Đây là kênh liên lạc 2 chiều, thay đổi trên mail client sẽ được chuyển lên server.
+
+
+Hình 2.6 Giao thức IMAP
+     Sau này, giao thức này trở nên phổ biến nhờ nhà cung cấp mail lớn nhất thế giới, Gmail, khuyên dùng thay vì POP3.
+     Port IMAP mặc định:
+▪ Port 143 – port không mã hóa
+▪ Port 993 – SSL/TLS port, cũng có thể được gọi là IMAPS
+2.2.3  Cách bảo mật hệ thống Mail Server: 
+      SecurityBox đưa ra 3 phương pháp phổ biến nhất để bảo mật hệ thống mail server của bạn,hiệu quả nhất. Bảo mật hệ thống mail server có nhiệm vụ giữ sự an toàn thông tin và dữ liệu trong việc gửi đi và lưu trữ của mail, theo SecurityBox điều này sẽ giúp dữ liệu cũng như thông tin của bạn luôn được đặt trong điều kiện an toàn tuyệt đối với những phương pháp sau đây:
+      Bảo mật hệ thống mail server bằng cách bảo mật nhiều lớp
+
+Hình 2.7 Bảo mật hệ thống Email Server
+     Security Box sẻ liệt kê lần lượt ra đó là xác thực và mã hóa; nhiều lớp kiểm soát truy cập; tuân thủ SPF, DomainKey; danh sách (Blacklist, Whitelist, Greylist); bộ lọc và kiểm tra DNS, blacklist; có hỗ trợ các chính sách gửi thư đi và nhận thư về, có các chính sách chống mạo danh và quá hạn sử dụng password.
+     Bảo mật hệ thống mail server sử dụng công nghệ chống virus và chống mail rác
+Hệ thống mail server sẽ dùng các công nghệ khác biệt để scan mạng internet và phải nhanh chóng tìm ra những phần mềm mã độc, để có thể ngăn chặn tất cả các loại virus một cách nhanh nhất và hiệu quả nhất.
+      Ngoài ra, các công nghệ đặc biệt này còn có thể giúp các máy chủ server không bị một chút hư hại nào có liên quan đến việc hỗ trợ SSL/TLS tới và đi, cũng như admin giới hạn truy cập theo IDS, DOS, IP… và còn kiểm tra những văn bản hay tài liệu độc hại và tìm ra những nguy cơ độc hại cho server của chúng ta.
+      Bảo mật hệ thống mail server nên sử dụng các công nghệ bảo mật thêm nữa.
+      Theo như SecurityBox nghiên cứu có nhiều hệ thống mail server được bảo mật bằng cách sử dụng các công nghệ bảo mật mail server của các hãng lớn như Kaspersky hay Comtouch hoặc AVG, điều này giúp ngăn cản những nguy cơ, hiểm họa tiềm tàng. Ngày nay, các doanh nghiệp lớn có thể hoàn toàn yên tâm ở trong chuyện gửi thư đi và nhận thư về mà không cần phải lắng lo mail sẽ bị dính đến những loại virus làm cho thông tin của bạn bị lộ ra ngoài.
+      Hệ thống mail server kiểm định tất các mail nghi ngờ và đẩy nó ra khỏi mail server của bạn và sau đó ngay lập tức có một thông báo gửi đến cho bạn về những nguy cơ tiềm tàng từ những email đáng ngờ đó. Cùng với các công nghệ bảo mật hệ thống mail server được bảo mật tốt  nhất, được update hằng ngày hằng giờ, sẽ giúp cho doanh nghiệp của bạn bảo mật toàn bộ thông tin trong giao dịch cũng như quản lý doanh nghiệp.
+2.3 Mã hóa dữ liệu SSL, TLS
+2.3.1 Mã hóa dữ liệu SSL
+      SSL là viết tắt của từ Secure Sockets Layer. SSL là tiêu chuẩn của công nghệ bảo mật, truyền thông mã hoá giữa máy chủ Web server và trình duyệt. Tiêu chuẩn này hoạt động và đảm bảo rằng các dữ liệu truyền tải giữa máy chủ và trình duyệt của người dùng đều riêng tư và toàn vẹn. SSL hiện tại cũng là tiêu chuẩn bảo mật cho hàng triệu website trên toàn thế giới, nó bảo vệ dữ liệu truyền đi trên môi trường internet được an toàn.
+      SSL đảm bảo rằng tất cả các dữ liệu được truyền giữa các máy chủ web và các trình duyệt được mang tính riêng tư, tách rời.
+      Chắc rằng bạn cũng đã nghe nhắc đến cụm từ chứng chỉ SSL (SSL Certificate) trên các website, vậy chứng chỉ SSL là gì?
+      Trước tiên, chúng ta nên biết rằng Giao thức bảo mật – SSL là viết tắt của từ Secure Sockets Layer. Đây là một tiêu chuẩn an ninh công nghệ toàn cầu tạo ra một liên kết được mã hóa giữa máy chủ web và trình duyệt. Liên kết này đảm bảo tất cả các dữ liệu trao đổi giữa máy chủ web và trình duyệt luôn được bảo mật và an toàn.
+SSL đảm bảo rằng tất cả các dữ liệu được truyền giữa các máy chủ web và các trình duyệt được mang tính riêng tư, tách rời. SSL là một chuẩn công nghiệp được sử dụng bởi hàng triệu trang web trong việc bảo vệ các giao dịch trực tuyến với khách hàng của họ.
+      Chứng thư số SSL cài trên website của doanh nghiệp cho phép khách hàng khi truy cập có thể xác minh được tính xác thực, tin cậy của website, đảm bảo mọi dữ liệu, thông tin trao đổi giữa website và khách hàng được mã hóa, tránh nguy cơ bị can thiệp.
+
+Hình 3.1 Giao thức bảo mật SSL
+
+
+     Tại sao nên sử dụng SSL?
+      Khi chúng ta đăng ký tên miền để sử dụng các dịch vụ website, email v.v… luôn có những lỗ hổng bảo mật cho hacker tấn công, SSL bảo vệ website và khách hàng của bạn.
+      An toàn dữ liệu: dữ liệu không bị thay đổi bởi hacker.
+      Bảo mật dữ liệu: dữ liệu được mã hóa và chỉ người nhận đích thực mới có thể giải mã.
+      Chống chối bỏ: đối tượng thực hiện gửi dữ liệu không thể phủ nhận dữ liệu của mình.
+      Tiêu chuẩn xác thực – SSL chỉ được cung cấp bởi các đơn vị cấp phát chứng thư (CA) có uy tín trên toàn thế giới sau khi đã thực hiện xác minh thông tin về chủ thể đăng ký rất kỹ càng mang lại mức độ tin cậy cao cho người dùng Internet và tạo nên giá trị cho các website, doanh nghiệp cung cấp dịch vụ.
+      Lợi ích khi sử dụng SSL 
+      Xác thực website, giao dịch.
+      Nâng cao hình ảnh, thương hiệu và uy tín doanh nghiệp.
+      Bảo mật các giao dịch giữa khách hàng và doanh nghiệp, các dịch vụ truy nhập hệ thống.
+      Bảo mật webmail và các ứng dụng như Outlook Web Access, Exchange, và Office Communication Server.
+      Bảo mật các ứng dụng ảo hó như Citrix Delivery Platform hoặc các ứng dụng điện toán đám mây.
+      Bảo mật dịch vụ FTP.
+      Bảo mật truy cập control panel.
+      Bảo mật các dịch vụ truyền dữ liệu trong mạng nội bộ, file sharing, extranet.
+      Bảo mật VPN Access Servers, Citrix Access Gateway …
+      Website không được xác thực và bảo mật sẽ luôn ẩn chứa nguy cơ bị xâm nhập dữ liệu, dẫn đến hậu quả khách hàng không tin tưởng sử dụng dịch vụ.
+
+      Mã hóa bất đối xứng trong SSL
+      Mã hóa bất đối xứng (hay mã hóa dùng public_key) phương thức này sẽ dùng 1 bộ khóa riêng để giải mã và mã hóa dữ liệu. Bất cứ ai cũng có thể dùng bộ key mã hóa (public_key) này để mã hóa 1 thông điệp. Tuy nhiên, key giải mã (Private key) là bí mật chỉ khi có bộ Private key và Public key tương ứng thì mới có thể giải mã thông điệp hay dữ liệu nào đó được mã hóa bằng public key. Hiện nay các thuật toán mã hóa bất đối xứng cơ bản thường được dùng là RSA. Các key bất đối xứng thông thường độ dài là 1024 hoặc 2048 bits. Tuy nhiên, các key có dài 1024 bits được cho là không còn an toàn nữa và ít được sử dụng. Mã khóa độ dài 2048 Bits sẽ có đủ các ký tự số để mã hóa các dữ liệu, mặc dù các key có  độ dài lớn hơn 2048 bits có thể được tạo ra nhưng do gánh nặng cho máy chủ khi phải xử lý nhiều các thuật toán cho nên các bộ mã dài hơn 2048 bits ít khi được sử dụng. Hiện tại bộ khóa độ dài 2048 bits đã khá là an toàn vì tính theo đơn vị thời gian thì phải mất 14 tỷ năm để ta có thể bẻ khóa được key 2048 bits.
+      Mã hóa đối xứng trong SSL
+      Mã hóa đối xứng (hay còn gọi là mã hóa pre-shared key) Chỉ sử dụng 1 key cho cả 2 công việc là giải mã và mã hóa. Đối với loại này cả người gửi và người nhận đều phải có chung 1 để giao tiếp. Kích thước của key mã hóa đối xứng thường có dài là 128 bits hoặc 256 bits. Kích thước của key càng lớn sẽ càng khó để bẻ khóa. Ví dụ: một key 128 bits sẽ có tới 340.282.366.920.938.463.463.374.607.431.768.211.456 mã để giải mã và người bẻ khóa phải tra từng mã một để bẻ khóa, chính vì thể việc bẻ khóa sẽ tốn rất nhiều thời gian.Tùy vào khả năng mã hóa của máy chủ và máy khách mà sẽ sử dụng 128 bits hay 256 bits. Chứng chỉ SSL sẽ không ra yêu cầu bắt buộc phải dùng loại nào.
+      Phương thức mã hóa nào là tối ưu ?
+      Ta có thể thấy rằng nhờ vào độ lớn của mã hóa bất đối xứng sẽ lớn hơn mã hóa đối xứng rất nhiều, cho nên việc bẻ khóa để ăn cắp dữ liệu sẽ rất khó khăn. Tuy nhiên điều này không có nghĩa là mã hóa bất đối xứng sẽ tối ưu hơn, vì nếu như chúng ta so sánh về hiệu năng ví dụ như là gánh nặng tính toán và dễ dàng phân phối. thì bộ mã hóa đối xứng sẽ hơn hẳn vì có độ lớn nhỏ hơn rất nhiều lần.
+      Tuy nhiên, mã hóa đối xứng sẽ gặp bất lợi, nhất là khi bạn sử dụng chúng trong việc sử dụng chúng để đảm bảo an toàn khi truyền dữ liệ, bởi vì cả người nhận và người gửi phải có chung 1 key. Ta không thể đảm bảo rằng người gửi và người gửi luôn luôn có được pre-shared key chính xác, và khi ta để chúng ở 1 nơi lưu trữ nào đó thì ta sẽ phải lo lắng về việc bị đánh cắp dự liệu bất cứ lúc nào.
+      Đối với mã hóa bất đối xứng sẽ không phải gặp hiện tượng này. Miễn là bạn giữ bí mật bộ private-key của bạn thì không ai có thể giải mã thông điệp của bạn. Bạn có thể chi sẽ phân phối bộ public-key tương ứng với private-key của bạn rộng rãi mà không cần phải lo lắng người nhận là ai. Bất cứ ai có được public-key đều có thể mã hóa dữ liệu nhưng chỉ có private-key mới có thể giải mã dữ liệu.
+2.3.2 Mã hóa dữ liệu TLS
+      Tiêu chuẩn TLS - transport layer security hay còn gọi là giao thức bảo mật tầng giao vận. Giao thức này được phát triển dựa trên tiêu chuẩn SSL v3.0 (Secure Socket Layer). Giao thức TLS phiên bản v1.0 (TLS v1.0) do tổ chức Internet Engineering Task Force (IETF) công bố tại RFC 2246 tháng 01/1999. Tuy nói rằng giao thức TLS v1.0 được phát triển dựa trên giao thức SSL v3.0 nhưng chúng cũng có những điểm khác biệt mà trong đó điểm khác biệt lớn nhất chính là sự không tương thích giữa chúng.
+⮚ Cấu trúc của giao thức SSL
+
+      Theo hình mình hoạ trên thì cấu trúc và giao thức SSL được đặt giữa tầng vận chuyển (Transport Layer) và tầng ứng dụng (Application Layer)
+      Giao thức SSL cung cấp giao thức bảo mật truyền thông có 3 đặc điểm nổi bật
+● Các bên giao tiếp (nghĩa là client và server) có thể xác thực nhau bằng cách sử dụng mật mã khóa chung
+● Sự bí mật của lưu lượng dữ liệu được bảo vệ vì nối kết được mã hóa trong suốt sau khi một sự thiết lập quan hệ ban đầu và sự thương lượng khóa session đã xảy ra.
+● Tính xác thực và tính toàn vẹn của lưu lượng dữ liệu cũng được bảo vệ vì các thông báo được xác thực và được kiểm tra tính toàn vẹn một cách trong suốt bằng cách sử dụng MAC.
+
+⮚ Chức năng và hoạt động của giao thức TLS
+● Mục tiêu chính của giao thức TLS là cung cấp sự riêng tư và toàn vẹn dữ liệu giữa hai ứng dụng trong môi trường mạng
+● Cũng như giao thức SSL thì giao thức TLS cũng theo mô hình client-server
+● Trong mô hình TCP/IP thì giao thức TLS gồm có hai lớp là Record Layer và Handshake Layer
+● Record layer là lớp thấp nhất bao gồm TLS record protocol (trên tầng giao vận như giao thức điều khiển truyền tải TCP, giao thức truyền vận không tin cậy UDP)
+● Đặc tính kết nối riêng tư: mã hoá đối xứng được sử dụng để mã hoá dữ liệu (mã hoá AES...) Các khoá để mã hoá đối xứng được sinh ra cho mỗi lần kết nối và được thoả thuận bí mật của giao thức khác (ví dụ TLS). Chính vì vậy giao thức TLS cũng có thể được sử dụng mà không cần mã hoá.
+● Đặc tính kết nối đáng tin cậy: Một thông điệp vận chuyển thông báo sẽ bao gồm kiểm tra tính toàn vẹn (sử dụng hàm Băm ví dụ SHA-1)
+● Ngoài ra giao thức TLS còn được sử dụng để phân mảnh, nén, đóng gói, mã hoá dữ liệu, cho phép máy chủ xác nhận nhau và thoả thuận thuật toán mã hoá
+
+⮚ Ứng dụng của giao thức TLS
+● Đóng gói các giao thức ví dụ như HTTP, FTP, SMTP, NNTP và XMPP
+● Cho phép trao đổi riêng tư trên mạng
+● Cho phép các ứng dụng client-server giao tiếp với nhau an toàn
+2.4 Mã hóa Email trên Server
+2.4.1 Giao thức POP3
+      POP3 (Post Office Protocol version 3) là một giao thức tầng ứng dụng, dùng để lấy thư điện tử từ server mail, thông qua kết nối TCP/IP. Năm 1984, POP được tạo ra như một phương tiện tải email từ một server đầu xa.
+Mặc định port POP3 là:
+      Port 110 – port không mã hóa
+      Port 995 – SSL/TLS port, cũng có thể được gọi là POP3S
+      Cách thức hoạt động của POP	
+Bước 1: Kết nối đến server.
+Bước 2: Nhận toàn bộ mail.
+Bước 3: Lưu cục bộ như mail mới.
+Bước 4: Xóa mail trong server.
+Bước 5: Ngắt kết nối.
+Dù “xóa mail khỏi server” là mặc định của POP nhưng hầu hết chương trình, khách chạy POP cũng cung cấp một tùy chọn cho phép để lại một bản sao mail tải về trên server.
+
+Hình 3.2 Cách thức hoạt động của POP
+      Cách hoạt động của POP mang đến những ưu điểm gì?
+     Chỉ một máy khách yêu cầu truy cập mail trên server và việc lưu trữ mail cục bộ là tốt nhất.
+     Mail luôn sẵn sàng có thể truy cập ngay cả khi không có kết nối Internet vì được lưu cục bộ. 
+     Kết nối Internet chỉ dùng để gửi và nhận mail.
+     Tiết kiệm không gian lưu trữ trên server.
+     Được lựa chọn để lại bản sao mail trên server. Thư đã gửi được lưu trữ cục bộ trên PC hoặc máy Mac, chứ không phải trên máy chủ email.
+Hợp nhất nhiều tài khoản email và nhiều server vào một hộp thư đến.
+2.4.2 Giao thức SMTP
+      SMTP (Simple Mail Transfer Protocol) là giao thức chuẩn TCP/IP được dùng để truyền tải thư điện tử (e-mail) trên mạng internet.
+      Nó thiết lập kênh kết nối giữa mail client và mail server, và thiết lập kênh liên lạc giữa mail server gửi và mail server nhận. Email sẽ được đẩy từ mail client lên mail server và từ mail server nó sẽ được server này gửi đi đến mail server nhận. Nhìn hình dưới bạn sẽ thấy cách hoạt động của việc gửi mail:
+
+Hình 3.3 Cách hoạt động của giao thức SMTP và POP3/IMAP
+Các port mặc định của SMTP:
+● Port 25 – port không mã hóa
+● Port 465/587 – SSL/TLS port, cũng có thể được gọi là SMTPS
+● 
+   Xác thực Email
+      Trong hầu hết các ứng dụng web và di động, việc xác thực tính năng Email được coi là một trong những phần quan trọng nhất của thử nghiệm, để đảm bảo chất lượng trong thành phần Email cũng như với các thành phần khác của hệ thống.
+Email được kích hoạt trong các kịch bản khác nhau được coi là được xác thực bằng cách kiểm tra tất cả các thành phần bao gồm mẫu Email, Liên kết / nút trong các trường Email, Từ, Tới, Cc, Bcc, Tệp đính kèm, Nội dung theo thông báo qua Email, v.v.
+
+      Tại sao chúng ta cần xác thực email?
+      Mỗi thành phần trong hệ thống (các ứng dụng Web / Di động) có thể có các mục đích khác nhau để gửi Email. Tích hợp giữa các thành phần (s) và Email đóng một vai trò quan trọng trong việc tiếp cận người dùng cuối với các thông báo thích hợp. Bất kỳ sự sơ suất nào khi chúng tôi xác thực tính năng này sẽ dẫn đến hiểu lầm, tên xấu trên khách hàng, hack, v.v ...Có rất nhiều kịch bản mà email đã trở thành một phần không thể thiếu trong cuộc sống của chúng ta vì chúng có nghĩa là giữ cho người dùng luôn cập nhật thông tin chính xác.
+2.5 Hệ thống lưu trữ truyền thống DAS (Direct Attached Storage)
+      Cùng với sự phát triển công nghệ thông tin và sự bùng nổ về dữ liệu, một nhu cầu xuất hiện là việc bảo quản, lưu trữ các số liệu một cách an toàn và hiệu quả. Chính vì vậy các giải pháp lưu trữ dữ liệu hiện đại đã ra đời nhằm đáp ứng được nhu cầu của người dùng.
+      Do dung lượng dữ liệu gia tăng không ngừng, yêu cầu ngày càng cao về hiệu năng truy xuất, tính ổn định và sự sẵn sàng của dữ liệu; việc lưu trữ đã và đang trở nên rất quan trọng. Lưu trữ dữ liệu không còn đơn giản là cung cấp các thiết bị lưu trữ dung lượng lớn mà còn bao gồm cả khả năng quản lý, chia sẻ cũng như sao lưu và phục hồi dữ liệu trong mọi trường hợp.
+      Một số loại hình lưu trữ dữ liệu số cận tuyến cơ bản như sau:
+      DAS (Direct Attached Storage): lưu trữ dữ liệu qua các thiết bị gắn trực tiếp.
+      NAS (Network Attached Storage): lưu trữ dữ liệu vào thiết bị lưu trữ thông qua mạng IP.
+      SAN (Storage Area Network): lưu trữ dữ liệu qua mạng quang lưu trữ chuyên dụng riêng.
+      Mỗi loại hình lưu trữ dữ liệu có những ưu nhược điểm riêng và được dùng cho những mục đích nhất định. Mô hình lưu trữ dữ liệu tổng quát như sau:
+
+Hình 4.1 Tổng quan công nghệ lưu trữ DAS, SAN và NAS
+2.6.1 Khái niệm công nghệ lưu trữ DAS
+      DAS là hình thức lưu trữ mà các thiết bị lưu trữ nằm trong server hoặc kết nối trực tiếp vào server thông qua các khay ngoại vi (external array) hay cáp USB hay một phương pháp thay thế khác.
+      DAS có khả năng tương thích với nhiều loại ổ cứng như SATA, SAS hay SSD, và điều này ảnh hưởng tới tốc độ cũng như hiệu suất lưu trữ.
+
+Hình 3.4 Công nghệ lưu trữ DAS
+2.6.2 Ưu điểm của công nghệ lưu trữ DAS
+      Hệ thống lưu trữ DAS là bộ nhớ máy tính được kết nối với một máy tính và không thể truy cập được vào các máy tính khác. Đối với người dùng máy tính cá nhân, ổ đĩa cứng hoặc ổ đĩa thể rắn (SSD) là dạng lưu trữ đính kèm trực tiếp thông thường. Trong doanh nghiệp, các ổ đĩa riêng lẻ trong một máy chủ được gọi là lưu trữ trực tiếp , cũng như các nhóm ổ đĩa nằm ngoài máy chủ nhưng được gắn trực tiếp thông qua Giao diện hệ thống máy tính nhỏ (SCSI), Serial Advanced Technology Attachment (SATA), Serial -Kết nối SCSI (SAS) , Fibre Channel (FC) hoặc iSCSI.
+      DAS có thể được triển khai dưới dạng đĩa – ổ đĩa cứng (HDD) hoặc SSD – bên trong khung máy chủ, chẳng hạn như vỏ bảo vệ bên ngoài hoặc thùng nối trực tiếp được kết nối với thẻ được cắm vào bus nội bộ của máy chủ. Nó cũng có thể là một ổ đĩa cá nhân trong một máy tính để bàn hoặc máy tính xách tay.
+      Thiết bị lưu trữ trực tiếp không được nối mạng. Không có kết nối thông qua thiết bị chuyển mạch Ethernet hoặc FC kết nối các thiết bị lưu trữ mạng (NAS ) và mạng lưu trữ (SANs).
+      Các loại lưu trữ khác, chẳng hạn như thiết bị quang học và băng, về mặt kỹ thuật là DAS vì chúng được gắn trực tiếp vào một hệ thống. Tuy nhiên, khi nó đề cập đến DAS, nó thường liên quan đến lưu trữ chính hoặc bên ngoài hoặc thứ cấp ở dạng HDD và SSD.
+⮚ Ưu điểm: Do các thiết bị lưu trữ được kết nối trực tiếp vào server và giữa chúng không có bất kì thiết bị mạng nào như hub, switch, router…nên hệ thống DAS có những ưu điểm sau:
+● Dễ triển khai và cấu hình
+● Đỡ tốn kém chi phí đầu tư vào thiết bị mạng
+● Có thể cung cấp cho người dùng hiệu năng tốt hơn lưu trữ được nối mạng vì máy chủ không phải đi qua mạng để đọc và ghi dữ liệu
+2.6.3 Nhược điểm của công nghệ lưu trữ DAS
+      Nhược điểm của DAS là khả năng mở rộng hạn chế. Thực tế, DAS làm việc rất tốt với một server nhưng khi dữ liệu tăng, số lượng máy chủ cũng tăng sẽ tạo nên những vùng dữ liệu phân tán và gián đoạn. Điều đó sẽ làm tăng chi phí lưu trữ tổng thể cho doanh nghiệp và sẽ càng khó khăn hơn khi muốn sao lưu hay bảo vệ một hệ thống lưu trữ dữ liệu đang nằm rải rác và phân tán như vậy.
+      Do thiết bị lưu trữ được kết nối trực tiếp vào server nên khi xảy ra sự cố về nguồn điện thì phần lưu trữ trên server đó sẽ không sử dụng được.
+      Một khuyết điểm nữa là DAS chia sẻ chung khả năng xử lý và bộ nhớ của server trong quá trình read / write, nên việc truy cập vào ổ đĩa sẽ bị chậm khi hệ điều hành bị quá tải.
+2.6.4 Vấn đề an ninh của DAS
+      Như với tất cả các hệ thống lưu trữ lưu trữ các ứng dụng và dữ liệu quan trọng của một tổ chức, bảo mật là mối quan tâm hàng đầu. Để bảo vệ dữ liệu nằm trong bộ nhớ được đính kèm trực tiếp, chúng ta nên:
+      Thực hiện đánh giá bảo mật để khám phá điểm yếu. Nếu bạn không tìm thấy gì, hãy nhìn kỹ hơn. Bạn có thể thấy môi trường DAS của bạn có lỗ hổng bảo mật, chẳng hạn như quyền người dùng lỏng lẻo, thiếu bản vá lỗi hoặc hệ thống định cấu hình sai.
+      Chạy kiểm tra quyền của người dùng và quét DAS để biết thông tin không có cấu trúc có thể truy cập được đối với mọi người trên mạng. Khi đã xong, hãy khóa các quyền và suy nghĩ về phân đoạn mạng của bạn để bảo vệ tốt hơn các Hệ thống lưu trữ DAS quan trọng.
+      Tạo bản vá ưu tiên. Không theo kịp với hệ điều hành và các bản vá lỗi phần mềm ứng dụng có thể khiến DAS của bạn dễ bị tổn thương. Kẻ xâm nhập có quyền truy cập không mong muốn vào máy chủ được kết nối với DAS có thể truy cập tất cả dữ liệu trên hệ thống và thậm chí bạn có thể không biết hệ thống đã bị vi phạm.
+      Tiến hành kinh doanh liên tục và kiểm tra khả năng chịu lỗi bằng cách kiểm tra khả năng phục hồi của Hệ thống lưu trữ DAS. Tập trung vào các kịch bản lỗi hệ thống thực tế, chẳng hạn như phần cứng lưu trữ chết hoặc trung tâm dữ liệu bị hỏng hoặc bị phá hủy hoàn toàn.
+2.7 Công nghệ lưu trữ dữ liệu tiên tiến NAS (Network-attached storage)
+2.7.1 Khái niệm công nghệ lưu trữ NAS
+      NAS (Network Attached Storage) là phương pháp lưu trữ dữ liệu sử dụng các thiết bị lưu trữ đặc biệt gắn trực tiếp vào mạng LAN như một thiết bị mạng bình thường (tương tự máy tính, switch hay router). Các thiết bị NAS cũng được gán các địa chỉ IP cố định và được người dùng truy nhập thông qua sự điều khiển của máy chủ. Trong một số trường hợp, NAS có thể được truy cập trực tiếp không cần có sự quản lý của máy chủ.
+      Trong môi trường đa hệ điều hành với nhiều máy chủ khác nhau, việc lưu trữ dữ liệu, sao lưu và phục hồi dữ liệu, quản lý hay áp dụng các chính sách bảo mật đều được thực hiện tập trung.
+
+Hình 3.5 Công nghệ lưu trữ NAS
+2.7.2 Ưu điểm của công nghệ lưu trữ NAS
+      NAS là sự lựa chọn lý tưởng đối với các doanh nghiệp đang tìm kiếm một giải pháp đơn giản và chi phí hợp lý, đáp ứng việc truy cập dữ liệu nhanh trên nhiều client.
+      NAS đáp ứng nhiều nhu cầu hơn so với DAS ở các điểm sau:
+● Khả năng lưu trữ và khả năng mở rộng của NAS thường lớn hơn so với DAS
+● NAS cũng tăng cường khả năng chống lại sự cố cho mạng. Trong môi trường DAS, khi một máy chủ chứa dữ liệu không hoạt động thì toàn bộ dữ liệu đó không thể sử dụng được. Trong môi trường NAS, dữ liệu vẫn hoàn toàn có thể được truy nhập bởi người dùng. Các biện pháp chống lỗi và dự phòng tiên tiến được áp dụng để đảm bảo NAS luôn sẵn sàng cung cấp dữ liệu cho người sử dụng.
+● NAS cung cấp khả năng tập trung dữ liệu với chi phí hợp lý
+      Ngoài ra, NAS còn có các ưu điểm khác như dễ triển khai và vận hành khi có hoặc không có nhân viên IT tại chỗ.
+2.7.3 Nhược điểm của công nghệ lưu trữ NAS
+● Với việc sử dụng chung hạ tầng mạng với các ứng dụng khác, việc lưu trữ dữ liệu có thể ảnh hưởng đến hiệu năng của toàn hệ thống (làm chậm tốc độ của LAN), điều này đặc biệt đáng quan tâm khi cần lưu trữ thường xuyên một lượng lớn dữ liệu.
+● Trong môi trường có các hệ cơ sở dữ liệu thì NAS không phải là giải pháp tốt vì các hệ quản trị cơ sở dữ liệu thường lưu dữ liệu dưới dạng block chứ không phải dưới dạng file nên sử dụng NAS sẽ không cho hiệu năng tốt.
+2.8 Công nghệ lưu trữ SAN (Storage Area Network)
+2.8.1 Khái niệm công nghệ lưu trữ SAN
+      SAN (Storage Area Network) là một mạng riêng tốc độ cao dùng cho việc truyền dữ liệu giữa các server tham gia vào hệ thống lưu trữ cũng như giữa các thiết bị lưu trữ với nhau. SAN cho phép thực hiện quản lý tập trung và cung cấp khả năng chia sẻ dữ liệu và tài nguyên lưu trữ. Hầu hết mạng SAN hiện nay dựa trên công nghệ kênh cáp quang, cung cấp cho người sử dụng khả năng mở rộng, hiệu năng và tính sẵn sàng cao.
+      SAN cung cấp khả năng truy cập ở mức block. Điều này có nghĩa là thay vì truy cập nội dung trên các ổ đĩa dưới dạng các file thông qua các giao thức truy cập file, SAN viết các block dữ liệu trực tiếp vào các ổ đĩa bằng việc sử dụng các giao thức như Fibre Channel over Ethernet hay Internet Small Computer System Interface (iSCSI).
+      Hệ thống SAN được chia làm hai mức: mức vật lý và logic:
+      Mức vật lý: mô tả sự liên kết các thành phần của mạng tạo ra một hệ thống lưu trữ đồng nhất và có thể sử dụng đồng thời cho nhiều ứng dụng và người dùng.
+      Mức logic: bao gồm các ứng dụng, các công cụ quản lý và dịch vụ được xây dựng trên nền tảng của các thiết bị lớp vật lý, cung cấp khả năng quản lý hệ thống SAN.
+
+
+Hình 3.6 Công nghệ lưu trữ dữ liệu SAN
+2.8.2 Ưu điểm của công nghệ lưu trữ SAN
+● SAN Có khả năng sao lưu dữ liệu với dung lượng lớn và thường xuyên mà không làm ảnh hưởng đến lưu lượng thông tin trên mạng.
+● Đặc biệt thích hợp với các ứng dụng cần tốc độ và độ trễ nhỏ ví dụ như các ứng dụng xử lý giao dịch trong ngành ngân hàng, tài chính…
+● Dữ liệu luôn ở mức độ sẵn sàng cao.
+● Dữ liệu được lưu trữ thống nhất, tập trung và có khả năng quản lý cao. Có khả năng khôi phục dữ liệu nếu có xảy ra sự cố.
+● Hỗ trợ nhiều giao thức, chuẩn lưu trữ khác nhau như: iSCSI, FCIP, DWDM…
+● Có khả năng mở rộng tốt trên cả phương diện số lượng thiết bị, dung lượng hệ thống cũng như khoảng cách vật lý.
+● Mức độ an toàn cao do thực hiện quản lý tập trung cũng như sử dụng các công cụ hỗ trợ quản lý SAN.
+      Do có những ưu điểm trên nên SAN thường được sử dụng ở những trung tâm dữ liệu lớn vì mang một số đặc điểm nổi bật như: Giảm thiểu rủi ro cho dữ liệu, khả năng chia sẻ tài nguyên rất cao, khả năng phát triển dễ dàng, thông lượng lớn, hỗ trợ nhiều loại thiết bị, hỗ trợ và quản lý việc truyền dữ liệu lớn và tính an ninh dữ liệu cao.
+      Hơn nữa, SAN tăng cường hiệu quả hoạt động của hệ thống bằng việc hỗ trợ đồng thời nhiều hệ điều hành, máy chủ và các ứng dụng, có khả năng đáp ứng nhanh chóng với những thay đổi về yêu cầu hoạt động của một tổ chức cũng như yêu cầu kỹ thuật của hệ thống mạng.
+2.8.3 Nhược điểm của công nghệ lưu trữ SAN
+      Do việc cấu hình khá phức tạp nên khi triển khai SAN, ta cần có các công cụ quản lý cũng như nhân sự có kỹ năng chuyên môn cao. Ngoài ra, chi phí để triển khai SAN cũng cao hơn DAS và NAS.
+2.9 Mã hóa dữ liệu tiên tiến
+2.9.1 Khái niệm mã hóa dữ liệu tiên tiến
+      Mã hóa dữ liệu tiên tiến là chuyển dữ liệu từ dạng này sang dạng khác hoặc sang dạng code mà chỉ có người có quyền truy cập vào khóa giải mã hoặc có mật khẩu mới có thể đọc được nó. Bằng cách sử dụng các thuật toán lồng vào nhau, thường dựa trên 1 khóa (key) để mã hóa dữ liệu. Dữ liệu được mã hóa thường gọi là ciphertext, dữ liệu thông thường, không được mã hóa thì gọi là plaintext.  
+2.9.2 Tầm quan trọng của mã hóa dữ liệu tiên tiến
+      Mã hóa dữ liệu đóng một vai trò quan trọng trong việc đảm bảo nhiều loại tài sản công nghệ thông tin (CNTT) khác nhau. Nó cung cấp như sau:
+      Bảo mật : mã hóa nội dung của tin nhắn.
+      Xác thực : xác minh nguồn gốc của một tin nhắn.
+      Tính toàn vẹn : chứng minh nội dung của một tin nhắn đã không được thay đổi kể từ khi nó được gửi.
+Không phản hồi :  ngăn người gửi từ chối họ đã gửi tin nhắn được mã hóa.
+Mã hóa thường được sử dụng để bảo vệ dữ liệu trong quá trình và dữ liệu khi nghỉ ngơi. Mỗi khi ai đó sử dụng ATM hoặc mua một thứ gì đó trực tuyến bằng điện thoại thông minh, mã hóa được sử dụng để bảo vệ thông tin được chuyển tiếp. Các doanh nghiệp đang ngày càng dựa vào mã hóa để bảo vệ các ứng dụng và thông tin nhạy cảm khỏi thiệt hại danh tiếng khi có vi phạm dữ liệu.
+Có ba thành phần chính cho bất kỳ hệ thống mã hóa nào: dữ liệu, công cụ mã hóa và quản lý khóa. Trong mã hóa máy tính xách tay, cả ba thành phần đang chạy hoặc được lưu trữ ở cùng một nơi: trên máy tính xách tay.
+Tuy nhiên, trong các kiến ​​trúc ứng dụng, ba thành phần thường chạy hoặc được lưu trữ ở những nơi riêng biệt để giảm khả năng thỏa hiệp của bất kỳ thành phần nào có thể dẫn đến thỏa hiệp của toàn bộ hệ thống.
+2.9.3 Lợi ích của mã hóa dữ liệu tiên tiến
+      Mục đích chính của mã hóa dữ liệu là để bảo vệ tính bảo mật của dữ liệu số được lưu trữ trên các hệ thống máy tính hoặc được truyền qua internet hoặc bất kỳ mạng máy tính nào khác. Ngoài bảo mật, việc áp dụng mã hóa thường được thúc đẩy bởi nhu cầu đáp ứng các quy định tuân thủ. Một số tổ chức và cơ quan tiêu chuẩn đề nghị hoặc yêu cầu dữ liệu nhạy cảm được mã hóa để ngăn chặn bên thứ ba trái phép hoặc các tác nhân đe dọa truy cập dữ liệu. Ví dụ: Tiêu chuẩn bảo mật dữ liệu công nghiệp thẻ thanh toán ( PCI DSS ) yêu cầu người bán mã hóa dữ liệu thẻ thanh toán của khách hàng khi cả hai được lưu trữ ở phần còn lại và được truyền qua các mạng công cộng.
+2.9.4 Nhược điểm của mã hóa dữ liệu
+      Mặc dù mã hóa được thiết kế để giữ cho các thực thể trái phép không thể hiểu được dữ liệu họ đã thu được, trong một số trường hợp, mã hóa có thể giữ cho chủ sở hữu dữ liệu không thể truy cập dữ liệu.
+      Quản lý khóa là một trong những thách thức lớn nhất của việc xây dựng chiến lược mã hóa doanh nghiệp vì các khóa để giải mã văn bản mật mã phải sống ở đâu đó trong môi trường và những kẻ tấn công thường có ý tưởng khá tốt về nơi cần tìm.
+      Có rất nhiều thực tiễn tốt nhất để quản lý khóa mã hóa. Chỉ có quản lý khóa đó thêm các lớp phức tạp thêm vào quá trình sao lưu và phục hồi. Nếu một thảm họa lớn sẽ xảy ra, quá trình lấy các khóa và thêm chúng vào một máy chủ sao lưu mới có thể tăng thời gian cần thiết để bắt đầu với thao tác khôi phục.
+      Có một hệ thống quản lý quan trọng tại chỗ là không đủ. Quản trị viên phải đưa ra một kế hoạch toàn diện để bảo vệ hệ thống quản lý khóa. Thông thường, điều này có nghĩa là sao lưu nó tách biệt với mọi thứ khác và lưu trữ các bản sao lưu đó theo cách giúp bạn dễ dàng lấy lại các khóa trong trường hợp xảy ra thảm họa quy mô lớn.
+      Đối với bất kỳ mật mã nào, phương thức tấn công cơ bản nhất là vũ lực - thử từng phím cho đến khi tìm thấy đúng. Độ dài của khóa xác định số lượng khóa có thể, do đó tính khả thi của loại tấn công này. Độ mạnh mã hóa được gắn trực tiếp với kích thước khóa, nhưng khi kích thước khóa tăng, thì các tài nguyên cần thiết để thực hiện tính toán cũng vậy. 
+Các phương pháp phá mã hóa khác bao gồm các cuộc tấn công kênh bên , không tấn công các mật mã thực tế mà là các tác dụng phụ vật lý khi thực hiện. Một lỗi trong thiết kế hệ thống hoặc thực thi có thể cho phép các cuộc tấn công như vậy thành công.
+Những kẻ tấn công cũng có thể cố gắng phá vỡ một mật mã được nhắm mục tiêu thông qua phân tích mật mã , quá trình cố gắng tìm ra một điểm yếu trong mật mã có thể bị khai thác với độ phức tạp ít hơn một cuộc tấn công vũ phu. Thử thách tấn công thành công một mật mã sẽ dễ dàng hơn nếu bản thân mật mã đã bị lỗi. Ví dụ, đã có những nghi ngờ rằng sự can thiệp từ Cơ quan An ninh Quốc gia ( NSA ) đã làm suy yếu thuật toán DES và sau những tiết lộ từ cựu nhà phân tích và nhà thầu NSA Edward Snowden, nhiều người tin rằng NSA đã cố gắng phá vỡ các tiêu chuẩn mã hóa khác và làm suy yếu các sản phẩm mã hóa khác.
+Các mối đe dọa đối với IoT, thiết bị di động
+      Vào năm 2019, các mối đe dọa an ninh mạng ngày càng bao gồm dữ liệu mã hóa trên IoT và trên các thiết bị điện toán di động . Mặc dù các thiết bị trên IoT thường không tự nhắm mục tiêu, chúng hoạt động như các ống dẫn hấp dẫn để phân phối phần mềm độc hại. Theo các chuyên gia, các cuộc tấn công vào các thiết bị IoT sử dụng sửa đổi phần mềm độc hại đã tăng gấp ba lần trong nửa đầu năm 2018 so với toàn bộ năm 2017.
+      Trong khi đó, NIST đã khuyến khích tạo ra các thuật toán mật mã phù hợp để sử dụng trong các môi trường bị hạn chế, bao gồm cả các thiết bị di động. Trong vòng đánh giá đầu tiên vào tháng 4 năm 2019, NIST đã chọn 56 ứng cử viên thuật toán mật mã nhẹ để được xem xét tiêu chuẩn hóa. Thảo luận thêm về các tiêu chuẩn mật mã cho thiết bị di động dự kiến ​​sẽ được tổ chức vào tháng 11 năm 2019.
+      Vào tháng 2 năm 2018, các nhà nghiên cứu tại MIT đã tiết lộ một con chip mới, được thiết kế để thực hiện mã hóa khóa công khai, chỉ tiêu thụ 1/400 năng lượng như việc thực thi phần mềm của cùng một giao thức. Nó cũng sử dụng khoảng 1/10 bộ nhớ và thực thi nhanh hơn 500 lần.
+      Bởi vì các giao thức mã hóa khóa công khai trong mạng máy tính được thực thi bằng phần mềm, chúng đòi hỏi không gian và năng lượng quý giá. Đây là một vấn đề trong IoT, nơi có nhiều cảm biến khác nhau được nhúng trong các sản phẩm như thiết bị và phương tiện kết nối với máy chủ trực tuyến. Các trạng thái rắn mạch đáng kể làm giảm bớt năng lượng và bộ nhớ tiêu thụ.
+
+
+CHƯƠNG 3: LƯU TRỮ VÀ BẢO MẬT EMAIL SERVER
+3.1 Bảo mật dữ liệu Email Server
+3.1.1 Chính sách bảo mật của Email Server
+      Để tránh các cuộc tấn công của các hacker chuyên nghiệp, bạn nên giới hạn các kết nối tới SMTP server. Ngoài ra, bạn cũng nên “thanh lọc” lại các cài đặt không cần thiết hoặc không sử dụng đến. Như vậy, bạn sẽ hạn chế tối đa các kết nối ngầm nguy hại.
+
+    	Giới hạn kết nối email server
+
+         Bằng cách quan sát và đánh giá kết nối Email Server thông qua các thông số như: tổng các kết nối tại một thời điểm, tổng kết nối và tỉ lệ kết nối cao nhất thì bạn sẽ có cơ sở để điều chỉnh và giới hạn kết nối, giúp nâng cao tính năng bảo mật của hệ thống.
+● Mã hóa POP3/ IMAP bằng SSL/TLS để sử dụng kết nối mail server an toàn
+Bạn biết không? Các kết nối POP3 hoặc IMAP bạn đang sử dụng rất dễ bị tin tặc tấn công. Chính vì vậy, bạn nên đổi sang SSL/TLS để tăng cường hàng rào bảo mật.
+● Thiết lập xác thực SMTP để loại bỏ những lượt truy cập email server trái phép
+      Theo các chuyên gia về email server, việc kiểm soát và xác thực các lượt truy cập sẽ giúp bạn bảo vệ emai serverkhông bị xâm nhập trái phép. Bạn hãy thiết lập tài khoản và mật mã xác thực SMTP để lưu hành nội bộ.
+      Chỉ những tài khoản email dã xác thực mới có thể gửi nhận thư từ. Một khi phát hiện có sự xâm nhập trái phép từ bên ngoài, SMTP sẽ yêu cầu nhập mã xác thực. Như vậy, bạn sẽ nhanh chóng phát hiện ra kẻ gian có ý đồ xấu với hệ thống email server của bạn và kịp thời ngăn chặn chúng.
+● Sử dụng các bộ lọc để loại bỏ spam
+Để từ chối các email từ các tên miền và IP xấu, chúng ta nên kiểm tra danh sách đen bằng DNSBLs và SURBL. Sau khi nắm được danh sách đen, chúng ta chỉ cần chặn các IP này là ta đã tự bảo vệ hệ thống email server của mình khỏi các đường link, các phần mềm chứa mã độc.
+● Dùng bản ghi MX dự phòng để đảm bảo email server hoạt động xuyên suốt
+Đây là một chiêu để đảm bảo hệ thống email server của bạn hoạt động liên tục và xuyên suốt. Bởi ai biết đâu được, khi bản ghi MX chính thức bị xâm nhập hoặc gặp sự cố hỏng hóc thì bạn còn có bản dự phòng để sử dụng.
+3.1.2 Cài đặt phần mềm Mdaemon
+      MDaemon Mail Server là 1 trong những giải pháp hệ thống Email Server toàn diện nhất hiện nay dành cho các công ty, doanh nghiệp với quy mô khác nhau. MDaemon Mail Server hiện có 3 phiên bản: Standard, Pro và Free. Giao diện Mdaemon:
+
+      Màn hình hiển thị chính của MDaemon (Graphical User Interface - GUI) đưa ra thông tin quan trọng về các nguồn tài nguyên, các giao dịch, số liệu thống kê, luồng dữ liệu đang trong trạng thái hoạt động (active) và các mail đang trong quá trình chờ đợi (queued) để được xử lý. Bên cạnh đó, còn có sự lựa chọn cho người dung chuyển đổi trạng thái activating/deactivating đối với các hệ thống máy chủ khác nhau có sử dụng MDaemon. Cửa sổ bên phải hiển thị đầy đủ thông tin về kết nối dữ liệu đầu vào và ra (incoming và outgoing) đang được thực hiện. 
+⮚ Giá trị Domain/Servers mặc định:
+      Giá trị mặc định của Domain/Servers có thể được thiết lập dễ dàng thông qua lựa chọn menu Setup >  Domain Manager, tùy theo từng domain và servers của người dùng mà có thể thiết lập thông số tùy chỉnh. Duy nhất chỉ có giá trị mặc định của Domain có thể điều chỉnh được, nhưng MDaemon có thể quản lý tất cả các con số, giá trị của các Extra Domain khác nhau (tính năng này chỉ có trong phiên bản MDaemon Pro), và lưu trữ thư điện tử đối với các hệ thống Domain Gateways. 
+
+Cửa sổ làm việc của Default Domain bao gồm các mục sau: 
+
+   - Domain: cửa sổ này hiển thị tên mặc định của domain và địa chỉ IP
+
+       Delivery: tại đây, người sử dụng sẽ khai báo giá trị dành cho MDaemon để quản lý quá trình chuyển phát, nhận mail tùy thuộc vào các yếu tố khác như ISP, gateway host, hoặc các server khác
+
+       Servers: với các sự lựa chọn để tùy chỉnh số lượng server, địa chỉ email. Ví dụ như việc thiết lập MDaemon sẽ làm việc với các giao thức SMTP server như VRFY, EXPN, APOP và CRAM-MD5… Hoặc bạn cũng có thể thiết lập số lượng tối đa dành cho email, số lượng lệnh thực hiện RCPT được cho phép trong SMTP…
+
+
+       Ports: chứa đựng giá trị hoặc số lượng các cổng (ports) mà MDaemon sẽ điều khiển và sử dụng dành cho các giao thức SMTP và POP trong quá trình gửi và nhận email. Hoặc bạn cũng có thể gán lại giá trị dành cho các cổng khác nhau mà MDaemon sẽ “lắng nghe” theo các sự kiện IMAP, còn cổng UDP dành cho việc truy vấn DNS servers. Trong hầu hết các trường hợp, giá trị mặc định của các cổng sẽ không cần phải thay đổi, tuy nhiên tùy vào từng server khác nhau mà người sử dụng sẽ có những thay đổi phù hợp.
+
+       Sessions: tại đây, người sử dụng sẽ thiết lập số lượng tối đa các luồng xử lý dữ liệu mà MDaemon sẽ dùng để gửi và nhận mail thông qua giao thức SMTP, POP, và IMAP, hoặc bạn cũng có thể thiết lập số lượng tin nhắn mà MDaemon dự định sẽ gửi và nhận email trong cùng 1 thời gian. Bên cạnh đó, bạn cũng có thể thiết lập số lượng tin nhắn thông qua giao thức outbound SMTP sẽ được đóng gói qua mỗi tiến trình.
+
+⮚ Tính năng bảo mật, hạn chế rủi ro trên Mdaemon:
+      Sử dụng trình quét virus trên Mdaemon: cung cấp một lá chắn để ngăn chặn sự cố an ninh trước khi nó bắt đầu. Bằng cách kết hợp nhiều biện pháp bảo vệ an ninh mạnh mẽ, nó ngăn chặn hầu hết tất cả các mối nguy hiểm và ngăn ngừa phá hoại bởi các mối đe dọa mới được phát hành. Nó sẽ tự động tải và cài đặt bản cập nhật cho quyền tay-off. SecurityPlus là có sẵn trong nhiều ngôn ngữ và chủ động bảo vệ chủ động bảo vệ người sử dụng email chống lại virus, thư rác, tấn công lừa đảo, spyware, và các loại khác của các email không mong muốn và có hại.
+
+      SeccurityPlus quét tin nhắn nội tuyến, bằng cách sử dụng Kaspersky AntiVirus Engine, trong mỗi phiên SMTP, có hiệu quả ngăn chặn phần mềm độc hại tại lối vào email cho mạng của bạn. Khi một tin nhắn bị hỏng với một mối đe dọa bảo mật được phát hiện, SecurityPlus từ chối chấp nhận các email và file đính kèm bất kỳ.
+      Khi một nguy cơ cao đe dọa virus được xác định bởi Kaspersky Labs, bạn có thể chọn để được thông báo và kích hoạt SecurityPlus để tự động khởi tạo một bản cập nhật cơ sở dữ liệu của các định nghĩa virus mới nhất. Bảo vệ chống virus từ Kaspersky Labs kết hợp phương pháp bảo vệ chống virus truyền thống với những công nghệ mới nhất để giữ tổ chức của bạn an toàn khỏi các mối đe dọa mới và đang nổi lên.
+      Bảo mật gần như tuyệt đối: Để giảm thiểu các cuộc tấn công của máy chủ, MDaemon kết hợp nhiều lớp kỹ thuật bảo mật như Kiểm soát chuyển tiếp, IP Shielding, SMTP Authentication và tra cứu ngược.  Các kỹ thuật xác thực email tiên tiến của Vouch By Reference (VBR), đồng thời xác nhận và ký hiệu các thư bằng DKIM, DK, Sender-ID và SPF hoàn toàn được tích hợp trong MDaemon. Kết hợp với công cụ chống thư rác của nó, Bayesian Learning, SSL / TSL, bảo vệ backscatter, và SecurityPlus để bảo vệ phần mềm độc hại của MDaemon.
+      Khả năng quản trị từ xa: Từ bất kỳ máy tính nào có trình duyệt web và kết nối Internet, quản trị viên đều có thể truy cập đầy đủ vào tất cả các tính năng của MDaemon nhờ công cụ quản trị từ xa. Do đó, bạn có thể làm tất cả mọi thứ: thêm – chỉnh sửa tài khoản, chỉnh sửa trực tiếp tập tin cấu hình, xem lại nhật ký để khắc phục sự cố gửi thư.Với khả năng SSL tích hợp sẵn của MDaemon, quản trị viên từ xa thậm chí có thể truy cập thông qua kết nối an toàn bằng HTTPS.
+3.2 Phần mềm FreeNAS
+	Giới thiệu và cài đặt FreeNAS
+	Việc lưu trữ dữ liệu mà một trong những việc quan trọng và rất cần thiết trong bất cứ hệ thống IT của bất kỳ doanh nghiệp nào. Để có thể lưu trữ được dữ liệu khối lượng lớn và thuận tiện trong truy cập dữ liệu chung, người ta sử dụng các hệ thống lưu trữ mạng là NAS (Network-attached storage) và SAN (Storage Area Network). Vậy có gì giống khác giữa NAS và SAN:
+	Giống là cả hai cùng là thiết bị lưu trữ dữ liệu qua mạng TCP/IP.
+	Khác nhau ở điểm quan trong là NAS là thiết bị lưu trữ được chia sẽ để ghi dữ liệu dưới dạng file như file server, trên đó triển khai các dịch vụ như SMB/CIFS (Server Message Block /Common Internet File System), NFS (Network File System) , AFP (Apple Filing Protocol). Với  SAN là được hiểu là một hệ thống các thiết bị lưu trữ được kết nối thông qua các bộ chuyển mạch có tốc độ cao có thể sử dụng các công nghệ như Fibre Channel over Ethernet, iSCSI.. với việc ghi, truy xuất blook dữ liệu vào thiết bị lưu trữ thay vì là dạng file.
+	Để trang bị những thiết bị này thường chi phí cũng khá lớn, để giảm bớt chi phí ta có thể sử dụng phần mềm FreeNAS, phần mền này cho phép biến các máy tính trở thành các thiết bị lưu trữ mạng chuyên nghiệp, bạn có thể tận dụng các máy tính không được dùng đến với việc lắp thêm nhiều ổ cứng cho nó (lưu ý là nguồn phải đảm bảo cho việc chạy nhiều ổ cứng).
+
+
+      Chúng ta có thể đăng ký để tải phần mềm về tại trang web của FreeNAS, phần mềm này là phần mềm nhúng trong hệ điều hành FreeBSD, vì vậy sau khi tải về, bạn có thể ghi ra CD hoặc tạo một USB boot để tiến hành cài đặt, với các phiên bản sau này thì FreeNAS hổ trợ cả UEFI và BIOS.
+      Sau khi khởi động máy tính với thiết bị khởi động xong, bạn chọn Install/Upgrade để tiến hành cái đặt bên dưới chọn OK và Enter để tiếp tục. (để di chuyển lên xuống giữa các mục bạn dùng phím mũi tên, qua lại giữa các tùy chon ở dưới ta dùng phím Tab, áp dụng cho tất cả các màn hình trong quá trình cài đặt.)
+
+      Một cảnh báo là dung lượng RAM của máy chỉ có 4GB, ít hơn khuyến cáo của phần mềm, FreeNAS yêu cầu máy phải tối thiểu phải 8GB, để tiếp tục chúng ta chọn Yes.
+
+      Kế tiếp, chúng ta sẽ chọn ổ cứng để cài đặt FreeNAS lên đó, bạn có thể di chuyển lên xuống và dùng phím space (khoảng trắng ) để chọn hoặc bỏ chọn. Sau khi chọn xong, nhấn OK để tiếp tục.
+
+      Một cảnh báo rằng tất cả các phân vùng trên ổ đĩa sẽ bị xóa và chúng ta không thể dùng ổ đĩa này cho việc chia sẻ dữ liệu. Chúng ta chọn Yes để tiếp tục.
+
+      Sau đó hệ thống sẽ yêu cầu chúng ta nhập password cho user Root, đây là user mật định và có quyền cao nhất để quản trị.
+
+      Tiếp theo chúng sẽ chọn sử dụng hệ thống BIOS hay UEFI, sau khi chọn xong bước này, phần mềm sẽ được cài đặt vào ổ cứng.
+
+      Sau khi cài đặt xong, hệ thống sẽ bật lên thông báo hoàn tất việc cài đặt, bạn chọn OK để hoàn tất và thoát ra.
+
+      Sau đó, chọn Reboot System và OK để khởi động lại máy.
+
+      Máy sau  khi khởi lại động xong, sẽ có menu chọn để setup hệ thống, bạn có thể chọn 1 rồi Enter để thiết lập IP cho máy.
+
+      Chúng ta thiết lập IP theo hướng dẫn của hệ thống.
+
+      Sau khi, setup xong IP chúng ta có thể vào giao diện web của phần mềm từ máy client (dùng user là Root, password khi cài đặt) để tiếp tục setup các mục khác.
+
+
+Hình 5.12 Giao diện phần mềm FreeNAS
+⮚ Cấu hình NAS trên phần mềm FreeNAS
+
+
+Hình 5.13 Giao diện web của NAS4Free
+      Giao diện cấu hình Web của NAS4Free làm việc mặc định trên port 80. Vì vậy nếu có trục trặc xảy ra thì bạn chỉ cần thực hiện các thao tác kiểm tra xoay quanh IP và NIC. Kiểm tra lại xem các cổng kết nối đã sáng/cắm đúng vị trí chưa, IP gõ vào đã chính xác chưa, ping thử trên 2 máy để xem đã thông nhau chưa...
+
+Hình 5.14 Bảng thông tin của NAS4Free
+      Các mục cấu hình chính của giao diện Web này bao gồm:
+      System: Chứa các cấu hình thông số hệ thống, bao gồm hostname, admin password, timezone, backup & restore, các gói plugin... Thông tin proxy (nếu mạng nhà bạn có sử dụng) cũng cần được cấu hình qua đây chứ không đặt trong mục network.
+      Network: Chứa các cấu hình kết nối mạng. Bao gồm IP, NIC, Firewall...
+      Disk: Các cấu hình về lưu trữ. Từ định dạng ổ đĩa, các cấu hình RAID đến các cấu hình cao cấp như ZFS và mã hóa dữ liệu.
+Services: Tắt, bật và cấu hình chi tiết cho các dịch vụ mà bạn muốn NAS box cung cấp cho mạng gia đình. Đáng chú ý nhất cần kể đến webserver, UPnP, BitTorrent, Dynamic DNS và FTP. Tuy có rất nhiều dịch vụ được cung cấp đi kèm, nhưng chỉ nên bật những gì bạn thực sự cần sử dụng để đảm bảo hiệu năng cho NAS box. Ngoài ra, tìm hiểu kỹ về chúng trước khi cấu hình để đạt kết quả tốt nhất.
+Access: Tạo các user và group user với quyền hạn khác nhau để tiện cho việc quản lý. Nếu bạn không có sẵn khái niệm về Active Directory và LDAP trong đầu, lời khuyên tốt nhất là đừng động đến các cấu hình này, vì nhiều khả năng là bạn sẽ chẳng bao giờ phải dùng đến chúng. Ngay cả việc tạo user và group, cũng như phân quyền khác nhau cho user cũng chỉ hữu dụng nếu bạn muốn cho người thân trong nhà truy cập giao diện quản trị của NAS box, nhưng chỉ với một vài quyền hạn nhất định. Ngược lại nếu bạn là người duy nhất chịu trách nhiệm cho việc cấu hình các máy móc trong nhà, có thể bỏ qua hoàn toàn phần Access.
+      Diagnostics: Thông tin tình trạng hệ thống. Các log file chủ yếu hữu dụng khi bạn cần hỗ trợ kỹ thuật trên diễn đàn của NAS4Free. Nhưng các thông tin về tình trạng phân vùng, đĩa cứng, RAID... Trong phần Information sẽ rất hữu dụng khi ta cần tự tìm lỗi. Công cụ ping/traceroute và ARP, route table đi kèm cung cấp các thông tin cần thiết khi việc kết nối từ một máy nào đó đến NAS box của bạn gặp trục trặc.
+      Nhìn chung, tuy là một hệ điều hành đơn giản nhưng NAS4free cung cấp rất nhiều tùy chọn và chức năng. Việc cấu hình step by step theo các hướng dẫn vẫn sẽ cho kết quả nào đó, nhưng làm như vậy bạn sẽ mất đi khả năng tùy biến theo nhu cầu của mình. Để có thể thực sự tận dụng được hết các dịch vụ đi kèm hay các chức năng như ZFS, Software RAID... cách tốt nhất là người dùng nên tìm hiểu sơ qua về các công nghệ này. Trong phạm vi bài viết lần này, chúng ta sẽ chỉ khởi đầu với các cấu hình cơ bản nhất giúp bạn có thể truy cập và sử dụng dữ liệu trên NAS box từ các thiết bị khác trong nhà.
+      Cấu hình đĩa cứng
+Không như trên Windows khi mà ta chỉ cần tạo một phân vùng đĩa cứng, cắm vào máy là đã có thể sử dụng, để sử dụng một ổ đĩa mới trên NAS4free, người dùng cần thực hiện một vài thao tác cấu hình cơ bản trước. Vào disk> management> add disk (dấu cộng bên tay phải), bạn sẽ thấy màn hình cấu hình như sau:
+
+      Disk: Việc chọn ổ đĩa sẽ không quá khó khăn, dựa theo tên mà hãng sản xuất đặt sẵn trên firmware của ổ cứng đó, đôi lúc đã bao gồm cả dung lượng để phân biệt. Nếu các cổ của bạn cùng một hãng sản xuất và có tên quá khó phân biệt thì có một số mẹo như tìm thử thông tin như S/N, P/N trên vỏ hộp để đối chiếu.
+      Description: Mô tả về ổ. Nhập vào bất cứ thứ gì bạn cho là dễ nhớ.
+      Transfer mode: Direct memory access, Programmed input/output...
+      Hard disk standby time: Thời gian chờ để đặt các ổ đĩa vào trạng thái nghỉ sau lần truy cập cuối (stand by). Đừng đặt quá cao để tránh lãng phí năng lượng không cần thiết, nhưng cũng đừng đặt quá thấp nếu như bạn phải thường xuyên/nhiều lần truy cập dữ liệu trên NAS box trong mỗi phiên làm việc/giải trí (cần phân biệt với việc truy cập thường xuyên/nhiều lần với việc truy cập liên tục). Theo PC World, con số cân đối có lẽ là khoảng 30-60 phút. Lưu ý là ổ đang ở trạng thái stand by sẽ mất một khoảng thời gian mới có thể hoạt động như bình thường mỗi lần bạn muốn truy cập dữ liệu, hãy tự cân đối theo nhu cầu của bản thân.
+      Advance power managerment: Chức năng cân đối giữa điện năng tiêu thụ/hiệu năng của đĩa cứng. Level 1 cho mức tiêu thụ thấp nhất nhưng tốc độ truy cập dữ liệu cũng vì thế mà sẽ ở mức chậm nhất. Mức cao nhất sẽ cho tốc độ tốt nhất nhưng cũng vì thế mà đốt nhiều tiền điện nhất. Lưu ý là với các level có ghi “without standby”, con số standby time bạn vừa chọn sẽ không có hiệu lực.
+Acoustic level: Cân đối giữa độ ồn/hiệu năng. Với các ổ đã được cân đối sẵn như WD Blue, Seagate thì chức năng này là không cần thiết. Nhưng với WD Black thì có thể bạn sẽ cần đến việc chỉnh Acoustic level.
+2 tùy chọn về công nghệ tự theo dõi của ổ cứng S.M.A.R.T chỉ nên được sử dụng khi bạn hiểu và biết cách tận dụng công nghệ này. Dù bạn không nắm chắc, bật S.M.A.R.T bằng cách tích vào ô lựa chọn để có thông tin hữu ích khi cần hỏi người khác cũng không hại gì, nhưng nên nhớ rằng mỗi một chức năng thêm vào đều tiêu tốn một phần nhỏ điện năng/hiệu năng.
+      Preformatted file system: Hết sức thận trọng với tùy chọn này. Đây là nơi chọn định dạng file system của ổ đĩa nếu bạn đã thực hiện thao tác format ổ cứng này trước đó rồi. Nếu chưa, nên nhớ đây không phải nơi thực hiện format, chọn “Unformatted” sau đó truy cập để thực hiện thao tác format. Nếu trong phần cài đặt, bạn thực hiện dạng cài đặt Embedded thứ nhất, ổ cứng đó sẽ chỉ có thể sử dụng làm nơi chạy NAS4Free và không thể được add vào đây. Nhưng với tùy chọn Embedded thứ 2 hoặc “Full”, phần còn lại của ổ cứng đã được định dạng UFS, vì vậy hãy chọn ở đây là UFS.
+
+      Sau khi đã cấu hình xong và nhấn Add, nên nhớ các thay đổi của bạn vẫn chưa được lưu. Mọi cấu hình trên NAS4free cần được xác nhận bằng thao tác nhấn “Apply Changes” và việc thêm ổ cũng không ngoại lệ. Sau khi Apply changes, nếu thấy phần Status chuyển từ Initializing sang Online là ta đã hoàn thành việc thêm ổ cứng vào cho NAS4free quản lý.
+      Trong Menu Format, phần cần lưu ý nhất là “File system”. Nên sử dụng định dạng mặc định của NAS4free là UFS nếu muốn đọc/ghi dữ liệu thường xuyên. Các khuyến cáo trên trang chủ của sản phẩm này cho biết tuy NTFS, FAT32 và EXT2 vẫn được hỗ trợ nhưng chỉ nên được dùng ở dạng read-only.
+
+      Vì đây không phải Windows nên chúng ta còn cần một thao tác nữa – mount các phân vùng – mới có thể sử dụng ổ vừa thêm vào. Vào Disk > Mount point > Add.
+
+
+      Type: Disk vì chúng ta đang mount một ổ đĩa cứng.
+      Disk: Chọn ổ đĩa bạn vừa thêm vào để mount.
+      Partition type: Với những ai ngại đọc dài dòng và chưa nắm được khái niệm partition table: Chọn MBR. Cụ thể hơn, chúng ta đang xây dựng NAS box từ một dàn máy với mainboard cũ – gần như 100% sẽ sử dụng BIOS chứ chưa có UEFI, vì vậy nhiều khả năng một ổ đĩa được phân vùng bằng GPT sẽ không ổn định hoặc tệ nhất là không hoạt động. Lưu ý điều này nếu bạn muốn tự phân vùng/format đĩa cứng trước khi lắp vào NAS box (format trên NAS4free tuy vẫn sử dụng GPT nhưng có vẻ đa số trường hợp không có trục trặc gì đáng kể). Tùy chọn còn lại là CD/DVD thì quá hiển nhiên.
+      Partition number: Thứ tự của phân vùng mà bạn muốn mount để đưa vào sử dụng trên ổ đĩa vừa chọn, một điểm nhấn nữa cần lưu ý. Như đã nói ở trên và trong bài viết lần trước, cách cài đặt Embedded thứ 2 hoặc “Full” sẽ tạo một phân vùng để chạy OS NAS4free và một phân vùng để lưu dữ liệu. Vì vậy nếu bạn đang mount từ ổ này, con số chính xác ở đây phải là “2” chứ không phải 1 như mặc định.
+Ngoài ra cũng lại lưu ý một lần nữa, những ai muốn tự format ổ cứng trước khi lắp vào NAS box sẽ cần nhớ chính xác số lượng, thứ tự, định dạng file system của từng phân vùng để khai báo cho phù hợp tại đây (chưa kể đến trường hợp bạn nhỡ format một phân vùng nào đó về định dạng mà NAS4free không hiểu được). Nếu muốn tránh cấu hình dài dòng thì cách tốt nhất là trước khi lắp ổ cũ sang NAS box, bạn sử dụng các công cụ như Acronis disk director để xóa hết các phân vùng hiện tại trên đó đi (các ổ mới chưa được phân vùng vì vậy có thể lắp trực tiếp luôn). Sau đó sử dụng công cụ format của NAS4free, với cách này mỗi ổ cứng sẽ chỉ gồm một phân vùng (partition number mặc định sẽ là 1) và bạn luôn chắc chắn rằng NAS4free nhận ra được định dạng của phân vùng đó.
+      Mount point name & desc: Tên và mô tả để dễ nhớ. Ở đây nên đặt theo dạng dữ liệu mà bạn định lưu trên đó, ví dụ “Hollywood”, “Lossless” hay “Java”...
+      Read-only: Không thể ghi dữ liệu lên một mount point được đặt dưới dạng read-only.
+      File-system check: Đừng bỏ qua bước kiểm tra dữ liệu này, để nguyên trạng thái tích sẵn như vậy.
+      Các tùy chọn về Access Restriction sẽ cần được nói riêng cụ thể hơn, ở đây chúng ta để ở dạng mặc định và click Add.
+      Sau khi Apply changes, nếu trạng thái Mount point là “ok” là ta đã sẵn sàng để chia sẻ dữ liệu.
+      Hướng tới Services. Nếu bạn đang sử dụng Window, click vào CIFS/SMB, hoặc AFP đối với các sản phẩm của Apple. Phần lớn cấu hình của các dịch vụ này không cần được thay đổi gì nhiều, tích vào check box trên cùng bên tay phải, apply và chờ một lát để NAS4free restart là ta đã có thể thấy máy này hiển thị trên share group của Window hoặc Mac.
+      Nếu muốn truy cập thử, chúng ta có thể chọn Authentication và Max protocol như sau để có thể dùng dữ liệu trong NAS box mà không cần username hay password.
+
+
+CHƯƠNG 4 : KẾT LUẬN
+4.1 Kết quả đạt được
+      Qua quá trình tìm hiểu cùng với sự nỗ lực của bản thân, em hoàn thành đề tài đúng thời gian quy định và đạt được một số thành quả như sau:
+	- Nắm được kiến thức, lý thuyết cơ bản về quy trình lưu trữ và bảo mật dữ liệu của một số công nghệ tiên tiến hiện nay như SSL, TLS… Nắm  được cơ chế hoạt động, ưu nhược điểm và cách thức bảo mật nhờ việc đọc tài liệu và tìm kiếm trên internet
+	- Thiết lập được hệ thống lưu trữ đơn giản bằng NAS4free dung lượng lưu trữ nhỏ, là tiền đề để sau này có thể xây dựng hệ thống lưu trữ lớn hơn cho các công ty và doanh nghiệp
+	- Thiết lập được hệ thống email server offline đơn giản, các tài khoản đã có thể gửi và nhận email, hiểu rõ được phương thức vận hành của hệ thống email server, các kiến thức cơ bản về email và đã có thể làm cho hệ thống mail hoạt động với quy mô nhỏ với phần mềm Mdaemon – phần mềm dành cho email server
+	- Qua quá trình ôn tập và tìm hiểu, giúp bản thân càng hoàn thiện kỹ năng và kiến thức chuyên ngành. Cụ thể là kiến thức về công nghệ lưu trữ, bảo mật dữ liệu cho hệ thống email server
+4.2 Hạn chế
+      - Hệ thống vẫn còn sơ sài, còn nhiều lỗ hổng, còn nhiều điểm phải khắc phục
+      - Vẫn còn lệ thuộc vào nhiều kiến thức, tài liệu, sách vở trên Internet
+      - Chưa có sự đầu tư về mặt kinh phí để thuê một số pần mềm từ nhà phát hành
+4.3 Hướng phát triển
+	- Cập nhận  thêm thông tin, kiến thức để có thể hoàn thiện hơn về kỹ năng chuyên ngành, đặc biệt là kỹ năng về mail server, lưu trữ và bảo mật dữ liệu trên email server
+	- Nâng cấp, đầu tư hệ thống bảo mật cho email và hệ thống lưu trữ dữ liệu đảm bảo dữ liệu được bảo mật cũng như là được truy xuất 1 cách nhanh chóng
+	- Học hỏi thêm kiến thức, kinh nghiệm từ những người đi trước trong ngành
+	- Làm việc với doanh nghiệp để có thể học hỏi thêm nhiều từ hệ thống đã hoàn chỉnh của doanh nghiệp
+
+
+TÀI LIỆU THAM KHẢO
+
+[1] Spam email và các biện pháp phòng chống – Tailieu.vn
+[2] Chống spam với Postfix và SpamAssassin – Tailieu.cn
+[3] Tiểu luận: Mail spam cơ chế và cách phòng chống – Khúc Xuân Vượng
+[4] Giáo trình bảo mật dữ liệu Server – Quantrimang.com
+[5] Tổng quan về lưu trữ dữ liệu – Lê Công Phúc.
+
+
+50
+
+

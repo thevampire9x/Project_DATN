@@ -1,0 +1,336 @@
+﻿CHƯƠNG 1:MỞ ĐẦU
+1.1 Lý do chọn đề tài
+      Nền kinh tế các nước trên thế giới đang phát triển mạnh mẽ, trong đó có cả Việt Nam. Mức sống, thu nhập của người dân tăng lên, cải thiện rất nhiều theo từng năm. Do đời sống vật chất đã đầy đủ, nên phát sinh thêm nhu cầu thoải mái về tinh thần là điều dễ hiểu. Bởi vậy, nghành du lịch trong nước đang ngày càng chiếm tỉ trọng lớn trong cơ cấu nền kinh tế nước ta. Du lịch dần trở thành môi trường cạnh tranh khốc liệt với các công ty, tập đoàn kinh doanh trong lĩnh vực này. Trong thời đại mà Internet đã trở nên hết sức phổ biến trong mọi lĩnh vực kinh tế, chính trị, xã hội, được phổ biến rộng rãi đến nhiều tầng lớp trong xã hội, việc thiết kế App Mobile du lịch trở nên đặc biệt quan trọng đối với mọi người. 
+      Nhận thấy tiềm năng phát triển và khả năng áp dụng thực tế rất cao, cho nên em quyết định chọn đề tài là: Xây dựng ứng dụng du lịch Exciting Journey
+1.2 Mục tiêu của đề tài
+   - Xây dựng ứng dụng phải đảm bảo tính tiện dụng đối với người sử dụng. Nội dung và cách trình bày của Ứng dụng phải rõ ràng mạch lạc và dễ sử dụng.
+   - Vận dụng các kiến thức đã được học về HTML, CSS, JavaScript, Java cùng với việc tìm hiểu thêm về ngôn ngữ lập trình PHP và MySQL.
+   - Ứng dụng được thiết kế và lập trình trên ngôn ngữ React-Native, cơ sở dữ liệu MySQL.
+1.3 Giới hạn và phạm vi của đề tài
+- Giới hạn: Ứng dụng hiện tại giới hạn sử dụng trên các thiết bị mobile.
+- Phạm vi: mọi người biết dùng smartphone và có mạng Internet.
+1.4 Kết quả dự kiến của đồ án
+  - Xây dựng ứng dụng du lịch Exciting Journey: 
+  * Đăng nhập: cho phép người dùng đăng nhập qua facebook hoặc nhập thông tin lưu trữ trên Sever.
+  * Quản lý thông tin tài khoản.
+  * View Tour: xem tour du lịch từ những User khác, xem những combo, deal tour hấp dẫn.
+  * Chi tiết lịch trình: xem chi tiết lịch trình trong tour, vé máy máy bay, khách sạn, tickets đã đặt, xem vị trí từng địa điểm đến trong tour: date, time…
+  * Other: Đặt vé máy bay, Khách sạn, Tickets…
+  * Notifycation: đẩy những thông báo về devices.
+  * Create tour: xem tour đã hoạc đang tham gia, tạo tour du lịch tìm kiếm người dùng join tour.
+  * Join tour: Tham gia vào các tour du lịch hấp dẫn.
+  -  Xây dựng phần mềm sử dụng các công nghệ mới nhất của React-Native: Google maps, Facebook API, push Notifycation, Recoil, …
+1.5 Phương pháp tiếp cận
+- Phương pháp đọc tài liệu.
+- Phương pháp thực nghiệm.
+- Phương pháp phân tích mẫu.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1. Tổng quan về React Native
+
+   React Native là một framework do công ty công nghệ nổi tiếng Facebook phát triển nhằm mục đích giải quyết bài toán hiệu năng của Hybrid và bài toán chi phí khi mà phải viết nhiều loại ngôn ngữ native cho từng nền tảng di động. Chúng ta sẽ build được ứng dụng Native, và chúng ta cũng có thể build ứng dụng đó một cách đa nền tảng (multi-platform) chứ không phải là một “mobile web app”, không phải là “HTML5 app”, và cũng không phải là một “hybrid app” hay cũng không chỉ build trên iOS hay Android mà chúng ta build và chạy được cả hai hệ sinh thái. Một điểm hay ho nữa mà mình có đề cập là giảm chi phí recompile của Native bằng cách sử dụng Hot-Loading tức là bạn không cần phải build lại ứng dụng từ đầu nên việc chỉnh sửa diễn ra rất nhanh chóng. Giúp cho lập trình viên có thể thấy được những chỉnh sửa của họ một cách nhanh chóng trực quan, không còn phải bỏ quá nhiều thời gian trong việc build và run ứng dụng.
+
+2.1.1. Giới thiệu về React Native
+   React native là một công cụ giúp chúng ta lập trình đa nền tảng để tạo ra các ứng dụng trên môi trường native. Nó là một framework mã nguồn mở được phát triển bởi Facebook, cho phép bạn sử dụng Java script để phát triển phần mềm trên điện thoại di động Android và IOS. React native cũng giống như React vậy chúng sử dụng các native components thay vì các web components. Vì vậy để hiểu về cấu trúc của React native chúng ta cần phải có các kiến thức cơ bản với các khái niệm cơ bản của React như là JSX, components, props hay là state.
+2.1.2. Các phiên bản của React Native
+Một số Version của React Native:
+Bảng 2. 1: Bảng lịch sử React Native
+Phiên bảnThời gian ra mắtRN 0.52015……RN 0.6220202.1.3. Các thành phần trong React Native	
+- Components: Được hiểu là các thành phần ui được viết bằng JSX như các button, image, thẻ input..., được chia nhỏ từ các màn hình, một screen có nhiều component.
+- Props: Là viết tắt của properties, là một giá trị immutable trong component
+- State: Được hoạt động khác với props, state là dữ liệu nội bộ của component, trong khi props là dữ liệu được truyền vào component, chính vì vậy có thể thay đổi state, state là giá trị mutable
+- Components lifecycle: Là một concept khá hay, là vòng đời hoạt động của một component…
+2.1.4. Ưu nhược điểm của React Native
+Ưu điểm của React Native là gì?
+- Tối ưu thời gian.
+- Hiệu năng ổn định.
+- Tiết kiệm chi phí.
+- Đội ngũ phát triển ứng dụng không quá lớn.
+- Ứng dụng tin cậy, ổn định.
+- Xây dựng ứng dụng ít native code nhất cho nhiều hệ điều hành khác nhau.
+- Trải nghiệm người dùng tốt hơn khi so sánh với ứng dụng Hybrid.
+Nhược điểm của React Native là gì?
+- Yêu cầu Native code.
+- Hiệu năng kém hơn so với Native App.
+- Bảo mật chưa thật sự tốt do dùng JS.
+- Quản lý bộ nhớ.
+- Tùy biến chưa thật sự tốt ở một số module.
+2.2. Tổng quan về SQL Server
+
+2.2.1. Định nghĩa
+       SQL Server là một hệ quản trị cơ sở dữ liệu quan hệ được phát triển bởi Microsoft. Là một máy chủ cơ sở dữ liệu, nó là một sản phẩm phần mềm có chức năng chính là lưu trữ và truy xuất dữ liệu theo yêu cầu của các ứng dụng phần mềm khác.
+2.2.2. Một số đặc điểm chính của SQL Server
+      SQL là một ngôn ngữ đòi hỏi có tính tương tác cao: Người dùng có thể dễ dàng trao đổi với các tiện ích thông qua các câu lệnh của SQL đến cơ sở dữ liệu và nhận kết quả từ cơ sở dữ liệu.
+      SQL là một ngôn ngữ lập trình cơ sở dữ liệu: Các lập trình viên có thể xây dựng các chương trình ứng dụng giao tiếp với cơ sở dữ liệu bằng cách nhúng các câu lệnh SQL vào trong ngôn ngữ lập trình.
+      SQL là một ngôn ngữ lập trình quản trị cơ sở dữ liệu: Người quản trị cơ sở dữ liệu có thề quản lý, định nghĩa và điều khiển truy cập cơ sở dữ liệu thông qua SQL.
+      SQL là một ngôn ngữ lập trình cho các hệ thống chủ khách: SQL được sử dụng như là một công cụ giao tiếp với các trình ứng dụng trong hệ thống cơ sở dữ liệu khách chủ.
+      SQL là ngôn ngữ truy cập dữ liệu trên Internet: SQL được sử dụng với vai trò tương tác với dữ liệu trong hầu hết các máy chủ web và máy chủ Internet.
+      SQL là ngôn ngữ cơ sở dữ liệu phân tán: Với vai trò giao tiếp với các hệ thống trên mạng, gửi và nhận các yêu cầu truy xuất dữ liệu với nhau.
+2.2.3. Các tính năng của SQL Server
+- Cho phép tạo nhiều cơ sở dữ liệu
+- Duy trì lưu trữ bền vững
+- Bảo mật cao
+- Phân tích dữ liệu bằng SSAS - SQL Server Analysis Services
+- Tạo được báo cáo bằng SSRS - SQL Server Reporting Services
+- Thực hiện quá trình ETL (Extract-Transform-Load) bằng SSIS - SQL Server Integration Services.
+2.3. Một số thư viện được sử dụng trong đồ án
+2.3.1 Recoil
+    Recoil là một predictable state management tool cho các ứng dụng Javascript. Nó giúp bạn viết các ứng dụng hoạt động một cách nhất quán, chạy trong các môi trường khác nhau (client, server, and native) và dễ dàng để test.
+• Ưu điểm:
+• Cú pháp gần gũi, dễ sử dụng (do giống với state mặc định trong React).
+• Sử dụng các state riêng lẻ (gọi là các atiom, phân biệt bằng key).
+• Hỗ trợ luôn quản lý state bất đồng bộ.
+• Của Facebook.  
+• Nhược điểm:
+• Khá mới mẻ, ít người biết và sử dụng.
+• Mới mẻ, chưa ổn định.
+2.3.2 React-native-fbsdk
+      React Native FBSDK là một trình bao bọc xung quanh SDK Facebook iOS và SDK Facebook Android, cho phép tích hợp Facebook trong các ứng dụng React Native . Quyền truy cập vào các thành phần gốc, từ đăng nhập đến chia sẻ, được cung cấp hoàn toàn thông qua các mô-đun JavaScript được ghi lại để bạn không phải gọi trực tiếp một hàm riêng.
+2.3.3 Maps
+    react-native-maps là thư viện hỗ trợ các dịch vụ liên quan đến bản đồ.
+2.3.4 React navigation
+    React-navigation là thư viện hỗ trợ move screen, tab navigation, drawer …
+2.3.5 rn-fetch-blob
+• Truyền dữ liệu trực tiếp từ / đến bộ lưu trữ mà không cần bắc cầu BASE64
+• API tệp hỗ trợ các tệp thông thường, tệp Tài sản và tệp CameraRoll
+• API thao tác tệp gốc-bản địa, giảm mất hiệu năng bắc cầu của JS
+• Hỗ trợ luồng tệp để xử lý tệp lớn
+• Các polyfill Blob, File, XMLHttpRequest giúp thư viện dựa trên trình duyệt có sẵn trong RN (thử nghiệm)
+• Luồng JSON được hỗ trợ dựa trên Oboe.js @jimhigson
+2.4.   Các công cụ hỗ trợ
+2.4.1. Visual Studio
+
+
+      Microsoft Visual Studio là một môi trường phát triển tích hợp từ Microsoft. Nó được sử dụng để phát triển chương trình máy tính cho Microsoft Windows, cũng như các trang web, các ứng dụng web và các dịch vụ web. Visual Studio sử dụng nền tảng phát triển phần mềm của Microsoft như Windows API, Windows Forms, Windows Presentation Foundation, Windows Store và Microsoft Silverlight. Nó có thể sản xuất cả hai ngôn ngữ máy và mã số quản lý. 
+      Visual Studio bao gồm một trình soạn thảo mã hỗ trợ IntelliSense cũng như cải tiến mã nguồn. Trình gỡ lỗi tích hợp hoạt động cả về trình gỡ lỗi mức độ mã nguồn và gỡ lỗi mức độ máy. Công cụ tích hợp khác bao gồm một mẫu thiết kế các hình thức xây dựng giao diện ứng dụng, thiết kế web, thiết kế lớp và thiết kế giản đồ cơ sở dữ liệu. Nó chấp nhận các plug-in nâng cao các chức năng ở hầu hết các cấp bao gồm thêm hỗ trợ cho các hệ thống quản lý phiên bản (như Subversion) và bổ sung thêm bộ công cụ mới như biên tập và thiết kế trực quan cho các miền ngôn ngữ cụ thể hoặc bộ công cụ dành cho các khía cạnh khác trong quy trình phát triển phần mềm.
+2.4.2. Microsoft SQL Server Management Studio 18
+      SQL Server là một hệ quản trị cơ sở dữ liệu quan hệ (Relational Database Management System (RDBMS) ) sử dụng câu lệnh SQL (Transact-SQL) để trao đổi dữ liệu giữa máy Client và máy cài SQL Server. Một RDBMS bao gồm databases, database engine và các ứng dụng dùng để quản lý dữ liệu và các bộ phận khác nhau 
+trong RDBMS.
+      SQL Server được tối ưu để có thể chạy trên môi trường cơ sở dữ liệu rất lớn (Very Large Database Environment) lên đến Tera-Byte và có thể phục vụ cùng lúc cho hàng ngàn user. SQL Server có thể kết hợp “ăn ý” với các server khác như Microsoft Internet Information Server (IIS), E-Commerce Server, Proxy Server…. 
+2.4.3. Visual Studio Code
+
+      Visual Studio Code là trình chỉnh sửa mã nguồn nhẹ nhưng mạnh mẽ chạy trên máy tính để bàn của bạn và có sẵn cho Windows, macOS và Linux. Nó đi kèm với sự hỗ trợ tích hợp cho JavaScript, TypeScript và Node.js và có một hệ sinh thái mở rộng phong phú cho các ngôn ngữ khác (như C ++, C #, Java, Python, PHP, Go) và thời gian chạy (như .NET và Unity) 
+2.4.4. Visual Paradigm
+
+      Visual Paradigm là một công cụ quản lý và thiết kế mạnh mẽ, đa nền tảng và dễ sử dụng cho các hệ thống Công nghệ thông tin. Visual Paradigm cung cấp cho các nhà phát triển phần mềm nền tảng phát triển tiên tiến để xây dựng các ứng dụng chất lượng nhanh hơn, tốt hơn và rẻ hơn! Nó tạo điều kiện cho khả năng tương tác tuyệt vời với các công cụ CASE khác và hầu hết các IDE hàng đầu, vượt trội toàn bộ quy trình phát triển Mô hình-Mã-Triển khai của bạn trong giải pháp một cửa này.
+2.4.5. Postman
+
+      Postman là một App Extensions, cho phép làm việc với các API, nhất là REST, giúp ích rất nhiều cho việc testing. Hỗ trợ tất cả các phương thức HTTP (GET, POST, PUT, DELETE, OPTIONS, HEAD ...) Postman cho phép lưu lại các lần sử dụng. Sử dụng cho cá nhân hoặc team lớn.
+      Cách sử dụng thì khá đơn giản, chỉ cần điền URL của API, chọn phương thức, thêm params cần thiết và nhấn Send. Mình sẽ không đi sâu về vấn đề này, dưới đây sẽ là một số cách để sử dụng POSTMAN test API thuận tiện hơn.
+2.4.6. MAMP
+
+
+      MAMP là một loại ứng dụng phần mềm khá phổ biến và thường hay được các lập trình viên sử dụng để xây dựng và phát triển các dựa án website theo ngôn ngữ PHP. MAMP được sử dụng cho mục đích nghiên cứu, phát triển website qua Localhost của máy tính cá nhân. MAMP được ứng dụng trong nhiều lĩnh vực từ học tập đến nâng cấp, thử nghiệm Website của các lập trình viên.
+Các ưu điểm của MAMP bao gồm:
+• MAMP có thể chạy được trên tất cả các hệ điều hành: Từ Cross-platform, Window, MacOS và Linux.
+• MAMP có cấu hình đơn giản cũng như nhiều chức năng hữu ích cho người dùng. Tiêu biểu gồm: giả lập Server, giả lập Mail Server, hỗ trợ SSL trên Localhost.
+• MAMP tích hợp nhiều thành phần với các tính năng:
+• Apache
+• PHP (tạo môi trường chạy các tập tin script *.php);
+• MySql 
+Thay vì phải cài đặt từng thành phần trên, giờ đây các bạn chỉ cần cài XAMPP là chúng ta có 1 web server hoàn chỉnh.
+• Mã nguồn mở: Không như Appserv, MAMP có giao diện quản lý khá tiện lợi. Nhờ đó, người dùng có thể chủ động bật tắt hoặc khởi động lại các dịch vụ máy chủ bất kỳ lúc nào.
+2.4.7. Android Studio
+
+
+      Để phát triển các ứng dụng mobile chạy trên hệ điều hành Android thì bạn cần một máy tính trên đó có cài đặt Android Studio. Trong bài viết này chúng ta sẽ cùng nhau tìm hiểu về Android Studio, cách cài đặt và sử dụng Android Studio để tạo một ứng dụng đơn giản có tên là Hello World. Bài viết này áp dụng trên hệ điều hành Windows do đó bạn cần một máy tính chạy hệ điều hành Windows.
+      Android Studio là một phầm mềm bao gồm các bộ công cụ khác nhau dùng để phát triển ứng dụng chạy trên thiết bị sử dụng hệ điều hành Android như các loại điện thoại smartphone, các tablet... Android Studio được đóng gói với một bộ code editor, debugger, các công cụ performance tool và một hệ thống build/deploy (trong đó có trình giả lập simulator để giả lập môi trường của thiết bị điện thoại hoặc tablet trên máy tính) cho phép các lập trình viên có thể nhanh chóng phát triển các ứng dụng từ đơn giản tới phức tạp.
+      Việc xây dựng một ứng dụng mobile (hoặc tablet) bao gồm rất nhiều các công đoạn khác nhau. Đầu tiên chúng ta sẽ viết code ứng dụng sử dụng máy tính cá nhân hoặc laptop. Sau đó chúng ta cần build ứng dụng để tạo file cài đặt. Sau khi build xong thì chúng ta cần copy file cài đặt này vào thiét bị mobile (hoặc table) để tiến hành cài đặt ứng dụng và chạy kiểm thử (testing). Bạn thử tưởng tượng nếu với mỗi lần viết một dòng code bạn lại phải build ứng dụng, cài đặt trên điện thoại hoặc tablet và sau đó chạy thử thì sẽ vô cùng tốn thời gian và công sức. Android Studio được phát triển để giải quyết các vấn đề này. Với Android Studio tất cả các công đoạn trên được thực hiện trên cùng một máy tính và các quy trình được tinh gọn tới mức tối giản nhất.
+2.4.8. Xcode
+
+      Xcode là công cụ chính để lập trình Iphone/Ipad. Tất cả những gì mới nhất của Apple đều được tích hợp trong Xcode, IOS 6 hay nhưng gì mới nhất của hệ điều hành. Apple rất ưu ái cho các lập trình viên những người đã làm cho hệ sinh thái của Apple trở nên đa dạng.
+      Xcode còn tích hợp cả máy ảo (Simulation) để cho các lập trình viên thử nghiệm các sản phẩm không cần thiết bị thật và môi trường SandBox để kiểm tra các mua bán (in game purchase).
+      Xcode là công cụ dễ dàng và đơn giản nhất để bạn phát triển một phần mềm Iphone hay Ipad.
+2.4.9. Sourcetree
+      SourceTree là một ứng dụng hữu ích dành cho các developer mê mẩn Mac OSX. Dùng SourceTree để xem code trước khi commit sẽ giúp bạn tránh được code tạp nham, code thừa hay thiếu, hoặc xóa nhầm các thành phần không cần thiết.
+
+2.4.10. Git
+
+
+      Git là tên gọi của một Hệ thống quản lý phiên bản phân tán (Distributed Version Control System – DVCS) là một trong những hệ thống quản lý phiên bản phân tán phổ biến nhất hiện nay. DVCS nghĩa là hệ thống giúp mỗi máy tính có thể lưu trữ nhiều phiên bản khác nhau của một mã nguồn được nhân bản (clone) từ một kho chứa mã nguồn (repository), mỗi thay đổi vào mã nguồn trên máy tính sẽ có thể ủy thác (commit) rồi đưa lên máy chủ nơi đặt kho chứa chính. Và một máy tính khác (nếu họ có quyền truy cập) cũng có thể clone lại mã nguồn từ kho chứa hoặc clone lại một tập hợp các thay đổi mới nhất trên máy tính kia
+      Ngoài ra, có một cách hiểu khác về Git đơn giản hơn đó là nó sẽ giúp bạn lưu lại các phiên bản của những lần thay đổi vào mã nguồn và có thể dễ dàng khôi phục lại dễ dàng mà không cần copy lại mã nguồn rồi cất vào đâu đó. Và một người khác có thể xem các thay đổi của bạn ở từng phiên bản,  họ cũng có thể đối chiếu các thay đổi của bạn rồi gộp phiên bản của bạn vào phiên bản của họ. Cuối cùng là tất cả có thể đưa các thay đổi vào mã nguồn của mình lên một kho chứa mã nguồn.
+      Cơ chế lưu trữ phiên bản của Git là nó sẽ tạo ra một “ảnh chụp” (snapshot) trên mỗi tập tin và thư mục sau khi commit, từ đó nó có thể cho phép bạn tái sử dụng lại một ảnh chụp nào đó mà bạn có thể hiểu đó là một phiên bản. Đây cũng chính là lợi thế của Git so với các DVCS khác khi nó không “lưu cứng” dữ liệu mà sẽ lưu với dạng snapshot.
+
+
+CHƯƠNG 3: PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG
+3.1. Khảo sát, xác định yêu cầu
+- Khảo sát nhu cầu thị trường, xác định hướng dựng App.
+- Xác định những mong muốn từ người sử dụng.
+- Đưa ra UIUX phù hợp với mong muốn của người sử dụng.
+3.1.1. Phân tích thiết kế chức năng của hệ thống
+      Hoạt động của ứng dụng có thể mô tả như sau:
+- Đăng nhập: cho phép người dùng đăng nhập qua facebook hoặc nhập thông tin lưu trữ trên Sever.
+- View Tour: xem tour du lịch từ những User khác, xem những combo, deal tour hấp dẫn.
+- Chi tiết lịch trình: xem chi tiết lịch trình trong tour, vé máy máy bay, khách sạn, tickets đã đặt, xem vị trí từng địa điểm đến trong tour: date, time…
+- Other: Đặt vé máy bay, Khách sạn, Tickets…
+- Notifycation: đẩy những thông báo về devices.
+- Create tour: xem tour đã hoạc đang tham gia, tạo tour du lịch tìm kiếm người dùng join tour.
+- Join tour: Tham gia vào các tour du lịch hấp dẫn.
+3.1.2. Thiết kế cơ sở dữ liệu cho hệ thống
+Biểu đồ CSDL
+
+Hình 3. 1: Biểu đồ cơ sở dữ liệu
+3.1.3. Danh sách các yêu cầu của khách hàng
+3.1.4. Chức năng đăng nhập
+   Sau khi đăng nhập, ứng dụng buộc người dùng nhập thông tin cá nhân của mình để lấy thông tin phục vụ cho việc sử dụng ứng dụng.
+3.1.5. View tour	
+   Chức năng cho phép xem tour du lịch từ những User khác, xem những combo, deal tour hấp dẫn.
+3.1.6. Chi tiết lịch trình
+      Chức năng cho phép xem chi tiết lịch trình trong tour, vé máy máy bay, khách sạn, tickets đã đặt, xem vị trí từng địa điểm đến trong tour: date, time…
+3.1.7. Đặt vé máy bay, khách sạn, tickets
+   Chức năng cho phép người sử dụng đặt vé máy bay, khách sạn, những vé vui chơi tại địa điểm chuẩn bị đến.
+3.1.8	Thông báo
+      Chức năng sẽ thực hiện hiển thị thông báo cho người sử dụng.
+3.1.9	Create tour
+      Chức năng cho phép xem tour đã hoạc đang tham gia, tạo tour du lịch tìm kiếm người dùng join tour.
+3.1.10	Join tour
+	Chức năng cho phép người sử dụng tham gia vào các tour du lịch hấp dẫn.
+3.2. Phân tích và thiết kế hệ thống
+3.2.1. Biểu đồ Usecase
+- Biểu đồ Usecase tổng quát của hệ thống
+• Biểu đồ thể hiện toàn bộ các chức năng của hệ thống.
+• User muốn sử dụng các chức năng cần phải Login.
+• Chức năng chính của hệ thống: View Tour, View Detail Tour, Create Tour, Book Other, Push Notify, Join Tour.
+
+
+Hình 3. 2: Biểu đồ usecase tổng quát
+- Biểu đồ đặc tả chức năng Push notifyCation
+• Ứng dụng sẽ hiển thị danh sách thông báo để User dễ dàng sử dụng.
+• Khi có User Create Tour hoặc Like, Join Tour của User thì hệ thống sẽ đẩy thông báo về cho người sử dụng nhận biết.
+
+Hình 3. 3: Biểu đồ đặc tả chức năng Push notifyCation
+- Biểu đồ đặc tả chức năng View Detail Tour
+• Chức năng sẽ hiển thị ra chi tiết của các tour du lịch.
+• User có thể xem các địa điểm, các khách sạn, chuyến bay và vé vui chơi đã đặt của tour.
+• User có thể xem thời gian di chuyển giữa các location trong địa điểm.
+• Có thể xem location trên Map.
+
+Hình 3. 4: Biểu đồ đặc tả chức năng View Detail Tour
+- Biểu đồ đặc tả chức năng Create Tour
+• User có thể tạo ra các tour du lịch cho riêng mình.
+• Có thể chọn các địa điểm đến và đưa ra giá tour một cách hợp lý cho andUser tham gia cùng.
+• Tạo ra các chi tiết địa điểm đến thú vị, đưa ra lịch trình của riêng User.
+
+Hình 3. 5: Biểu đồ đặc tả chức năng Create Tour
+- Biểu đồ đặc tả chức năng Book Other
+• Chức năng cho phép User book những chuyến bay, khách sạn, vé vui chơi cho lịch trình của mình.
+• Tham khảo các chuyến bay, khách sạn, vé vui chơi với deal đầy hấp dẫn.
+
+Hình 3. 6: Biểu đồ đặc tả chức năng Book Other
+- Biểu đồ đặc tả chức năng View Tour
+• Chức năng hiển thị tát cả các tour du lịch do các User tạo ra.
+• Tham khảo các tour có deal hấp dẫn.
+• Hiển thị các tour mà User chuẩn bị đi, đang đi  và sẽ đi.
+• Hiển thị các tour được yêu thích nhất, các tour có deal hấp dẫn nhất.
+
+
+Hình 3. 7: Biểu đồ đặc tả chức năng View Tour
+3.2.2. Biểu đồ lớp
+- Biểu đồ lớp của hệ thống
+• Biểu đồ thể hiện mối quan hệ giữa các lớp.
+
+Hình 3. 8: Biểu đồ lớp
+3.2.3. Cơ sở dữ liệu của hệ thống
+Bảng 3. 1: Bảng tbl_account
+Tên trườngKiểu dữ liệuKích thướcRàng buộcGhi chúidUserintKhoá chínhusernamestring300passwordstring 300Sdtstring300fullNamestring300imagestring300
+Bảng 3. 2: Bảng tbl_comment
+
+Tên trườngKiểu dữ liệuKích thướcRàng buộcGhi chúidCommentintKhoá chínhidTourstring300Khoá ngoạiidUserstring300Khoá ngoạicontentstring300Bảng 3. 3: Bảng tbl_detailTour
+
+Tên trườngKiểu dữ liệuKích thướcRàng buộcGhi chúidDetailintKhoá chínhimageDayString300timeDayString300PlaceString300goTimeString300namePlaceString300timeStartString300LocationString300idTourIntKhoá ngoạiReportIntlocationDetailString300LatiduteString300LongitudeString300
+Bảng 3. 4:  Bảng tbl_fight
+
+Tên trườngKiểu dữ liệuKích thướcRàng buộcGhi chúidFlightintKhoá chínhfromPlacestring300toPlacestring 300PriceDoubletimeBookstring300peopleInFlightIntidTourIntKhoá ngoạiReportIntImageString300
+Bảng 3. 5: Bảng tbl_hotel
+Tên trườngKiểu dữ liệuKích thướcRàng buộcGhi chúidHotelintKhoá chínhnameHotelstring300PriceDoubletimeBookstring300PeopleInRoomIntidTourIntKhoá ngoạiReportIntImageString300
+Bảng 3. 6: Bảng tbl_joinTour
+
+Tên trườngKiểu dữ liệuKích thướcRàng buộcGhi chúidJoinintKhoá chínhidTourIntKhoá ngoạiidUserIntKhoá ngoại
+Bảng 3. 7: Bảng tbl_liketour
+
+Tên trườngKiểu dữ liệuKích thướcRàng buộcGhi chúidLikeintKhoá chínhidTourIntKhoá ngoạiidUserIntKhoá ngoại
+
+
+
+Bảng 3. 8: Bảng tbl_notifiCation
+Tên trườngKiểu dữ liệuKích thướcRàng buộcGhi chúidNotiintKhoá chínhidTourIntKhoá ngoạiidUserIntKhoá ngoạiContentString300
+Bảng 3. 9: Bảng tbl_tickets
+
+Tên trườngKiểu dữ liệuKích thướcRàng buộcGhi chúidTicketintKhoá chínhnameTicketstring300PriceDoubletimeBookstring300PeopleInTicketIntidTourIntKhoá ngoạiReportIntImageString300Bảng 3. 10: Bảng tbl_tour
+
+Tên trườngKiểu dữ liệuKích thướcRàng buộcGhi chúidTourintKhoá chínhidUserIntKhoá ngoạitimeCreateString300imageDesCriptionString300TitleString300sumDayString300sumMoneyDoubleDealInt
+3.2.4. Một số hình ảnh của ứng dụng
+- Hình ảnh thực tế trong App thể hiện chức năng Đăng nhập
+	
+
+	
+
+- Hình ảnh App thể hiện chức năng Overview
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CHƯƠNG 4: KẾT LUẬN
+4.1. Kết quả đạt được của đề tài
+   - Tìm hiểu, nắm bắt được các công cụ Visual Studio Code, hệ quản trị CSDL SQL Server và Visual Studio.
+- Rèn luyện phân tích thiết kế hứớng đối tượng.
+- Tìm hiểu và nắm được nghiệp vụ của bài toán.
+- Vận dụng được các công nghệ mới vào ứng dụng.
+- Học và tổ chức được dữ liệu cho bài toán theo thiết kế.
+- Xây dựng được ứng dụng với cac chức năng cơ bản.
+- Nâng cao khả năng tư duy logic, kỹ năng lập trình, phát hiện và sửa lỗi.
+4.2.  Hạn chế của đề tài
+- Code còn chưa được tối ưu.
+- Cấu trúc project chưa tối ưu.
+4.3.  Hướng phát triển của đề tài
+
+TÀI LIỆU THAM KHẢO
+x
+x
+         	[1] Tài liệu về React Native: https://reactnative.dev/
+[2] github: https://github.com/
+[3] w3schools: https://www.w3schools.com/
+      [4] Stackoverflow: https://stackoverflow.com
+      [5] topdev: https://topdev.vn/
+      …
+Xây dựng ứng dụng Exciting Journey
+
+
+Xây dựng ứng dụng du lịch Exciting Journey
+
+
+2
+
+
+1
+
+
+
+
+

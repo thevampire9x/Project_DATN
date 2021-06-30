@@ -1,0 +1,544 @@
+﻿Phần I: Giới thiệu 
+Chương 1: Giới thiệu tổng quan về đề tài
+   1. Tên đề tài:
+		-  Quản lý Website giới thiệu và bán dược phẩm Scorpio trên Laravel Framework
+	2.  Lý do chọn đề tài:
+		- Hiện nay công nghệ ứng dụng thông tin phát triển rộng khắp, các công ty, doanh nghiệp,tổ chức thương mại và các cơ quan nhà nước… đều xây dựng trang website để quáng bá thương hiệu hay ứng dựng tin tức vì thế đề tài ứng dụng công nghệ web này em đã lựa chọn chủ đề xây dựng website giới thiệu sản phẩm: thuốc Scorpio Hải Dương
+	3.  Khách  thể và đối tượng nghiên cứu
+                     -  Các công cụ để xây dựng chương trình.
+	4 .Giới hạn và phạm vi kiến thức:
+	           -  Quản lý Website giới thiệu và bán dược phẩm Scorpio trên Laravel Framework
+	5. Mục đích nghiên cứu:
+		-  Xây dựng Website về mặt tổng thể cũng như chi tiết 
+		-  Giải quyết tối ưu hóa quá trình đăng tải tin tức thông tin về sản phẩm, thương hiệu của nhà sản xuất, những sản phẩm khác…
+		- Đưa ra các báo cáo thống kê tổng hợp.
+	6. Nhiệm vụ nghiên cứu
+		-  Tìm hiểu nghiệp vụ quản lý thông tin về sản phẩmvà nhà sản xuất.
+		-  Tìm hiểu các công cụ xây dựng chương trình.
+	7 .Phương pháp nghiên cứu 
+		-  Khảo sát thực tế.
+		- Thu nhập tài liệu có liên quan bằng sách hoặc qua internet.
+	8. Ý nghĩa luận và tính thực tiễn của đề tài 
+		- Ứng dụng đề tài vào việc tối ưu hóa quá trình đăng tải thông tin sản phẩm.	
+Chương 2: Phát biểu bài toán
+    2.1.Khảo sát
+      2.1.1 Địa điểm khảo sát 
+    - Tại Công ty thuốc Scorpio địa chỉ: Tân Thành, Minh Thành, Quảng Yên, Quảng Ninh, Việt Nam
+      2.1.2 Hiện trạng về khảo sát và đưa ra yêu cầu
+     2.1.2.1 Yêu  cầu về Website                  
+                      a . Đối với khách hàng :
+•  Giao diện dễ sử dụng và tính thẩm mỹ cao
+• Cho phép khách hàng đăng kí thành viên và đảm bảo bí mật thông tin 
+• Xem và thay đổi thông tin về tài khoản. 
+• Cho phép khách hàng xem thông tin về các sản phẩm và có thể đặt hàng trực tiếp.
+• Thông tin sản phẩm phong phú đa dạng :
+- Giới thiệu, trưng bày nhiều loại hàng, nhiều mặt sản phẩm để người xem biết về thông tin sản phẩm từ đó  có nhiều cơ hội lựa chọn về một mặt hàng. Thông tin về một sản phẩm phải chi tiết để khách hàng có thể nắm rõ thông tin về sản phẩm mình lựa chọn. Đặc biệt là những mặt hàng đang được nhiều khách hàng quan tâm 
+- Luôn luôn cập nhật, giới thiệu những sản phẩm thuốc Scorpio mới nhất của các công ty ,cũng như các sản phẩm bán chạy của công ty 
+• Thông tin sản phẩm đảm bảo một cách rõ ràng.
+• Cho phép người dung và thành viên tìm kiếm thông tin nhanh chóng, chính xác theo nhiều tiêu chí khác nhau 
+                  b. Đối với người quản trị 
+  	Ngoài các yêu cầu giống như của khách hàng thì hệ thống phải đảm bảo những yêu cầu sau của ban quản trị:
+• Cập nhật thông tin sản phẩm trực tiếp: dễ dàng cập nhật và thường xuyên thay đổi hình ảnh.thông tin chi tiết các sản phẩm, nhà sản xuất 
+     2.1.2.2 Hiện trạng và quy trình nghiệp vụ
+		    - Công ty có những thao tác nghiệp vụ liên quan đến hoạt động giới thiệu sản phẩm.
+		    - Khách hàng có thể đặt sản phẩm với mẫu đơn gồm thông tin:
+• Thông tin về người mua: họ tên,quê quán,ngày tháng,năm sinh, nghề nghiệp, email , điện thoại
+• Thông tin về hàng: mã, tên sản phẩm ,số luợng, giá, 
+• Thông tin người nhận: thường chỉ thấy mỗi dòng địa chỉ người nhận
+    2.2. Xác định yêu cầu của bài toán
+    2.2.1 Yêu cầu chức năng của hệ thống
+                 Sau khi đi khảo sát thực tế thu thập ý kiến của khách hàng chúng em sẽ xây dựng một hệ thống mới như sau:
+* Xây dựng một website quảng bá sản phẩm với giao diện thân thiện, dễ sử dụng và tính thẩm mỹ cao.
+* Update thông tin một cách nhanh chóng, chính xác.
+* Tìm kiếm thông tin nhanh chóng chính xác.
+* Đưa  ra được những thông tin mới và chính xác về sản phẩm
+    2.2.2.Xác định yêu cầu nghiệp vụ (Khi sử dụng hệ thống)
+               2.2.2.1. Đăng nhập
+       Cho phép người dùng bất kỳ đăng nhập vào hệ thống.Chức năng này bắt đầu khi nhân viên muốn đăng nhập để sử dụng hệ thống để quản lý thông tin,còn khách hàng chỉ đăng nhập khi muốn đặt hàng.
+* Hệ thống yêu cầu nhân viên nhập tên đăng nhập và mật khẩu đăng nhập.
+* Hệ thống kiểm tra tính hợp lệ của tên đăng nhập và mật khẩu đăng nhập và cho phép nhân viên sử dụng hệ thống, nếu như đăng nhập sai thì nhân viên sẽ phải nhập lại thông tin thì mới vào được hệ thống.
+               2.2.2.2. Đăng ký tài khoản
+* Nhân viên
+• Đăng kí:
+• Nhân viên cũng có thể thực hiện những chức năng như khách hàng với vai trò là khách hàng.
+• Nhân viên không thể tự mình đăng kí tài khoản nhân viên vào website mà tài khoản đặc biệt dành cho nhân viên được ban quản trị cấp phát cho từng người.
+• Cấu hình:
+• Thay đổi tài khoản thông tin cá nhân trừ tên đăng nhập là do ban quản trị quy định.
+• Thay đổi mật khẩu
+* Ban quản trị
+• Là những thành viên có quyền cao nhất có thể thay đổi thông tin tài khoản của nhân viên, sử dụng được tất cả chức năng của hệ thống .  Ngoài ra có một nhân viên là người quản trị cao nhất có thể thay đổi được toàn bộ thông tin của những thành viên trong ban quản trị và nhân viên trong công ty.
+• Cập nhật thông tin về sản phẩm, nhà sản xuất hay những thông tin về thuốc Scorpio load lên server
+
+               2.2.2.3. Tìm kiếm
+* Khi cần tìm những thông tin vế sản phẩm thì khách hàng vào phầm tìm kiếm và tìm sản phẩm cần chọn.
+               2.2.2.4 Quản lý sản phẩm
+* Công việc này là của admin như khi thêm, sửa, xóa các loại thuốc và công ty sản xuất nào thì admin sẽ tự động cập nhật thông tin cho sản phẩm.
+               2.2.2.5. Thống kê 
+* Cho phép thống kê về sản phẩm, thu chi.
+2.2.3. Yêu cầu phi chức năng của hệ thống
+	N/A Yêu cầu bảo mật: 
+ Hệ thống có phân quyền, chỉ có người quản trị mới có thể thay đổi CSDL của hệ thống.  
+Yêu cầu về tính sử dụng: 
+   Thời gian đào tạo cần thiết cho người dùng bình thường và người dùng chuyên  trách để thao tác hiệu quả hệ thống:
+* Đối với người sử dụng bình thường (chưa có chuyên môn về tin học văn phòng: Cần chỉ bảo về các tính năng và cách sử dụng phần mềm trong thời gian ngắn).
+* Đối với người dùng chuyên trách: có thể tự tìm hiểu về tính năng và cách sử dụng của phần mềm.
+      Cung cấp một giao diện thân thiện phù hợp với quy trình nghiệp vụ hiện đang vận hành.
+      Hệ thống đơn giản trong cài đặt và quản lý.
+             Yêu cầu về tính ổn định: [NA]
+             Yêu cầu về hiệu năng: [NA]
+            Yêu cầu về khả năng hỗ trợ: [NA]
+            Các ràng buộc thiết kế
+Hệ thống đáp ứng các yêu cầu:
+* Hệ thống được xây dựng trên mã nguồn đóng. 
+* Hệ quản trị cơ sở dữ liệu là phpMyAdmin.
+* Công cụ phát triển là Laravel Framework, Visual Paradigm UML.
+* Phân tích và thiết kế được thực hiện theo chuẩn UML.
+* Các công cụ hổ trợ không tính bản quyền.
+* Hệ thống được thiết kế theo hướng có khả năng phát triển trong tương lai với việc thêm bớt các module, hoặc tích hợp hệ thống vào một hệ thống khác dễ dàng.
+Giao tiếp (Interfaces)
+* Giao diện mang tính chuyên nghiệp, có tính thẩm mỹ.
+* Font chữ: Area, cỡ: 13px.
+* Giao diện thiết kế trên màn hình độ phân giải tối thiểu 800x600, chế độ màu tối thiểu high color (16 bits)Ngôn ngữ sử dụng trong toàn bộ hệ thống là tiếng việt.
+* Định dạng ngày được sử dụng trong hệ thống là: XX/YY/ZZZZ.
+* Định dạng số được sử dụng trong hệ thống là: 000.000.000.
+Giao tiếp phần cứng (Hardware interfaces): N/A
+Giao tiếp phần mềm (Software interfaces): N/A
+Giao tiếp bên ngoài
+Giao tiếp bên trong:N/A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Phần II: Nội Dung 
+Chương 1: Phân tích thiết kế hệ thống
+    1.1.Phân tích chức năng
+    1.1.1.Các yêu cầu chức năng
+1.1.1.1.Đăng nhập
+     Để thực hiện các chức năng quản lí, người quản trị buộc phải đăng nhập thành công vào hệ thống.
+     • Người dùng đăng nhập trực tiếp trên giao diện người dùng của hệ thống trong phần đăng nhập. Nếu đăng nhập thành công thì người dùng mới có thể xem chi tiết các thông tin của trang quản trị: Thông tin chi tiết các sản phẩm, loại sản phẩm..
+     • Người quản trị đăng nhập vào hệ thống trực tiếp trên giao diện  người dùng của hệ thống trong phần đăng nhập.
+     • Nếu tên truy nhập và mật khẩu chính xác hệ thống báo thành công và cho phép truy cập vào trang quản trị của website để thực hiện các chức năng quản lí. 
+1.1.1.2.Quản lý sản phẩm
+     Sau  khi đăng nhập thành công, người quản lý sẽ thực hiện được chức năng quản lý sản phẩm. Chức năng này bao gồm:
+     • Thêm mới sản phẩm, gồm các thông tin: mã, tên sản phẩm, loại, hình ảnh, nội dung, giá nhập, giá bán, ...
+     • Cập nhập thông tin sản phẩm khi cần sửa.
+     • Xóa sản phẩm nếu như không cần sản phẩm đó trong cơ sở dữ liệu.
+2.1.1.3Quản lý loại sản phẩm
+     Sau  khi đăng nhập thành công, người quản lý sẽ thực hiện được chức năng quản lý loại sản phẩm. Chức năng này bao gồm:
+     • Thêm mới loại sản phẩm, gồm các thông tin: mã ,tên loại sản phẩm, miêu tả
+     • Cập nhập thông tin loại sản phẩm  khi cần sửa.
+     • Xóa loại sản phẩm nếu như không cần đến loại sản phẩm đó trong cơ sở dữ liệu.
+1.1.1.4. Quản lý lớp sản phẩm
+     Một sản phẩm sẽ có nhiều mã sản phẩm đi kèm. Việc thực hiện giao dịch thực chất là giao dịch mã có tên sản phẩm. (VD: Sản phẩm có tên HelloKid có 10 mã giao dịch, khi giao dịch chỉ có mã mất đi chứ sản phẩm không mất đi). Sau  khi đăng nhập thành công, người quản lý sẽ thực hiện được chức năng quản lý lớp sản phẩm. Chức năng này bao gồm:
+     • Thêm mới lớp sản phẩm, gồm các thông tin: mã ,tên lớp sản phẩm, miêu tả
+     • Cập nhập thông tin lớp sản phẩm  khi cần sửa.
+     • Xóa lớp sản phẩm nếu như không cần đến lớp sản phẩm đó trong cơ sở dữ liệu.
+1.1.1.5. Quản lý lớp bản tin
+     Sau  khi đăng nhập thành công, người quản lý sẽ thực hiện được chức năng quản lý bản tin. Chức năng này bao gồm:
+     • Thêm mới bản tin, gồm các thông tin: mã ,title, hình ảnh,…
+     • Cập nhập thông tin bản tin  khi cần sửa.
+     • Xóa bản tin nếu như không cần đến bản tin đó trong cơ sở dữ liệu.
+1.1.1.6. Quản lý lớp hóa đơn
+     Sau  khi đăng nhập thành công, người quản lý sẽ thực hiện được chức năng quản lý hóa đơn. Chức năng này bao gồm:
+• Cập nhập thông tin hóa đơn  khi cần sửa.
+     • Xóa hóa đơn nếu như không cần đến hóa đơn đó trong cơ sở dữ liệu.
+1.1.1.7. Quản lý đơn hàng
+     Sau  khi đăng nhập thành công, người quản lý sẽ thực hiện được chức năng quản lý oder. Chức năng này bao gồm:
+     • Xem và kiểm tra trạng thái đơn hàng.
+     • Cập nhập thông tin đơn hàng  khi có thay đổi.
+     • Xóa đơn hàng nếu như đơn hàng bị hủy.
+1.1.1.8.Quản lý tài khoản(user)
+     Chỉ có người quản lý mới được dùng chức năng này. Đây là 1 chức năng quan trọng, bởi nó phân quyền cho mọi người khi muốn đăng nhập vào hệ thống. người quản lý sẽ phân ra các quyền sau:
+     • Quyền root: Người được phân quyền này sẽ được phép quản lý toàn bộ các thông tin của hệ thông. Quyền này chỉ có thể tác động trực tiếp bằng thao tác vào mã nguồn.
+     • Quyền admin: Nếu những người nào được phân quyền này sẽ được phép quản lý các thông tin quan trọng của hệ thống: Thêm mới, cập nhật, xóa, thống kê, tìm kiếm. Tùy vào quyền cụ thể được phân.
+     • Quyền mod: Những người được phân quyền này thì bị hạn chế quyền truy cập vào những phần quan trọng của hệ thống như quản lý phân quyền, chỉnh sửa/xóa hóa đơn. Tùy vào quyền cụ thể được phân.
+1.1.1.9.Quản lý khách hàng(customer)
+     Khi khách hàng đăng nhập vào hệ thống sẽ chuyển khách hàng đến trang sản phẩm để thực hiện giao dịch. Và lưu thông tin trong CSDL của khách hàng nhằm mục đích phục vụ cho lần giao dịch kế tiếp
+     Quản lý khách hàng: Quản trị viên truy cập vào hệ thống, có thể thực hiện các thao tác hệ thống với bản này: 
+1.1.1.10.Quản lý quyền(role)
+     Chức năng này cho phép người quản lý thống kê 1 cách dễ dàng các quyền và cấp độ quyền đã được tạo và sử dụng.
+     Với mỗi quyền nhất định sẽ được cấp một tên quyền để truy cập vào một phân vùng dữ liệu nhất định theo từng cấp quyền từ cao đến thấp. 
+1.1.1.11.Quản lý phân quyền(permission)
+     Chức năng này cho phép tài khoản được cấp một số quyền hạn nhất định để truy cập vào từng phân vùng dữ liệu đã được giới hạn quyền truy cập.
+     Trong trường hợp tài khoản không được cấp quyền truy cập vào phân vùng dữ liệu đó. Hệ thống sẽ tự động đưa tài khoản đến trang đăng nhập và yêu cầu đăng nhập lại. 
+1.1.1.12.Tìm kiếm
+     Chức năng này hiện tại chỉ áp dụng trên trang quản trị:
+     • Tìm kiếm: được thực hiện ngay trên bảng hiển thị danh sách quản lý. Chức năng này có thể tìm kiếm mọi từ khóa có trong bảng.
+     • Tìm kiếm để sửa: Khi muốn thay đổi 1 thông tin nào đó mà người quản lý không thể tìm chính xác vị trí thì sẽ dùng chức năng này để tìm kiếm, sau đó được sửa trực tiếp trên bảng mình vừa tìm được.
+     Chức năng này giúp người quản lý quản trị được dễ dàng hơn.
+1.1.2.Yêu cầu thiết kế CSDL
+1.1.2.1.Quan hệ
+     	Khái niệm: Quan hệ là một bảng dữ liệu hai chiều được đặt tên . Mỗi quan hệ (hay bảng) gồm một số hữu hạn các cột được đặt tên và một số tùy ý các dòng không có tên.  
+1.1.2.2 Tính chất của quan hệ
+     • Mỗi dòng trong bảng phải là duy nhất. Trong bảng không có dòng nào giống hệt nhau. Điều kiện duy nhất của các dòng dữ liệu tương đương với điều kiện là bảng có khóa chính khác trống
+     • Thứ tự các cột trong bảng là không quan trọng. Cột được xác định thông qua tên chứ ko phải dựa vào vị trí của chúng
+     • Thứ tự các dòng là không quan trọng. Cũng như các cột, các dòng có thể đổi chỗ cho nhau, có thể xem dữ liệu trong bảng với các thứ tự khác nhau của các dòng, tùy theo yêu cầu
+     • Quan hệ có lượng dư thừa dữ liệu ít nhất và cho phép người sử dụng thêm, sửa đổi hay xóa các dòng dữ liệu mà không gây ra lỗi hoặc sự ko nhất quan trong bảng. Các thuộc tính có thể được gom nhóm một cách tùy ý thành các lược đồ quan hệ
+     • Tên bảng ở đây viết bằng tiếng việt không dấu và viết hoa các chữ cái đầu tiên 
+1.1.2.3.Các dạng chuẩn hóa lược đồ quan hệ.
+     Lược đồ quan hệ được xây dựng ở thời điểm ban đầu cho nên nó có nhiều nhược điểm như dư thừa dữ liệu, gây ra sự thiếu nhất quán khi bổ sung, muốn sửa chữa hoặc loại  bỏ các dòng trong quan hệ. Chất lượng của các lược đồ quan hệ được cải thiện trên cơ sở biến đổi chuẩn.
+     Chuẩn hóa dữ liệu có thể được xem như là một quá trình phân tích các lược đồ quan hệ cho trước dựa trên các phụ thuộc hàm và các khóa chính để đạt được các tính chất như mong muốn:
+     • Cực tiểu sự dưa thừa
+     • Cực tiểu các phép cập nhật bất thường
+     • Các lược đồ quan hệ không thỏa mãn các kiểm tra dạng chuẩn sẽ được tách thành dạng chuẩn nhỏ hơn thỏa mãn các kiểm tra và các tính chất như mong muốn
+     • Dạng chuẩn 1:
+     o Một quan hệ R là một dạng chuẩn 1(1NF) nếu miền giá trị nguyên tử( đơn , không phân chia được và giá trị của mỗi thuộc tính trong một bộ phải là phải là đơn lấy từ miền giá trị của thuộc tính đó
+     • Dạng chuẩn 2: 
+     o Một quan hệ R là dạng chuẩn 2NF nếu nó thỏa mãn dạng chuẩn 1NF và mỗi thuộc tính không khóa trong R là phụ thuộc hàm đầy đủ vào khóa chính của R
+     • Dạng chuẩn 3:
+     o Một quan hệ R là dạng chuẩn 3NF nếu nó là 2NF và không có thuộc tính không khóa nào của R là phụ thuộc bắc cầu vào khóa chính.
+1.2.Phân tích thiết kế UML
+1.2.1 Biểu đồ usecase
+  1.2.1.1 Danh sách cách actor và các usecase
+Danh sách các Actor (tác nhân)
+     Sau khi đi khảo sát thực tế và tham khảo một số tài liệu chúng em đã phân tích và đưa ra được các chức năng chính của website:
+
+STTTên ActorGiải thích1
+Root/Adminstrator/Mod• Root/Adminstrator/Mod là tác nhân giữ vai trò chính của website: Quyền quản lý là quyền cao nhất của hệ thống. Những người giữ vai trò quản lý chính có thể phân quyền cho các thành viên trong website.
+• Tác nhân Root/Adminstrator/Mod có thể thực hiện được tất cả các chức năng của website như: Tạo,quản lý tài khoản thành viên, quản lý và phân quyền các chuyên mục, Đăng sửa xóa tin bài…
+• Tác nhân Root/Adminstrator/Mod có quền thêm, sửa, xóa,cập nhật thông tin mới.2
+Customer(Visiter)• Truy cập Website xem, tìm kiếm thông tin và thực hiện giao dịch                                      Bảng 1: Danh sách các actor
+Mô tả yêu cầu đối với các Actor
+• Root:
+- Quản trị toàn bộ hệ thống
+- Phân quyền cho các cấp thấp hơn
+• Adminstrator
+     -     Đăng nhập vào Website.
+     -     Quản lý user.
+     -     Quản lý sản phẩm.
+     -      Thống kê
+     - Bảo trì, bảo dưỡng hệ thống website.
+• Mod:
+- Thêm, sửa, xoá thông tin các bài viết.
+• Visiter
+  -	Xem thông tin các bài viết.
+  -	Tìm kiếm thông tin,sản phẩm.
+-	Thực hiện giao dịch
+
+Danh sách các usecase
+STTTên UsecaseActor liên quanGhi chú1Đăng nhậpUser(root, admin, mod,…)Có được quyền truy cập vào hệ thống.2Tạo, quản lí tài khoản UserCó được quyền thêm mới, sửa xóa tài khoản người dùng3Quản lý sản phẩmUserCó được quyền thêm ,sửa xóa thông tin về sản phẩm.4Quản lý member, phản hổi (feedback)Customer(Visiter)Có được quyền quản lý member và các phản hồi của member đối với bản tin6Tìm kiếmUsersTìm kiếm thông tin trên trang quản trị
+  1.2.1.2 Đặc tả các use case
+   Biểu đồ Usecase tổng quan về hệ thống
+
+
+                                   Biểu đồ 1: Biểu đồ usecase tổng quan về website
+
+
+
+1.Biểu đồ usecase đăng nhập
+
+            			Biểu đồ 2: Biểu đồ usecase đăng nhập
+Tên Use case:Đăng nhậpActor chính:Users, customer Mục tiêu:Người dùng được vào hệ thống với những đặc quyền khác nhau.Điều kiện:Hoàn cảnh:Khi một người dùng muốn sử dụng những chức năng cần có quyền truy cập của hệ thống.Mô tả:1. Người dùng vào trang chủ. 
+2. Nhấn button “Đăng nhập”.
+3. Hệ thống đưa trang đăng nhập.
+4. Người dùng nhập vào các thông tin: tên truy cập, mật khẩu.
+5. Nhấn button “Đăng nhập” trong trang đó.
+Ngoại lệ: Nếu thông tin tài khoản của người dùng không phù hợp thì hệ thống sẽ đưa ra thông báo”Tài khoản của bạn không hợp lệ”.
+
+2.Biểu đồ Usecase quản lý tài khoản người dùng 
+
+Hình 3: Biểu đồ usecase tạo, quản lý tài khoản 
+   Tác nhân: Admin.
+Tóm tắt: Chức năng này cho phép Admin tạo tài khoản cho một thành viên mới. Dòng sự kiện:
+➢ Dòng sự kiện chính
+- Admin truy xuất vào chức năng quản lý người dùng
+- Admin chọn người dùng mới để tạo tài khoản và cấp phát quyền của người dùng đó đối với hệ thống
+- Admin chọn người dùng để chỉnh sửa thông tin
+- Admin xóa người dùng
+- Tất cả các tùy chọn được lưu lại và gửi tới webserver để update vào database
+➢ Dòng sự kiện phụ:
+- Nếu tài khoản tạo mới đó đã tồn tại thì hệ thống sẽ thông báo lỗi và yêu cầu Admin kiểm tra và tạo lại.
+- Xóa tải khoản người dùng đồng nghĩa với các bản tin của người dùng đó bị xóa
+- Nếu người đó không đăng ký thì sẽ nhấn vào nút “Thoát” hoặc “Quay lại” thì trang đăng ký sẽ đóng lại.
+3.Biểu đồ Usecase quản lý bản tin 
+
+
+Hình 4.  Biểu đồ Use case quản lý tin tức
+Tên Use case:Thêm tinActor chính:Admin, nhân viên.Mục tiêu:Thêm các tin tức về công ty, sản phẩm.Điều kiện:Người dùng phải đăng nhập vào hệ thống với quyền admin, nhân viên.Hoàn cảnh:Khi muốn thêm vào cơ sở dữ liệu một nhà sản xuất hay thương hiệu nào đó mới đã được duyệt qua thì quản trị có nhiệm vụ thêm tin tức đó vào hệ thống.Mô tả:1. Người quản trị vào trang”Quản lý bản tin”
+2. Admin nhập tin tức gồm thông tin: Đã có trong form dữ liệu
+3. Nhấn button “Thêm thông tin”.
+4. Hệ thống đưa thông báo”Thêm mới thành công”.
+Ngoại lệ: Nếu thông tin bản tin thương hiệu hợp lệ thì hệ thống đưa ra thông báo” Việc đặt hàng không thành công”. Bao gồm các trường hợp sau:
+1. Nhập thiếu thông.
+2. Nhập các thông tin sai kiểu dữ liệu quy định.
+Tên Use case:Xóa tinActor chính:Admin, nhân viênMục tiêu:Xóa các tin tức về công ty.Điều kiện:Người quản trị phải đăng nhập vào hệ thống với quyền admin, nhân viên.Hoàn cảnh:Khi một tin tức nào đó nhà sản xuất không cần đến nữa thì người quản trị có nhiệm vụ xóa tin tức đó trong hệ thống.Mô tả:1. Người dùng vào trang”Quản lý bản tin” 
+2. Người dùng chọn tin mình muốn xóa.
+3. Nhấn buttun “Xóa tin”.
+4. Hệ thống đưa thông báo”Xóa tin thành công”.
+Ngoại lệ:
+Tên Use case:Sửa tinActor chính:Admin, nhân viênMục tiêu:Sửa các tin tức đã đăng tảiĐiều kiện:Người quản trị phải đăng nhập vào hệ thống với quyền admin, nhân viên.Hoàn cảnh:Khi một tin tức nào đó không còn phù hợp nữa thì người quản trị có nhiệm vụ sửa tin tức đó trong hệ thống.Mô tả:1. Người quản trị vào trang”Quản lý tin tức”. 
+2. Người quản trị chọn tin mình muốn sửa, thay đổi các thông tin cần được sửa đổi về thông tin bao gồm: tên,địa chỉ, mô tả …
+3. Nhấn button “Lưu lại”.
+4. Hệ thống đưa thông báo”Sửa tin thành công”.
+Ngoại lệ:
+4.Biểu đồ quản lý user/customer
+
+Hình 4: Biểu đồ usecase quản lý user/customer
+          Tác nhân: Admin
+   Tóm tắt: Có được quyền quản lý user/customer 
+➢ Tác nhân chính:
+- Admin truy xuất vào chức năng quản lý user/customer
+- Admin chọn user/customer để chỉnh sửa user/customer: Kích hoạt tài khoản, khóa tài khoản
+- Admin xóa user/customer khỏi CSDL
+- Tất cả các tùy chọn được lưu lại và gửi tới webserver  để update vào database
+➢ Tác nhân phụ:
+Xóa tải khoản user/customer đồng nghĩa xóa tất cả các thông tin liên quan đến user/customer.
+
+5.Biểu đồ usecase quản lý sản phẩm 
+
+                         Hình 5: biểu đồ usecase quản lý sản phẩm
+Tên Use case:Xóa giỏ hàngActor chính:AdminstratorMục tiêu:Quản lý sản phẩm Điều kiện:Quản trị viên  phải đăng nhập vào hệ thống với quyền admin, nhân viên.
+Đơn đặt hàng không hợp lệ (tùy theo yêu cầu của công ty).Hoàn cảnh:Sản phẩm hết hoặc không còn được bánMô tả:Quản trị viên vào trang”Quản lý sản phẩm”. 
+1. Chọn giỏ hàng cần xóa.
+2. Nhấn button “Xóa”.
+3. Hệ thống đưa thông báo”Xóa thành công”.
+Ngoại lệ:6.Biểu đồ Usecase tìm kiếm 
+
+                                                  Hình 6: Biểu đồ usecase tìm kiếm 
+   Tác nhân: User
+   Tóm tắt : Tìm kiếm tất cả thông có trong bảng đang xem.
+➢ Tác nhân chính:
+- User click trên nút tìm kiếm ở trang chủ và đánh từ khóa
+- Trình duyệt sẽ gửi từ khóa mà User đánh tới webserver
+- Webserver truy vấn CSDL và gửi lại những thông tin tìm kiếm cho User
+
+
+7.Biểu đồ use case quản trị hệ thống
+
+                                  Hình 7 Biểu đồ quản trị hệ thống
+   Tác nhân: Super Admin(root)
+   Tóm tắt: Super Admin(root) thực hiện các thao tác lên các User có trong hệ thống
+➢ Tác nhân chính: 
+- Super Admin(root) cấp quyền truy cập cho các User
+- Super Admin(root) chỉnh sửa/thu hồi quyền truy cập cho các User
+- Sau khi đăng nhập Super Admin(root) cấp quyền truy cập cho các User
+sẽ được cấp phát quyền truy cập vào từng phân vùng dữ liệu nhất định
+-	Thông tin tài khoản đi kèm trong các trường hợp bị khóa hay không
+
+
+8. Biểu đồ usecase quản lý hóa đơn
+
+                                  Hình 8: Biểu đồ usecase quản lý hóa đơn
+   Tác nhân: Admin)
+   Tóm tắt: Admin thực hiện kiểm tra danh sách háo đơn
+➢ Tác nhân chính: 
+- Super Admin có quyền chỉnh sửa hóa đơn khi có thay đổi
+- Super Admin xóa hóa đơn khi hóa đơn bị hủy
+
+
+
+1.2.2 Biểu đồ tuần tự
+1.Đặc tả biểu đồ tuần tự đăng nhập
+
+                                               Hình 9: Biểu đồ tuần tự đăng nhập
+• Khi Admin, User, Customer(Visiter) đăng nhập vào Website thì vào trang đăng nhập.
+• Nhập Username và password, Click vào nút đăng nhập thì hệ thống kiểm tra Username và password trong CSDL có chính xác hay không. Chính xác thì đăng nhập thành công, còn không chính xác thì yêu cầu đăng nhập lại.
+• Đăng nhập thành công thì hệ thống cấp quyền cho là theo id đã được lưu trong CSDL  để sử dụng các chức năng tương ứng trong website cho phù hợp với các quyền.
+
+
+2.Đặc tả biều đồ tuận tự đăng ký thành viên
+
+                                     Hình 10: Biều đồ tuận tự đăng ký thành viên
+• Visiter muốn đăng ký thành viên của website thì chọn phần đăng kí thành viên.
+• Tại trang đang ký thành viên thì yêu cầu Visiter nhập thông tin đăng kí: Username, password, họ tên, email, SDT.
+• Visiter nhập xong thông tin thì hệ thống sẽ mã hóa password và kiểm tra xem có trùng Username, Email hay không. Nếu không trùng thì hệ thống sẽ ghi vào cơ sở dữ liệu và thông báo đăng ký thành công. Nếu trùng sẽ thông báo là trùng và Customer(Visiter) phái nhập lại.
+• Đăng ký thành công  Customer(Visiter) có thể đăng nhập vào website. 
+
+3.Đặc tả biểu đồ tuần tự bản tin.
+
+                                                    HÌnh 11: Biểu đồ tuần tự Bản tin.
+
+• Admin hoặc User đăng nhập vào hệ thống, hệ thống cung cấp cho admin hoặc user một quyền tương ứng và truy cập vào trang đăng tin.
+• Tại trang đăng tin thì Admin hoặc user có thế viết bản tin mới, sửa hoặc xóa một bản tin mình đã đăng tùy thuộc vào quyền của mình. 
+• Dữ liệu mới được update vào CSDL và hệ thống thông báo là update thành công và hiển thị bài viết lên website.
+
+
+
+
+
+
+4.Xem thông tin sản phẩm, tin tức
+
+Hình 12 :biểu đồ tuần tự xem thông tin sản phẩm
+ Người dùng muốn xem thông tin của sản phẩm thì vào trực tiếp trang sản phẩm của trang web,click vào thông tin sản phẩm muốn xem hệ thống sẽ gửi yêu cầu lên server và server kết nối đến cơ sở dữ liệu load thông tin chi thiết của sản phẩm lên trang web.
+ Visitor chỉ được phép xem thông thin về sản phẩm mà không được phép thêm thông tin, sửa xóa thông tin.
+5.Quản lý tài khoản
+
+Hình 13 : Biểu đồ tuần tự quản lý tài khoản
+6. Tìm kiếm
+
+Hình 14  : Biểu đồ tuần tự tìm kiếm sản phẩm
+Chức năng này giành cho người quản trị, nhập thông tin tìm kiếm, hệ thống xử lý và trả ra kết quả.
+
+
+
+CHƯƠNG 2: Phân tích cơ sở dữ liệu
+2.1.Thiết kế cơ sở dữ liệu
+• Các thực thể trong cơ sở dữ liệu:
+• Các loại thuốc 
+• Nhà sản xuất
+• Phân loại thuốc 
+• Thông tin(tin tức)
+• Hóa đơn
+• Khách hàng
+• Thành viên
+• Quản trị 
+2.2.Mô hình cơ sở dữ liệu
+
+      Hình 15 : Bảng cơ sở dữ liệu
+2.2.1. Các bảng trong cơ sở dữ liệu
+STTTên bảngÝ nghĩa/ Ghi chú1Product(sản phẩm)Lưu trữ thông tin về thuốc Scorpio. 2Product type(loại sản phẩm)Lưu trữ thông tin về loại sản phẩm3Product  class(lớp sản phẩm)Lưu trữ thông  tin về mã sản phẩm của sản phẩm4News(tin tức)Lưu trữ tin tức5User(thành viên)Lưu trữ thông tin về thành viên của trang web6CustomerLưu trữ thông  những visitor có tài khoản7Role, PermissionQuản  lý các thông tin về quyền truy cập hệ thống
+Bảng 16 :Danh sách các bảng chính trong cơ sở dữ liệu
+
+
+
+CHƯƠNG 3: Thiết kế module quản trị và giao diện chương trình
+3.1 Giao diện trang web
+3.1.1.Giao diện trang chủ
+	Trang chủ:
+• Trang chủ là một trang tin tức về các linh vực liên quan đến dược và các loại bệnh
+• Trên trang cũng có những mục nhỏ như tin nhanh, dược phẩm hay,…
+• Cuối trang thể hiện được những thông tin liên hệ để người dùng dễ dàng liên hệ cũng như muốn tìm hiểu thêm.
+3.1.2.Giao diện trang sản phẩm
+
+  	Trang sản phẩm:
+• Được kế thừa master page tương tự như trang chủ, trang sản phẩm trình bày tất cả các loại thuốc Scorpio của các hãng thuốc, mỗi sản phẩm đều có ảnh biểu thị và tên thuốc, cũng như giá tiền, khi khách hàng ghé thăm, click vào sản phẩm sẽ hiển thị một trang chi tiết về sản phẩm. 
+• Trên giao diện này cũng có chức năng phân loại nhóm sản phẩm để phù hợp hơn với độ tuổi người sử dụng
+ 
+
+
+3.1.3.Giao diện trang sản phẩm chi tiết
+
+Trang sản phẩm chi tiết là trang mô tả đày đủ các thông tin cho 1 loại thuốc: 
+• Tên thuốc
+• Hình ảnh
+• Thành phần có trong thuốc
+• Mô tả chi tiết
+• Loại thuốc
+• Giá
+3.2 Giao diện giỏ hàng
+
+Giao diện giỏ hàng:
+		Khách hàng sau khi thêm sản phẩm vào giỏ hàng có thể thay đổi số lượng sản phẩm. Cũng như xóa sản phẩm khỏi giỏ hàng.
+
+
+Giao diện thanh toán
+
+
+
+
+
+
+
+
+
+
+	Giao diện thanh toán:
+      Sau khi hoàn tất bước nhập thông tin sản phẩm trong giỏ hàng. Người dùng được chuyển hướng tới một giao diện thanh toán để nhập thông tin mua hàng.
+      Thông tin mua hàng bao gồm: Địa chỉ email, tên khách hàng, số điện thoại để liên hệ,  địa chỉ, ghi chú (nếu đã đăng nhập sẽ lấy thông tin trên tài khoản đăng nhập làm thông tin mặc định.)
+      Sau khi hoàn tất quá trình đặt hàng, toàn bộ dữ liệu đơn hàng sẽ được lưu vào cơ sở dữ liệu để xử lý.
+
+3.2.4: Giao diện đăng nhập 
+
+3.2.1.Giao diện quản lý sản phẩm
+
+
+
+STTTên controlSự kiệnÝ nghĩa1Thêm mới sản phẩmClick và nhậpNhập các tiêu chí đưa thông tin của sản phẩm vào cơ sở dữ liệu và load lên server2Chọn loại sản phẩmClickChọn loại sản phẩm ở từng mục3Chọn ảnhClick Chọn ảnh có sẵn trong thư mục4Chi tiếtClick và nhậpToàn bộ thông tin chi tiết của sản phẩm sẽ hiện ra.
+3.2.2.Giao diện quản lý loại sản phẩm
+
+STTTên controlSự kiệnÝ nghĩa1Tìm kiếmNhập và click buttonTìm kiếm loại sản phẩm hoặc ID đã nhập2IDClick và xoáXoá loại sản phẩm được chọn3.2.3.Giao diện quản lý bản tin
+STTTên controlSự kiệnÝ nghĩa1Tìm kiếmNhập và click buttonTìm kiếm dữ liệu đã nhập vào2thêmClick Thêm thông tin 3SửaClickThay đổi thông tin theo ý muốn4XóaClickXóa thông tin 5Chi tiếtclickXem chi tiết về bản tin
+
+
+3.2.5. Giao diện thêm sản phẩm
+
+
+
+3.2.6. Giao diện sửa sản phẩm
+
+3.2.5.Giao diện tạo và  phân quyền
+
+
+STTTên controlSự kiệnÝ nghĩa1Tên quyềnNhập và click buttonTạo một quyền mới, hoặc chọn từ một tên đã được tạo sẵn2thêmClick Các phân quyền 3SửaClickThay đổi các phân quyền4XóaClickXóa phân quyền
+3.2.6.Giao diện quản lý quyền
+
+
+
+STTTên controlSự kiệnÝ nghĩa1Tên quyềnNhập và click buttonTạo một quyền mới, hoặc chọn từ một tên đã được tạo sẵn2ThêmClick Thêm quyền 3SửaClickThay đổi quyền4XóaClickXóa quyền
+
+
+3.2.7.Giao diện đổi mật khẩu
+
+STTTên controlSự kiệnÝ nghĩa1Mật khẩuNhập mật khẩu cũNhập lại mật khẩu cũ trước khi thực hiện thay đổi mật khẩu2Mật khẩu mớiNhập mật khẩu mớiNhập mật khẩu mới để thực hiện thay đổi mật khẩu3Nhập lại mật khẩu mớiNhập lại mật khẩu mớiNhập lại mật khẩu mới trước khi thực hiện thay đổi mật khẩu
+
+
+CHƯƠNG 4: THỬ NGHIỆM VÀ ĐÁNH GIÁ CHƯƠNG TRÌNH
+4.1.Cài đặt
+    • Yêu cầu hệ thống máy tính tối thiểu:
+    • Hệ điều hành: Windows
+    • Hệ quản trị cơ sở dữ liệu phpMyAdmin version >7.0
+    • Máy cài NET Framework 3.5, XamPP
+4.2.Đánh giá
+    Về cơ bản, hệ thống cung cấp đầy đủ các chức năng phục vụ công tác quản lí như một website thương mại điện tử. Nhưng được cải thiện hơn về phần quản trị hệ thống khi đã có thể phân  đa cấp quyền truy cập hệ thống.
+4.3.Những kết quả đạt được
+    • Với Admin: Người quản trị có thể cập nhật danh sách sản phẩm, tin tức, phân quyền,..
+    • Với Customer: Xem thông tin chi tiết của sản phẩm(thuốc Scorpio) và các tin bài về dược phẩm
+4.4.Các hướng phát triển
+    • Hoàn thiện một số chức năng chưa làm được
+    • Sửa các lỗi xảy ra trong quá trình sử dụng
+    • Triển khai trên hosting
+4.5.Nhận xét
+    	Đồ án đã xây dựng thành công một hệ thống xây dựng website giới thiệu sản phẩm. Việc xây dựng hệ thống được thực hiện theo quy trình công nghệ phần mềm hướng đối tượng, trong đó có sử dụng linq trong lập trình hướng đối tượng.
+    	Hệ thống có khả năng mở rộng thành một hệ thống lớn hơn, hỗ trợ thêm nhiều chức năng mới, phục vụ nhu cầu ngày càng cao của người sử dụng
+    	Chúng em hy vọng rằng đề tài này sẽ nhận được sự quan tâm của nhiều người sử dụng, đặc biệt là của Khoa Công nghệ thông tin Đại học Sư phạm Kỹ thuật Hưng Yên. Em luôn mong muốn nhận được sự góp ý, đánh giá của mọi người để hệ thống của em được ngày càng hoàn thiện hơn.
+
+
+Phần III:KẾT LUẬN
+    	Trong thời gian thực hiện đề tài, em phân chia bố trí công việc một cách hợp lý. Với sự cố gắng nỗ lực hết mình tuy nhiên năng lực và sự hiểu biết còn hạn chế nên hệ thống chưa được đầy đủ
+    	Kết quả đạt được:
+    • Tìm hiểu được công nghệ và ứng dựng website
+    • Thiết kế một website thương mại điện tự
+    • Tìm hiểu tương đối kỹ về nghiệp vụ quản trị
+    • Phân quyền động, phân quyền theo từng chức năng
+    • Phân tích thiết kế hệ thống tương đối đầy đủ các chức năng
+    • Giao diện hệ thống được thiết kế đơn giản, thân thiện và dễ sử dụng
+    • Tiếp cận và ứng dụng được phương pháp lập trình theo laravel framework
+    Hạn chế:
+    • Việc biểu diễn các thông tin trên chưa được linh hoạt
+    • Các thao tác quản lý còn chậm
+    Sinh viên thực hiện
+    Đỗ Xuân Hiếu
+    
+    
+        
+Phần IV
+TÀI LIỆU THAM KHẢO
+    Docs:
+    [1]. https://laravel.com/docs/5.8/
+    [2]. https://youtube.com
+    [3]. http://howkteam.com
+    [4] http://google.com.vn
+    [5] https://stackoverflow.com/
+    
+    
+    
+    
+
+ 
+
+
+
+56
+
+

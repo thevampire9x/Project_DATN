@@ -1,0 +1,702 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+      Cùng với sự phát triển không ngừng về kỹ thuật máy tính và mạng điện tử, công nghệ thông tin cũng được những công nghệ có đẳng cấp cao và lần lượt chinh phục hết đỉnh cao này đến đỉnh cao khác. Mạng Internet là một trong những sản phẩm có giá trị hết sức lớn lao và ngày càng trở thành một công cụ không thể thiếu, là nền tảng chính cho sự truyền tải, trao đổi thông tin trên toàn cầu. 
+    Bằng internet, chúng ta đã thực hiện được nhiều công việc với tốc độ nhanh hơn và chi phí thấp hơn nhiều so với cách thức truyền thống. Chính điều này, đã thúc đẩy sự khai sinh và phát triển của thương mại điện tử và chính phủ điện tử trên khắp thế giới, làm biến đổi đáng kể bộ mặt văn hóa, nâng cao chất lượng cuộc sống con người. 
+    Vì lý do đó việc ứng dụng công nghệ thông tin vào thực tiễn đời sống xã hội, giảm thiểu được sức lao động của con người, tăng hiệu quả kinh tế. Bán hàng online cũng là lĩnh vực đang được rất nhiều người quan tâm và được ứng dụng vào thực tế.
+     Là những sinh viên đại học ngành công nghệ thông tin, với sự góp ý của các thầy hướng dẫn và cũng xuất phát từ nhu cầu thực tế đó em rất mong  muốn có thể tự mình tìm hiểu về công nghệ mới, ngôn ngữ mới PHP, áp dụng framework trong việc xây dựng website bán hàng online và cho ra đời một sản phẩm: “Website bán đồ điện – điện tử cho cửa hàng Linh_Elect”.
+1.2 Mục tiêu của đề tài
+    - Phân tích được bài toán quản lý bán hàng online, hiểu được quy trình quản lý hệ thống.
+    - Tìm hiểu cơ sở lý thuyết của hệ quản trị cơ sở dữ liệu MySql, ngôn ngữ lập trình  PHP và Laravel framework để xây dựng website.
+    - Phân tích và thiết kế CSDL, các biểu đồ use case và biểu đồ tuần tự.
+- Xây dựng Website giới thiệu và Website bán đồ điện – điện tử cho cửa hàng Linh_Elect.
+1.3 Giới hạn và phạm vi của đề tài
+  Đề tài bước đầu được xây dựng để áp dụng cho việc quản lý và bày bán sản phẩm online; sau đó có thể phát triển thêm và ứng dụng cho các cưa hàng trong thực tế..
+  Trong phần này từng bộ phận được tổ chức lại, xây dựng một hệ thống lưu trữ cơ sở dữ liệu phù hợp với nhu cầu, hỗ trợ các công việc mua bán qua mạng nhằm mở rộng phạm vi kinh doanh của cửa hàng.
+1.4 Nội dung thực hiện
+Nội dung thực hiện/ nghiên cứu cụ thể của đề tài: 
+- Hiểu được cách sử dụng cơ bản của ngôn ngữ PHP, trong đó có các đối tượng, biến, hàm, phương thức, thuộc tính…
+- Tìm hiểu cách sử dụng Laravel framework trong thiết kế và lập trình website bằng ngôn ngữ PHP 
+- Khảo sát và phân tích yêu cầu quy trình quản lý và bán hàng online. 
+- Thiết kế và đặc tả hệ thống.
+- Xây dựng cơ sở dữ liệu. 
+- Triển khai thực nghiệp hệ thống trên mạng Internet.
+1.5 Phương pháp tiếp cận
+- Nghiên cứu quy trình quản lý và bán hàng online trên truyền thông và mạng internet, nghiên cứu ngôn ngữ PHP, Laravel framework và mô hình MVC. 
+- Sử dụng các phương pháp nghiên cứu:  
+o Phương pháp đọc tài liệu. 
+o Phương pháp phân tích mẫu, thực nghiệm
+1.6 Kết luận chương 1
+   Trong chương 1 đã nêu nên lý do chọn đề tài xây dựng “Website bán đồ điện – điện tử cho của hàng Linh_Elect”. Cũng như mục tiêu, phạm vi, nội dung và phương pháp thực hiện. Chương tiếp theo là tìm hiểu và giới thiệu về ngôn ngữ PHP, Laravel framework và MySql.
+CHƯƠNG 2: GIỚI THIỆU PHP VÀ LARAVEL FRAMEWORK
+2.1 Giới thiệu về ngôn ngữ PHP
+2.1.1   PHP là gì ?
+   PHP(viết tắt “PHP: Hypertext Preprocessor” hay còn là viết tắt của Personal Home Page) là ngôn ngữ lập trình kịch bản. Một loại mã lệnh chủ yếu để phát triển các ứng dụng cho máy chủ, mã nguồn mở. Nó dùng cho mục đích tổng quát. Nó rất thích hợp với website và có thể dễ dàng nhúng vào các trang HTML.
+   Ngôn ngữ PHP sử dụng mã nguồn mở nên bạn hoàn toàn có thể sử dụng PHP miễn phí cho việc thực hiện xây dựng các trang website của mình. PHP có thể chạy trên nhiều nền tảng hệ điều hành khác nhau. Do được tối ưu hóa cho web, tốc độ nhanh, nhỏ gọn, thời gian xây dựng sản phẩm tương đối ngắn so với các ngôn ngữ khác nên PHP đã nhanh chóng trở thành ngôn ngữ lập trình phổ biến trên thế giới.
+2.1.2  Ưu điểm  của PHP
+- Điều dễ nhận thấy nhất đó là PHP sử dụng miễn phí. Bạn có thể tự học nó mà không phải trả bất kì một chi phí nào.
+- PHP hoạt động với tốc độ nhanh và hiệu quả, hỗ trợ kết nối đến hàng triệu cơ sở dữ liệu khác nhau.
+- PHP là ngôn ngữ với cấu trúc đơn giản, dễ hiểu nên sẽ không mất nhiều thời gian để làm quen và hiểu được nó.
+- PHP có một thư viện phong phú. Cộng đồng hỗ trợ mạnh mẽ nên dễ dàng tìm nguồn tài liệu cũng như nhận được sự hỗ trợ của nhiều design nỏi tiếng.
+- PHP sử dụng mã nguồn mở nên tạo ra sự linh hoạt cho các lập trình viên trong quá trình sửa chữa và sáng tạo.
+- PHP phù hợp với các doanh nghiệp có website vừa và nhỏ.
+2.1.3  Nhược điểm của PHP
+- Cấu trúc ngữ pháp không được gọn gàng và đẹp mắt như những ngôn ngữ lập trình khác. Đôi khi còn khá rối mắt cho người mới bắt đầu.
+- PHP chỉ hoạt động trên các ứng dụng web.
+2.1.4  So sánh PHP với các ngôn ngữ lập trình khác
+So với ASP.NET 
+- ASP.NET thường được viết bằng C#. C# được xây dựng trên C nên có thể khó học cho hầu hết người mới bắt đầu. Cú pháp của nó khá phức tạp và khó đọc, ngay cả đối với các lập trình viên có kinh nghiệm. Những người mới tiếp xúc với lập trình sẽ thấy ASP.NET khó học hơn. Mặt khác, PHP là rất dễ học. Bạn có thể chỉ cần học một vài dòng code đơn giản là có thể bắt đầu mày mò với các theme WordPress gần như ngay lập tức. 
+- Cả ASP.NET và PHP thường cung cấp hiệu suất cao về tốc độ xử lý vì được liến kết với quyền truy cập cơ sở dữ liệu.
+- Bên trong ASP.NET đi kèm với một bộ xác thực Windows và được cấu hình chặc chẽ từ Micrsoft cho nên bấc kỳ ứng dụng nào từ ASP.NET điều cho thấy sự an toàn vượt trội.
+So với Python 
+- Python là hướng khía cạnh (AOP), trong khi PHP là hướng đối tượng (OOP).
+- PHP được mã hoá chặt chẽ, Python rất linh hoạt.
+- Python hỗ trợ phát triển full-stack, PHP được sử dụng rộng rãi trong back-end cho trang web.
+- Cú pháp PHP tương tự như ngôn ngữ C, các ký hiệu khác nhau được sử dụng để tích hợp mã, trong khi Python được tích hợp bằng cách sử dụng phím space và tab hơn là các ký hiệu.
+2.2 Giới thiệu về Laravel framework 
+2.2.1  Giới thiệu về Laravel
+   Laravel là một Framework MVC (Model – View- Controller) với bundles, migrations và Artisan CLI. Laravel cung cấp một bộ công cụ mạnh mẽ và một cấu trúc ứng dụng kết hợp nhiều tính năng nổi trội của các framework khác như là Codeigniter, Yii, Ruby on Rails, ASP.NET MVC, Sinatra và vân vân…
+   Laravel là một framework mã nguồn mở. Nó có một đống các tính năng mà có thể giúp bạn tăng tốc quá trình phát triển website lên một cách nhanh chóng. Nếu như bạn đã rành PHP cơ bản và nâng cao rồi thì khi học Laravel sẽ trở nên dễ dàng hơn rất nhiều. Nó sẽ giúp bạn tiết kiệm một khối lượng thời gian đáng kể nếu như bạn đang có ý định xây dựng một website từ đầu. Không chỉ vậy, website được xây dựng trên nền Laravel cực kì bảo mật tốt. Nó sẽ ngăn chặn được rất nhiều các kiểu tấn công từ bên ngoài tới website của bạn.
+   Laravel đặc điểm nổi bật sau: 
+   - Là một framework xây dựng theo mô hình MVC
+   - Có các tính năng được dựng sẵn
+   - Khả năng test tốt
+   - Quản lý mọi cấu hình (configuration management).
+2.2.2  Tìm hiểu về laravel framework
+a. Laravel framework là gì?
+   Laravel là một PHP Framework mã nguồn mở và miễn phí, được phát triển bởi Taylor Otwell và nhắm mục tiêu hỗ trợ phát triển các ứng dụng web theo cấu trúc model- view- controller (MVC).
+b. Laravel là sự lựa chọn rất tốt cho người mới bắt đầu
+   Laravel Framework là một framework mã nguồn mở, toàn bộ code của nó được đặt trên github, bạn có thể dễ dàng pull về và xem cách nó hoạt động như nào? Code của Laravel trong sáng và dễ đọc nó giúp quá trình viết code của bạn trở nên đơn giản và nhanh chóng. Nó vô cùng đáng tin cậy và số lượng lập trình viên làm việc với nó thực sự lớn, nên tìm tài liệu cũng như là thắc mắc những vấn đề về code luôn tìm được cách giải quyết. Bạn có thể xem hình dưới đây và hiểu tại sau mình nói như vậy. 
+   Laravel được xây dựng dựa trên hơn 20 thư viện khác nhau. Hiểu được cách thiết kế framework khiến các dev hoàn toàn có thể đóng góp cho framework cũng như mở rộng chúng một cách dễ dàng. Dễ hiểu khi Laravel luôn có cộng đồng support đông đảo và "trâu" như vậy. 
+   Laravel sử dụng MVC pattern để xây dựng framework. Nó đảm bảo rằng các code được trình bày logic và hợp lý. Dễ dàng để có thể hiểu được nó. Vì vậy nó làm cho web project của bạn được trở nên dễ quản lý cũng như phát triển rất rất nhiều. 
+   Laravel tạo điều kiện cho các developer có thể thay đổi tùy chọn và cấu hình để phù hợp với nhiều môi trường. Các developer cũng có thể viết các gói ( package ) có thể là một tính năng hay một đoạn code gì đó. Nó dễ dàng được khai báo trong Laravel thông qua các provider. Chính điều này  + với số lượng các developer đông đảo thì số lượng package mà Laravel có ngày càng tăng lên. Bạn có thể dễ dàng tìm được một vài đoạn code cũng như một vài tính năng mà bạn mong muốn trong project của bạn chỉ trong vài phút. Nó tiết kiệm hơn so với việc phải ngồi viết code cho tính năng đó.
+c. Cần bao lâu để làm chủ được Laravel
+   Bạn sẽ cần phải dành ra bao nhiêu thời gian để học mỗi ngày? Tôi tin rằng bạn có thể có được một sự hiểu biết rất tốt về laravel chỉ trong vòng một vài tháng nghiên cứu chuyên tâm.
+   Nhưng để trở thành một chuyên gia thì sẽ mất 10.000 giờ cũng giống như để thông thạo bất kỳ kỹ năng nào khác, do đó, điều tốt nhất bạn có thể làm bây giờ là hãy bắt đầu ngay.
+   Và tất nhiên, mức độ bạn quen thuộc với lập trình nói chung sẽ có một ảnh hưởng lớn đến việc bạn học laravel nhanh ra sao.
+   Nhưng nếu bạn là một người hoàn toàn mới học lập trình, thì laravel là nơi tuyệt vời để bắt đầu.
+   
+   d. Sức mạnh của laravel trong việc phát triển web 
+   Laravel cung cấp laracasts không chỉ cung cấp tutorial miễn phí mà nó còn cung cấp các hướng dẫn của cách chuyên gia, giúp các nhà phát triển các vấn đề phức tạp thông qua mã hóa. Nội dung có sẵn trên nền tảng này được phát triển bới các "professionals" và các chuyên gia với các hướng dẫn rõ ràng và có cấu trúc giúp phát triển các giải pháp tối ưu hóa theo yêu cầu. Vì vậy, laracast là một cung cụ hữu ích để học và thực hành laravel một cách.
+   Sự hỗ trợ MVC là một trong những yếu tố quan trọng giúp cho Laravel trở thành framework PHP tốt nhất để phát triển. Hầu hết các nền tảng không cung cấp hỗ trợ MVC, trong khi đó Laravel hỗ trợ mô hình MVC giúp cải thiện hiệu suất tổng thể, tài liệu tốt hơn và cung cấp nhiều chức năng. Điều này làm cho sự phát triển của Laravel khá hấp dẫn và dễ dàng
+   Với Laravel, bạn có Artisan, một môi trường dự án tích hợp của Laravel giúp quản lý mọi thứ dễ dàng hơn cho các nhà phát triển. Nó cũng giúp nhà phát triển thực hiện các nhiệm vụ lập trình dài một cách rắc rối miễn phí bằng cách cung cấp một cách mã hóa có cấu trúc. Việc dễ dàng quản lý cấu trúc cơ sở dữ liệu giúp tiếp tục tạo mã hiệu quả cho một loạt các yêu cầu đa dạng.
+    Khi nói đến phát triển web, có một số lượng lớn nền tảng có sẵn trên thị trường. Thế nhưng để chọn được nền tảng phù hợp với yêu cầu thì Laravel là một nền tảng khá thích hợp với thị trường hiện nay. Laravel không chỉ hỗ trợ một số lượng lớn các tham số mà còn được support bởi một cộng đồng lớn giúp quá trình phát triển trở nên dễ dàng hơn rất nhiều. Vì vậy, đây là một vài lý do tạo sao Laravel lại phù hợp cho các yêu cầu phát triển web.
+2.2.3  Mô hình MVC
+   MVC là viết tắt của Model – View – Controller. Là một kiến trúc phần mềm hay mô hình thiết kế được sử dụng trong kỹ thuật phần mềm. Nói cho dễ hiểu, nó là mô hình phân bố source code thành 3 phần, mỗi thành phần có một nhiệm vụ riêng biệt và độc lập với các thành phần khác.
+   Model Đây là thành phần chứa tất cả các nghiệp vụ logic, phương thức xử lý, truy xuất database, đối tượng mô tả dữ liệu như các Class, hàm xử lý…
+   View sẽ chịu trách nhiệm tạo ra giao diện người dùng, và giao diện này sẽ dựa trên model.View sẽ lấy dữ liệu từ model và chuyển đổi thành giao diện hiển thị lên cho người dùng. Công việc của view là chỉ có hiển thị chứ không xử lý bất kỳ thao tác nào của người dùng. Một model có thể được truy cập bởi nhiều view. Mọi kết nối tới ứng dụng của người dùng đều thông qua Views. Views là những gì sẽ hiện thị tới người dùng, được viết theo một format nhất định.
+   Controller sẽ chịu trách nhiệm vận hành ứng dụng. Controller sẽ nhận các sự kiện từ bên ngoài, thông thường là từ người dùng, sau đó tương tác với model và gọi view tương ứng để hiển thị.
+    
+    Hình 1:Mô Hình MVC
+    Cách thức mà laravel tương tác với người dùng:
+    
+    Hình 2:Cách thức mà laravel tương tác với người dùng
+1. Yêu cầu từ người dùng được gửi đến routers
+2. Laravel thông qua routers, request tới action trong controller.
+3. Controller sẽ gửi yêu cầu tới Model để lấy dữ liệu.
+4. Model sẽ lấy toàn bộ users trong cơ sở dữ liệu ra.
+5. Model trả dữ liệu cho controller.
+6. Controller sẽ đưa dữ liệu về users (bằng biến $users ) tới Views.
+7. Views sử dụng format để lấy users và hiển thị trên file html.
+8. Controller trả file html cho browser và hiển thị lên người dùng
+2.3 Hệ quản trị cơ sở dữ liệu MySql
+2.3.1   MySql là gì ?
+   MySQL là một RDBMS nhanh và dễ dàng để sử dụng. MySQL đang được sử dụng cho nhiều công việc kinh doanh từ lớn tới nhỏ. MySQL được phát triển, được công bố, được hỗ trợ bởi MySQL AB, là một công ty của Thụy Điển..
+2.3.2  Ưu điểm  của MySql
+- MySQL là mã ngồn mở. Vì thế, để sử dụng nó, bạn chẳng phải mất một xu nào.
+- MySQL là một chương trình rất mạnh mẽ.
+- MySQL sử dụng một Form chuẩn của ngôn ngữ dữ liệu nổi tiếng là SQL.
+- MySQL làm việc trên nhiều Hệ điều hành và với nhiều ngôn ngữ như PHP, PERL, C, C++, Java, …
+- MySQL làm việc nhanh và khỏe ngay cả với các tập dữ liệu lớn.
+- MySQL rất thân thiện với PHP, một ngôn ngữ rất đáng giá để tìm hiểu để phát triển Web.
+- MySQL hỗ trợ các cơ sở dữ liệu lớn, lên tới 50 triệu hàng hoặc nhiều hơn nữa trong một bảng. Kích cỡ file mặc định được giới hạn cho một bảng là 4 GB, nhưng bạn có thể tăng kích cỡ này (nếu hệ điều hành của bạn có thể xử lý nó) để đạt tới giới hạn lý thuyết là 8 TB.
+- MySQL là có thể điều chỉnh. Giấy phép GPL mã nguồn mở cho phép lập trình viên sửa đổi phần mềm MySQL để phù hợp với môi trường cụ thể của họ.
+
+2.4 Kết luận chương 2
+- Trong chương 2 của đồ án đã nên được nội dung lý thuyết quá trình tìm hiểu công nghệ về ngôn ngữ lập trình PHP, web Laravel framwork và hệ quản trị cơ sở dữ liệu MySql. Chương tiếp theo sẽ tiến hành xây dựng “Website bán đồ điện – điện tử cho của hàng Linh_Elect” .
+
+CHƯƠNG 3: XÂY DỰNG WEBSITE BÁN ĐỒ ĐIỆN – ĐIỆN TỬ CHO CỬA HÀNG LINH_ELECT
+3.1. Khảo sát và phân tích yêu cầu
+3.1.1 Thời gian và địa điểm khảo sát
+- Tham khảo một số website bán hàng online trên mạng như: Tiki,  Shoppe…
+3.1.2 Thông tin liên hệ
+- Bộ môn CNPM – Khoa Công Nghệ Thông Tin – Trường ĐHSPKT Hưng Yên - Hưng Yên.
+3.1.3 Thông tin dự án
+- Tên dự án: “XÂY DỰNG WEBSITE BÁN ĐỒ ĐIỆN – ĐIỆN TỬ CHO CỬA HÀNG LINH_ELECT”
+- Người thực hiện: Tiêu Quang Linh.
+- Người hướng dẫn: Nguyễn Thị Hải Năng.
+- Ngày thực hiên: 26/03/2020
+- Dự kiên ngày hoàn thành: 30/06/2020
+3.1.4 Yêu cầu của hệ thống sau khảo sát
+    Bảng 1: Yêu cầu của hệ thống
+    STT    Tên yêu cầu    1Đăng nhập vào hệ thống quản trị    2Hiển thị thông tin loại sản phẩm lên thanh menu của website     3Hiên thị nội dung của website như sản phẩm mới nhất…    4Hiên thị thông tin chi tiết về sản phẩm    5Hiển thị thông tin kết quả tìm kiếm    6Quản lý giỏ hàng khi khách hàng thêm sản phẩm vào giỏ hàng    7Chức năng đặt hàng    8Chắc năng tìm kiếm và lọc thông tin theo yêu cầu của khách hàng    9Hiển thị thông tin chi tiết sản phẩm khi chọn xem một sản phẩm    10Quản lý hóa đơn và chi tiết hóa đơn    11Quản lý sản phẩm    12Quản lý loại sản phẩm    13Quản lí phản hồi    14Quản lý thương hiệu
+3.1.5 Mô tả yêu cầu của hệ thống
+• Các yêu cầu chức năng
+Bảng 2: Yêu cầu chức năng
+    
+STTTên yêu cầuMô tả yêu cầuICác yêu cầu chức năng nghiệp vụLà các chức năng của phần mềm tương ứng với các công việc trong thế giới thực.1Quản lý thông tin sản phẩm, chi tiết sản phẩm Chức năng này cho phép người quản lý duy trì thông tin của sản phẩm bày bán trong cửa hàng. Bao gồm thêm mới, sửa, xóa, tìm kiếm, hiển thị thông tin sản phẩm. Công việc nay do nhân viên dảm nhận.2Quản lý thông tin loại sản phẩm  Chức năng này cho phép người quản lý quản lý được thông tin loại sản phẩm. Bao gồm thêm, sửa, xóa, tìm kiếm và hiển thị thông tin loại sản phẩm.3Quản lý thương hiệu Chức năng này cho phép người quản lý, quản lý thông tin về các thương hiệu đang cung cấp sản phẩm cho cửa hàng. Bao gồm thêm, sửa, xóa, tìm kiếm, hiên thị thông tin thương hiệu.4Quản lí giỏ hàngKhi tham khảo đầy đủ thông tin về sản phẩm khách hàng có thể đặt mua ngay tại website thông qua chức năng giỏ hàng mà không cần phải đến điềm giao dịch, giỏ hàng có thể thêm, bớt, thanh toán tiền các sản phẩm đã mua. Khi chọn thanh toán giỏ hàng khách hàng phải ghi đầy đủ thông tin cá nhân, thông tin này được hệ thống lưu trữ xử lý.IICác yêu cầu chức năng hệ thốngLà các chức năng của phần mềm được phát sinh thêm khi thực hiện một công việc trên máy tính1Quản lí sản phẩm    + Quản lý loại sản phẩm
++ Quản lý thông tin2Quản lí hệ thống+ Quản lý thông tin tài khoản
++ Đổi mật khẩu
++ Thêm tài khoản
+• Các yêu cầu phi chức năng
+    Bảng 3: Yêu cầu phi hệ thống
+STTTên yêu cầuMô tả yêu cầu1Website chạy ổn định Website chạy ổn định trên môi trường Web2Giao diện thân thiện Giao diện thân thiện, dễ dàng thao tác, dễ sử dụng.3Bảo mật dữ liệu Đảm bảo dữ liệu được bảo mật, phẩm quyền quản lý, giới hạn quyền cho các tài khoản, các tác nhân
+3.2. Phân tích thiết kế với UML
+3.2.1   Biểu đồ Use case
+➢ Xác định các tác nhân và tình huống sử dụng Use case 
+   Qua khảo sát hiện trạng thực tế, kết hợp với việc tham khảo tài liệu và phân tích ý kiến của người dùng, hệ thống có các tác nhân sau:
+
+
+
+
+
+
+
+      Bảng 4: Xác định tác nhân
+STTTác Nhân    Diễn Giải    
+    
+    
+1
+       Những người thuộc nhóm quyền này có quyền truy xuất những chức năng của hệ thống có nhiệm vụ bảo trì hệ thống: đăng nhập đổi mật khẩu; thay đổi thông tin cá nhân, sao lưu phục hồi dữ liệu; quản lý sản phẩm, quản lý loại sản phẩm, quản lý user, quả lý thông tin khách hàng, quản lý hóa order – oder detail, quản lý hình ảnh, quản lý bài viết, giảm giá. Ngoài ra họ có thể phân quyền người sử dụng hệ thống.    
+    
+2
+        Những người thuộc nhóm quyền này có thể xem và tìm kiếm thông tin sản phẩm; mua hàng, xem sửa xóa thông tin giỏ hàng, thanh toán;  xem sản phẩm mới nhất, bán chạy nhất.
+
+
+
+
+
+
+• Các quyền sử dụng
+    Bảng 5: Xác định quyển sử dụng  
+STTTác nhân chính    Tên Use case1    AdminĐăng nhập2    AdminQuản lý Sản phẩm3    AdminQuản lý Loại sản phẩm4    AdminQuản lý thông tin khách hàng5    AdminQuản lý hóa đơn và chi tiết hóa đơn6    AdminQuản lý thương hiệu7    Khách hàngQuản lý giỏ hàng, tìm kiếm sản phẩm, xem thông tin sản phẩm, chi tiết sản phẩm, đặt hàng, xem giỏ hàng, phản hồi.
+
+• Biểu đồ Use – case tổng quát
+
+    Hình 3:Biểu đồ usecase tổng quát
+Mục đích: Sử dụng Website “bán đồ điện – điện tử cho cửa hàng Linh_Elect” nhằm mục đích giúp cho việc quản lý, bán hàng mà không phải tốn nhiều công sức, thời gian... 
+- Tác nhân: Người dùng hệ thống như: admin, khách hàng
+- Mô tả: Hệ thống cho phép người dùng vào sử dụng các chức năng để thực hiện việc quản lý, nhập liệu cũng như thống kê các báo cáo, tìm kiếm thông tin.
+ Điều kiện cần: Người dùng phải truy cập vào website để thực hiện các quyền của khách hàng. Riêng với các quyền quản trị của website thì cần đăng nhập vào trang quản trị sau đó mới thực hiện được các chức năng mong muốn.
+Dòng sự kiện:
+
+
+       Dòng sự kiện chính: 
+    Bảng 6: Dòng sự kiện chính cho usecase hệ thống
+Hành động của tác nhânPhản ứng của hệ thống1. Truy cập vào website  2. Hiên thị các chức năng xem thông tin, tìm kiếm, đặt hàng của khách hàng.1. Đăng nhập vào hệ thống. 
+3. Nhập thông tin đăng nhập.  
+5. Gửi thông tin đăng nhập tới hệ thống.
+6. Chọn sử dụng một chức năng.  
+8. Đưa ra các thông số đầu vào.2. Hiển thị trang đăng nhập. 
+4. Kiểm tra thông tin đăng nhập và loại tài khoản, nếu đúng thì cho phép truy cập hệ thống, sai thì đưa ra thông báo. 
+7. Hiển thị giao diện chức năng
+ 9. Xử lý và trả ra các kết quả tương ứng.
+      Dòng sự kiện phụ: Người dùng đăng nhập sai tài khoản sẽ không vào sử dụng được những chức năng này của hệ thống. 
+• Dòng sự kiện thứ nhất:
+- Hệ thống hiển thị thông báo không đăng nhập thành công khi tên và mật khẩu đưa vào không hợp lệ. 
+- Kết thúc use case. 
+• Dòng sự kiện thứ hai: 
+- Hệ thống có lỗi trong quá trình xử lý xác nhận tài khoản. 
+- Hiển thị thông báo lỗi. 
+- Kết thúc use case.
+• Biểu đồ use-case “Đăng nhập”
+    ➢ Biểu đồ Usecase: Đăng nhập
+    
+    Hình 4: Biểu đồ use-case đăng nhập
+    
+Mô tả tóm tắt:
+o Tên ca sử dụng: Đăng nhập
+o Mục đích: Đảm bảo xác thực người dùng, người quản lý và các yêu cầu về bảo mật của hệ thống.
+o Tác nhân: Admin
+o Tóm lược: Người dùng muốn sử dụng các dịch vụ của hệ thống thì bắt buộc phải đăng nhập vào hệ thống thông qua username và password. Hệ thống sẽ kiểm tra thông tin xem người dùng có đúng là thành viên của hệ thống không, nếu đúng thì người dùng có thể truy cập vào hệ thống với quyền nhất định đã được quy định.
+Mô tả quá trình:
+o Thông tin đầu vào là : Username , password
+o Dòng sự kiện chính:
+
+
+    Bảng 7: Mô tả dòng sự kiện chính cho chức năng đăng nhập
+Hành động của tác nhânPhản ứng của hệ thốngChọn chức năng đăng nhập khi đã có tài khoản hoặc sau khi đăng kí xong hệ thống tự động cho thành viên vào trang đăng nhập.Hiển thị trang chủ, tại đây người dùng có thể đăng nhập vào hệ thống.Nhập thông tin tài khoản.Gửi thông tin đăng nhập tới hệ thống.Kiểm tra thông tin đăng nhập, nếu đúng thì cho phép truy cập hệ thống, sai thì thông báo lỗi và yêu cầu nhập lại thông tin.
+o Dòng sự kiện phụ:
+- Nếu người dùng nhập tên truy cập và mật khẩu không đúng thì hệ thống sẽ yêu cầu nhập lại.
+- Khi người dùng nhập chính xác thông tin tài khoản của mình, hệ thống xử lý và thông báo đăng nhập thành công, tự động bật lên admin cho người dùng thao tác với các chức năng đã định.
+- Đối với người quản lý, nếu dùng username và password không đúng, hệ thống thông báo thông tin đăng nhập sai. Nếu thông tin đăng nhập chính xác thì thông báo đăng nhập thành công và chuyển đến trang quản trị.
+- Người quản lý hay người dùng muốn thay đổi thông tin tài khoản, chọn chức năng thay đổi mật khẩu, hệ thống hiển thị trang thay đổi mật khẩu.
+- Người quản lý hay người dùng muốn thay đổi thông tin tài khoản, chọn chức năng thay đổi mật khẩu, hệ thống hiển thị trang thay đổi mật khẩu.
+    
+    
+    
+    
+
+• Biểu đồ use-case “Quản lý sản phẩm ”
+    ➢ Biểu đồ Usecase: Quản lí sản phẩm
+    
+    Hình 5: Biểu đồ use-case Quản lý sản phẩm
+Mô tả tóm tắt:
+o Tên ca sử dụng: Quản lý sản phẩm.
+o Mục đích: giúp cho người quản lý dễ dàng quản lý và theo dõi sản phẩm trên website
+o Tác nhân: Admin
+o Tóm lược: Khi người quản lý đăng nhập thành công vào hệ thống thì use case sẽ được gọi để giúp người quản lý tùy chọn các chức năng có liên quan: thêm, sửa, xóa sản phẩm. 
+o Mô tả quá trình:
+o Thông tin đầu vào là các thông tin về tài khoản như:
+- Username
+- Password
+o Điều kiện đầu vào Nhân viên cần phải đăng nhập vào hệ thống thành công.
+o Dòng sự kiện chính:
+
+    Bảng 8: Mô tả dòng sự kiện chính cho chức năng quản lý sản phẩm
+    
+Hành động của tác nhânPhản ứng của hệ thốngQuản lý yêu cầu thêm, sửa, xóa… Sản PhẩmHệ thống yêu cầu nhân viên đăng nhập vào tài khoảnQuản lý đăng nhập vào hệ thống bằng tài khoản của mìnhHệ thống kiểm tra tài khoảnQuản lý lựa chọn các chức năng thêm, sửa , xóa sản phẩmHệ thống cập nhật lại thông tin và lưu dữ liệu về CSDL
+o Dòng sự kiện phụ:
+- Khi người quản lý nhập sai các thông tin về tài khoản, hệ thống sẽ gửi thông báo lỗi và yêu cầu nhập lại các thông tin.
+- Người quản lý nhập lại các thông tin cần thiết theo yêu cầu của hệ thống, hệ thống sẽ tiến hành kiểm tra lại các thông tin mới nhập, nếu thành công thì chuyển sang trang chức năng theo yêu cầu của người quản lý.
+
+
+
+
+
+
+
+
+
+
+
+
+• Biểu đồ use-case “Quản lý loại sản phẩm ”
+    ➢ Biểu đồ Usecase:  Quản lí loại sản phẩm
+    
+    Hình 6:Biểu đồ usecase chức năng quản lý loại sản phẩm
+Mô tả tóm tắt:
+o Tên ca sử dụng: quản lý loại sản phẩm
+o Mục đích: giúp cho người quản lý dễ dàng quản lý và theo dõi loại sản phẩm trên website
+o Tác nhân: Quản trị viên
+o Tóm lược: Khi người quản lý đăng nhập thành công vào hệ thống thì use case sẽ được gọi để giúp admin tùy chọn các chức năng có liên quan: thêm, sửa, xóa loại sản phẩm. 
+o Mô tả quá trình:
+o Thông tin đầu vào là các thông tin về tài khoản như:
+- Username
+- Password
+o Điều kiện đầu vào: Nhân viên cần phải đăng nhập vào hệ thống thành công.
+o Dòng sự kiện chính:
+                   
+    Bảng 9:Mô tả sự kiện chính cho chức năng quản lý loại sản phẩm
+
+
+
+Hành động của tác nhânPhản ứng của hệ thốngQuản lý yêu cầu thêm, sửa, xóa… loại sản phẩmHệ thống yêu cầu nhân viên đăng nhập vào tài khoảnQuản lý đăng nhập vào hệ thống bằng tài khoản của mìnhHệ thống kiểm tra tài khoảnQuản lý lựa chọn các chức năng thêm, sửa , xóa loại sản phẩmHệ thống cập nhật lại thông tin và lưu dữ liệu về CSDL
+
+
+
+
+
+
+Dòng sự kiện phụ:
+- Khi người quản lý nhập sai các thông tin về tài khoản, hệ thống sẽ gửi thông báo lỗi và yêu cầu nhập lại các thông tin.
+- Người quản lý nhập lại các thông tin cần thiết theo yêu cầu của hệ thống, hệ thống sẽ tiến hành kiểm tra lại các thông tin mới nhập, nếu thành công thì chuyển sang trang chức năng theo yêu cầu của người quản lý.
+• Biểu đồ use-case “Đặt hàng”
+➢ Biểu đồ usecase: Đặt hàng
+
+    Hình 7:Biểu đồ usecase Đặt hàng
+Mô tả tóm tắt:
+o Tên ca sử dụng: Đặt hàng
+o Mục đích: Chọn sản phẩm cần mua, Thêm vào giỏ hàng, Loại khỏi giỏ hàng, Xem thông tin giỏ hàng, Hủy việc mua hàng, Thanh toán, Chọn hình thức thanh toán
+o Tác nhân: khách hàng
+o Tóm lược: Khách hàng muốn sử dụng chức năng đặt hàng của hệ thống thì bắt buộc phải đăng nhập vào hệ thống thông qua username và password. Hệ thống sẽ kiểm tra thông tin xem người dùng có đúng là thành viên của hệ thống không, nếu đúng thì người dùng có thể truy cập vào hệ thống với quyền nhất định đã được quy định.Và bắt đầu thực chức năng đặt hàng theo yêu cầu.
+Mô tả quá trình:
+o Thông tin đầu vào:  Username, Password để đăng nhập và yêu cầu đặt hàng
+o Dòng sự kiện chính:
+      Bảng 10: Mô tả dòng sự kiên chính cho chức năng Đặt hàng
+    
+Hành động của tác nhânPhản ứng của hệ thốngQuản lý yêu cầu thêm, sửa, xóa… giỏ hàngHệ thống yêu cầu khách hàng đăng nhập vào tài khoảnQuản lý đăng nhập vào hệ thống bằng tài khoản của mìnhHệ thống kiểm tra tài khoảnQuản lý lựa chọn các chức năng thêm, sửa , xóa giỏ hàngHệ thống cập nhật lại thông tin và lưu dữ liệu về CSDL
+o Dòng sự kiện phụ:
+- Nếu người dùng nhập tên truy cập và mật khẩu không đúng thì hệ thống sẽ yêu cầu nhập lại.
+- Khi người dùng nhập chính xác thông tin tài khoản của mình, hệ thống xử lý và thông báo đăng nhập thành công, tự động bật lên trang chủ cho người dùng thao tác với các chức năng đã định.
+- Người dùng chọn mục thống kê báo cáo chưa có dữ liệu hệ thống thông báo ra mà hình và gợi ý cho người dùng những bản thống kê khác.
+
+
+
+
+
+
+
+• Biểu đồ use-case “Tìm kiếm”
+➢ Biểu đồ Usecase: Tìm kiếm
+
+    Bảng 11: Biểu đồ usecase Tìm kiếm
+    
+Mô tả tóm tắt:
+o Tên ca sử dụng: Tìm kiếm
+o Mục đích: Giúp người sử dụng tìm kiếm thông tin về sản phầm một cách nhanh chóng và chính sác hơn.
+o Tác nhân: Admin, Customer
+o Tóm lược: Người dùng muốn sử dụng chức năng tìm kiếm thì cần nhập thông tin cần tìm kiếm vào thanh tìm kiếm sao đó nhấn nút tìm kiếm hoặc nhấn phím Enter. Hệ thống sẽ kiểm tra thông tin mà người dùng nhập vào thanh tìm kiếm, nếu đúng hoặc có thông tin gần đúng thì hệ thông sẽ trả lại kêt quả mà người dùng cần. Nếu không có thì hệ thống thông báo không có thông tin bạn cần tìm.
+Mô tả quá trình:
+o Thông tin đầu vào nội dung cần tra cứu
+o Dòng sự kiện chính:
+Bảng 12: Mô tả dòng sự kiện chính cho chức năng tìm kiếm
+    
+Hành động của tác nhânPhản ứng của hệ thốngChọn chức năng tìm kiếm , nhập nội dung tìm kiếm và ấn nút tìm kiếm hoặc nhấn phím EnterHệ thống tìm kiếm thông tin gần giống hoặc trong khoảng giá hơn kém 500.000 với thông tin bạn cần tìm kiếm và đưa kết quả ra màn hình.
+o Dòng sự kiện phụ:
+- Nếu người dùng nhập từ khóa tìm kiếm không có thông tin trong hệ thống thì thông báo ra màn hình không có kết quả tìm kiếm.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+• Biểu đồ use-case “Quản lý đơn hàng”
+➢ Biểu đồ Usecase: Quản lý đơn hàng
+
+    Hình 8: Biểu đồ usecase Quản lý đơn hàng
+Mô tả tóm tắt:
+    o Tên ca sử dụng: quản lý đơn hàng
+    o Mục đích: Giúp quản lý đơn hàng
+    o Tác nhân: Admin
+    o Tóm lược: Người dùng muốn sử dụng chức năng này thì cần đăng nhập và hệ thống .Hệ thống sẽ kiểm tra thông tin mà người dùng nhập vào, nếu đúng hoặc có thông tin gần đúng thì hệ thông sẽ trả lại kêt quả mà người dùng cần. Nếu không có thì hệ thống thông báo không có thông tin bạn cần tìm.
+Mô tả quá trình:
+o Thông tin đầu vào nội dung cần tra cứu
+o Dòng sự kiện chính:
+    Bảng 13: Mô tả dòng sự kiện chính cho chức năng đơn hàng
+Hành động của tác nhânPhản ứng của hệ thốngChọn chức năng quản lí đơn hàng Hệ thống hiển thị danh sách đơn hàng ra màn hình.o Dòng sự kiện phụ:
+- Nếu người dùng nhập từ khóa tìm kiếm không có thông tin trong hệ thống thì thông báo ra màn hình không có kết quả tìm kiếm.
+
+3.2.2 Biểu đồ lớp
+• Biểu đồ lớp mức phân tích
+
+    Hình 9: Biểu đồ lớp mức phân tích
+• Danh sách các lớp đối tượng và quan hệ
+    Bảng 14: Danh sách các lớp 
+STTTên lớp/quan hệÝ nghĩa/Ghi chú1ProductSản phẩm2CategoryLoại sản phẩm3BillĐơn đặt hàng4Bill_DetailChi tiết đơn đặt hàng5CustomerKhách hàng6ContactPhản hồi7TrademarkThương hiệu8Group_prNhóm sản phẩm9userNgười dùng10roleQuyền11permission_roleQuyền-vị trí12permissionVị trí    
+3.2.3 Biểu đồ tuần tự
+• Biểu đồ tuần tự cho chức năng đăng nhập
+
+    Hình 10: Biểu đồ tuần tự cho chức năng đăng nhập
+    
+    
+    
+    
+    
+    
+    
+    
+• Biểu đồ tuần tự quản lý khách hàng
+
+    Hình 11: Biểu đồ tuần tự quản lý khách hàng
+    
+• Biểu đồ tuần tự cho chức năng tìm kiếm
+
+    Hình 12: Biểu đồ tuần tự cho chức năng tìm kiếm
+• Biểu đồ tuần tự cho chức năng đặt hàng
+
+    Hình 13: Biểu đồ tuần tự cho chức năng đặt hàng
+• Biểu đồ tuần tự cho chức năng thêm mới sản phẩm
+
+    Hình 14: Biểu đồ tuần tự cho chức năng thêm mới sản phẩm
+• Biểu đồ tuần tự cho chức năng sửa sản phẩm
+
+    Hình 15: Biểu đồ tuần tự cho chức năng sửa sản phẩm
+• Biểu đồ tuần tự cho chức năng xóa sản phẩm
+
+    Hình 16: Biểu đồ tuần tự cho chức năng xóa sản phẩm
+3.3 Thiết kế cơ sở dữ liệu 
+3.3.1 Các bảng dữ liệu
+➢ Bảng product
+    Bảng 15: Sản phẩm
+STTTên trườngKiểu dữ liệuRàng buộcGhi chú1id int(11)Primary key,
+autoincrementMã sản phẩm2product_name varchar(256)NullTên sản phẩm3cat_id int(11)ForeignkeyMã loại sản phẩm4group_idint(11)ForeignkeyMã nhóm sản phẩm 5trademark_idint(11)ForeignkeyMã thương hiệu6image1-4 varchar(256)NullHình ảnh7descreption1-4textNullMô tả 8unit_price floatNullGiá bán9promotion_price floatNot nullGiá khuyến mại10new tinyintNullSản phẩm mới11created_attimestampNot nullNgày thêm12update_attimestampNot nullNgày sửa
+
+
+
+
+
+➢ Bảng category
+    Bảng 16: Loại sản phẩm
+    
+STTTên trườngKiểu dữ liệuRàng buộcGhi chú1cat_idint(11)Primary key,
+autoincrementMã loại sản phẩm2group_idint(11)foreignkeyMã nhóm loại3cat_name nvarchar(256)NullTên loại sản phẩm4created_attimestampNot nullNgày thêm5update_attimestampNot nullNgày sửa    
+    
+    
+    
+    
+    
+    
+    
+➢ Bảng trademark
+    Bảng 17: Thương hiệu
+STTTên trườngKiểu dữ liệuRàng buộcGhi chú1trademark_idint(11)Primary key,
+autoincrement NTMã thương hiệu2trademark_namenvarchar(256)NullTên thương hiệu3trademark_imagenvarchar(256)NullHình ảnh4show_webtinyint(4)NullHiển thị5created_attimestampNot nullNgày thêm6update_at    timestampNot nullNgày sửa    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+➢ Bảng group_id
+    Bảng 18: Nhóm sản phẩm
+STTTên trườngLoạiRàng buộcGhi chú1group_id int(11)Primary key,
+autoincrementMã nhóm2group_image varchar(256)NullẢnh mô tả3group_name varchar(256)NullTên nhóm4created_attimestampNot nullNgày thêm5update_attimestampNot nullNgày sửa
+➢ Bảng bill
+    Bảng 19: Hóa đơn
+STTTên trườngKiểu dữ liệuRàng buộcGhi chú1id int(11)Primary key,
+autoincrementMã hóa đơn2id_customerint(11)foreingkeyMã khách hàng3totalfloatNullTổng tiền4note textNot nullGhi chú5payment varchar(256)NullPhương thức tt6date_orderdatetimeNullNgày order7created_attimestampNot nullNgày nhập8update_attimestampNot nullNgày sửa
+
+
+➢ Bảng bill_details
+    Bảng 20: Chi tiết hóa đơn
+    
+STTTên trườngKiểu dữ liệuRàng buộcGhi chú1idint(11)Primary key,
+autoincrementMã chi tiết hóa đơn xuất2product_id int(11)ForeingkeyMã sản phẩm3bill_id int(11)ForeingkeyMã hóa đơn 4quantity int(11)NullSố lượng5unit_price int NullGiá6created_attimestampNot nullNgày nhập7update_attimestampNot nullNgày sửa
+➢ Bảng customers
+    Bảng 19: Khách hàng
+STTTên trườngKiểu dữ liệuRàng buộcGhi chú1idintPrimary key,
+autoincrementMã khách hàng2full_namevarchar(256)NullTên khách hàng3phone_numbervarchar(16)NullSố điện thoại4email varchar(255)Not nullEmail5address varchar(255)NullĐịa chỉ6note textNot nullGhi chú7created_attimestampNot null Ngày nhập8update_attimestampNot nullNgày sửa
+
+
+➢ Bảng user
+    Bảng 21: user
+STTTên trườngKiểu dữ liệuRàng buộcGhi chú1user_idint(11)Primary key,
+autoincrementMã user2user_name varchar(256)NullTên user3passvarchar(256)NullPassword4role_id int(11)NullMã quyền5emailvarchar(256)Not NullEmail6created_attimestampNot nullNgày nhập7update_attimestampNot nullNgày sửa
+➢ Bảng role
+    Bảng 22: Quyền
+STTTên trườngKiểu dữ liệuRàng buộcGhi chú1idInt Primary key,
+autoincrementMã quyền2namevarchar(255)NullTêm quyền3describe varchar(255)Not NullMô tả
+➢ Bảng permission_role
+    Bảng 23: Quyền-vị trí
+STTTên trườngKiểu dữ liệuRàng buộcGhi chú1idint Primary key,
+autoincrementMã quyền-vị trí2permission_id intforeignkeyMã quyền3roles_id intforeignkeyMã vị trí
+
+
+
+
+
+
+
+➢ Bảng permission
+    Bảng 24: Vị trí
+STTTên trườngKiểu dữ liệuRàng buộcGhi chú1idint Primary key,
+autoincrementMã quyền-vị trí2name varchar(255)NullTên vị trí3describe varchar(255)Not NullMô tả4permissions_group varchar(255)NullNhóm
+
+
+
+
+➢ Bảng contact
+    Bảng 25: Phản hồi
+STTTên trườngKiểu dữ liệuRàng buộcGhi chú1Contact_idint (11)Primary key,
+autoincrementMã phản hồi2namevarchar(256)NullTên3EmailNvarchar(256)Not nullEmail4Phone_numberInt(32)Not nullSố điện thoại5MessegerTextNullLời nhắn6Created_atTimestampNot nullNgày nhập
+3.3.2 Mô hình cơ sở dữ liệu
+➢ Biểu đồ cơ sở dữ liệu
+
+    Hình 17: Mô hình cơ sở dữ liệu
+    
+3.4     Thiết kế đặc tả giao diện
+3.4.1 Chức năng hiển thị trang chủ
+• Mục đích
+   Chức năng này cho phép người dùng khi truy cập vào website xẽ hiển thị giao diện với nội dung danh sách sản phẩm, menu, tìm kiếm,...
+• Phạm vi
+   Chức năng này sẽ cho phép người dụng truy cập vào website có thê sử dụng.
+• Ràng buộc
+   Người dùng phải truy cập vào website.
+   
+   
+• Giao diện của chức năng
+
+
+
+   
+    Hình 18: Giao diện trang chủ
+• Mô tả chức năng
+   Khi người dùng truy cập vào website, trang chủ xẽ hiển thị ra với các nội dung bao gồm: tìm kiếm; logo website; menu; thông tin sản phẩm bán trên với nội dung tên, giá, hình ảnh, thông tin và phần footer là nội dung thông tin về địa chỉ, nhà cung cấp, hỗ trợ. 
+   
+3.4.2 Chức năng hiển thị chi tiết sản phẩm
+• Mục đích
+   Chức năng này hiển thị thông tin chi tiết sản phẩm khi người dụng click vào sản phẩm nào đó trên trang chủ để xem thông tin chi tiết về sản phẩm đó.
+• Phạm vi
+   Chức năng này cho phép người dùng truy cập vào website có thê sử dụng.
+• Ràng buộc
+Người dùng phải truy cập vào website và click vào sản phẩm để xem thông tin chi tiết.
+• Giao diện của chức năng
+   
+    Hình 19: Giao diện chi tiết sản phẩm
+• Mô tả chức năng
+   Khi người dùng ấn vào xem chi tiết sản phẩm, giao diện chi tiết sản phẩm xẽ hiển thị ra với thông tin về chi tiết về sản phẩm; ảnh; giá; sản phẩm liên quan; thông số kỹ thuật và button là: thêm sản phẩm vào giỏ hàng. Nút này có chức năng là đưa sản phẩm khách hàng đã chọn vào giỏ hàng của mình. 
+3.4.3 Chức năng hiển thị loại sản phẩm
+• Mục đích
+   Giúp người dùng có thể xem hết tất cả các sản phẩm cùng một loại sản phẩm.
+• Phạm vi
+   Chức năng này cho phép người dùng truy cập vào website có thê sử dụng.
+• Ràng buộc
+   Người dùng phải truy cập vào website và chọn vào mục các loại sản phẩm.
+• Giao diện  chức năng
+    
+    
+    Hình 20: Giao diện hiển thị loại sản phẩm
+• Mô tả chức năng
+   Khi người dùng chọn chức năng xem loại sản phẩm, giao diện trang loại sản phẩm xẽ hiện ra với tất cả các sản phẩm thuộc loại sản phẩm mà khác hàng muốn xem. Tại đây khách hàng cũng có thể thực hiện chức năng tìm kiếm và xem thông tin chi tiết sản phẩm mỗi khi click vào hình ảnh của bất kì sản phẩm nào.
+3.4.4 Chức năng tìm kiếm
+• Mục đích
+   Giúp người dùng có thể tìm kiếm thông tin theo đúng nhu cầu của mình một cách chính sác và nhanh chóng nhất.
+• Phạm vi
+   Chức năng này cho phép người dùng truy cập vào website có thê sử dụng.
+• Ràng buộc
+   Người dùng phải truy cập vào website và nhập thông tin sản phẩm cần tìm kiếm.
+• Giao diện  chức năng
+   
+    Hình 21: Giao diện chức năng tìm kiếm
+• Mô tả chức năng
+   Khi người dùng chọn chức năng xem loại sản phẩm, giao diện trang loại sản phẩm xẽ hiện ra với tất cả các sản phẩm thuộc loại sản phẩm mà khác hàng muốn xem. Tại đây khách hàng cũng có thể thực hiện chức năng tìm kiếm và xem thông tin chi tiết sản phẩm mỗi khi click vào hình ảnh của bất kì sản phẩm nào.
+3.4.5 Chức năng quản lý giỏ hàng
+• Mục đích
+   Giúp người dùng quản lý thông tin các sản phẩm của mình đã được thêm vào giỏ hàng trong quá trình mua sắm online trên website.
+• Phạm vi
+   Chức năng này cho phép người dùng truy cập vào website có thê sử dụng.
+• Ràng buộc
+   Người dùng phải truy cập vào website và thực hiện các bước thêm sản phẩm vào giỏ hàng.
+• Giao diện  chức năng
+    
+    Hình 22: Giao diện quản lý giỏ hàng
+• Mô tả chức năng
+   Khi người dùng chọn quản lý giỏ hàng bên góc phải menu, giao diện trang giỏ hàng xẽ hiện ra với tất cả các sản phẩm đã được người dùng thêm vào giỏ hàng và tổng tiền của tất cả sản phẩm. Tại đây người dùng có thể thực hiện update số lượng sản phẩm hoặc xóa sản phẩm khỏi giỏ hàng. Người dùng cũng có thể xem loai thông tin chi tiết sản phẩm khi click vào thông tin của sản phẩm. Ngoài ra tại đây khách hàng có thể đặt hàng sau khi xác định sản phẩm cần mua bằng các click vào button “ĐẶT HÀNG”.
+3.4.6 Chức năng đặt hàng
+• Mục đích
+   Giúp người dung điền thông tin cá nhân và sác nhận loại thông tin.
+• Phạm vi
+   Chức năng này cho phép người dùng truy cập vào website có thê sử dụng.
+• Ràng buộc
+   Người dùng phải truy cập vào website và thực hiện click button đặt hàng.
+• Giao diện  chức năng
+    
+    Hình 23: Giao diện đặt hàng
+• Mô tả chức năng
+   Khi người dùng chọn button đặt hàng. Hệ thống xẽ chuyển qua giao điẹn đặt hàng. Tại đây khách hàng xẽ nhập thông tin xác nhân, và kiểm tra thông tin sản phẩm mà mình đã đặt	
+3.4.7 Chức năng đăng nhập
+• Mục đích
+   Chức năng này sẽ kiểm tra tài khoản sử dụng hệ thống có hợp lệ hay không? Nhằm bảo mật các thông tin trong hệ thống. Và đảm bảo người dùng sử dụng đúng các chức năng được cấp.
+• Phạm vi
+   Chức năng này sẽ kiểm tra tài khoản sử dụng hệ thống có hợp lệ hay không? Nhằm bảo mật các thông tin trong hệ thống. 
+• Ràng buộc
+   Khi người dùng kích hoạt hệ thống, một cửa sổ “Đăng nhập hệ thống” hiện lên, yêu cầu cung cấp các thông tin để đăng nhập sử dụng hệ thống.
+• Giao diện của chức năng
+    
+    Hình 24: Giao diện chức năng nhập
+• Mô tả chức năng
+   Khi truy cập vào trang web, chức năng này sẽ hiển thị đầu tiên hoặc khi người dùng đang đăng nhập khi click vào  “Đăng xuất” trên giao diện chính thì giao diện chính sẽ bị ẩn đi và giao diện đăng nhập này cũng sẽ hiện nên, Sau khi người dùng đã điền đầy đủ thông tin người dùng nhấn “Đăng nhập” nếu thông tin hợp lệ sẽ vào được hệ thống với các chức năng được cấp hiện nên cho phép người dùng sử dụng.
+3.4.8 Chức năng quản lý sản phẩm
+• Mục đích
+   Giúp người quản lý quản lý thông tin về sản phẩm
+• Phạm vi
+   Nhân viên có quyền được phép truy cập chức năng quản lý sản phẩm.
+• Ràng buộc
+   Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng chọn “Quản lý sản phẩm” trong mục nhập liệu ở menu bên trái.
+• Giao diện  chức năng
+    
+    Hình 25: Giao diện chức năng quản lý sản phẩm
+• Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng “Quản lý sản phẩm”:
+   -	Chức năng thêm: khi thêm các thông tin về tên sản phẩm, số lượng, giá,...khi nhấn vào Save thì sản phẩm mới đã được thêm vào database .
+   -	Chức năng sửa: khi sửa các thông tin về tên sản phẩm, số lượng, giá,...khi nhấn vào Lưu lại thì sản phẩm được cập nhật thông tin vào database. 
+   -	Chức năng xoá khi người sử dụng click xoá thì thông tin sẽ xoá trong danh sách, và xóa khỏi database.
+3.4.9 Chức năng quản lý loại sản phẩm
+• Mục đích
+   Giúp người quản lý quản lý thông tin về loại sản phẩm
+• Phạm vi
+   Nhân viên có quyền được phép truy cập chức năng quản lý loại sản phẩm.
+• Ràng buộc
+   Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng chọn “Quản lý loại sản phẩm” trong mục nhập liệu ở menu bên trái.
+• Giao diện  chức năng
+    
+    Hình 26: Giao diện chức năng quản lý loại sản phẩm
+• Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng “Quản lý loại sản phẩm”:
+   -	Chức năng thêm: khi thêm các thông tin về tên  loại sản phẩm, số lượng, giá,...khi nhấn vào Save thì loại sản phẩm mới đã được thêm vào database .
+   -	Chức năng sửa: khi sửa các thông tin về tên sản phẩm, số lượng, giá,...khi nhấn vào lưu lại thì loại sản phẩm được cập nhật thông tin vào database. 
+    -	Chức năng xoá khi người sử dụng click xoá thì thông tin loại sản phẩm sẽ xoá trong danh sách, và xóa khỏi database.
+3.4.10 Chức năng quản lý thương hiệu
+• Mục đích
+   Giúp người quản lý quản lý thông tin về thương hiệu của sản phẩm.
+• Phạm vi
+   Nhân viên có quyền được phép truy cập chức năng quản lý thương hiệu.
+• Ràng buộc
+   Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng chọn “Quản lý thương hiệu” trong mục nhập liệu ở menu bên trái.
+• Giao diện  chức năng
+    
+    Hình 27: Giao diện chức năng quản lý thương hiệu
+• Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng “Quản lý thương hiệu”:
+   -	Chức năng thêm: khi thêm các thông tin về tên thương hiệu khi nhấn vào save thì thương hiệu mới đã được thêm vào database .
+   -	Chức năng sửa: khi sửa các thông tin về thương hiệu khi nhấn vào lưu lại thì loại sản phẩm được cập nhật thông tin vào database. 
+   -	Chức năng xoá khi người sử dụng click xoá thì thông tin thương hiệu sẽ xoá trong danh sách, và xóa khỏi database.
+    
+3.4.11 Chức năng quản lý danh sách đặt hàng
+• Mục đích
+   Giúp người quản lý quản lý thông tin về sản phẩm mà khách hàng đã đặt, giao hàng, chưa giao hàng, đang giao hàng.
+• Phạm vi
+   Nhân viên có quyền được phép truy cập chức năng quản lý danh sách đặt hàng.
+• Ràng buộc
+   Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng chọn “Quản lý danh sách đặt hàng” trong mục nhập liệu ở menu bên trái.
+• Giao diện  chức năng
+    
+    Hình 28: Giao diện chức năng quản lý danh sách đặt hàng
+• Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng “Quản lý danh sách đặt hàng”:
+   -	Chức năng xem chi tiết thông tin đặt hàng: Xem các thông tin về sản phẩm đang được đặt, giao hàng trên website như tên người đặt, ngày đặt hàng, số điện thoại, địa chỉ, email, ghi chú, số lượng sản phẩm, ảnh minh họa, tên sản phẩm, giá tiền. 
+    -	Chức năng xoá khi người sử dụng click xoá thì thông tin về sản phẩm đặt hàng sẽ xoá trong danh sách, và xóa khỏi database.
+3.5 Kết luận chương 3
+- Trong chương 3, đã thực hiện Xây dựng Website bán đồ điện – điện tử cho cửa hàng Linh_Elect. Từ các kết quả đã thực hiện, có thể tóm tắt quá trình xây dựng hệ thống đã cài đặt như sau:
+- Tiến hành được quá trình khảo sát và phân tích yêu cầu bài toán bán hàng online. Chỉ ra được yêu cầu của hệ thống khảo sát và mô tả chi tiết các yêu cầu.
+- Đã sử dụng ULM để phân tích thiết kế hệ thống với các biểu đồ use case tổng quát, use case chi tiết cho từng chức năng. Xác dịnh được các lớp cần quản lý tưng ứng với các bảng trong cơ sở dữ liệu. Và sử dụng biểu đồ tuần tự để mô tả luồng đi của hệ thống trong từng sự kiện. 
+- Thiết kế được cơ sơ dữ liệu từ các yêu cầu của khách hàng cần quản lý. 
+- Đã Thiết kế và đặc tả được giao diện của website
+
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau một thời gian tìm hiểu và nghiên cứu đề tài “Xây dựng Xây dựng Website bán đồ điện – điện tử cho cửa hàng Linh_Elect” đề tài đã đạt được một số kết quả sau:
+- Phía khách hàng: Tạo được địa chỉ cho khách hàng truy cập. Thực hiện một số chức năng trên giao diện như: hiển thị menu loại sản phẩm, hiển thị loại sản phảm hiển thị sản phẩm mới nhất, tìm kiếm, quản lý giỏ hàng, đặt hàng.
+- Phía Admin: Giúp cho thao tác nhanh hơn, thực hiện được phân nhóm, thêm user, quản lý các chức năng như: quản lý sản phẩm, loại sản phẩm, hóa đơn, Order, nhà cung cấp,…
+     Ngoài những kết quả trên, qua quá trình thực hiện đề tài “Xây dựng Website bán đồ điện – điện tử cho cửa hàng Linh_Elect” em đã có được:
+- Những kinh nghiệm quý báu về quy trình và nghiệp vụ quản lý website bán hàng online.
+- Trau dồi kiến thức về PHP.
+- Rèn luyện kỹ năng làm việc cá nhân, khả năng tư duy và sáng tạo.
+4.2 Hạn chế của đề tài
+     Do thời gian nghiên cứu chưa được nhiều, bên cạnh những kết quả đạt được còn tồn tại một số vấn đề hạn chế:
+- Thống kê báo cáo chưa có.
+- Chưa triển khai hệ thống thực tế được.
+- Một số chức năng còn thiếu xót chưa hoàn hảo.
+4.3 Hướng phát triển
+- Website sẽ chạy ổn định trên nhiều trình duyệt khác nhau.
+- Tương thích sử dụng cho các dòng điện thoại, máy tính bảng.
+- Xây dựng thêm hệ thống trang diễn đàn để khách hàng có thể trao đổi thông tin.
+- Tối ưu hóa hệ thống để có tốc độ nhanh nhất.
+- Tăng cường tính bảo mật cho website.
+TÀI LIỆU THAM KHẢO
+[1]  https://laravel.com/
+[2] https://online.khoapham.vn/
+[3] https://thachpham.com/
+[4] https://viblo.asia/tags/laravel
+[5]https://quocbuugroup.com/tim-hieu-xampp-va-cach-cai-dat-xampp-de-phat-trien-website-tren-local.html,
+[6] https://stackoverflow.com/,
+[7] https://www.w3schools.com/,
+[8] https://www.highcharts.com/demo/column-drilldown/dark-unica,
+[9] https://fontawesome.com/v4.7.0/icons/,
+[10] https://codemyui.com/tag/button/,
+[11] Phân tích thiết kế hướng đối tượng
+
+ 
+x
+x
+    
+    
+Xây dựng Website bán đồ điện – điện tử cho của hàng Linh_Elect
+    
+    
+3
+    
+    

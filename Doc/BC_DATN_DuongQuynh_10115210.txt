@@ -1,0 +1,784 @@
+﻿1.1 Lý do chọn đề tài
+      	Cùng với sự phát triển không ngừng về kỹ thuật máy tính và mạng điện tử, công nghệ thông tin cũng được những công nghệ có đẳng cấp cao và lần lượt chinh phục hết đỉnh cao này đến đỉnh cao khác. Mạng Internet là một trong những sản phẩm có giá trị hết sức lớn lao và ngày càng trở thành một công cụ không thể thiếu, là nền tảng chính cho sự truyền tải, trao đổi thông tin trên toàn cầu.
+     Bằng internet, chúng ta đã thực hiện được nhiều công việc với tốc độ nhanh hơn và chi phí thấp hơn nhiều so với cách thức truyền thống. Chính điều này, đã thúc đẩy sự khai sinh và phát triển của thương mại điện tử và chính phủ điện tử trên khắp thế giới, làm biến đổi đáng kể bộ mặt văn hóa, nâng cao chất lượng cuộc sống con người.
+     Vì lý do đó việc ứng dụng công nghệ thông tin vào thực tiễn đời sống xã hội, giảm thiểu được sức lao động của con người, tăng hiệu quả kinh tế. Bán hàng online cũng là lĩnh vực đang được rất nhiều người quan tâm và được ứng dụng vào thực tế.
+     Là những sinh viên đại học ngành công nghệ thông tin, với sự góp ý của các cô hướng dẫn và cũng xuất phát từ nhu cầu thực tế đó em rất mong muốn có thể tự mình tìm hiểu về công nghệ mới, ngôn ngữ Python, áp dụng framework Django trong việc xây dựng website bán hàng online và cho ra đời một sản phẩm “Website giới thiệu và bán nông sản, đặc sản tỉnh Hải Dương”. 
+1.2 Mục tiêu của đề tài
+- Phân tích được bài toán quản lý bán hàng online, hiểu được quy trình quản lý hệ thống.
+- Tìm hiểu cơ sở lý thuyết của hệ quản trị cơ sở dữ liệu SQLite, ngôn ngữ lập Python và web framework Django để xây dựng website.
+- Phân tích và thiết kế CSDL, các biểu đồ use case và tuần tự.
+- Xây dựng Website giới thiệu và bán sản phẩm nông sản, đặc sản tỉnh Hải Dương.
+1.3 Giới hạn và phạm vi của đề tài
+       Đề tài bước đầu được xây dựng để áp dụng cho việc quản lý và bày bán sản phẩm online; sau đó có thể phát triển thêm và ứng dụng cho các cửa hàng trong thực tế.
+      Đề tài xây dựng sử dụng Công nghệ mới dựa trên ngôn ngữ Python và phát triển trên framework Django và công cụ lập trình JetBrains PyCharm..
+1.4 Nội dung thực hiện
+      Nội dung thực hiện/ nghiên cứu cụ thể của đề tài:
+- Hiểu được cách sử dụng cơ bản của ngôn ngữ python, trong đó có các đối tượng, biến, hàm, phương thức, thuộc tính…
+- Tìm hiểu cách sử dụng web framework Django trong thiết kế và lập trình website bằng ngôn ngữ Python.
+- Tìm hiểu cách sử dụng phần mềm JetBrains PyCharm để thiết kế giao diện và xây dựng các chức năng website thương mại điện tử bằng ngôn ngữ Python.
+- Biết cách sử dụng hệ quản trị CSDL bằng Sqlite.
+- Khảo sát và phân tích yêu cầu quy trình quản lý và bán hàng online.
+- Thiết kế và đặc tả hệ thống.
+- Xây dựng cơ sở dữ liệu.
+- Lập trình các module của hệ thống.
+- Kiểm thử hệ thống.
+- Triển khai thực nghiệm hệ thống trên mạng Internet.
+1.5 Phương pháp tiếp cận
+- Nghiên cứu quy trình quản lý và bày bán hàng online trên truyền thông và mạng internet, nghiên cứu ngôn ngữ mới Python, framework Django, mô hình Model - View – Template.
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu.
+o Phương pháp phân tích mẫu, thực nghiệm.
+1.6. Kết luận chương 1
+   Trong chương 1 đã nêu nên lý do chọn đề tài xây dựng “Website giới thiệu và bán nông sản, đặc sản tỉnh Hải Dương”. Cũng như mục tiêu, phạm vi, nội dung và phương pháp thực hiện. Chương tiếp theo là tìm hiểu và giới thiệu về công nghệ mới Python, web framework Django và Sqlite.
+
+CHƯƠNG 1: GIỚI THIỆU PYTHON VÀ FRAMEWORK DJANGO
+2.1 Giới thiệu về ngôn ngữ Python
+2.1.1 Python là gì ?
+3. Python là một ngôn ngữ lập trình thông dịch (interpreted), hướng đối tượng (object-oriented), bậc cao (high-level) ngữ nghĩa động (dynamic semantics) mạnh mẽ, được tạo ra bởi Guido Van Rossum tạo ra năm 1990. Nó dễ dàng để tìm hiểu và đang nổi lên như một trong những ngôn ngữ lập trình nhập môn tốt nhất cho người lần đầu tiếp xúc với ngôn ngữ lập trình. Python hoàn toàn tạo kiểu động và sử dụng cơ chế cấp phát bộ nhớ tự động. Python có cấu trúc dữ liệu cấp cao mạnh mẽ và cách tiếp cận đơn giản nhưng hiệu quả đối với lập trình hướng đối tượng. Cú pháp lệnh của Python là điểm cộng vô cùng lớn vì sự rõ ràng, dễ hiểu và cách gõ linh động làm cho nó nhanh chóng trở thành một ngôn ngữ lý tưởng để viết Script và phát triển ứng dụng trong nhiều lĩnh vực, ở hầu hết các nền tảng. Hiện nay thì cộng đồng người sử dụng ngôn ngữ này rất đông, nếu so sánh từ bảng xếp hạng các ngôn ngữ mới nhất năm 2019  thì Python đứng top 1 trong top 10 ngôn ngữ phổ biến nhất.
+2.1.2 Lịch sử hình thành của Python
+      Vào cuối những năm 1980, Guido Van Rossum làm việc trong Amoeba, phân phối một nhóm hệ điều hành. Ông muốn sử dụng một ngôn ngữ thông dịch như ABC (ABC có cú pháp rất dễ hiểu) để truy cập vào những cuộc gọi hệ thống Amoeba. Vì vậy, ông quyết định tạo ra một ngôn ngữ mở rộng. Điều này đã dẫn đến một thiết kế của ngôn ngữ mới, chính là Python sau này.
+2.1.3 Các đặc điểm của Python
+- Ngôn ngữ lập trình đơn giản, dễ học: Python có cú pháp rất đơn giản, rõ ràng. Nó dễ đọc và viết hơn rất nhiều khi so sánh với những ngôn ngữ lập trình khác như C++, Java, C#. Python làm cho việc lập trình trở nên thú vị, cho phép bạn tập trung vào những giải pháp chứ không phải cú pháp.
+- Miễn phí, mã nguồn mở: Bạn có thể tự do sử dụng và phân phối Python, thậm chí là dùng cho mục đích thương mại. Vì là mã nguồn mở, bạn không những có thể sử dụng các phần mềm, chương trình được viết trong Python mà còn có thể thay đổi mã nguồn của nó. Python có một cộng đồng rộng lớn, không ngừng cải thiện nó mỗi lần cập nhật.
+- Khả năng di chuyển: Các chương trình Python có thể di chuyển từ nền tảng này sang nền tảng khác và chạy nó mà không có bất kỳ thay đổi nào. Nó chạy liền mạch trên hầu hết tất cả các nền tảng như Windows, macOS, Linux.
+- Khả năng mở rộng và có thể nhúng: Giả sử một ứng dụng đòi hỏi sự phức tạp rất lớn, bạn có thể dễ dàng kết hợp các phần code bằng C, C++và những ngôn ngữ khác (có thể gọi được từ C) vào code Python. Điều này sẽ cung cấp cho ứng dụng của bạn những tính năng tốt hơn cũng như khả năng scripting mà những ngôn ngữ lập trình khác khó có thể làm được.
+- Ngôn ngữ thông dịch cấp cao: Không giống như C/C++, với Python, bạn không phải lo lắng những nhiệm vụ khó khăn như quản lý bộ nhớ, dọn dẹp những dữ liệu vô nghĩa,... Khi chạy code Python, nó sẽ tự động chuyển đổi code sang ngôn ngữ máy tính có thể hiểu. Bạn không cần lo lắng về bất kỳ hoạt động ở cấp thấp nào.
+- Thư viện tiêu chuẩn lớn để giải quyết những tác vụ phổ biến: Python có một số lượng lớn thư viện tiêu chuẩn giúp cho công việc lập trình của bạn trở nên dễ thở hơn rất nhiều, đơn giản vì không phải tự viết tất cả code. Ví dụ: Bạn cần kết nối cơ sở dữ liệu MySQL trên Web server? Bạn có thể nhập thư viện MySQLdb và sử dụng nó. Những thư viện này được kiểm tra kỹ lưỡng và được sử dụng bởi hàng trăm người. Vì vậy, bạn có thể chắc chắn rằng nó sẽ không làm hỏng code hay ứng dụng của mình.
+- Hướng đối tượng: Mọi thứ trong Python đều là hướng đối tượng. Lập trình hướng đói tượng(OOP) giúp giải quyết những vấn đề phức tạp một cách trực quan. Với OOP, bạn có thể phân chia những vấn đề phức tạp thành những tập nhỏ hơn bằng cách tạo ra các đối tượng.
+- Có thể nhúng trong ứng dụng như một giao diện kịch bản (scripting interface).
+- Python mạnh mẽ và thực hiện rất nhanh.
+2.1.4 Ứng dụng của ngôn ngữ Python
+- Lập trình ứng dụng web: Bạn có thể tạo web app có khả năng mở rộng (scalable) được bằng cách sử dụng framework và CMS (hệ thống quản trị nội dung) được tích hợp trong Python. Vài nền tảng phổ biến để tạo web app là:  Django, Flask, Pyramid, Plone, Django CMS. Các trang như Mozilla, Reddit, Instagram và PBS đều được viết bằng Python.
+- Khoa học và tính toán: Có nhiều thư viện trong Python cho khoa học và tính toán số liệu, như SciPy và NumPy, được sử dụng cho những mục đích chung chung trong tính toán. Và, có những thư viện cụ thể như: EarthPy cho khoa học trái đất, AstroPy cho Thiên văn học,... Ngoài ra, Python còn được sử dụng nhiều trong machine learning, khai thác dữ liệu và deep learning.
+- Tạo nguyên mẫu phần mềm: Python chậm hơn khi so sánh với các ngôn ngữ được biên dịch như C++ và Java. Nó có thể không phải là lựa chọn tốt nếu nguồn lực bị giới hạn và yêu cầu về hiệu quả là bắt buộc. Tuy nhiên, Python là ngôn ngữ tuyệt vời để tạo những nguyên mẫu (bản chạy thử - prototype). Ví dụ, bạn có thể sử dụng Pygame (thư viện viết game) để tạo nguyên mẫu game trước. Nếu thích nguyên mẫu đó có thể dùng C++ để viết game thực sự.
+- Ngôn ngữ tốt để dạy lập trình: Python được nhiều công ty, trường học sử dụng để dạy lập trình cho trẻ em và những người mới lần đầu học lập trình. Bên cạnh những tính năng và khả năng tuyệt vời thì cú pháp đơn giản và dễ sử dụng của nó là lý do chính cho việc này.
+2.2 Giới thiệu về web Framework  Django
+2.2.1 Django là gì ?
+      Django là một web framework miễn phí mã nguồn mở được viết hoàn toàn bằng ngôn ngữ Python. Django sử dụng mô hình Model-View-Template (MVT). Django được phát triển bởi Django Software Foundation(DSF) – một tổ chức phi lợi nhuận độc lập. Được viết hoàn toàn bằng ngôn ngữ Python. Nó không phải là một micro-framework như Flask, mà là một framework với đầy đủ các thư viện, module hỗ trợ các web-developer
+2.2.2 Lich sử ra đời	
+- 2003 - Bắt đầu bởi Adrian Holovaty và Simon Willison như một dự án nội bộ tại tờ báo Tạp chí Thế giớ Lawrence.
+- 2005 - Phát hành tháng 7 năm 2005 và đặt tên là Django, theo tên của tay guitar jazz Django Reinhardt.
+- 2005 - Đủ trưởng thành để xử lý một số trang web có lưu lượng truy cập cao.
+- Hiện tại - Django hiện là một dự án nguồn mở với những người đóng góp trên toàn thế giới.
+2.2.3 Nguyên lý của Django
+- Loosely Coupled: Django nhằm mục đích làm cho mỗi phần tử trong ngăn xếp của nó độc lập với các phần tử khác.
+- Less Coding: Ít mã hơn để lần lượt phát triển nhanh.
+- Don't Repeat Yourself (DRY): - Mọi thứ chỉ nên được phát triển ở một nơi chính xác thay vì lặp đi lặp lại nhiều lần.
+- Fast Development: - Triết lý của Django là làm tất cả những gì có thể để tạo điều kiện cho sự phát triển siêu nhanh.
+- Clean Design: - Django duy trì nghiêm ngặt một thiết kế sạch trong suốt mã riêng của mình và giúp bạn dễ dàng thực hiện theo các thực tiễn phát triển web tốt nhất.
+
+2.2.4 Ưu điểm của Django framework
+- Object-Relational Mapping (ORM) Support: Django cung cấp cầu nối giữa mô hình dữ liệu và công cụ cơ sở dữ liệu. Hỗ trợ một tập hợp lớn các hệ thống cơ sở dữ liệu bao gồm MySQL, Oracle, Postgres, v.v. Django cũng hỗ trợ cơ sở dữ liệu NoQuery thông qua ngã ba Django. Hiện tại, cơ sở dữ liệu NoQuery duy nhất được hỗ trợ là MongoDB và công cụ ứng dụng google.
+- Multilingual Support: Django hỗ trợ các trang web đa ngôn ngữ thông qua hệ thống quốc tế hóa tích hợp. Vì vậy, bạn có thể phát triển trang web của mình, hỗ trợ nhiều ngôn ngữ.
+- Framework Support: Django có tích hợp hỗ trợ cho Ajax, RSS, bộ đệm và nhiều khung công tác khác.
+- Administration GUI: Django cung cấp giao diện người dùng sẵn sàng sử dụng tốt cho các hoạt động quản trị.
+- Development Environment: Django đi kèm với một máy chủ web nhẹ để tạo điều kiện phát triển và thử nghiệm ứng dụng đầu cuối.
+2.2.5 Django MVC – MVT Pattern
+- Model-View-Template (MVT)  nó hoàn toàn tuân theo mô hình MVC mặc dù cách triển khai của nó hơi khác. Bởi vì Controler chính là bản thân framework, và phần lớn các lập trình viên chỉ làm việc với Model, Template và View, nên Django thường được hiểu là sử dụng mô hình MVT. Trong mô hình này:
+- Model (M) là lớp để truy cập dữ liệu. Đây là nơi chứa mọi thứ liên quan đến dữ liệu: cách thức truy cập DB, validate dữ liệu, các phương thức và hành vi của dữ liệu, mối quan hệ của dữ liệu.
+- Template (T) là lớp hiển thị. Đây là nơi chứa đựng những gì liên quan đến việc hiển thị dữ liệu cho người dùng: dữ liệu được hiển thị trên Web hay dạng thức nào khác.
+- View (V) là nơi chứa các logic. Lớp này chứa các logic để truy cập dữ liệu qua Model và truyền nó ra ngoài cho Template tương ứng. Nó có thể coi là một cầu nối giữ Model và Template.
+- Trong thực tế, sự khác biệt chính giữa hai mẫu là Django tự sử lý phần Controller  (Mã phần mềm kiểm soát các tương tác giữa Model và View), để lại cho chúng ta mẫu. Template là một tệp HTML được trộn với Ngôn ngữ Django (DTL).
+
+    Hình 21: Mô hình MVT
+2.2.6 Django – Thiết lập môi trường
+      Bước 1 - Cài đặt Python
+- Django được viết hoàn toàn bằng mã Python, vì vậy bạn sẽ cần cài đặt Python trên hệ thống của mình. Phiên bản Django mới nhất yêu cầu Python 2.6.5 trở lên.
+- Nếu bạn đang sử dụng một trong những bản phân phối Linux hoặc Mac OS X mới nhất, có lẽ bạn đã cài đặt Python. Bạn có thể xác minh nó bằng cách gõ lệnh python tại dấu nhắc lệnh. Nếu bạn thấy một cái gì đó như thế này, thì Python đã được cài đặt.
+$ python
+Python 2.7.5 (default, Jun 17 2014, 18:11:42)
+      Bước 2 - Cài đặt Django
+- Cài đặt Django rất dễ dàng, nhưng các bước cần thiết để cài đặt tùy thuộc vào hệ điều hành của bạn. Vì Python là ngôn ngữ độc lập với nền tảng, Django có một gói hoạt động ở mọi nơi bất kể hệ điều hành của bạn.
+• Cài đặt UNIX / Linux và Mac OS X
+Bạn có hai cách cài đặt Django nếu bạn đang chạy hệ thống Linux hoặc Mac OS.
+Bạn có thể sử dụng trình quản lý gói của HĐH hoặc sử dụng easy_install hoặc pip nếu được cài đặt.
+Cài đặt thủ công bằng cách sử dụng kho lưu trữ chính thức mà bạn đã tải xuống trước đó.
+Ở phần hướng dãn này sẽ đề cập đến tùy chọn thứ hai vì tùy chọn thứ nhất phụ thuộc vào phân phối HĐH của bạn. Nếu bạn đã quyết định làm theo tùy chọn đầu tiên, hãy cẩn thận với phiên bản Django bạn đang cài đặt.
+Giả sử bạn có kho lưu trữ của mình từ liên kết ở trên, nó phải giống như Django-x.xx.tar.gz:
+Giải nén và cài đặt.
+$ tar xzvf Django-x.xx.tar.gz
+$ cd Django-x.xx
+$ sudo python setup.py install
+      Bạn có thể kiểm tra cài đặt của mình bằng cách chạy lệnh này 
+$ django-admin.py --version
+Nếu bạn thấy phiên bản hiện tại của Django được in trên màn hình, thì mọi thứ đã được đặt.
+
+• Cài đặt Windows
+ Đầu tiên, xác minh PATH.
+Trên một số phiên bản windows (windows 7), bạn có thể cần đảm bảo biến hệ thống Path có đường dẫn sau đây C:\Python34\;C:\Python34\Lib\site-packages\django\bin\, tất nhiên tùy thuộc vào phiên bản Python của bạn.
+Sau đó, giải nén và cài đặt Django.
+c:\>cd c:\Django-x.xx
+Tiếp theo, cài đặt Django bằng cách chạy lệnh sau mà bạn sẽ cần các đặc quyền quản trị trong windows shell "cmd"
+c:\Django-x.xx>python setup.py install
+               	Để kiểm tra cài đặt của bạn, hãy mở một dấu nhắc lệnh và gõ lệnh sau
+c:\>python -c "import django; print(django.get_version())"
+Nếu bạn thấy phiên bản hiện tại của Django được in trên màn hình, thì mọi thứ đã được đặt.
+HOẶC LÀ
+ Khởi chạy một dấu nhắc "cmd" và gõ python sau đó -
+c:\> python
+>>> import django
+>>> django.VERSION
+      Bước 3 - Thiết lập cơ sở dữ liệu
+Django hỗ trợ một số công cụ cơ sở dữ liệu chính và bạn có thể thiết lập bất kỳ công cụ nào dựa trên sự thoải mái của mình.
+• MySQL (http://www.mysql.com/)
+• PostgreSQL (http://www.postgresql.org/)
+• SQLite 3 (http://www.sqlite.org/)
+• Oracle (http://www.oracle.com/)
+• MongoDb (https://django-mongodb-engine.readthedocs.org)
+• Kho dữ liệu GoogleAppEngine (https://cloud.google.com/appengine/articles/django-nonrel)
+      Bước 4 - Máy chủ web
+- Django đi kèm với một máy chủ web nhẹ để phát triển và thử nghiệm các ứng dụng. Máy chủ này được cấu hình sẵn để hoạt động với Django và quan trọng hơn, nó khởi động lại bất cứ khi nào bạn sửa đổi mã.
+- Tuy nhiên, Django không hỗ trợ Apache và các máy chủ web phổ biến khác như Lighttpd. Chúng tôi sẽ thảo luận về cả hai cách tiếp cận trong các chương sắp tới trong khi làm việc với các ví dụ khác nhau.
+2.3 Hệ quản trị Cơ sở dữ liệu SQLite
+2.3.1 SQLite là gì ?
+- SQLite là một thư viện phần mềm mà triển khai một SQL Database Engine truyền thống, không cần Server, không cần cấu hình và nhỏ gọn. SQLite là một trong những Database Engine phát triển nhanh nhất, nhưng sự phát triển của nó là về mặt tính phổ biến, không phải là về mặt kích cỡ. SQLite là mã nguồn mở.
+- SQLite là phần mềm quản lý cơ sở dữ liệu (DBMS) tương tự như Mysql, PostgreSQL... Đặc điểm của SQLite là gọn, nhẹ, đơn giản. Chương trình gồm 1 file duy nhất vỏn vẹn chưa đến 400kB, không cần cài đặt, không cần cấu hình hay khởi động mà có thể sử dụng ngay. Dữ liệu Database cũng được lưu ở một file duy nhất. Không có khái niệm user, password hay quyền hạn trong SQLite Database.
+- SQLite không thích hợp với những hệ thống lớn nhưng ở quy mô vừa tầm thì SQLite phát huy uy lực và không hề yếu kém về mặt chức năng hay tốc độ. Với các đặc điểm trên SQLite được sử dụng nhiều trong việc phát triển, thử nghiệm … và là sự lựa chọn phù hợp cho những người bắt đầu học Database.
+- SQLite Engine không là một Standalone Process giống như các cơ sở dữ liệu khác, bạn có thể liên kết nó một cách tĩnh hoặc một cách động tùy theo yêu cầu với ứng dụng của bạn. SQLite truy cập các file lưu giữ của nó một cách trực tiếp.
+2.3.2 Lịch sử của SQLite
+- Năm 2000: D.Richard Hipp đã thiết kế SQLite với mục đích không cần quản trị để điều hành một chương trình.
+- Vào tháng 8, SQLite 1.0 được công bố với GNU Database Manager.
+- Năm 2011: Hipp bổ sung UNQI Interface cho SQLite DB và để phát triển UNQLite (là một Document Oriented Database).
+2.3.3 Lợi ích của SQLite
+- SQLite không yêu cầu một tiến trình Server riêng rẽ để hoạt động.
+- SQLite không cần cấu hình, nghĩa là không cần thiết phải cài đặt.
+- Một SQLite Database đầy đủ được lưu giữ trong một disk file đơn.
+- SQLite là rất nhỏ gọn, nhỏ hơn 400kB đã đươc cấu hình đầy đủ hoặc nhỏ hơn 250kB khi đã bỏ qua các tính năng tùy ý.
+- SQLite là tự chứa, nghĩa là không có sự phụ thuộc vào ngoại vi.
+- Các Transaction trong SQLite là tuân theo đầy đủ chuẩn ACID, đảm bảo truy cập an toàn từ nhiều tiến trình hoặc thread.
+- SQLite hỗ trợ hầu hết các tính năng của một ngôn ngữ truy vấn trong chuẩn SQL92.
+- SQLite được viết bằng ANSI-C và cung cấp API đơn giản và dễ dàng sử dụng.
+2.4 Kết luận chương 2
+    Trong chương 2 của đồ án đã nêu được nội dung lý thuyết quá trình tìm hiểu công nghệ mới về ngôn ngữ lập trình Python, web framwork Django và hệ quản trị cơ sở dữ liệu Sqlite. Chương tiếp theo sẽ tiến hành xây dựng “Website giới thiệu và bán nông sản, đặc sản tỉnh Hải Dương”
+
+CHƯƠNG 2: XÂY DỰNG WEBSITE GIỚI THIỆU VÀ BÁN NÔNG SẢN, ĐẶC SẢN TỈNH HẢI DƯƠNG
+3.1. Khảo sát và phân tích yêu cầu
+3.1.1 Thời gian và địa điểm khảo sát
+- Tham khảo một số website bán hàng online trên mạng như: Lazada, Greenyhouse, Hoabanfood…
+3.1.2 Thông tin liên hệ
+- Bộ môn CNPM – Khoa Công Nghệ Thông Tin – Trường ĐHSPKT Hưng Yên - Hải Dương
+3.1.3 Thông tin dự án
+- Tên dự án: “TÌM HIỂU PYTHON DJANGO VÀ XÂY DỰNG WEBSITE GIỚI THIỆU VÀ BÁN NÔNG SẢN, ĐẶC SẢN TỈNH HẢI DƯƠNG”
+- Người thực hiện: Dương Thị Quỳnh.
+- Người hướng dẫn: Nguyễn Thị Hải Năng.
+- Ngày thực hiên: 20/01/2019.
+- Dự kiên ngày hoàn thành: 30/05/2019.
+3.1.4 Yêu cầu của hệ thống sau khảo sát
+    Bảng 3.1: Yêu cầu khách hàng
+STTTên yêu cầu1Đăng nhập vào hệ thống quản trị2Hiển thị thông tin loại sản phẩm lên thanh menu của website 3Hiên thị nội dung của website như sản phẩm mới nhất…4Chức năng thống kê báo cáo doanh thu, hàng tồn kho…5Quản lý giỏ hàng khi khách hàng thêm sản phẩm vào giỏ hàng6Chức năng đặt hàng7Chức năng tìm kiếm và lọc thông tin theo yêu cầu của khách hàng8Hiển thị thông tin chi tiết sản phẩm khi chọn xem một sản phẩm9Hiển thị trang AboutUs giới thiệu về cửa hàng10Quản lý dữ liệu khách hàng11Quản lý Order và OrderDetail12Quản lý hóa đơn nhập và chi tiết hóa đơn nhập13Quản lý Slider14Quản lý Giảm giá15Quản lý Bài viết16Quản lý sản phẩm17Quản lý loại sản phẩm18 Quản lý nhà cung cấp3.1.5 Mô tả yêu cầu của hệ thống
+• Các yêu cầu chức năng
+    Bảng 3.2: Các yêu cầu chức năng
+STTTên yêu cầuMô tả yêu cầuICác yêu cầu chức năng nghiệp vụLà các chức năng của phần mềm tương ứng với các công việc trong thế giới thực.1Quản lý thông tin sản phẩm, chi tiết sản phẩmChức năng này cho phép người quản lý duy trì thông tin của sản phẩm bày bán trong cửa hàng. Bao gồm thêm mới, sửa, xóa, tìm kiếm, hiển thị thông tin sản phẩm. Công việc này do nhân viên đảm nhận.2Quản lý thông tin giảm giáChức năng này cho phép người quản lý duy trì thông tin về giảm giá sản phẩm. Bao gồm thêm mới, sửa, xóa, tìm kiếm, hiển thị thông tin giảm giá sản phẩm.3Quản lý thông tin SlideChức năng này cho phép nguời quản lý duy trì thông tin Slide quảng cáo tại Website. Bao gồm thêm mới, sửa, xóa, hiển thị thông tin Slide.4Quản lý thông tin bài viếtChức năng này cho phép người quản lý, quản lý thông tin về bài viết giới thiệu của mỗi sản phẩm. Bao gồm thêm, sửa, xóa, hiển thị thông tin bài viết. 5Quản lý thông tin loại sản phẩm
+Chức năng này cho phép người quản lý, quản lý được thông tin loại sản phẩm. Bao gồm thêm, sửa, xóa, tìm kiếm và hiển thị thông tin loại sản phẩm.6Quản lý thông khách hàngChức năng này cho phép người quản lý, quản lý được thông tin về khách hàng. Bao gồm tìm kiếm và hiển thị thông tin về khách hàng.7Quản lý Order và OrderDetailChức năng này cho phép người quản lý, quản lý thông tin về order và orderDetail. Bao gồm thêm, sửa, xóa, tìm kiêm và hiển thị thông tin.8Quản lý nhà sản xuấtChức năng này cho phép người quản lý, quản lý thông tin về các nhà sản xuất đang cung cấp sản phẩm cho cửa hàng. Bao gồm thêm, sửa, xóa, tìm kiếm, hiển thị thông tin nhà sản xuất.9Quản lý thông tin hóa đơn nhập và chi tiết hóa đơn nhậpChức năng này cho phép người quản lý, quản lý thông tin về hóa đơn nhập và chi tiết hóa đơn nhập. Bao gồm thêm, sửa, xóa, tìm kiếm, hiển thị thông tin.10Thống kê, báo cáoThống kê, báo cáo tổng số doanh thu, các mặt hàng tồn kho…IICác yêu cầu chức năng hệ thốngLà các chức năng của phần mềm được phát sinh thêm khi thực hiện một công việc trên máy tính thay vì trong thế thới thực hoặc không tương ứng với bất kỳ công việc nào trong thế giới thực.1Quản lý thông tin người dùngCho phép admin quản lý thông tin người dùng gồm các chức năng thêm, sửa, xóa thông tin người dùng.2Phân quyền cho người sử dụngTài khoản “Admin” tạo các nhóm chức năng (nhóm người dùng), trong mỗi nhóm chỉ sử dụng được những chức năng được cho phép và mỗi người dùng thuộc vào một nhóm chức năng nào đó.3Thay đổi mật khẩuCho phép thay đổi mật khẩu của tài khoản khi người sử dụng muốn thay đổi.• Các yêu cầu phi chức năng
+    Bảng 3.3: Các yêu cầu phi chức năng
+STTTên yêu cầuMô tả yêu cầu1Website chạy ổn địnhWebsite chạy ổn định trên môi trường Web2Giao diện thân thiệnGiao diện thân thiện, dễ nhìn, dễ dàng thao tác, dễ sử dụng.3Bảo mật dữ liệuĐảm bảo dữ liệu được bảo mật, phẩm quyền quản lý, giới hạn quyền cho các tài khoản, các tác nhân.
+3.2 Phân tích thiết kế với UML
+3.2.1 Biểu đồ Use case
+• Xác định các tác nhân và tình huống sử dụng Use case 
+   Qua khảo sát hiện trạng thực tế, kết hợp với việc tham khảo tài liệu và phân tích ý kiến của người dùng, hệ thống quản lý đồ án có các tác nhân sau:
+    Bảng 3.4: Xác định tác nhân
+STTTác NhânDiễn Giải1Những người thuộc nhóm quyền này có thể tạo tài khoản người dùng và phẩm quyền cho từng tai khoản đó2Những người thuộc quyền này xẽ được Admin cấp cho tài khoản và được giới hạn quyền hạn sử dụng.3Những người thuộc nhóm quyền này có thê truy xuất vào trang web bán hàng và thực hiện mua sắm online
+
+
+
+
+
+• Các quyền sử dụng 
+    Bảng 3.5: Xác định quyền sử dụng
+STTTác nhân chínhTên Use case1Admin Đăng nhập: Đăng nhập để vào hệ thống với quyền là admin (quyền cao nhất). Admin: được phép tạo nhóm người dùng và phân quyền cho từng nhân viên. 2EmployeeĐăng nhập: Đăng nhập vào hệ thống với quyền do Admin đã cấp. Sử dụng các chức năng thêm, sửa , xóa, tìm kiếm, hiển thị thông tin, thống kê, báo cáo (Trừ chức năng tạo user và phân quyền).3CustomerNhững người thuộc nhóm quyền này có thể xem và tìm kiếm thông tin sản phẩm; mua hàng, xem sửa xóa thông tin giỏ hàng, thanh toán; xem sản phẩm mới nhất, bán chạy nhất.
+
+
+
+
+
+
+
+
+
+
+
+
+
+• Biểu đồ Use Case tổng quát
+
+    Bảng 3.6: Biểu đồ Use case cho hệ thống
+Mục đích: Sử dụng Website “Giới thiệu và bán sản phẩm nông sản, đặc sản tỉnh Hải Dương” nhằm mục đích giúp cho việc quản lý, bán hàng và thống kê các báo cáo mà không phải tốn nhiều công sức, tiền bạc, thời gian...
+      - Tác nhân: Người dùng hệ thống như: admin, customer, employee.
+      - Mô tả: Hệ thống cho phép người dùng vào sử dụng các chức năng để thực hiện việc quản lý, nhập liệu cũng như thống kê các báo cáo, tìm kiếm thông tin.
+Điều kiện cần: Người dùng phải truy cập vào website để thực hiện các quyền của khách hàng. Riêng với các quyền quản trị của website thì cần đăng nhập vào trang quản trị sau đó mới thực hiện được các chức năng mong muốn.
+Dòng sự kiện:
+      Dòng sự kiện chính:
+    Bảng 3.7: Dòng sự kiện chính cho usecase hệ thống
+Hành động của tác nhânPhản ứng của hệ thống1. Truy cập vào website
+2. Hiển thị các chức năng xem thông tin, tìm kiếm, đặt hàng của khách hàng.1. Đăng nhập vào hệ thống.
+3. Nhập thông tin đăng nhập.
+
+5. Gửi thông tin đăng nhập tới hệ thống.
+7. Sử dụng một chức năng.
+9. Đưa ra các thông số đầu vào.2. Hiển thị trang đăng nhập.
+4. Kiểm tra thông tin đăng nhập và loại tài khoản, nếu đúng thì cho phép truy cập hệ thống, sai thì đưa ra thông báo.
+6. Hiển thị giao diện trang quản trị
+8. Hiển thị giao diện chức năng
+10. Xử lý và trả ra các kết quả tương ứng.    Dòng sự kiện phụ: Người dùng đăng nhập sai tài khoản sẽ không vào sử dụng được những chức năng này của hệ thống.
+    - Dòng sự kiện thứ nhất:
+    + Hệ thống hiển thị thông báo không đăng nhập thành công khi tên và mật khẩu đưa vào không hợp lệ.
+    + Kết thúc use case.
+    - Dòng sự kiện thứ hai:
+    + Hệ thống có lỗi trong quá trình xử lý xác nhận tài khoản.
+    + Hiển thị thông báo lỗi.
+    + Kết thúc use case.
+• Biểu đồ Use Case “Quản lý Sản phẩm”
+
+    Bảng 3.8: Biểu đồ Use Case quản lý sản phẩm
+Mục đích: Quản lý và nhập dữ liệu cho hệ thống.
+      - Tác nhân: admin và employee.
+      - Mô tả: giúp cho người quản lý dễ dàng quản lý và theo dõi sản phẩm trên website
+Điều kiện cần: Phải là người đã có tài khoản, có quyền sử dụng chức năng này và thực hiện đăng nhập vào hệ thống thành công.
+Dòng sự kiện:
+
+
+
+
+
+
+
+
+
+
+	Dòng sự kiện chính:
+    Bảng 3.9: Dòng sự kiện chính cho Use case “Quản lý sản phẩm”
+Hành động của tác nhânPhản ứng của hệ thống1.  Kích hoạt chức năng đăng nhập hệ thống, thực hiện việc đăng nhập.
+3. Kích hoạt chức năng quản lý sản phẩm.
+5. Sử dụng các chức năng: Quản lý, thêm mới, sửa thông tin, xóa …2. Kiểm tra đăng nhập, nếu thành công hiện các chức năng mà người dùng có thể thực hiện.
+4. Hiển thị giao diện quản lý sản phẩm.
+6. Thực hiện xử lý và lưu trữ dữ liệu.    Dòng sự kiện phụ:
+    - Người dùng nhập sai thông tin đăng nhập. Hiện thông báo sai thông tin đăng nhập. Hủy bỏ việc đăng nhập hiện thời và trở lại giao diện ban đầu.
+    - Người dùng thoát chức năng quản lý sản phẩm. Hệ thống  thực hiện thoát và và quay trở về giao diện chính trang quản trị, kết thúc sự kiện.
+• Biểu đồ Use Case “Quản lý loại sản phẩm”
+
+    Hình 31: Biểu đồ Use Case quản lý loại sản phẩm
+
+Mục đích: Quản lý và nhập dữ liệu cho hệ thống.
+      - Tác nhân: Admin, employee.
+      - Mô tả: Chức năng này cho phép người dùng quản lý các thông tin về loại sản phẩm.
+Điều kiện cần: Phải là người đã có tài khoản trong hệ thống, có quyền sử dụng chức năng này và thực hiện đăng nhập vào hệ thống.
+Dòng sự kiện:
+	Dòng sự kiện chính:
+    Bảng 3.10: Dòng sự kiện chính cho Use case “Quản lý loại sản phẩm”
+Hành động của tác nhânPhản ứng của hệ thống1. Kích hoạt chức năng đăng nhập hệ thống, thực hiện việc đăng nhập.
+
+3. Kích hoạt chức năng quản lý loại sản phẩm.
+5. Sử dụng các chức năng: Quản lý, thêm mới, sửa thông tin, xóa loại …2. Kiểm tra đăng nhập, nếu thành công hiện các chức năng mà người dùng có thể thực hiện.
+4. Hiển thị giao diện quản lý loại sản phẩm.
+6. Thực hiện xử lý và lưu trữ dữ liệu.    Dòng sự kiện phụ:
+    - Người dùng nhập sai thông tin đăng nhập. Hiện thông báo sai thông tin đăng nhập. Hủy bỏ việc đăng nhập hiện thời và trở lại giao diện ban đầu.
+    - Người dùng thoát chức năng quản lý loại sản phẩm. Hệ thống thực hiện thoát và quay trở về giao diện chính trang quản trị, kết thúc sự kiện.
+
+
+
+
+
+• Biểu đồ Use Case “Quản lý Khách hàng”
+
+    Hình 32: Biểu đồ Use case “Quản lý Khách hàng”
+Mục đích: Quản lý và nhập dữ liệu cho hệ thống.
+      - Tác nhân: Admin, employee.
+      - Mô tả: Chức năng này cho phép người dùng quản lý thông tin khách hàng.
+Điều kiện cần: Phải là người đã có tài khoản trong hệ thống, có quyền sử dụng chức năng này và thực hiện đăng nhập vào hệ thống.	
+Dòng sự kiện:
+	Dòng sự kiện chính:
+    Bảng 3.11: Dòng sự kiện chính cho Use case “Quản lý khách hàng”
+Hành động của tác nhânPhản ứng của hệ thống1. Kích hoạt chức năng đăng nhập hệ thống, thực hiện việc đăng nhập.
+
+3. Kích hoạt chức năng quản lý khách hàng.
+5. Sử dụng các chức năng: Quản lý, hiển thị, tìm kiếm thông tin khách hàng…2. Kiểm tra đăng nhập, nếu thành công hiện các chức năng mà người dùng có thể thực hiện.
+4. Hiển thị giao diện quản lý khách hàng.
+6. Thực hiện xử lý.    
+    Dòng sự kiện phụ:
+    - Người dùng nhập sai thông tin đăng nhập. Hiện thông báo sai thông tin đăng nhập. Hủy bỏ việc đăng nhập hiện thời và trở lại giao diện ban đầu.
+    - Người dùng thoát chức năng quản lý khách hàng. Hệ thống thực hiện thoát và quay trở về giao diện chính trang quản trị, kết thúc sự kiện.
+• Biểu đồ Use Case “Quản lý bài viết”
+
+    Hình 33: Biểu đồ Use case “Quản bài viết”
+Mục đích: Quản lý và nhập dữ liệu cho hệ thống.
+      - Tác nhân: Admin, employee.
+      - Mô tả: Chức năng này cho phép người dùng quản lý thông tin bài viêt về sản phẩm.
+Điều kiện cần: Phải là người đã có tài khoản trong hệ thống, có quyền sử dụng chức năng này và thực hiện đăng nhập vào hệ thống.	
+
+
+
+
+
+Dòng sự kiện:
+	Dòng sự kiện chính:
+    Bảng 3.12: Dòng sự kiện chính cho Use case “Quản lý bài viết”
+Hành động của tác nhânPhản ứng của hệ thống1. Kích hoạt chức năng đăng nhập hệ thống, thực hiện việc đăng nhập.
+3. Kích hoạt chức năng quản lý bài viết.
+5. Sử dụng các chức năng: Quản lý, thêm, sửa, xóa, hiển thị bài viết.2. Kiểm tra đăng nhập, nếu thành công hiện các chức năng mà người dùng có thể thực hiện.
+4. Hiển thị giao diện quản lý bài viết.
+6. Thực hiện xử lý.    
+    Dòng sự kiện phụ:
+    - Người dùng nhập sai thông tin đăng nhập. Hiện thông báo sai thông tin đăng nhập. Hủy bỏ việc đăng nhập hiện thời và trở lại giao diện ban đầu.
+    - Người dùng thoát chức năng quản lý bài viết. Hệ thống thực hiện thoát và quay trở về giao diện chính trang quản trị, kết thúc sự kiện.
+• Biểu đồ Use Case “Quản lý giảm giá”
+
+    Hình 34: Biểu đồ Use case “Quản lý giảm giá”
+Mục đích: Quản lý và nhập dữ liệu cho hệ thống.
+      - Tác nhân: Admin, employee.
+      - Mô tả: Chức năng này cho phép người dùng quản lý thông tin giảm giá
+Điều kiện cần: Phải là người đã có tài khoản trong hệ thống, có quyền sử dụng chức năng này và thực hiện đăng nhập vào hệ thống.	
+Dòng sự kiện:
+	Dòng sự kiện chính:
+    Bảng 3.13:  Dòng sự kiện chính cho Use case “Quản lý giảm giá”
+Hành động của tác nhânPhản ứng của hệ thống1. Kích hoạt chức năng đăng nhập hệ thống, thực hiện việc đăng nhập.
+
+3. Kích hoạt chức năng quản lý thông tin giảm giá.
+5. Sử dụng các chức năng: Quản lý, thêm mới, sửa thông tin, xóa thông tin giảm giá.2. Kiểm tra đăng nhập, nếu thành công hiện các chức năng mà người dùng có thể thực hiện.
+4. Hiển thị giao diện quản lý giảm giá.
+
+6. Thực hiện xử lý và lưu trữ dữ liệu.    Dòng sự kiện phụ:
+    - Người dùng nhập sai thông tin đăng nhập. Hiện thông báo sai thông tin đăng nhập. Hủy bỏ việc đăng nhập hiện thời và trở lại giao diện ban đầu.
+    - Người dùng thoát chức năng quản lý giảm giá. Hệ thống thực hiện thoát và quay trở về giao diện chính trang quản trị, kết thúc sự kiện.
+    
+    
+    
+    
+    
+
+• Biểu đồ Use Case “Quản lý nhà sản xuất”
+
+    Hình 35: Biểu đồ Use case “Quản lý nhà sản xuất”
+Mục đích: Quản lý và nhập dữ liệu cho hệ thống.
+      - Tác nhân: Admin, employee.
+      - Mô tả: Chức năng này cho phép người dùng quản lý thông tin nhà sản xuất.
+Điều kiện cần: Phải là người đã có tài khoản trong hệ thống, có quyền sử dụng chức năng này và thực hiện đăng nhập vào hệ thống.	
+Dòng sự kiện:
+	Dòng sự kiện chính:
+    Bảng 3.14:  Dòng sự kiện chính cho Use case “Quản lý nhà sản xuất”
+Hành động của tác nhânPhản ứng của hệ thống1. Kích hoạt chức năng đăng nhập hệ thống, thực hiện việc đăng nhập.
+
+3. Kích hoạt chức năng quản lý nhà sản xuất.
+5. Sử dụng các chức năng: Quản lý, thêm mới, sửa thông tin, xóa nhà sản xuất.2. Kiểm tra đăng nhập, nếu thành công hiện các chức năng mà người dùng có thể thực hiện.
+4. Hiển thị giao diện quản lý nhà sản xuất.
+
+6. Thực hiện xử lý và lưu trữ dữ liệu.    Dòng sự kiện phụ:
+    - Người dùng nhập sai thông tin đăng nhập. Hiện thông báo sai thông tin đăng nhập. Hủy bỏ việc đăng nhập hiện thời và trở lại giao diện ban đầu.
+- Người dùng thoát chức năng quản lý nhà sản xuất. Hệ thống  thực hiện thoát và quay trở về giao diện chính trang quản trị, kết thúc sự kiện.
+• Biểu đồ Use Case “Quản lý Slide”
+
+    Hình 36: Biểu đồ Use case “Quản lý Slide”
+Mục đích: Quản lý và nhập dữ liệu cho hệ thống.
+      - Tác nhân: Admin, employee.
+      - Mô tả: Chức năng này cho phép người dùng quản lý thông tin Slide.
+Điều kiện cần: Phải là người đã có tài khoản trong hệ thống, có quyền sử dụng chức năng này và thực hiện đăng nhập vào hệ thống.	
+Dòng sự kiện:
+
+
+
+	Dòng sự kiện chính:
+    Bảng 3.15:  Dòng sự kiện chính cho Use case “Quản lý Slide”
+Hành động của tác nhânPhản ứng của hệ thống1. Kích hoạt chức năng đăng nhập hệ thống, thực hiện việc đăng nhập.
+3. Kích hoạt chức năng quản lý Slide
+5. Sử dụng các chức năng: Quản lý, thêm mới, sửa thông tin, xóa Slide2. Kiểm tra đăng nhập, nếu thành công hiện các chức năng mà người dùng có thể thực hiện.
+4. Hiển thị giao diện quản lý Slide
+6. Thực hiện xử lý và lưu trữ dữ liệu.    Dòng sự kiện phụ:
+    - Người dùng nhập sai thông tin đăng nhập. Hiện thông báo sai thông tin đăng nhập. Hủy bỏ việc đăng nhập hiện thời và trở lại giao diện ban đầu.
+    - Người dùng thoát chức năng quản lý Slide. Hệ thống  thực hiện thoát và quay trở về giao diện chính trang quản trị, kết thúc sự kiện.
+• Biểu đồ Use Case “Quản lý Order”
+
+    Hình 37: Biểu đồ Use case “Quản lý Order”
+
+Mục đích: Quản lý và nhập dữ liệu cho hệ thống.
+      - Tác nhân: Admin, employee.
+      - Mô tả: Chức năng này cho phép người dùng quản lý thông tin Slide.
+Điều kiện cần: Phải là người đã có tài khoản trong hệ thống, có quyền sử dụng chức năng này và thực hiện đăng nhập vào hệ thống.	
+Dòng sự kiện:
+	Dòng sự kiện chính:
+    Bảng 3.16:  Dòng sự kiện chính cho Use case “Quản lý Order”
+Hành động của tác nhânPhản ứng của hệ thống1. Kích hoạt chức năng đăng nhập hệ thống, thực hiện việc đăng nhập.
+3. Kích hoạt chức năng quản lý Order
+5. Sử dụng các chức năng: Quản lý, thêm mới, sửa thông tin, xóa Order2. Kiểm tra đăng nhập, nếu thành công hiện các chức năng mà người dùng có thể thực hiện.
+4. Hiển thị giao diện quản lý Order
+6. Thực hiện xử lý và lưu trữ dữ liệu.    Dòng sự kiện phụ:
+    - Người dùng nhập sai thông tin đăng nhập. Hiện thông báo sai thông tin đăng nhập. Hủy bỏ việc đăng nhập hiện thời và trở lại giao diện ban đầu.
+    - Người dùng thoát chức năng quản lý Order. Hệ thống  thực hiện thoát và quay trở về giao diện chính trang quản trị, kết thúc sự kiện.
+    
+    
+    
+    
+    
+    
+    
+• Biểu đồ Use Case “Quản lý Hóa đơn nhập”
+
+    Hình 38: Biểu đồ Use case “Quản lý Hóa đơn nhập”
+Mục đích: Quản lý và nhập dữ liệu cho hệ thống.
+      - Tác nhân: Admin, employee.
+      - Mô tả: Chức năng này cho phép người dùng quản lý thông tin hóa đơn nhập.
+Điều kiện cần: Phải là người đã có tài khoản trong hệ thống, có quyền sử dụng chức năng này và thực hiện đăng nhập vào hệ thống.	
+Dòng sự kiện:
+	Dòng sự kiện chính:
+    Bảng 3.17:  Dòng sự kiện chính cho Use case “Quản lý Hóa đơn nhập”
+Hành động của tác nhânPhản ứng của hệ thống1. Kích hoạt chức năng đăng nhập hệ thống, thực hiện việc đăng nhập.
+3. Kích hoạt chức năng quản lý hóa đơn nhập
+5. Sử dụng các chức năng: Quản lý, thêm mới, sửa thông tin, xóa hóa đơn nhập2. Kiểm tra đăng nhập, nếu thành công hiện các chức năng mà người dùng có thể thực hiện.
+4. Hiển thị giao diện quản lý hóa đơn nhập
+6. Thực hiện xử lý và lưu trữ dữ liệu.    Dòng sự kiện phụ:
+    - Người dùng nhập sai thông tin đăng nhập. Hiện thông báo sai thông tin đăng nhập. Hủy bỏ việc đăng nhập hiện thời và trở lại giao diện ban đầu.
+- Người dùng thoát chức năng quản lý hóa đơn nhập. Hệ thống  thực hiện thoát và quay trở về giao diện chính trang quản trị, kết thúc sự kiện.
+• Biểu đồ Use Case “Thống kê, báo cáo”
+
+    Hình 39: Biểu đồ Use case cho chức năng “Thống kê báo cáo”
+   Mục đích: Chức năng thống kê báo cáo là một chức năng quan trọng trong hệ thống, cũng cấp bản thống kê.
+   - Tác nhân: Admin hoặc những giảng viên có quyền sử dụng chức năng này.
+   - Mô tả: Khi kích hoạt hệ thống thành công người dùng có thể cho kích hoạt chức năng thống kê bằng cách chọn chức năng trong menu thống kê bên trái.
+   Điều kiện cần: Người dùng cần có một tài khoản có quyền thống kê và thực hiện đăng nhập vào hệ thống.
+   Dòng sự kiện:
+   
+   
+   
+   
+   
+   
+   Dòng sự kiện chính:
+    Bảng 3.18: Dòng sự kiện chính cho Use case “Thống kê báo cáo”
+Hành động của tác nhânPhản ứng của hệ thống1. Kích hoạt chức năng thống kê.
+
+3. Nhập các thông tin cần thiết2. Hiển thị giao diện làm việc của chức năng thống kê.
+4. Thực hiện xử lý các yêu cầu người dùng.Dòng sự kiện phụ: 
+   Người dùng nhập các thông tin không đúng quy định. Thông báo thông tin không hợp lệ. Hủy bỏ thao tác và yêu cầu nhập chính xác dữ liệu.
+3.2.2 Biểu đồ lớp
+• Biểu đồ lớp tổng quát
+    
+    Hình 310: Biểu đồ lớp tổng quát
+• Danh sách các lớp đối tượng
+    Bảng 3.19: Danh sách các lớp
+STTTên lớp/quan hệÝ nghĩa/Ghi chú1ProductSản phẩm2CategoryLoại sản phẩm3ProductImageHình ảnh sản phẩm4PromotionGiảm giá 5ProductPostBài viết sản phẩm6OrderOrder sản phẩm7OrderDetailChi tiết Order8ImportInvoiceHóa đơn nhập9ImportDetailChi tiết hóa đơn nhập10CustomerKhách hàng11ProducerNhà sản xuất12SlideImageHình ảnh Slide
+
+
+
+
+
+
+
+
+
+
+3.2.3 Biểu đồ tuần tự
+• Biểu đồ tuần tự tổng quát
+
+    Hình 311: Biểu đồ tuần tự tổng quát
+
+
+
+• Biểu đồ tuần tự cho chức năng đăng nhập
+
+    Hình 312: Biểu đồ tuần tự cho chức năng đăng nhập
+• Biểu đồ tuần tự cho chức năng thêm mới thông tin
+
+    Hình 313: Biểu đồ tuần tự cho chức năng thêm mới thông tin
+• Biểu đồ tuần tự cho chức năng sửa thông tin
+
+    Hình 314: Biểu đồ tuần tự cho chức năng sửa thông tin
+• Biểu đồ tuần tự cho chức năng xóa thông tin
+
+    Hình 315: Biểu đồ tuần tự cho chức năng xóa thông tin
+• Biểu đồ tuần tự cho chức năng thống kê, báo cáo
+
+    Hình 316: Biểu đồ tuần tự cho chức năng thống kê, báo cáo
+• Biểu đồ tuần tự cho chức năng tìm kiếm
+
+    Hình 317: Biểu đồ tuần tự cho chức năng tìm kiếm
+
+3.3 Thiết kế cơ sở dữ liệu
+3.3.1 Các bảng dữ liệu
+• Bảng loại sản phẩm: Categories
+    Bảng 3.20: Categories
+Tên thuộc tínhLoạiRàng buộcGhi chúCategoryIdINTEGERPRIMARY KEY, AUTOINCREMENTMã loại điện thoạiCategoryNameVARCHAR(255)Tên loại điện thoạiCategoryDescriptionVARCHAR(Max)Mô tảIsActiveBOOLTrạng thái danh mục• Bảng Nhà sản xuất: Producer
+    Bảng 3.21: Producer
+Tên thuộc tínhKiểu dữ liệuRàng buộcÝ nghĩa/ghi chúProducerIdINTEGERPRIMARY KEY, AUTOINCREMENTMã nhà cung cấpProducerNameVARCHAR(255)Tên nhà cung cấpProducerPhoneVARCHAR(15)Số điện thoạiProducerEmailVARCHAR(255)Email nhà cung cấpProducerPlaceVARCHAR(500)Địa chỉIsAciveBOOLTrạng thái nhà cung cấp• Bảng Sản phẩm: Products
+    Bảng 3.22: Products
+Tên thuộc tínhKiểu dữ liệuRàng buộcÝ nghĩa/ghi chúProductIdINTEGERPRIMARYKEY, AUTOINCREMENTMã sản phẩmProductNameVARCHAR( 255)Tên sản phẩmSubCateIDINTEGERMã loại phụProductPriceDOUBLEGiá sản phẩmCurrentProductPriceDOUBLEGiá nhập hiện tạiProductImageVARCHAR(255)Hình ảnh sản phẩmProductUnitVARCHAR(255)Đơn vị tínhIsActiveBOOLTrạng thái sản phẩm• Bảng Order: Order
+    Bảng 3.23: Order
+Tên thuộc tínhKiểu dữ liệuRàng buộcÝ nghĩa/ghi chúOrderIdINTEGERPRIMARY KEY, AUTOINCREMENTMã orderCustomerIdINTEGERFOREIGN KEYMã khách hàngOrderedDateDATETIMENgày đặt hàngTotalAmountDOUBLETổng tiềnIsActiveBOOLTrạng thái đơn hàng
+
+
+• Bảng Chi tiết Order: OrderDetail
+    Bảng 3.24: OrderDetail
+Tên thuộc tínhKiểu dữ liệuRàng buộcÝ nghĩa/ghi chúOrderIdINTEGERFOREIGN KEYMã orderProductIdINTEGERFOREIGN KEYMã sản phẩmProductPriceDOUBLEGiá sản phẩmProductUnitINTEGERĐơn vị tínhProductQuantityINTEGERSố lượng sản phẩm
+• Bảng ảnh sản phẩm: ProductImages
+    Bảng 3.25: ProductImages
+Tên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chúImageIdINTEGERPRIMARY KEY, AUTOINCREMENTMã hình ảnhProductIdINTEGERFOREIGN KEYMã sản phẩmImagePathVARCHARĐường dẫn hình ảnhIsActiveBOOLTrạng thái
+
+
+
+
+
+• Bảng Khách hàng: Customer
+    Bảng 3.26: Customer
+Tên thuộc tínhKiểu dữ liệuRàng buộcÝ nghĩa/ghi chú CustomerIdINTEGERPRIMARY KEY, AUTOINCREMENTMã khách hàng CustomerNameVARCHAR( 255)Họ tên khách hàng CustomerPhoneINTEGER(12)Số điện thoại  CustomersEmailVARCHAR( 255)Email khách hàng CustomersAddressVARCHAR( 500)Địa chỉ khách hàng IsActiveBOOLTrạng thái 
+• Bảng Giảm giá: Promotions
+    Bảng 3.27: Promotions
+Tên thuộc tínhKiểu dữ liệuRàng buộcÝ nghĩa/ghi chúPromotionIdINTEGERPRIMARY KEY, AUTOINCREMENTId giảm giáProductIdINTEGERFOREIGN KEYMã sản phẩmStartDateDATETIMENgày bắt đầuEndDateDATETIMENgày kết thúcDiscountDOUBLEGiá giảmIsActiveBOOLTrạng thái• Bảng hóa đơn nhập: ImportInvoice
+    Bảng 3.28: ImportInvoice
+Tên thuộc tínhKiểu dữ liệuRàng buộcÝ nghĩa/ghi chúImportIdINTEGERPRIMARY KEY, AUTOINCREMENTId hóa đơn nhậpProducerIdINTEGERFOREIGN KEYMã nhà cung cấpImportDateDATETIMENgày nhậpTotalAmountINTEGERTổng tiềnIsActivcDATETIMETrạng thái hóa đơn
+• Bảng bài viết sản phẩm: ProductPosts
+    Bảng 3.29: ProductPosts
+Tên thuộc tínhKiểu dữ liệuRàng buộcÝ nghĩa/ghi chúProductIdINTEGERPRIMARY KEY, AUTOINCREMENTMã sản phẩmContentVARCHAR (Max)Nội dung bài viếtIsActiveBOOLTrạng thái bài viết• Bảng Chi tiết hóa đơn nhập: ImportDetail
+    Bảng 3.30: ImportDetail
+Tên thuộc tínhKiểu dữ liệuRàng buộcÝ nghĩa/ghi chúImportIdINTEGERPRIMARY KEY, AUTOINCREMENTId hóa đơn nhậpProductIdINTEGERFOREIGN KEYMã sản phẩmImportQuantityINTERGERSố lượng sản phẩmImportPriceDOUBLEGiá sản phẩmProducUnitINTEGERĐơn vị tính• Bảng ảnh Slide: SlideImages
+    Bảng 3.31: SlideImages
+Tên thuộc tínhKiểu dữ liệuRàng buộcÝ nghĩa/ghi chúSlideIdINTEGERPRIMARY KEY, AUTOINCREMENTMã sliderImagePathVARCHAR(255)Đường dẫn ảnhDescriptionVARCHAR(Max)Mô tả sliderIsActiveBOOLTrạng thái slider• Bảng ảnh Loại sản phẩm phụ: SubCategory
+    Bảng 3.32: SubCategory
+Tên thuộc tínhKiểu dữ liệuRàng buộcÝ nghĩa/ghi chúSubCateIdINTEGERPRIMARY KEY, AUTOINCREMENTMã loại sản phẩm phụSubCateNameVARCHAR(255)Tên loại sản phẩm phụCateIdINTEGERMã loại sản phẩm
+3.3.2 Mô hình cơ sở dữ liệu
+
+    Hình 318: Mô hình cơ sở dữ liệu
+
+3.4 Thiết kế đặc tả giao diện
+3.4.1 Chức năng hiển thị trang chủ
+• Mục đích
+   Chức năng này cho phép người dùng khi truy cập vào website xẽ hiển thị giao diện với nội dung danh sách sản phẩm, menu, slide...
+• Phạm vi
+   Chức năng này sẽ cho phép người dùng truy cập vào website có thể sử dụng.
+• Ràng buộc
+   Người dùng phải truy cập vào website thành công.
+• Giao diện của chức năng
+
+    Hình 319: Giao diện trang chủ
+• Mô tả chức năng
+   Khi người dùng truy cập vào website, trang chủ sẽ hiển thị ra với các nội dung bao gồm: khung tìm kiếm; logo website; menu; ảnh slide; thông tin sản phẩm bán trên với nội dung tên, giá, hình ảnh, thông tin và phần footer là nội dung thông tin về địa chỉ, nhà cung cấp, hỗ trợ.
+3.4.2 Chức năng hiển thị chi tiết sản phẩm
+• Mục đích
+   Chức năng này hiển thị thông tin chi tiết sản phẩm khi người dùng click vào sản phẩm nào đó trên trang chủ để xem thông tin chi tiết về sản phẩm đó.
+• Phạm vi
+   Chức năng này cho phép người dùng truy cập vào website có thể sử dụng.
+• Ràng buộc
+Người dùng phải truy cập vào website và click vào sản phẩm để xem thông tin chi tiết.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+• Giao diện của chức năng
+
+    Hình 320: Giao diện chi tiết sản phẩm
+• Mô tả chức năng
+   Khi người dùng ấn vào xem chi tiết sản phẩm, giao diện chi tiết sản phẩm sẽ hiển thị ra với thông tin về chi tiết về sản phẩm; ảnh; giá; khuyến mãi; sản phẩm liên quan; thông tin chi tiết sản phẩm và hai button là: thêm sản phẩm vào giỏ hàng và mua ngay. Hai nút này đều có chức năng là đưa sản phẩm khách hàng đã chọn vào giỏ hàng của mình. Tuy nhiên với button thêm sản phẩm vào giỏ hàng thì khi người dùng ấn button, người dùng vẫn sẽ ở trang hiện tại, còn với button mua ngay người dùng sẽ được chuyển hướng đến trang giỏ hàng ngay.
+
+3.4.3 Chức năng hiển thị loại sản phẩm
+• Mục đích
+   Giúp người dùng có thể xem hết tất cả các sản phẩm cùng một loại sản phẩm.
+• Phạm vi
+   Chức năng này cho phép người dùng truy cập vào website có thê sử dụng.
+• Ràng buộc
+   Người dùng phải truy cập vào website và chọn vào mục các loại sản phẩm.
+• Giao diện  chức năng
+
+    Hình 321: Giao diện hiển thị loại sản phẩm
+• Mô tả chức năng
+   Khi người dùng chọn chức năng xem loại sản phẩm, giao diện trang loại sản phẩm sẽ hiện ra với tất cả các sản phẩm thuộc loại sản phẩm mà khách hàng muốn xem. Tại đây khách hàng cũng có thể thực hiện chức năng tìm kiếm và xem thông tin chi tiết sản phẩm mỗi khi click vào hình ảnh của bất kì sản phẩm nào.
+   
+   
+   
+3.4.4 Chức năng tìm kiếm
+• Mục đích
+   Giúp người dùng có thể tìm kiếm thông tin theo đúng nhu cầu của mình một cách chính sác và nhanh chóng nhất.
+• Phạm vi
+   Chức năng này cho phép người dùng truy cập vào website có thể sử dụng.
+• Ràng buộc
+   Người dùng phải truy cập vào website và nhập thông tin sản phẩm cần tìm kiếm.
+• Giao diện  chức năng
+
+    Hình 322: Giao diện chức năng tìm kiếm
+• Mô tả chức năng
+   Khi người dùng chọn chức năng xem loại sản phẩm, giao diện trang loại sản phẩm sẽ hiện ra với tất cả các sản phẩm thuộc loại sản phẩm mà khác hàng muốn xem. Tại đây khách hàng cũng có thể thực hiện chức năng tìm kiếm và xem thông tin chi tiết sản phẩm mỗi khi click vào hình ảnh của bất kì sản phẩm nào.
+3.4.5 Chức năng quản lý giỏ hàng
+• Mục đích
+   Giúp người dùng quản lý thông tin các sản phẩm của mình đã được thêm vào giỏ hàng trong quá trình mua sắm online trên website.
+• Phạm vi
+   Chức năng này cho phép người dùng truy cập vào website có thê sử dụng.
+• Ràng buộc
+   Người dùng phải truy cập vào website và thực hiện các bước thêm sản phẩm vào giỏ hàng.
+• Giao diện  chức năng
+
+    Hình 323: Giao diện quản lý giỏ hang
+
+
+• Mô tả chức năng
+   Khi người dùng chọn quản lý giỏ hàng bên góc phải menu, giao diện trang giỏ hàng xẽ hiện ra với tất cả các sản phẩm đã được người dùng thêm vào giỏ hàng và tổng tiền của tất cả sản phẩm. Tại đây người dùng có thể thực hiện update số lượng sản phẩm hoặc xóa sản phẩm khỏi giỏ hàng. Người dùng cũng có thể xem loai thông tin chi tiết sản phẩm khi click vào thông tin của sản phẩm. Ngoài ra tại đây khách hàng có thể đặt hàng sau khi xác định sản phẩm cần mua bằng các click vào button
+“ĐẶT HÀNG”.
+3.4.6 Chức năng đặt hàng
+• Mục đích
+   Giúp người dung điền thông tin cá nhân và sác nhận loại thông tin.
+• Phạm vi
+   Chức năng này cho phép người dùng truy cập vào website có thê sử dụng.
+• Ràng buộc
+   Người dùng phải truy cập vào website và thực hiện click button đặt hàng.
+• Giao diện  chức năng
+
+    Hình 324: Giao diện đặt hàng
+• Mô tả chức năng
+   Khi người dùng chọn button đặt hàng. Hệ thống xẽ chuyển qua giao điẹn đặt hàng. Tại đây khách hàng xẽ nhập thông tin xác nhân, và kiểm tra thông tin sản phẩm mà mình đã đặt	
+3.4.7 Chức năng đăng nhập
+• Mục đích
+   Chức năng này sẽ kiểm tra tài khoản sử dụng hệ thống có hợp lệ hay không? Nhằm bảo mật các thông tin trong hệ thống. Và đảm bảo người dùng sử dụng đúng các chức năng được cấp.
+• Phạm vi
+   Chức năng này sẽ kiểm tra tài khoản sử dụng hệ thống có hợp lệ hay không? Nhằm bảo mật các thông tin trong hệ thống. 
+• Ràng buộc
+   Khi người dùng kích hoạt hệ thống, một cửa sổ “Đăng nhập hệ thống” hiện lên, yêu cầu cung cấp các thông tin để đăng nhập sử dụng hệ thống.
+• Giao diện của chức năng
+
+    Hình 325: Giao diện chức năng nhập 
+• Mô tả chức năng
+   Khi truy cập vào trang web, chức năng này sẽ hiển thị đầu tiên hoặc khi người dùng đang đăng nhập khi click vào  “Đăng xuất” trên giao diện chính thì giao diện chính sẽ bị ẩn đi và giao diện đăng nhập này cũng sẽ hiện nên. Sau khi người dùng đã điền đầy đủ thông tin người dùng nhấn “Đăng nhập” nếu thông tin hợp lệ sẽ vào được hệ thống với các chức năng được cấp hiện nên cho phép người dùng sử dụng.
+3.4.8 Chức năng quản lý sản phẩm
+• Mục đích
+   Giúp người quản lý quản lý thông tin về sản phẩm
+• Phạm vi
+   Nhân viên có quyền được phép truy cập chức năng quản lý sản phẩm.
+• Ràng buộc
+   Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng chọn “Quản lý sản phẩm” trong mục nhập liệu ở menu bên trái.
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+• Giao diện  chức năng
+
+    Hình 326: Giao diện chức năng quản lý sản phẩm
+• Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng “Quản lý loại sản phẩm”:
+   -	Chức năng thêm: khi thêm các thông tin về tên loại sản phẩm, số lượng, giá,...khi nhấn vào Save thì sản phẩm mới đã được thêm vào database. Khi nhân vào Save and continue editing sản phẩm xẽ được lưu lại và tiếp tục sửa thông tin. Khi án vào nut Save and add another thì thông tin sẽ được lưu lại và tiếp tục thêm thông tin sản phẩm mới.
+   -	Chức sửa thêm: khi thêm các thông tin về tên sản phẩm, số lượng, giá,...khi nhấn vào Save thì sản phẩm mới đã được thêm vào database. Khi nhân vào Save and continue editing sản phẩm xẽ được lưu lại và tiếp tục sửa thông tin. Khi án vào nut Save and add another thì thông tin sẽ được lưu lại và tiếp tục thêm thông tin sản phẩm mới.
+   -	Chức năng xoá khi người sử dụng chọn thông tin dưới danh sách khi chọn xoá thì thông tin sẽ xoá trong danh sách.
+3.4.9. Chức năng quản lý giảm giá
+• Mục đích
+   Chức năng này giúp người quản lý quản lý thông tin về giảm giá sản phẩm một cách dễ dàng và thuận tiện nhất.
+• Phạm vi
+   Nhân viên có quyền được phép truy cập chức năng quản lý giảm giá sản phẩm.
+• Ràng buộc
+   Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng chọn “Quản lý giảm giá sản phẩm” trong mục nhập liệu ở menu bên trái.
+• Giao diện  chức năng
+
+
+    Hình 327: Giao diện chức năng quản lý giảm giá
+• Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng “Quản lý giảm giá sản phẩm”:
+   - Chức năng thêm: khi thêm các thông tin về tên sản phẩm, ngày áp dụng, ngày hết hạn, phần trăm giảm giá, trạng thái. Khi nhấn vào Save thì giảm giá mới đã được thêm vào database. Khi nhấn vào Save and continue editing giảm giá  sẽ được lưu lại và tiếp tục sửa thông tin. Khi ấn vào nút Save and add another thì thông tin giảm giá sẽ được lưu lại và tiếp tục thêm thông tin giảm giá mới.
+   -	Chức năng sửa khi người dùng chọn thông tin dưới danh sách các thông tin sẽ hiển thị tương ứng trên điều khiển người dùng có thể sửa ngày áp dụng, ngày hết hạn, phần trăm giảm giá, trạng thái. Thông tin sẽ được hiển thị dưới danh sách.
+   -	Chức năng xoá khi người sử dụng chọn thông tin dưới danh sách khi chọn xoá thì thông tin sẽ xoá trong danh sách.
+
+
+
+
+3.4.10. Chức năng quản lý SubCategory
+• Mục đích
+   Chức năng này giúp người quản lý quản lý thông tin về loại sản phẩm phụ một cách dễ dàng và thuận tiện nhất.
+• Phạm vi
+   Nhân viên có quyền được phép truy cập chức năng quản lý thông tin loại sản phẩm phụ.
+• Ràng buộc
+   Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng chọn “Quản lý SubCategory” trong mục nhập liệu ở menu bên trái.
+• Giao diện  chức năng
+
+    Hình 328: Giao diện chức năng quản lý SubCategory
+• Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng “Quản lý SubCategory”:
+   - Chức năng thêm: khi thêm các thông tin về tên loại sản phẩm phụ, mã loại sản phẩm. Khi nhấn vào Save thì slide mới đã được thêm vào database. Khi nhấn vào Save and continue editing SubCategory  sẽ được lưu lại và tiếp tục sửa thông tin. Khi ấn vào nút Save and add another thì SubCategory sẽ được lưu lại và tiếp tục thêm thông tin SubCategory mới.
+   -	Chức năng sửa khi người dùng chọn thông tin dưới danh sách các thông tin sẽ hiển thị tương ứng trên điều khiển người dùng có thể sửa tên loại sản phẩm phụ, mã loại. Thông tin sẽ được hiển thị dưới danh sách.
+   -	Chức năng xoá khi người sử dụng chọn thông tin dưới danh sách khi chọn xoá thì thông tin sẽ xoá trong danh sách.
+3.4.11. Chức năng quản lý loại sản phẩm
+• Mục đích
+   Chức năng này giúp người quản lý quản lý thông tin về loại sản phẩm một cách dễ dàng và thuận tiện nhất.
+• Phạm vi
+   Nhân viên có quyền được phép truy cập chức năng quản lý loại sản phẩm.
+• Ràng buộc
+   Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng chọn “Quản lý loại sản phẩm” trong mục nhập liệu ở menu bên trái.
+• Giao diện  chức năng
+
+    Hình 329: Giao diện chức năng quản lý loại sản phẩm
+• Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng “Quản lý loại sản phẩm”:
+   - Chức năng thêm: khi thêm các thông tin về tên, mô tả, trạng thái. Khi nhấn vào Save thì nhà sản xuất mới đã được thêm vào database. Khi nhân vào Save and continue editing loại sản phẩm sẽ được lưu lại và tiếp tục sửa thông tin. Khi ấn vào nút Save and add another thì loại sản phẩm sẽ được lưu lại và tiếp tục thêm thông tin loại sản phẩm mới.
+   -	Chức năng sửa khi người dùng chọn thông tin dưới danh sách các thông tin sẽ hiển thị tương ứng trên điều khiển người dùng có thể sửa tên, mô tả, trạng thái. Thông tin sẽ được hiển thị dưới danh sách.
+   -	Chức năng xoá khi người sử dụng chọn thông tin dưới danh sách khi chọn xoá thì thông tin sẽ xoá trong danh sách.
+3.5. Kết luận chương 3
+   Trong chương 3 của báo cáo đã thực hiện việc Xây dựng Website giới thiệu và bán nông sản, đặc sản tỉnh Hải Dương. Từ các kết quả đã thực hiện, có thể tóm tắt quá trình xây dựng hệ thống đã cài đặt như sau:
+- Tiến hành được quá trình khảo sát và phân tích yêu cầu bài toán bán hàng online. Chỉ ra được yêu cầu của hệ thống khảo sát và mô tả chi tiết các yêu cầu.
+- Đã sử dụng ULM để phân tích thiết kế hệ thống với các biểu đồ use case tổng quát, use case chi tiết cho từng chức năng. Xác dịnh được các lớp cần quản lý tưng ứng với các bảng trong cơ sở dữ liệu. Và sử dụng biểu đồ tuần tự để mô tả luồng đi của hệ thống trong từng sự kiện.
+- Thiết kế được cơ sở dữ liệu từ các yêu cầu của khách hàng cần quản lý.
+- Đã thiết kế và đặc tả được giao diện của website.
+
+
+
+CHƯƠNG 3: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau một thời gian tìm hiểu và nghiên cứu đề tài “Xây dựng Website giới thiệu và bán nông sản, đặc sản tỉnh Hải Dương” đề tài đã đạt được một số kết quả sau:
+- Phía khách hàng: Tạo được địa chỉ cho khách hàng truy cập. Thực hiện một số chức năng trên giao diện như: hiển thị menu loại sản phẩm, hiển thị loại sản phẩm, hiển thị sản phẩm mới nhất, tìm kiếm, quản lý giỏ hàng, đặt hàng.
+- Phía Admin và nhân viên: Giúp cho thao tác nhanh hơn, thực hiện được phân nhóm, thêm user, quản lý các chức năng như: quản lý sản phẩm, loại sản phẩm, hóa đơn, Order, giảm giá, bài viết…
+         Ngoài những kết quả trên, qua quá trình thực hiện đề tài “Xây dựng Website Giới thiệu và bán nông sản, đặc sản tỉnh Hải Dương” em đã có được:
+- Những kinh nghiệm quý báu về quy trình, nghiệp vụ quản lý đồ án.
+- Trau dồi kiến thức về Python và biết lập trình bằng ngôn ngữ Python trên Framework Djnago.
+- Rèn luyện kỹ năng làm việc cá nhân, khả năng tư duy và sáng tạo.
+4.2 Hạn chế của đề tài
+     Do thời gian nghiên cứu chưa được nhiều, bên cạnh những kết quả đạt được còn tồn tại một số vấn đề hạn chế:
+- Tìm kiếm trong trang chủ chưa được tối ưu nhất.
+- Các chức năng chưa được tối ưu nhất.
+- Chưa triển khai hệ thống thực tế được.
+- Giao diện trang người dùng thiết kế chưa được đẹp.
+- Chưa làm được chức năng thống kê.
+4.3 Hướng phát triển
+   - Tối ưu hóa các chức năng, mã hóa dữ liệu để đáp ứng tốt hơn nhu cầu của người sử dụng.
+   - Hỗ trợ thao tác nhanh trong quá trình nhập liệu.
+   - Thực hiện triển khai chức năng thống kê, báo cáo.
+   - Thực hiện việc triển khai hệ thống thực tế.
+   - Thiết kế giao diện trang người dùng đẹp và thân thiện hơn với người dùng.
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+TÀI LIỆU THAM KHẢO
+[1]Antonio Mele-Django By Example_ Create your own line of successful web applications with Django-Packt Publishing (2015)[2]Learning Website Development with Django  -Packt Publishing (2008)[3]Two Scoops of Django_ Best Practices for Django 1.8 (2015)
+
+10
+
+

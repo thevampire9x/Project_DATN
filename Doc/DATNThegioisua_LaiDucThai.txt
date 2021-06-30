@@ -1,0 +1,494 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Hiện nay, ứng dụng bán hàng online là một trong những giải pháp đang được sử dụng rộng rãi nhất vì hiệu quả của nó mang lại rất cao. Kinh doanh online là việc bạn đưa sản phẩm, dịch vụ của mình đến với khác hàng trên internet. Hình thức bán hàng online cho thấy rất nhiều doanh nghiệp đã sử dụng thành công với hình thức này.
+    Hình thức bán hàng online trên thế giới điển hình nhất hiện nay chính là Amazon, doanh số của Amazon bán hàng trên thiết bị di động. Kế tiếp, Lazada là một công ty kinh doanh trực tuyến tại Việt Nam, từ khi ứng dụng di động lượng khách hàng truy cập mua hàng có thể nói gấp 8 lần so với khi chưa có ứng dụng. TGĐ sendo ông Trần Hải Linh “60% khách hàng truy cập vào Sendo.vn là qua các thiết bị di động và cho rằng con số này sẽ tăng 75% vào năm 2016”.
+    Theo thống kê, với 40 triệu người sử dụng Smartphone chiếm ½ dân số thì việc triển khai kinh doanh rất tiềm năng, vì thế không có doanh nghiệp nào hiện nay không thể nào bỏ qua. Xu hướng bán hàng trên di động đang trở thành đang là hiện tượng nóng dần hơn khi công nghệ thông tin đang càng ngày càng phát triển. Do đó ứng dụng bán sữa thegioisua được ra đời, nhằm triển khai chương trình bán sữa online đến tay người tiêu dùng.
+1.2 Mục tiêu của đề tài
+- Trình bày được các vấn đề liên quan đến lập trình Android, vận dụng, nắm bắt được ưu nhược điểm của ngôn ngữ Java.
+- Xây dựng được ứng dụng, triển khai cài đặt và cấu hình trên Smartphone.
+- Xây dựng hệ thống bán sữa với giao diện thân thiện và dễ sử dụng đối với người dùng.
+- Ứng dụng giúp người dùng lựa chọn loại sữa phù hợp với nhu cầu và tham khảo giá cả, thông tin sản phẩm tốt nhất.
+1.3 Giới hạn và phạm vi của đề tài
+    Đề tài xây dựng ứng dụng bán sữa sử dụng các công nghệ trong lập trình như Java, Android,…và Công cụ lập trình Android Studio, môi trường lập trình Android. Sử dụng một số thư viện hỗ trợ.
+1.4 Nội dung thực hiện
+    Nội dung thực hiện cụ thể như sau:
+- Phân tích yêu cầu.
+- Thiết kế đặc tả hệ thống.
+- Xây dựng Cơ sở dữ liệu.
+- Lập trình cho các chức năng của hệ thống
+- Kiểm thử hệ thống.
+- Triển khai thực nghiệm hệ thống trên nhiều SmartPhone.
+1.5 Phương pháp tiếp cận
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu;
+o Phương pháp phân tích mẫu;
+o Phương pháp thực nghiệm.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Android
+2.1.1 Hệ điều hành Android là gì?
+  Android là một mã nguồn mở và dựa trên hệ điều hành Linux, chạy trên các thiết bị di động như điện thoại thông minh và máy tính bảng. Android được phát triển bởi Open Handset Alliance, dẫn đầu bởi Google, và các công ty khác.
+  Android cung cấp một phương pháp tiếp cận thống nhất để lập trình ứng dụng cho các thiết bị di động, nghĩa là các lập trình viên chỉ cần lập trình cho Android, và các ứng dụng của họ sẽ có thể chạy trên các thiết bị khác nhau được hỗ trợ bởi Android.
+  Các phiên bản beta đầu tiên của Software Development Kit Android (SDK) được phát hành bởi Google trong năm 2007 trong khi đó phiên bản thương mại đầu tiên, Android 1.0, được phát hành vào tháng 9 năm 2008.
+  Mã nguồn của Android được phát hành theo giấy phép phần mềm tự do và nguồn mở. Google công khai hầu hết các mã theo giấy phép phiên bản Apache 2.0 và phần còn lại, Linux kernel, theo giấy phép phiên bản GNU General Public
+2.1.2 Tại sao nên sử dụng Android?
+    
+    Hình 2. 1 Tại sao nên sử dụng Android?
+- Open Soure: Mã nguồn mở.
+- Larger Developer and Community Reach: Có những lập trình viên và cộng đồng phát triển lớn.
+- Increased marketing: phát triển thương mại.
+- Inter app integration: ứng dụng hội nhập quốc tế.
+- Reduce cost of development: giảm chi phí phát triển.
+- Higher Success Ratio: Tỷ lệ thành công cao hơn.
+- Rich development Environment:Môi trường phát triển đa dạng
+2.1.3 Giới thiệu về Android studio và Android SDK
+• Android Studio chạy trên Windows, Mac và Linux, nhằm thay thế cho Eclipse Android Development Tool (ADT) vốn được sử dụng làm IDE chính trong các năm trước đó.
+   Một số tính năng nổi bật:
+• Bộ công cụ build ứng dụng dựa trên Gradle (thay vì Maven).
+• Chức năng dò và sửa lỗi nhanh, hướng Android.
+• Công cụ chỉnh sửa màn hình dạng kéo thả tiện lợi.
+• Các wizard tích hợp nhằm giúp lập trình viên tạo ứng dụng từ mẫu có sẵn.
+• Tích hợp Google Cloud Platform, dễ dàng tích hợp với Google Cloud Messaging và App Engine của Google.
+• The Android SDK (software development kit) là một tập hợp các công cụ được sử dụng để phát triển ứng dụng cho Android. 
+   Android SDK bao gồm:
+• Các thư viện đòi hỏi
+• Bộ dò lỗi (Debugger)
+• Thiết bị mô phỏng (emulator)
+• Các tài liệu liên quan cho Android API.
+• Các đoạn code mẫu.
+• Các hướng dẫn cho hệ điều hành Android
+Nếu Android Studio là trình soạn thảo code (IDE) thì Android SDK là bộ tổng hợp các công cụ để build app, các bản mẫu máy ảo Android (sử dụng để test app) cần thiết để làm ra một ứng dụng Android hoàn chỉnh.
+2.2 Tổng quan về MySQL
+2.2.1  MySQL là gì?
+   MySQL là hệ quản trị cơ sở dữ liệu tự do nguồn mở phổ biến nhất thế giới và được các nhà phát triển rất ưa chuộng trong quá trình phát triển ứng dụng. Vì MySQL là cơ sở dữ liệu tốc độ cao, ổn định và dễ sử dụng, có tính khả chuyển, hoạt động trên nhiều hệ điều hành cung cấp một hệ thống lớn các hàm tiện ích rất mạnh. Với tốc độ và tính bảo mật cao, MySQL rất thích hợp cho các ứng dụng có truy cập CSDL trên internet. 
+   Người dùng có thể tải về MySQL miễn phí từ trang chủ. MySQL có nhiều phiên bản cho các hệ điều hành khác nhau: phiên bản Win32 cho các hệ điều hành dòng Windows, Linux, MacOSX, Unix, FreeBSD, NetBSD, Novell NetWare, SGI Irix, Solaris, SunOS,...
+MySQL là một trong những ví dụ rất cơ bản về Hệ Quản trị Cơ sở dữ liệu quan hệ sử dụng Ngôn ngữ truy vấn có cấu trúc (SQL).
+MySQL được sử dụng cho việc bổ trợ NodeJs, PHP, Perl, và nhiều ngôn ngữ khác, làm nơi lưu trữ những thông tin trên các trang web viết bằng NodeJs, PHP hay Perl,...
+2.2.2 Tại sao nên sử dụng MySQL?
+      Cơ sở dữ liệu MySQL đã trở thành cơ sở dữ liệu mã nguồn mở phổ biến nhất trên thế giới vì cơ chế xử lý nhanh và ổn định của nó, sự đáng tin cậy cao và dễ sử dụng. 
+Cơ sở dữ liệu MySQL được sử dụng mọi nơi – ngay cả châu Nam Cực - bởi các nhà phát triển Web riêng lẻ cũng như rất nhiều các tổ chức lớn nhất trên thế giới để tiết kiệm thời gian và tiền bạc cho những Web sites có dung lượng lớn, phần mềm đóng gói – bao gồm cả những nhà đi đầu trong lĩnh vực công nghiệp như Yahoo!, Alcatel-Lucent, Google, Nokia, YouTube và Zappos.com.
+      MySQL không chỉ là cơ sở dữ liệu mã nguồn mở phổ biến nhất trên thế giới, nó còn trở thành cơ sở dữ liệu được chọn cho thế hệ mới của các ứng dụng xây dựng trên nền Linux, Apache, MySQL, PHP/Perl/Python. MySQL chạy trên hơn 20 flatform bao gồm: Linux, Windows, OS/X, HP-UX, AIX, Netware, mang đến cho bạn tính linh hoạt trong việc sử dụng.
+  Dù bạn mới làm quen với công nghệ cơ sở dữ liệu hay là một nhà phát triển giàu kinh nghiệm hoặc là DBA, MySQL sẽ giúp bạn thành công.
+2.2.3 MySQL trong Android
+• MySQL dễ dàng để các ứng dụng android kết nối tới và sử dụng cơ sở dữ liệu tại đây.Giúp các ứng dụng nhẹ hơn, người dùng yêu thích hơn.
+• Kết nối đơn giản không đòi hỏi nhiều quá trình
+• Bạn chỉ phải xác định các câu lệnh SQL để tạo và cập nhật cơ sở dữ liệu. Sau đó các cơ sở dữ liệuđược quản lý tự động cho bạn bởi các nền tảng Android.
+Truy cập vào một cơ sở dữ liệu MySQL liên quan đến việc truy cập vào hệ thống tập tin. Điều nàycó thể được làm chậm. Vì vậy nó được khuyến khích để thực hiện các hoạt động cơ sở dữ liệu khôngđồng bộ. Nếu ứng dụng của bạn tạo ra một cơ sở dữ liệu, cơ sở dữ liệu này là bởi mặc định được lưu trong thư mục DATA/data/APP_NAME/databases/FILENAME
+• Đường dẫn lập trình viên dễ dàng thiết lập, có thể sử dụng nhiều lần
+• Thegioisua: Là tên ứng dụng của bạn.
+
+    
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Phát biểu bài toán
+3.1.1  Mô tả hệ thống hiện tại
+    Hiện nay, bán hàng online là một trong những giải pháp đang được sử dụng rộng rãi để có thể đưa thông tin sản phẩm đến với tay người tiêu dùng một cách chính xác và hiệu quả nhất.Thông thường người tiêu dùng gặp rất nhiều khó khan trong việc tìm mua sản phẩm mà người tiêu dùng đang có nhu cầu. Nhất là hiện nay, khi mà thời gian dành cho công việc, gia đình và thời tiết thì người dùng rất ngại đi lại. Khoảng thời gian eo hẹp không cho phép người dùng biết nhiều sản phẩm để mà đưa ra lựa chọn hợp với túi tiền và nhu cầu của bản thân. Vì vậy, lựa chọn mua sắm online đang là xu hướng tất yếu trong hiện tại và tương lai tới.
+    Thông thường người tiêu dùng cần phải di chuyển tới các cửa hàng để tìm hiểu thông tin sữa từ người bán hàng, đôi khi cửa hàng hết sản phẩm mà người tiêu dùng mong muốn, gây ra sự rất mất thời gian của người dùng. Cũng có nhiều người tiêu dùng tham khảo từ một vài người xung quanh môi trường làm việc, đôi khi gây ra những thông tin không chính xác, và gây khó khăn tìm kiếm sản phẩm sữa phù hợp với nhu cầu.
+    Để đỡ vất vả hơn cho người tiêu dùng đã có nhiều trang web bán hàng online với nhiều sản phẩm. Thế nhưng để sử dụng trang web thì người tiêu dùng cần phải biết đến các trang web đó, hay là sử dụng các thiết bị truy cập như máy tính, laptop rất cồng kềnh và khó khăn trong di chuyển.
+    Với 40 triệu Smartphone ngày nay với hệ điều hành Android hoặc IOS. Người tiêu dùng dễ dàng tải xuống và sử dụng ứng dụng. Thiết bị gọn gàng, dễ dàng trong di chuyển. Ứng dụng thân thiện, dễ dàng sử dụng với mọi người dùng, đáp ứng nhu cầu tìm kiếm thông tin, giá thành của sản phẩm. Nhằm lựa chọn được sản phẩm đúng với mong muốn và nhu cầu người tiêu dùng.
+
+
+3.1.2  Phát biểu bài toán
+    3.1.2.1 Tổng quan về hệ thống mới
+• Hệ thống bán sữa online thegioisua với giao diện đơn giản dễ sử dụng, đáp ứng nhu cầu tìm hiểu thông tin và mua sắm sản phẩm phù hợp đối với người tiêu dùng.
+• Chỉ cần sử dụng điện thoại, người tiêu dùng có thể tìm hiểu và lựa chọn sản phẩm phù hợp với mong muốn và hợp với túi tiền nhất.
+• Một số chức năng chính: 
+* Loại sản phẩm: cho phép người dùng lựa chọn loại sản phẩm.
+* Sản phẩm: cho phép lựa chọn sản phẩm.
+* Giỏ hàng: sản phẩm người dùng lựa chọn được đưa vào giỏ hàng
+* Đơn hàng: cho phép thêm, xóa thông tin
+* Chi tiết đơn hàng: lưu thông tin chi tiết đơn hàng người dùng thanh toán.
+* Tìm kiếm: người dùng nhập vào tên sản phẩm tìm kiếm
+3.1.2.2  Các mục tiêu chính của hệ thống
+  Ứng dụng bán hàng sữa thegioisua cần đạt được những mục tiêu sau:
+    + Ứng dụng giúp mua sữa một cách nhanh chóng và chính xác.
+    + Hệ thống đưa ra các sản phẩm sữa cho người tiêu dùng.
+3.1.2.3  Môi trường phát triển
+• Môi trường phần cứng
+    CPU: Pentium IV 3.0 GHz hoặc cao hơn
+    RAM: tối thiểu 512 MB
+    HDD: dung lượng tối thiểu trống 2G
+• Môi trường phần mềm
+    Hệ điều hành: Android
+    Công cụ phát triển: Android  studio
+3.2 Xác định yêu cầu của hệ thống
+3.2.1 Danh sách yêu cầu khách hàng
+a) Quản lý loại sản phẩm
+Ứng dụng bán sữa thegioisua hiển thị các loại sữa cho người dùng lựa chọn
++ Loại sản phẩm: đưa ra danh sách sản phẩm ứng với mỗi loại sản phẩm.
+b) Quản lý sản phẩm
+Ứng dụng bán sữa thegioisua cho phép người dùng lựa chọn sản phẩm và xem thông tin về sản phẩm
++ Sản phẩm: hiển thị ra các thông tin về sản phẩm mà người dùng lựa chọn.
+c) Giỏ hàng
+Ứng dụng bán sữa thegioisua sẽ chuyển sản phẩm người dùng lựa chọn mua cho vào giỏ hàng.
++ Thêm giỏ hàng: Hệ thống tự động cho người dùng tiếp tục lựa chọn thêm sản phẩm để cho vào giỏ hàng
++ Xóa giỏ hàng: Hệ thống cho phép xóa sản phẩm trong giỏ hàng.
+d) Đơn hàng
+Ứng dụng sẽ yêu cầu người dùng điển thông tin liên hệ của người dùng để tạo ra đơn hàng của người dùng.
+e) Chi tiết đơn hàng
+Ứng dụng sẽ lưa thông tin chi tiết đơn hàng vào cơ sở dữ liệu khi người dùng thanh toán.
+f) Tìm kiếm
+Ứng dụng sẽ cho phép người dùng nhập tên sản phẩm muốn tìm kiếm.
+3.2.2 Phạm vi công việc
+   Dựa trên bản mô tả hệ thống và xác định yêu cầu, ứng dụng bán sữa thegioisua trên Android cần được phát triển trong các phạm vi dưới đây:
+• Các yêu cầu phải được phân tích. Với mỗi yêu cầu phải xác định rõ dữ liệu đầu vào, đầu ra, và quy trình xử lý.
+• Hệ thống phải được lập trình trên nền tảng Android, ngôn ngữ lập trình Java.
+• Hệ thống phải được phát triển trên môi trường Android.
+3.3 Phân tích yêu cầu hệ thống
+3.3.1 Biểu đồ Use-case
+3.3.1.1 Danh sách các Actor
+STT    Tên Actor    Ý nghĩa/Ghi chú1    Admin    Admin2    User    Người dùng    Bảng 3. 1 Danh sách các Actor
+3.3.1.2 Danh sách Use-case
+STT    Tên Use-case    Ý nghĩa/Ghi chú1Quản lý loại sản phẩmNgười dùng sẽ lựa chọn loại sản phẩm mong muốn2Quản lý sản phẩmNgười dùng lựa chọn sản phẩm mong muốn3Giỏ hàngChuyển các sản phẩm người dùng lựa chọn vào giỏ hàng4Đơn hàngNgười dùng nhập thông tin liên hệ để tạo đơn hàng5Chi tiết đơn hàngNgười dùng thanh toán thì chi tiết đơn hàng sẽ được lưu vào cơ sở dữ liệu6Tìm kiếmNgười dùng nhập tên sản phẩm muốn tìm kiếm.    Bảng 3. 2 Danh sách Use-case
+
+
+3.3.1.3 Biểu đồ Use-case
+
+    Hình 3. 1 Biểu đồ Use-case tổng quát
+3.3.1.4  Đặc tả Use-case
+3.3.1.4.1 Đặc tả Use-case quản lýloại sản phẩm
+a) Biểu đồ Use case của Use case đặc tả
+
+    Hình 3. 2 Đặc tả Use-case quản lý loại sản phẩm
+b) Tóm tắt
+      User sẽ quản lý các loại sản phẩm
+- Read: Hiển thị các loại sản phẩm cho người dùng
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+      Chọn chức năng quản lý loại sản phẩm
+1. Chọn chức năng loại sản phẩm
++ Hiển thị danh sách các sản phẩm tương ứng với loại sản phẩm
+➢ Các dòng sự kiện khác
+      “Không có”
+d) Các yêu cầu đặc biệt
+      “Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Hệ thống không yêu cầu đăng nhập
+- Hệ thống có sẵn các chức năng để chọn
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+• Hệ thống truy cập cơ sở dữ liệu và lấy ra các loại sản phẩm
+g) Điểm mở rộng
+    “Không có”
+    
+
+3.3.1.4.2 Đặc tả Use-case quản lý sản phẩm
+a) Biểu đồ Use case của Use case đặc tả
+
+    Hình 3. 3 Đặc tả Use-case quản lý sản phẩm
+b) Tóm tắt
+Người dùng có quyền lựa chọn sản phẩm trong danh sách sản phẩm
+- Read: Ứng dụng hiển thị thông tin tương ứng của sản phẩm
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+Chọn chức năng quản lý sản phẩm
+1. Chọn sản phẩm
++ Hiển thị thông tin sản phẩm
+➢ Các dòng sự kiện khác
+“Không có”
+d) Các yêu cầu đặc biệt
+“Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Hệ thống không yêu cầu đăng nhập
+- Hệ thống có sẵn các chức năng để chọn
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+- Hệ thống truy xuất dữ liệu ứng với sản phẩm
+g) Điểm mở rộng
+“Không có”
+3.3.1.4.3 Đặc tả Use-case giỏ hàng
+a) Biểu đồ Use case của Use case đặc tả
+    
+
+    Hình 3. 4 Đặc tả Use-case giỏ hàng
+b) Tóm tắt
+Người dùng có quyền sử dụng chức năng này thêm và xóa giỏ hàng
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+Chọn chức năng giỏ hàng
+• Chọn chức năng giỏ hàng
++ Người dùng chọn chức năng giỏ hàng
++ Chuyển sản phẩm người dùng chọn vào giỏ hàng
++ Hiển thị sản phẩm trong giỏ hàng
+• Chọn xóa giỏ hàng
++ Chọn sản phẩm trong giỏ hàng muốn xóa
++ Xóa sản phẩm khỏi giỏ hàng
+➢ Các dòng sự kiện khác
+“Không có”
+    
+
+d) Các yêu cầu đặc biệt
+“Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Hệ thống không yêu cầu đăng nhập
+- Hệ thống có sẵn các chức năng để chọn
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+- Các sản phẩm trong giỏ hàng cần được lưu vào mảng trước khi người dùng thanh toán
+g) Điểm mở rộng
+    “Không có”
+
+
+3.3.1.4.4 Đặc tả Use-case đơn hàng
+a) Biểu đồ Use case của Use case đặc tả
+
+    Hình 3. 5 Đặc tả Use-case đơn hàng
+b) Tóm tắt
+Người dùng có quyền sử dụng chức năng này để thêm, xóa đơn hàng
+- Thêm đơn hàng: Người dùng nhập thông tin liên hệ
+- Xóa đơn hàng: Xóa thông tin đơn hàng
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+Chọn chức năng quản đơn hàng
+• Chọn chức năng đơn hàng
++ Người dùng chọn chức năng đơn hàng
++ Nhập thông tin người dùng
++ Kiểm tra đáp án
++ Lưu thông tin đơn hàng vào cơ sở dữ liệu
+• Chọn xóa đơn hàng
++ Chọn xóa đơn hàng
++ Xóa thông tin đơn hàng
+➢ Các dòng sự kiện khác
+“Không có”
+d) Các yêu cầu đặc biệt
+“Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Hệ thống không yêu cầu đăng nhập
+- Hệ thống có sẵn các chức năng để chọn
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+- Hệ thống lưu lại đơn hàng sau khi người dùng xác nhận thông tin đơn hàng
+g) Điểm mở rộng
+ “Không có”
+3.3.1.4.5 Đặc tả Use-case chi tiết đơn hàng
+a) Biểu đồ Use case của Use case chi tiết đơn hàng
+
+    Hình 3. 6 Biểu đồ use case phân rã chi tiết đơn hàng
+b) Tóm tắt
+Người dùng sau khi thanh toán giỏ hàng thì hệ thống sẽ lưu lại chi tiết đơn hàng vào cơ sở dữ liệu
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+    Chọn chức năng thanh toán
+1. Người dùng chọn chức năng thanh toán
+* Hệ thống sẽ lưu chi tiết đơn hàng vào cơ sở dữ liệu
+2. Người dùng chọn chức năng trở về
+* Đơn hàng sẽ không được lưu vào cơ sở dữ liệu
+3. Người dùng chọn chức năng sửa đơn hàng
+* Đơn hàng sẽ được cập nhật lại
+➢ Các dòng sự kiện khác
+      “Không có”
+d) Các yêu cầu đặc biệt
+      “Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Hệ thống không yêu cầu đăng nhập
+- Hệ thống kết nối cơ sở dữ liệu
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+• Hệ thống lưu lại chi tiết đơn hàng trên cơ sở dữ liệu
+g) Điểm mở rộng
+    “Không có”
+3.3.1.4.6 Đặc tả Use-case tìm kiếm
+a) Biểu đồ Use case của Use case tìm kiếm
+
+    Hình 3. 7: Biểu đồ use case phân rã tìm kiếm
+b) Tóm tắt
+Người dùng có quyền sử dụng chức năng tìm kiếm. Ứng dụng trả ra danh sách sản phẩm tìm kiếm gần đúng, khi chọn sản phẩm thì sẽ được chuyển qua chức năng khác của ứng dụng.
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+    Chọn chức năng tìm kiếm
+1. Người dùng chọn chức năng tìm kiếm
+* Hệ thống sẽ trả ra danh sách sản phẩm tìm kiếm
+2. Người dùng chọn sản phẩm
+* Sản phẩm sẽ hiển thị chi tiết sản phẩm
+➢ Các dòng sự kiện khác
+      “Không có”
+d) Các yêu cầu đặc biệt
+      “Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Hệ thống không yêu cầu đăng nhập
+- Hệ thống kết nối cơ sở dữ liệu
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+• Hệ thống hiển thị ra danh sách sản phẩm tìm kiếm gần đúng.
+g) Điểm mở rộng
+    “Không có”
+
+
+3.3.2 Biểu đồ lớp
+3.3.2.1  Biểu đồ lớp (mức phân tích)
+    
+    Hình 3. 8 Biểu đồ lớp
+3.3.2.2  Danh sách các lớp đối tượng và quan hệ
+STTTên lớp/quan hệLoạiÝ nghĩa/Ghi chú1LoaisanphamPublicLớp lưu trữ thông tin loại sản phẩm2SanphamPublicLớp lưu trữ thông tin các sản phẩm3DonhangPublicLớp lưu trữ thông tin người tiêu dùng4ChitietdonhangPublicLớp lưu trữ thông tin chi tiết đơn hàng    Bảng 3. 3 Danh sách các lớp đối tượng và quan hệ
+3.3.2.3  Mô tả chi tiết từng lớp đối tượng
+a) Lớp Loaisanpham
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1idPublicKhóa chính     id2tenloaisanphamPublicNot null    Tên loại sản phẩm3hinhanhloaisanphamPublicNot null     Hình ảnh loại sản phẩm    Bảng 3. 4 Lớp Loaisanpham
+b) Lớp Sanpham
+STTTên thuộc tínhLoạiRàng buộc    Ý nghĩa/ghi chú1idPublicKhóa chính     id2tensanphamPublicNot null    Tên sản phẩm3giasanphamPublicNot null     Giá sản phẩm4hinhanhsanphamPublicNot null    Hình ảnh sản phẩm5motasanphamPublicNot null    Mô tả sản phẩm6idloaisanphamPublicKhóa ngoại    Id loại sản phẩm    Bảng 3. 5 Lớp Sanpham
+c) Lớp Donhang
+STTTên thuộc tínhLoạiRàng buộc    Ý nghĩa/ghi chú1idPublicKhóa chính     Id2tenkhachhangPublicNot null    Tên khách hàng3sodienthoaiPublicNot null     Số điện thoại4emailPublicNot null    Email     		Bảng 3. 6 Lớp Donhang
+d) Lớp Chitietdonhang
+STTTên thuộc tínhLoạiRàng buộc    Ý nghĩa/ghi chú1idPublicKhóa chính     Id2madonhangPublicKhóa ngoại    Mã đơn hàng3masanphamPublicKhóa ngoại     Mã sản phẩm4tensanphamPublicNot null    Tên sản phẩm5giasanphamPublicNot null    Giá sản phẩm6soluongsanphamPublicNot null    Số lượng sản phẩm    Bảng 3. 7:  Lớp Chitietdonhang
+
+
+3.3.3 Biểu đồ tuần tự
+3.3.3.1  Biểu đồ tuần tự quản lý loại sản phẩm
+a) Biểu đồ tuần tự loại sản phẩm
+    
+    Hình 3. 9 Biểu đồ tuần tự loại sản phẩm
+3.3.3.2  Biểu đồ tuần tự sản phẩm
+a) Biểu đồ tuần tự sản phẩm
+
+    Hình 3. 10 Biểu đồ tuần tự sản phẩm
+
+
+3.3.3.3  Biểu đồ tuần tự giỏ hàng
+a) Biểu đồ tuần tự thêm giỏ hàng
+
+    Hình 3. 11 Biểu đồ tuần tự thêm giỏ hàng
+b) Biểu đồ tuần tự xóa giỏ hàng
+
+    Hình 3. 12 Biểu đồ tuần tự xóa giỏ hàng
+
+
+3.3.3.4  Biểu đồ tuần tự đơn hàng
+a) Biểu đồ tuần tự thêm đơn hàng
+
+    Hình 3. 13 Biểu đồ tuần tự thêm đơn hàng
+b) Biểu đồ tuần tự sửa đơn hàng
+
+    Hình 3. 14 Biểu đồ tuần tự sửa đơn hàng
+
+c) Biểu đồ tuần tự xóa đơn hàng
+
+    Hình 3. 15 Biểu đồ tuần tự xóa đơn hàng
+3.3.3.5  Biểu đồ tuần tự chi tiết đơn hàng
+    
+    Hình 3. 16 Biểu đồ tuần tự chi tiết đơn hàng
+
+
+3.3.3.6  Biểu đồ tuần tự tìm kiếm
+
+    Hình 3. 17 Biểu đồ tuần tự tìm kiếm
+3.4 Thiết kế cơ sở dữ liệu
+3.4.1 Mô hình dữ liệu quan hệ
+a) Lược đồ quan hệ
+
+    Hình 3. 18 Lược đồ quan hệ
+b) Danh sách các bảng trong lược đồ quan hệ
+STT    Tên bảng    Ý nghĩa/ Ghi chú1LoaisanphamLớp lưu trữ thông tin loại sản phẩm2SanphamLớp lưu trữ thông tin sản phẩm3DonhangLớp lưu trữ thông tin đơn hàng4ChitietdonhangLớp lưu trữ thông tin chi tiết đơn hàng    Bảng 3. 8 Danh sách các bảng trong lược đồ quan hệ
+3.4.2 Mô tả chi tiết từng bảng trong CSDL
+a) Bảng Loaisanpham
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1idINTNot nullKhóa chính2tenloaisanphamVARCHARNot nullTên loại sản phẩm3hinhanhloaisanphamVARCHARNot nullHình ảnh sản phẩm    Bảng 3. 9 Bảng Loaisanpham
+b) Bảng Sanpham
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1idINTNot nullKhóa chính2tensanphamVARCHARNot nullTên sản phẩm3giasanphamINTNot nullGiá sản phẩm4hinhanhsanphamVARCHARNot nullHình ảnh sản phẩm5motasanphamVARCHARNot nullMô tả sản phẩm6idloaisanphamINTNot nullKhóa ngoại    Bảng 3. 10 Bảng Sanpham
+    
+    
+c) Bảng Donhang
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1idINTNot nullKhóa chính2tenkhachhangVARCHARNot nullTên khách hàng3sodienthoaiINTNot nullSố điện thoại4emailVARCHARNot nullEmail    Bảng 3. 11 Bảng Donhang
+d) Bảng Chitietdonhang
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1id INTNot nullKhóa chính2madonhangINTNot nullKhóa ngoại3masanphamINTNot nullKhóa ngoại4tensanphamVARCHARNot nullTên sản phẩm5giasanphamINTNot nullGiá sản phẩm6soluongsanphamINTNot nullSố lượng sản phẩm    Bảng 3. 12 Bảng Chitietdonhang
+3.5 Thiết kế giao diện
+3.5.1 Giao diện chính của chương trình
+      
+    Hình 3. 19 Giao diện chính của ứng dụng
+STTTên controlSự kiện    Ý nghĩa1menuLeftHiển thị danh sách loại sản phẩm2itemclickChuyển sang layout giỏ hàng    Bảng 3. 13 Danh sách các control điều khiển của giao diện chính
+3.5.2 Giao diện quản lý loại sản phẩm
+      
+    Hình 3. 20 Giao diện quản lý loại sản phẩm
+STTTên controlSự kiện    Ý nghĩa1menuclickHiển thị danh sách loại sản phẩm2NavigationViewClickDanh sách sản phẩm ứng với loại sản phẩm    Bảng 3. 14 Danh sách các control của giao diện quản lý loại sản phẩm
+a) Giao diện sữa đặc trị
+      
+    Hình 3. 21 Giao diện sữa đặc trị
+STTTên controlSự kiện    Ý nghĩa1listviewsuadactri2itemclickChọn sản phẩm    Bảng 3. 15 Danh sách các control điều khiển của giao diện sữa đặc trị
+b) Giao diện sữa cho trẻ em
+
+    Hình 3. 22 Giao diện sữa cho trẻ em
+STTTên controlSự kiện    Ý nghĩa1listviewsuachotreem2itemclickChọn sản phẩm sữa    Bảng 3. 16 Danh sách các control điều khiển của giao diện sữa cho trẻ em
+c) Giao diện sữa cho bà bầu
+    
+      
+
+    Hình 3. 23 Giao diện sữa cho bà bầu
+STTTên controlSự kiện    Ý nghĩa1listviewsuachobabau2itemclickChọn sản phẩm sữa    Bảng 3. 17 Danh sách các control điều khiển của giao diện sữa cho bà bầu
+d) Giao diện sữa cho người lớn
+
+    Hình 3. 24 Giao diện sữa cho người lớn
+STTTên controlSự kiện    Ý nghĩa1listviewsuachonguoilon2itemclickChọn sản phẩm sữa    Bảng 3. 18 Danh sách các control điều khiển của giao diện sữa cho bà bầu
+e) Giao diện sữa tăng giảm cân
+      
+    Hình 3. 25 Giao diện sữa tăng giảm cân
+STTTên controlSự kiện    Ý nghĩa1listviewsuatanggiamcan2itemclickChọn sản phẩm sữa    Bảng 3. 19 Danh sách các control điều khiển của giao diện sữa tăng giảm cân
+f) Giao diện sữa dê
+      
+    Hình 3. 26 Giao diện sữa tăng giảm cân
+STTTên controlSự kiện    Ý nghĩa1listviewsuade2itemclickChọn sản phẩm sữa    Bảng 3. 20 Danh sách các control điều khiển của giao diện sữa dê
+a) Giao diện sữa tươi
+      
+    Hình 3. 27 Giao diện sữa tươi
+STTTên controlSự kiện    Ý nghĩa1listviewsuatuoi2itemclickChọn sản phẩm sữa    Bảng 3. 21 Danh sách các control điều khiển của giao diện sữa tươi
+a) Giao diện thông tin liên hệ
+      
+    Hình 3. 28 Giao diện thông tin liên hệ
+STTTên controlSự kiện    Ý nghĩa    Bảng 3. 22 Danh sách các control điều khiển của giao diện thông tin liên hệ
+3.5.3 Giao diện quản lý sản phẩm
+      
+    Hình 3. 29 Giao diện quản lý sản phẩm
+STTTên controlSự kiện    Ý nghĩa1edittextClickSố lượng sản phẩm mong muốn2btngiohangClickChuyển sản phẩm sang giỏ hàng    Bảng 3. 23 Danh sách các control điều khiển của giao diện quản lý giỏ hàng
+3.5.4 Giao diện đơn hàng
+
+    Hình 3. 30 Giao diện đơn hàng
+
+STTTên controlSự kiện    Ý nghĩa1edittextClickNhập tên khách hàng2edittextClickNhập số điện thoại khách hàng3edittextClickNhập email khách hàng4btnxacnhanClickThanh toán giỏ hàng5btntroveClickTrở về    Bảng 3. 24 Danh sách các control điều khiển của giao diện đơn hàng
+3.5.5 Giao diện tìm kiếm
+
+    Hình 3. 31 Giao diện tìm kiếm
+
+STTTên controlSự kiện    Ý nghĩa1edittextClickNhập tên tên sản phẩm muốn tìm kiếm    Bảng 3. 25 Danh sách các control điều khiển của giao diện tìm kiếm
+
+
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau thời gian nghiên cứu và phát triển, ứng dụng đã hoàn thành cơ bản các mục tiêu ban đầu đề ra của đề tài.
+    + Chức năng quản lý loại sản phẩm: có đa dạng về loại sản phẩm
+    + Chức năng quản lý sản phẩm: đa dạng về mặt sản phẩm cũng như giá thành
++ Chức năng giỏ hàng: đã thêm được nhiều mặt hàng sản phẩm và thanh toán.
++ Chức năng đơn hàng: đã nhập liệu được thông tin khách hàng để tạo đơn hàng
++ Chức năng chi tiết đơn hàng: đã lưu trữ chi tiết đơn hàng vào cơ sở dữ liệu
+4.2 Hạn chế của đề tài
+    Ứng dụng bán sữa trên mobile còn nhiều hạn chế.
++ Mới chạy được các case normal 
++ Dữ liệu sản phẩm còn thiết một vài mô tả
++Ứng dụng chưa phân quyền được người dùng rõ rang
++ Chưa yêu cầu đăng nhập để thiết lập tài khoản
+4.3 Hướng phát triển của đề tài
+  Trong thời gian nghiên cứu và thực hiện đề tài, tác giả đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+- Phân quyền bổ sung các tài khoản giữa admin và user
+- Bổ sung thêm các chức năngcho admin thêm sản phẩm bằng mobile được
+- Nghiên cứu và triển khai đề tài trên nhiều sản phẩm SmartPhone.
+TÀI LIỆU THAM KHẢO
+[1]. Hoàng Quốc Việt, “Lập Trình android cơ bản (2015)”
+[2]. Nguyễn Thị Hải Năng, “Lập trình đa phương tiện (2016)”
+[3]. Nguyễn Hoàng Điệp, “Dịch vụ mạng trên Android (2016)”
+[4]. Harvey M. Deitel, Paul J. Deitel “How To program java 8th”, amazon, 2008Khang, P. H. (2005). Lập trình ASP.NET 2.0. Hà Nội, Việt Nam: Nhà xuất bản Lao Động Xã Hội.
+Quyết, N. V. (2010). Giáo trình Công nghệ Web và ứng dụng. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY.
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+PHỤ LỤC
+1. Bảng phân công nhiệm vụ thực hiện đồ án
+TTThành viênCác công việcGhi chú1Lại Đức Thái- Phát biểu bài toán
+- Xác đinh yêu cầu khách hàng
+- Phân tích yêu cầu hệ thống
+- Thiết kế giao diện người dùng     
+Xây dựng ứng dụng bán sữa thegioisua
+    
+7
+    
+    

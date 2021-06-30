@@ -1,0 +1,300 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Thời đại công nghệ ngày càng phát triển, bên cạnh đó là sự phát triển mạnh mẽ của mạng internet. Con người kết nối với nhau trên mạng nhanh chóng. Đó là điều kiện để phát triển về mọi mặt của xã hội, trong đó là kết nối người bán và người mua với nhau. 
+    Kèm theo đó, đất nước càng phát triền, đời sống con người ngày càng nâng cao, nhu cầu sang đi lại lớn mang lại lợi ích cho ngành công nghiệp oto, nhưng cũng là thị trường quá đa dạng, kiến người tiêu dùng choáng ngợp, để giới thiệp về sản phẩm cho người tiêu dùng biết rõ nhất.
+    Để đáp ứng nhu cầu của thị trường đang ngày càng mở rộng, các trang web bán hàng online là một đối tượng thiết yếu giúp người mua có thể mua hàng với một vài thao tác cơ bản, đơn giản mà có thể giảm bớt các chi phí phát sinh trong quá trình vận chuyển, và nhiều lợi ích khác.
+    Các trang web ngày càng trở nên đa dạng về hình thức cùng chức năng. Tuy vậy, vẫn chưa hoàn toàn đáp ứng được nhu cầu của thị trường. Bên cạnh đó PHP là một trong số các ngôn ngữ có tính phổ biến nhất thế giới, với tốc độ nhanh và nhỏ gọn. Vì vấn đề đó, em đã chọn cho mình đề tài về thiết kế website giới thiệu và bán ô tô Xây bằng ngôn ngữ lập trình PHP trên Laravel Framework.
+1.2 Mục tiêu của đề tài
+    Từ nhu cầu xã hội được tìm hiểu từ thực tế và qua mạng Internet.Với số lượng người dùng internet ngày càng tăng – Tăng cao số lượng người dùng tiếp cận đến sản phẩm và thông tin nhanh và đơn giản nhất;
+    Từ những người chủ, người quản lý trực tiếp, khách hang.Dễ dàng quản lý sản phẩm và lượng khách hàng cũng như thống kê báo cáo đối với người chủ.Dễ dàng lựa chọn sản phẩm cần cho nhu cầu đối với khách hang.
+⇨ Từ đó đưa ra các chức năng và giao diện đáp ứng đầy đủ nhu cầu của người dùng 1 cách đa dạng và thích hợp với từng đối tượng cụ thể và có tính mở rộng với nhiều quy mô.
+    Từ các phần mềm đã được thiết kế và đưa vào ứng dụng trong và ngoài nước.
+    Từ kinh nghiệm của người đã xây dựng phần mềm: Từ các vấn đề gặp phải trong quá trình thiết kế phầm mềm thu hoạch được kinh nghiện và nâng cao khả năng và hiểu biết về lập trình cho bản thân.
+1.3 Giới hạn và phạm vi của đề tài
+    Đề tài xây dựng một ứng dụng web trên ngôn ngữ lập trình mã nguồn mở PHP dựa trên nền tảng Laravel Framework; Database: MySQL;
+    Xuất phát từ tình hình thực tiễn, với phạm vi hướng tới là các sản phầm về giải trí cho các lứa tuổi và các cửa hàng có quy mô vừa và nhỏ. Đề tài của em sẽ hỗ trợ tốt cho người chủ, quản lý trong công tác quản lý của cửa hàng. Do phạm vi, nên phần mềm chưa thể đáp ứng được đầy đủ chức năng cần thiết, công tác quản lý, chưa đồng bộ giữa các chức năng.
+    
+1.4 Nội dung thực hiện
+    Dựa theo các chức năng cơ bản về các website hiện tại. Đề xuất ra các nội dung sau:
+    Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Nghiên cứu công nghệ lập trình ngôn ngữ PHP và Framework PHP on Laravel
+- Phân tích yêu cầu và xử lý bài toán
+- Thiết kế đặc tả hệ thống.
+- Xây dựng Cơ sở dữ liệu.
+- Lập trình cho các Module của hệ thống
+- Kiểm thử hệ thống.
+- Xây dựng và hoàn thiện website quản lý và bán hàng online.
+1.5 Phương pháp tiếp cận
+- Cách tiếp cận : Nghiên cứu tìm hiểu nghiệp vụ bán hàng của các cửa hàng hiện tại, tìm hiểu hệ thống bán hàng online có sẵn trên internet, đưa ra giải pháp dữ liệu và chức năng. 
+- Sử dụng các phương pháp nghiên cứu.
+o Phương pháp đọc tài liệu;
+o Trải nghiệm người dùng;
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Laravel Framework
+2.1.1 Laravel Framework?
+    Laravel là một PHP framework mã nguồn mở và miễn phí, được phát triển bởi Taylor Otwell và nhắm vào mục tiêu hỗ trợ phát triển các ứng dụng web theo kiếm trúc model-view-controller (MVC). Những tính năng nổi bật của Laravel bao gồm cú pháp dễ hiểu – rõ ràng  một hệ thống đóng gói modular và quản lý gói phụ thuộc, nhiều cách khác nhau để truy cập vào các cơ sở dữ liệu quan hệ, nhiều tiện ích khác nhau hỗ trợ việc triển khai vào bảo trì ứng dụng.
+    Laravel được phát hành theo giấy phép MIT, với source code được lưu trữ tại Github.
+2.1.2 Tại sao nên sử dụng Laravel Framework
+    Laravel Framework là một framework mã nguồn mở, toàn bộ code của nó được đặt trên github, có thể dễ dàng cài đặt và di chuyển đến bất cứ đâu.
+    
+   Quick Emergence: Sự ra đời của Laravel như một luồng gió mới thổi vào cộng đồng framework PHP. Nó có thể giải quyết tốt những web project lớn. Rất nhiều công ty đã sử dụng nó để phát triển các sản phẩm cho công ty của họ. Như hình bên trên bạn có thể nhìn thấy nó chiếm phần lớn nhất trong PHP framework.
+   Open Source: Nó mở và hoàn toàn free. Bạn chẳng phải quan tâm đến việc trả phí khi ứng dụng web của bạn to lên. Điều bạn cần làm là hiểu nó và code những tính năng tuyệt với mà thôi.
+   Templete engine: Nó sử dụng Blade template và các công cụ như Elixir giúp bạn dễ dàng quản lý các assets (biên dịch, ghép nối, nén ...), cũng như chia nhỏ code HTML ra thành nhiều phần. Giúp cho việc thiết kế cũng như quản lý các assets trở nên vô cùng đơn giản.
+   Modular: Laravel được xây dựng dựa trên hơn 20 thư viện khác nhau. Hiểu được cách thiết kế framework khiến các dev hoàn toàn có thể đóng góp cho framework cũng như mở rộng chúng một cách dễ dàng. Dễ hiểu khi Laravel luôn có cộng đồng support đông đảo và "trâu" như vậy.
+   MVC Architecture Support:  Laravel sử dụng MVC pattern để xây dựng framework. Nó đảm bảo rằng các code được trình bày logic và hợp lý. Dễ dàng để có thể hiểu được nó. Vì vậy nó làm cho web project của bạn được trở nên dễ quản lý cũng như phát triển rất rất nhiều.
+   Libraries and configuration: Laravel tạo điều kiện cho các developer có thể thay đổi tùy chọn và cấu hình để phù hợp với nhiều môi trường. Các developer cũng có thể viết các gói (package) có thể là một tính năng hay một đoạn code gì đó. Nó dễ dàng được khai báo trong Laravel thông qua các provider. Chính điều này   + với số lượng các developer đông đảo thì số lượng package mà Laravel có ngày càng tăng lên. Bạn có thể dễ dàng tìm được một vài đoạn code cũng như một vài tính năng mà bạn mong muốn trong project của bạn chỉ trong vài phút. Nó tiết kiệm hơn so với việc phải ngồi viết code cho tính năng đó.
+2.2 Lập trình với mô hình MVC
+2.2.1 Mô hình MVC là gì?
+    MVC là viết tắt của Model-View-Controller:
+    Model: cấu trúc dữ liệu theo cách tin cậy và chuẩn bị dữ liệu theo lệnh của controller
+    View: Hiển thị dữ liệu cho người dùng theo cách dễ hiểu dựa trên hành động của người dùng.
+    Controller: Nhận lệnh từ người dùng, gửi lệnh đến cho Model để cập nhập dữ liệu, truyền lệnh đến View để cập nhập giao diện hiển thị. 
+    
+2.2.2 Tại sao sử dụng mô hình MVC
+    Khi sử dụng đúng cách, mẫu MVC giúp cho người phát triển phần mềm cô lập các nguyên tắc nghiệp vụ và giao diện người dùng một cách rõ ràng hơn. Phần mềm phát triển theo mẫu MVC tạo nhiều thuận lợi cho việc bảo trì vì các nguyên tắc nghề nghiệp và giao diện ít liên quan với nhau.
+    
+    Trong mẫu Model-View-Controller, mô hình (model) tượng trưng cho dữ liệu của chương trình phần mềm. Tầm nhìn hay khung nhìn (view) bao gồm các thành phần của giao diện người dùng. Bộ kiểm tra hay bộ điều chỉnh (controller) quản lý sự trao đổi giữa dữ liệu và các nguyên tắc nghề nghiệp trong các thao tác liên quan đến mô hình.
+    
+    
+    
+2.3 Tài liệu
+    [1]. Tài liệu: Larry ULLman, PHP for the Web.
+    [2]. Tài liệu: PHP &amp; MySQL: Novice to Ninja - Kenvin yank
+[3]. Tài liệu: Head first PHP &amp; MySQL – Lynn Beighley &amp; Michael Morrison
+    [4]. Trang web: https://laravel.com/docs/5.8
+    [5]. Trang web: https://stackoverflow.com/.
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+
+3.1 Phân tích yêu cầu và xử lý bài toán
+3.1.1 Chức năng cơ bản và phản hồi hệ thống
+CHỨC NĂNG MUA HÀNG
+Hoạt động người dùngPhản hổi hệ thốngNgười mua truy cập vào websiteHệ thống sẽ hiển thị thông tin về sản phẩmNgười mua tìm kiếm sản phầmHệ thống trả về thông tin tương ứngNgười mua Click vào mua hàngHệ thống Yêu cầu nhập thông tin người mua và kiểm tra tính hợp lệ của thông tinNgười mua comment, và đánh giá sản phẩmHệ thống yêu cầu đăng nhập
+
+
+
+NGƯỜI BÁN (NHÂN VIÊN BÁN HÀNG)
+Hoạt động người dùngPhản hổi hệ thốngThêm sửa xóa thông tin sản phẩmHệ thống lưu thông tin và hiển thị lên trang chủTìm kiếm sản phẩmHệ thống trả về kết quả phù hợp nhấtNhân viên kiểm duyệt đơn hàng của khách hàngHệ thống chuyển đổi trạng thái đơn hàngNhân viên thực hiện giao hàng theo đơn hàngHệ thống lưu và in hóa đơn bán hàngNhân viên tiếp nhận thanh toán của khách hàngHệ thống lưu thông tin thay đổi trạng thái đơn hàng
+
+CHỨC NĂNG QUẢN LÝ
+1. Quản lý tài khoản
+    Khách hàng bất kì có thể tạo tài khoản mới với các chức năng mua hàng, comment, đánh giá bài viết và sản phẩm:
+    - Admin cũng có thể tạo tài khoản cho khách hàng, hoặc cấp quyền cho bất kỳ 1 tài khoản nào trong hệ thống đựa trên trức vụ của người sở hữu tài khoản đó hoặc sửa xóa thông tin của bất kỳ tài khoản nào (nếu tài khoản admin đó có quyền).
+2. Quản lý sản phẩm
+    Tài khoản là admin hoặc các tài khoản được admin cấp cho quyền quản lý sản phẩm có thể có các chức năng sau:
+    - Thêm sản phẩm mới: gồm thêm các thông tin hợp liên quan tới sản phẩm được bán và được hiển thị trên trang mua hàng.
+    - Sửa thông tin sản phẩm: Gồm sửa đổi thông tin liên quan đến sản phẩm khi thấy thông tin đó không đúng hoặc thay đổi theo thị trường các thông tin nhập vào phải hợp lệ.
+    - Xóa sản phẩm khi không còn được bán tại cửa hàng.
+3. Quản lý nhà cung cấp
+    Tài khoản là admin hoặc các tài khoản được admin cấp cho quyền quản lý nhà cung cấp có thể có các chức năng sau:
+    - Thêm mới nhà cung cấp bằng cách nhập vào các thông tin hợp lệ liên quan tới các đối tác cung cấp sản phẩm cho cửa hàng.
+    - Sửa các thông tin về nhà cung cấp khi thấy các thông tin không còn chính xác.
+    - Xóa nhà cung cấp khi không còn sản phẩm nào được nhà cung cấp đó cung cấp được bán trong cửa hàng trong thời gian hiện tại và tương lai.
+
+4. Quản lý loại sản phẩm
+    Khi sản phẩm được nhập về của hàng sẽ được phân loại theo các tính chất của sản phẩm, Nhân viên được cấp phép việc phân loại sản phẩm sẽ có thể:
+    - Tạo mới một loại sản phẩm mới khi cần thiết
+    - Sửa thông tin về loại sản phẩm
+    - Xóa loại sản phẩm nào đó
+5. Chức năng phân tích, thống kê và báo cáo
+    Ngoài các chức năng quản lý đã nêu trên, hệ thống còn phải phân tích các dữa liệu thu được trong quá trình hoạt động và việc mua hàng của khách hàng, đưa ra các báo cáo thông kê hợp lý và hiển thị chúng:
+    - Thống kê lược truy cập cho web và cho từng sản phẩm
+    - Thống kê tỉ lệ mua hàng cho mỗi sản phẩm
+    - Thống kê tỉ lệ đánh giá, comment cho sản phẩm hoặc cho nhà cung cấp sản phẩm
+    - Thông kê doanh thu của cửa hàng theo khoảng thời gian nhất định
+    - In các báo cáo trên cho các đối tượng sở hữu quyền xem các thông số trên.
+3.1.2 
+Thiết kế mô hình hoạt động của hệ thống
+Hoạt động người dùng (khách hàng)
+
+
+
+    Biểu đồ 31: Mô tả hoạt động mua hàng
+
+Hoạt động người dùng (quản trị viên hệ thống)
+
+    Biểu đồ 32: Mô tả hoạt động quản lý
+3.1.3 Thiết kế biểu đồ USE CASE
+
+    
+    Biểu đồ 33: USE CASE tổng quát khách hàng
+    
+
+    Biểu đồ 34: USE CASE tổng quát quản trị viên
+3.1.4 
+Thiết kế cơ sở dữ liệu tổng quan hệ thống
+
+Biểu đồ 35: Biểu đồ lớp tổng quát hệ thống cơ sở dữ liệu
+    
+Thiết Kế Cơ Sở Dữ Liệu
+    Bảng 31: Thiết kế bảng dữ liệu Sản phẩm
+    Chức năng:
+- Hiển thị và lưu được thông tin của sản phẩm
+STTTên trườngKiểu dữ liệuMô tả1IdInt Khóa chính, tự động tăngCodeNVarchar(255)Mã code sản phẩm2NameNVarchar(255)Tên sản phẩm3Category_idInt(10)Mã loại sản phẩm4Description TextMô tả chi tiết sản phẩm5Maker_idInt(10)Mã hãng sản xuất6Country_idInt(10)Mã quốc gia7Price Int(11)Giá bán8Import_priceInt(11)Giá nhập9SaleInt(11)Giảm giá(%)10RateTinyint(2)Đánh giá11StatusTinyint(1)Trạng thái
+
+
+
+Bảng 32: Thiết kế giữ liệu bảng đặt hang
+    Chức năng
+- Lưu thông tin của bảng đặt hàng
+STTTên trườngKiểu dữ liệuMô tả1IdInt Khóa chính, tự động tăng2CodeNVarchar(255)Mã đơn hàng3Order_dateTimestamp Ngày giao hàng 4Customer_idInt(10)Mã khách hàng5User_idTextMã người kiểm tra đơn hàng6Created_atTimestamp Ngày đặt hàng7StatusTinyint(1)Trạng thái    
+    
+    
+    
+    
+    Bảng 33: Thiết kế giữ liệu bảng hóa đơn  nhập
+    Chức năng:
+- Lưu thông tin của hoá đơn
+STTTên trườngKiểu dữ liệuMô tả1IdInt Khóa chính, tự động tăng2Code NVarchar(255)Mã đơn hàng3Deliver_idInt(10)Mã nhà cung cấp4User_idTextMã người kiểm tra đơn hàng5Created_atTimestampNgày đặt hàng6StatusTinyint(1)Trạng tháiBảng 34: Thiết kế giữ liệu bảng Khách hang
+    Chức năng 
+- Lưu thông tin của bảng khách hàng
+STTTên trườngKiểu dữ liệuMô tả1IdInt Khóa chính, tự động tăng2Code NVarchar(255)Mã đơn hàng3Human _idInt(10)Mã thông tin chi tiết của khách hàng4User_idInt(10)Mã tài khoản của khách hàngBảng 35: Thiết kế giữ liệu bảng thông tin người dùng
+    Chức năng:
+- Lưu thông tin của người dùng
+STTTên trườngKiểu dữ liệuMô tả1IdInt Khóa chính, tự động tăng2Name NVarchar(255)Tên người dùng3Address_idInt(10)Mã địa chỉ của người dùng4Phone NVarchar(15)Số điện thoại của người dùng5Status Tinyint(1)Trạng thái thông tin người dùng
+    Bảng 36: Thiết kế dữ liệu bảng Nhà cung cấp
+    Chức năng:
+- Lưu thông tin của NCC
+STTTên trườngKiểu dữ liệuMô tả1IdInt Khóa chính, tự động tăng2Name NVarchar(255)Tên nhà cung cấp3Human_idInt(10)Thông tin người đại diện5Status Tinyint(1)Trạng thái nhà cung cấp    
+    
+    
+    Bảng 37: Thiết kế dữ liệu bảng User
+    Chức năng
+- Lưu thông tin của bảng user
+STTTên trườngKiểu dữ liệuMô tả1IdInt Khóa chính, tự động tăng2Username NVarchar(255)Tên nhà cung cấp3Email NVarchar(255)Tên nhà cung cấp4Password NVarchar(255)Tên nhà cung cấp5Human_idInt(10)Thông tin người đại diện6Avatar Int(10)Id hình ảnh7Active Tinyint(1)Trang thái người dùng8Role Tinyint(1)Quyền người dùng9Status Tinyint(1)Trạng thái tài khoản    
+    
+
+    Bảng 38: Thiết kế dữ liệu bảng Bình luận
+    Chức năng 
+- Lưu dữ diệu va thông tin của bảng bình luận
+STTTên trườngKiểu dữ liệuMô tả1IdInt Khóa chính, tự động tăng2ContentTextNội dung bình luận5Product_type_idInt(10)Id sản phẩm6User_id Int(10)Id tài khoản conment7Created_atTimestampThời gian commentBảng 39 Thiết kế dữ liệu bảng Hãng sản xuất
+    Chức năng
+- Lưu thông tin và dữ liệu bảng hang sản xuất
+STTTên trườngKiểu dữ liệuMô tả1IdInt Khóa chính, tự động tăng2Name NVarchar(255)Nội dung bình luận6Description TextMô tả hãng sản xuất    
+    
+    
+    
+    Bảng 310: Thiết kế dữ liệu bảng Phân quyền
+    Chức năng
+- Phân quyền cho người dùng
+STTTên trườngKiểu dữ liệuMô tả1IdInt Khóa chính, tự động tăng2Permission_keyNVarchar(255)Từ khóa phân quyền5Pater_idInt(10)Id thành phần cha6NameNVarchar(255)Tên quyền7Created_atTimestampThời gian comment
+3.1.5 Biểu đồ tuần tự hệ thống
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    Biểu đồ 36: Biểu đồ tuần tự mua hàng
+
+    Biểu đồ 37: Biểu đồ tuần tự đăng nhập
+
+    
+    
+    Biểu đồ 38: Biểu đồ tuần tự thêm nhà cung cấp
+
+    Biểu đồ 39: Biểu đồ tuần tự thêm sản phẩm
+
+    
+    
+    
+3.2 
+Giao diện phần mềm và thao tác trên giao diện phầm mềm
+3.2.1 Giao diện trang chủ
+
+    
+    Hình 1: Giao hiện trang chủ
+
+    Hình 2: Giao diện giỏ hang 1
+
+    Hình 3: Giao diện giỏ hàng 2
+
+    Hình 4: Giao diện thanh toán
+    
+    
+    
+    
+    
+
+    Hình 5: Giao diện đăng nhập
+
+    Hình 6: Giao diện đăng ký
+
+    Hình 7: Giao diện trang tìm kiếm
+
+3.2.2 Giao diện quản lý admin
+    
+3.2.3 Giao diện quản lý sp
+    
+3.2.4 Giao diện thêm sản phẩm 
+    
+    
+    
+    
+    
+    
+    
+3.3 CÁC HÀM VÀ CHỨC NĂNG CỦA CÁC HÀM
+3.3.1 Hàm kết lối csdl
+- Kết lối được csdl vào trang web và lưu được các nội dung và thông tin về sp,người dung ,khách hàng..
+3.3.2 Hàm đăng nhập
+- Giúp khách hàng đăng nhập vào trang web
+- Người quản lý đăng nhập vào trang quản trị
+3.3.3 Hàm tìm kiếm
+- Người dung tìm kiếm được các thông tin cần tìm nhanh chóng
+3.3.4 Hàm giỏ hàng
+- Khách hàng lưu được các sp mình đã chọn để mua và thông tin về sp
+3.3.5 Hàm hiển thị
+- Hiển thị được thông tin của sp , kh ,..
+3.3.6 Hàm thêm sản phẩm
+- Thêm được các sản phẩm 1 cách dễ dàng từ trang quản trị
+3.3.7 Hàm xoá sản phẩm
+- Xoá sp 1 cách đơn giản mà người quản lý muốn xoá
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau thời gian phát triền website, dự vào các kiến thức thu thập được trong quá trình học tập, đã bước đầu thành công trong công việc tạo ra một website bán hàng online với các chức năng căn bản cho yêu cầu mua hàng và sử lý thông tin của người dùng trang web.
+    Tạo ra được sản phẩm có khả năng đáp ứng yêu cầu cần thiết của người tiêu dùng, đồng thời cũng là ứng dụng có thể giúp người bán quản lý công việc và đánh giá thị hiếu của người tiêu dùng trong website của mình.
+    Trong quá trình hoàn thành đồ án tạo ra được sản phẩm, đã gặt hái được những kinh nghiệp quý báu trong kỹ năng của một lập trình viên. 
+4.2 Hạn chế của đề tài
+    Hệ thống mặc dù có được các chức năng thiết yếu của website nhưng vẫn chưa tạo ra một hệ thống hoàn chỉnh như mong muốn.
+    Chưa tạo ra được một cái nhìn tổng quan tốt cho người quản lý như chưa có các biểu đồ, bảng biểu đưa ra được các thông tin toàn diện.
+    Chưa tích hợp được tính năng thanh toán online.
+4.3 Hướng phát triển của đề tài
+    Trong thời gian phát triến phần mềm:
+• Bổ xung thêm cái nhìn tổng quan cho hệ thống quản lý như các biểu đồ, bảng biểu.
+• Tối ưu hóa dự liệu và phân tích dữ liệu chuẩn xác.
+• Triển khai hệ thống trên Server Internet.
+TÀI LIỆU THAM KHẢO
+• x
+[1]. Tài liệu: Larry ULLman, PHP for the Web.
+[2]. Tài liệu: PHP &amp; MySQL: Novice to Ninja - Kenvin yank
+[3]. Tài liệu: Head first PHP &amp; MySQL – Lynn Beighley &amp; Michael Morrison
+[4]. Trang web: https://laravel.com/docs/5.8
+[5]. Trang web: https://stackoverflow.com/.
+x
+    
+PHỤ LỤC
+    
+    
+    
+    
+Xây dựng Website quản lý gara ô tô trên PHP Laravel Framework
+    
+    
+10
+    
+    

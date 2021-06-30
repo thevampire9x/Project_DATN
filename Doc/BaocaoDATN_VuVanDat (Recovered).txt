@@ -1,0 +1,350 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Ngày nay, mọi người dành khá nhiều thời gian giải trí bên những chiếc smartphone cùng những tựa game yêu thích. Trong số đó có không ít trò chơi được lập trình dựa trên engine Unity 3D đã ra đời cách đây hơn một thập kỉ. Trải qua thời gian phát triển lâu dài và luôn update công nghệ mới, giờ đây Unity 3D đã trở thành lựa chọn số 1 cho bất cứ lập trình viên nào muốn xây dựng một tựa game có thể sử dụng đa nền tảng, chi phí rẻ và dễ thao tác.
+    Cùng với sự phát triển mạnh mẽ của Unity và nhu cầu giải trí của người dùng, nhận thấy việc tạo ra một tựa game giúp mọi người giải trí sau mỗi lúc căng thẳng mệt mỏi là điều cần thiết. Hiện nay có rất nhiều tựa game được cho ra đời xong trò chơi bắn máy bay là một tựa game cổ điển được nhiều người yêu thích. Để góp phần phát triển tựa game này, do đó  em đã chọn đề tài đồ án 5 là “ Xây dựng game Space Shooter trên Unity”.
+1.2 Mục tiêu của đề tài
+    * Mục đích: Xây dựng game Space Shooter Pro trên Unity.
+    * Mục tiêu:
+       + Đồ họa đẹp mắt, hình ảnh chân thật
+       + Game Space Shooter Pro gồm 2 chế độ chơi
+• Chế độ chơi bất tận
+• Chế độ chơi theo màn ( gồm có 30 level) 
+       + Game cuốn hút người chơi để người chơi không bị nhàm chán
+       + Vận hành game mượt mà không giật lag.
+1.3 Giới hạn và phạm vi của đề tài
+    Đề tài xây dựng game Space Shooter sử dụng các công nghệ trong lập trình như Unity2D, Visual studio 2017 và Công cụ lập trình Unity, môi trường lập trình Visual studio 2017.
+1.4 Nội dung thực hiện
+    	Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Nghiên cứu công nghệ lập trình C# trên môi trường lập trình Unity. 
+- Phân tích yêu cầu và đề xuất chức năng cho game Space Shooter.
+- Thiết kế hình ảnh cho game.
+- Xây dựng kịch bản cho từng đối tượng.
+- Lập trình cho các control của game.
+- Triển khai thực nghiệm trên mobile
+1.5 Phương pháp tiếp cận
+- Cách tiếp cận : Nghiên cứu các ngôn ngữ lập trình game trên Unity như JavaScritp, C#
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu;
+o Phương pháp phân tích mẫu;
+o Phương pháp thực nghiệm.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan Unity
+2.1.1 Khái niệm và nguồn gốc xuất xứ
+    Unity, theo định nghĩa của Unity Technologies là một hệ sinh thái (engine) đa nền tảng để phát triển game. Engine này được phát triển bằng C/C++ và có khả năng hỗ trợ mã viết bằng C#, JavaScript hoặc Boo. Unity đã phát triển tới phiên bản thứ 5, và là phần mềm thống lĩnh thị trường công cụ phát triển game trên thế giới. Unity chiếm 45% thị phần thị trường phần mềm, là sự lựa chọn số 1 của 47% các nhà phát triển game, có tới 4 triệu đăng ký sử dụng, với 600 triệu game thủ đang chơi game được làm từ Unity trên toàn thế giới.
+    Unity là một comercial game engine, được xây dựng bởi đội ngũ Unity Technogies. Nó là phần mềm làm games trực tiếp theo thời gian thực, mà không cần render, cho phép người  design game có thể thiết kế InterfaceGraphic, map hay character … từ một phần mềm thứ 2 (thường là các phần mềm thiết kế đồ họa chuyên nghiệp như (3Dsmax, Blender,  Maya, XSL, Cinema4D, Cheetah3D, Modo, Autodesk FBX, LightWave …) sau đó chỉ việc import nó vào trong Unity.
+    Một thế mạnh nữa của Unity là bạn có thể chạy demo game của bạn ngay trongkhi design, nó có hỗ trợ hai chế độ là Scene và Game, rất thuận tiện cho việc test thử các modulGame.
+    Unity tích hợp nhiều công cụ, công nghệ về graphic rendering (DirectX, OpenGL), physic (NVIDIA PhyX), audio (OpenAL) giúp quá trình phát triển game trở nên nhanh và đơn giản hơn  khi không phải thực hiện và kết hợp nhiều thành phần riêng lẻ lại với nhau thay vào đó là sự gắn kết liền mạch giữa các thành phần một cách trực quan và logic nhờ sự hỗ trợ trực tiếp từ Unity.
+    Các công cụ, tính năng dành cho mảng thiết kế trực quan, thân thiện, thuận lợi cho Designer. Hỗ trợ lập trình bằng nhiều ngôn ngữ (C#, JavaScript, Boo) bởi một thư viện API không kém đồ sộ.
+    Hỗ trợ Networking để phát triển MMO game. Hỗ trợ xuất bản nhiều plaforms từ stand alone cho PC và Mac, mobile nhu IOS và Android, console như PS3, XBOX, Wii đến các phiên bản chạy trực tiếp trên web nhờ Unity Web Player.
+    Phiên bản hiện tại: Unity5
+2.1.2 Ưu điểm cảu Unity
+➢ Vai trò: Nó có thể tạo ra được nhiều loại game 3D đa dạng, nhẹ, dễ sử dụng với người làm game chưa chuyên nghiệp, chất lượng cao, thích nghi tốt trên mọi hệ điều hành.
+➢ Điểm mạnh: 
+- Phát triển game bằng cách kéo thả.
+- Scripting Language sử dụng Javascript hoặc C#.
+- Bản miễn phí có thể được dùng để phát triển game thương mại.
+- Game có thể dễ dàng export ra Android, IOS hay Windowns Phone.
+- Hỗ trợ Asset Store.
+- Cộng đồng sử dụng lớn.
+    Sự tiện lợi : nếu bạn là một người chuyên dùng 3Dmax, hay Maya hoặc phần mềm mã nguồn mở Blender thì thật tuyệt vời và là một lời thế lớn khi viết game trên Unity, bởi công việc model sẽ trở lên dễ dàng hơn rất nhiều, việc kết hợp giừa người lập trình và người thiết kế các model sẽ nhanh và hiệu quả hơn rất nhiều, bởi trong Unity bạn có thể import trực tiếp các file bạn đang thiết kế và sẽ thiết kế hoàn thiện tiếp(nếu chưa xong) mà trong khi đó công việc import chỉ diễn ra một lần. Không như việc phải dùng các công cụ khác để thực hiện viết game bạn sẽ phải xuất chúng ra một dạng nào đó và mỗi lần sửa lại phần model bạn lại phải xửa lại và import lại, và như thế là quá mất thời gian trong việc thực hiện tạo và chỉnh sửa các textture theo ý muốn, phải dùng một công cụ duy nhất để vừa thiết kế vừa viết tương tác....Ngoài ra Unity cũng cho bạn trực tiếp tạo các model nếu bạn muốn.Việc đặt các thuộc tính vật lý trong unity cũng cực kỳ dễ dàng và hỗ trợ bạn sẵn nhiều chức năng.
+2.1.3 Các thành phần chính
+- Assets: Assets là tài nguyên xây dựng nên một dự án trên Unity. Những tài nguyên có thể là hình ảnh, âm thanh, mô hình 3D, chất liệu (material), texture,  … hoặc cả một project hoàn chỉnh. Unity hỗ trợ rất nhiều tài nguyên mà không cần phải convert. Các asset do chính những nhà phát triển game tạo ra và có thể được download miễn phí hoặc trả phí trên Unity Asset Store. Đây là một trong những tính năng rất hay của Unity. Các asset này sẽ giúp giảm thiểu rất nhiều thời gian cho việc thiết kế và lập trình game.
+
+    Hình 2.1 – Asset được đăng tải trên Asset Store của Unity
+- Scene: Trong Unity, một cảnh chơi (hoặc một phân đoạn) là những màn chơi riêng biệt, một khu vực trong game hoặc thành phần có trong nội dung của trò chơi (các menu). Các thành phần này được gọi là Scene. Bằng cách tạo ra nhiều Scenes, chúng ta có thể phân phối thời gian và tối ưu tài nguyên, kiểm tra các phân đoạn trong game một cách độc lập.
+
+Hình 2.2 – Một cảnh trong scene
+- Game Object: Khi Asset được sử dụng trong các Scene, Unity định nghĩa đó là Game Object. Đây là một thuật ngữ thông dụng, đặc biệt trong mảng lập trình. Tất cả các Game Object đều chứa ít nhất một thành phần cơ bản là Transform, lưu trữ thông tin về vị trí, góc xoay và tỉ lệ của Game Object. Thành phần Transform có thể được tuỳ biến và chỉnh sửa trong quá trình lập trình.
+- Component: Một Game Object có nhiều thành phần cấu tạo nên nó như là hình ảnh (sprite render), tập hợp các hành động (animator), thành phần xử lý va chạm (collision), tính toán vật lý (physical), mã điều khiển (script), các thành phần khác…mỗi thứ như vậy gọi là một component của Game Object. Bản chất của Game Object là không có gì cả, các đặc tính và khả năng của Game Object nằm ngoài hoàn toàn trong các Component. Do đó chúng ta có thể xây dựng nên bất kỳ Game Object nào trong game mà chúng ta có thể tưởng tượng được.
+
+    Hình 2.3 – Giao diện các component của một Game Object
+- Script: Script được Unity xem như một Component. Đây là thành phần thiết yếu trong qua trình phát triển game. Bất ỳ một game nào, dù đơn giản nhất đều cần đến Scripts để tương tác với thao tác của người chơi, hoặc quản lý các sự kiện để thay đổi chiều hướng của game tương ứng với kịch ản game. Unity cung cấp cho lập trình viên khả năng viết Script bằng ngôn ngữ: JavaScript, C# và Boo. Unity không đòi hỏi lập trình viên phải học cách lập trình trong Unity, nhưng trong nhiều tình huống chúng ta cần sử dụng Script trong mỗi phần của kịch bản game. Để viết Script, chúng ta có thể làm việc với trình biên tập Script độc lập của Unity, hoặc làm việc trên Mono Developer đã được cập nhật và lưu trữ dự án trên Unity.
+- Sprite: Là hình ảnh 2D của một Game Object có thể là hình ảnh đầy đủ hoặc bộ phận nào đó.
+- Animation: Là tập hợp hình ảnh động dựa trên sự thay đổi của nhiều sprite khác nhau.
+- Prefaps: Là một khái niệm trong unity dùng dể sử dụng các đối tượng giống nhau có trong game mà chỉ cần khởi tạo lại các giá trị vị trí, tỉ lệ biến dạng và góc quay từ vị trí ban đầu. Để tạo ra một prefap, ta đoen giản chỉ việc kéo một Game Object vào cửa sổ Project.
+
+    Hình 2.4 – Thư mục prefap trong Asset
+- Sound: Âm thanh trong game
+- Camera: Là một game object đặc biệt trong game, dùng để xác định tầm nhìn quan sát các đối tượng khác trong game.
+    
+2.2 Tổng quan về C#
+2.2.1 Giới thiệu
+- C# (hay C sharp) là một ngôn ngữ lập trình đơn giản, được phát triển bởi đội ngũ kỹ sư của Microsoft vào năm 2000, trong đó người dẫn đầu là Anders Hejlsberg và Scott Wiltamuth.
+- C# là ngôn ngữ lập trình hiện đại, hướng đối tượng và nó được xây dựng trên nền tảng của hai ngôn ngữ mạnh nhất là C++ và Java.
+- C# được thiết kế cho Common Language Infrastructure (CLI), mà gồm Executable Code và Runtime Environment, cho phép chúng ta sử dụng các ngôn ngữ high-level đa dạng trên các nền tảng và cấu trúc máy tính khác nhau.
+- C# với sự hộ trợ mạnh mẽ của .NET Framewwork giúp cho việc tạo một ứng dụng Windowns Forms hay WPF (Windows Presentation Founđation), trở nên rất dễ dàng.
+2.2.2 Những ưu điểm của ngôn ngữ lập trình C#
+- Là ngôn ngữ đơn giản: Như ta đã biết thì ngôn ngữ C# dựng trên nền tảng C++ và Java nên ngôn ngữ C# khá đơn giản. Nếu chúng ta thân thiện với C và C++ hoậc thậm chí là Java, chúng ta sẽ thấy C# khá giống về diện mạo, cú pháp, biểu thức, toán tử và những chức năng khác được lấy trực tiếp từ ngôn ngữ C và C++, nhưng nó đã được cải tiến để làm cho ngôn ngữ đơn giản hơn. Một vài trong các sự cải tiến là loại bỏ các dư thừa, hay là thêm vào những cú pháp thay đổi.
+- Là ngôn ngữ hiện đại: Một vài khái niệm khá mới mẻ khá mơ hồ với các bạn vừa mới học lập trình, như xử lý ngoại lệ, những kiểu dữ liệu mở rộng, bảo mật mã nguồn..v..v... Đây là những đặc tính được cho là của một ngôn ngữ hiện đại cần có. Và C# chứa tất cả các đặt tính ta vừa nêu trên. Các bạn sẽ dần tìm hiểu được các đặt tính trên qua các bài học trong series này.
+- Là ngôn ngữ lập trình thuần hướng đối tượng: Lập trình hướng đối tượng(tiếng Anh: Object-oriented programming, viết tắt: OOP) là một phương pháp lập trình có 4 tính chất. Đó là tính trừu tượng (abstraction), tính đóng gói (encapsulation), tính đa hình (polymorphism) và tính kế thừa (inheritance). C# hỗ trợ cho chúng ta tất cả những đặc tính trên. Và để hiểu rõ hơn thì chúng ta sẽ có một chương trình bày về phần này.
+- Là ngôn ngữ lập trình ít từ khóa: C được sử dụng để mô tả thôn # là ngôn ngữ sử dụng giới hạn những từ khóa (gồm khoảng 80 từ khóa và mười mấy kiểu dữ liệu xây dựng sẵn). Nếu bạn nghĩ rằng ngôn ngữ có càng nhiều từ khóa thì sẽ càng mạnh mẽ hơn. Điều này không phải sự thật, lấy ví dụ ngôn ngữ C# làm điển hình nhé. Nếu bạn học sâu về C# bạn sẽ thấy rằng ngôn ngữ này có thể được sử dụng để làm bất cứ nhiệm vụ nào.
+    
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Phát biểu bài toán
+    Game bắn máy bay trên Unity có giao diện đẹp, âm thanh chất lượng cao giúp người chơi thư giãn, cảm thấy thoải mái và hứng thú khi chơi..
+    Hệ thống bao gồm các chức năng:
+• Điều khiển trong game: người chơi cần điều khiển máy bay bằng cách chạm vào máy bay trên màn hình và di chuyển để bắn nhằm hạ gục hết các đợt máy bay của quân địch.
+• Quản lý máy bay địch: máy bay địch sẽ ra theo từng đợt một, mỗi đợt khoảng 10 đến 30 máy bay. Trong một màn chơi nếu người chơi vượt qua được hết các đợt máy bay thì sẽ chiến thắng. Hạ gục một máy bay địch sẽ nhận được 10 score.
+• Quản lý cửa hàng: màn hình sẽ hiển thị tất cả các loại máy bay dành cho người chơi và giá tiền của từng loại máy bay. Người chơi sẽ dùng vàng để mua máy bay mới. Sau khi chiến thắng một màn chơi (hoặc thất bại) người chơi sẽ nhận được số vàng bằng số điểm tương ứng. Ví dụ: 10 score = 1 vàng và máy bay có giá khoảng từ 100 đến 500 vàng.
+• Quản lý điểm: màn hình hiển thị cho người chơi bảng xếp hạng các điểm qua mỗi lần hoàn thành chơi ở chế độ endless (bất tận).
+3.2 Yêu cầu của hệ thống
+3.2.1 Yêu cầu về chức năng
+3.2.1.1. Main Menu
+• Hiển thị các button như play, shop, store, setting, quit.
+3.2.1.2. Chức năng lưu điểm cao nhất của người chơi
+• Game cho phép bạn lưu trữ và so sánh điểm của người chơi.
+
+
+3.2.1.3. Chức Chức năng cửa hàng
+• Tại Shop cung cấp các loại máy bay giúp người chơi có thể mua máy bay khác từ số tiền mình kiếm được.
+3.2.1.4. Chức cài đặt
+• Giúp người chơi bật âm thanh hoặc tắt âm thanh.
+3.2.2 Yêu cầu về phi chức năng
+3.2.2.1. Yêu cầu về giao diện chính
+• Giao diện chính phải đẹp, dễ nhìn, các button phải dễ nhìn.
+3.2.2.2. Yêu cầu về hình ảnh
+• Hình ảnh phải sắc nét, không bị vỡ hình.
+3.3 Biểu đồ UseCase
+3.3.1 Biểu đồ UseCase mức tổng quát
+    Hình 3.1 - UseCase mức tổng quát
+3.3.2 Đặc tả UseCase
+• UseCase “Play Game”
+
+    Hình 3.2 – UseCase Play Game
+- Tóm tắt
+- Người sử dụng: Player
+- Chức năng: 
+- Play game: người chơi chạm vào máy bay tại màn hình để chơi game
+- Pause game: khi người chơi đang chơi muốn tạm dừng game chỉ cần ấn nút pause là game sẽ tạm dừng lại.
+- Resume game: khi người chơi đang tạm dừng game, muốn tiếp tục chơi chỉ cần ấn Resume thì game sẽ tiếp tục.
+- Ý nghĩa: thực hiện màn chơi, thực hiện các thao tác tạm dừng game, tiếp tục game và chơi game.
+- Dòng sự kiện
+- Dòng sự kiện chính: tại màn hình chính của game
+- Người chơi chọn Play sẽ bắt đầu vào màn chơi.
+- Người chơi chọn Pause game sẽ tạm dừng.
+- Khi người chơi chọn Resume thì game sẽ được tiếp tục.
+- Các dòng sự kiện khác
+- Không có
+- Các yêu cầu đặc biệt
+- Không có
+- Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Hệ thống khởi động ứng dụng. 
+- Hệ thống không yêu cầu người chơi đăng nhập.
+- Trạng thái hệ thống sau khi thực hiện Use-case
+- Hiển thị giao diện chơi trò chơi.
+- Score bằng 0.
+- Điểm mở rộng
+- Đồ họa đẹp mắt.
+- Hiển thị Score.
+
+
+• UseCase “ManageShop”
+
+    Hình 3.3 – UseCase Manage Shop
+- Tóm tắt
+- Người sử dụng: Player
+- Chức năng: 
+- Lưu trữ máy bay.
+- Cập nhật trạng thái máy bay.
+- Ý nghĩa: lưu trữ các loại máy bay trong game gồm tên và giá tiền của từng loại máy bay. Người chơi sẽ mua máy bay bằng vàng.
+- Dòng sự kiện
+- Dòng sự kiện chính
+- Khi người chơi chọn mua một loại máy bay, game sẽ lưu lại trạng thái của máy bay đó và cập nhật lại danh sách máy bay.
+- Các dòng sự kiện khác
+- Không có
+- Các yêu cầu đặc biệt
+- Không có
+- Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Hệ thống không yêu cầu người chơi đăng nhập.
+- Trạng thái hệ thống sau khi thực hiện Use-case
+- Lưu trữ và cập nhật lại shop.
+- Điểm mở rộng
+- Không có.
+• UseCase “Manage Scores”
+
+    Hình 3.4 – UseCase Manage Scores
+- Tóm tắt
+- Người sử dụng: Player
+- Chức năng: 
+- Thêm mới điểm
+- Cập nhật điểm.
+- Ý nghĩa: tập hợp các thành tích cao nhất qua mỗi lần chơi của chế độ Endless.
+- Dòng sự kiện
+- Dòng sự kiện chính
+- Khi người chơi hoàn thành xong màn chơi ứng dụng sẽ tổng kết điểm.
+- Nếu danh sách chưa có điểm số nào sẽ lưu điểm của người chơi vào top 1, nếu đã có điểm từ các lần chơi trước thì sẽ so sánh các điểm với nhau để lưu trữ lại.
+- Các dòng sự kiện khác
+- Không có
+- Các yêu cầu đặc biệt
+- Không có
+- Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Yêu cầu người chơi hoàn thành màn chơi.
+- Trạng thái hệ thống sau khi thực hiện Use-case
+- Hiển thị danh sách điểm.
+- Điểm mở rộng
+- Không có.
+
+
+• UseCase “ManageEnemy”
+
+    Hình 3.5 – UseCase Manage Enemy
+- Tóm tắt
+- Sinh ra enemy (máy bay địch) khi bắt đầu game
+- Khi đạn phe ta bắn trúng enemy (máy bay địch) thì enemy sẽ biến mất và người chơi sẽ nhận được 10 score (=1 vàng).
+- Dòng sự kiện
+- Dòng sự kiện chính
+- Tự sinh enemy ở các vị trí khác nhau khi bắt đầu game
+- Trong lúc chơi thì hệ thống vẫn tiếp tục sinh enemy, đồng thời khi đạn phe ta va chạm với enemy thì enemy sẽ biến mất.
+- Các dòng sự kiện khác
+- Không có
+- Các yêu cầu đặc biệt
+- Giảm sự tràn các enemy.
+- Tránh việc đơ game khi chơi.
+- Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Hệ thống không yêu cầu người chơi đăng nhập.
+- Sinh enemy ở vị trí ngẫu nhiên.
+- Trạng thái hệ thống sau khi thực hiện Use-case
+- Hiển thị các enemy chạy.
+- EnemyOur (máy bay phe ta) được điều khiển bởi người chơi.
+- Điểm mở rộng
+- Không có.
+3.4 Biểu đồ lớp
+3.4.1 Biểu đồ lớp
+    
+    Hình 3.6 – Biểu đồ lớp mức phân tích
+3.4.2 Danh sách các lớp đối tượng và quan hệ
+    Bảng 3.1 Danh sách các lớp đối tượng và quan hệ
+STTTên lớp/Quan hệLoạiÝ nghĩa/Ghi chú1Mission    Màn chơi2Plane    Máy bay3PlaneOur    Máy bay phe ta4PlaneEnemy    Máy bay địch5Bullet    Đạn6Campaign    Chế độ chơi theo màn7Endless    Chế độ chơi vô tận8Scores    Điểm của chế độ Endless3.4.3 Mô tả chi tiết từng lớp đối tượng
+• Lớp Mission
+    Bảng 3.2 Mô  tả chi tiết lớp Mission
+Mô STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/Ghi chú1idMSIntKhóa chínhID của màn chơi2nameMSStringTên màn chơi3idCPIntKhóa ngoạiID của chế độ Campaign4idELintKhóa ngoạiID của chế độ Endless
+
+
+• Lớp Plane
+    Bảng 3.3 Mô tả chi tiết lớp Plane
+STTTên thuộc tính    LoạiRàng buộc    Ý nghĩa/ghi chú1idPIntKhóa chínhID của máy bay2typestringLoại máy bay• Lớp PlaneOur
+    Bảng 3.4 Mô tả chi tiết lớp Planour
+STTTên thuộc tính    LoạiRàng buộc    Ý nghĩa/ghi chú1idPOIntKhóa chínhID của máy bay phe ta2namePOstringTên máy bay phe ta3hpplaneintMáu của máy bay ta• Lớp PlaneEnemy
+    Bảng 3.5 Mô tả chi tiết lơp Plan Enemy
+STTTên thuộc tính    LoạiRàng buộc    Ý nghĩa/ghi chú1idPEIntKhóa chínhID của máy bay địch2HpbossintMáu của máy bay địch3NamebossstringTên của máy bay địch4idPintKhóa ngoạiID của máy bay1idPEIntKhóa chínhID của máy bay địch
+
+• Lớp Bullet
+    Bảng 3.6 Mô tả chi tiết lớp Bullet
+STTTên thuộc tính    LoạiRàng buộcÝ nghĩa/ghi chú1idBIntKhóa chínhID của đạn máy bay phe ta2nameBstringTên loại đạn3dameBintSát thương của đạn4idPOintKhóa ngoạiID của máy bay phe ta• Lớp Campaign
+    Bảng 3.7. Mô tả chi tiết lớp Campaign
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/Ghi chú1idCPIntKhóa chínhID của chế độ chơi Campaign2numberEnemyIntSố lượng Enemy3levelCPintLevel của chế độ Campaign• 	Lớp Endless
+    Bảng 3.8. Mô tả chi tiết lớp Endless
+1idELIntKhóa chínhID của chế độ Endless2scoreELintĐiểm của chế độ Endless
+
+
+• Lớp Scores
+    Bảng 3.9. Mô tả chi tiết lớp Scores
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/Ghi chú1idSCIntKhóa chínhID điểm2RankstringThứ tự xếp hạng3scoreELintĐiểm của chế độ Endless4idELintKhóa ngoạiID của chế độ Endless3.5 Biểu tuần tự
+3.5.1 ManageShop
+    
+    Hình 3.7 – Biểu đồ tuần tự Manage Shop
+3.5.2 Manage Score
+    
+    Hình 3.8 – Biểu đồ tuần tự Manage Score
+3.5.3 Manage Enemy
+
+    Hình 3.9 – Biểu đồ tuần tự Manage Enemy
+3.5.4 Play Game
+    
+    Hình 3.10 – Biểu đồ tuần tự Play Game
+3.6 Các module của hệ thống
+    Bài toán xây dựng game Space Shooter gồm các chức năng chính sau đây:
+3.6.1 Module Mana Shop
+   Cung cấp nhiều loại máy bay
+1. Jayce
+2. Renga
+3. Kayn
+4. Thresh
+5. Caitlyn
+3.6.2 Module Manage Enemy
+    Enemy với độ khó tăng dần theo các màn chơi
+3.6.3 Module Manage Scores
+1. Lưu điểm cao nhất
+2. Xếp theo thứ tự từ cao đến thấp
+3.6.4 Module Play Game
+    Người chơi bấm Play để bắt đầu game
+
+
+3.7 Thiết kế đặc tả giao diện
+•  Giao diện chính:
+    
+    
+    Hình 3.11 Giao diện chính
+
+
+• Giao diện Shop:
+    
+    Hình 3.12 Giao diện Shop
+
+
+• Giao diện Scores:
+    
+    Hình 3.13 Giao diện Scores
+
+
+• Giao diện MainPlay:
+    
+    Hình 3.14 Giao diện MainPlay
+
+
+• Giao diện PlayEndless:
+    - Người chơi sẽ điều khiển máy bay tiêu diệt hết các máy bay địch.
+    - Giao diện gồm có điểm thu được sau khi tiêu diệt máy bay địch và thanh máu của máy bay ta.
+    
+    Hình 3.15 Giao diện PlayEndless
+
+
+• Giao diện khi Win:
+    
+    Hình 3.16 Giao diện khi Win
+
+
+• Giao diện khi Lose:
+    
+    Hình 3.17 Giao diện khi Lose
+    
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+1. Hiểu biết thêm các chức năng của ứng dụng Unity.
+2. Thiết kế được các chức năng cơ bản của 1 game 2D đơn giản
+o Di chuyển nhân vật.
+o Destroy bất kì 1 vật thế.
+o Tương tác vật lý trong game.
+o Xử lý âm thanh cho game.
+4.2 Hạn chế của đề tài
+1. Các chế độ chơi chưa đa dạng.
+2. Thiết kế Shop vẫn khá sơ sài, chức năng chính là mua chưa đạt được.
+3. Chức năng Setting của game vẫn chưa hoàn thiện.
+4. Các Sprites chưa đẹp như mong muốn ban đầu.
+4.3 Hướng phát triển của đề tài
+1. Nâng cấp giao diện, các Sprites trong Game.
+2. Thêm nhiều chế độ chơi và nhiều loại kẻ địch.
+3. Thêm các chức năng như mua máy bay trong Shop, tính năng bật tắt âm thanh, các skill bổ trợ cho máy bay…
+
+
+CHƯƠNG 5: PHỤ LỤC
+
+1. Bảng phân công nhiệm vụ thực hiện đồ án
+TTThành viênCác công việcGhi chú1Vũ Văn Đạt- Tìm kiếm Sprites 
+- Thiết kế giao diện
+- Thiết kế các chức năng2. Tên phụ lục khác (nếu có)
+
+TÀI LIỆU THAM KHẢO
+[1] Forum, Unity Support, http://unity3d/lear. (n.d.).
+[2 ]Khoa CNTT, Giáo trình Lập trình hướng đối tượng, Trường Đại Học Sư PHạm Kĩ Thuật Hưng Yên. (n.d.).
+[3 ]Khoa CNTT, Giáo trình Lập trình Unity căn bản, Trường Đại Học Sư Phạm KĨ huật Hưng Yên. (n.d.).
+[4] Website, http://unity3d.com. (n.d.).
+[5] Website, http://youtube.com. (n.d.).
+    
+
+Game Space Shooter Pro 
+    
+    
+46
+    
+    

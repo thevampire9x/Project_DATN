@@ -1,0 +1,391 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1  Lý do chọn đề tài
+   Trong thời đại công nghệ thông tin như hiện nay, sản phẩm công nghệ ngày càng chịu sự đánh giá khắt khe hơn từ phía người dung, đặc biệt là các sản phẩm về Game được nhận rất nhiều sự đánh giá từ các game thủ, hay chỉ là từ những người chơi game bình thường. Ngành công nghiệp game hiện nay có thể nói là đang bùng nổ, với tốc độ phát triển đến chóng mặt, rất nhiều những game hay và hấp dẫn đã được ra đời trong thời gian qua, thị trường game đang hết sức rộng mở dành cho các lập trình viên, số công ty và các studio game được thành lập ngày càng nhiều. Tất cả tạo điều kiện cho việc trở thành một lập tình viên về game, và tạo ra các sản phẩm của riêng mình.
+   Phía sau những game phát triển, nổi tiếng và thành công như vậy đều có một Game Engine. Game Engine là một công cụ hỗ trợ, một Middleware giúp lập trình viên tạo nên game một cách nhanh chóng và đơn giản, đồng thời cung cấp khả năng tái sử dụng các tài nguyên và mã nguồn cao do có thể phát triển nhiều game từ một Game Engine.
+   Sự phát triển mạnh mẽ của các công cụ hỗ trợ lập trình game tạo điều kiện cho các lập trình viên non trẻ, trong đó có Engine Unity, là nền tảng phát triển game hoàn toàn miễn phí và dễ tiếp cận cho người dùng mới.
+   Ở Việt Nam số lượng các studio hay công ty lớn về phát triển game và các tựa game chất lượng do các lập trình viên người Việt viết ra vẫn còn rất ít, với đam mê phát triển nên những tựa game nổi tiếng made in Vietnam như Flappy Bird của anh Nguyễn Hà Đông hay tựa game 7554 về lịch sử cuộc kháng chiến chống Pháp của Emobi Games studio. 
+   Nhận thấy các nội dung gắn liền với các sự kiện lịch sử, hay các truyền thuyết của Việt Nam là những đề tài thú vị và bổ ích để phát triển thành một game mà qua đó giúp người chơi vừa có thể giải trí mà lại vừa có thể hiểu rõ hơn về những truyền thuyết hay sự kiện lịch sử của Việt Nam. 
+   Với những thuận lợi nêu trên, em quyết định chọn đề tài Lập trình game Sơn Tinh Thủy Tinh sử dụng Unity Engine.
+1.2  Mục tiêu của đề tài
+   Nghiên cứu và đề ra giải pháp lập trình game trên nền tảng phát triển game Unity, là một nền tàng mở, dễ tích hợp và đặc biệt hoàn toàn miễn phí cho các sản phẩm có lợi nhuận thấp hơn 100.000$. Giúp tiết kiệm chi phí phát triển.
+   Xây dựng được một hệ thống trong game hoàn chỉnh, cho phép người chơi tương tác và thực hiện các thao tác với môi trường trong trò chơi một cách dễ dàng nhất.
+   Xây dựng được một game gắn liền với truyền thuyết nổi tiếng của Việt Nam.
+1.3  Giới hạn và phạm vi của đề tài
+   Đề tài xây dựng một game sử dụng các công nghệ trong lập trình như Unity Engine và công cụ lập trình Visual Studio 2015.
+   Hệ thống các chức năng trong game được thực hiện nhằm tạo ra một tựa game chân thực nhất, gần gũi nhất với người chơi.
+1.4  Nội dung thực hiện
+   Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Khảo sát và xác định chức năng game
+o Ngiên cứu các tựa game dạng “Platformer2D” (game thủ thành) cùng thể loại.
+o Phân tích yêu cầu và đề xuất hướng giải quyết các chức năng trong game.
+- Xác định các đối tượng trong game
+o Xây dựng cốt truyện game NinjaSchool
+- Thiết kế môi trường và các đối tượng trong game
+o Thiết kế đặc tả hệ thống.
+o Lập trình các chức năng của hệ thống.
+- Phát triển game
+o Kiểm thử hệ thống game.
+o Triển khai thực nghiệm game.
+- Hoàn thành bản phân tích thiết kế game
+1.5  Phương pháp tiếp cận
+   Cách tiếp cận :  
+- Nghiên cứu ngôn ngữ lập trình C#.
+- Nghiên cứu công cụ Unity.
+   Sử dụng các phương pháp nghiên cứu :
+- Phương pháp đọc tài liệu.
+- Phương pháp phân tích mẫu.
+- Phương pháp thực nghiệm.
+1.6  Kết quả dự kiến của đề tài
+   Xây dựng được game hoàn thiện với các chức năng:
+- Chọn chơi mới.
+- Chọn chơi tiếp.
+- Chức năng tạm dừng/tiếp tục trò chơi.
+- Chức năng xem thông tin phiên bản.
+- Chức năng làm nhiệm vụ theo cốt truyện.
+- Chức năng mua vật phẩm trong cửa hàng và sử dụng item trong túi đồ.
+- Chức năng xem bản đồ và chuyển vị trí giữa các cảnh khác nhau.
+- Chức năng xem thông tin chỉ số người chơi.
+- Chức năng MiniMap.
+- Chức năng tương tác giữa người chơi và các đối tượng trong Game. 
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Unity
+2.1.1 Unity là gì?
+   Unity là một “cross-flatform” tạm hiểu là công cụ phát triển game đa nền tảng được phát triển bởi Unity Technologies, mà chủ yếu để phát triển video game cho máy tính, consoles và điện thoại.
+   Unity được ra mắt lần đầu tiên vào năm 2005 tại sự kiện Apple’s Worldwide Developer Conference bởi nhà sáng lập David Helgason, trải qua hơn 12 năm phát triển, nay Unity đã có version 5.5 hoàn thiện hơn về rất nhiều mặt. Tháng 5-2012 theo cuộc khảo sát Game Developer Megazine được công nhận là Game engine tốt nhất cho mobile. Năm 2014 Unity thắng giải “Best Engine” tại giải UK’s annual Develop Industry Exellence.
+   Unity được dùng để làm video game, hoặc những nội dung có tính tương tác như thể hiện kiến trúc, hoạt hình 2D, 3D thời gian thực. Unity gần giống với Director, Blender game engine, Virtools hay Torque Game Builder trong khía cạnh dung môi trường đồ họa tích hợp ở quá trình phát triển game là chính.
+   Unity là một trong những engine được giới làm game cảkhông chuyên lẫn chuyên nghiệp cực kỳ ưa chuộng bởi khả năng tuyệt vời của nó là phát triển trò chơi đa nền tảng. Trình biên tập có thể chạy trên Windows và MacOS, và có thể xuất ra game cho Windows, Mac, Wii, IOS và Android. Game cũng có thể chơi trên trình duyệt web thông qua plugin Unity Web Player. Unity cũng mới bổ xung khả năng xuất ra game trên widget cho Mac, và cả Xbox 360, PlayStation 3.
+   Unity hỗ trợ đồ họa 2D và 3D, các chức năng được viết chủ yếu qua ngôn ngữ C#. Hai ngôn ngữ lập trình khác cũng được hỗ trợ: Boo, đã bị loại cùng với việc phát triển Unity 5 và UnityScript bị loại vào tháng 8 năm 2017 sau khi phát hành Unity 2017.1. UnityScript là một ngôn ngữ lập trình độc quyền có cú pháp tương tự JavaScript. Phần mềm nhắm mục tiêu các đồ họa APIs sau: Direct3D trên Windows và Xbox One; OpenGL trên Linux, macOS, và Windows; OpenGL ES trên Android và iOS; WebGL trên web; và APIs độc quyền trên các máy chơi video game. Ngoài ra, Unity hỗ trợ APIs cấp thấp như Metal trên iOS và macOS và Vulkan trên Android, Linux, và Windows, cũng như Direct3D 12 trên Windows và Xbox One. Trong 2D games, Unity cho phép nhập sprites và một renderer thế giới 2D tiên tiến. Đối với 3D games, Unity cho phép thiết lập các đập điểm kĩ thuật của các kết cấu và độ phân giải mà công cụ trò chơi hỗ trợ, cung cấp các hỗ trợ cho bump mapping, reflection mapping, parallax mapping, cảnh không gian ambient occlusion (SSAO), hiệu ứng bóng đổ bằng cách sử dụng shadow maps, render thiết lập toàn cảnh đến hiệu ứng. Unity cũng cung cấp các dịch vụ cho nhà phát triển, bao gồm: Unity Ads, Unity Analytics, Unity Certification, Unity Cloud Build, Unity Everyplay, Unity API, Unity Multiplayer, Unity Performance Reporting and Unity Collaborate.
+   Unity nổi bật với khả năng xây dựng trò chơi chạy trên nhiều nền tảng. Các nền tảng được hỗ trợ hiện nay là Android, Android TV, Facebook Gameroom, Fire OS, GearVR, Linux, macOS, Microsoft HoloLens, Nintendo 3DS family, Nintendo Switch, Oculus Rift, PlayStation 4, PlayStation Vita, PlayStation VR, Samsung Smart TV, Tizen, tvOS, WebGL, Wii U, Windows, Windows Phone, Windows Store, và Xbox One. Unity trước đây cũng đã hỗ trợ 7 nền tảng khác chạy trên Unity Web Player. Unity Web Player là một plugin của trình duyệt chạy trên Windows và OS X, đã bị gỡ bỏ vì lợi ích của WebGL.
+   Unity là bộ công cụ phát triển phần mềm mặc định (SDK) cho máy chơi game video game Wii U của Nintendo, kèm theo bản miễn phí của Nintendo với mỗi giấy phép phát triển Wii U. Unity Technologies gọi việc kết hợp sản xuất SDK với một bên thứ ba là "industry first".
+   Một số thống kê về Unity:
+- Tính đến quý 3 năm 2016 đã có 5 tỉ lượt download game và ứng dụng được phát triển bởi Unity
+- 2,4 tỉ thiết bị di động đã từng tải ít nhất 1 ứng dụng bởi unity.
+- Trong top 1000 game Mobiles miễn phí thì số lượng game tạo ra bởi Unity chiếm tới 34%
+
+    Hình 2. 1 Số lượng game được tạo bằng Unity
+- Số lượng người dùng (gamer) của Unity đạt tới con số 770 triệu, trong khi đó số người thường xuyên sử dụng Twitter là 310 triệu người.
+- Sự thay đổi trong cách thức chơi game của người chơi hay nói cách khác là xu hướng mọi người tập trung vào game trên di động nhiều hơn.
+
+    Hình 2. 2 Doanh thu của thị trường game tính đến năm 2019
+2.1.2 Tại sao nên sử dụng Unity?
+   Một hệ sinh thái game cần phải có các chức năng cơ bản như: cung cấp công cụ dựng hình (kết xuất đồ họa) cho các hình ảnh 2D hoặc 3D, công cụ vật lý (tính toán và phát hiện va chạm), âm thanh, mã nguồn, hình ảnh động, trí tuệ nhân tạo, phân luồng, tạo dò nguồn dữ liệu xử lý, quản lý bộ nhớ, dựng ảnh đồ thị và kết nối mạng. Unity là engine đáp ứng đầy đủ các yêu cầu đó.
+   Ngoài những chức năng cơ bản của một hệ sinh thái đó, Unity còn có những ưu việt vượt trội so với các engine khác:
+   Chức năng cốt lõi đa dạng bao gồm: Cung cấp công cụ dựng hình (kết xuất đồ họa) cho các hình ảnh 2D hoặc 3D, công cụ vật lý (tính toán và phát hiện va chạm), âm thanh, mã nguồn, hình ảnh động, trí tuệ nhân tạo, phân luồng, tạo dò ng dữ liệu xử lý, quản lý bộ nhớ, dựng ảnh đồ thị và kết nối mạng. Nhờ có các engine mà công việc làm game trở nên ít tốn kém và đơn giản hơn.
+   Sử dụng ngôn ngữ lập trình phổ biến tại Việt Nam là C#.
+   Hỗ trợ đa nền tảng: Một trong các thế mạnh của Unity3D chính là khả năng hỗ trợ gần như toàn bộ các nền tảng hiện có bao gồm: PlayStation 3, Xbox 360, Wii U, iOS, Android, Windows, Blackberry 10, OS X, Linux, trình duyệt Web và cả Flash. Nói cách khác, chỉ với một gói engine, các studio có thể làm game cho bất kỳ hệ điều hành nào và dễ dàng convert chúng sang những hệ điều hành khác nhau. Đồng thời, đây cũng là giải pháp cho các game online đa nền tảng – có thể chơi đồng thời trên nhiều hệ điều hành, phần cứng khác nhau như Web, PC, Mobile, Tablet….
+   Dễ sử dụng: Ngay cả với Lập trình viên nghiệp dư, do Unity3D được xây dựng trong một môi trường phát triển tích hợp, cung cấp một hệ thống toàn diện cho các lập trình viên, từ soạn thảo mã nguồn, xây dựng công cụ tự động hóa đến trình sửa lỗi. Hơn nữa, đây là một trong những engine phổ biến nhất trên thế giới, người dùng có thể dễ dàng tìm kiếm kinh nghiệm sử dụng của “tiền bối” trên các forum công nghệ.
+   
+   Hình 2. 3 Các nền tảng được Unity hỗ trợ
+   Tính kinh tế cao: Những cá nhân và doanh nghiệp có doanh thu dưới 100.000 USD/năm được dùng miễn phí Unity3D, và Unity Technology chỉ thu phí 1.500 USD/năm cho bản Pro- một con số rất khiêm tốn so với những gì engine này mang lại.
+   Rất được ưa chuộng tại Việt Nam, ngay cả trong các game studio lớn như VTC, VNG, Glass-Egg.
+   Thư viện phong phú, đa dạng: Unity có nhiều thư viện, các công cụ hỗ trợ làm game nhanh hơn, thông minh hơn, các đối tượng được tạo sẵn, và tất cả các thư viện này đều “mở”, cho phép cộng đồng tự do sử dụng và sáng tạo nên các sản phẩm của chính mình, thậm chí có thể bán trên Asset Store của Unity.
+   Cộng đồng rất lớn mạnh: là engine phổ biến nhất trên thế giới, Unity có cộng đồng sử dụng rất lớn mạnh. Mọi thắc mắc của bạn về Unity đều sẽ được trả lời trên website cộng đồng http://answers.unity3d.com.
+   Hỗ trợ Networking để phát triển MMO game.
+2.1.3 Kiến trúc tổng quan Engine Unity
+   Engine Unity hỗ trợ cho chúng ta UnityAPI để viết script game. UnityAPI là API lập trình game trong Unity rất mạnh. UnityAPI chứa các đối tượng và phương thức hỗ trợ hầu hết các đối tượng và các loại thành phần trong Unity.
+   Trong một scene thường có nhiều đối tượng game. Mỗi đối tượng này có thể có hoặc không có đoạn script nào gắn trên đó. Nếu muốn gắn script vào đối tượng, ta bắt buộc phải kế thừa class đó từ lớp MonoBehaviour của UnityAPI và tên class phải trùng với tên file script. Mỗi script khi gắn lên đối tượng game đều được đối tượng game xem như một thành phần bên trong và được cấp phát vùng nhớ khi chạy game.
+   
+    Hình 2. 4 Tổng quan kiến trúc Unity
+   Bên trong UnityAPI chứa rất nhiều lớp hỗ trợ cho việc lập trình game, trong đó có một số lớp quan trọng như:
+   Monobehaviour: Tất cả các script muốn gắn vào một đối tượng game bắt buộc phải kế thừa lớp này.
+   GameObject: Lớp cha của tất cả thực thể trong scene.
+   Component: Lớp cha của tất cả các thành phần có thể gắn vào đối tượng.
+   Transform: Giúp thay đổi vị trí, xoay, biến đổi tị lệ mô hình.
+   Input: Hỗ trợ lập trình với chuột, cảm ứng đa điểm, cảm biến gia tốc.
+   Camera: Thể hiện góc nhìn trong game.
+   Light: Thể hiện ánh sáng trong game.
+   Audio: Hỗ trợ lập trình với âm thanh.
+   Animation: Tạo chuyển động của nhân vật.
+   Rigidbody: Giúp tạo các hiệu ứng vật lý liên quan đến trọng lực.
+   Collider: Hỗ trợ lập trình va chạm giữa các vật thể.
+   GUI : Giúp lập trình giao diện người dùng trên Unity.
+2.1.4 Các thành phần trong Unity Editor
+   
+    Hình 2. 5 Các thành phần trong Unity Editor
+   Cửa sổ Scene(1): Hiển thị các đối tượng trong scenes một cách trực quan, có thể lựa chọn các đối tượng, kéo thả, phóng to, thu nhỏ, xoay các đối tượng. Phần này có để thiết lập một số thông số như hiển thị ánh sáng, âm anh, cách nhìn 2D hay 3D, khung nhìn Scene là nơi bố trí các Game Object như cây cối, cảnh quan, enemy, player, camera, … trong game. Sự bố trí hoạt cảnh là một trong những chức năng quan trọng nhất của Unity.
+   Cửa sổ Hierarchy(2): Tab hierarchy là nơi hiển thị các Game Object trong Sences hiện hành. Khi các đối tượng được thêm hoặc xóa trong Sences, tương ứng với các đối tượng đó trong cửa sổ Hierarchy.
+   Tương tự trong tab Project, Hierarchy cũng có một thanh tìm kiếm giúp quản lý và thao tác với các Game Object hiệu quả hơn đặc biệt là với các dự án lớn.
+   Cửa sổ Game(3): Đây là mạn hình demo Game, là góc nhìn từ camera trong game. Thanh công cụ trong cửa sổ game cung cấp các tùy chỉnh về độ phân giải man hình, thông số (stats), gizmos, tùy chọn bật tắt các component...
+   Cửa sổ Project(4): Đây là cưa sổ explorer của Unity, hiển thị thông tin của tất cả các tài nguyên (Assets) trong game của bạn.
+   Cột bên trái hiển thị assets và các mục yêu thích dưới dạng cây thư mục tương tự như Windows Explorer. Khi click vào một nhánh trên cây thư mục thì toàn bộ nội dung của nhánh đó sẽ được hiển thị ở khung bên phải. Ta có thể tạo ra các thư mục mới bằng cách Right click -> Create -> Folder hoặc nhấn vào nút Create ở góc trên bên trái cửa sổ Project và chọn Folder. Các tài nguyên trong game cũng có thể được tạo ra bằng cách này.
+   Phía trên cây thư mục là mục Favorites, giúp chúng ta truy cập nhanh vào những tài nguyên thường sử dụng. Chúng ta có thể đưa các tài nguyên vào Favorites bằng thao tác kéo thả.
+   Đường dẫn của thư mục tài nguyên hiện tại. Chúng ta có thể dễ dàng tiếp cận các thư mục con hoặc thư mục gốc bằng cách click chuột vào mũi tên hoặc tên thư mục.
+   Cửa sổ Inspector(5) : Cửa sổ Inspector hiển thị chi tiết các thông tin về Game Object đang làm việc, kể cả những component được đính kèm và thuộc tính của nó. Bạn có thể điều chỉnh, thiết lập mọi thông số và chức năng của Game Object thông qua cửa sổ Inspector.
+   Mọi thuộc tính thể hiện trong Inspector đều có thể dễ dàng tuỳ chỉnh trực tiếp mà không cần thông qua một kịch bản định trước. Tuy nhiên Scripting API cung cấp một số lượng nhiều và đầy đủ hơn do giao diện Inspector là có giới hạn.
+   Các thiết lập của từng component được đặt trong menu. Các bạn có thể click chuột phải, hoặc chọn icon hình bánh răng nhỏ để xuất hiện menu.
+   Ngoài ra Inspector cũng thể hiện mọi thông số Import Setting của asset đang làm việc như hiển thị mã nguồn của Script, các thông số animation, …
+   
+2.1.5 PlayerPref trong Unity
+   PlayerPref là gì?
+    Lưu điểm số, thông tin của game hay trạng thái lần trước là một điều quan trọng trong bất kì game nào. Giả sử bạn là người chơi, có lẽ bạn sẽ không muốn mỗi lần mở game ra là phải chơi lại từ đầu giống như lúc vừa cài đặt, chơi lại từng màn đã qua. Khi lập trình game với Unity, chúng ta được hỗ trợ sẵn để có thể lưu lại thông tin và trạng thái trong game thông qua lớp PlayerPrefs.
+2.1.6 Tổng quan về PlayerPref trong Unity
+    Lưu trạng thái game
+   PlayerPrefs hỗ trợ lưu trữ ba kiểu dữ liệu cơ bản: Int, Float, và String. Tương ứng với ba phương thức là SetInt, SetFloat, SetString. Cả ba phương thức này đều nhận vào hai tham số trong đó tham số đầu tiên là tên đại điện cho giá trị được lưu trữ và tham số còn lại là nội dung cần lưu trữ. Cần ghi nhớ key này để ta có thể lấy lại được nội dung đã lưu trữ về sau.
+    Dưới đây là cách dùng PlayerPrefs để lưu thông tin người chơi.
+PlayerPrefs.SetString("username", "PhamNgocHung");
+PlayerPrefs.SetString("password", "stdio1235");
+PlayerPrefs.SetInt("level", 10);
+    Truy xuất thông tin
+    Sau khi đã sử dụng PlayerPrefs để lưu trữ thông tin, ta sử các phương thức GetInt, GetFloat, GetString để truy xuất các nội dụng đã lưu trữ bất cứ lúc nào.
+    Cũng giống như các phương thức Set ở trên, khi dùng các phương thức Get ta phải lựa chọn hàm tương ứng với kiểu dữ liệu đã ghi trước đó. Các hàm Get(X) nhận vào một tham số là tên của key và có kiểu trả về X (với X là Int, Float hoặc String).
+    Truy xuất các thông số đã lưu trữ ở trên như sau:
+String _userName = PlayerPrefs.GetString("username");
+String _password = PlayerPrefs.GetString ("password");
+Int _level = PlayerPrefs.GetInt("level");
+    Một số phương thức hỗ trợ
+    DeleteAll    Xóa tất cả các key và giá trị đã được lưu trữ.    DeleteKey    Xóa một key cụ thể.    GetFloat    Trả về giá trị float tương ứng với key nếu key tồn tại.    GetInt    Trả về giá trị int tương ứng với key nếu key tồn tại.    GetString    Trả về giá trị string tương ứng với key nếu key tồn tại.    HasKey    Trả về true nếu key tồn tại.    Save    Lưu trữ tất cả dữ liệu được chỉnh sữa xuống đĩa.    SetFloat     Lưu giá trị float theo key vào bộ nhớ chính.    SetInt    Lưu giá trị int theo key vào bộ nhớ chính.    SetString    Lưu giá trị string theo key vào bộ nhớ chính.   
+    Đường dẫn tệp tin lưu trữ
+    Nơi lưu trữ dữ liệu của PlayerPrefs ở các nền tảng khác nhau:
+• Mac OS: Thư mục ~/Library/Preferences trong tập tin unity.[company name].[product name].plist.
+• Windows: Lưu trữ ở registry dưới đường dẫn HKCU\Software\[company name]\[product name].
+• Linux: Lưu trữ ở đường dẫn ~/.config/unity3d/[CompanyName]/[product name].
+• Windows Store Apps: %userprofile%\AppData\Local\Packages\[ProductPackageId]>\LocalState\playerprefs.dat.
+• WebPlayer: PlayerPrefs được lưu trữ trong tệp tin nhị phân với đường dẫn:
+o Mac OS X: ~/Library/Preferences/Unity/WebPlayerPrefs/
+o Windows: %APPDATA%\Unity\WebPlayerPrefs/
+   
+    Bảo mật
+    Nếu bạn từng truy cập thử vào trong đường dẫn lưu trữ PlayerPrefs thì ta có thể nhận thấy rằng các thông tin lưu trữ trong đó đều ở dạng nguyên gốc như lúc truyền vào. Điều này làm cho các thông tin này dễ dàng bị sử đổi bất hợp pháp dẫn đến sai lệch thông tin của game hay đánh cắp thông tin người dùng (username, password, email, ...).
+    Dưới đây là màn chơi của game AngryBird được viết bằng Unity trong đó giá trị High Score được dùng để đánh dấu lại số điểm cao nhất từng đạt được của màn chơi đó sử dụng PlayerPrefs và thông tin mà PlayerPrefs lưu trữ. Giá trị này có thể dễ dàng được thay đổi bằng tay và dẫn đến game cũng bị ảnh hưởng theo.
+   Ưu điểm của PlayerPref Unity:
+- Xử lý với các dữ liệu với game có độ lớn trung bình, khoảng vài M data. 
+- Thích hợp với các game trên iOS và Android yêu cầu tiết kiệm độ lớn vì nó không đồ sộ. 
+- Truy xuất dữ liệu sử dụng trên ngôn ngữ C# nên dễ dàng sử dụng.
+- PlayerPref  không yêu cầu một tiến trình Server riêng rẽ để hoạt động.
+- PlayerPref không cần cấu hình, nghĩa là không cần thiết phải cài đặt.
+- Các Key trong Player sử dụng vô cùng linh hoạt.
+- PlayerPref là có sẵn trên Unity.
+   Nhược điểm của PlayerPref trong Unity:
+- Tính năng đang được phát triển và cần phải được mở rộng thêm.
+- Không hỗ trợ lưu trữ online vì thế không hỗ trợ các dạng game online.
+- Các giá trị lưu trữ thuộc loại đơn giản: “value,string, float, int”
+- Bảo mật chưa cao như SQL Server.
+2.2 Tổng quan về Visual Studio
+2.2.1 Visual Studio là gì?
+   Microsoft Visual Studio là một môi trường phát triển tích hợp (IDE) từ Microsoft. Nó được sử dụng để phát triển chương trình máy tính cho Microsoft Windows, cũng như các trang web, các ứng dụng web và các dịch vụ web. Visual Studio sử dụng nền tảng phát triển phần mềm của Microsoft như Windows API, WindowsForms, WindowsPresentationFoundation, WindowsStore và Microsoft Silverlight. Nó có thể sản xuất cả hai ngôn ngữ máy và mã số quản lý.
+   Visual Studio bao gồm một trình soạn thảo mã hỗ trợ IntelliSense cũng như cải tiến mã nguồn. Trình gỡ lỗi tích hợp hoạt động cả về trình gỡ lỗi mức độ mã nguồn và gỡ lỗi mức độ máy. Công cụ tích hợp khác bao gồm một mẫu thiết kế các hình thức xây dựng giao diện ứng dụng, thiết kế web, thiết kế lớp và thiết kế giản đồ cơ sở dữ liệu. Nó chấp nhận các plug-in nâng cao các chức năng ở hầu hết các cấp bao gồm thêm hỗ trợ cho các hệ thống quản lý phiên bản (như Subversion) và bổ sung thêm bộ công cụ mới như biên tập và thiết kế trực quan cho các miền ngôn ngữ cụ thể hoặc bộ công cụ dành cho các khía cạnh khác trong quy trình phát triển phần mềm.
+   Visual Studio hỗ trợ nhiều ngôn ngữ lập trình khác nhau và cho phép trình biên tập mã và gỡ lỗi để hỗ trợ (mức độ khác nhau) hầu như mọi ngôn ngữ lập trình. Các ngôn ngữ được tích hợp trong Visual Studio gồm có C, C++ và C++/CLI (thông qua Visual C++), VB.NET(thông qua Visual Basic.NET), C# (thông qua Visual C#) và F# (như của Visual Studio 2010). Ngoài ra, Visual Studio còn hỗ trợ cho các ngôn ngữ khác như J++/J#, Python và Ruby thông qua dịch vụ cài đặt riêng rẽ. Nó cũng hỗ trợ XML/XSLT, HTML/XHTML, JavaScript và CSS.
+   Microsoft cung cấp phiên bản "Express" (đối với phiên bản Visual Studio 2013 trở về trước) và "Community" (đối với bản Visual Studio 2015 trở về sau) là phiên bản miễn phí của Visual Studio.
+2.2.2 Cấu trúc của Visual Studio
+   Các Visual Studio không hỗ trợ cho bất kỳ ngôn ngữ lập trình nào về giải pháp hoặc công cụ thực chất, thay vào đó nó cho phép cắm chức năng được mã hóa như là một VSPackage. Khi cài đặt, các chức năng có sẵn như là một dịch vụ. IDE cung cấp ba dịch vụ: SVsSolution cung cấp khả năng liệt kê các dự án và các giải pháp; SVsUIShell cung cấp cửa sổ và giao diện người dùng và SVsShell. Ngoài ra, IDE cũng có trách nhiệm điều phối và cho phép truyền thông giữa các dịch vụ. Tất cả các biên tập viên, nhà thiết kế, các loại dự án và các công cụ khác được thực hiện theo VSPackages. Visual Studio sử dụng COM để truy cập VSPackages. Visual Studio SDK cũng bao gồm Managed Package Framework (MPF) là một tập hợp quản lý bao bọc quanh các COM-interfaces cho phép các gói được viết bằng bất kỳ ngôn ngữ nào. Tuy nhiên, MPF không cung cấp tất cả các chức năng bộc lộ trong Visual Studio COM-interfaces.[9] Các dịch vụ có thể được tiêu thụ để tạo ra các gói khác, để thêm chức năng cho Visual Studio IDE.
+   Hỗ trợ cho các ngôn ngữ lập trình được thêm vào bằng cách sử dụng một VSPackage đặc biệt được gọi là một dịch vụ ngôn ngữ. Một dịch vụ ngôn ngữ định nghĩa giao tiếp khác nhau mà việc thực hiện VSPackage có thể thực hiện để hỗ trợ thêm cho các chức năng khác nhau. Các chức năng có thể được thêm vào theo cách này bao gồm cú pháp màu, hoàn thành báo cáo kết quả, kết hợp đôi, công cụ chú giải tham số thông tin, danh sách thành viên và đánh dấu lỗi trên nền biên dịch. Nếu giao diện được thực hiện, các tính năng sẽ có sẵn ngôn ngữ. Dịch vụ ngôn ngữ sẽ được thực hiện trên cơ sở mỗi ngôn ngữ. Việc triển khai có thể tái sử dụng mã từ phân tích cú pháp hoặc trình biên dịch cho ngôn ngữ. Dịch vụ ngôn ngữ có thể được triển khai hoặc trong mã nguồn gốc hoặc mã số quản lý. Đối với mã nguồn gốc, thì cả COM-interfaces gốc hoặc Babel Framework (một phần của Visual Studio SDK) đều có thể được sử dụng. Đối với mã số quản lý thì các MPF sẽ bao hàm các dịch vu quản lý văn bản. 
+   Visual Studio không bao gồm bất kỳ Hệ thống quản lý phiên bản hỗ trợ kiểm soát mã nguồn nhưng nó xác định hai cách thay thế cho các hệ thống kiểm soát mã nguồn để tích hợp với IDE. Một VSPackage kiểm soát mã nguồn có thể cung cấp giao diện người dùng tùy chỉnh của riêng mình. Ngược lại, một plugin kiểm soát mã nguồn bằng cách sử dụng MSSCCI (Microsoft Source Code Control Interface) cung cấp một tập các chức năng được sử dụng để thực hiện chức năng kiểm soát mã nguồn khác nhau, với một giao diện người dùng Visual Studio tiêu chuẩn. MSSCCI lần đầu tiên được sử dụng để tích hợp Visual SourceSafe với Visual Studio 6.0 nhưng sau đó được mở ra thông qua Visual Studio SDK. Visual Studio.NET 2002 dùng MSSCCI 1.1, và Visual Studio.NET 2003 dùng MSSCCI 1.2. Visual Studio 2005, 2008 và 2010 dùng MSSCCI 1.3. 
+   Visual Studio hỗ trợ chạy nhiều cá thể của môi trường (tất cả đều có VSPackages riêng của mình). Những trường hợp sử dụng các registry hives khác nhau để lưu trữ trạng thái cấu hình và được phân biệt bởi AppID (Application ID). Các trường hợp được đưa ra bởi một AppId-specific.exe cụ thể mà lựa chọn AppID, thiết lập các hive gốc và khởi chạy IDE. VSPackages đăng ký một AppID được tích hợp với VSPackages khác cho AppID đó. Các phiên bản sản phẩm khác nhau của Visual Studio được tạo ra bằng cách sử dụng AppIds khác nhau. Các sản phẩm phiên bản Visual Studio Express được cài đặt với AppIds riêng nhưng với các sản phẩm Standard, Professional và Team Suite chia sẻ cùng AppID. Do đó, người ta có thể cài đặt các phiên bản Express song song với các phiên bản khác, không giống như các phiên bản khác cập nhật các cài đặt tương tự. Phiên bản Professional bao gồm các VSPackages khổng lồ trong phiên bản Standard và Team. Hệ thống AppID được thừa hưởng bởi Visual Studio Shell trong Visual Studio 2008.
+    
+    Hình 2. 6 Giao diện visual studio
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Xây dựng nội dung
+3.1.1 Cốt truyện
+    Thầy Takanami chính là tên phù thuỷ áo đen. Kẻ gây ra cái chết cho Khói và các bạn khác trong đợi huấn luyện này.
+    Tóm tắt sơ bộ về cốt truyện:
+    Thầy Matsumoto tập trung 6 Ninja ưu tú có dòng máu Xích Mao trong người nhất trong đó có Onda, về vùng núi phía Bắc để huấn luyện đặc biệt.
+    Thầy Matxu bảo không được gọi tên thật khi 2 nguời khác nhóm gặp nhau mà chỉ gọi bằng biệt danh. Onda biệt danh là Lửa.
+    Onda luyện tập ở khu mỏ đá đỏ Akai và phát hiện Khói bị tên phù thuỷ bắt và bị nhốt ở hang Kurai. Sau đó Onda đã giải cứu đc Khói nhưng kỳ lạ thay lúc này Khói bỗng bị biến thàng 1 con chim bay mất.
+    Kinh ngạc trước sự kỳ lại đó Lửa đã về gặp thầy Matsu kể rõ sự việc…sau đó Lửa lại nhận được nhiệm vụ lên đường đến làng Oshin để tiêu diệt Robot tay sai của Quỷ Vương Corona, nhưng trước mắt tìm cách vượt qua sông băng Yamoto, lửa đến cánh đồng Hiya để thu phục sói trắng để vượt qua sông băng Yamoto.
+    Sau khi đến được làng Oshin thì được biết tên phù thuỷ áo đen đang dùng phong ấn khống chế các con vật cản đường Onda tại rừng chết Kanashii để hắn có thể đủ thời gian giải phong Ấn cho quái vật Corona.
+    Cuối cùng với tinh thần của mình trước sự hy sinh của 5 người ninja có dòng máu Xích mao ,Onda đã đánh bại Phù thuỷ áo đen vạch ra bộ mặt của hắn.
+    
+3.1.2 Giới thiệu game Ninja School và cách chơi
+Giới thiệu game Ninja School
+   Ninja School là một trò chơi dạng platformer2D được phát triển bằng Unity Engine. Game lấy bối cảnh mùa đông tại một vùng núi phía bắc của Nhật bản xa xôi. Nơi có một trường học đào tạo những Ninja giỏi nhất. Trong đợt huấn luyện lần nay, khi “Onda – Nhân vật chính” trên đường làm nhiệm vụ thì gặp Khói bạn của mình bị 1 tên phù thủy áo đen lạ mặt bắt cóc. Onda quyết định lên đường tìm hiểu nguyên nhân và cứu bạn của mình. Sự thật dần được hé mở sau khi Onda đã trải qua rất nhiều gian nan, hiểm trở để đến được nơi có chứa phong ấn Corona tiêu diệt quỷ vương và giải cứu bạn mình giải cứu dân làng.
+   
+    Hình 3. 1 Bối cảnh game
+   Game mang đến một hệ thống nhân vật vô cùng đa dạng cùng các bối cảnh chơi khác nhau để người chơi chọn lựa. Với 16 màn chơi với mức độ khó khác nhau, người chơi sẽ phải đưa ra một sự lựa chọn thông minh, xử lý khéo léo ở mỗi màn chơi để tránh thua cuộc và vượt ải.
+   Nhiệm vụ chính của người chơi trong game đó chính là lên đường làm nhiệm vụ đã được giao và tìm hiểu ngọn nguồn về sự mất tích của Khói.
+   Hệ thống UI, số lượng kẻ địch phong phú, cùng với cốt truyện gần gũi chính là điểm nổi bật của tựa game này. Việc đa dạng kẻ địch và độ khó trong mỗi màn khiến cho người chơi phải động não,chăm chỉ cày game để đưa ra chiến thuật hợp lý, mua thêm được nhiều vật phẩm tốt để giành chiến thắng khiến cho game trở nên thú vị hơn bao giờ hết.
+Game có 16 màn chơi thuộc những bối cảnh sau:
+    Khu đá đỏ Akai
+- Map đầu tiên, bối cảnh mùa đông, mức độ dễ.
+    
+    Hình 3.2 Khu đá đỏ Akai
+- Quái vật: Heo vàng, nhện
+- Boss: Cáo 9 đuôi
+- Nhiệm vụ: Thu thập Ashiko
+    Khu đá đỏ Aiko
+- Bối cảnh mùa đông
+- Quái vật: Thiên tê
+    Làng Echigo
+- Bối cảnh mùa đông, tại ngôi làng Echigo ở vùng núi phía bắc
+    
+    Hình 3.3 Làng Echigo
+- Quái vật: Sâu, chuột, Ninja
+- Mức độ: Trung bình
+- Nhiệm vụ: Giết 20 con thiên tê ở khu đá đỏ Akai để thông hành đến miệng núi lửa
+    Miệng núi lửa
+- Bối cảnh mùa đông nơi Onda nhìn thấy Khói bị bắt
+    
+    Hình 3.4 Miệng núi lửa
+- Quái vật: Rắn, ma trơi
+- Bẫy: Chông gai, vực thẳm
+- Mức độ: Khó
+- Boss: Nhền nhện
+- Nhiệm vụ: Học bí kíp Ashiko
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    Hang núi Kurai
+- Bối cảnh hang núi đá nơi Khói bị bắt giữ
+    
+
+    Hình 3.5 hang Núi Kurai
+- Quái vật: Bướm độc, xương khô
+- Nhiệm vụ: Giải cứu khói đang bị giam giữ và trở về Khu Đá đỏ Aiko để báo với thầy giáo để nhận nhiệm vụ mới.
+    Cánh đồng Hiya
+- Bối cảnh mùa đông nơi có nhiều nguy hiểm với những cái bẫy chết người
+    
+    Hình 3.6 Cánh đồng Hiya
+- Quái vật: Chim cánh cụt, Muỗi khổng lồ
+    Sông băng Yamato
+- Là một map phụ để người chơi tiêu diệt quái vật và thu thập tiền vàng.
+    
+    Hình 3.7 Sông băng Yamato
+- Quái vật: cá điện
+- Boss: Cá kình
+- Nhiệm vụ: Tiêu diệt cá kình để tăng điểm kinh nghiệm
+    
+    
+    
+    
+    
+    
+    
+    
+    Hồ trăng
+- Khu vực hồ đá xám 
+    
+ Hình 3.8 Hồ Trăng
+- Quái vật: Đầu lâu điện, bọ cánh cam, muỗi độc
+- Băng qua để đến hẻm núi Takana
+    Hẻm núi Takana
+- Một vùng thung lũng với hiều loài thực vật khổng lồ quái dị
+    
+    Hình 3.9 Hẻm núi Takana
+- Quái vật: Hoa ăn thịt, nấm khổng lồ, bướm phấn độc
+- Bẫy: Chông gai dày đặc
+    Rừng chết Kanashii
+- Map nhỏ của vùng thung lũng, đường đi hiểm trở, bẫy dày đặc, quái vật nguy hiểm
+    
+    Hình 3.10 Rừng chết Kanashii
+    Rừng tối
+- MapBonus
+- Vượt địa hình hiểm trở
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    Đền Harumoto
+- Khu đền Harumoto nơi cô Totoyomi sinh sống
+    
+    Hình 3.11 Đền Harumoto
+- Quái vật ốc sên, Ninja
+- Nhiệm vụ: gặp cô Totoyomi
+    Đền Amaterasu
+- Nhiệm vụ: Tiêu diệt phương hoàng
+     
+    Làng Oshin
+- Tiêu diệt BossRobot cản đường
+    
+    Hình 3.12 Làng Oshin
+- Lên đường đến Phong Ấn Corona 
+    Phong ấn Corona
+- Tiêu diệt Quỷ Vương Corona
+- Bắt thầy hiệu trưởng về chịu tội với dân làng
+
+Cách chơi
+- Khi bắt đầu vào game, người chơi sẽ ở giao diện chính của game
+
+    Hình 3. 5 Giao diện chính
+    
+* Nhấn CHƠI MỚI để bắt đầu một game mới.
+* Nhấn CHƠI TIẾP để tiếp tục phần chơi cũ.
+* Nhấn THÔNG TIN để xem giưới thiệu về phiên bản.
+* Nhấn NHÂN VẬT để xem thông tin về các nhân vật trong Game.
+* Nhấn ĐÓNG để thoát ứng dụng.
+- Tiếp theo, sẽ tới giao diện màn chơi, màn chơi sẽ không những thành phần chính sau :
+
+    Hình 3. 6 Giao diện màn chơi
+* Button Di Chuyển(1): Các Button được thiết kế để di chuyển nhân vật chính (4).
+* UI Player (2): Hiển thị chỉ số HP, MP, Coins của người chơi.
+* Button(3:) Mở Menu tạm dừng và Túi đồ nhanh chóng.
+* Nhân vật chính: Onda (4).
+* Button hành đọng tấn công của người chơi và hiển thị Item dùng nhanh.
+
+3.2 Xây dựng hệ thống các chức năng trong game Ninja School
+3.2.1 Xác định yêu cầu của hệ thống
+Hệ thống của game Ninja School bao gồm các chức năng:
+3.2.2 Phân tích yêu cầu của hệ thống
+- Chức năng CHƠI MỚI để bắt đầu một game mới.
+- Chức năng Nhấn CHƠI TIẾP để tiếp tục phần chơi cũ.
+- Chức năng THÔNG TIN để xem giưới thiệu về phiên bản.
+- Chức năng NHÂN VẬT để xem thông tin về các nhân vật trong Game.
+- Chức năng ĐÓNG để thoát ứng dụng.
+
+3.2.3 Thông số và thuộc tính
+    Bảng 
+STTTên thuộc tínhKiểu dữ liệuMô tả1ourheathintHP người chơi2MaxhealthIntHP tối đangười chơi3OurManaIntMana người chơi4MaxManaIntMana tối đangười chơi5SpeedfloatTốc độ di chuyển người chơi6maxSpeedfloatTốc độ di chuyển tối đa người chơi7JumpowfloatLực nhảy8fallingDownfloatTrạng thái rơi tự do    Bảng 3. 2 Bảng thuộc tính Player
+    Bảng 
+STTTên thuộc tínhKiểu dữ liệuMô tả1SLHP1    intSố lượng vật phẩm HP12SLHP2    intSố lượng vật phẩm HP23SLHP3    intSố lượng vật phẩm HP34SLMP1    intSố lượng vật phẩm MP15SLMP2intSố lượng vật phẩm MP26SLMP3    intSố lượng vật phẩm MP37SLK1    intSố lượng vật phẩm Kiếm 18SLK2    intSố lượng vật phẩm Kiếm 29SLK3    intSố lượng vật phẩm Kiếm 310SLK4    intSố lượng vật phẩm Kiếm 411SLK5    intSố lượng vật phẩm Kiếm 512SLK6    intSố lượng vật phẩm kiếm 613SLK7    intSố lượng vật phẩm Kiếm 714SLK8    intSố lượng vật phẩm Kiếm 815SLK9    intSố lượng vật phẩm Kiếm 916SLK10    intSố lượng vật phẩm Kiếm 1017SLK11    intSố lượng vật phẩm Kiếm 11 18SLK12    intSố lượng vật phẩm Kiếm 1219SLK13    intSố lượng vật phẩm Kiếm 1320SLK14    intSố lượng vật phẩm Kiếm 1421SLK15    intSố lượng vật phẩm Kiếm 1522SLC1    intSố lượng vật phẩm Cung 123SLC2    intSố lượng vật phẩm Cung 224SLC3    intSố lượng vật phẩm Cung 325SLC4    intSố lượng vật phẩm Cung 426SLC5    intSố lượng vật phẩm Cung 527SLT1    intSố lượng vật phẩm Phi tiêu 128SLT2    intSố lượng vật phẩm Phi tiêu 229SLT3    intSố lượng vật phẩm Phi tiêu 330SLT4    intSố lượng vật phẩm Phi tiêu 4    Bảng 3.3 Inventory
+    Bảng Enemy
+STTTên thuộc tínhKiểu dữ liệuMô tả1distancefloatTầm phát hiện người chơi2speedfloatTốc độ di chuyển3attackboolTán công4faceRightboolQuay mặt bên Phải5Vector3floatTọa độ6healthfloatMáu    Bảng 3.4 Bảng Enemy
+3.3 Thiết kế giao diện của hệ thống.
+3.3.1 Giao diện chính
+    
+    Hình 3. 12 Giao diện chính
+3.3.2 Player
+    
+    
+    
+    Hình 3.13 Player
+    
+3.3.3 Giao diện Inventory
+    
+    Hình 3.14 Giao diện Inventory
+3.3.4 Giao diện Store
+    
+    Hình 3.15 Giao diện Store
+    
+3.3.5 Giao diện Map
+    
+    Hình 3.16 Giao diện Bản đồ
+3.3.6 Giao diện Chỉ số bản thân
+    
+    Hình 3.17 Giao diện Chỉ số bản thân
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau thời gian nghiên cứu và phát triển, em đã hoàn thành cơ bản các chức năng chức năng ban đầu đề ra của đề tài. Thực hiện các animtion và các hiệu ứng môi trường chân thực nhất.
+    Em đã xây dựng được một hệ thống game sinh tồn cơ bản, giúp người chơi có thể hòa mình vào thế giới trong game, tương tác và thực hiện các hành động với thế giới trong game. Hệ thống vật phẩm trong game được thiết kế đa dạng, thêm nhiều nhất có thể, giúp người chơi tự do khám phá đỡ nhàm chán.
+    Sau thời gian tìm hiểu và thiết kế hệ thống các chức năng cho game. Em đã thực hiện thành công đề tài, kết quả đạt được đã có các chức năng cơ bản, chạy ổn định và củng cố được kiến thức về lập trình game.
+4.2 Hạn chế của đề tài
+    Hệ thống game NinjaSchool mới chỉ dừng lại ở các chức năng cơ bản, chưa tối ưu hóa hoàn thiện game, các model trong game được sử dụng hoàn toàn là em tìm kiếm ở mọi nguồn trên Internet chứ chưa thể tự mình thiết kế được.
+4.3 Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, em đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+• Xây dựng hoàn thiện các chức năng của một game Platformer2D.
+• Thêm nhiều vật phẩm mới, giúp người chơi dễ dàng trải nghiệm thế giới trong game.
+TÀI LIỆU THAM KHẢO
+[1] https://stackoverflow.com hạng mục game Unity2D
+[2] https://docs.unity3d.com
+[3] https://learn.unity.com/
+[4] https://www.mixamo.com/
+[5] https://blendervn.org/t/tai-lieu-nhap-mon-blender-danh-cho-nguoi-dung-moi/2217
+[6] Tài liệu lập trình Game trên Unity Chuyên đề 4 – Giảng Viên Nguyễn Minh Tiến UTEHY
+    
+    
+Xây dựng game Ninja School trên Android
+    
+    
+47
+    
+    

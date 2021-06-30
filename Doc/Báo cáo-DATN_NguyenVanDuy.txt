@@ -1,0 +1,446 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Với sự phát triển của các thiết bị di động thì việc tiếp cận game giải trí của người dùng ngày càng dễ dàng hơn. Các tựa game mobile có thể giúp bạn xả stress mọi lúc mọi nơi mà không đòi hỏi nhiều về 1 hệ thống thiết bị. Ngoài ra, nếu không nói đến những tác hại do lạm dụng game thì những lợi ích mà game mobile mang lại cũng không hề nhỏ.
+    Mặc dù các bậc phụ huynh hầu hết luôn cho rằng việc chơi game sẽ khiến con em họ trở nên lơ là việc học, không nghe lời cha mẹ hoặc thậm chí là hư hỏng… tuy nhiên nếu xét trên quan điểm khoa học thì việc chơi game sẽ mang lại nhiều lợi ích hơn hẳn cách mà các phụ huynh nghĩ. Dĩ nhiên nếu biết lựa chọn các game hợp lý và sắp xếp thời gian chơi phù hợp thì ngoài tác dụng giải tỏa căng thẳng, những lợi ích của game còn nhiều hơn thế.
+- Phản xạ nhanh hơn, tay và mắt phối hợp tốt hơn.
+- Cải thiện tư duy, rất tốt cho người đi làm hay lên kế hoạch, chiến lược.
+- Bạn sẽ kiên trì hơn, biết cách phối hợp trong làm việc nhóm.
+- Điều trị những căn bệnh mãn tính.
+- Chơi game giúp giảm đau.
+- Chơi game nhiều, bạn sẽ trở nên quyết đoán hơn.
+    Là sinh viên ngành CNTT, em luôn mong muốn mình sẽ làm được gì đó để ứng dụng những kiến thức đã học xây dựng được những sản phẩm có ứng dụng thực tế. Với mong muốn áp dụng những kiến thức mình đã học được tạo ra sản phẩm hoàn thiện có tính thực tế, đồng thời giúp nâng cao khả năng lập trình và đúc rút được nhiều kinh nghiệm cho những công việc trong tương lai sau khi ra trường, cùng với sự đồng ý của giáo viên hướng dẫn đề tài, em quyết định lựa chọn đề tài “Xây dựng game đại chiến với Monster trên Unity” để làm đề tài đồ án tốt nghiệp.
+1.2 Mục tiêu của đề tài
+    Trình bày được các vấn đề liên quan đến Unity và ứng dụng vào xây dựng game với ngôn ngữ C# trên phần mềm làm game Unity. 
+    Tìm hiểu được các chức năng cần thiết trên Unity, phần mềm Blender, Photoshop để hoàn thành game.
+    Xây dựng được game đại chiến với Monster cho phép người chơi hòa mình vào không gian 3D chân thật, những cuộc chiến đầy căng go, giúp người chơi thư giãn, cảm thấy thoải mái, phấn khích và thật hứng thú khi chơi.
+1.3 Giới hạn và phạm vi của đề tài
+    Game thuộc thể loại game hành động giới hạn ở việc người chơi điều khiển thì nhân vật mới có thể di chuyển và bắn.
+    Đề tài xây dựng game đại chiến với Monster trên Unity sử dụng ngôn ngữ C#, các phần mềm hỗ trợ như Photoshop, Blender, Unity.
+1.4 Nội dung thực hiện
+    Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Nghiên cứu ngôn ngữ lập trình C#, phầm mềm làm game Unity.
+- Phân tích yêu cầu và đề xuất giải pháp trên Unity.
+- Thiết kế đặc tả hệ thống.
+- Thiết kế giao diện và các chức năng của game.
+- Kiểm thử game.
+- Triển khai thực nghiệm game trên PC và thiết bị mobile.
+1.5 Phương pháp tiếp cận
+- Cách tiếp cận : Nghiên cứu các ngôn ngữ lập trình C#, phần mềm làm game Unity, các phần mềm hỗ trợ như Blender, Photoshop.
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu.
+o Phương pháp phân tích mẫu.
+o Phương pháp thực nghiệm.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về C#
+2.1.1 Giới thiệu ngôn ngữ C#
+    -  C# (hay C sharp) là một ngôn ngữ lập trình đơn giản, được phát triển bởi đội ngũ kỹ sư của Microsoft vào năm 2000, trong đó người dẫn đầu là Anders Hejlsberg và Scott Wiltamuth.
+    -  C# là ngôn ngữ lập trình hiện đại, hướng đối tượng và nó được xây dựng trên nền tảng của hai ngôn ngữ mạnh nhất là C++ và Java.
+    - C# được thiết kế cho Common Language Infrastructure (CLI), mà gồm Executable Code và Runtime Environment, cho phép chúng ta sử dụng các ngôn ngữ high-level đa dạng trên các nền tảng và cấu trúc máy tính khác nhau.
+    -  C# với sự hỗ trợ mạnh mẽ của .NET Framework giúp cho việc tạo một ứng dụng Windows Forms hay WPF (Windows Presentation Foundation). . . trở nên rất dễ dàng.
+2.1.2 Đặc trưng của C#
+    Các đặc điểm để làm cho C# là ngôn ngữ lập trình chuyên nghiệp được sử dụng rộng rãi:
+    -  C# là ngôn ngữ đơn giản: như ta đã biết thì ngôn ngữ C# dựng trên nền tảng C++ và Java nên ngôn ngữ C# khá đơn giản. Nếu chúng ta thân thiện với C và C++ hoậc thậm chí là Java, chúng ta sẽ thấy C# khá giống về diện mạo, cú pháp, biểu thức, toán tử và những chức năng khác được lấy trực tiếp từ ngôn ngữ C và C++, nhưng nó đã được cải tiến để làm cho ngôn ngữ đơn giản hơn. Một vài trong các sự cải tiến là loại bỏ các dư thừa, hay là thêm vào những cú pháp thay đổi.
+    -  C# là ngôn ngữ hiện đại: một vài khái niệm khá mới mẻ khá mơ hồ với các bạn vừa mới học lập trình, như xử lý ngoại lệ, những kiểu dữ liệu mở rộng, bảo mật mã nguồn...Đây là những đặc tính được cho là của một ngôn ngữ hiện đại cần có. Và C# chứa tất cả các đặt tính ta vừa nêu trên.
+    -  C# là một ngôn ngữ thuần lập trình thuần hướng đối tượng: lập trình hướng đối tượng (tiếng Anh: Object-oriented programming, viết tắt: OOP) là một phương pháp lập trình có 4 tính chất. Đó là tính trừu tượng (abstraction), tính đóng gói (encapsulation), tính đa hình (polymorphism) và tính kế thừa (inheritance). C# hỗ trợ cho chúng ta tất cả những đặc tính trên.
+    -  C# là một ngôn ngữ ít từ khóa: C# là ngôn ngữ sử dụng giới hạn những từ khóa (gồm khoảng 80 từ khóa và mười mấy kiểu dữ liệu xây dựng sẵn). Nếu bạn nghĩ rằng ngôn ngữ có càng nhiều từ khóa thì sẽ càng mạnh mẽ hơn. Điều này không phải sự thật, lấy ví dụ ngôn ngữ C# làm điển hình nhé. Nếu bạn học sâu về C# bạn sẽ thấy rằng ngôn ngữ này có thể được sử dụng để làm bất cứ nhiệm vụ nào.
+    Ngoài những đặc điểm trên thì còn một số ưu điểm nổi bật của C#:
+• C# có cấu trúc khá gần gũi với các ngôn ngữ lập trình truyền thống, nên cũng khá dễ dàng tiếp cận và học nhanh với C#.
+•  C# có thể biên dịch trên nhiều nền tảng máy tính khác nhau.
+• C# được xây dựng trên nền tảng C++ và Java nên nó được thừa hưởng những ưu điểm của ngôn ngữ đó.
+• C# là một phần của .NET Framework nên được sự chống lưng khá lớn đến từ bộ phận này.
+• C# có IDE Visual Studio cùng nhiều plug-in vô cùng mạnh mẽ.
+2.2 Tổng quan về Unity
+2.2.1 Giới thiệu về Unity 3D
+    Unity3D là phần mềm làm games trực tiếp theo thời gian thực, mà không cần render, cho phép người  design game có thể thiết kế InterfaceGraphic, map hay character… từ một phần mềm thứ 2 (thường là các phần mềm thiết kế đồ họa chuyên nghiệp như 3Dsmax, Blender, Maya, XSL,Cinema4D,Cheetah3D, Modo, Autodesk FBX, LightWave…) sau đó chỉ việc import nó vào trong Unity với định dạng của tập tin là *.FBX hay *.dae, *.3DS, *.dxf và *.obj, nhưng định dạng *.FBX hay được dùng vì được tối ưu hóa hơn, còn dùng các định dạng khác ngoài FBX thì phải cài phần mền thiết kế character tưng ứng thì mới dùng được (tức là dùng Maya có định dạng *.mb, *.ma thì muốn dùng được phải cài Maya).
+           
+    Ngoài ra khi bạn design được một game thì bạn có thể xuất được ra một file.exe và có thể chạy và chơi được trên PC khác.
+    Một thế mạnh nữa của Unity là bạn có thể chạy demo game của bạn ngay trongkhi design, nó có hỗ trợ hai chế độ là Scene và Game, rất thuận tiện cho việc test thử các modulGame.
+    Unity3D có 2 loại phiên bản, một cho người dùng free và một phiên bản pro thì mất phí.
+    Khi tải Unity về các bạn cài đặt bình thường, đến khi kết thúc cài đặt nền các bạn chọn phiên bản Pro thì cần phải mua, còn nếu là người dùng free thì các bạn chọn kích hoạt qua web, chỉ cần có kết nối mạng internet, sau đó chọn cài đặt thủ công và nhập mail, chọn free là bạn có thể sử dụng một bản Unity free.
+2.2.2 Lý do chọn Unity 3D để phát triển game
+    Một hệ sinh thái game gồm có các chức năng cơ bản như: cung cấp công cụ dựng hình (kết xuất đồ họa) cho các hình ảnh 2D hoặc 3D, công cụ vật lý (tính toán và phát hiện va chạm), âm thanh, mã nguồn, hình ảnh động, trí tuệ nhân tạo, phân luồng, tạo dò nguồn dữ liệu xử lý, quản lý bộ nhớ, dựng ảnh đồ thị và kết nối mạng.
+    Ngoài những chức năng cơ bản của một hệ sinh thái đó, Unity còn có những ưu việt vượt trội so với các engine khác:
+• Ngôn ngữ lập trình phổ biến Việt Nam: C#. 
+• Hỗ trợ đa nền tảng: lập trình viên dùng Unity3D engine và ngôn ngữ C# hoặc script để phát triển game hoàn thiện, sau đó Unity cho phép bạn “build” ra các phiên bản cho các nền tảng khác mà không cần viết thêm dòng code nào, giúp bạn rút ngắn rất nhiều thời gian xây dựng game cũng như nâng cao mức độ an toàn khi lập trình game. Những nền tảng mà Unity đang hỗ trợ gồm PlayStation 3, Xbox 360, Wii U, iOS, Android, Windows, Blackberry 10, OS X, Linux, trình duyệt web.
+• Dễ sử dụng, ngay cả với lập trình viên nghiệp dư: do Unity3D được xây dựng trong một môi trường phát triển tích hợp, cung cấp một hệ thống toàn diện cho các lập trình viên, từ soạn thảo mã nguồn, xây dựng công cụ tự động hóa đến trình sửa lỗi.
+• Tính kinh tế cao: những cá nhân và doanh nghiệp có doanh thu dưới 100.000 USD/năm được dùng miễn phí engine Unity3D và Unity Technology chỉ thu phí 1.500 USD/năm cho bản Pro- một con số rất khiêm tốn so với những gì engine này mang lại.
+• Rất được ưa chuộng tại Việt Nam: ngay cả trong các game studio lớn như VTC, VNG, Glass-Egg.
+• Thư viện phong phú, đa dạng: Unity có nhiều thư viện, các công cụ hỗ trợ làm game nhanh hơn, thông minh hơn, các đối tượng được tạo sẵn, và tất cả các thư viện này đều “mở”, cho phép cộng đồng tự do sử dụng và sáng tạo nên các sản phẩm của chính mình, thậm chí có thể bán trên Asset Store của Unity.
+• Cộng đồng rất lớn mạnh: là engine phổ biến nhất trên thế giới, Unity có cộng đồng sử dụng rất lớn mạnh. Mọi thắc mắc của bạn về Unity đều sẽ được trả lời trên website cộng đồng http://answers.unity3d.com.
+• Hỗ trợ Networking để phát triển MMO game.
+2.2.3 Giới thiệu về giao diện Unity 3D
+2.2.3.1   Cửa sổ Project
+    Mỗi Project của Unity đều chứa một thư mục Assets.Nội dung của thư mục này được hiển thị trong Project View. Đây là nơi chứa tất cả các assets để tạo Game của bạn như Scenes, Script, 3D models, Textures, Audio, Prefabs. Chúng ta không nên di chuyển asseets bằng cách sử dụng Window Explorer (hay Finder trong MAC), vì nó sẽ phá vỡ cấu trúc siêu dữ liệ của assets với nhau, và luôn sử dụng Project View để cấu trúc assets của mình.
+    Để thêm assets vào project của mình, chúng ta có thể kéo thả bất kỳ file nào vào trong project view hoặc vào công cụ Assets – Import new Assets (Click chuột phải vào Project View). Scenes cũng được lưu trữ trong Project view, và đây là một level độc lập mang tính cá nhân. Chúng ta dễ dàng tạo một assets game trong Unity bằng cách chọn hình tam giác nhỏ nằm bên phải Create trong cửa sổ Project hoặc click chuột phải trong Project View, sau đó chọn assets tương ứng.
+    Ngoài ra bạn cũng có thể thêm các assets và đổi tên các assets một cách dễ dàng.
+2.2.3.2   Hierachy
+    Tức là hệ thống phân cấp
+    Trong Hierarchy chứa các GameObject hiện thời, một số có thể trỏ trực tiếp tới những file assets như 3D models, một số khác đại diện cho Prefabs – những đối tượng đã được tùy biến, dùng làm các công việc khác nhau sau này trong Game của bạn. Bạn có thể chọn và parenting Object trong Hierarchy. Một Object có thể được thêm vào hay loại bỏ trong scene và có thể thấy nó mất đi hay xuất hiện trong Hierarchy.
+2.2.3.3   Parenting
+    Tức là thư mục chứa hay thư mục gốc, bất kỳ một game object nào muốn là đối tượng con(child) thì ta chỉ việc kéo thả đối tượng đó vào trong đối tượng dự tính làm Parenting trong Hierarchy  và nó sẽ kế thừa chuyển động và quay của parenting.
+2.2.3.4   Toolbar
+    Toolbar chứa 5 loại điều khiển cơ bản, mỗi loại giữ một vai trò quan trọng trong Editor.
+- Transform Tool: được dùng với Scene view như quay trái, phải, lên trên, xuống dưới, phóng to thu nhỏ đối tượng.
+- Transform Gizmo Toggles: dùng cho việc thể hiện Scene view.
+- Play/Pause/Step Buttons: dùng cho view game, chạy game ngay trong Editor để kiểm tra.
+- Layer Drop-down: kiểm soát đối tượng nào đang được thục hiện trong Scene view.
+- Layout Drop-down: kiểm soát sự sắp xếp của các Views.
+2.2.3.5   Scene View
+    Là nơi bạn Design Game của bạn, đối tượng Maneuvering và Importanting trong Scene view (chuyển động và điều khiển) là hai trong số các chức năng quan trọng của Unity, ở góc bên phải của Scene là Scene Gizmo, nó thể hiện hướng nhìn trong không gian của camera trong Scene View hiện thời, cho phép thay đổi góc nhìn trực quan và nhanh chóng.
+    Click lên các nhánh hình nón để chuyển qua các góc nhìn khác nhau có thể xem ở chế độ Isometric Model(tức ở dạng mặt cắt hai chiều), để chuyển qua chế độ 3D bạn Click vào hình vuông ở giữa hay giữ phím Shift + Click để chuyển đổi chế độ nhìn.
+    Khi xây dựng một Game, bạn sẽ đặt rất nhiều đối tượng vào trong Game của bạn. Bạn có thể dử dụng các công cụ Transform Tools ở trong Toolbar để di chuyển, xoay, phóng to tu nhỏ từng đối tượng.Khi bạn chọn một đối tượng trong Scene View, xung quanh đối tượng được chọn sẽ có những thay đổi tương ứng với từng chế độ trong Transform Tools.Sau đó bạn thay đổi đối tượng tùy ý, nếu muốn chính xác bạn có thể chỉnh chi tiết ở bảng Inspector.
+    Scene View Control Bar: thanh điều khiển Scene view cho phép bạn xem screen Game với nhiều chế độ như đã phủ vật liệu (material), khung lưới(wireframe), RGB, Overdraw, …Bạn cũng có thể xem và cả nghe những hiệu ứng ánh sáng, âm thanh, những thành phần động trong Game… ngay tại Scene.
+2.2.3.6   Game View
+    Game View được rendered từ những Camera trong Game. Đó là những gì được nhìn thấy khi hoàn tất, khi Game được xuất bản. Bạn sẽ cần ít nhất là một hoặc nhiều hơn số lượng các Camera để quết định những gì mà người chơi sẽ nhìn thấy khi họ chơi Game.
+2.2.3.7   Play Mode
+    Sử dụng những nút trên Toolbar để điều khiển Editor Play Mode, và xem trước Game của bạn sẽ như thế nào khi chơi. Trong chế Play, mọi giá trị thay đổi sẽ được lưu tạm, và bị xóa khi thoát khỏi chế độ play.
+2.2.3.8   Inspector
+    Games trong Unity được tạo ra bởi tập hợp rất nhiều GameObject, trong đó bao gồm meshes, scripts, âm thanh, hay những đối tượng Graphic như nguồn sáng … Inspector sẽ hiển thị mọi thông tin về đối tượng đang làm việc một cách chi tiết, kể cả những Components được đính kèm và những thuộc tính của nó. Tại đây bạn có thể điều chỉnh, thiết lập mọi thông số chức năng của những mối liên kết GameObject - Component.
+    Mọi thuộc tính thể hiện trong Inspector đều có thể được tùy biến một cách trực tiếp. Ngay cả với những biến trong script cũng có thể được hiệu chỉnh mà không cần xem mã. Trong script, nếu bạn định nghĩa một giá trị là public cho một kiểu đối tượng (như GameObject hay Transform), bạn có thể drag-drop một GameObject hay một Prefab vào trong Inspector để gán giá trị cho nó.
+    Chúng ta có thể click lên icon hình bánh răng nhỏ bên phải hay click chuột phải lên tên cảu Component để xuất hện context menu dành cho những thiết lập của Component.
+    Inspector cũng sẽ thể hiện mọi thông số Import Setting của assets đang làm việc.
+2.2.4 Các thành phần cơ bản trong Unity
+2.2.4.1    Assets
+    Assets là tài nguyên xây dựng nên một dự án trên Unity. Những tài nguyên có thể là hình ảnh, âm thanh, mô hình 3D, chất liệu (material), texture… hoặc cả một project hoàn chỉnh.
+    Các asset do chính những nhà phát triển game tạo ra và có thể được download miễn phí hoặc trả phí trên Unity Asset Store. Đây là một trong những tính năng rất hay của Unity. Các asset này sẽ giúp giảm thiểu rất nhiều thời gian cho việc thiết kế và lập trình game.
+
+    Hình 2. 1– Assets trong Unity
+2.2.4.2    Scenes
+    Trong Unity, một cảnh chơi (hoặc một phân đoạn) là những màn chơi riêng biệt, một khu vực trong game hoặc thành phần có trong nội dung của trò chơi (các menu). Các thành phần này được gọi là Scene. Bằng cách tạo ra nhiều Scenes, chúng ta có thể phân phối thời gian và tối ưu tài nguyên, kiểm tra các phân đoạn trong game một cách độc lập.
+
+    Hình 2. 2– Tab Scene trong Unity
+2.2.4.3    Game Objects
+    Khi Asset được sử dụng trong các Scene, Unity định nghĩa đó là Game Object. Đây là một thuật ngữ thông dụng, đặc biệt trong mảng lập trình. Tất cả các Game Object đều chứa ít nhất một thành phần cơ bản là Transform, lưu trữ thông tin về vị trí, góc xoay và tỉ lệ của Game Object. Thành phần Transform có thể được tuỳ biến và chỉnh sửa trong quá trình lập trình.
+2.2.4.4    Components
+    Components là các thành phần trong game, bổ sung tính năng cho các Game Object. Mỗi Component có chức năng riêng biệt. Đa phần các Component phụ thuộc vào Transform, vì nó lưu trữ các thông số cơ bản của Game Object.
+    Bản chất của Game Object là không có gì cả, các đặc tính và khả năng của Game Object nằm hoàn toàn trong các Component. Do đó chúng ta có thể xây dựng nên bất kỳ Game Object nào trong game mà chúng ta có thể tưởng tượng được.
+           
+    Hình 2. 3– Các thành phần của một GameObject
+2.2.4.5    Scripts
+    Scripts được Unity xem như một Component. Đây là thành phần thiết yếu trong quá trình phát triển game. Bất kỳ một game nào, dù đơn giản nhất đều cần đến Scripts để tương tác với các thao tác của người chơi, hoặc quản lý các sự kiện để thay đổi chiều hướng của game tương ứng với kịch bản game.
+    Unity cung cấp cho lập trình viên khả năng viết Script bằng các ngôn ngữ: JavaScript, C#. Unity không đòi hỏi lập trình viên phải học cách lập trình trong Unity, nhưng trong nhiều tình huống, chúng ta cần sử dụng Script trong mỗi phần của kịch bản game.
+    Để viết Script, chúng ta có thể làm việc với một trình biên tập Script độc lập của Unity, hoặc làm việc trên Mono Developer được tích hợp vào Unity trong những phiên bản gần đây. Mono Developer là một IDE khá tốt, cung cấp nhiều chức năng tương tự Visual Studio. Mã nguồn viết trên Mono Developer sẽ đươc cập nhật và lưu trữ trong dự án trên Unity.
+2.2.4.6    Prefabs
+    Prefabs thực chất là Game Object được lưu trữ lại để tái sử dụng. Các Game Object được nhân bản từ một prefab sẽ giống nhau hoàn toàn, ngoại trừ thành phần Transform để phân biệt và quản lý được tốt hơn.
+    Để tạo ra một prefab, ta đơn giản chỉ cần kéo một Game Object vào cửa sổ Project.
+
+    Hình 2. 4– Prefabs trong Unity
+2.2.5 Tối ưu hóa game trong Unity
+2.2.5.1    Định nghĩa tối ưu hóa
+    Tối ưu hoá là một phần trong quá trình phát triển game, nói một cách đơn giản nó là quy trình để cải tiến tính hiệu quả của hiệu năng game của bạn. Vấn đề tối ưu hoá này đặc biệt quan trọng trong quá trình phát triển game trên mobile.
+    Mỗi nền tảng phát triển game đều có những hạn chế về năng lực xử lý của CPU (bộ xử lý trung tâm) và GPU (bộ xử lý đồ hoạ). Đặc biệt trong các cảnh game 3D với độ chi tiết cao thì nhu cầu xử lý sẽ càng cao. Khi nhu cầu xử lý này trở nên quá tải thì hiệu năng game sẽ giảm và gây cảm giác khó chịu cho người dùng như là load game lâu, game chạy chậm và bị giật hoặc nghiêm trọng hơn thì có thể bị treo hệ thống. Quy trình tối ưu hoá là chuỗi các quyết định hay thoả hiệp giữa việc duy trì hiệu năng game và chất lượng đồ hoạ.
+2.2.5.2    Hiệu năng hướng tới
+    Hiệu năng hướng tới thường được biểu thị theo tốc độ frame mong muốn hay số frame trên giây (fps). Nếu tốc độ frame thấp thì người chơi mất cảm giác chuyển động. Tốc độ frame cao sẽ mang lại trải nghiệm trực quan tốt hơn nhưng trong các game phức tạp đòi hỏi nhiều xử lý trên frame vẫn có thể chạy trơn chu trong một khoảng tốc độ frame vừa phải nhưng vẫn chấp nhận được.
+    Việc xác định hiệu năng hướng tới đầu tiên bạn nên biết rõ game của mình chạy trên nền tảng nào. Nếu game chạy trên các máy console và PC có bộ xử lý mạnh mẽ thì có thể có thể ta không cần quan tâm lắm nhưng trên nền tảng di động thì chúng ta bắt buộc phải quyết định sớm trong quá trình thiết kế game để hiệu năng game tối ưu nhất có thể. Đặc điểm hạn chế của các thiết bị di động là cấu hình thấp cả về CPU và GPU, hơn nữa trên thị trường có rất nhiều loại thiết bị khác nhau với cấu hình cũng không hề giống nhau vì vậy việc để game của ta có thể chạy tốt ở tất cả các máy là một vấn đề lớn. Chúng ta phải điều tra các thiết bị phổ biến để xác định một tốc độ frame hợp lý để game chạy tốt trên nhiều máy nhất có thể.
+
+2.2.5.3    Theo dõi mục tiêu
+    Trong trình soạn thảo Unity bạn hãy chạy một cảnh bất kỳ. Trong menu trên cùng của khung nhìn Game bạn hãy nhấn nút Stats, bạn sẽ thấy một bảng các thông số thống kê hiệu năng hiện ra gồm cả tốc độ frame trên giây (FPS).
+      
+    Chỉ số Batches thậm chí còn chỉ ra thông tin chi tiết hơn đó là số lượng vật mà CPU cần render. Việc hiểu rằng một đối tượng game có thể được render nhiều lần trên frame đối với mỗi hiệu ứng áp dụng trên đối tượng này là rất quan trọng, chẳng hạn như ánh sáng, đổ bóng và phản chiếu điểm ảnh. Ta nên dùng ít các hiệu ứng như vậy hơn bằng cách chỉ áp dụng khi chúng có đóng góp đáng kể cho giao diện game sẽ giảm bớt các lời gọi hàm vẽ draw call, nghĩa là giảm bớt công việc cho CPU.
+    Ta có thể thiết lập tốc độ frame nhắm đến bằng cách sử dụng một script đơn giản.
+
+    Sau đó áp dụng script này vào scene chúng ta cần thiết lập tốc độ frame. Chú ý rằng tốc độ frame sẽ không chính xác bằng 50 thậm chí có thể không có tác dụng gì cả đó là bởi vì tốc độ frame nhắm tới không phải là một giới hạn tuyệt đối. Nếu muốn xem sự khác nhau đáng chú ý ta hãy chỉnh frameRate = 25; sau đó chạy lại bạn sẽ thấy tốc độ frame bây giờ sẽ trong khoảng gần 25 hơn. Khi bạn chỉnh về -1 thì đây là giá trị mặc định, giá trị này thiết lập game về tốc độ 50-60 fps và báo cho các thiết bị render nhanh nhất có thể.
+2.2.5.4    Giai đoạn thiết kế
+    Giai đoạn thiết kế sẽ có nhiều quyết định hơn là chỉ chọn tốc độ frame nhắm đến. Khi xem xét đồ hoạ game khả năng của nên tảng nhắm đến sẽ được xem xét. Kinh nghiệm chung là không sử dụng thêm bất kỳ đỉnh nào cho một mô hình nhiều hơn số lượng cần thiết, tuy vậy giới hạn render của CPU phụ thuộc vào mọi thứ trong cảnh, gồm cả các yếu tố khác như việc sử dụng màu sắc, nguồn sáng và đổ bóng chứ không chỉ một mô hình hay một yếu tố nào khác. Bạn nên tham khảo các tài liệu hướng dẫn của nền tảng nhắm đến đối với các trường hợp cụ thể.
+    Các thiết bị di động không thể xử lý nhiều hơn 100000 đỉnh còn PC thì có thể xử lý nhiều hơn tới vài triệu đỉnh. Với game di động bạn có thể chọn một mức chi tiết nền thấp hơn nhiều mứa so với khi bạn dùng trên game PC để bảo toàn các chi tiết của mô hình đối tượng game chính.
+    Một giới hạn khác nữa của thiết bị di động là kích thước file tải về. Việc kết hợp tái sử dụng các mô hình, texture và chất liệu vào thiết kế game sẽ giảm kích thước file chung.
+2.2.5.5    Giai đoạn phát triển
+    Ta nên xem xét câu châm ngôn tôn vinh thời gian "Nếu thứ gì chưa hỏng thì đừng sửa" nhớ rằng mục đích tối ưu hoá là để duy trì mức độ hiệu năng game mà bạn nhắm đến. Khi game trình diễn với mức độ hiệu năng đó từ lúc bắt đầu cho tới lúc hoàn tất thì công việc của bạn hoàn tất.
+    Tác động trực quan trên người chơi đóng góp đáng kể đến trải nghiệm game, đó là lý do vì sao các công cụ đồ hoạ game đi chi tiết tới mức điểm ảnh và yêu cầu nhiều lần render để kết hợp mọi chi tiết cuối cùng của nguồn sáng ,phản chiếu ,đổ bóng ... Đồ hoạ trực quan không chỉ là tác nhân duy nhất có thể cản trở hiệu năng game.Vật lý, animation, âm thanh và nhiều thứ khác cũng có thể khiến cho hiệu năng game bị ảnh hưởng.
+    Khi bạn xây dựng game và test lại nhiều lần, sự tắc nghẽn có thể xuất hiện ở một số điều kiện đáng chú ý của gameplay, chẳng hạn khi một mô hình phức tạp xuất hiện trong khung hình, trong một chuỗi animation cụ thể,hay kèm theo hệ thống hiệu ứng hạt. Tốt nhất chúng ta nên trực tiếp giải quyết các vấn đề đó.
+    Nếu nguyên nhân tắc nghẽ không rõ ràng, Unity có nhiều công cụ giúp bạn xác định. Editor Profiler là một công cụ chuyên dụng để đánh giá game cả trên Editor hay trên thiết bị kiểm thử, tiếc là công cụ này chỉ có trên bản Unity Pro. Các công cụ profiler dựng sẵn đã có dành cho cả iOS và android. Tuy vậy bạn vẫn có thể có được các thông tin hữu ích về game của mình từ Build log .
+2.2.5.6    Tối ưu hóa khi viết code trong các Script	
+    Đặt biến kiểu tĩnh và chỉ thị #pragma strict _
+    Trình soạn thảo MonoDevelop tạo ra script cho bạn và luôn bắt đầu với dòng #pragma strict. Dòng này báo cho trình biên dịch biết để dịch đoạn mã theo sau "một cách chặt trẽ" (strictly), tức là bắt buộc bạn dùng kiểu tĩnh nếu không sẽ có lỗi biên dịch được ném ra.
+    Đặt kiểu tĩnh ám chỉ việc đặt kiểu biến khi bạn khai báo chúng. Trong dòng mã sau bạn khai báo tường minh biến myValue thuộc kiểu int
+
+Ngoài ra bạn có thể khai báo như sau:
+
+    Unity sẽ tự động chuyển biến này thành mã kiểu tĩnh sử dụng phương pháp có tên là suy diễn kiểu (type inference). Mặc dù khả năng này cho phép viết mã đơn giản hơn nhưng nếu biến không thể suy diễn kiểu được thì Unity sẽ phụ thuộc vào việc định kiểu động.
+    Trong định kiểu động (dynamic typing), Unity phải chỉ ra kiểu biến nào dựa trên giá trị được gán cho biến. Việc "chỉ ra" này sẽ làm tốn thời gian và do đó ảnh hưởng đến hiệu năng game. Việc dùng định kiểu tĩnh sẽ giúp cho hiệu năng game ổn định, còn chỉ thị #pragma strict là để đảm bảo bạn làm điều này.
+2.2.5.7    Tối ưu hóa với Mecanim
+    Dưới đây là một số lưu ý để dùng Mecanim hiệu quả hơn:
+• Sử dụng bảng băm thay vì chuỗi để truy vấn Animator.
+• Triển khai AI Layer để điều khiển Animator. Bạn có thể dùng AI Layer để cung cấp các lời gọi callback đơn giản cho hàm OnStateChange(), OnTransitionBegin...
+• Sử dụng tag state để dễ dàng ánh xạ máy trạng thái AI với máy trạng thái Mecanim.
+• Sử dụng đường cong phụ trợ để mô phỏng Events.
+• Sử dụng đường cong phụ trợ để đánh dấu animation (ví dụ như kết hợp với việc ánh xạ mục tiêu).
+• Tối ưu hoá thời gian chạy :
+o Luôn tối ưu hoá animation bằng cách thiết lập mục Culling Mode của animator về thành Based on Renderers, và vô hiệu hoá thuộc tính Update when offscreen của trình render lưới da (skinned mesh renderer). Theo đó thì cách animation sẽ không phải cập nhật khi nhân vật chưa hiện ra.
+o Một kinh nghiệm nữa là nên dùng ID bảng băm (hash ID) Khi làm việc với animator, việc sử dụng định dạng bảng băm (hash identifier) là một phương pháp tối ưu hoá trong đó tên của các trạng thái và các tham số được gán là kiểu integer. Việc sử dụng kiểu integer thay vì sử dụng chuỗi sẽ giúp giảm chi phí xử lý phụ thêm.
+
+
+
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Phát biểu bài toán
+3.1.1 Tổng quan về hệ thống mới
+Game đại chiến với Monster trên Unity có giao diện đẹp, âm thanh chất lượng cao giúp người chơi cảm thấy thoải mái, phấn khích và hứng thú khi chơi.
+Hệ thống bao gồm các chức năng:
+• Điều khiển trong game: người chơi cần điều khiển nhân vật bằng cách thao tác với các phím ảo trên màn hình và di chuyển để bắn, sử dụng skill nhằm tiêu diệt các monster để có thể vượt qua ải.
+• Quản lý các monster: các monster sẽ ra theo từng đợt một và xuất hiện sẵn ở một số vị trí nhất định trên bản đồ. Trong một màn chơi nếu người chơi tiêu diệt được boss thì sẽ chiến thắng, nếu bị chết sẽ phải chơi lại từ đầu.
+• Quản lý thư viện: màn hình sẽ hiển thị thông tin của nhân vật (máu, các skill, sát thương) và thông tin của các monster (máu, sát thương, skill).
+• Quản lý âm thanh: âm thanh trong game có thể được bật/tắt tùy theo lựa chọn của người chơi.
+3.1.2 Các mục tiêu chính của hệ thống
+Game đại chiến với Monster trên Unity cần đạt được những mục tiêu sau:
+• Có nhiều màn chơi để cho người chơi lựa chọn.
+• Nhân vật và các monster có nhiều skill, các loại đạn khác nhau.
+• Có âm thanh và có thể bật tắt được.
+3.1.3 Môi trường phát triển
+• Môi trường phần cứng
+➢ CPU: Pentium IV 3.0 GHz hoặc cao hơn.
+➢ Ram: tối thiểu 512M.
+➢ HDD: dung lượng tối thiểu trống 2G.
+• Môi trường phần mềm
+➢ Hệ điều hành:  PlayStation 3, Xbox 360, Wii U, iOS, Android, Windows, Blackberry 10, OS X, Linux, trình duyệt Web và cả Flash.
+➢ Công cụ phát triển: Unity.
+3.2 Biểu đồ UseCase
+3.2.1 Biểu đồ UseCase mức tổng quát
+
+    Hình 3. 1– UseCase mức tổng quát
+3.2.2 Đặc tả UseCase
+• UseCase “PlayGame”
+➢ Biểu đồ Use case của Use case đặc tả
+
+    Hình 3. 2– Usecase đặc tả PlayGame
+➢ Tóm tắt
+- Người sử dụng: Player
+- Chức năng: 
+▪ Play game: người chơi thao tác với các phím trên bàn phím máy tính và di chuyển chuột để điều khiển nhân vật. Chơi trên thiết bị mobile thì người chơi sẽ thao tác với các button và joystick để điều khiển nhân vật.
+▪ Pause game: khi người chơi đang chơi muốn tạm dừng game chỉ cần ấn nút pause là game sẽ tạm dừng lại.
+▪ Resume game: khi người chơi đang tạm dừng game, muốn tiếp tục chơi chỉ cần ấn Resume thì game sẽ tiếp tục.
+- Ý nghĩa: thực hiện màn chơi, thực hiện các thao tác tạm dừng game, tiếp tục game và chơi game.
+➢ Dòng sự kiện
+- Dòng sự kiện chính: tại màn hình chính của game
+▪ Người chơi chọn Play sẽ bắt đầu vào màn chơi.
+▪ Người chơi chọn Pause game sẽ tạm dừng.
+▪ Khi người chơi chọn Resume thì game sẽ được tiếp tục.
+- Các dòng sự kiện khác: không có.
+➢ Các yêu cầu đặc biệt
+Không có.
+➢ Trạng thái hệ thống khi bắt đầu thực hiện Use case
+- Hệ thống khởi động ứng dụng.
+- Hệ thống không yêu cầu người chơi đăng nhập.
+➢ Trạng thái hệ thống sau khi thực hiện Use case
+Hiển thị giao diện chơi trò chơi.
+➢ Điểm mở rộng
+Đồ họa đẹp mắt, chân thật.
+• UseCase “ManageSound”
+➢ Biểu đồ Use case của Use case đặc tả
+
+    Hình 3. 3– Usecase đặc tả ManageSound
+➢ Tóm tắt
+- Người sử dụng: Player
+- Chức năng: 
+Cho phép người chơi bật/ tắt âm thanh trong game. 
+- Ý nghĩa: thực hiện thao tác bật/ tắt âm thanh của người chơi.
+➢ Dòng sự kiện
+- Dòng sự kiện chính: tại giao diện Options
+Người chơi thao tác với thanh slider để tăng giảm âm lượng.
+- Các dòng sự kiện khác: không có.
+➢ Các yêu cầu đặc biệt
+Không có.
+➢ Trạng thái hệ thống khi bắt đầu thực hiện Use case
+- Hệ thống khởi động ứng dụng.
+- Hệ thống không yêu cầu người chơi đăng nhập.
+➢ Trạng thái hệ thống sau khi thực hiện Use case
+Hiển thị giao diện Options.
+➢ Điểm mở rộng
+Không có.
+• UseCase “ExitGame”
+➢ Biểu đồ Use case của Use case đặc tả
+
+    Hình 3. 4– Usecase đặc tả ExitGame
+➢ Tóm tắt
+- Người sử dụng: Player
+- Chức năng: 
+Cho phép người chơi thoát khỏi game. 
+- Ý nghĩa: thực hiện thao tác thoát game của người chơi.
+➢ Dòng sự kiện
+- Dòng sự kiện chính: 
+Khi người chơi chọn Exit tại giao diện chính thì hệ thống sẽ tự động thực hiện việc thoát game.
+- Các dòng sự kiện khác: không có.
+➢ Các yêu cầu đặc biệt
+Không có.
+➢ Trạng thái hệ thống khi bắt đầu thực hiện Use case
+Yêu cầu người chơi chọn Exit.
+➢ Trạng thái hệ thống sau khi thực hiện Use case
+Game sẽ bị tắt.
+➢ Điểm mở rộng
+Không có.
+
+3.3 Biểu đồ lớp
+3.3.1 Biểu đồ lớp
+
+    Hình 3. 5– Biểu đồ lớp
+3.3.2 Danh sách các lớp đối tượng và quan hệ
+STTTên lớp/Quan hệLoạiÝ nghĩa/Ghi chú1PLayScreenMàn chơi2FigureNhân vật3MonsterQuái vật4BulletĐạn    Bảng 3. 1– Danh sách các lớp đối tượng và quan hệ
+3.3.3 Mô tả chi tiết từng lớp đối tượng
+• Bảng PlayScreen
+STTTên thuộc tínhLoạiRàng buộc    Ý nghĩa/Ghi chú1idPSStringKhóa chínhID của màn chơi2namePSStringTên màn chơi3idFStringKhóa ngoạiID của Figure4idMStringKhóa ngoạiID của Monster    Bảng 3. 2– Mô tả chi tiết lớp PlayScreen
+• Bảng Figure
+STTTên thuộc tính    LoạiRàng buộc    Ý nghĩa/Ghi chú1idFStringKhóa chínhID của nhân vật2nameFStringTên của nhân vật3hpFIntLượng máu của nhân vật    Bảng 3. 3– Mô tả chi tiết lớp Figure
+• Bảng Monster
+STTTên thuộc tính    LoạiRàng buộc    Ý nghĩa/Ghi chú1idMStringKhóa chínhID của monster2nameMStringTên của monster3hpMStringLượng máu của monster    Bảng 3. 4– Mô tả chi tiết lớp Monster
+• Bảng Bullet
+STTTên thuộc tính    LoạiRàng buộc    Ý nghĩa/Ghi chú1idBStringKhóa chínhID của đạn 2nameBStringTên loại đạn3dameBintSát thương của đạn4idFStringKhóa ngoạiID của nhân vật5idMStringKhóa ngoạiID của monster    Bảng 3. 5– Mô tả chi tiết lớp Bullet
+3.4 Biểu tuần tự
+3.4.1 PlayGame
+
+    Hình 3. 6– Biểu đồ tuần tự PlayGame
+    
+3.4.2 ManageSound
+
+    Hình 3. 7– Biểu đồ tuần tự ManageSound
+3.4.3 ExitGame
+
+    Hình 3. 8– Biểu đồ tuần tự ExitGame
+3.5 Các module của hệ thống
+    Game đại chiến với Monster gồm các Module chính sau đây:
+3.5.1 Module Options
+• Phương thức ManipulationSound
+• Phương thức Back
+3.5.2 Module MenuPlay
+• Phương thức Level1Button
+• Phương thức Level2Button
+• Phương thức Back
+3.6 Thiết kế đặc tả giao diện
+3.6.1 Giao diện MenuScreen (Giao diện chính)
+
+    Hình 3. 9– Giao diện MenuScreen (Giao diện chính)
+STTTên ControlSự kiệnÝ nghĩa/Ghi chú1btnPlayClickChuyển đến giao diện ScreenPlay2btnLibraryClickChuyển đến giao diện Library3btnOptionsClickChuyển đến giao diện Options4btnHelpClickChuyển đến giao diện Help5btnExitClickThoát game    Bảng 3. 6– Chi tiết các chức năng của giao diện MenuScreen
+    Giao diện gồm bốn chức năng:
+- Play: khi người chơi click, hệ thống sẽ đưa người chơi sang màn hình ScreenPlay (màn hình chọn màn chơi).
+- Library: khi người chơi click, hệ thống sẽ chuyển người chơi vào màn hình Library (thư viện).
+- Options: khi người chơi click, hệ thống sẽ chuyển người chơi sang màn hình chỉnh âm lượng (giao diện options).
+- Help: khi người chơi click, hệ thống sẽ chuyển người chơi sang màn hình hướng dẫn chơi game.
+- Exit: khi người chơi click, hệ thống tắt và thoát game.
+3.6.2 Giao diện ScreenPlay (Giao diện chọn màn chơi)
+
+    Hình 3. 10– Giao diện ScreenPlay (Giao diện chọn màn chơi)
+STTTên ControlSự kiệnÝ nghĩa/Ghi chú1btnLevel1ClickChuyển đến màn chơi số 12btnLevel2ClickChuyển đến màn chơi số 23btnLevel3ClickChuyển đến màn chơi số 34btnLevel4ClickChuyển đến màn chơi số 45btnBackClickQuay trở lại giao diện MenuScreen    Bảng 3. 7– Chi tiết các chức năng của giao diện ScreenPlay
+    Giao diện bao gồm bốn màn chơi để người chơi lựa chọn.
+    Một phím Back để quay lại giao diện MenuScreen (Giao diện chính).
+3.6.3 Giao diện Library
+
+    Hình 3. 11– Giao diện Library1 (Thư viện)
+STTTên ControlSự kiệnÝ nghĩa/Ghi chú1btnSwitchClickChuyển đến thông tin của các nhân vật, quái vật khác2btnBackClickQuay trở lại giao diện MenuScreen    Bảng 3. 8– Chi tiết các chức năng của giao diện Library
+    Giao diện bao gồm các thông tin của nhân vật và các monster.
+    Các thông tin gồm có: 
+-   Name: tên.
+-   HP: lượng máu.
+-   Dame: sát thương.
+-   Speed: tốc độ di chuyển.
+-   Skill: vũ khí.
+    
+    Giao diện cung cấp cho người chơi hai nút chức năng:
+    -   Switch: chuyển đến thông tin của nhân vật hoặc quái vật khác.
+    Khi người chơi nhấn nút Switch thì game sẽ chuyển thông tin của nhân vật hoặc quái vật tiếp theo cho người chơi bao gồm đầy đủ các thông tin.
+    
+
+    Hình 3. 12– Giao diện Library2 (Thư viện)
+    -   Back: quay trở lại giao diện MenuScreen (Giao diện chính)			
+3.6.4 Giao diện Options
+
+    Hình 3. 13– Giao diện Options
+STTTên ControlSự kiệnÝ nghĩa/Ghi chú1sliderVolumeDragTăng/giảm âm lượng2btnBackClickQuay trở lại giao diện MenuScreen    Bảng 3. 9– Chi tiết các chức năng của giao diện Options
+    Giao diện cung cấp cho người chơi chức năng tăng giảm âm lượng và nút Back để quay trở lại giao diện MenuScreen (Giao diện chính).
+    Người chơi thao tác trực tiếp với thanh slider để tăng giảm âm lượng.
+3.6.5 Giao diện Help
+
+    Hình 3. 14– Giao diện Help
+    Giao diện cung cấp cho người chơi các thông tin, hướng dẫn cơ bản để chơi game.
+    Một nút Back để người chơi quay lại giao diện MenuScreen (Giao diện chính).
+3.6.6 Giao diện PlayGame (Level 1)
+
+    Hình 3. 15– Giao diện PlayGame
+STTTên ControlSự kiệnÝ nghĩa/Ghi chú1btnPauseClickTạm dừng game2sliderHealthMáu của nhân vật3txtLevelLevel của màn chơi4txtTimeThời gian chơi    Bảng 3. 10– Chi tiết các chức năng của giao diện PlayGame
+    Người chơi sẽ điều khiển nhân vật bằng các phím trên máy tính để di chuyển nhân vật, đồng thời dùng chuột để điều hướng bắn hạ các quái vật.
+    Giao diện cung cấp cho người chơi máu của nhân vật, thời gian chơi và level của màn chơi.
+    Giao diện cung cấp một nút tạm dừng để người chơi có thể tạm dừng game lại.
+• Khi người chơi bấm nút tạm dừng:
+Game sẽ được tạm dừng lại.
+Một Panel sẽ hiện ra cho phép người chơi có hai lựa chọn:
+-   Resume: tiếp tục màn chơi.
+-   Quit: thoát màn chơi và quay trở lại giao diện ScreenPlay.
+
+    Hình 3. 16– Giao diện PlayGame khi bấm nút Pause
+STTTên ControlSự kiệnÝ nghĩa/Ghi chú1btnResumeClickTiếp tục game2btnQuitClickThoát game, đưa người chơi về giao diện ScreenPlay    Bảng 3. 11– Chi tiết chức năng của giao diện PlayGame khi bấm nút Pause
+• Khi người chơi chiến thắng
+Người chơi sẽ chiến thắng khi đến được điểm cuối cùng và đánh bại Boss. Một Panel sẽ hiện ra cho phép người chơi có hai lựa chọn:
+-   Next: chuyển sang màn chơi tiếp theo.
+-   Quit: thoát màn chơi và quay trở lại giao diện ScreenPlay.
+
+
+    Hình 3. 17– Giao diện PlayGame khi chiến thắng
+STTTên ControlSự kiệnÝ nghĩa/Ghi chú1btnNextClickChuyển đến màn chơi tiếp theo2btnQuitClickThoát game, đưa người chơi về giao diện ScreenPlay    Bảng 3. 12– Chi tiết chức năng của giao diện PlayGame khi chiến thắng
+• Khi người chơi nhấn Next sau khi chiến thắng
+Khi chiến thắng một màn, game sẽ hiện lên một Panel cho người chơi lựa chọn.
+Khi người chơi chọn Next (như hình 3.16) thì hệ thống sẽ đưa người chơi đến màn tiếp theo.
+
+    Hình 3. 18– Giao diện màn chơi
+• Khi người chơi thua (nhân vật bị hạ gục)
+Người chơi sẽ bị tính thua khi nhân vật bị hạ gục (thanh máu về 0)
+Một Panel sẽ hiện ra cho phép người chơi có hai lựa chọn:
+-   PlayAgain: cho phép người chơi chơi lại màn.
+-   Quit: thoát màn chơi và quay trở lại giao diện ScreenPlay.
+
+    Hình 3. 19– Giao diện PlayGame khi thua
+STTTên ControlSự kiệnÝ nghĩa/Ghi chú1btnPlayAgainClickChơi lại màn2btnQuitClickThoát game, đưa người chơi về giao diện ScreenPlay    Bảng 3. 13– Chi tiết chức năng của giao diện PlayGame khi thua
+ 
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+- Tìm hiểu, nắm bắt được các công cụ thiết kế game, phần mềm hỗ trợ làm game Unity.
+- Biết được cách thiết kế GUI trong lập trình Unity.
+- Biết được cách thiết kế game và cách thiết kế map, model.
+- Thiết kế được các điều khiển nhân vật bằng các phím trên PC.
+- Thiết kế được nhiều quái vật khác nhau, mỗi quái vật có cách đánh và skill khác nhau.
+- Thiết kế được nhiều màn chơi để game ko nhàm chán.
+- Xử lý được các va chạm, hiệu ứng cháy nổ…
+- Thiết kế xong thư viện chứa thông tin của nhân vật và tất cả các quái vật.
+- Nhạc nền cuốn hút, hấp dẫn.
+- Game tương đối dễ chơi và phù hợp với đa số lứa tuổi.
+- Game chạy mượt, ít có hiện tượng giật lag.
+
+
+
+
+
+
+
+
+
+4.2 Hạn chế của đề tài
+    Game đại chiến với Monster mới dừng lại ở các module cơ bản, chưa có chế độ chơi Online.
+    Các skill cũng như nhân vật chưa phong phú.
+    Giao diện còn hệ thống còn đơn giản, thiết kế map chưa rộng lắm.
+4.3 Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, tác giả đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+• Xây dựng thêm tính năng chơi Online.
+• Bổ sung thêm nhân vật, monster và skill.
+• Thiết kế thêm nhiều map, nhiều hiệu ứng hơn nữa.
+TÀI LIỆU THAM KHẢO
+1. Khoa CNTT, Giáo trình lập trình hướng đối tượng, Đại Học Sư Phạm Kỹ Thuật Hưng Yên.
+2. C++ Game Development Primer.
+3. Beginning Andoid 4 Games Development.
+4. Khóa học lập trình Unity của Khoa Phạm.
+5. Youtube.com.vn
+6. Unity3D.com
+7. Https://assetstore.unity.com
+8. Nguyễn Văn Hậu, Java nâng cao. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin- UTEHY.
+9. Cuốn ngôn ngữ lập trình C# của APTECH | TIẾNG VIỆT
+Link download:
+https://www.dropbox.com/s/dpf6jt5al2elzs1/NgonngulaptrinhC%23.pdf
+10. Cuốn PROFESSIONAL PROGRAMMING FOR REAL LIFE C# |TIẾNGVIỆT
+Link download:
+https://www.dropbox.com/s/o1wkskck7lj1bwu/PROFESSIONAL%20PROGR
+AMMING%20FOR%20REAL%20LIFE.pdf
+
+PHỤ LỤC
+STTTên công việcThời gian (ngày)Ngày bắt đầuNgày kết thúcNgười thực hiệnTrạng thái1Phát biểu bài toán1022/01/201831/01/2018Nguyễn Văn DuyHoàn thành2Xác định yêu cầu1031/01/201809/02/2018Nguyễn Văn DuyHoàn thành3Xây dựng biểu đồ usecase309/02/201811/02/2018Nguyễn Văn DuyHoàn thành4Xây dựng biểu đồ lớp311/02/201813/02/2018Nguyễn Văn DuyHoàn thành5Xây dựng biểu đồ tuần tự313/02/201815/02/2018Nguyễn Văn DuyHoàn thành6Coding8915/02/201801/05/2018Nguyễn Văn DuyHoàn thành7Viết báo cáo2101/05/201821/05/2018Nguyễn Văn DuyHoàn thành
+    
+Xây dựng game đại chiến với Monster trên Unity
+    
+    
+50
+    
+    

@@ -1,0 +1,417 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1  Lý do chọn đề tài
+   Trong thời đại công nghệ thông tin như hiện nay, sản phẩm công nghệ ngày càng chịu sự đánh giá khắt khe hơn từ phía người dung, đặc biệt là các sản phẩm về Game được nhận rất nhiều sự đánh giá từ các game thủ, hay chỉ là từ những người chơi game bình thường. Ngành công nghiệp game hiện nay có thể nói là đang bùng nổ, với tốc độ phát triển đến chóng mặt, rất nhiều những game hay và hấp dẫn đã được ra đời trong thời gian qua, thị trường game đang hết sức rộng mở dành cho các lập trình viên, số công ty và các studio game được thành lập ngày càng nhiều. Tất cả tạo điều kiện cho việc trở thành một lập tình viên về game, và tạo ra các sản phẩm của riêng mình.
+   Phía sau những game phát triển, nổi tiếng và thành công như vậy đều có một Game Engine. Game Engine là một công cụ hỗ trợ, một Middleware giúp lập trình viên tạo nên game một cách nhanh chóng và đơn giản, đồng thời cung cấp khả năng tái sử dụng các tài nguyên và mã nguồn cao do có thể phát triển nhiều game từ một Game Engine.
+   Sự phát triển mạnh mẽ của các công cụ hỗ trợ lập trình game tạo điều kiện cho các lập trình viên non trẻ, trong đó có Engine Unity, là nền tảng phát triển game hoàn toàn miễn phí và dễ tiếp cận cho người dùng mới.
+   Ở Việt Nam số lượng các studio hay công ty lớn về phát triển game và các tựa game chất lượng do các lập trình viên người Việt viết ra vẫn còn rất ít, với đam mê phát triển nên những tựa game nổi tiếng made in Vietnam như Flappy Bird của anh Nguyễn Hà Đông hay tựa game 7554 về lịch sử cuộc kháng chiến chống Pháp của Emobi Games studio. 
+   Nhận thấy các nội dung gắn liền với các sự kiện lịch sử, hay các truyền thuyết của Việt Nam là những đề tài thú vị và bổ ích để phát triển thành một game mà qua đó giúp người chơi vừa có thể giải trí mà lại vừa có thể hiểu rõ hơn về những truyền thuyết hay sự kiện lịch sử của Việt Nam. 
+   Với những thuận lợi nêu trên, em quyết định chọn đề tài Lập trình game Sơn Tinh Thủy Tinh sử dụng Unity Engine.
+1.2  Mục tiêu của đề tài
+   Nghiên cứu và đề ra giải pháp lập trình game trên nền tảng phát triển game Unity, là một nền tàng mở, dễ tích hợp và đặc biệt hoàn toàn miễn phí cho các sản phẩm có lợi nhuận thấp hơn 100.000$. Giúp tiết kiệm chi phí phát triển.
+   Xây dựng được một hệ thống trong game hoàn chỉnh, cho phép người chơi tương tác và thực hiện các thao tác với môi trường trong trò chơi một cách dễ dàng nhất.
+   Xây dựng được một game gắn liền với truyền thuyết nổi tiếng của Việt Nam.
+1.3  Giới hạn và phạm vi của đề tài
+   Đề tài xây dựng một game sử dụng các công nghệ trong lập trình như Unity SQLite và công cụ lập trình Visual Studio 2015.
+   Hệ thống các chức năng trong game được thực hiện nhằm tạo ra một tựa game chân thực nhất, gần gũi nhất với người chơi.
+1.4  Nội dung thực hiện
+   Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Khảo sát và xác định chức năng game
+o Ngiên cứu các tựa game dạng “tower defense” (game thủ thành) cùng thể loại.
+o Phân tích yêu cầu và đề xuất hướng giải quyết các chức năng trong game.
+- Xác định các đối tượng trong game
+o Nghiên cứu cốt truyện Sơn Tinh Thủy Tinh
+- Thiết kế môi trường và các đối tượng trong game
+o Thiết kế đặc tả hệ thống.
+o Lập trình các chức năng của hệ thống.
+- Phát triển game
+o Kiểm thử hệ thống game.
+o Triển khai thực nghiệm game.
+- Hoàn thành bản phân tích thiết kế game
+1.5  Phương pháp tiếp cận
+   Cách tiếp cận :  
+- Nghiên cứu ngôn ngữ lập trình C#.
+- Nghiên cứu công cụ Unity.
+   Sử dụng các phương pháp nghiên cứu :
+- Phương pháp đọc tài liệu.
+- Phương pháp phân tích mẫu.
+- Phương pháp thực nghiệm.
+1.6  Kết quả dự kiến của đề tài
+   Xây dựng được game hoàn thiện với các chức năng:
+- Chọn màn chơi.
+- Chọn đồng minh.
+- Chức năng tạm dừng/tiếp tục trò chơi.
+- Chức năng chơi mới.
+- Chức năng tăng tốc độ game.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Unity
+2.1.1 Unity là gì?
+   Unity là một “cross-flatform” tạm hiểu là công cụ phát triển game đa nền tảng được phát triển bởi Unity Technologies, mà chủ yếu để phát triển video game cho máy tính, consoles và điện thoại.
+   Unity được ra mắt lần đầu tiên vào năm 2005 tại sự kiện Apple’s Worldwide Developer Conference bởi nhà sáng lập David Helgason, trải qua hơn 12 năm phát triển, nay Unity đã có version 5.5 hoàn thiện hơn về rất nhiều mặt. Tháng 5-2012 theo cuộc khảo sát Game Developer Megazine được công nhận là Game engine tốt nhất cho mobile. Năm 2014 Unity thắng giải “Best Engine” tại giải UK’s annual Develop Industry Exellence.
+   Unity được dùng để làm video game, hoặc những nội dung có tính tương tác như thể hiện kiến trúc, hoạt hình 2D, 3D thời gian thực. Unity gần giống với Director, Blender game engine, Virtools hay Torque Game Builder trong khía cạnh dung môi trường đồ họa tích hợp ở quá trình phát triển game là chính.
+   Unity là một trong những engine được giới làm game cảkhông chuyên lẫn chuyên nghiệp cực kỳ ưa chuộng bởi khả năng tuyệt vời của nó là phát triển trò chơi đa nền tảng. Trình biên tập có thể chạy trên Windows và MacOS, và có thể xuất ra game cho Windows, Mac, Wii, IOS và Android. Game cũng có thể chơi trên trình duyệt web thông qua plugin Unity Web Player. Unity cũng mới bổ xung khả năng xuất ra game trên widget cho Mac, và cả Xbox 360, PlayStation 3.
+   Unity hỗ trợ đồ họa 2D và 3D, các chức năng được viết chủ yếu qua ngôn ngữ C#. Hai ngôn ngữ lập trình khác cũng được hỗ trợ: Boo, đã bị loại cùng với việc phát triển Unity 5 và UnityScript bị loại vào tháng 8 năm 2017 sau khi phát hành Unity 2017.1. UnityScript là một ngôn ngữ lập trình độc quyền có cú pháp tương tự JavaScript. Phần mềm nhắm mục tiêu các đồ họa APIs sau: Direct3D trên Windows và Xbox One; OpenGL trên Linux, macOS, và Windows; OpenGL ES trên Android và iOS; WebGL trên web; và APIs độc quyền trên các máy chơi video game. Ngoài ra, Unity hỗ trợ APIs cấp thấp như Metal trên iOS và macOS và Vulkan trên Android, Linux, và Windows, cũng như Direct3D 12 trên Windows và Xbox One. Trong 2D games, Unity cho phép nhập sprites và một renderer thế giới 2D tiên tiến. Đối với 3D games, Unity cho phép thiết lập các đập điểm kĩ thuật của các kết cấu và độ phân giải mà công cụ trò chơi hỗ trợ, cung cấp các hỗ trợ cho bump mapping, reflection mapping, parallax mapping, cảnh không gian ambient occlusion (SSAO), hiệu ứng bóng đổ bằng cách sử dụng shadow maps, render thiết lập toàn cảnh đến hiệu ứng. Unity cũng cung cấp các dịch vụ cho nhà phát triển, bao gồm: Unity Ads, Unity Analytics, Unity Certification, Unity Cloud Build, Unity Everyplay, Unity API, Unity Multiplayer, Unity Performance Reporting and Unity Collaborate.
+   Unity nổi bật với khả năng xây dựng trò chơi chạy trên nhiều nền tảng. Các nền tảng được hỗ trợ hiện nay là Android, Android TV, Facebook Gameroom, Fire OS, GearVR, Linux, macOS, Microsoft HoloLens, Nintendo 3DS family, Nintendo Switch, Oculus Rift, PlayStation 4, PlayStation Vita, PlayStation VR, Samsung Smart TV, Tizen, tvOS, WebGL, Wii U, Windows, Windows Phone, Windows Store, và Xbox One. Unity trước đây cũng đã hỗ trợ 7 nền tảng khác chạy trên Unity Web Player. Unity Web Player là một plugin của trình duyệt chạy trên Windows và OS X, đã bị gỡ bỏ vì lợi ích của WebGL.
+   Unity là bộ công cụ phát triển phần mềm mặc định (SDK) cho máy chơi game video game Wii U của Nintendo, kèm theo bản miễn phí của Nintendo với mỗi giấy phép phát triển Wii U. Unity Technologies gọi việc kết hợp sản xuất SDK với một bên thứ ba là "industry first".
+   Một số thống kê về Unity:
+- Tính đến quý 3 năm 2016 đã có 5 tỉ lượt download game và ứng dụng được phát triển bởi Unity
+- 2,4 tỉ thiết bị di động đã từng tải ít nhất 1 ứng dụng bởi unity.
+- Trong top 1000 game Mobiles miễn phí thì số lượng game tạo ra bởi Unity chiếm tới 34%
+
+    Hình 2. 1 Số lượng game được tạo bằng Unity
+- Số lượng người dùng (gamer) của Unity đạt tới con số 770 triệu, trong khi đó số người thường xuyên sử dụng Twitter là 310 triệu người.
+- Sự thay đổi trong cách thức chơi game của người chơi hay nói cách khác là xu hướng mọi người tập trung vào game trên di động nhiều hơn.
+
+    Hình 2. 2 Doanh thu của thị trường game tính đến năm 2019
+2.1.2 Tại sao nên sử dụng Unity?
+   Một hệ sinh thái game cần phải có các chức năng cơ bản như: cung cấp công cụ dựng hình (kết xuất đồ họa) cho các hình ảnh 2D hoặc 3D, công cụ vật lý (tính toán và phát hiện va chạm), âm thanh, mã nguồn, hình ảnh động, trí tuệ nhân tạo, phân luồng, tạo dò nguồn dữ liệu xử lý, quản lý bộ nhớ, dựng ảnh đồ thị và kết nối mạng. Unity là engine đáp ứng đầy đủ các yêu cầu đó.
+   Ngoài những chức năng cơ bản của một hệ sinh thái đó, Unity còn có những ưu việt vượt trội so với các engine khác:
+   Chức năng cốt lõi đa dạng bao gồm: Cung cấp công cụ dựng hình (kết xuất đồ họa) cho các hình ảnh 2D hoặc 3D, công cụ vật lý (tính toán và phát hiện va chạm), âm thanh, mã nguồn, hình ảnh động, trí tuệ nhân tạo, phân luồng, tạo dò ng dữ liệu xử lý, quản lý bộ nhớ, dựng ảnh đồ thị và kết nối mạng. Nhờ có các engine mà công việc làm game trở nên ít tốn kém và đơn giản hơn.
+   Sử dụng ngôn ngữ lập trình phổ biến tại Việt Nam là C#.
+   Hỗ trợ đa nền tảng: Một trong các thế mạnh của Unity3D chính là khả năng hỗ trợ gần như toàn bộ các nền tảng hiện có bao gồm: PlayStation 3, Xbox 360, Wii U, iOS, Android, Windows, Blackberry 10, OS X, Linux, trình duyệt Web và cả Flash. Nói cách khác, chỉ với một gói engine, các studio có thể làm game cho bất kỳ hệ điều hành nào và dễ dàng convert chúng sang những hệ điều hành khác nhau. Đồng thời, đây cũng là giải pháp cho các game online đa nền tảng – có thể chơi đồng thời trên nhiều hệ điều hành, phần cứng khác nhau như Web, PC, Mobile, Tablet….
+   Dễ sử dụng: Ngay cả với Lập trình viên nghiệp dư, do Unity3D được xây dựng trong một môi trường phát triển tích hợp, cung cấp một hệ thống toàn diện cho các lập trình viên, từ soạn thảo mã nguồn, xây dựng công cụ tự động hóa đến trình sửa lỗi. Hơn nữa, đây là một trong những engine phổ biến nhất trên thế giới, người dùng có thể dễ dàng tìm kiếm kinh nghiệm sử dụng của “tiền bối” trên các forum công nghệ.
+   
+   Hình 2. 3 Các nền tảng được Unity hỗ trợ
+   Tính kinh tế cao: Những cá nhân và doanh nghiệp có doanh thu dưới 100.000 USD/năm được dùng miễn phí Unity3D, và Unity Technology chỉ thu phí 1.500 USD/năm cho bản Pro- một con số rất khiêm tốn so với những gì engine này mang lại.
+   Rất được ưa chuộng tại Việt Nam, ngay cả trong các game studio lớn như VTC, VNG, Glass-Egg.
+   Thư viện phong phú, đa dạng: Unity có nhiều thư viện, các công cụ hỗ trợ làm game nhanh hơn, thông minh hơn, các đối tượng được tạo sẵn, và tất cả các thư viện này đều “mở”, cho phép cộng đồng tự do sử dụng và sáng tạo nên các sản phẩm của chính mình, thậm chí có thể bán trên Asset Store của Unity.
+   Cộng đồng rất lớn mạnh: là engine phổ biến nhất trên thế giới, Unity có cộng đồng sử dụng rất lớn mạnh. Mọi thắc mắc của bạn về Unity đều sẽ được trả lời trên website cộng đồng http://answers.unity3d.com.
+   Hỗ trợ Networking để phát triển MMO game.
+2.1.3 Kiến trúc tổng quan Engine Unity
+   Engine Unity hỗ trợ cho chúng ta UnityAPI để viết script game. UnityAPI là API lập trình game trong Unity rất mạnh. UnityAPI chứa các đối tượng và phương thức hỗ trợ hầu hết các đối tượng và các loại thành phần trong Unity.
+   Trong một scene thường có nhiều đối tượng game. Mỗi đối tượng này có thể có hoặc không có đoạn script nào gắn trên đó. Nếu muốn gắn script vào đối tượng, ta bắt buộc phải kế thừa class đó từ lớp MonoBehaviour của UnityAPI và tên class phải trùng với tên file script. Mỗi script khi gắn lên đối tượng game đều được đối tượng game xem như một thành phần bên trong và được cấp phát vùng nhớ khi chạy game.
+   
+    Hình 2. 4 Tổng quan kiến trúc Unity
+   Bên trong UnityAPI chứa rất nhiều lớp hỗ trợ cho việc lập trình game, trong đó có một số lớp quan trọng như:
+   Monobehaviour: Tất cả các script muốn gắn vào một đối tượng game bắt buộc phải kế thừa lớp này.
+   GameObject: Lớp cha của tất cả thực thể trong scene.
+   Component: Lớp cha của tất cả các thành phần có thể gắn vào đối tượng.
+   Transform: Giúp thay đổi vị trí, xoay, biến đổi tị lệ mô hình.
+   Input: Hỗ trợ lập trình với chuột, cảm ứng đa điểm, cảm biến gia tốc.
+   Camera: Thể hiện góc nhìn trong game.
+   Light: Thể hiện ánh sáng trong game.
+   Audio: Hỗ trợ lập trình với âm thanh.
+   Animation: Tạo chuyển động của nhân vật.
+   Rigidbody: Giúp tạo các hiệu ứng vật lý liên quan đến trọng lực.
+   Collider: Hỗ trợ lập trình va chạm giữa các vật thể.
+   GUI : Giúp lập trình giao diện người dùng trên Unity.
+2.1.4 Các thành phần trong Unity Editor
+   
+    Hình 2. 5 Các thành phần trong Unity Editor
+   Cửa sổ Scene(1): Hiển thị các đối tượng trong scenes một cách trực quan, có thể lựa chọn các đối tượng, kéo thả, phóng to, thu nhỏ, xoay các đối tượng. Phần này có để thiết lập một số thông số như hiển thị ánh sáng, âm anh, cách nhìn 2D hay 3D, khung nhìn Scene là nơi bố trí các Game Object như cây cối, cảnh quan, enemy, player, camera, … trong game. Sự bố trí hoạt cảnh là một trong những chức năng quan trọng nhất của Unity.
+   Cửa sổ Hierarchy(2): Tab hierarchy là nơi hiển thị các Game Object trong Sences hiện hành. Khi các đối tượng được thêm hoặc xóa trong Sences, tương ứng với các đối tượng đó trong cửa sổ Hierarchy.
+   Tương tự trong tab Project, Hierarchy cũng có một thanh tìm kiếm giúp quản lý và thao tác với các Game Object hiệu quả hơn đặc biệt là với các dự án lớn.
+   Cửa sổ Game(3): Đây là mạn hình demo Game, là góc nhìn từ camera trong game. Thanh công cụ trong cửa sổ game cung cấp các tùy chỉnh về độ phân giải man hình, thông số (stats), gizmos, tùy chọn bật tắt các component...
+   Cửa sổ Project(4): Đây là cưa sổ explorer của Unity, hiển thị thông tin của tất cả các tài nguyên (Assets) trong game của bạn.
+   Cột bên trái hiển thị assets và các mục yêu thích dưới dạng cây thư mục tương tự như Windows Explorer. Khi click vào một nhánh trên cây thư mục thì toàn bộ nội dung của nhánh đó sẽ được hiển thị ở khung bên phải. Ta có thể tạo ra các thư mục mới bằng cách Right click -> Create -> Folder hoặc nhấn vào nút Create ở góc trên bên trái cửa sổ Project và chọn Folder. Các tài nguyên trong game cũng có thể được tạo ra bằng cách này.
+   Phía trên cây thư mục là mục Favorites, giúp chúng ta truy cập nhanh vào những tài nguyên thường sử dụng. Chúng ta có thể đưa các tài nguyên vào Favorites bằng thao tác kéo thả.
+   Đường dẫn của thư mục tài nguyên hiện tại. Chúng ta có thể dễ dàng tiếp cận các thư mục con hoặc thư mục gốc bằng cách click chuột vào mũi tên hoặc tên thư mục.
+   Cửa sổ Inspector(5) : Cửa sổ Inspector hiển thị chi tiết các thông tin về Game Object đang làm việc, kể cả những component được đính kèm và thuộc tính của nó. Bạn có thể điều chỉnh, thiết lập mọi thông số và chức năng của Game Object thông qua cửa sổ Inspector.
+   Mọi thuộc tính thể hiện trong Inspector đều có thể dễ dàng tuỳ chỉnh trực tiếp mà không cần thông qua một kịch bản định trước. Tuy nhiên Scripting API cung cấp một số lượng nhiều và đầy đủ hơn do giao diện Inspector là có giới hạn.
+   Các thiết lập của từng component được đặt trong menu. Các bạn có thể click chuột phải, hoặc chọn icon hình bánh răng nhỏ để xuất hiện menu.
+   Ngoài ra Inspector cũng thể hiện mọi thông số Import Setting của asset đang làm việc như hiển thị mã nguồn của Script, các thông số animation, …
+2.1.5 Dialogue System trong Unity
+   Dialogue System là gì?
+   Dialogue System là một hệ thống hội thoại phân nhánh cho Unity. Nó không yêu cầu kịch bản nào được thiết kế để dễ dàng mở rộng bởi các lập trình viên.
+   Dialogue System của Unity cho phép bạn:
+- Viết các cuộc hội thoại tương tác với logic phân nhánh.
+- Hiển thị các cuộc hội thoại trong một hệ thống UI linh hoạt, hoàn toàn tùy biến.
+- Xác định nhiệm vụ / nhiệm vụ cho người chơi hoàn thành.
+- Chơi các đoạn cắt cảnh như cắt camera và âm thanh.
+- Lưu và tải các cuộc hội thoại của trò chơi, và duy trì dữ liệu qua các thay đổi cảnh.
+- Sử dụng localization để hiển thị văn bản và phát các đoạn cắt cảnh trong các ngôn ngữ khác nhau.
+- Nhập và xuất từ các định dạng khác nhau, chẳng hạn như articy: nháp, Chat Mapper và CSV.
+2.1.6 SQLite trong Unity
+   SQLite là gì?
+   SQLite là phần mềm quản lý cơ sở dữ liệu (DBMS) tương tự như Mysql, PostgreSQL... SQLite được Richard Hipp viết dưới dạng thư viện bằng ngôn ngữ lập trình C. Đặc điểm của SQLite là gọn, nhẹ, đơn giản. Chương trình gồm 1 file duy nhất vỏn vẹn chưa đến 400kB, không cần cài đặt, không cần cấu hình hay khởi động mà có thể sử dụng ngay. Dữ liệu Database cũng được lưu ở một file duy nhất. Không có khái niệm user, password hay quyền hạn trong SQLite Database.
+   SQLite không thích hợp với những hệ thống lớn nhưng ở quy mô vừa tầm thì SQLite phát huy uy lực và không hề yếu kém về mặt chức năng hay tốc độ. Với các đặc điểm trên SQLite được sử dụng nhiều trong việc phát triển, thử nghiệm … và là sự lưa chọn phù hợp cho những người bắt đầu học Database.
+   SQLite Engine không là một Standalone Process giống như các cơ sở dữ liệu khác, bạn có thể liên kết nó một cách tĩnh hoặc một cách động tùy theo yêu cầu với ứng dụng của bạn. SQLite truy cập các file lưu giữ (storage files) của nó một cách trực tiếp.
+   Ưu điểm của SQLite trong Unity:
+- Xử lý với các dữ liệu với game có độ lớn trung bình, khoảng vài chục M data. 
+- Thích hợp với các game trên iOS và Android yêu cầu tiết kiệm độ lớn vì nó không đồ sộ. 
+- Truy xuất dữ liệu sử dụng ngôn ngữ SQL của Microsoft nên dễ dàng sử dụng.
+- SQLite không yêu cầu một tiến trình Server riêng rẽ để hoạt động.
+- SQLite không cần cấu hình, nghĩa là không cần thiết phải cài đặt.
+- Các Transaction trong SQLite là tuân theo đầy đủ chuẩn ACID, đảm bảo truy cập an toàn từ nhiều tiến trình hoặc thread.
+- SQLite hỗ trợ hầu hết các tính năng của một ngôn ngữ truy vấn trong chuẩn SQL92.
+- SQLite được viết bằng ANSI-C và cung cấp API đơn giản và dễ dàng sử dụng.
+- SQLite là có sẵn trên UNIX (Linux, Mac OS-X, Android, iOS) và Windows (Win32, WinCE, WinRT).
+   Nhược điểm của SQLite trong Unity:
+- Tính năng đang được phát triển và cần phải được mở rộng thêm.
+- Không hỗ trợ lưu trữ online vì thế không hỗ trợ các dạng game online.
+- Các biến thể RENAME TABLE và ADD COLUMN của lệnh ALTER TABLE được hỗ trợ. Trong khi DROP COLUMN, ALTER COLUMN, ADD CONSTRAINT không được hỗ trợ.
+- Bảo mật chưa cao như SQL Server.
+2.2 Tổng quan về Visual Studio
+2.2.1 Visual Studio là gì?
+   Microsoft Visual Studio là một môi trường phát triển tích hợp (IDE) từ Microsoft. Nó được sử dụng để phát triển chương trình máy tính cho Microsoft Windows, cũng như các trang web, các ứng dụng web và các dịch vụ web. Visual Studio sử dụng nền tảng phát triển phần mềm của Microsoft như Windows API, WindowsForms, WindowsPresentationFoundation, WindowsStore và Microsoft Silverlight. Nó có thể sản xuất cả hai ngôn ngữ máy và mã số quản lý.
+   Visual Studio bao gồm một trình soạn thảo mã hỗ trợ IntelliSense cũng như cải tiến mã nguồn. Trình gỡ lỗi tích hợp hoạt động cả về trình gỡ lỗi mức độ mã nguồn và gỡ lỗi mức độ máy. Công cụ tích hợp khác bao gồm một mẫu thiết kế các hình thức xây dựng giao diện ứng dụng, thiết kế web, thiết kế lớp và thiết kế giản đồ cơ sở dữ liệu. Nó chấp nhận các plug-in nâng cao các chức năng ở hầu hết các cấp bao gồm thêm hỗ trợ cho các hệ thống quản lý phiên bản (như Subversion) và bổ sung thêm bộ công cụ mới như biên tập và thiết kế trực quan cho các miền ngôn ngữ cụ thể hoặc bộ công cụ dành cho các khía cạnh khác trong quy trình phát triển phần mềm.
+   Visual Studio hỗ trợ nhiều ngôn ngữ lập trình khác nhau và cho phép trình biên tập mã và gỡ lỗi để hỗ trợ (mức độ khác nhau) hầu như mọi ngôn ngữ lập trình. Các ngôn ngữ được tích hợp trong Visual Studio gồm có C, C++ và C++/CLI (thông qua Visual C++), VB.NET(thông qua Visual Basic.NET), C# (thông qua Visual C#) và F# (như của Visual Studio 2010). Ngoài ra, Visual Studio còn hỗ trợ cho các ngôn ngữ khác như J++/J#, Python và Ruby thông qua dịch vụ cài đặt riêng rẽ. Nó cũng hỗ trợ XML/XSLT, HTML/XHTML, JavaScript và CSS.
+   Microsoft cung cấp phiên bản "Express" (đối với phiên bản Visual Studio 2013 trở về trước) và "Community" (đối với bản Visual Studio 2015 trở về sau) là phiên bản miễn phí của Visual Studio.
+2.2.2 Cấu trúc của Visual Studio
+   Các Visual Studio không hỗ trợ cho bất kỳ ngôn ngữ lập trình nào về giải pháp hoặc công cụ thực chất, thay vào đó nó cho phép cắm chức năng được mã hóa như là một VSPackage. Khi cài đặt, các chức năng có sẵn như là một dịch vụ. IDE cung cấp ba dịch vụ: SVsSolution cung cấp khả năng liệt kê các dự án và các giải pháp; SVsUIShell cung cấp cửa sổ và giao diện người dùng và SVsShell. Ngoài ra, IDE cũng có trách nhiệm điều phối và cho phép truyền thông giữa các dịch vụ. Tất cả các biên tập viên, nhà thiết kế, các loại dự án và các công cụ khác được thực hiện theo VSPackages. Visual Studio sử dụng COM để truy cập VSPackages. Visual Studio SDK cũng bao gồm Managed Package Framework (MPF) là một tập hợp quản lý bao bọc quanh các COM-interfaces cho phép các gói được viết bằng bất kỳ ngôn ngữ nào. Tuy nhiên, MPF không cung cấp tất cả các chức năng bộc lộ trong Visual Studio COM-interfaces.[9] Các dịch vụ có thể được tiêu thụ để tạo ra các gói khác, để thêm chức năng cho Visual Studio IDE.
+   Hỗ trợ cho các ngôn ngữ lập trình được thêm vào bằng cách sử dụng một VSPackage đặc biệt được gọi là một dịch vụ ngôn ngữ. Một dịch vụ ngôn ngữ định nghĩa giao tiếp khác nhau mà việc thực hiện VSPackage có thể thực hiện để hỗ trợ thêm cho các chức năng khác nhau. Các chức năng có thể được thêm vào theo cách này bao gồm cú pháp màu, hoàn thành báo cáo kết quả, kết hợp đôi, công cụ chú giải tham số thông tin, danh sách thành viên và đánh dấu lỗi trên nền biên dịch. Nếu giao diện được thực hiện, các tính năng sẽ có sẵn ngôn ngữ. Dịch vụ ngôn ngữ sẽ được thực hiện trên cơ sở mỗi ngôn ngữ. Việc triển khai có thể tái sử dụng mã từ phân tích cú pháp hoặc trình biên dịch cho ngôn ngữ. Dịch vụ ngôn ngữ có thể được triển khai hoặc trong mã nguồn gốc hoặc mã số quản lý. Đối với mã nguồn gốc, thì cả COM-interfaces gốc hoặc Babel Framework (một phần của Visual Studio SDK) đều có thể được sử dụng. Đối với mã số quản lý thì các MPF sẽ bao hàm các dịch vu quản lý văn bản. 
+   Visual Studio không bao gồm bất kỳ Hệ thống quản lý phiên bản hỗ trợ kiểm soát mã nguồn nhưng nó xác định hai cách thay thế cho các hệ thống kiểm soát mã nguồn để tích hợp với IDE. Một VSPackage kiểm soát mã nguồn có thể cung cấp giao diện người dùng tùy chỉnh của riêng mình. Ngược lại, một plugin kiểm soát mã nguồn bằng cách sử dụng MSSCCI (Microsoft Source Code Control Interface) cung cấp một tập các chức năng được sử dụng để thực hiện chức năng kiểm soát mã nguồn khác nhau, với một giao diện người dùng Visual Studio tiêu chuẩn. MSSCCI lần đầu tiên được sử dụng để tích hợp Visual SourceSafe với Visual Studio 6.0 nhưng sau đó được mở ra thông qua Visual Studio SDK. Visual Studio.NET 2002 dùng MSSCCI 1.1, và Visual Studio.NET 2003 dùng MSSCCI 1.2. Visual Studio 2005, 2008 và 2010 dùng MSSCCI 1.3. 
+   Visual Studio hỗ trợ chạy nhiều cá thể của môi trường (tất cả đều có VSPackages riêng của mình). Những trường hợp sử dụng các registry hives khác nhau để lưu trữ trạng thái cấu hình và được phân biệt bởi AppID (Application ID). Các trường hợp được đưa ra bởi một AppId-specific.exe cụ thể mà lựa chọn AppID, thiết lập các hive gốc và khởi chạy IDE. VSPackages đăng ký một AppID được tích hợp với VSPackages khác cho AppID đó. Các phiên bản sản phẩm khác nhau của Visual Studio được tạo ra bằng cách sử dụng AppIds khác nhau. Các sản phẩm phiên bản Visual Studio Express được cài đặt với AppIds riêng nhưng với các sản phẩm Standard, Professional và Team Suite chia sẻ cùng AppID. Do đó, người ta có thể cài đặt các phiên bản Express song song với các phiên bản khác, không giống như các phiên bản khác cập nhật các cài đặt tương tự. Phiên bản Professional bao gồm các VSPackages khổng lồ trong phiên bản Standard và Team. Hệ thống AppID được thừa hưởng bởi Visual Studio Shell trong Visual Studio 2008.
+   
+   
+
+    Hình 2. 6 Màn hình visual studio
+    
+
+    Hình 2. 7 Các thành phần trong visual studio
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Xây dựng nội dung
+3.1.1 Cốt truyện
+   Lấy bối cảnh là câu truyện Sơn Tinh Thủy Tinh - là tên gọi của một truyền thuyết của văn hóa Việt Nam.
+   Tương truyền rằng thời vua Hùng Vương thứ 18 có một cô con gái xinh đẹp tên là Mị Nương, đã đến tuổi lấy chồng nhưng mãi vẫn chưa tìm ra người ưng ý, nhà vua tổ chức kén rể cho con gái với mong muốn tìm được người chồng xứng đôi vừa lứa cho con gái.
+   Trai tráng khắp nơi về kinh thành thi thố, tuy nhiên nhiều người vẫn chưa lọt vào mắt xanh của nhà vua. Đến khi hai người tiến vào xin thi tài họ là Sơn Tinh và Thủy Tinh. Cả hai cùng trổ tài với nhà vua, Thủy Tinh kêu gọi gây sấm sét, gió thổi, mây đen, bốn bề tối tăm. Còn Sơn Tinh dùng phép dời từng ngọn núi, phá rừng, lấy đất chặn dòng nước đang dâng lên cao. Trời đất bỗng trở lại yên bình.
+   Vua thấy cả hai đều tài giỏi, phân vân chưa biết chọn ai bèn ra lệnh cả hai mang lễ vật đầy đủ đến vào sáng mai. Ai đến sớm được rước Mị Nương làm vợ. Sáng hôm sau Sơn Tinh đến trước với lễ vật voi chín ngà, gà chín cựa, ngựa chín hồng mao. Chàng được rước Mị Nương về làm vợ.
+   Thủy Tinh đến sau không lấy được vợ, đùng đùng tức giận kêu mưa, gọi gió, trời đất tối tăm, nước dâng lên ngập nhà cửa, đất đai, dẫn quân lính nhằm cướp lại Mị Nương…
+3.1.2 Giới thiệu game Sơn Tinh Thủy Tinh và cách chơi
+Giới thiệu game Sơn Tinh Thủy Tinh
+   Sơn Tinh Thủy Tinh là một trò chơi gồm 2 trò chơi nhỏ một dạng flat form 2D và một dạng tower defense chia làm 2 hồi được phát triển bằng Unity Engine. Ở hồi thứ nhất, game lấy bối cảnh sau cuộc so tài bất phân thắng bại giữa Sơn Tinh và Thủy Tinh, nhà vua liền đưa ra quyết định chọn người mang lễ vật tớ sớm nhất, ở hồi một người chơi sẽ hóa thân vào nhân vật Sơn Tinh đi kiếm các lễ vật mà nhà vua yêu cầu, Sơn Tinh sẽ phải vượt qua rất nhiều trắc trở để tìm được các lễ vật. Ở hồi thứ 2, game lấy bối cảnh sau khi Sơn Tinh mang được lễ vật đến trước Thủy Tinh và được rước Mị Nương về làm vợ khiến Thủy Tinh vô cùng tức giận nên đã dẫn quân tấn công nhằm cướp lại Mị Nương cho bằng được. Về mặt tổng quan, người chơi sẽ đóng vai Sơn Tinh và sử dụng đội quân của mình để ngăn chặn đội quân của Thủy Tinh đang cố gắng tràn lên đất liền để “cướp” cô dâu của mình.
+
+    Hình 3. 1 Bối cảnh game
+   Game mang đến một hệ thống nhân vật vô cùng đa dạng cùng các bối cảnh chơi khác nhau để người chơi chọn lựa. Với hơn 20 màn chơi với mức độ khó khác nhau, người chơi sẽ phải đưa ra một sự lựa chọn thông minh ở mỗi màn chơi để tránh thua cuộc.
+   Nhiệm vụ chính của người chơi trong game đó chính là thiết lập một hàng phòng ngự vững trãi từ quân đồng minh để có thể chống lại các đợt tấn công của kẻ địch, ở mỗi đợt tấn công, quân địch sẽ cố tìm cách tiêu diệt quân đồng minh hoặc cố băng qua hàng phòng ngự để tiến đến chiếm đóng kinh đô.
+   Hệ thống phòng thủ, số lượng nhân vật đồng minh cũng như kẻ địch phong phú, cùng với cốt truyện gần gũi chính là điểm nổi bật của tựa game này. Người chơi có thể thỏa sức lựa chọn hàng trăm nhân vật khác nhau thông qua hệ thống này. Việc đa dạng kẻ địch và độ khó trong mỗi màn khiến cho người chơi phải động não, đưa ra chiến thuật hợp lý để giành chiến thắng khiến cho game trở nên thú vị hơn bao giờ hết.
+Hồi 1(Chappter1):
+Nhân vật chính:
+
+    Hình 3. 2 Nhân vật người chơi hóa thân ở phần một
+Game có dạng 2D flatform
+
+    Hình 3. 3 Game Sơn Tinh Thủy Tinh hồi 1
+Game có các thành phần chính:
+- Thanh máu của người chơi: Hiển thị số máu hiện tại khi bắt đầu màn chơi của nhân vật.
+- Nhân vật: Trong game người chơi sẽ đóng vai nhân vật Sơn Tinh
+- NPC: Có nhiệm vụ hỗ trợ người chơi trong quá trình chơi game như giao nhiệm vụ, đưa ra hướng đi tiếp theo cho người chơi.
+- Enemy: Những quái vật xuất hiện ở màn chơi.
+- Item: Các vật phẩm xuất hiện ở khắp màn chơi. Người chơi có nhiệm vụ thu thập đủ chúng để hoàn thành nhiệm vụ.
+Cách chơi:
+- Khi bắt đầu vào game, người chơi sẽ nhận nhiệm vụ từ NPC
+
+    Hình 3. 4 NPC
+- Sau khi nhận nhiệm vụ sẽ có thông báo tình trạng nhiệm vụ của người chơi để người chơi nắm rõ được khi nào hoàn thành nhiệm vụ.
+
+    Hình 3. 5 Người chơi thực hiện nhiệm vụ
+- Hoàn thành nhiệm vụ sẽ được thưởng một vật phẩm giúp tăng lợi thế cho các lần thực hiện nhiệm vụ sau đó.
+Hồi 2(Chappter2)
+Game có 24 màn chơi thuộc 3 bối cảnh chính
+- Chế độ ban ngày : Là bối cảnh chơi dễ nhất, người chơi sẽ có phần đất liền đầy đủ và sẽ được cộng vàng sau mỗi một khoảng thời gian nhất định. Vàng dùng để mua quân đồng minh.
+
+    Hình 3. 6 Chế độ ban ngày
+- Chế độ ban đêm: Bối cảnh chơi khó hơn, người chơi sẽ không còn được cộng vàng mỗi một khoảng thời gian nhất định nữa.
+
+    Hình 3. 7 Chế độ ban đêm
+- Chế độ nửa đất liền: Bối cảnh khó nhất, người chơi sẽ có một nửa phần chơi là nước và không thể đặt quân lính phòng thủ lên mặt nước, sẽ có lính địch xuất hiện ở mặt nước.
+
+    Hình 3. 8 Chế độ nửa đất liền
+Cách chơi
+- Khi bắt đầu vào game, người chơi sẽ ở giao diện chính của game, nhấn Button Play để vào game
+
+    Hình 3. 9 Giao diện chính
+- Tiếp theo, sẽ tới giao diện chọn màn chơi, người chơi sẽ phải chọn 1 trong các màn chơi được hiện thị trên màn hình để tiếp tục
+
+    Hình 3. 10 Giao diện chọn màn chơi
+- Sau khi đã chọn màn chơi, người chơi sẽ phải chọn những quân đồng minh sẽ tham gia vào trận chiến, bắt buộc phải chọn số quân lính bằng cấp người chơi hiện tại(nếu cấp nhỏ hơn 6) và đủ 6 quân nếu cấp người lớn hơn 6.
+
+    Hình 3. 11 Giao diện chọn lính
+- Sau khi chọn lính, để bắt đầu màn chơi nhấn Button Play ở góc phải của màn hình(1), hoặc có thể chọn lại đồng minh bằng cách nhấn Button Reload(2)
+
+    Hình 3. 12 Bắt đầu màn chơi
+Các thành phần chính của màn chơi
+     
+    Hình 3. 13 Các thành phần chính của màn chơi
+Một màn chơi bao gồm 8 thành phần chính:
+- Khỉ đột (1): Khỉ đột giống như 1 lớp bảo vệ cuối cùng của mỗi hàng ở phần (3), khi gặp lính địch khỉ đột sẽ tấn công và tiêu diệt hết lính địch của hàng đó, khỉ đột chỉ tấn công được 1 lần, sau khi tấn công sẽ tự biến mất. 
+- Vàng (2): Hiển thị vàng hiện có, vàng dùng để mua quân lính đồng minh ở (4), vàng sẽ xuất hiện sau mỗi 3 giây hoặc từ một số loại quân đồng minh có kỹ năng sản xuất vàng.
+- Sân đấu (3): Đồng minh được chọn sẽ được đặt tại sân đấu như những lớp phòng thủ, lính địch sẽ xuất hiện tại phía bên phải của sân đấu và tấn công để cố gắng vượt qua lớp phòng thủ được đặt. Nếu để lính địch vượt qua được hết phần sân đấu thì người chơi sẽ thua cuộc.
+- Thanh chọn (4): Đồng minh sẽ xuất hiện trên thanh chọn dưới dạng thẻ bài. Người chơi có thể mua được các đồng minh tại thanh chọn nếu có đủ vàng, giá vàng cần để mua chính là  phần số tương ứng trên mỗi thẻ.
+- Thu hồi (5): Xóa 1 đồng minh hiện đang có ở phần sân đấu(3)
+- Pause (6): Tạm dừng/Tiếp tục trò chơi.
+- Tăng/Giảm tốc độ (7): Tăng/Giảm tốc độ của trò chơi 2 lần.
+- Đợt tấn công (8): Thông báo cho người chơi các đợt tấn công của địch.
+Một số quân đồng minh cơ bản:
+Chuột
+
+    Hình 3. 14 Quân đồng minh chuột
+Chỉ số : Máu – 5, Dame – 0.
+Mô tả: Giúp người chơi kiếm được vàng sau một khoảng thời gian nhất định.
+Monkey
+
+    Hình 3. 15 Đồng minh monkey
+Chỉ số : Máu – 5, Dame – 1.
+Mô tả: Có khả năng tấn công kẻ địch từ xa.
+Stone
+
+    Hình 3. 16 Quân đồng minh stone
+Chỉ số : Máu – 25, Dame – 0.
+Mô tả: Có tác dụng phòng thủ, giống như một bức tường giúp ngăn chặn quân địch.
+Ice Monkey
+
+    Hình 3. 17 Quân đồng minh ice monkey
+Chỉ số : Máu – 5, Dame – 1.
+Mô tả: Có khả năng tấn công và làm chậm kẻ địch từ xa.
+Gozilla
+
+    Hình 3. 18 Quân đồng minh gozilla
+Chỉ số : Máu – 5, Dame – 2.
+Mô tả: Có khả năng tấn công kẻ địch từ xa với gấp 2 sát thương so với monkey.
+
+Wizard
+
+    Hình 3. 19 Quân đồng minh wizard.
+Mô tả: Có khả năng phát nổ tiêu diệt quân địch trong phạm vi 1 ô
+.
+Ván
+
+    Hình 3. 20 Ván
+Chỉ số : Máu – 5, Dame – 0.
+Mô tả: Giúp đồng minh đứng ở môi trường nước.
+Một số quân địch cơ bản:
+Monster1
+
+    Hình 3. 21 Quân địch monster1
+Chỉ số: Máu – 10, Speed – 0.4, Dame – 1,
+Mô tả: Có khả năng đánh cận chiến.
+Monster2
+
+    Hình 3. 22 Quân địch monster2
+Chỉ số: Máu – 35, Speed – 0.4, Dame – 1,
+Mô tả: Có khả năng đánh cận chiến, sức mạnh vượt trội hơn monster1.
+MonsterFlash
+
+    Hình 3. 23 Quân địch monster flash
+Chỉ số: Máu – 25, Speed – 0.45, Dame – 1,
+Mô tả: Có khả năng chém nhanh.
+Aqua
+
+    Hình 3. 24 Quân địch aqua
+Chỉ số: Máu – 10, Speed – 0.4, Dame – 1,
+Mô tả: Chỉ xuất hiện ở địa hình nước.
+Cá ngựa
+
+    Hình 3. 25 Quân địch cá ngựa
+Chỉ số: Máu – 25, Speed – 1, Dame – 1,
+Mô tả: Có khả năng nhảy qua 1 quân đồng minh bất kỳ và tấn công quân phía sau.
+Witch
+
+    Hình 3. 26 Quân địch witch
+Chỉ số: Máu – 30, Speed – 0.6, Dame – 1,
+Mô tả: Có khả năng triệu hồi ra thêm 4 quân địch xuất hiện xung quanh.
+3.2 Xây dựng hệ thống các chức năng trong game Sơn Tinh Thủy Tinh
+3.2.1 Xác định yêu cầu của hệ thống
+Hệ thống của game Sơn Tinh Thủy Tinh bao gồm các chức năng:
+- Chọn Màn chơi:  Cho phép người chơi chọn các màn chơi đã được mở khóa.
+- Chọn đồng minh: cho phép người chơi chọn các lính đồng minh.
+- Chức năng tiếp tục: Cho phép người chơi load lại các màn chơi cũ.
+- Chức năng chơi mới: Cho phép người chơi reset lại toàn bộ màn chơi và chơi lại từ đầu.
+- Chức năng tăng tốc độ game : Cho phép người chơi tăng tốc game lên gấp 2 lần (tốc độ môi trường, tốc độ tấn công của đồng minh lẫn kẻ địch).
+3.2.2 Phân tích yêu cầu của hệ thống
+Biểu đồ use-casse Tổng quát:
+    
+    Hình 3.27 Biểu đồ Use-case tổng quát hệ thống
+   Tóm tắt:
+- Player: Người chơi
+- Chức năng:
+o Chọn màn chơi
+o Chọn quân lính
+- Ý nghĩa: chọn màn chơi và quân lính thích hợp cho màn chơi đó.
+   Dòng sự kiện:
+- Dòng sự kiện chính:
+o Người chơi nhấn vào một màn chơi.
+- Các dòng sự kiện khác:
+o Không có
+- Trạng thái hệ thống khi bắt đầu:
+o Hiển thị danh sách màn chơi.
+o Cho phép người chơi chọn 1 màn chơi.
+o Cho phép người chơi chọn quân lính sau khi chọn màn chơi.
+- Trạng thái thực hiện khi kết thúc:
+o Chuyển sang scene “game” để bắt đầu chơi.
+
+Biểu đồ tuần tự:
+	
+    Hình 3. 28 Biểu đồ tuần tự thêm người chơi
+   Đặc tả hành vi:
+- Người dùng chọn button play từ trang chủ.
+- Hệ thống tìm dữ liệu của người chơi trên database:
+o Nếu tìm thấy dữ liệu cũ thì tiến hành load các màn chơi cũ.
+o Nếu không tìm thấy dữ liệu thì tạo mới player
+- Chuyển sang màn hình chọn màn chơi.
+    
+    
+    
+    
+3.2.3 Thiết kế cơ sở dữ liệu
+Bảng Player
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả1idINTEGERNot nullMã Player2levelINTEGERNot nullCấp người chơi3cardINTEGERNot nullSố quân đồng minh có thể sử dụng4CurrentLevelINTEGERNot nullMàn chơi hiện tại    Bảng 3. 1 Bảng người chơi
+    
+Bảng Cards
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả1IdINTEGERNot nullMã Cards2NameTextNot nullTên Cards3GoldINTEGERNot nullSố lượng vàng cần để mua4NumberINTEGERNot nullSố card    Bảng 3. 2 Bảng Cards
+    
+3.2.4 Một số hình ảnh của trò chơi:
+    
+
+
+    Hình 3. 29 Giới thiệu cốt truyện game
+Mô tả : Khi bắt đầu vào game lần đầu sẽ người chơi sẽ được xem cốt truyện để hiểu rõ hơn về trò chơi.
+
+    Hình 3. 30 Giới thiệu cốt truyện game2
+Mô tả : Người chơi có thể skip qua đoạn cốt truyện để có thể bắt đầu trò chơi ngay.
+
+    Hình 3. 31 Màn hình chính của trò chơi
+Mô tả : Màn hình trang chủ của game, sau khi hết phần cốt truyện sẽ người dùng sẽ chuyển đến màn hình chính của game, đây là một màn hình động được load lại sau mỗi 8s tạo cảm giác sinh động cho game.
+
+    Hình 3. 32 Màn hình chọn màn chơi
+Mô tả: Sau khi ở màn hình, người chơi sẽ được chuyển tới màn hình chọn màn đấu, mỗi màn đấu sẽ có cấp độ khó tăng dần và mỗi màn sẽ ở một chế độ chơi khác nhau
+
+    Hình 3. 33 Màn hình chọn quân lính
+Mô tả: Sau khi chọn màn chơi, người chơi sẽ được chuyển đến màn hình chọn tướng đồng minh để bắt đầu trò chơi.
+
+    Hình 3. 34 Quân lính khi được chọn
+Mô tả: Các tướng đồng minh được chọn sẽ xuất hiện ở phía trên cùng của màn hình, người chơi có thể được chọn lại các đồng minh bằng cách ấn button reload.
+
+    Hình 3. 35 Màn hình bắt đầu trận
+Mô tả: Màn hình bắt đầu của trận đấu.
+    
+
+    Hình 3. 36 Màn hình khi có lính địch xuất hiện
+Mô tả: Quân địch sẽ xuất hiện từ phía bên phải của màn hình, quân địch sẽ tìm cách vượt qua hàng phòng thủ ở bên trái của màn hình.
+
+    Hình 3. 37 Màn hình khi chọn đồng minh
+Mô tả: Màn hình khi người dùng chọn đồng minh, đồng minh sẽ sử dụng kỹ năng khi gặp lính địch.
+
+    Hình 3. 38 Màn hình thua cuộc
+Mô tả : Khi người dùng để lính địch tiến qua hàng phòng thủ cuối cùng thì sẽ thua và phải chơi lại.
+
+    Hình 3. 39 Màn hình chiến thắng
+Mô tả: Sau khi tiêu diệt hết lính địch sẽ chiến thắng màn chơi.
+    
+
+    Hình 3. 40 Màn hình tạm dừng trận đấu
+Mô tả: Khi vào game có thể tùy chọn tạm dừng/ tiếp tục game, UI tạm dừng có 3 lựa chọn khác là quay về trang chủ, tiếp tục, chơi lại.
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau thời gian nghiên cứu và phát triển, em đã hoàn thành cơ bản các chức năng chức năng ban đầu đề ra của đề tài. Thực hiện các animtion và các hiệu ứng môi trường chân thực nhất.
+    Em đã xây dựng được một hệ thống game dạng tower defense gần gũi với người dùng Việt Nam, với cốt truyện mang tính dân gian truyền thuyết, cùng với nhiều màn chơi và các chế độ khác nhau được xây dựng, giúp người chơi có không bị có cảm giác nhàm chán và khó hiểu khi mới vào chơi game lần đầu.
+    Sau thời gian tìm hiểu và thiết kế hệ thống các chức năng cho game. Em đã thực hiện thành công đề tài, kết quả đạt được đã có các chức năng cơ bản, chạy ổn định và củng cố được kiến thức về lập trình game.
+4.2 Hạn chế của đề tài
+    Hệ thống game Sơn Tinh Thủy Tinh mới chỉ dừng lại ở các chức năng cơ bản, chưa tối ưu hóa hoàn thiện game, các model trong game được sử dụng hoàn toàn là em tìm kiếm ở mọi nguồn trên Internet chứ chưa thể tự mình thiết kế được.
+4.3 Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, em đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+• Xây dựng hoàn thiện các chức năng của một game thủ thành.
+• Thêm nhiều vật phẩm mới, giúp người chơi dễ dàng trải nghiệm thế giới trong game.
+TÀI LIỆU THAM KHẢO
+[1] https://vi.wikipedia.org/wiki/Sơn_Tinh_-_Thủy _Tinh
+[2] https://docs.unity3d.com
+[3] https://learn.unity.com/
+[4] https://www.mixamo.com/
+[5] https://blendervn.org/t/tai-lieu-nhap-mon-blender-danh-cho-nguoi-dung-moi/2217
+    
+    
+Xây dựng game Sơn Tinh Thủy Tinh
+    	
+    
+7
+    
+    

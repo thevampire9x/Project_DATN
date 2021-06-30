@@ -1,0 +1,515 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Ngày nay, mọi người dành khá nhiều thời gian giải trí bên những chiếc smartphone cùng những tựa game yêu thích. Trong số đó có không ít trò chơi được lập trình dựa trên engine Unity 3D đã ra đời cách đây hơn một thập kỉ. Trải qua thời gian phát triển lâu dài và luôn update công nghệ mới, giờ đây Unity 3D đã trở thành lựa chọn số 1 cho bất cứ lập trình viên nào muốn xây dựng một tựa game có thể sử dụng đa nền tảng, chi phí rẻ và dễ thao tác.
+    Cùng với sự phát triển mạnh mẽ của Unity và nhu cầu giải trí của người dùng, nhận thấy việc tạo ra một tựa game giúp mọi người giải trí sau mỗi lúc căng thẳng mệt mỏi là điều cần thiết. Hiện nay có rất nhiều tựa game được cho ra đời xong trò chơi phiêu lưu là một tựa game cổ điển được nhiều người yêu thích. Để góp phần phát triển tựa game này, do đó  em đã chọn đề tài đồ án tốt nghiệp là “ Xây dựng game kiếm sĩ”.
+1.2 Phát biểu bài toán
+      Nội dung thực hiện nghiên cứu cụ thể như sau:
+- Nghiên cứu công nghệ lập trình Unity 
+- Đặc tả yêu cầu khách hàng
+- Phân tích yêu cầu và đưa ra yêu cầu cho hệ thống.
+- Đặc tả chức năng, lớp cho hệ thống
+- Thiết kế Cơ sở dữ liệu.
+- Thiết kế giao diện cho ứng dụng
+- Lập trình cho các Module của hệ thống
+- Kiểm thử hệ thống.
+- Triển khai thực nghiệm hệ thống máy tính
+
+1.3 Phương pháp xây dựng/nghiên cứu
+- Cách tiếp cận : 
+o Nghiên cứu ngôn ngữ lập trình C#
+o Nghiên cứu công cụ Unity
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu
+o Phương pháp phân tích
+o Phương pháp thực nghiệm.
+
+1.4 Kết quả dự kiến của đồ án
+            Xây dựng được ứng dụng với cac chức năng cơ bản
+- Công cụ lựa chọn: chơi mới, chơi tiếp 
+- Thực hiện load dữ liệu lưu trước, lưu dữ diệu
+- Xây dựng các Animation, Animator cho nhân vật, quái con và boss.
+- Xây dựng các skill cho nhân vật, quái con và boss.
+- Xây dựng các item vàng hỗ trợ người chơi cùng các hiệu ứng hình ảnh, âm thanh khi ăn item.
+- Xây dưng cửa qua màn khi người chơi tiêu diệt hết quái
+- Giao diện đẹp, thân thiện, dễ sử dụng.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Unity
+2.1.1 Giới thiệu về Unity
+- Unity là một “cross- flatform game engine” tạm hiểu là công cụ phát triển game đa nền tảng được phát triển bởi Unity Technologies. Game engine này được sử dụng để phát trển game trên PC, consoles, thiết bị di động và trên websites.
+- Ra mắt đầu tiên vào năm 2005 tại sự kiện Apple’s Worldwide Developer Conference bởi nhà sáng lập David Helgason, trải qua hơn 12 năm phát triển, nay Unity đã có version 5.5 hoàn thiện hơn về rất nhiều mặt. Tháng 5-2012 theo cuộc khảo sát Game Developer Megazine được công nhận là Game engine tốt nhất cho mobile. Năm 2014 Unity thắng giải “Best Engine” tại giải UK’s annual Develop Industry Exellence.
+- Unity tích hợp nhiều công cụ, công nghệ về graphic rendering (DirectX, OpenGL), physic (NVIDIA PhyX), audio (OpenAL) giúp quá trình phát triển game trở nên nhanh và đơn giản hơn  khi không phải thực hiện và kết hợp nhiều thành phần riêng lẻ lại với nhau thay vào đó là sự gắn kết liền mạch giữa các thành phần một cách trực quan và logic nhờ sự hỗ trợ trực tiếp từ Unity.
+- Một thế mạnh nữa của Unity là bạn có thể chạy demo game của bạn ngay trongkhi design, nó có hỗ trợ hai chế độ là Scene và Game, rất thuận tiện cho việc test thử các modulGame.
+- Một số thống kê vè Unity:
+• Tính đến quý 3 năm 2016 đã có 5 tỉ lượt download game và ứng dụng được phát triển bởi Unity
+• 2,4 tỉ thiết bị di động đã từng tải ít nhất 1 ứng dụng bởi unity.
+• Trong top 1000 game Mobiles miễn phí thì số lượng game tạo ra bởi Unity chiếm tới 34%
+• Số lượng người dùng (gamer) của Unity đạt tới con số 770 triệu, trong khi đó số người thường xuyên sử dụng Twitter là 310 triệu người.
+• Sự thay đổi trong cách thức chơi game của người chơi hay nói cách khác là xu hướng mọi người tập trung vào game trên di động nhiều hơn.
+2.1.2 Các thành phần trong Unity
+    
+- Cửa sổ Sences:
+• Phần này phần hiển thị các đối tượng trong scenes một cách trực quan, có thể lựa chọn các đối tượng, kéo thả, phóng to, thu nhỏ, xoay các đối tượng ...
+• Phần này có để thiết lập một số thông số như hiển thị ánh sáng, âm anh, cách nhìn 2D hay 3D ... -Khung nhìn Scene là nơi bố trí các Game Object như cây cối, cảnh quan, enemy, player, camera, … trong game. Sự bố trí hoạt cảnh là một trong những chức năng quan trọng nhất của Unity.
+- Cửa sổ Hierarchy:
+• Tab hierarchy là nơi hiển thị các Game Object trong Sences hiện hành. Khi các đối tượng được thêm hoặc xóa trong Sences, tương ứng với các đối tượng đó trong cửa sổ Hierarchy.
+• Tương tự trong tab Project, Hierarchy cũng có một thanh tìm kiếm giúp quản lý và thao tác với các Game Object hiệu quả hơn đặc biệt là với các dự án lớn.
+- Cửa sổ Game:
+• Đây là mạn hình demo Game, là góc nhìn từ camera trong game.
+• Thanh công cụ trong cửa sổ game cung cấp các tùy chỉnh về độ phân giải man hình, thông số (stats), gizmos, tùy chọn bật tắt các component...
+• Đây là cưa sổ explorer của Unity, hiển thị thông tin của tất cả các tài nguyên (Assets) trong game của bạn.
+• Cột bên trái hiển thị assets và các mục yêu thích dưới dạng cây thư mục tương tự như Windows Explorer. Khi click vào một nhánh trên cây thư mục thì toàn bộ nội dung của nhánh đó sẽ được hiển thị ở khung bên phải. Ta có thể tạo ra các thư mục mới bằng cách Right click -> Create -> Folder hoặc nhấn vào nút Create ở góc trên bên trái cửa sổ Project và chọn Folder. Các tài nguyên trong game cũng có thể được tạo ra bằng cách này.
+• Phía trên cây thư mục là mục Favorites, giúp chúng ta truy cập nhanh vào những tài nguyên thường sử dụng. Chúng ta có thể đưa các tài nguyên vào Favorites bằng thao tác kéo thả.
+• Đường dẫn của thư mục tài nguyên hiện tại. Chúng ta có thể dễ dàng tiếp cận các thư mục con hoặc thư mục gốc bằng cách click chuột vào mũi tên hoặc tên thư mục.
+- Cửa sổ Inspector:
+• Cửa sổ Inspector hiển thị chi tiết các thông tin về Game Object đang làm việc, kể cả những component được đính kèm và thuộc tính của nó. Bạn có thể điều chỉnh, thiết lập mọi thông số và chức năng của Game Object thông qua cửa sổ Inspector.
+• Mọi thuộc tính thể hiện trong Inspector đều có thể dễ dàng tuỳ chỉnh trực tiếp mà không cần thông qua một kịch bản định trước. Tuy nhiên Scripting API cung cấp một số lượng nhiều và đầy đủ hơn do giao diện Inspector là có giới hạn.
+• Các thiết lập của từng component được đặt trong menu. Các bạn có thể click chuột phải, hoặc chọn icon hình bánh răng nhỏ để xuất hiện menu.
+• Ngoài ra Inspector cũng thể hiện mọi thông số Import Setting của asset đang làm việc như hiển thị mã nguồn của Script, các thông số animation, …
+2.1.3 Ưu điểm của Unity
+- Chức năng cốt lõi đa dạng bao gồm: cung cấp công cụ dựng hình (kết xuất đồ họa) cho các hình ảnh 2D hoặc 3D, công cụ vật lý (tính toán và phát hiện va chạm), âm thanh, mã nguồn, hình ảnh động, trí tuệ nhân tạo, phân luồng, tạo dò ng dữ liệu xử lý, quản lý bộ nhớ, dựng ảnh đồ thị và kết nối mạng. Nhờ có các engine mà công việc làm game trở nên ít tốn kém và đơn giản hơn.
+- Hỗ trợ đa nền tảng: Một trong các thế mạnh của Unity3D chính là khả năng hỗ trợ gần như toàn bộ các nền tảng hiện có bao gồm: PlayStation 3, Xbox 360, Wii U, iOS, Android, Windows, Blackberry 10, OS X, Linux, trình duyệt Web và cả Flash. Nói cách khác, chỉ với một gói engine, các studio có thể làm game cho bất kỳ hệ điều hành nào và dễ dàng convert chúng sang những hệ điều hành khác nhau. Đồng thời, đây cũng là giải pháp cho các game online đa nền tảng – có thể chơi đồng thời trên nhiều hệ điều hành, phần cứng khác nhau như Web, PC, Mobile, Tablet….
+
+- Dễ sử dụng: Unity3D được built trong một môi trường phát triển tích hợp, cung cấp một hệ thống toàn diện cho các lập trình viên, từ soạn thảo mã nguồn, xây dựng công cụ tự động hóa đến trình sửa lỗi. Do được hướng đến đồng thời cả lập trình viên không chuyên và studio chuyên nghiệp, nên Unity3D khá dễ sử dụng. Hơn nữa, đây là một trong những engine phổ biến nhất trên thế giới, người dùng có thể dễ dàng tìm kiếm kinh nghiệm sử dụng của “tiền bối” trên các forum công nghệ.
+- Tính kinh tế cao: Unity Technologies hiện cung cấp bản miễn phí engine Unity3D cho người dùng cá nhân và các doanh nghiệp có doanh thu dưới 100.000 USD/năm. Với bản Pro, người dùng phải trả 1.500 USD/năm – một con số rất khiêm tốn so với những gì engine này mang lại.
+
+2.2 Tổng quan về C#
+2.2.1 Giới thiệu
+- C# (hay C sharp) là một ngôn ngữ lập trình đơn giản, được phát triển bởi đội ngũ kỹ sư của Microsoft vào năm 2000, trong đó người dẫn đầu là Anders Hejlsberg và Scott Wiltamuth.
+- C# là ngôn ngữ lập trình hiện đại, hướng đối tượng và nó được xây dựng trên nền tảng của hai ngôn ngữ mạnh nhất là C++ và Java.
+- C# được thiết kế cho Common Language Infrastructure (CLI), mà gồm Executable Code và Runtime Environment, cho phép chúng ta sử dụng các ngôn ngữ high-level đa dạng trên các nền tảng và cấu trúc máy tính khác nhau.
+- C# với sự hộ trợ mạnh mẽ của .NET Framewwork giúp cho việc tạo một ứng dụng Windowns Forms hay WPF (Windows Presentation Founđation), trở nên rất dễ dàng.
+2.2.2 Những ưu điểm cảu ngôn ngữ lập trình C#
+- Là ngôn ngữ đơn giản: Như ta đã biết thì ngôn ngữ C# dựng trên nền tảng C++ và Java nên ngôn ngữ C# khá đơn giản. Nếu chúng ta thân thiện với C và C++ hoậc thậm chí là Java, chúng ta sẽ thấy C# khá giống về diện mạo, cú pháp, biểu thức, toán tử và những chức năng khác được lấy trực tiếp từ ngôn ngữ C và C++, nhưng nó đã được cải tiến để làm cho ngôn ngữ đơn giản hơn. Một vài trong các sự cải tiến là loại bỏ các dư thừa, hay là thêm vào những cú pháp thay đổi.
+- Là ngôn ngữ hiện đại: Một vài khái niệm khá mới mẻ khá mơ hồ với các bạn vừa mới học lập trình, như xử lý ngoại lệ, những kiểu dữ liệu mở rộng, bảo mật mã nguồn..v..v... Đây là những đặc tính được cho là của một ngôn ngữ hiện đại cần có. Và C# chứa tất cả các đặt tính ta vừa nêu trên. Các bạn sẽ dần tìm hiểu được các đặt tính trên qua các bài học trong series này.
+- Là ngôn ngữ lập trình thuần hướng đối tượng: Lập trình hướng đối tượng(tiếng Anh: Object-oriented programming, viết tắt: OOP) là một phương pháp lập trình có 4 tính chất. Đó là tính trừu tượng (abstraction), tính đóng gói (encapsulation), tính đa hình (polymorphism) và tính kế thừa (inheritance). C# hỗ trợ cho chúng ta tất cả những đặc tính trên. Và để hiểu rõ hơn thì chúng ta sẽ có một chương trình bày về phần này.
+- Là ngôn ngữ lập trình ít từ khóa: C được sử dụng để mô tả thôn # là ngôn ngữ sử dụng giới hạn những từ khóa (gồm khoảng 80 từ khóa và mười mấy kiểu dữ liệu xây dựng sẵn). Nếu bạn nghĩ rằng ngôn ngữ có càng nhiều từ khóa thì sẽ càng mạnh mẽ hơn. Điều này không phải sự thật, lấy ví dụ ngôn ngữ C# làm điển hình nhé. Nếu bạn học sâu về C# bạn sẽ thấy rằng ngôn ngữ này có thể được sử dụng để làm bất cứ nhiệm vụ nào.
+
+CHƯƠNG 3: PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG
+3.1 Phát biểu bài toán
+3.1.1 Kịch bản
+• Cốt truyện
+➢ Bối cảnh : 
+       Trò chơi lấy bối cảnh thế giới kiếm sĩ giả tưởng và mang phong cách Trung cổ. Khi mà mọi người có một cuộc sống yên bình tại  một ngôi làng nhỏ dưới thung lũng. Trò chơi sẽ xoay quanh nhân vật là một kiếm sĩ có tên là Nhất Lang.
+       Vào một ngày đẹp trời, mọi người dân trong ngôi làng đang sinh hoạt bình thường thì bỗng dưng có một vật thể lạ, rất lớn từ đâu đó bay tới và rơi xuống ngôi làng tạo thành một vụ nổ rất lớn. Mọi người ào ào kéo nhau tới xem đó là vật thể gì, vụ nổ lớn đến nỗi đã tạo ra một cái hố rất lớn, khói mù mịt quanh đó. Khi mà mọi người vẫn chưa định hình đươc đó là vật gì thì bất ngờ từ trong đó những con quá vật chui ra, hết con nhỏ rồi lại đến con to, chúng nhìn kinh tởm với những hàm răng, móng vuốt sắc nhọn.
+
+       Những con quái vật dị dợm lao vào và tấn công ngôi làng, chỉ trong chốc lát chúng đã phá hủy mọi thứ, lấy đi sạch những thức ăn đồ uống. Sau khi tàn phá ngôi làng chúng đã bắt những người dân lại và mang đi đâu và với mục đích gì thì không hề ai hay biết.
+
+       May mắn thay một chàng kiếm sĩ trẻ với sự thông minh và nhanh nhạy của mình đã trốn thoát được khỏi lũ quái vât. Chàng kiếm sĩ rất tức giận vì chúng đã phá hủy đi ngôi làng, bắt giữ gia đình và mọi người trong ngôi làng. Nhưng với khả năng hiện tại thì anh ta không thể đấu lại lũ quái vật nên đành quyết định ẩn náu một thời gian để luyện tập kiếm pháp, nâng cao thể lực bản thân…
+
+       Sau một thời gian khi anh ta đã thấy mình đủ mạnh và quyết định nần theo dấu vết lũ quái vật để lại, tìm ra bí ẩn của chúng và cứu lấy mọi người. Từ đó cuộc hành trình phiêu lưu giải cứu dân làng của chàng kiếm sĩ bắt đầu.
+    
+➢ GamePlay: 
+    Người chơi trong vai Trippier (KIẾM SĨ) bắt đầu di chuyển từ đầu khu vực cánh rừng này đến cánh rừng khác, vượt qua tất cả những thử thách, những con quái vật trên đường đi, sử dụng khéo léo những kĩ năng để thoát khỏi khu vực nguy hiểm và đi tới đích cuối cùng.
+
+• Kịch bản
+• Nhân vật 
+- Trippier :
+o Damage 20, health 100, tốc độ di chuyển tối đa 4, 
+o Skill: Tấn công cận chiến khi va chạm quái vật và vật cản
+• Quái vật và các chướng ngại vật
+- TurretAI :
+o Damage 10, health 100. Tấn công theo hướng di chuyển của nhân vật, tốc độ bắn của các trụ tăng dần, càng di chuyển vào sâu tốc độ bắn càng nhanh, hướng di chuyển của đạn cũng chính xác hơn.
+o Skill: 
+• Skill 1: Bắn ra quả cầu lửa theo hướng của nhân vật
+• Skill 2: Di chuyển mắt và hướng bắn.
+• Skill 3: Xác định chính xác vị trí của nhân vật.
+• Skill 4: Bắn liên tục khi player nằm trong tầm bắn.
+    
+- Bat Monster :
+o Attacking 10, health 250, tốc độ di chuyển tối đa 4. Tấn công bằng những viên đạn nổ khi nhân vật di chuyển vào phạm vi tấn công.
+o Skill: 
+• Skill 1: Sử dụng AI để check vị trí của player để tấn công.
+• Skill 2: Tấn công nhân vật khi nhân vật di chuyển vào vùng được bảo vệ.
+
+
+- Zombie Blood:
+o Attacking 10, health 100, tốc độ di chuyển tối đa 9. Tấn công và bám đuổi theo Player, hút máu nhân vật khi chạm vào.
+o Skill: 
+• Skill 1: Di chuyển về hướng Player.
+• Skill 2: Tấn công Player khi chạm vào.
+- Monster :
+o Attacking 10, health 100, tốc độ di chuyển tối đa 5. Tấn công player .
+o Skill: 
+• Skill 1: Di chuyển về hướng Player.
+• Skill 2: Tấn công Player khi player di chuyển vào vùng tấn công.
+
+
+- BoomFly:
+o Attacking 20, health 100, tốc độ di chuyển tối đa 6, di chuyển trên bầu trời. Nổ khi chạm vào Player.
+o Skill: 
+• Skill 1: Sử dụng AI để check vị trí của player để tấn công.
+• Skill 2: Nổ gây sát thương khi chạm vào Player
+
+• Màn chơi
+• Level 1: Người chơi đóng vai KIẾM SĨ bắt đầu di chuyển tới các vùng đất của map, người chơi cần phải vượt qua các trướng ngại vật như các zombieblood, turretAi, monster, nhảy, chạy và ăn các coin vàng để tích lũy điểm cho mình. Nếu người chơi không vượt qua các trướng ngại vật thì số coin ăn được sẽ không được cộng thêm.
+• Level 2: Cũng giống như các thử thách ở level 1 nhưng các chướng ngại vật sẽ có độ khó cao hơn và bắt đầu xuất hiện những con dơi ma ám tấn công, nhiều zombie và monster hơn, bomfly xuất hiện và gây sát lương lớn cho player. Đòi hỏi người chơi phải khéo léo vượt qua các thử thách.
+• Level 3: Ở level này người chơi phải đối mặt với nhiều thử thách hơn, map sẽ có nhiều các quái vật và chướng ngại vật hơn, chúng hung hăng và sẽ mạnh mẽ hơn những màn trước khiến người chơi và thật bình tĩnh, xử lý khôn khéo để có thể vượt qua màn này.
+3.1.2 Các yêu cầu chính của hệ thống
+➢ Trò chơi được mô tả như sau:
+   - Người chơi có thể chọn chơi tiếp, hoặc reset game
+   - Nếu chọn reset game, người chơi sẽ trở về vị trí ban đầu, mọi thông số trở về mặc định. 
+   - Vượt phó bản là hoạt động chiến đấu vượt qua các màn chơi lần lượt theo cốt truyện, đồng thời đem về lượng lớn tiền xu.
+   - Nâng cấp nhân vật là chức năng hỗ trợ người chơi trong quá trình chơi, nó sẽ sinh giúp nhân vật gia tăng máu và damage.
+➢ Hoạt động trò chơi cần đạt được những mục tiêu sau:
+- Phải có chức năng chơi tiếp.
+- Phải có chức năng chơi mới.
+- Phải có chức năng điều khiển nhân vật.
+- Chức năng ăn đồng xu vàng và item.
+- Phải có chức năng tiếp tế.
+3.1.3 Danh sách các yêu cầu của khách hàng
+• Chức năng chơi tiếp
+- Khi khởi động trò chơi, chức năng này giúp người dùng tiếp tục chơi trò chơi với dữ liệu cũ đã được lưu.
+- Trong trò chơi, chức năng này cho phép lưu lại tiến độ chơi
+• Chức năng chơi mới
+- Chức năng này xóa dữ liệu cũ và bắt đầu mới.
+• Chức năng điều khiển nhân vật
+- Nhân vật chính (Trippier) sẽ có khả năng di chuyển bằng cách chạy, nhảy, tấn công, phòng thủ thông qua các hiệu ứng animations. Được điều khiển bằng các button có sẵn trên màn hình.
+- Run: Giúp nhân vật có thể di chuyển nhanh hơn về phía trước.
+- Nhảy: Giúp nhân vật có thể nhảy lên các vị trí cao hơn trong map, hoặc là nhảy lên để vượt các chướng ngại vật.
+- Tấn công: khi gặp các zombie khát máu, những con dơi ma ám để tiêu diệt chúng thì nhân vật phải tung ra các đòn tấn để tiêu diệt đối thủ.
+• Chức năng ăn đồng coin vàng  
+- Trong mỗi level thì ngoài việc vượt qua các cạm bẫy hay chướng ngại vật, thì một phần không thể thiếu trong mỗi tựa game đó là ăn đồng xu vàng để tăng sức mạnh cho nhân vật chính, trong mỗi con quái đều có đồng xu vàng nhân vật chính ăn.
+• Chức năng tiếp tế
+- Trên bản đồ sẽ xuất hiện các rương vàng, bạc, gỗ chứa rất nhiều đồng xu vàng để người chơi thu thập.
+• Chức năng nâng cấp
+- Người chơi sẽ dùng những đồng xu vàng đã thu thập được để nâng cấp nhân vật.
+
+
+
+
+
+    
+3.2 Phân tích và thiết kế hệ thống
+3.2.1 Biểu đồ Usecase 
+➢ UC Tổng quát
+
+
+
+
+➢ UC Select mision
+
+
+
+
+
+
+
+➢ UC Play game
+
+
+
+
+
+➢ UC Character upgrade 
+
+
+
+
+
+
+3.2.2 Biểu đồ lớp
+
+
+    
+- Danh sách các đối tượng:
+- STTTên lớp/quan hệLoạiÝ nghĩa/Ghi chú1PlayerObjectLưu thông tin người chơi2EnemyObjectLưu thông tin kẻ địch3MeleeEnemyObjectKẻ địch cận chiến4RangedEnemyObjectKẻ địch đánh xa                                Bảng 3.1 Các đối tượng
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+- Danh sách các thuộc tính nhân vật:
+
+STTTên thuộc tínhLoạiRàngbuộc    Ý nghĩa/ghi chú1heathint>= 0Chỉ số sinh lực2positionObject ( Vector2)Not nullVị trí của người chơi3rotationObject (Quaternion)Not nullHướng nhìn của người chơi4swordObjectNot nullVũ khí của người chơi5speedfloat>=0Tốc độ di chuyển của đối tượng6unlockedMissionint>= 0Màn chơi đã mở khóa7fireRateintNot nullTốc độ chém- thời gian tối thiểu giữa 2 lần tấn công8damageint>= 0Sát thương của đối tượng9damageRangefloat>=0Phạm vi sát thương của vũ khí11triggerRangefloat>= 0Phạm vi kẻ địch phát hiện người chơi12attackRangefloat>= 0Phạm vi kẻ địch tấn công13typeint> 0Loại kẻ địch (loài/chủng loại)    Bảng 3.2: Danh sách các thuộc tính
+    
+    
+    
+    
+    
+    
+    
+    
+- Danh sách các phương thức của MeleeEnemy:
+STTTên thuộc tínhLoạiRàngbuộc    Ý nghĩa/ghi chú1heathint>= 0Chỉ số sinh lực2positionObject ( Vector2)Not nullVị trí của MeleeEnemy3rotationObject (Quaternion)Not nullHướng nhìn MeleeEnemy4speedfloat>=0Tốc độ di chuyển của đối tượng5fireRateintNot nullTốc độ -  thời gian tối thiểu giữa 2 lần tấn công6damageint>= 0Sát thương của đối tượng7attackRangefloat>= 0Phạm vi kẻ địch tấn công    Bảng 3.3  Danh sách các thuộc tính của MeleeEnemy
+
+- Danh sách các phương thức của RangedEnemy:
+STTTên thuộc tínhLoạiRàngbuộc    Ý nghĩa/ghi chú1heathint>= 0Chỉ số sinh lực2positionObject ( Vector2)Not nullVị trí của MeleeEnemy3rotationObject (Quaternion)Not nullHướng nhìn MeleeEnemy4speedfloat>=0Tốc độ di chuyển của đối tượng5fireRateintNot nullTốc độ -  thời gian tối thiểu giữa 2 lần tấn công6damageint>= 0Sát thương của đối tượng7attackRangefloat>= 0Phạm vi kẻ địch tấn côngBảng 3.4  Danh sách các thuộc tính của RangedEnemy
+
+
+
+- Danh sách các phương thức:
+STTTên phương thứcLoạiMức truy cậpÝ nghĩa/ghi chú1move()voidpublicDi chuyển nhân vật theo hướng chỉ định2shoot()voidpublicTấn công đối tượng ở xa3die()voidpublicChết4takeDamgae()voidpublicNhận sát thương5moveTowardPlayer()voidpublicDi chuyển theo nhân vật    Bảng 3.5  Danh sách các phương thức
+    
+
+3.2.3 Thiết kế giao diện cho hệ thống
+    	Giao diện chính của game “KIẾM SĨ” như sau:
+• Giao diện chính: Ở đây bao gồm các màn chơi mà người chơi phải vượt qua. Khi bắt đầu trò chơi, người chơi chỉ có thể chơi màn đầu tiên và phải sống sót vượt qua màn đó thì mới có thể mở được màn tiếp theo. Sau khi mở thành công các màn chơi thì người chơi có thể tùy ý chọn màn chơi mới hoặc là chơi lại màn cũ.
+    
+    
+    
+    Hình 3.1 Giao diện chính
+    
+• Màn hình tạm dừng: Khi đang chơi trò chơi mà người chơi có việc gì đó cần làm mà vẫn k muốn phải tắt trò chơi và chơi lại nên chức năng tạm dừng ở đây sẽ giúp người chơi tạm dừng, chức năng này sẽ giúp mọi thứ trong game dừng lại. Khi nào xong người chơi có thể tiếp tục chơi mà không bị ảnh hưởng gì.
+
+
+    
+    
+    Hình 3.2 Giao diện tạm dừng
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+• Màn hình qua màn: Sau khi tiêu diệt xong lũ quái vật thì đến cuối của map sẽ có một cánh cổng giúp người chơi qua màn tiếp theo của game. Ở đây chúng ta sẽ có một menu chức năng giúp người chơi có thể chơi lại màn này khi người chơi cảm thấy thích thú vs những con quái vật ở đây. Trở về màn hình chính để chọn màn chơi mà người chơi yêu thích hoặc dùng những đồn coin vàng mà mình đã kiếm được để nâng cấp sức mạnh cho nhân vật. Chơi luôn mà tiếp theo mà không cần phải chờ đợi khi về màn hình chính rườm rà.
+
+
+    
+    
+    
+    Hình 3.3 Giao diện qua màn
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+• Màn hình Die: Khi nhân vật chưa đủ mạnh hoặc người chơi vẫn chưa quen với phong cách chơi của game thì có thể dẫn đến người chơi không thể qua màn và nhân vật bị chết khi bị lũ quái vật tấn công hết máu. Khi này người chơi chỉ có thể chơi lại màn để kiếm thêm đồng coin để có thể nâng cấp nhân vật mạnh hơn, luyện thêm kĩ năng hoặc có thể trở về màn hình chính và chơi màn chơi dễ hơn.
+
+    
+    
+
+    Hình 3.4 Giao diện die
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+• Màn hình reset : Với chức năng reset game giúp người chơi có thể chơi lại game từ màn đầu tiên và với chỉ số sức mạnh như ban đầu
+    
+Hình 3.5  Màn hình reset
+• Màn hình nâng cấp nhân vật: Sau khi tiêu diệt lũ quái vật thì trong người chúng sẽ rơi ra những đồng coin vàng. Nhiệm vụ của người chơi là thu thập chúng thật nhiều để có thể nâng cấp sức mạnh cho nhân vật giúp người chơi có thể dễ dàng vượt qua các màn hơn
+    
+    Hình 3.6  Manager upgrade character
+    
+3.2.4 Màn chơi
+Trong cuộc phươu lưu giải cứu dân làng người chơi phải vượt qua 3 màn chơi có những địa hình hiểm trở khác nhau:
+• Màn 1: Đây chính là màn đầu tiên trong game, với những con quái vật khá yếu, tấn công đơn giản để giúp người chơi làm quen với game. Địa hình không quá khó khăn để tìm ra cánh cổng vượt màn. Chúng ta nên tận dụng màn này để kiếm cho mình thật nhiều những đồng coin vàng giúp nâng cấp nhân vật nhé.
+    
+    
+
+    Hình 3.7 Màn 1
+    
+
+
+
+
+
+
+
+
+
+• Màn 2: Màn này sẽ đưa người chơi đến với những thứ mới lạ, những con quái vật mới, cảnh vật mới, những rương kho báu xuất hiện nhiều hơn và đi kém với lũ quái vật. Người chơi cần khéo léo vượt qua màn và tìm ra được cánh cổng. Hãy luyện tập thật chăm chỉ ở màn 1 để có thể vượt qua màn 2 một cách dễ dàng hơn.
+    
+    
+
+    Hình 3.8 Màn 2
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+• Màn 3: Hứa hẹn sẽ là một màn chơi sẽ khiến người chơi phải tập chung rất cao và đòi hỏi sự khóe léo, nhanh nhạy thì mới có thể vượt qua màn này. Những con quái vật ở đây xuất hiện nhiều và dày đặc, hung hăng hơn, chúng có sức chống chịu cao kèm theo sức sát thương gây ra cho nhân vật cũng rất nhiều. Chúng càng khỏe thì sẽ càng có nhiều đồng coin vàng khi tiêu diệt được chúng. Địa hình ở màn này cũng giống như một ma trận, khiến việc tìm cánh cổng qua màn sẽ càng khó hơn.
+    
+    
+
+    Hình 3.9 Màn 3
+
+3.2.5 Nhân vật
+                
+
+    Hình 3.10 Player
+3.2.6 Enemy
+• Monster chibi: Khi nhân vật di chuyển vào vùng tấn công của enemy, enemy sẽ dừng lại và dùng chiếc gậy phép thuật của mình biến ra những viên đạn bay thẳng về hướng nhân vật. Người chơi cần phải nhảy lên để né viên đạn nếu không muốn viên đạn bay trúng và làm mất đi một lượng máu nhất định
+                            
+    Hình 3.11 Monster chibi
+    
+• Monster: Để vượt qua màn thì người chơi cần phải đưa nhân vật về đến cánh cổng và phải đánh bại rất nhiều quái vật mạnh mẽ. Đây là một trong những quái vật cận chiến trong game, chúng sẽ tấn công chúng ta bằng một lượng sát thương lớn khi nhân vật lại gần. Chúng ta cần nâng cấp nhân vật thật mạnh mẽ và khéo léo để có thế  đánh bại chúng. Một gợi ý nho nhỏ là chúng sẽ không nhìn thấy và tấn công nhân vật khi đứng sau chúng.
+    
+
+      
+          Hình 3.12 Monster sliver
+      
+    
+    
+    
+    
+
+
+• BatMonster: Những con dơi bay lượn trên bầu trời mang trong mình những viên độc tố sẽ tấn công nhân vật từ xa khi chúng phát hiện ra. Chúng sẽ tấn công những viên độc tố rất nhanh và chính xác vào nhân vật, người chơi muốn tiêu diệt được chúng thì cần phải nhanh nhẹn nhảy lên đánh chúng hoặc chạy thật nhanh để né được những viên độc tố đó.
+    
+            
+             Hình 3.13 BatMonster
+
+
+
+
+
+
+• TurretAI: Trụ bắn này tấn công chúng ta bằng những viên đạn nổ. Những viên đạn đó sẽ đuổi theo nhân vật cho đến khi nhân vật di chuyển ra kha khỏi tầm bắn của nó. Đặc biệt trú bắn này sẽ ẩn nấp dưới đất khiến chúng ta không thể phát hiện ra cho đến khi chúng bất ngời chồi lên khỏi mặt đất và tấn công nhân vật. 
+
+          
+                                     Hình 3.14 TurretAI
+
+
+
+
+
+
+
+• Monster yaazo: Để vượt qua màn thì người chơi cần phải đưa nhân vật về đến cánh cổng và phải đánh bại rất nhiều quái vật mạnh mẽ. Đây là một trong những quái vật cận chiến trong game, chúng sẽ tấn công chúng ta bằng một lượng sát thương lớn khi nhân vật lại gần. Chúng ta cần nâng cấp nhân vật thật mạnh mẽ và khéo léo để có thế  đánh bại chúng. 
+
+Hình 3.15  Monster giant
+
+
+
+
+
+
+
+
+• Zombie: Những  con zoombie này có sức tấn công và lượng máu khá yếu nên chúng được xuất hiện khá nhiều ở những màn đầu tiên giúp người chơi làm quen với game và dễ dàng kiếm được những đồng coin từ chúng. Hãy tận dụng điều này để nâng cấp nhân vật khỏe hơn.
+
+Hình 3.16  Zoombie chibi
+
+
+
+
+
+
+
+
+
+• Bom enemy: Chúng chính là những con zoom bie hồn ma bay lơ lửng trên không, trên tay chúng cầm theo một quả bom với sức sát thương lớn. Khi bị chúng phát hiện, chúng nhanh chóng lao tói vị trí người chơi và phát nổ quả bom gây sát thương lên nhân vật và chính chúng cũng bị chết hay còn gọi là ôm bom cảm tử. Để không bị chịu ảnh hưởng sát thương từ quả bom thì người chơi phải điều khiển nhân vật tấn công vào quái Bom enemy hoặc quả bom trên tay chúng khiến nó nổ trên không trung.
+
+    Hình 3.17  Bom enemy
+    
+    
+    
+    
+
+3.2.7 Item và chướng ngại vật
+• Đồng coin vàng: Đây chính là phần thưởng cho người chơi sau khi tiêu diệt những con quái vật. Tùy vào những con quái vật mà đồng coin vàng rớt ra, càng những con quái vật to khỏe thì chúng sẽ rơi ra càng nhiều đồng coin và tương tự như những con quái vật bé hơn. Người chơi chỉ việc dùng những đồng coin vàng đó đển nâng cấp nhân vật thật mạnh lên thôi.  Càng chăm chỉ chơi thì chúng ta càng kiếm được nhiều đồng coin vàng.
+
+    Hình 3.18  Item Coin
+    
+    
+    
+
+
+• Rương kho báu: Song song với việc vượt qua màn chơi, tiêu diệt quái vật thì người chơi còn có một trải nghiệm nữa chính là truy tìm kho báu. Vậy kho báu ở đây chính là những rương gỗ, rương bạc, rương vàng được giấu đâu đó trong những màn chơi sau những lùm cây, bụi cỏ, thậm chí những con quái vật đang giữ chúng. Trong những hòm kho báu đó chứa rất nhiều đồng coin vàng và chúng chính là kho báu đích thực trong trò chơi này.
+    
+    
+    Hình 3.19  Rương kho báu
+    
+    
+    
+    
+    
+    
+    
+    
+• Ground
+                     
+                    Hình 3.20  Ground
+    
+    
+    
+• Một số object khác
+                                         Hình 3.21  Một số object khác
+    
+    
+
+CHƯƠNG 4: KẾT LUẬN
+    
+4.1 Kết quả đạt được của đề tài
+• Sau thời gian nghiên cứu và phát triển, game đã hoàn thành cơ bản các mục tiêu ban đầu đề ra của đề tài:
+• Một game xây dựng ở thế giới ma quái, thế lực hắc ám, chiến đấu tìm lại công bằng.
+• Chức năng của quái nhỏ ở mức cơ bản: đã hoàn thành chức năng hoạt động cơ bản của những quái nhỏ, đủ để không quá khó và không quá dễ.
+• Nhân vật chính: có khả năng di chuyển mượt mà trên địa hình, có thể tấn công đối phương bằng đòn đánh thường lẫn skill.
+• Âm thanh: Âm thanh được đầu tư với những đoạn nhạc nền hào hùng, hợp với những cuộc hành trình dài, gian nan.
+• Boss: Được xây dựng để người chơi cảm thấy không dễ gì để vượt quá, nhưng cũng không quá khó đến mức đánh đố.
+• Cạm bẫy: Hệ thống bẫy đa dạng nhiều chủng loại, hình thức khiến game trở nên lôi cuốn nhất là với những ai đã từng chơi qua và yêu thích những Mario Cat, Contra, Zombie…
+• Giao diện game: Bắt mắt, tạo cảm giác thích thú…
+• Công cụ lựa chọn: chơi mới, chơi tiếp.
+
+4.2 Hạn chế của đề tài
+• Mỗi màn có độ dài không quá cao, cả game đạt thời lượng chơi từ 2 đến 3 giờ đồng hồ 
+• Map không đủ đa dạng. Object chưa phong phú, đẹp mắt.
+• Hệ thống hoạt động còn chưa linh hoạt, tối ưu.
+• Phạm vi quản lý của chương trình còn hẹp
+• Một số tính năng vẫn chưa hoàn thiện.
+
+4.3 Hướng phát triển của đề tài
+• Hoàn thiện các chức năng đầy đủ, đa dạng về màn và cách chơi.
+• Độ khó trong game tăng lên.
+• Thiết kế lại những thuật toán chưa tối ưu để game hoạt động tốt nhất.
+• Từ game đang có phát triển, cải tiến thêm để tạo cảm giác gần gũi, thân thiện với người chơi.
+TÀI LIỆU THAM KHẢO
+x
+x
+     [1] Giáo trính môn Chuyên đề 4: Learn Unity 3D Programming with UnityScripts, Bộ môn CNPM, Trường ĐHSPKTHY.
+    [2] Giáo trình môn cơ sở kỹ thuật lập trình, Bộ môn CNPM, Trường ĐHSPKTHY.
+    [3] Giáo trình môn cấu trúc dữ liệu giải thuật, Bộ môn CNPM, Trường ĐHSPKTHY.
+    [4] Giáo trính môn C# cơ bản, Bộ môn CNPM, Trường ĐHSPKTHY.
+    [5] Youtobe: 2D platformer. 
+    Link:https://www.youtube.com/playlist?list=PLX-uZVK_0K_6VXcSajfFbXDXndb6AdBLO&fbclid=IwAR0La1-l8mZOwdaeyqOuPzjVm9OFtKgh6qEu-wPljSXZ65ny-NZS6e_U8-w
+    [6] stackoverflow.com, https://stackoverflow.com
+    
+    Xây dựng game KIẾM SĨ
+
+    
+    6
+    
+    

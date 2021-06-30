@@ -1,0 +1,652 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Ngày nay, xã hội phát triển mạnh mẽ, kỹ thuật ngày càng hiện đại nên nhu cầu về trao đổi thông tin, giải trí, nhu cầu về điều khiển thiết bị từ xa ngày càng cao. Và những hệ thống dây cáp phức tạp lại không thể đáp ứng tốt nhu cầu này, nhất là ở những khu vực chật hẹp, những nơi xa xôi, trên các phương tiện vận chuyển… Vì thế công nghệ không dây đã ra đời và đang phát triển mạnh mẽ, tạo rất nhiều thuận lợi cho con người trong đời sống hàng ngày. 
+    Kỹ thuật không dây phục vụ rất nhiều nhu cầu khác nhau của con người, từ học tập, làm việc, giải trí như chơi game, xem phim, nghe nhạc… Với các nhu cầu đa dạng và phức tạp đó kỹ thuật không dây đã đưa ra nhiều chuẩn với các đặc điểm kỹ thuật khác nhau để có thể phù hợp với từng nhu cầu, mục đích và khả năng của người sử dụng như IrDA, WLAN  với chuẩn 802.11, Zigbee, OpenAir, UWB, Bluetooth…
+    Mỗi chuẩn kỹ thuật đều có những ưu, khuyết điểm riêng của nó, và Bluetooth đag dần nổi lên là kỹ thuật không dây tầm ngắn có nhiều ưu điểm, thuận lợi cho những thiết bị di động. Với một tổ chức nghiên cứu đông đảo, hiện đại và số lượng nhà sản xuất hỗ trợ kỹ thuật Bluetooth vào sản phẩm của họ ngày càng tăng, Bluetooth đang dần lan rộng ra khắp thế giới, xâm nhập vào mọi lĩnh vực của thiết bị điện tử và trong tương lai mọi thiết bị điện tử đều có thể được hỗ trợ kỹ thuật này. 
+    Xuất phát từ các lý do trên, em đã thực hiện đề tài “NGHIÊN CỨU VÀ XÂY DỰNG ỨNG DỤNG BLUETOOTH.”
+1.2 Mục tiêu của đề tài
+    Giúp cho mọi người biết được Bluetooth là gì? Tìm hiểu thêm về hoạt động và một số kỹ thuật Bluetooth.
+    Nghiên cứu công nghệ Bluetooth, xây dựng ứng dụng truyền file bằng điện thoại di động thông qua Bluetooth để minh họa hoạt động của kỹ thuật này.
+1.3 Giới hạn và phạm vi của đề tài
+    Nghiên cứu được công nghệ Bluetooth, một công nghệ không dây đang phát triển rất mạnh và có tầm ứng dụng rộng rãi hiện nay. Nắm được cách thức hoạt động, các đặc điểm kỹ thuật và khả năng của công nghệ Bluetooth. Thêm vào đó trong quá trình nghiên cứu về Bluetooth nắm được một số kỹ thuật mạng không dây khác.
+    Tìm hiểu được một hệ điều hành dành cho điện thoại di động thông minh đó là hệ điều hành Android, ngôn ngữ lập trình Java.
+1.4 Nội dung thực hiện
+- Lý thuyết về Bluetooth.
+- Kỹ thuật Bluetooth.
+- Vấn đề an toàn và bảo mật trong Bluetooth.
+- Các ưu nhược điểm và tương lai của Buetooth.
+- Tìm hiểu hệ điều hành Android, ngôn ngữ lập trình Java.
+- Xây dựng ứng dụng.
+- Cài đặt hệ thống demo.
+- Hướng phát triển và kết luận.
+1.5 Phương pháp tiếp cận
+- Nghiên cứu các Web về Bluetooth trên các nền tảng công nghệ khác nhau.
+- Nghiên cứu tài liệu về Android của khoa Công nghệ  thông tin trường Đại học Sư phạm Kỹ thuật Hưng Yên.
+CHƯƠNG 2: 
+TỔNG QUAN VỀ BLUETOOTH VÀ                         HỆ ĐIỀU HÀNH ANDROID
+2.1 Tổng quan về Bluetooth
+    Bluetooth là công nghệ không dây cho phép các thiết bị điện, điện tử giao tiếp với nhau trong một khoảng cách ngắn, bằng sóng vô tuyến qua băng tần chung ISM (Industrial, Scientific, Medical) trong dãy tầng 2.40 – 2.48 GHz và có khả năng truyền tải giọng nói và dữ liệu.
+    Phạm vi hoạt động của thiết bị Bluetooth là khoảng 10m . Bluetooth truyền dữ liệu với tốc độ 1 Mbps, nhanh gấp 3 và 8 lần tốc độ trung bình của cổng song song và công serial tương ứng . Đây là dãy băng tần không cần đăng ký được dành riêng để dùng cho các thiết bị không dây trong công nghiệp, khoa học, y tế . Bluetooth được thiết kế nhằm mục đích thay thế dây cable giữa máy tính và các thiết bị truyền thông cá nhân, kết nối vô tuyến giữa các thiết bị điện tử lại với nhau một cách thuận lợi với giá thành rẻ . Khi được kích hoạt Bluetooth có thể tự động định vị những thiết bị khác có chung công nghệ trong vùng xung quanh và bắt đầu kết nối với chúng. Nó được định hướng sử dụng cho việc truyền dữ liệu lẫn tiếng nói.
+    
+    Hình 2-1. Các thiết bị được sử dụng Bluetooth.
+    	Bluetooth đã phải đối mặt với cuộc chiến đang leo thang với các nhà sản xuất PC nhưng ngược lại, công nghệ Bluetooth là " đứa con cưng " của các hãng sản xuất ĐTDĐ vì đại đa số các ĐTDĐ đều có hỗ trợ Bluetooth cũng như các thiết bị headset không dây. Trong tương lai, công nghệ Bluetooth phiên bản mới sẽ tiếp tục phát triển rộng hơn ở nhiều lĩnh vực.
+2.1.1 Lịch sử hình thành bluetooth
+    Tên gọi Bluetooth (có nghĩa là “ răng xanh” ) là tên của nhà vua Đan Mạch – Harald I Bluetooth, người Viking nổi tiếng về khả năng giúp mọi người có thể giao tiếp, thương lượng với nhau. Thời điểm ban đầu của kỉ nguyên công nghệ không dây Bluetooth, Bluetooth có nghĩa là thống nhất công nghiệp máy tính và viễn thông. Có lẽ những nhà nghiên cứu đã dùng tên này để nhấn mạnh việc các thiết bị có thể trao dổi, kết nối với nhau mà không phụ thuộc vào loại máy hay nhà sản xuất.
+    
+    Hình 2-2. Tổng quan về Bluetooth.
+    Năm 1994 : Lần đầu tiên hãng Ericsson đưa ra một đề án nhằm hợp nhất liên lạc giữa các loại thiết bị điện tử khác nhau mà không cần phải dùng đến các sợi cáp nối cồng kềnh, phức tạp . Đây thực chất là một mạng vô tuyến không dây cự ly ngắn chỉ dùng một vi mạch cỡ 9mm có thể chuyển các tín hiệu sóng vô tuyến điều khiển thay thế cho các sợi dây cáp điều khiển rắm . 
+    Năm 1998 : 5 công ty lớn nhất trên thế giới gồm : Ericsson, Nokia, IBM, Intel và Tosiba đã liên kết, hợp tác thiết kế và triển khai phát triển một chuẩn công nghệ kết nối không dây mới mang tên BLUETOOTH nhằm kết nối các thiết bị vi điện tử lại với nhau dùng sóng vô tuyến .
+    Ngày 20/5/1998 : Nhóm nghiên cứu Special Interest Group – SIG chính thức được thành lập với mục đích phát triển công nghệ Bluetooth trên thị trường viễn thông . Bất kỳ công ty nào có kế hoạch sử dụng công nghệ Bluetooth đều có thể tham gia vào . 
+    Tháng 7/1999: Các chuyên gia trong SIG đã đưa ra thuyết minh kỹ thuật Bluetooth phiên bản 1.0. 
+    Năm 2000: SIG đã bổ sung thêm 4 thành viên mới là 3Com, Lucent Technologies, Microsoft và Motorolar. Công nghệ Bluetooth đã được cấp dấu chứng nhận kỹ thuật ngay trong lần ra mắt đầu tiên . Các thông số kỹ thuật của Bluetooth phát triển bởi SIG là mở và free trên site http://www.bluetooth.org và đã có hơn 2100 công ty trên toàn thế giới sử dụng . Công nghệ Wireless Personal Area Network ( WPAN ) dựa trên nền Bluetooth bây giờ là một chuẩn IEEE dưới tên gọi 802.15 WPANs.
+    Năm 2001 : Bluetooth 1.1 ra đời cùng với bộ Bluetooth sofware development kit – XINDAccess Blue SDK, đánh dấu bước phát triển chưa từng có của công nghệ Bluetooth trên nhiều lĩnh vực khác nhau với sự quan tâm của nhiều nhà sản xuất mới, Bluetooth được bình chọn là công nghệ vô tuyến tốt nhất trong năm. Tháng 7/2002: Bluetooth SIG thiết lập cơ quan đầu não toàn cầu tại Overland Park, Kansas, USA. 
+    Năm 2002 đánh dấu sự ra đời các thế hệ máy tính Apple hỗ trợ Bluetooth. Sau đó không lâu Bluetooth cũng được thiết lập trên máy Macintosh với hệ điều hành MAC OXS, Bluetooth cho phép chia sẽ tập tin giữa các máy MAC, đồng bộ hóa và chia sẻ thông tin liên lạc giữa các máy Palm, truy cập Internet thông qua điện thoại di động có hỗ trợ Bluetooth ( Nokia, Ericsson, Motorola, . . . ). 
+    Tháng 5/2003: CSR ( Cambridge Silicon Radio ) cho ra đời 1 chip Bluetooth mới với khả năng tích hợp dễ dàng và giá cả hợp hơn. Điều này góp phần cho sự ra đời thể hệ Motherboard tích hợp Bluetooth, giảm sự chênh lệch giá cả giữa những mainboard cellphone có và không có Bluetooth. Tháng 11/2003 dòng sản phẩm Bluetooth 1.2 ra đời. Tổ chức Cahners In - Stat dự báo rằng các sản phẩm gắn Bluetooth sẽ lên tới 1 tỷ. 
+    Năm 2004: các công ty điện thoại di động tiếp tục khai thác thị trường sôi nỗi này bằng cách cho ra đời các thế hệ điện thoại di động đời mới hỗ trợ Bluetooth (N7610, N6820, N8230). Motorola cho ra sản phẩm Bluetooth đầu tay của mình . Các sản phẩm Bluetooth tiếp tục ra đời và được xúc tiến mạnh mẽ qua chương trình “ Operatiton Blueshock ” International Consumer Electronics Show (CES) tại Las Vegas ngày 9/1/2004.
+    Bluetooth hiện đang có tốc độ phát triển khá nhanh với khả năng ứng dụng ngày càng đa dạng, theo tính toán của công ty nghiên cứu thị trường Frost & Sulivan, trong năm 2001 có 4,2 triệu sản phẩm sử dụng công nghệ Bluetooth được đưa ra thị trường, con số này sẽ tăng lên 1.01 tỷ vào năm 2006.
+    Năm 2008: Bluetooth 3.0 ra đời hỗ trợ tốc độ truyền tải dữ liệu lên tới 24Mbps, và dành chủ yếu cho các ứng dụng audio và chia sẻ file. Có thể nói đây là sinh nhật lần thứ 10 của Bluetooth, chưa có công nghệ không dây nào phát triển với tốc độ nhanh như vậy, chỉ trong vòng 10 năm đã đạt được trên 2 tỉ sản phẩm ứng dụng. 
+    Năm 2009: Phiên bản mới nhất của Bluetooth vừa được tổ chức SIG thông qua, tuy nhiên khác với Bluetooth 3.0, bản Bluetooth 4.0 mới nhất chỉ dành cho các ứng dụng trong lĩnh vực y tế, chăm sóc sức khỏe và an ninh. Theo Giám đốc marketing Anders Edlund của SIG thì Bluetooth 4.0 chủ yếu dành cho các ứng dụng sức khỏe và chăm sóc y tế, chẳng hạn như đồng hồ đeo tay theo dõi sức khỏe, hoặc trang bị cho các bộ cảm biến nhiệt độ, nhịp tim thể thao, và các thiết bị sử dụng tại nhà .
+     Năm 2010: Bluetooth đã được đưa vào trong máy tính để kết nối giữa máy tính với nhau hoặc máy tính và điện thoại, các công ty máy tính và điện thoại đã hàng loạt cho ra đời các thế hệ máy tính, điện thoại khác nhau có tầm ứng dụng cao hơn. Có thể nói đây là giai đoạn mà công nghệ Bluetooth phát triển ở trong máy tính với sự ra đời của các thế hệ máy tính có kết nối Bluetooth. Do vậy không chỉ ứng dụng công nghệ Bluetooth chi trong di động để chia sẽ dữ liệu bây giờ chúng ta có thể kết nối 2 máy tính gần nhau để truy cập trao đổi dữ liệu mà không cần dây cab.
+    Năm 2016: Công nghệ bluetooth 5.0 ra mắt với nhiều cải tiến, mới : sóng phủ xa hơn 4 lần so với Bluetooth 4.x, tốc độ tăng 2 lần hỗ trợ tốc độ lên đến 50Mbps, tiết kiệm điện hơn 2,5 lần so với trước và có thể kết nối nhiều thiết bị với nhau. Tuy nhiên để sử dụng được Bluetooth 5.0 chúng ta cần phải có phần cứng mới.
+2.1.2 Các đặc điểm của Bluetooth
+    Bluetooth có thể đạt được tốc độ truyền dữ liệu 1Mb/s. Bluetooth hỗ trợ tốc độ truyền tải dữ liệu lên tới 720 Kbps trong phạm vi 10m. Khác với kết nối hồng ngoại ( IrDA ), kết nối Bluetooth là vô hướng và sử dụng giải tần 2,4 GHz. 
+- Tiêu thụ năng lượng thấp, cho phép ứng dụng được trong nhiều loại thiết bị, bao gồm cả các thiết bị cầm tay và điện thoại di động.
+- Giá thành hạ (giá một con chip Bluetooth đang giảm dần) .
+- Khoảng cách giao tiếp cho phép : 
+o Khoảng cách giữa hai thiết bị đầu cuối có thể lên đến 10m ngoài trời và 5m trong tòa nhà.
+o Khoảng cách thiết bị đầu cuối và Access point có thể lên tới 100m ngoài trời và 30m trong nhà.
+- Bluetooth sử dụng băng tần đăng ký 2.4Ghz trên dãy băng tần ISM. Tốc độ truyền dữ liệu có thể đạt tới mức tối đa 1Mbps (do sử dụng tần số cao) mà các thiết bị không cần phải lấy trực tiếp nhau.
+- Dễ dàng trong việc phát triển ứng dụng: Bluetooth kết nối một ứng dụng này với một ứng dụng khác thông qua các chuẩn “Bluetooth profiles”, do đó có thể độc lập về phần cứng cũng như hệ điều hành sử dụng. 
+- Bluetooth được dùng trong giao tiếp dữ liệu tiếng nói: có 3 kênh để truyền tiếng nói là 7 kênh để truyền dữ liệu trong một mạng cá nhân. 
+- An toàn và bảo mật: được tích hợp với sự xác nhận và mã hóa.
+- Tính tương thích cao, được nhiều nhà sản xuất phần cứng cũng như phần mềm hỗ trợ .
+2.2 Ứng dụng của Bluetooth
+2.2.1 Thiết bị thông minh
+    Gồm có các loại điện thoại di động, PDA, PC, cellphone, smartphone . . . Điện thoại di động : Sony Ericsson P800, P900, Nokia 3650, 7610, 7650 . Công nghệ Bluetooth gắn sẵn trên thiết bị di động nên không cần dùng cáp . Có thể kết nối với tai nghe Bluetooth, camera kỹ thuật số hay máy tính, cho phép người dùng xem tivi, chụp ảnh, quay phim, nghe MF3, FM, duyệt web và email từ điện thoại…
+    
+    Hình 2-3. Nokia 6600 - PalmTungsten
+    Palm Tungsten W: một trung tâm dữ liệu cầm tay, cung cấp một sự kết hợp tinh vi của công nghệ thư điện tử không dây, thông điệp SMS, các chức năng của điện thoại, các ứng dụng kinh doanh và phần mềm quản lý thông tin cá nhân của Palm.Với 3 băng tần 900-1800-1900 MHz, Palm Tungsten W được chế tạo với một trong những sóng vô tuyến nhanh nhất hiện nay cho các mạng GSM/GPRS, vì thế có thể dùng nó như một chiếc điện thoại với tai nghe Bluetooth. Plam Tungsten W không sử dụng SIM, và có thể dùng với bất kỳ nhà cung cấp dịch vụ nào
+2.2.2 Thiết bị truyền thanh
+    Gồm các loại tai nghe (headset), loa và các trạm thu âm thanh…
+
+    Hình 2-4. Tai nghe Bluetooth.
+    Công ty Logitech chuyên sản xuất thiết bị ngoại vi cho máy tính PC vừa giới thiệu loại tai nghe Bluetooth di động. So với các tai nghe bluetooth khác trên thị trường, tai nghe HS02 hỗ trợ tiêu chuẩn Bluetooth phiên bản 1.2 và có loa nghe lớn 2cm.
+    Tiêu chuẩn Bluetooth 1.2 giảm thời gian kết nối và tiêu thụ điện năng khi nối với thiết bị Bluetooth 1.2 khác. Ngoài ra khả năng sử dụng công nghệ tần số tiêu chuẩn 1.2 giúp tránh xung nhiễu từ các thiết bị tần số 2,4Ghz khác như mạng không dây WiFi và các điện thoại không dây.
+    Với hỗ trợ Bluetooth 1.2, âm thanh nghe qua tai nghe to, như trên loa.
+    Tai nghe cung cấp tần số trả về lớn và có âm lượng tối đa lớn hơn cần thiết để sử dụng trong trường hợp nhất định.
+2.2.3 Thiết bị truyền dữ liệu
+    Gồm chuột, bàn phím, joystick, camera, bút kỹ thuật số, máy in, LAN access point…
+    
+    Hình 2-5. Thiết bị truyền dữ liệu.
+    Modem Zoom dùng để kết nối Internet hoặc mạng cục bộ bằng điện thoại. Nó có 2 ngõ giao tiếp với PC hay PDA: ngõ không dây Bluetooth class  1, bán kính hoạt động 100m; ngõ RS232 qua cổng COM. Tốc độ 56Kbps.
+    
+    Hình 2-6. USB Bluetooth.
+    Bluetooth MDU 0001USB là thiết bị kết nối không dây sử dụng công nghệ Bluetooth class 2, vùng phủ sóng bán kính 10m; nối với PC qua USB 1.1. Tuy nhỏ như đầu ngón tay nhưng thiết bị được tích hợp gần như tất cả các chuẩn giao tiếp hiện có, ví dụ: RS232, FTP, Dial-up, Fax, OBEX (chuẩn đồng bộ hóa dữ liệu cho PDA)..., nên khi lắp MDU 0001USB vào thì vô hình trung PC của bạn biến thành một đài phát sóng. Ngược lại, PC này cũng có thể dò tìm và kết nối đến tất cả máy tính, PDA đang trong vùng phủ sóng. Cắm thiết bị, cài đặt driver, khởi động lại máy là tất cả các máy tính trong bán kính 10m có thể kết nối,trao đổi dữ liệu với nhau.
+    
+    
+    Hình 2-7. Máy ảnh điều khiển bằng điện thoại di động.
+    Sản phẩm của Sony Ericsson có tên ROB-1ROB-1 được điều khiển không dây qua bàn phím joystick hoặc nhờ màn hình cảm ứng trên điện thoại P900 hoặc P910. Người sử dụng nhìn trên màn hình điện thoại những gì đang có trên ống kính máy ảnh, và chụp các hình ảnh trên điện thoại như một máy ảnh thông thường.
+    Với khả năng lăn tròn chung quanh với khoảng cách 50m cách người sử dụng, ROB-1 cùng lúc truyền hình ảnh trên điện thoại di động.
+    Thiết bị có ba bánh xe và có dạng hình cầu kết hợp với công nghệ máy ảnh thông minh giúp di chuyển nhanh nhẹn và cơ động với góc nhìn rộng.
+    Có đường kính 11cm, ROB-1 có thể di chuyển về phía trước, sau, nhìn quanh các góc, quanh một điểm hay nghiêng ống kính một góc 70 độ lên trên và 20 độ xuống dưới. Có đèn chiếu phía trước giúp chụp trong bóng tối. Bộ nhớ lớn giúp chụp một số ảnh trước khi lưu vào điện thoại, hoặc truyền tới một máy tính PC qua cổng USB.
+2.2.4 Các ứng dụng nhúng
+    Điều khiển nguồn năng lượng trong xe hơi, các loại nhạc cụ, trong công nghiệp, y tế. . . 
+    
+    Hình 2-8. Màn hình hiển thị theo giao diện dành cho các cuộc điện thoại.
+    Kể từ nay, những khách hàng của chiếc sedan Lexus LS430 và xe thể thao hai cầu LX470 sẽ không cần phải dừng lại trên đường để nhận hay tiến hành cuộc gọi điện thoại di động. Các thao tác được thực hiện đơn giản nhờ một nút bấm trên tay lái hoặc qua màn hình kỹ thuật số.
+    
+    Hình 2-9. Bluetooth Car Kit
+    
+    Hình 2-10. Máy chụp hình kỹ thuật số có hỗ trợ Bluetooth để truyền hình ảnh.
+2.3 Định nghĩa các liên kết vật lý trong Bluetooth
+    Asynchronous connectionless (ACL):  được thiết lập cho việc truyền dữ liệu, những gói dữ liệu cơ bản (primarily packet data). Là một kết nối point-to- multipoint giữa Master và tất cả các Slave tham gia trong piconet. Chỉ tồn tại duy nhất một kết nối ACL. Chúng hỗ trợ những kết nối chuyển mạch gói (packet-switched connection) đối xứng và không đối xứng. Những gói tin đa khe dùng ACL link và có thể đạt tới khả năng truyền tối đa 723 kbps ở một hướng và 57.6 kbps ở hướng khác. Master điều khiển độ rộng băng tầng của ACL link và sẽ quyết định xem trong một piconet một slave có thể dùng băng tầng rộng bao nhiêu. Những gói tin broadcast truyền bằng ACL link, từ master đến tất cả các slave. Hầu hết các gói tin ACL đều có thể truyền lại.
+    Synchronous connection-oriented (SCO): hỗ trợ kết nối đối xứng, chuyển mạch mạch (circuit-switched), point-to-point giữa một Master và một Slave trong 1 piconet. Kết nối SCO chủ yếu dùng để truyền dữ liệu tiếng nói. Hai khe thời gian liên tiếp đã được chỉ định trước sẽ được dành riêng cho SCO link. Dữ liệu truyền theo SCO link có tốc độ 64kbps. Master có thể hỗ trợ tối đa 3 kết nối SCO đồng thời. SCO packet không chứa CRC (Cyclic Redundancy Check) và không bao giờ truyền lại. Liên kết SCO được thiết lập chỉ sau khi 1 liên kết ACL đầu tiên được thiết lập.
+2.4 Trạng thái thiết bị của Bluetooth
+    Có 4 trạng thái chính của 1 thiết bị Bluetooth trong 1 piconet:
+- Inquiring device (inquiry mode): thiết bị đang phát tín hiệu tìm thiết bị Bluetooth khác.
+- Inquiry scanning device (inquiry scan mode): thiết bị nhận tín hiệu inquiry của thiết bị đang thực hiện inquiring và trả lời.
+- Paging device (page mode): thiết bị phát tín hiệu yêu cầu kết nối với thiết bị đã inquiry từ trước.
+- Page scanning device (page scan mode): thiết bị nhận yêu cầu kết nối từ paging device và trả lời.
+2.5 Các chế độ kết nối
+- Active mode: trong chế độ này, thiết bị Bluetooth tham gia vào hoạt động  của mạng. Thiết bị master sẽ điều phối lưu lượng và đồng bộ hóa cho các thiết bị slave.
+- Sniff mode: là 1 chế độ tiết kiệm năng lượng của thiết bị đang ở trạng thái active. Ở Sniff mode, thiết bị slave lắng nghe tín hiệu từ mạng với tần số giảm hay nói cách khác là giảm công suất. Tần số này phụ thuộc vào tham số của ứng dụng. Đây là chế độ ít tiết kiệm năng lượng nhất trong 3 chế độ tiết kiệm năng lượng.
+- Hold mode: là 1 chế độ tiết kiệm năng lượng của thiết bị đang ở trạng thái active. Master có thể đặt chế độ Hold mode cho slave của mình. Các thiết bị có thể trao đổi dữ liệu ngay lập tức ngay khi thoát khỏi chế độ Hold mode. Đây là chế độ tiết kiệm năng lượng trung bình trong 3 chế độ tiết kiệm năng lượng.
+- Park mode: là chế độ tiết kiệm năng lượng của thiết bị vẫn còn trong mạng nhưng không tham gia vào quá trình trao đổi dữ liệu (inactive). Thiết bị ở chế độ Park mode bỏ địa chỉ MAC, chỉ lắng nghe tín hiệu đồng bộ hóa và thông điệp broadcast của Master. Đây là chế độ tiết kiệm năng lượng nhất trong 3 chế độ tiết kiệm năng lượng.
+2.6 Bluetooth radio
+2.6.1 Radio Connectivity
+    Phần lớn hệ thống radio trong thương mại sử dụng ngày nay đều được dựa vào cấu trúc tế bào radio. Một mạng mobile thiết lập cơ sở hạ tầng bằng những sợi cáp kim loại theo dạng xương sống, dùng một hoặc nhiều trạm cơ sở đặt ở những vị trí chiến lược để sóng có thể phủ hết các tế bào; thiết bị sử dụng là những điện thoại có khả năng di chuyển, hoặc nói chung là những terminal  di động, để sử dụng mobile network; những terminal này duy trì một kết nối với mạng thông qua một radio link đến các trạm cơ sở. Đây là liên kết chặt chẽ giữa trạm cơ sở và terminal. Khi một terminal đăng ký với mạng, nó sẽ giữ một kênh điều khiển, và kết nối sẽ đuợc thiết lập hoặc giải phóng theo nghi thức của kênh đó. Truy xuất kênh, chia kênh, điều khiển lưu thông và những sự can thiệp khác đều được điều khiển một cách gọn gàng bởi các trạm cơ sở. Chẳng hạn theo quy ước của hệ thống radio thì những hệ thống điện thoại công cộng như là Global System for Mobile Communications (GSM), D-AMPS, và IS-95 [1–3], nhưng cũng có những hệ thống tư nhân như hệ thống mạng cục bộ  không dây (WLAN) dựa trên 802.11 hoặc HIPERLAN I và HIPERLAN II [4– 6], và hệ thống cordless như Digital Enhanced Cordless Telecommunications (DECT) và Personal Handyphone      System (PHS) [7,8].    Trái lại, trong hệ thống ad hoc thật sự thì không hề có sự khác biệt giữa các radio unit; tức là không hề có điểm khác biệt giữa các trạm cơ sở và terminal. Liên kết ad hoc tùy thuộc vào sự liên lạc giữa các thiết bị. Không có cơ sở hạ tầng là dây cáp kim loại hỗ trợ kết nối giữa các unit di động, không có thiết bị kiểm soát trung tâm cho các unit dựa vào để tạo các quan hệ nối liền với nhau, cũng không có hỗ trợ việc sắp xếp truyền thông. Thêm vào đó, ở đây không có sự can thiệp của người điều hành. Có thể mường tượng kịch bản của Bluetooth như thế này, nó có vẻ như là một số lượng lớn các kết nối ad hoc cùng tồn tại ở cùng một vùng mà không có bất cứ sự phối hợp lẫn nhau nào. Đối với những ứng dụng Bluetooth, có nhiều mạng độc lập chồng chéo lên nhau trên cùng một vùng.
+    Hệ thống ad hoc radio chỉ được dùng trong vài trường hợp như hệ thống walky-talky dùng bởi quân đội, cảnh sát, cứu hỏa, và những đội cứu hộ nói chung.Tuy nhiên, hệ thống Bluetooth là hệ thống ad hoc radio thương mại đầu tiên được dùng một cách rộng rãi và với quy mô lớn nơi công cộng.
+2.6.2 Kiến trúc của hệ thống Bluetooth Radio
+a) Radio Spectrum-Dãy sóng vô tuyến:
+- Thứ nhất việc chọn lựa dãy sóng vô tuyến phải được xác định mà không có người điều  hành  tác động.  Dãy  sóng  phải  được dùng nơi  công  cộng mà không cần phải đăng ký. 
+- Thứ hai, dãy sóng phải sãn sàng để dùng ở trên toàn thế giới. Những ứng dụng Bluetooth đầu tiên đặt mục tiêu là những doanh nghiệp đi du lịch, những người phải kết nối thiết bị di động của họ ở bất cứ nơi nào họ đến. May thay có một tần số vô tuyến không phải đăng ký luôn sẵn dùng trên toàn cầu. Đó là tần số Industrial, Scientific, Medical (ISM), vào khoảng 2,45 GHz và trước đây được dành riêng cho một số nhóm chuyên nghiệp nhưng gần đây thì đã được mở rộng trên toàn thế giới cho mục đích thương mại. Ở Mỹ, băng tần này đi từ 2400 đến 2483.5 MHz, và những điều lệ FCC (Federal Communications Commission) phần 15 được áp dụng. Ở phần lớn châu Âu, một băng tần giống nhau được dùng theo điều lệ ETS-300328. Ở Nhật, gần đây băng tần từ 2400 đến 2500 MHz được phép dùng cho những ứng dụng thương mại và hòa hợp với giải pháp của thế giới.Tóm lại, ở hầu hết các quốc gia trên thế giới, tần số miễn phí sẵn dùng từ 2400 MHz đến 2483,5 MHz, và những nỗ lực cho sự hòa hợp đang được tiến hành để dãy sóng vô tuyến này thật sự sẵn dùng trên toàn  thế giới. Những quy định không giống nhau ở những nơi khác nhau trên thế giới. Tuy nhiên mục tiêu của họ là làm sao để bất kỳ người sử dụng nào cũng có quyền sử dụng tần số vô tuyến đó một cách công bằng. Những quy luật nói chung quy định rõ sự phân bố của những tín hiệu được truyền đi và mức năng lượng tối đa được phép truyền. Do đó, đối với một hệ thống có thể hoạt động trên toàn cầu thì khái niệm tần số vô tuyến được phép dùng phải là phần giao của các luật lệ.
+b) Interference Immunity – Sự chống nhiễu:
+- Do băng tần miễn phí có thể được sử dụng bởi bất cứ một thiết bị phát nào, do đó việc chống nhiễu là vấn đề rất quan trọng. Phạm vi và khả năng nhiễu trong tần số ISM 2.45 GHz là không thể dự đoán trước được, bởi có rất nhiều thiết bị phát sử dụng sóng vô tuyến ở trong băng tần này, đó có thể là thiết bị Bluetooth, thiết bị Wifi, ... và thậm chí cả lò vi sóng và một vài thiết bị phát sáng khác cũng phát ra sóng trong băng tần này.
+- Sự chống nhiễu có được thực hiện nhờ vào việc ngăn chặn hoặc tránh đi. Ngăn chặn bằng cách dàn trải những chuỗi hoặc mã (coding or direct- sequence spreading).
+- Sự ngăn chặn có thể được thực hiện bằng cách viết code hoặc chia tần số thành các dãy liên tục. Tuy nhiên, phạm vi các dãy tần động của các tín hiệu được can thiệp trong một môi trường sóng đặc biệt, liên tục có thể rất rộng. Phân chia theo thời gian có thể là một lựa chọn nếu như xảy ra sự gián đoạn trong các nhịp tần số của sự phân chia theo thời gian. Việc phân chia trên tần số có khả năng hơn. Trong khi tần số 2.45 GHz có thể cung cấp băng thông khoảng 80 MHz và băng thông của hầu hết các hệ thống radio đều bị giới hạn, một số phần quang phổ của sóng radio có thể được sử dụng mà không gặp bất cứ trở ngại nào. Việc lọc trên các vùng băng tần sẽ giúp ngăn nhiễu ở những phần khác của dãy sóng radio. Bộ lọc ngăn chặn có thể dễ dàng đạt đến tần số 50 dB hoặc hơn nữa.
+c) Multiple Access Scheme_Phối hợp đa truy cập
+- Việc lựa chọn sự phối hợp đa truy cập cho một hệ thống vô tuyến ad hoc được điều khiển bởi những luật lệ của dãy tầng ISM và thiếu sự phối hợp (lack of coordination)
+- Đa truy cập phân chia theo tần số (FDMA) đã thu hút những hệ thống ad  hoc do kênh trực giao chỉ trả lời đúng tần số của máy tạo dao động tương ứng trên các băng tần khác nhau. Phối hợp với việc phân chia kênh truyền một cách thích ứng và năng động thì việc nhiễu có thể tránh khỏi. Đáng tiếc FDMA cơ bản lại không đáp ứng hết nhu cầu lan rộng có trong dãy ISM.
+- Đa truy cập phân chia theo thời gian (TDMA) đòi hỏi sự đồng bộ về thời gian vô cùng khắc khe ở kênh trực giao. Đối với nhiều liên kết ad hoc được sắp xếp ở một chỗ, việc duy trì sự tham chiếu khung thời gian trở nên khá cồng kềnh.
+- Đa truy cập phân chia theo mã (CDMA) tỏ ra là đặc tính tốt nhất cho hệ thống vô tuyến ad hoc khi nó quy định sự phân bổ và đề cập đến những hệ thống rời rạc.
+- Direct sequence (DS)-CDMA không thu hút bằng vì vấn đề gần xa, nó đòi hỏi kiểm soát năng lượng lẫn nhau hoặc tăng thêm xử lý thừa. Thêm vào đó,   như TDMA, kênh trực giao DS-CDMA cũng quy định việc tham chiếu khung thời gian. Cuối cùng, đối với những user cao cấp thì những loại chip khá đắt đã được dùng đến nhưng không thu hút lắm vì băng thông rộng (tránh nhiễu) và sự tiêu thụ hiện tại ngày càng tăng.
+- Nhảy tần số (FH)-CDMA kết hợp một số những đặc tính để trở thành chọn lựa tốt nhất cho hệ thống vô tuyến ad hoc. Trung bình một tín hiệu có thể trải ra trên một dãy tần số lớn, nhưng ngay lúc đó chỉ có một dải băng thông nhỏ được sử dụng, tránh được hầu hết khả năng nhiễu trong dãy ISM. Bước nhảy của sóng mang là trực giao, và việc nhiễu trên những bước sóng kế nhau có thể bị ngăn chặn bởi bộ lọc. Việc phối hợp những bước sóng có thể sẽ không trực giao( dù sao việc phối hợp lẫn nhau giữa các bước sóng không được cho phép theo luật FCC ), nhưng băng thông hẹp và việc nhiễu khi người dùng chung (co-user) chỉ bị xem như là gián đoạn ngắn trong việc truyền tin, một việc có thể được khắc phục bằng giải pháp dùng những nghi thức ở tầng cao hơn.
+- Bluetooth dựa vào kỹ thuật FH-CDMA- các packet được truyền trên những tần số khác nhau. Trong dãy tầng ISM 2.45 GHz, định nghĩa một bộ 79 bước nhảy, mỗi bước nhảy cách nhau 1MHz. Việc truyền nhận sử dụng các khe thời gian. Chiều dài 1 khe thời gian thông thường là 625µs. Một số lớn những cách phối hợp bước nhảy được tạo ra ngẫu nhiên nhưng chỉ cách phối hợp đặc biệt được định nghĩa bởi một unit gọi là master mới kiểm soát kênh nhảy tần số. Một đồng hồ của master unit cũng định nghĩa một chu kỳ bước nhảy. Tất cả những unit khác đều gọi là slave, chúng dùng sự đồng nhất của master để chọn bước nhảy giống nhau và cộng thêm khoảng thời gian gián đoạn vào đồng hồ tương ứng của chúng để đồng bộ hoá việc nhảy tần số. Trong lĩnh vực thời gian, các kênh được chia thành những slot. Một slot tương ứng với một khoảng thời gian tối thiểu là 625 s. Để thực hiện  đơn giản, truyền tin song công được thực hiện bằng cách áp dụng time- division duplex (TDD). Điều này có nghĩa là một unit sẽ lần lượt phát và nhận. Chia cắt việc phát và nhận thực sự ngăn chặn được nhiễu xuyên âm giữa quá trình phát và nhận trong máy thu phát vô tuyến. Từ khi việc phát  và nhận đặt ở những time slot khác nhau thì chúng cũng được đặt ở những bước nhảy khác nhau.
+2.7 Ký thuật trải phổ nhảy tần trong công nghệ Bluetooth
+2.7.1 Khái niệm trải phổ trong công nghệ không dây
+- Trong truyền thông bằng sóng radio cổ điển, người ta chỉ dùng một tần số  để truyền dữ liệu, nhưng khả năng mất dữ liệu là rất lớn do tần số này có thể bị nhiễu, mặt khác tốc độ truyền sẽ không cao.
+- Truyền thông trải phổ là kỹ thuật truyền tín hiệu sử dụng nhiều tần số cùng  1 lúc (DSSS-Direct Sequence Spread Spectrum) hoặc luân phiên (FHSS- Frequency Hopping Spread Spectrum) để tăng khả năng chống nhiễu, bảo mật và tốc độ truyền dữ liệu.
+- Trải phổ nhảy tần số là kỹ thuật phân chia giải băng tần thành một tập hợp các kênh hẹp và thực hiện việc truyền tín hiệu trên các kênh đó bằng việc nhảy tuần tự qua các kênh theo một thứ tự nào đó.
+     
+    Hình 2-11. Kĩ thuật trải phổ nhảy tần số.
+2.7.2 Kỹ thuật nhảy tần số trong công nghệ Bluetooth
+- Việc truyền dữ liệu trong Bluetooth được thực hiện bằng sử dụng kỹ thuật nhảy tần số, có nghĩa là các packet được truyền trên những tần số khác nhau. Giải băng tần ISM 2.4Ghz được chia thành 79 kênh, với tốc độ nhảy là 1600 lần trong một giây, điều đó có thể tránh được nhiễu tốt và chiều dài của các packet ngắn lại, tăng tốc độ truyền thông.
+     
+     
+    Hình 2-12. Các Packet truyền trên các tần số khác nhau.
+    
+    
+    Hình 2-13. Các Packet truyền trên khe thời gian.
+- Việc truyền nhận sử dụng các khe thời gian. Chiều dài 1 khe thời gian thông thường là 625µs. Một packet thường nằm trong 1 khe đơn, nhưng cũng có thể mở rộng ra 3 hay 5 khe. Với các packet đa khe, yêu cầu tần số phải không đổi cho đến khi toàn bộ packet gửi xong.
+- Sử dụng packet đa khe, tốc độ truyền dữ liệu cao hơn nhờ phần header của mỗi packet chỉ đòi hỏi 1 lần 220µs (là thời gian chuyển đổi sau mỗi packet). Có thể hiểu ngắn gọn là thời gian truyền 3 packets đơn khe sẽ lớn hơn thời gian truyền 1 packet 3-khe. Bù lại, trong môi trường có nhiều tín hiệu truyền, các packet dài chiếm nhiều timeslot dễ bị nhiễu hơn, do đó dễ bị mất hơn.
+- Mỗi packet chứa 3 phần :Access Code (Mã truy cập), Header, Payload.
+    
+    Hình 2-14. Cấu trúc gói tin Bluetooth.
+- Kích thước của Access Code và Header là cố định.
+    * Access code: Gồm 72 bits, dùng trong việc đồng bộ dữ liệu, định danh.
+    
+    Hình 2-15. Access code
+    
+    
+    Hình 2-16. Cấu tạo một packet.
+- Trong Header có 54 bits, trong đó:
++ 	3 bits được dùng trong việc định địa chỉ, do đó có tối đa 7 Active slave.
++ 	4 bits tiếp theo cho biết loại pcket (một số không dùng đến).
++ 	1 bit điều khiển luồng.
++ 	1-bit ARQ : cho biết packet là Broadcast không có ACK.
++ 	1-bit Sequencing : lọc bỏ những packet trùng do truyền lại.
++ 	8 bits HEC : kiêm tra tính toàn vẹn của header.
+    Tổng cộng có 18 bits, các bit đó được mã hóa với 1/3 FEC ( Forward Error Correction) để có được 54 bit.
+    * PayLoad : phần chứa dữ liệu truyền đi, có thể thay đổi từ 0 tới 2744 bit/packet. Payload có thể là dữ liệu Voice hoặc data.
+2.8 Cách thức hoạt động của Bluetooth
+2.8.1 Cơ chế truyền và sửa lỗi
+- Kỹ thuật Bluetooth thực sự là rất phức tạp. Nó dùng kỹ thuật nhảy tần số trong các timeslot (TS), được thiết kế để làm việc trong môi trường nhiễu tần số radio, Bluetooth dùng chiến lược nhảy tần để tạo nên sức mạnh liên kết truyền thông và truyền thông thông minh. Cứ mỗi lần gửi hay nhận một packet xong, Bluetooth lại nhảy sang một tần số mới, như thế sẽ tránh được nhiễu từ các tín hiệu khác.
+- So sánh với các hệ thống khác làm việc trong cùng băng tần, sóng radio của Bluetooth nhảy tần nhanh và dùng packet ngắn hơn. Vì nhảy nhanh và packet ngắn sẽ làm giảm va chạm với sóng từ lò vi sóng và các phương tiện gây nhiễu khác trong khí quyển.
+- Có 3 phương pháp được sử dụng trong việc kiểm tra tính đúng đắn của dữ liệu truyền đi:
++	Automatic Repeat Request: dữ liệu sẽ được truyền lại cho tới khi bên nhận gửi thông báo là đã nhận đúng.
++	Cyclic Redundancy Check: mã CRC thêm vào các packet để kiểm chứng liệu Payload có đúng không.
+- Bluetooth dùng kỹ thuật sửa lỗi tiến FEC (Forward Error Correction) để sửa sai do nhiễu tự nhiên khi truyền khoảng cách xa. FEC cho phép phát hiện lỗi, biết sửa sai và truyền đi tiếp (khác với kỹ thuật BEC-Backward Error Control chỉ phát hiện, không biết sửa, yêu cầu truyền lại).
+- Giao thức băng tần cơ sở (Baseband) của Bluetooth là sự kết hợp giữa chuyển mạch và chuyển đổi packet. Các khe thời gian có thể được dành riêng cho các packet phục vụ đồng bộ. Thực hiện bước nhảy tần cho mỗi packet được truyền đi. Một packet trên danh nghĩa sẽ chiếm 1 timeslot, nhưng nó có thể mở rộng chiếm đến 3 hay 5 timeslot.
+- Bluetooth hỗ trợ 1 kênh dữ liệu bất đồng bộ, hay 3 kênh tín hiệu thoại đồng bộ nhau cùng một lúc, hay 1 kênh hỗ trợ cùng lúc dữ liệu bất đồng bộ và tín hiệu đồng bộ.
+2.8.2 Quá trình Piconect
+    
+    Hình 2-17. Mô hình piconet.
+- Một Piconet được tạo bằng 4 cách:
+•	Có Master rồi, Master thực hiện Paging để kết nối với 1 Slave.
+•	Một Unit (Master hay Slave) lắng nghe tín hiệu (code) mà thiết bị của nó truy cập được.
+•	Khi có sự chuyển đổi vai trò giữa Master và Slave.
+•	Khi có một Unit chuyển sang trang thái Active.
+- Để thiết lập một kết nối mới, tiến trình INQUIRY hay PAGE sẽ bắt đầu.
+- Tiến trình Inquiry cho phép 1 Unit phát hiện các Unit khác trong tầm hoạt động cùng với địa chỉ và đồng hồ của chúng.
+- Tiến trình Paging mới thực sự là tạo kết nối. Kết nối chỉ thực hiện giữa những thiết bị mang địa chỉ Bluetooth. Unit nào thiết lập kết nối sẽ phải thực hiện tiến trình paging và tự động trở thành Master của kết nối.
+- Trong tiến trình paging, có thể áp dụng vài chiến lược paging. Có một chiến lược paging bắt buộc tất cả các thiết bị Bluetooth đều phải hỗ trợ, chiến lược dùng khi các Unit gặp trong lần đầu tiên, và trong trường hợp tiến trình paging theo ngay sau tiến trình inquiry. Hai Unit sau khi kết nối nhờ dùng chiến lược bắt buộc này, sau đó có thể chọn chiến lược paging khác.
+- Sau thủ tục Paging (PAGE), Master thăm dò Slave bằng cách gửi packet POLL thăm dò hay packet NULL rỗng theo như Slave yêu cầu.
+- Chỉ có Master gửi tín hiệu POLL cho Slave, ngược lại không có.
+- Các vai trò của thiết bị trong piconet là :
+•	Stand by : Không làm gì cả.
+•	Inquiry : Tìm thiết bị trong vùng lân cận.
+•	Paging :Kết nối với 1 thiết bị cụ thể.
+•	Connecting : Nhận nhiệm vụ.
+- Khi thiết bị tạo paging muốn tạo các kết nối ở các tầng trên, nó sẽ gửi yêu cầu kết nối host theo nghi thức LMP (Link Manament Protocol). Khi Unit quản lý host này nhận được thông điệp, nó thông báo cho host biết về kết nối mới. Thiết bị từ xa có thể chấp nhận (gửi thông điệp chấp nhận theo nghi thức LMP) hoặc không chấp nhận kết nối (gửi thông điệp không chấp nhận theo nghi thức LMP).
+- Khi thiết bị không yêu cầu bất kỳ thủ tục thiết lập liên kết từ xa nào cả, nó sẽ gửi thông điệp "thiết lập hoàn thành". Thiết bị này vẫn nhận được yêu cầu từ các thiết bị khác. Khi một thiết bị khác đã sẵn sàng tạo liên kết, nó cũng gửi thông điệp "thiết lập hoàn thành". Sau đó 2 thiết bị có thể trao đổi packet trên kênh logic khác với LMP.
+2.9 Các tầng giao thức trong Bluetooth
+    Các giao thức cốt lõi trong Bluetooth:
+- Bluetooth Radio
+- Baseband.
+- Link Manager Protocol – LMP.
+- Logical Link Control and Adaptation Protocol – L2CAP.
+- Radio Frequency Communication – RFCOMM.
+- Service Discovery Protocol – SDP.
+- Telephony Control Protocol – TCP.
+- Adopted Protocols – AP.
+    
+    Hình 2-18. Các tầng nghi thức Bluetooth
+2.10 Bluetooth profile
+- Tổ chức SIG (The Bluetooth Special Interest Group ) đã định nghĩa một số mô hình sử dụng công nghệ Bluetooth. Họ vạch ra những ứng dụng chính về Bluetooth và những thiết bị trong tương lai, ví dụ như sự đồng bộ hóa giữa thiết bị cầm tay và PC, và kết nối không dây với Internet bằng một điện thoại di động hoặc một cordless modem.
+- Profile chỉ định giải pháp khả thi cho những chức năng đã được miêu tả trong các mô hình sử dụng đã được cung cấp, đồng thờinó cũng định nghĩa những protocol và những đặc trưng của mỗi protocol hỗ trợ cho mô hình sử dụng riêng biệt. Một số profile phụ thuộc vào những profile khác. Ví dụ, 3 profile (File Transfer Profile, Object Push Profile, và Synchronization Profile) phụ thuộc vào Generic Object Exchange Profile. Tất cả profile phụ thuộc vào Generic Access Profile…
+- Những sản phẩm Bluetooth hỗ trợ những bộ profile khác nhau, và để hỗ trợ một bộ profile nào đó thì những điểm đặc trưng bắt buộc của profile đó phải được thực hiện đầy đủ.
+- Những profile sau được Bluetooth SIG định nghĩa và thông qua:
+• Advanced Audio Distribution Profile (A2DP)
+• Audio/Video Remote Control Profile (AVRCP)
+• Basic Imaging Profile (BIP)
+• Basic Printing Profile (BPP)
+• Common ISDN Access Profile (CIP)
+• Cordless Telephony Profile (CTP)
+• Dial-up Networking Profile (DUN)
+• Fax Profile (FAX)
+• File Transfer Profile (FTP)
+• General Audio/Video Distribution Profile (GAVDP)
+• Generic Access Profile (GAP)
+• Generic Object Exchange Profile (GOEP)
+• Hands Free Profile (HFP)
+• Hard Copy Cable Replacement Profile (HCRP)
+• Headset Profile (HSP)
+• Human Interface Device Profile (HID)
+• Intercom Profile (ICP)
+• Object Push Profile (OPP)
+• Personal Area Networking Profile (PAN)
+• Serial Port Profile (SPP)
+• Service Discovery Application Profile (SDAP)
+• SIM Access Profile (SAP)
+• Synchronisation Profile (SYNCH)
+• Video Distribution Profile (VDP)
+    Những profile còn lại vẫn chưa hoàn thành, nhưng đã được Bluetooth SIG đề xuất là:
+• Handsfree Profile 1.5 (HFP 1.5)
+• Unrestricted Digital Information (UDI)
+• Wireless application Protocol over BT (WAP)
+• Extended Service discovery profile (ESDP)
+• Local Positioning Profile (LPP)
+• Video Conferencing Profile (VCP)
+• Device ID (DID) : cho phép thiết bị được nhận dạng theo bản kỹ thuật, nhà sản xuất, sản phẩm, phiên bản sản phẩm,…
+
+    Hình 2-19. Bluetooth v1.1 profile
+2.10.1 4 profile tổng quát trong đặc tả Bluetooth v1.1
+    Generic Access Profile: định nghĩa những thủ tục chung có liên quan tới việc phát hiện những thiết bị Bluetooth (idle mode procedures) và những khía cạnh quản lý các kết nối đến những thiết bị này devices (connecting mode procedures). Nó cũng định nghĩa những phương thức liên quan tới việc sử dụng những cấp độ bảo mật khác nhau. Thêm vào đó, profile này cũng chứa những thủ tục định dạng phổ biến của những tham số có thể được dùng trên giao diện người dùng. Mỗi thiết bị Bluetooth đều có hỗ trợ Generic Access Profile.
+    Service Discovery Application Profile: định nghĩa những tính năng và thủ tục cho một ứng dụng trong thiết bị Bluetooth để phát hiện ra những service của thiết bị Bluetooth khác.
+    Serial Port Profile: định nghĩa thủ tục cần thiết của thiết bị Bluetooth để thiết lập những kết nối emulated serial cable sử dụng RFCOMM giữa hai thiết bị ngang hàng. Generic Object Exchange Profile: định nghĩa những giao thức và thủ tục sẽ được dùng bởi những ứng dụng cần có năng lực trao đổi đối tượng(object exchange capabilities ). Khả năng có thể xảy ra là sự đồng bộ hoá, file transfer, và object push.
+2.10.2 Model-Oriented Profiles
+    Cordless Telephony Profile và Intercom Profile: định nghĩa những tính năng và thủ tục cần cho thao tác giữa các phần giữa những unit hoạt động trong mô hình "three-in-one phone" (một điện thoại có thể được dùng như là một cordless phone, một walkie-talkie, và một cellular phone). The Cordless Telephony Profile được dùng khi một điện thoại kết nối với một trạm cơ sở của một mạng điện thoại cố định thông qua Bluetooth và Intercom Profile thực hiện cái gọi là sử dụng "walkie-talkie" giữa những điện thoại Bluetooth.
+    
+    Hình 2-20. TCS profile.
+    Dial-Up Networking Profile: mô tả cách sử dụng một cellular phone hoặc một modem cạnh một computer như là một wireless modem để nhận dữ liệu, kết nối đến dial-up Internet access server, hoặc sử dụng dial-up service khác.
+     
+    Hình 2-21. Networking Profiles.
+    Fax Profile: định nghĩa cách một computer có thể sử dụng một Bluetooth cellular phone hoặc modem như là wireless fax modem để gửi hoặc nhận fax.
+    Headset Profile: định nghĩa những yêu cầu cần thiết cho một thiết bị Bluetooth hỗ trợ sử dụng headset. Wireless headsets có thể được dùng với cellular phones và laptops.
+     
+    Hình 2-22. Headset Profile.
+    LAN Access Profile: định nghĩa cách một thiết bị Bluetooth có thể truy cập dịch vụ của một mạng cục bộ sử dụng PPP (Point-To-Point Protocol) thông qua RFCOMM (giao thức Bluetooth -cạnh tranh với tín hiệu RS-232 )
+     
+    Hình 2-23. LAN Access.
+    File Transfer Profile: cho phép người sử dụng duyệt và hiệu chỉnh những tập tin và thư mục(object) trong hệ thống tập tin của thiết bị Bluetooth khác và chuyển giao object giữa 2 thiết bị Bluetooth. Những thiết bị phổ biến nhất là PC, notebook và PDA.
+    
+    Hình 2-24. File Transfer Profile
+    Object Push Profile: cho phép người sử dụng push, pull, và trao đổi những object đơn giản như business card giữa 2 thiết bị Bluetooth như PC, PDA và điện thoại di động.
+     
+    Hình 2-25. Object Push Profile.
+    Synchronization Profile: cho phép trao đổi dữ liệu về thông tin cá nhân (PIM) giữa 2 thiết bị tự động đồng bộ hóa dữ liệu(ví dụ: thành phần calendar hay phonebook). Đồng bộ hóa được dùng giữa những thiết bị notebook, PDA và điện thoại di động
+2.10.3 Một số profile khác
+    Đặc tả lúc ban đầu của Bluetooth gồm 13 profile như trên. Để bảo đảm thao tác giữa các phần trong ứng dụng, những nhóm làm việc trong tổ chúc SIG đã định thêm những profile mới. 12 profile thêm vào đã được công bố.
+- Generic Audio/Video Distribution Profile (GAVDP): định nghĩa những phần chung của các giao thức và ứng dụng dùng phân phối nội dung audio/video sử dụng kênh ACL.
+- Advanced Audio Distribution Profile (A2DP): định rõ sự  phân bố nội dung audio về chất lượng cao (high quality), mono hoặc stereo trên kênh ACL.
+- Audio/Video Remote Control Profile (AVRCP): định nghĩa việc truyền tín hiệu điều khiển từ một user đã được kích hoạt (user- activated A/V) đến một thiết bị Bluetooth từ xa.
+- Basic Imaging Profile (BIP): là một OBEX-based profile cho phép thiết bị chọn được kích cỡ và mã của dữ liệu hình ảnh để trao đổi.
+- Basic Printing Profile (BPP): là một OBEX-based profile cho phép in những e-mail dạng text, những thông điệp ngắn và định dạng những tài liệu từ thiết bị di động.
+- Hardcopy Cable Replacement Profile (HCRP): là một profile không quan trọng lắm dùng để in và quét bất cứ loại tư liệu nào. HCRP được thực hiện ngay lập tức ở trên L2CAP tránh liên  quan tới OBEX, RFCOMM, hoặc PAN.
+- Bluetooth Extended Service Discovery Profile (ESDP): cho Universal Plug và PlayTM (UPnPTM) là một profile dùng để phát hiện các thiết bị khác dùng dịch vụ UPnP và truy tìm thông tin về dịch vụ.
+- Hands-Free Profile (HFP): định rõ trường hợp một điện thoại di động được dùng chung với một thiết bị hands-free (như một dụng cụ trang bị cho xe hơi-car kit). HFP cung cấp những phương tiện không dây cho cả điều khiển từ xa và kết nối bằng giọng nói.
+- Human Interface Device Profile (HID): định ra việc sử dụng bàn phím không dây ( wireless keyboard ), thiết bị trỏ (pointing device), thiết bị chơi game (gaming device), và thiết bị điều khiển màn hình (remote monitoring device).
+- Common ISDN Access Profile: định rõ làm sao những ứng dụng truy cập ISDN thông qua Bluetooth.
+- Personal Area Networking Profile (PAN): định nghĩa IP cho những mạng cá nhân. PAN cũng hỗ trợ cho những điểm truy cập mạng ( network access point ) như LAN or GSM.
+- SIM Access Profile (SAP): định ra làm sao truy cập SIM card thông qua liên kết Bluetooth.
+2.11 Vấn đề sử dụng năng lượng trong Bluetooth
+2.11.1 Giới thiệu
+    Năng lượng là vấn đề cực kỳ quan trọng đối với thiết bị không dây vì những thiết bị này chỉ có thể sử dụng năng lượng từ pin, và điều này làm phát sinh những vấn đề liên quan như thời gian sử dụng pin, thời gian dự phòng và kích thước vật lý.
+    Khi kết nối bằng Bluetooth thì ta phải cần năng lượng để duy trì kết nối, năng lượng để điều khiển bộ vi xử lý thực hiện chồng nghi thức Bluetooth và năng lượng để khuếch đại tín hiệu âm thanh đến cấp độ người sử dụng có thể nghe được. Và những thiết bị di động nhỏ thì không thể sử dụng loại pin lớn nên tiêu thụ ít năng lượng là vấn đề quan tâm hàng đầu.
+    Chương trình quản lý năng lượng (power-managed application) là một ứng dụng cho phép thiết bị thực hiện chế độ ngủ(sleep mode) ở những giai đoạn đáng kể trong quy trình hoạt động. Sleep mode không làm tốn năng lượng của thiết bị, thật ra thì điều này không đúng lắm vì vẫn có vài chức năng luôn cần năng lượng, tuy nhiên vẫn ít hơn khi thiết bị thật sự “thức giấc” (awake), nói chung quản lý năng lượng sẽ là quản lý thời gian bỏ phí.
+    Một đặc điểm thêm nữa của việc quản lý năng lượng ở cấp độ ứng dụng là không ảnh hưởng xấu đến sự thực thi ứng dụng và việc lưu giữ năng lượng bằng trình ứng dụng không phụ thuộc vào kỹ thuật bên dưới ngay cả khi phần cứng được cải tiến để giảm thiểu sử dụng năng lượng.
+    Kỹ thuật Bluetooth thực hiện việc quản lý năng lượng đồng thời ở mức phần cứng (hardware) và phần mềm (software). Mặt hạn chế là thời gian đáp ứng (response time) của các ứng dụng tăng lên và nếu như không dùng đúng thì việc quản lý năng lượng sẽ làm cho trình ứng dụng không còn đáp ứng nhanh nữa. Bluetooth cung cấp một số chế độ năng lượng thấp và mội chế độ thích hợp với những loại ứng dụng khác nhau.
+    Trước khi chọn power management mode để sử dụng, độ trễ lớn nhất và mô hình radio traffic được mong chờ của ứng dụng phải được tính toán trước.
+2.11.2 Việc sử dụng và quản lý năng lượng trong công nghệ Bluetooth
+    Bluetooth cung cấp 3 chế độ có năng lượng thấp (low power mode) cho những lập trình viên sử dụng là hold, sniff, và park. Mỗi chế độ đều có những đặc điểm riêng và thuận lợi cho những lớp khác nhau của ứng dụng.
+    Hold mode thì thuận lợi cho những ứng dụng dự báo và điều khiển thời gian cho lần truyền dữ liệu kế tiếp. Khi mà khoảng thời gian giữa 2 lần truyền được thương lượng một cách độc lập bởi lần tiếp theo thì chế độ này vô cùng thích hợp để ứng dụng giám sát thường xuyên kết nối và có thể tăng hoặc giảm “thời gian ngủ” (sleep time) cho phù hợp.
+    Hold mode không thể tự biến mất và do đó không nên dùng cho những ứng dụng có nhu cầu hard latency.
+    Sniff mode cho phép một thiết bị Bluetooth-enabled lưu trữ năng lượng bằng cách giảm đi số slot mà master có thể truyền, bằng cách đó có thể giảm số slot mà slave phải nhận. Chế độ này có vẻ thuyết phục hơn so với hold mode khi nó có thể toát ra bất kỳ lúc nào. Slave sẽ lắng nghe một cách định kỳ số slot và điều này làm cho sniff mode đặc biệt thuận lợi hơn đối với những ứng dụng mà dữ liệu đòi hỏi được truyền ở những khoảng thời gian cách đều. Ứng dụng không thích hợp với sniff mode là những loại cần truyền lượng dữ liệu lớn một cách liên tục và điều này bắt buộc thiết bị phải giữ nguyên tình trạng awake.
+    Park mode là chế độ cho phép lưu giữ năng lượng ở mức tối đa. Chế độ này thuận lợi nhất đối với những ứng dụng có mô hình lưu lượng sóng vô tuyến (radio traffic) không thể dự đoán trước và độ trễ của việc thiết lập kết nối được giới hạn bởi những hạn định cao hơn (upper limit). Ví dụ ở Headset profile, liên kết RFCOMM phải được unparked càng sớm càng tốt khi có một yêu cầu cần được gửi đi thông qua Audio Gateway để đến headset.
+    Các chế độ low power của Bluetooth khác nhau trong việc hỗ trợ quản lý năng lượng và do đó không có chế độ nào thật sự tốt nhất để sử dụng. Để xác định chế độ low power được dùng thì phải dựa vào dãy các nhân tố phụ thuộc vào loại ứng dụng và những nhu cầu của nó.
+    Những nhân tố chính là:
+- Ứng dụng sử dụng vịêc quản lý năng lượng có tiện lợi không.
+- Độ trễ tối đa mà ứng dụng có thể chấp nhận.
+- Mô hình radio traffic được mong chờ: nhẫu nhiên(random), định kỳ(periodic), truyền loạt (bursty
+2.12 So sánh Bluetooth với các kĩ thuật không dây khác : Hồng ngoại, Wi-fi (802.11b wireless)
+2.12.1 So sánh Bluetooth với Wifi
+    Wi-Fi là chuẩn do IEEE (Institute of Electrical and Electronics Engineers) phát triển, đã trở thành một chuẩn rất phổ biến trong kết nối không dây. Wi-Fi là chuẩn áp dụng cho mạng LAN không dây kiểu Ethernet1[3], hoạt động trong vùng sóng radio 2.4 Ghz. Tốc độ truyền dữ liệu nói chung là 1 Mbps hoặc 2 Mbps với 802.11 và 5.5 Mbps hoặc 11 Mbps với 802.11b, mặc dù tốc độ có thể lên đến khoảng 20 Mbps với 802.11b. Wi-Fi hỗ trợ mạng đa điểm (multipoint networking) những kiểu truyền dữ liệu như các gói tin broadcast, multicast, unicast. Chuẩn thông thường thường là một access point (AP) đến 10-20 trạm (station), nhưng địa chỉ MAC có trong mỗi thiết bị đã cấp một số ảo vô tận để thiết bị có thể tham gia vào một mạng nhất định. Carrier Sense Multiple Access với Collision Avoidance (CSMA/CA) đã được dùng để điều khiển các kênh thông thường và ngăn xung đột. 
+    Tuy nhiên vì thế mà khá đắt và tốn nhiều năng lượng hơn.
+    
+    
+    
+    
+    Bảng 2-1. So sánh giữa Bluetooth và Wifi.
+Wi-fiBluetooth    
+Sử dụng điển hình (Typical usage)Phiên bản không dây của chuẩn Ethernet (wireless Ethernet), chỉ thay thế cáp cho truy cập mạng LAN.
+Truy cập mạng không dây với khoảng cách dài.Thay thế cáp cá nhân (wireless USB) cho nhiều ứng dụng khác nhau.
+Truy cập mạng không dây với khoảng cách
+trung bình.    
+Băng thông11 Mbps, chia sẻ 2 đến 3 Mbps với WEP.1 Mbps, chia sẻ Version 1.1 và 1.2 là
+723.1 Kbps, version 2.0 là 2.1 Mbps, thấp hơn
+khi bị nhiễu.    
+NhiễuCác thiết bị sử dụng sóng radio khác, các vật liệu xây dựng, trang
+thiết bị.Các thiết bị sử dụng sóng radio khác, các vật liệu xây dựng, trang thiết bị.    Bảo mậtKhông an toàn nếu
+không bảo vệ tốt. Cần giải quyết những trục trặc của mạng, truy cập bất hợp pháp, hi-jacking, "Đánh hơi mạng" (hay còn gọi là dò tìm lỗ hổng mạng thông qua việc dò tuần tự các gói tin ở cổng mạng khác nhau), đánh cắp phiên làm việc và truy cập trái phép.
+Liên kết mức độ WEP dễ bị bẻ gãy. Tin cậy vào những truy cập ở cấp độ ứng dụng và sự
+mật hoá.Bảo mật thấp. Liên kết
+được thiết lập ở mức độ sự thẩm định quyền (authentication). Khó khăn hơn cho traffic sniffing. Vẫn còn phụ thuộc vào sự thẩm định quyền ở cấp độ ứng dụng và sự mật hoá.    Tiêu thụ năng lượngKhá cao.
+Thời gian sử dụng pin rất ngắn do tiêu thụ nhiều năng lượng và duy trì kết nối.Thấp.
+Có 3 chế độ năng lượng thấp (Hold mode, Sniff mode, Park mode) giúp tăng thời gian sử dụng
+pin.    Khoảng cách
+(ngoài trời)200 m - 11 Mbps.
+500 m - 1 Mbps.30 m-100 m.    Khoảng cách
+(trong nhà)40 m - 11 Mbps.
+100 m - 1 Mbps.10 m-30 m.    Số kênh11 DSSS.
+79—FHSS.79
+    Năng lượng truyền tối đa20 dBm—FHSS.
+30 dBm—DSSS.20 dBm    Tần số2.4GHz -b/g
+5.8GHz - a2.4GHz    Giá thànhCaoThấp    Kết nối theo đường
+thẳngKhôngKhông
+    Thiết bị hỗ trợHỗ trợ trong một số laptop hiện đại, PDA: đòi external H/W card, Notebook computer, desktop computer, server.Hỗ trợ trong laptop hiện đại, nhiều điện thoại di động, PDA, thiết bị điện tử, thiết bị tự động trong công nghiệp và văn phòng.    
+
+Vị trí sử dụngỞ trong tầm hoạt động của các thiết bị WLAN, thường là trong các toà nhà.Bất cứ nơi nào có ít nhất 2 thiết bị Bluetooth.    Ngày bắt đầu phát
+triển19901998    Số thiết bị có thể truy cập đồng thờiNhiều chia sẻ.
+IP&P2P.Tối đa 8 chia sẻ.
+P2P.        
+2.12.2 So sánh Bluetooth với IrDA
+    IrDA (Infrared Data Association) là một tổ chức thương mại phi lợi nhuận với hơn 160 công ty thành viên về thiết bị máy tính, viễn thông, phần mềm, adapter…Kết nối hồng ngọai là kỹ thuật không dây sử dụng tia hồng ngoại để truyền dữ liệu, là chuẩn kết nối theo kiểu ad-hoc trong khoảng cách 1m. IrDA đã được khai thác từ rất lâu và được tích hợp vào nhiều thiết bị cá nhân như điện thoại di động, PC, PDA, printer…với số lượng thiết bị ngày càng tăng. Ngày nay, các nhà sản xuất đã tích hợp cả IrDA và Bluetooth vào thiết bị của họ để việc kết nối không dây trong khoảng cách ngắn hiệu quả hơn.
+    Bảng 2-2. So sánh IrDA và Bluetooth
+IrDABluetooth    
+Sử dụng điển hình (Typical usage)Kỹ thuật không dây dùng tia hồng ngoại để truyền dữ liệu
+Giao tiếp point-to-point hoặc point-to-multipoint
+khoảng cách ngắnThay thế cáp cá nhân Truy cập mạng không dây	với	khoảng	cách trung bình    
+Băng thông4Mbps - 16Mbps1 Mbps, chia sẻ Version   1.1   và   1.2  là 723.1 Kbps, version 2.0 là   2.1   Mbps,   thấp hơn
+khi bị nhiễu.    
+NhiễuBị ảnh hưởng bởi độ trong sạch của ánh sáng.Các thiết bị sử dụng sóng radio khác, các vật liệu
+xây dựng, trang thiết bị.    
+Bảo mậtKhoảng cách ngắn + truyền thẳng =>bảo mật ở cấp độ thấp nhưng độ an toàn cao. Phần còn lại phụ thuộc vào ứng dụng.Bảo mật thấp. Liên kết được thiết lập ở mức độ sự thẩm định quyền (authentication). Khó khăn hơn cho traffic sniffing. Vẫn còn phụ thuộc vào sự thẩm định quyền ở cấp độ ứng dụng
+và sự mật hoá.    Tiêu thụ năng lượngRất thấp
+Không cần phải duy trì kết nối nên thời gian sử dụng pin rất dài.Thấp
+Có 3 chế độ năng lượng thấp (Hold mode, Sniff mode, Park mode) giúp tăng thời gian sử dụng pin.    
+Khoảng cách10cm – 1m.Người dùng cần phải ở gần một access point, khoảng 10m. Nhưng với thiết bị đặc biệt thì khoảng cách này được
+tăng lên.    Giá thànhRất thấpThấp    
+
+Kết nối theo đường thẳngBắt buộc.
+Tầm	hoạt	động trong một hình nón có mà góc ở chóp là 300 và không thể xuyên vật cản.
+IrDa không thực sự ổn định và không phải bất cứ thiết bị nào cùng hỗ trợ chuẩn IrDA  cũng
+có thể kết nối với nhau.Không.
+Có thể xuyên qua vật
+cản.
+Thiết bị nếu đã hỗ trợ Bluetooth thì chắc chắn kết nối với nhau được.
+
+.    
+Thiết bị hỗ trợTrong rất nhiều điện thoại di động, PC, PDA, modem, camera và rât nhiều thiết bị điện tử khác trong y tế và công nghiệp.Hỗ trợ trong laptop hiện đại, nhiều điện thoại di động, PDA, thiết bị điện tử, thiết bị tự động trong công nghiệp và văn phòng    Số thiết bị có thể truy
+cập đồng thờiNhiều chia sẻTối đa 8 chia sẻ        
+2.13 Vấn đề an toàn bảo mật trong Bluetooth
+2.13.1 Sơ lược về vấn đề bảo mật trong các chuẩn không dây.
+a) Sơ lược chuẩn bảo mật mạng không dây trong 802.11
+    Kỹ thuật kết nối Bluetooth cũng là kỹ thuật kết nối không dây thông thường, do đó các vấn đề bảo mật cốt lõi của mạng không dây cũng là những vấn đề chính trong bảo mật mạng Bluetooth. Việc giới thiệu sơ lược về các chuẩn bảo mật mạng không dây truyền thống giúp ta có cái nhìn tổng quát về qui trình bảo mật trong kỹ thuật Bluetooth.
+b) Chuẩn bảo mật WEP trong IEEE 802.11
+    Định hướng ban đầu của mạng Wireless LAN (WLAN) trong an ninh mạng là sử dụng SSID (System Set Identifer) và xác thực điều khiển thông qua địa chỉ MAC của Client, với ý tưởng SSID được sử dụng giống như một từ khoá dùng chung cho các Access Point (AP) và các Client.
+    Nếu Client sử dụng SSID không giống với SSID của AP thì Client đó không có khả năng truy cập vào mạng LAN thông qua AP. Ngoài ra, WLAN còn hỗ trợ việc lọc địa chỉ MAC để điều khiển mức truy cập mạng. Các bảng thiết lập bằng tay trên AP cho phép hay ngăn cấm các Client truy cập qua AP vào mạng.
+
+    Hình 2-26. Hai phương pháp truy cập mạng WLAN.
+    Tuy nhiên, khi mạng WLAN phát triển, được ứng dụng nhiều thì có nhiều vấn đề về an ninh mạng phát sinh và trở thành mối quan tâm đặc biệt khi triển khai mạng WLAN và việc sử dụng SSID và địa chỉ MAC không đảm bảo được an ninh mạng.
+    Tiêu chuẩn 802.11 định nghĩa khả năng bảo mật WEP (Wired Equivalency Privacy) cho mạng WLAN sử dụng các khoá mã hoá 40 bits cho thuật toán mã hoá RC4, đây được xem là thuật toán đối xứng vì nó sử dụng khoá liên kết để mã hoá và giãi mã plaintext Protocol Data Unit (PDU).
+    Khi sử dụng phương thức bảo mật này, một AP và các Wireless Client dùng chung các khoá WEP tĩnh. Khoá mã này được kiểm tra trong quá trình xác thực (Authentication), nếu khoá không tương thích thì Client không được liên kết với AP và do đó không thể truy cập được vào mạng. Khoá mã tỉnh dùng chung có khả năng dò tìm và bị lấy cắp, khi đó việc mã hoá không còn ý nghĩa với vấn đề an ninh mạng nữa.
+
+
+
+
+    Hình 2-27. Khoá WEP tĩnh được chia sẻ cho AP và các Client trong mạng.
+    Cisco hỗ trợ sử dụng tới 4 khoá mã hoá WEP có độ dài lên đến 128 bits trong một AP để tăng cường mức độ an ninh bảo mật của mạng. Tương ứng với khoá mã WEP, có 2 phương thức xác thực, đó là phương thức xác thực sử dụng khoá mã chia sẻ dùng chung (Share Key Authentication) và xác thực mở (Open Authentication).
+    Xác thực sử dụng khoá mã dùng chung (shared key) cùng mục đích an ninh giống như SSID ban đầu, nhưng khi đó sẽ hạn chế khả năng linh hoạt của mạng WLAN. Trong khi đó xác thực sử dụng khoá mã mở lại được ưu dùng hơn, nhưng cũngbộc lộ một số nhược điểm.
+2.13.2 Những vấn đề nảy sinh trong an ninh mạng không dây
+    SSID là một chuỗi ký tự 32 bits, ban đầu nó được xem là một cách bảo mật nhưng khi mạng WLAN phát triển thì nó không còn được coi là phương thức bảo mật nữa. Vì khi sử dụng phương thức xác nhận mở, 802.11 cho phép các Wireless Client sử dụng giá trị SSID trắng (giá trị NULL) để liên kết với AP trong quá trình tạo liên kết và xác thực.
+    Các nguy cơ đe dọa an ninh mạng từ phía ngoài do sử dụng môi trường truyền dẫn là không khí ở tấn số “free” nên bất kỳ thiết bị không dây nào nằm trong vùng phát sóng của AP cũng nhận được thông tin từ AP truyền đến.
+     
+    Hình 2-28. Mạng WLAN và các thiết bị xâm nhập.
+    Nếu các khoá mã WEP được chứa trong card mạng không dây (Wireless Card) thì khi bị đánh cắp, các Client có được Card mạng đó có thể truy cập mạng mà không bị phát hiện từ phía người quản trị mạng, hay AP. Giả sử có phát hiện được thì phải thay đổi khoá mã WEP, điều này trở nên phức tạp với những mạng có số lượng người dùng lớn.
+    
+    
+    Hình 2-29. Card mạng với khoá mã WEP bên trong.
+    Đối với vấn đề xác thực, chuẩn 802.11 chỉ xác định phương thức xác định một chiều (one-way), từ phía AP đối với Client chứ chưa có chiều xác thực ngược lại từ Client đến AP (Rogue AP). Mặt khác các khoá mã sử dụng trong khi mã hoá dử liệu là các khoá mã tỉnh, không có cách tạo mã và quản lý các khoá mã đó. Vì vậy nếu có thể thay đổi thướng xuyên các khoá mã sẽ an toàn hơn cho các khoá mã không bị đánh cắp hoặc phát hiện ra.
+    “Rogue AP” (AP giả mạo) có thể được dùng để tấn công mạng khi được sử dụng và đặt trong vùng gần với vùng phủ sóng của mạng WLAN. Các Client khi di chuyển đến gần Rogue AP sẽ tự động liên kết với AP giả mạo đó và cung cấp các thông tin của mạng WLAN cho Rogue AP.
+    
+    Hình 2-30. Các Rogue AP tấn công mạng bằng cách giả danh một AP hợp pháp.
+    Mặt khác, chuẩn 802.11 không hỗ trợ các phương pháp xác thực người dùng truy nhập từ xa vào mạng hiện tại như các giao thức xác thực RADIUS, LDPA, ... nên hạn chế khả năng quản lý an ninh mạng một cách tập trung.
+2.13.3 Quy trình bảo mật trong Bluetooth
+    Trong công nghệ hoặc những mặt khác thì vấn đề an toàn tuyệt đối có lẽ không bao giờ được đảm bảo. Chúng sẽ càng ngày càng phát triển và quantrọng đối với bất kỳ kỹ thuật nào. Bluetooth SIG đã đưa ra những cải tiến về bảo mật nhằm tăng tính vững chắc cho tiến trình pairing đồng thời bảo đảm sự riêng tư khi kết nối đã được thiết lập, cố gắng luôn đi trước một bước để đảm bảo thiết bị không bị tấn công.
+    Bluetooth có nhiều khía cạnh về bảo mật cần giải quyết. Đối với mục tiêu là mật mã hóa và thẩm định quyền, Bluetooth Special Interest Group đã tạo ra 4 yếu tố để bảo mật. Nhưng mức độ an toàn của chúng không được tốt lắm, vì những đặc tả về an toàn của nó đã khiến cho nhiều thiết bị Bluetooth có thể được truy cập tự do mà không qua một rào cản nào cả.
+    Bluetooth sử dụng môi trường wireless do đó nảy sinh một số vấn đề bảo mật của chuẩn wireless. Đây là lĩnh vực con người đang khám phá và cũng là nơi có thể làm nhiễu tín hiệu bạn sử dụng. Bluetooth đang cố gắng giải quyết những vấn đề này bằng cách sử dụng hệ thống nhảy tần số. Khi 2 thiết bị Bluetooth kết nối và đồng bộ với nhau chúng sẽ nhảy 79 bước trên tần số 2.4 GHz. Những phiên bản cũ của Bluetooth có rắc rối với việc sử dụng tần số do một số nước hạn chế bước nhảy là 23. Thiết bị 23 bước nhảy không thể giao tiếp với với thiết bị 79 bước nhảy. Tuy nhiên sau các thoả thuận của Bluetooth Special Interest Group, Bluetooth đã sử dụng 79 bước nhảy ở tất cả các nước.
+    Bảo  mật  Bluetooth  cũng  phải  đối  mặt  với  những  vấn  đề  phổ  biến. Bluetooth sử dụng 4 yếu tố khác nhau để duy trì sự bảo mật. Đầu tiên là địa chỉ thiết bị Bluetooth do Institute of Electrical and Electronics Engineers (IEEE) định nghĩa, với 48-bit duy nhất cho mỗi thiết bị Bluetooth. Thứ hai, Private Authentication Key là một số ngẫu nhiên 128-bit. Thứ ba, Private Encryption Key có từ 8-128-bit dùng để mật mã hoá. Cuối cùng là một số ngẫu nhiên do chính thiết bị tạo ra.
+    Khi 2 thiết bị muốn kết nối với nhau, một số ngẫu nhiên (link key) được tạo ra, và nếu thiết bị không đồng ý với điều đó, chúng sẽ không thể kết nối . Đó có thể là vấn đề hàng đầu nếu thiết bị không chờ đủ lâu để kết nối và link key không được tạo ra. Vấn đề khác của những phiên bản trước của Bluetooth là nếu thiết bị slave thực hiện thuật toán tạo khóa nhanh hơn master, cả hai sẽ đều coi mình là master và không thể kết nối được.
+    Một vấn đề khác của Bluetooth là bảo mật không là điều bắt buộc. Có 3 mức độ trong vấn đề bảo mật chung (Generic Security) của Bluetooth. Cấp 1 là không bảo mật (non-secure), nghĩa là mọi thiết bị đều có thể giao tiếp với thiết bị Bluetooth này. Cấp 2 là bảo mật theo mức dịch vụ (service-level enforced security), thiết bị sẽ kết nối sau đó mới xác thực. Cấp 3 là bảo mật theo mức liên kết (link-level enforced security), nó sẽ không kết nối đến thiết bị trừ khi đã được xác thực. Vấn đề chính của việc bảo mật ở cấp độ này là có một số thiết bị Bluetooth đã được kích hoạt theo chế độ mặc định và việc bảo mật bị vô hiệu hoá. “Một số thiết bị Bluetooth được lưu hành với các yếu tố bảo mật đã bị vô hiệu hoá, cho phép những thiết bị Bluetooth khác truy cập vào, theo RSA Security.”
+    Có 2 loại cấp độ (level) truy cập vào thiết bị Bluetooth. Các dịch vụ (Services) trong một thiết bị Bluetooth cũng có 3 cấp độ. Có một số dịch vụ đòi hỏi sự xác thực (authentication) và quyền hạn (authorization), một số chỉ cần sự xác thực, và một số thì không cần gì cả (open services). Có 2 cấp độ bảo mật ở mức thiết bị. Thiết bị un-trusted cần sự xác thực trong khi thiết bị trusted thì không cần.
+    Những nguy hiểm đặc biệt và những yếu điểm của mạng không dây và thiết bị cầm tay bao gồm:
+- Tất cả những yếu điểm tồn tại trong mạng thông thường đều có trong mạng không dây.
+- Những người xấu có thể giành được quyền truy cập bất hợp pháp vào một chi nhánh mạng thông qua kỹ thuật kết nối không dây, một đường vòng để tránh bất kỳ firewall nào.
+- Những thông tin nhạy cảm không được mã hóa (hoặc mã hóa bằng kỹ thuật đơn giản) được truyền đi giữa hai thiết bị không dây có thể bị ngăn chặn và lộ ra.
+- Tấn công DoS có thể được thực hiện ở kết nối không dây hoặc trên thiết bị.
+- Kẻ xấu có thể đánh cắp được những đặc điểm nhận dạng của người dùng hợp pháp và giả mạo họ để truy cập vào hệ thống mạng nội bộ (internel) hoặc bên ngoài (external).
+- Dữ liệu quý có thể bị hỏng trong quá trình đồng bộ sai.
+- Kẻ xấu có thể can thiệp vào thông tin cá nhân của người dùng và theo dõi được mọi hoạt động của họ.
+- Kẻ xấu có thể thu lợi bất chính bằng cách sử dụng những thiết bị không hợp pháp (ví dụ như thiết bị client và access point) truy cập vào thông tin quý.
+- Thiết bị cầm tay rất dễ bị mất và lộ thông tin mật.
+- Dữ liệu có thể bị lấy mà không hề bị phát hiện do cấu hình thiết bị không đúng cách.
+- Virus hoặc những đoạn code nguy hiểm có thể làm hỏng dữ liệu trên thiết bị không dây va sau đó được đưa vào kết nối mạng có dây.
+- Kẻ xấu có thể thông qua mạng không dây kết nối đến những tổ chức hoặc những chi nhánh từ đó bắt đầu tấn công mà không để lại dấu  vết nào.
+- Những kẻ xâm nhập từ bên ngoài có thể chiếm được quyền điều khiển và quản lý mạng, từ đó họ có thể vô hiệu hóa hoặc phá vỡ mọi hoạt động.
+- Kẻ xấu có thể dùng “nhóm thứ 3”, những dịch vụ mạng không dây không đáng tin cậy để giành quyền truy cập những tài nguyên của một chi nhánh hay tổ chức khác.
+- Tấn công nội bộ có thể thực hiện được thông qua những đường truyền đặc biệt.
+    Chuẩn không dây trên khắp thế giới đã phát triển và có nhiều định dạng khác nhau để giải quyết vấn đề an toàn cho người sử dụng. Kỹ thuật không dây Bluetooth là một trong những chuẩn không dây mới nhất. Bluetooth là lựa chọn thích hợp nhất cho mạng cá nhân (Personal Area Networks PANs)
+    Những người phát triển sản phẩm dựa vào kỹ thuật không dây Bluetooth có nhiều chọn lựa cho việc thực hiện vấn đề bảo mật.
+    Trong các thiết bị Bluetooth có 4 yếu tố dùng để duy trì sự an toàn ở cấp độ liên kết:
+- BD_ADDR (Bluetooth device address): một địa chỉ 48 bit duy nhất dành cho mỗi thiết bị Bluetooth do IEEE (Institute of Electrical and Electronics Engineers) qui định.
+- Private authentication key: một số ngẫu nhiên dài 128 bit dùng cho việc xác nhận người sử dụng.
+- Private encryption key: số dài 8-128 bit dùng để mã hóa.
+- RAND: một số ngẫu nhiên hoặc giả ngẫu nhiên 128 bit, được thay đổi thường xuyên bởi chính thiết bị Bluetooth.
+    Trong Bluetooth Generic Access Profile, có 3 chế độ bảo mật khi truy cập Bluetooth giữa 2 thiết bị:
+- Security Mode 1: không bảo mật
+- Security Mode 2: bảo mật thi hành ở cấp độ dịch vụ
+- Security Mode 3: bảo mật thi hành ở cấp độ liên kết
+    Sự khác biệt giữa mode 2 và mode 3 là ở mode 3 quy trình bảo mật được khởi động trước khi kênh truyền được thiết lập. Các nhà sản xuất sẽ tự chọn chế độ bảo mật cho sản phẩm của mình. Thiết bị và dịch vụ cũng có những mức độ bảo mật khác nhau. Thiết bị có 2 mức độ là "trusted device" and "untrusted device". Một thiết bị khi kết nối với thiết bị trusted sẽ được truy cập vào mọi dịch vụ mà không bị hạn chế.
+    Dịch vụ có 3 mức độ: dịch vụ yêu cầu cấp phép và xác nhận, dịch vụ chỉ yêu cầu xác nhận và dịch vụ “mở” đối với tất cả thiết bị.
+    Thuật toán mã hóa trong Bluetooth cũng chắc chắn. Thông thường trong một cặp thì việc truyền thông cũng rất an toàn như giữa chuột và bàn phím với PC, một điện thoại di động đồng bộ với PC và một PDA dùng điện thoại di động như một modem.
+    Mô hình dưới đây miêu tả quá trình thiết lập kênh truyền, khởi đầu việc xác nhận người dùng.
+
+    Hình 2-31. Quá trình thiết lập kênh truyền
+    Khi xác nhận một thiết bị Bluetooth, nó sẽ thực hiện theo Bluetooth Link Manager Protocol và chế độ pairing hiện thời, tùy thuộc vào cấp độ bảo mật được sử dụng.
+    Mỗi thiết bị Bluetooth chỉ hoạt động ở một chế độ trong một thời điểm riêng biệt.
+2.13.4 Tiến trình mã hóa trong Bluetooth(  Bluetooth Encryption Process)
+    Đặc tả Bluetooth cũng cho phép 3 chế độ mã hóa khác nhau để hỗ trợ cho sự an toàn của dịch vụ.
+- Chế độ mã hóa 1: không thực hiện mã hóa khi truyền thông.
+- No encryption is performed on any traffic.
+- Chế độ mã hóa 2: truyền thông đại chúng (broadcast) thì không cần bảo vệ (không mã hóa), nhưng truyền cho cá nhân phải mã hóa theo link key riêng biệt.
+- Chế độ mã hóa 3: tất cả mọi sự truyền thông đều phải được mã hóa theo link key của master.
+2.13.5 Những vấn đề trong an toàn bảo mật của chuẩn Bluetooth ( Problems with the Bluetooth Standard Security)
+- Mặt mạnh của phép tạo ngẫu nhiên challenge-response không hề được biết đến: RNG (Random Number Generator) thường dùng số cố định hoặc những số thay đổi theo chu kỳ, điều này làm giảm hiệu quả của phép xác nhận đúng.
+- Cho phép những số PIN ngắn: sử dụng những số PIN đơn giản để tạo ra các link key và encryption key nên dễ dàng bị đoán ra. Tăng độ dài số PIN sẽ làm tăng độ an toàn. Nhưng mọi người lại có xu hướng chọn số PIN ngắn.
+- Việc tạo và phân phối số PIN không đơn giản: thiết lập số PIN trong một mạng Bluetooth rộng lớn có nhiều người sử dụng rất khó khăn và thường xảy ra các vấn đề về an toàn bảo mật.
+- Độ dài của encryption key có thể bị “thương lượng”: tổ chức Bluetooth
+- SIG cần phát triển thêm quy trình phát sinh key khởi tạo mạnh mẽ hơn.
+- Master key bị dùng chung: Nhóm Bluetooth SIG cần phát triển một phương pháp truyền khóa đại chúng tốt hơn.
+- Không xác nhận người sử dụng: chỉ cung cấp cách xác nhận thiết bị.  Xác nhận người sử dụng chỉ có thể thực hiện ở bảo mật cấp độ ứng dụng.
+- Việc thử xác nhận được lặp đi lặp lại nhiều lần: Bluetooth SIG cần phát triển một giới hạn để ngăn chặn số yêu cầu quá nhiều. Đặc điểm kỹ thuật Bluetooth cần đưa ra một khoảng thời gian hạn định (time-out) giữa hai lần thử và được tăng lên theo số mũ.
+- Thuật toán stream cipher E0 rất yếu kém: bắt nguồn từ phép tổng phối hợp stream cipher (summation combiner stream cipher) được Massey và Rueppel đưa ra vào giữa những năm 1980. Hầu hết tất cả các cuộc tấn công lớn vào loại stream ciphers này đều liên quan đến sự tấn công dựa vào việc đoán những khóa đơn giản. Gần đây việc giải các mật mã càng chỉ rõ tính yếu kém của the E0 cipher.
+- Chiều dài các key có thể bị “thương lượng”: Một thỏa thuận chung toàn cầu về chiều dài tối thiểu của key cần phải được thiết lập.
+- Sự phân bổ unit key có thể dẫn đầu về eavesdropping: một kẻ xấu  (chiếm được quyền truy cập bất hợp pháp) có thể “thỏa hiệp” biện pháp bảo mật giữa 2 người sử dụng khác nếu kẻ đó kết nối với một trong 2 người này. Điều này là bởi vì link key (unit key), lấy được từ thông tin chung, đã bị lộ.
+- Sự riêng tư có thể bị xâm phạm nếu địa chỉ thiết bị Bluetooth(BD_ADDR) bị lộ ra và bị liên kết với một người “đặc biệt”, khi đó mọi hành động của người sử dụng thiết bị sẽ bị ghi nhận và không còn sự riêng tư.
+- Cách xác nhận thiết bị là shared-key challenge-response đơn giản: phương pháp xác nhận challenge-response chỉ một chiều là mục tiêu chính trong các cuộc tấn công man-in-the-middle. Nên yêu cầu xác nhận lẫn nhau để tăng tính tin cậy: cả người sử dụng lẫn mạng đều hợp pháp.
+- End-to-end security không được thi hành: chỉ thực hiện việc xác thực và mã hóa ở các liên kết riêng biệt. Các phần mềm ứng dụng ở tầng trên của Bluetooth cần phải được phát triển thêm.
+- Dịch vụ bảo mật bị hạn chế: không có kiểm định (audit), thực hiện (nonrepudiation), và những dịch vụ khác. Nếu cần thiết thì những điều này sẽ được thực hiện ở những vị trí đặc biệt trong một mạng Bluetooth.
+2.13.6 Hacking
+⮚ Impersonation attack by inserting/replacing data
+    Khi không thực hiện mã hóa thì tấn công kiểu này rất dễ đạt được bằng cách sửa CRC check data sau khi đã thay đổi dữ liệu. Nếu trong hệ thống có  mã hóa thì rất khó do hacker phải tìm hiểu cấu trúc của gói dữ liệu để việc thay đổi có hiệu quả như mong muốn.
+⮚ Bluejacking
+    Là kiểu gửi tin nhắn nặc danh ở những nơi công cộng bằng cách lợi dụng tiến trình pairing của kỹ thuật Bluetooth. Kẻ quấy rối gửi tin nhắn vào lúc khởi động giai đoạn “bắt tay” vì phần “name”- hiện tên thiết bị muốn kết nối- có thể dài đến 248 ký tự. Thực ra mục đích của các nhà sản xuất là muốn thể hiện thông tin của thiết bị kết nối rõ ràng hơn để người dùng thấy nhằm yên tâm thực hiện trao đổi, cập nhật và đồng bộ dữ liệu. Nhưng đặc điểm này đã bị kẻ xấu lợi dụng để gửi những tin nhắn nặc danh cho các thiết bị Bluetooth đang hoạt động trong vùng xung quanh (10m).
+    Ảnh hưởng:
+- Làm người chủ thiết bị khó chịu, hoang mang lo lắng.
+- Không hề ảnh hưởng đến vấn đề an toàn, Nó không dời hoặc thay đổi bất kỳ dữ liệu nào trên thiết bị.
+- Khả năng mở rộng của ý tưởng này là gửi vCard’ với một tên thông thường như “Home” hoặc “Work” nhằm cố gắng viết đè lên thông tin đã có sẵn trong máy người nhận.
+2.14 Ưu nhược điểm và tương lai của Bluetooth
+2.14.1 Ưu điểm 
+- Truyền dữ liệu giữa các thiết bị không cần cáp trong khoảng cách trung bình (10m, có thể xa hơn với thiết bị đặc biệt).
+- Sử dụng sóng radio ở băng tần không cần đăng ký 2.4GHz ISM  (Industrial, Scientific, Medical).
+- Có khả năng xuyên qua vật thể rắn và phi kim, không cần phải truyền thẳng (line-of-sight).
+- Khả năng kết nối point-point, point-multipoint.
+- Bluetooth sử dụng cùng một chuẩn giao thức nên mọi thiết bị Bluetooth đều có thể làm việc với nhau.
+- Sử dụng ít năng lượng, thích hợp với các thiết bị di động có nguồn năng lượng hạn chế.
+- Sử dụng “frequency hopping” giúp giảm đụng độ tối đa.
+- Có khả năng hỗ trợ 3 kênh thoại và 1 kênh dữ liệu.
+- Có khả năng bảo mật từ 8 => 128bit.
+- Thiết bị nhỏ gọn, số lượng thiết bị hỗ trợ Bluetooth ngày càng nhiều và đa dạng.
+- Giá thành thiết bị rẻ, truyền dữ liệu miễn phí.
+- Thiết lập kết nối dễ dàng và nhanh chóng, không cần access point.
+- Sử dụng được ở bất cứ nơi nào.
+- Được đỡ đầu bởi 9 tập đoàn khổng lồ, và ngày càng có nhiều tổ chức tham gia vào=>Bluetooth ngày càng được phát triển hoàn thiện và mạnh mẽ hơn.
+2.14.2 Nhược điểm
+- Do sử dụng mô hình adhoc  không thể thiết lập các ứng dụng thời gian thực.
+- Khoảng cách kết nối còn ngắn so với các công nghệ mạng không dây khác.
+- Số thiết bị active, pack cùng lúc trong một piconect còn hạn chế.
+- Tốc độ truyền của Bluetooth không cao.
+- Bị nhiễu bởi một số thiết bị sử dụng sóng radio khác, các trang thiết bị khác.
+- Bảo mật còn thấp.
+2.14.3 Tầm nhìn ứng dụng và tương lai của Bluetooth
+    Bluetooth là thành quả nghiên cứu của nhiều công ty và được phát triển bởi nhóm SIG (Bluetooth Special Interest Group), tổ chức chính phát triển Bluetooth. Hiện nay tổ chức này đã có khoảng 3000 công ty thành viên, trở thành tổ chức có số thành viên đông đảo thuộc nhiều lĩnh vực công nghệ: từ máy móc tự động đến thiết bị y tế, PC đến điện thoại di động, tất cả đều sử dụng kỹ thuật không dây tầm ngắn trong sản phẩm của họ. Tuy nhiên có những đẳng cấp khác nhau giữa các công ty trong tổ chức này, điều này phụ thuộc vào sự quan tâm cũng như trình độ phát triển Bluetooth tại công ty đó. Những mức độ này có thể là: nhà sáng chế (promoter), nhà cộng tác Gold hoặc Silver (associate), adopter.
+    Bluetooth SIG đã đưa ra mục tiêu cải tiến trong vòng ba năm tới: giảm năng lượng sử dụng, tăng cường sự an toàn, tăng khoảng cách kết nối, hỗ trợ đa kết nối và tăng độ rộng băng thông. Điều này không chỉ giúp các nhà sản xuất có thể hoạch định chiến lược cho sản phẩm của họ mà còn nâng cao vai trò của Bluetooth trên lĩnh vực wireless trên thế giới
+2.15 Hệ điều hành Android
+2.15.1 Giới thiệu về Android
+    Android là hệ điều hành dựa trên nền tảng Linux được thiết kế dành cho các thiết bệ di động có màn hình cảm ứng như điện thoại thông minh hay máy tính bảng. Ban đầu, Android được phát triển bời Tổng công ty Android, với sự hỗ trợ tài chính từ Google và sau này được mua lại vào năm 2005.  Android được ra mắt vào năm 2007 cùng với sự tuyên bố thành lập Liên minh thiết bị cầm tay mở: một hiệp hội gồm các công ty phần mềm, phần cứng, và viễn thông với mục tiêu đầy mạnh các tiêu chuẩn mở cho các thiết bị di động. Chiếc điện thoại đầu tiên chạy Android được bán vào tháng 10 nắm 2008. Bộ Android SDK cung cấp các công cụ và API cần thiết để phát triển các ứng dụng trên nền tảng Android bằng ngôn ngữ lập trình Android.
+2.15.2 Các thành phần trong Android
+    Framework phát triển ứng dụng cho phép tái sử dụng và thay thế các thành phần.
+- Máy ảo Java Dalvik được tối ưu hóa cho các thiết bị di động.
+- Trình duyệt tích hợp dựa trên engine Webkit mã nguồn mở.
+- Hệ thống đồ họa được tối ưu hóa được hỗ trợ bởi một thư viện đồ họa 2D 3D đặc biệt dựa trên đặc tả kỹ thuật của OpenGL ES 1.0 (tùy chọn phần cứng tăng tốc đồ họa).
+- SQLite dùng cho việc lưu trữ cấu trúc dữ liệu.
+- Hỗ trợ các định dạng video, audio và hình ảnh phổ biến. (MPEG4, H.264, MP3, AAC, AMR, JGP, PNG, GIF).
+- Hỗ trợ GSM (Phụ thuộc phần cứng).
+- Bluetooth, GPS, la bàn, và cảm ứng gia tốc (phụ thuộc phần cứng).
+- Mỗi trường phát triển phong phú, bao gồm hệ mô phỏng thiết bị, công cụ gỡ lỗi, tối ưu hóa bộ nhớ và hiệu suất.
+- Các control và view được sử dụng.
+•	TextView:  Hiển thị một nhãn hay chuỗi ký tự.
+•	Button: nút nhấn cho phép người dùng thao thác các chức năng sử dụng.
+•	CheckBox: Có chức năng cho phép người dùng tích vào mục muốn lựa chọn.
+•	ListView :  Hiển thị danh sách theo chiều học của layout (danh sách có thể là các dòng text hoặc hình ảnh +text …).
+•	GridView: tương tự như ListView nhưng các thành phần bên trong được sắp xếp theo 2 chiều, giống như các ô lưới (các thành phần bên trong giống như ListView).
+•	ImageView: Dùng để hiển thị một hình ảnh nào đó.
+•	Spinner: Hiển thị lựa chọn, xổ xuống 1 danh sách các lựa chọn cho người dùng
+•	ScrollView: chế độ xem cuộn hỗ trợ theo chiều dọc.
+•	ViewPager: Chuyển tiếp giữa toàn bộ màn hình với màn hình khác.
+2.15.3 Lý do chọn hệ điều hành Android
+    Về  phía phần mềm điều khiển trên Android: việc xây dựng ứng dụng điều hành trên hệ điều hành Android tương đối thuận lợi, dễ dàng bởi Android là một hệ điều hành mở, có một cộng đồng phát triển đông đảo, nơi để mọi người học hỏi, tham khảo và chia sẻ kinh nghiệm với nhau.
+
+
+    
+
+
+CHƯƠNG 3: 
+XÂY DỰNG ỨNG DỤNG
+3.1 Mô tả ứng dụng
+    Mục đích ứng dụng được xây dựng là thực hiện các kết nối và trao đổi dữ liệu qua Bluetooth nhằm hỗ trợ cho việc quản lý và trao đổi tin nhắn của người dùng điện thoại di động. Cho phép người dùng có thể thông qua Bluetooth để trao đổi text, hình ảnh giữa hai điện thoại.
+    Sử dụng ngôn ngữ java xây dựng ứng dụng trên hệ điều hành Android để truyền text.
+    Các thao tác có thể làm trên ứng dụng:
+- Dò tìm các thiết bị xung quanh.
+- Lấy kết nối đã ghép đôi.
+- Tìm các thiết bị xung quanh.
+- Thực hiện các kết nối Bluetooth.
+- Trao đổi text.
+3.2 Giao thức sử dụng và UUID Bluetooth.
+a) Radio Frequency Communication (RFCOMM protocol) – Tần số truyền thông.
+    Giao thức RFCOMM cho phép giả lập cổng serial thông qua giao thức L2CAP. Giao thức này dựa trên chuẩn ETSI TS 07.10, chỉ có một phần của chuẩn TS 07.10 được dùng và được chỉnh sửa cho phù hợp với Bluetooth.
+    RFCOMM hỗ trợ tối đa 60 kết nối cùng một lúc giữa 2 thiết bị Bluetooth, số kết nối tối đa tùy thuộc vào nhà sản xuất. Đối với RFCOMM một kết nối bao gồm 2 ứng dụng chạy trên 2 thiết bị riêng biệt (2 thiết bị đầu cuối).
+    -	Loại thiết bị: Về cơ bản, RFCOMM cung cấp cho 2 loại thiết bị:
+    -	Loại thiết bị 1: là những đầu cuối như máy tính hay máy in.
+    -	Loại thiết bị 2: là những thành phần dùng để truyền dữ liệu, chẳng hạn
+    Tín hiệu điều khiển: RFCOMM giả lập 9 mạch RS232, 9 mạch đó là:
+    Nhiều cổng kết nối tiếp giả lập: 2 thiết bị Bluetooth dùng RFCOMM trong giao tiếp giữa chúng có thể mở nhiều cổng nối tiếp. RFCOMM hỗ trợ tối đa 60 cổng, tuy nhiên số cổng có thể dùng trong một thiết bị tùy thuộc vào nhà sản xuất.
+b) Cách thức hoạt động của UUID bluetooth:
+    Khi tạo máy chủ RFCOMM của riêng bạn (với listenUsingRfcommWithServiceRecord), bạn nên chỉ định UUID của riêng mình để các máy khách kết nối với nó có thể xác định nó; đó là một trong những lý do tại sao createRfcommSocketToServiceRecord yêu cầu tham số UUID. UUID được sử dụng để xác định thông tin duy nhất. Nó xác định một dịch vụ cụ thể được cung cấp bởi một thiết bị Bluetooth. Tiêu chuẩn xác định BASE_UUID: 00000000-0000-1000-8000-00805F9B34FB cơ bản. Các thiết bị như cảm biến chăm sóc sức khỏe có thể cung cấp dịch vụ, thay thế tám chữ số đầu tiên bằng mã được xác định trước. Ví dụ: một thiết bị cung cấp kết nối RFCOMM sử dụng mã ngắn: 0x00
+    Vì vậy, điện thoại Android có thể kết nối với thiết bị và sau đó sử dụng Giao thức khám phá dịch vụ (SDP) để tìm hiểu những dịch vụ mà nó cung cấp (UUID).
+    Trong nhiều trường hợp, bạn không cần sử dụng các UUID cố định này. Trong trường hợp bạn đang tạo một ứng dụng trò chuyện, ví dụ: một điện thoại Android tương tác với một điện thoại Android khác sử dụng cùng một ứng dụng và do đó cùng một UUID. Vì vậy, bạn có thể đặt UUID tùy ý cho ứng dụng của mình bằng cách sử dụng, ví dụ, một trong nhiều trình tạo UUID ngẫu nhiên trên web. UUID chỉ là một con số. Nó không có nghĩa gì ngoài việc bạn tạo ở phía máy chủ của ứng dụng Android. Sau đó, khách hàng kết nối bằng UUID đó.
+    Ví dụ: về phía máy chủ, trước tiên bạn có thể chạy uuid = UUID.randomUUID () để tạo một số ngẫu nhiên như fb36491d-7c21-40ef-9f67-a63237b5bbea. Sau đó lưu mã đó và sau đó mã cứng vào chương trình trình nghe của bạn như thế này:
+     UUID uuid = UUID.fromString("fb36491d-7c21-40ef-9f67-a63237b5bbea"); 
+    Chương trình máy chủ Android của bạn sẽ lắng nghe các yêu cầu đến với UUID như thế này:
+        BluetoothServerSocket server = mBluetoothAdapter.listenUsingRfcommWithServiceRecord("anyName", uuid);
+    Ổ cắm BluetoothSocket = server.accept ();
+3.3 Bật Bluetooth
+    Từ ứng dụng chúng ta khởi tạo muốn bật tính năng Bluetooth chúng ta cần phải yêu cầu hệ thống cấp cho chúng ta các quyền (uses-permission). 
+    Tại file AndroidManifest chúng ta yêu cầu các quyền. Quyền BLUETOOTH cho phép ứng dụng kết nối, ngắt kết nối, và truyền dữ liệu với các thiết bị Bluetooth khác.    Quyền BLUETOOTH_ADMIN cho phép ứng dụng phát hiện ra các thiết bị Bluetooth mới và thay đổi cài đặt Bluetooth của thiết bị.
+     
+    
+    Sử dụng đối tượng BluetoothAdapter (adapter) để giao tiếp với Bluetooth. Ở đây tạo instantiate BluetoothAdapter tại class ListActivity.
+    
+    Nếu BTAdapter bị null thì có nghĩa là Bluetooth không được hỗ trợ tại thiết bị này. Và ứng dụng sẽ không hoạt động trên thiết bị mà chúng ta đang chạy. Để xử lý việc này thì có một solution là hiển thị một AlertDialog để cảnh báo cho người dùng và thoát khỏi ứng dụng.
+    
+    Nếu Bluetooth có sẵn trong thiết bị. Chúng ta cần kiểm tra xem nó đã được kích hoạt hay chưa. 
+    Nếu chưa được kích hoạt thì chúng ta có thể gửi một action có sẵn được cung cấp bởi Android SDK có tên BluetoothAdapter.ACTION_REQUEST_ENABLE. Khi gửi action này đến hệ thống với một requestCode REQUEST_BLUETOOTH là một số int để xác định yêu cầu kích hoạt, sau đó hệ thống sẽ hiển thị một dialog yêu cầu kích hoạt Bluetooth trên thiết bị.
+    	Màn hình chức năng bật bluetooth: 
+     
+    Hình 3-1. Màn hình bật bluetooth
+3.4 Lấy danh sách các thiết bị đã ghép nối (Pair )
+    Ở bước này, lấy các thiết bị Bluetooth đã được ghép nối và hiển thị chúng trong một danh sách. Tại các trạng thái mà thiết bị Bluetooth hiển thị trong ứng dụng của sẽ là :
+- unknown
+- paired (đã ghép nối).
+- connected (đang kết nối).
+    Một điều quan trọng là chúng ta cần phải phân biệt giữa paired và connected của một thiết bị Bluetooth. Thiết bị đã paired là chỉ biết về sự tồn tại của nhau và sẵn sàng kết nối thông qua một mã code. Mã code được sử dụng để xác thực và dẫn đến một kết nối. 2 thiết bị sẽ tự động kết nối khi mã hóa được thành lập. Khi thiết bị đã connected sẽ chia sẻ một kênh RFCOMM cho phép việc gửi và nhận dữ liệu. 
+    Một thiết bị có thể có paired với nhiều thiết bị khác, nhưng trong một thời điểm chỉ connected với một thiết bị khác. Một thiết bị Bluetooth được đại diện bởi đối tượng BluetoothDevice. Lấy một danh sách các thiết bị đã paired có thể lấy được bằng cách gọi hàm getBondedDevices().
+    Gọi hàm getBondedDevices() tại hàm onCreate() của class DeviceListFragament.
+
+    Trong object BlueDevice có rất nhiều getter và setter thể hiện thuộc tính của BluetoothDevice. Sử dụng hàm getName() để hiển thị tên của thiết bị và getAddress() hiển thị địa chỉ Mac. 
+    Địa chỉ Mac là địa chỉ độc nhất để xác định thiết bị. Khi chúng ta có một danh sách các thiết bị. Tôi sẽ tạo ra object DeviceItem tương ứng với BluetoothDevice. Sử dụng một List<DeviceItem> để hiển thị danh sách các thiết bị Bluetooth đã paired với thiết bị trong ứng dụng.
+
+    	
+    Màn hình lấy danh sách các thiết bị đã ghép nối : 
+    
+    Hình 3-2. Màn hình danh sách các thiết bị đã ghép đôi.
+3.5 Tìm kiếm các thiết bị ở gần có kích hoạt Bluetooth
+    Ở bước này, Khi bấm nút Scan ứng dụng sẽ tìm kiếm các thiết bị xung quanh chưa kết nối với thiết bị. Các thiết bị có trạng thái unknow. Sau đó thêm chúng vào danh sách thiết bị paired. Code xử lý nằm tại class DeviceListFragment. Đầu tiên thì tôi sẽ tạo một BroadcastReceiver để nhận mỗi khi tìm thấy một thiết bị Bluetooth. Tại method onReceive() có trả về một đối số Intent. Chúng ta có thể kiểm tra action được broadcasting bằng hàm getAction() của Intent.
+     Nếu action là BluetoothDevice.ACTION_FOUND . sau đó ứng dụng sẽ biết là tìm thấy một thiết bị Bluetooth. Khi nhận được action này, chúng ta tạo đối tượng DeviceItem dùng tên thiết bị và địa chỉ Mac. 
+    Chúng ta sẽ thêm object DeviceItem vào ArrayAdapter để hiển thị nó trên giao diện ứng dụng.
+     
+    Khi nút SCAN bật lên, chỉ cần register BroadcastReceiver và gọi hàm start Discovery(). Khi nút SCAN tắt đi,  chỉ cần unregister BroadcastReceiver và gọi hàm cancelDiscovery(). Việc này rất chiếm tài nguyên của máy. Nếu ứng dụng của bạn kết nối với các thiết bị Bluetooth khác, bạn nên nhớ phải luôn tắt việc SCAN và sau đó kết nối. Mỗi khi SCAN bắt đầu thì sẽ clear ArrayAdapter. Vì khi bắt đầu SCAN chúng ta cũng chẳng muốn hiển thị các thiết bị có thể không còn có trong phạm vi quét của thiết bị.
+
+3.6 Kết nối đến thiết bị Bluetooth
+    Kết nối Bluetooth hoạt động cũng giống với các kết nối khác (Socket,Http...). Phải có một máy chủ(server) và một máy khách(client) và giao tiếp thông qua RFCOMM sockets. Trên Android, RFCOMM sockets được đại diện bởi object BluetoothSocket. May mắn thay!!! Tất cả các kỹ thuật để phát triển một máy chủ(servers) đã được quản lý bởi AndroidSDK và có sẵn thông qua các Bluetooth API. 
+    Để rõ hơn về vấn đề tôi vừa nói ở trên thì tôi sẽ có một ví dụ. Bạn đang làm một ứng dụng chat mà sử dụng Bluetooth để chat với một người ở gần đó.Để tìm người trò chuyện, bạn sẽ muốn tìm kiếm các thiết bị khác có cài ứng dụng Chat của bạn. Để có thể tìm kiếm được các thiết bị đó, chúng ta sẽ tìm kiếm các UUID trong danh sách dịch vụ của các thiết bị ở gần đó. Sử dụng một UUID để lắng nghe và chấp nhận các kết nối Bluetooth, sau đó sẽ tự động thêm UUID vào danh sách các dịch vụ của điện thoại hoặc dịch vụ phát hiện giao thức.
+    Khi BluetoothSocket được tạo ra, bạn gọi method connect() của đối tượng BluetoothSocket. Việc gọi hàm này sẽ khởi tạo một kết nối với BluetoothDevice thông qua RFCOMM socket. Sau khi thiết bị của chúng ta đã kết nối được với nhau thì sẽ đã có thể trao đổi dữ liệu với các thiết bị được kết nối. Việc duy trì kết nối Bluetooth khá tốn tài nguyên cũng như PIN. Nên chúng ta cần phải đóng socket khi không cần dùng nữa. Để đóng socket chúng ta gọi close() của đối tượng BluetoothSocket. Code ở dưới sẽ thể hiện việc làm thế nào để kết nối đến BluetoothDevice.
+
+    Tạo kết nối như một máy chủ. Thứ nhất, từ BluetoothAdapter của bạn phải tạo được một BluetoothServerSocket, mà sẽ được sử dụng để lắng nghe kết nối. Cái việc này chỉ được sử dụng để thu nhận kết nối RFCOMM sockets. Khi kết nối được thiết lập, máy chủ socket không còn cần thiết nữa và có thể đóng lại thông qua hàm close(). Chúng ta khởi tạo một server socket bằng cách gọi hàm listenUsingRfcomm WithServiceRecord (String name, UUID mUUID).
+     Hàm này có 2 tham số name là tên mà chúng ta cung cấp dịch vụ khi nó được thêm vào SDP(Service Discovery Protocol) của điện thoại. UUID phải đúng với UUID của máy khách(client) mà muốn kết nối đến servers.
+    Sau đó chúng ta gọi accept() ở đối tượng BluetoothServerSocket mới để chờ một kết nối. Khi gọi hàm accept() trả về một giá trị nào đó không phải là null. Chúng ta sẽ gán nó vào BluetoothSocket cũ. Sau đó chúng ta sẽ sử dụng nó để trao đổi dữ liệu với thiết bị kết nối. Code ở dưới đây để accept một kết nối giống như một server:
+
+
+3.7 Truyền tin nhắn văn bản
+    Để đọc và ghi dữ liệu vào các kết nối chúng ta sử dụng streams, InputStream và OutputStream. Chúng ta có thể tham chiếu đến streams bằng cách gọi getInputStream() và getOutputStream() của BluetoothSocket. Đọc và ghi vào streams ta cũng có thể gọi read() và write() tương ứng. Đoạn code ở dưới đây sẽ hướng dẫn làm sao để gửi một số nguyên đến thiết bị được kết nối :
+     
+    Màn hình tin nhắn :
+     
+    Hình 3-3. Màn hình gửi tin nhắn văn bản.
+    
+CHƯƠNG 4: 
+KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Với mong muốn tìm hiểu công nghệ, kĩ thuật Bluetooth được sự phân công và hướng dẫn của cô Nguyễn Thị Thanh Huệ,  em đã hoàn thành đồ án tốt nghiệp với đề tài “Nghiên cứu và xây dựng ứng dụng Bluetooth”.
+    Sau khi thực hiện đề tài,  em đã đạt được một số kết quả sau :
+- Nghiên cứu được công nghệ Bluetooth, một công nghệ không dây đang phát triển rất mạnh và có tầm ứng dụng rộng rãi hiện nay. Hiểu được cách thức hoạt động, các đặc điểm kĩ thuật và khả năng của công nghệ Bluetooth. Thêm vào đó, trong quá trình tìm hiểu về Bluetooth, em cũng nắm được một số kĩ thuật mạng không dây khác.
+- Tìm hiểu được một hệ điều hành dành cho điện thoại di động thông minh phổ biến nhất hiện nay, đó là hệ điều hành Android, biết được sơ lược về cấu trúc của hệ điều hành Android, và cách xây dựng  ứng dụng trên Android. Hiện nay, Android đang ngày càng phát triển mạnh mẽ và mở ra một môi trường lập trình mới đầy tiềm năng cho các lập trình viên : lập trình ứng dụng cho điện thoại thông minh.
+- Xây dựng được một ứng dụng truyền tin đơn giản qua Bluetooth bằng ngôn ngữ Java trên hệ điều hành Android.
+4.2 Hạn chế của đề tài
+    Mặc dù đã rất cố gắng nhưng do khả năng nghiên cứu tài liệu nước ngoài và ngôn ngữ lập trình Java còn có hạn, vì vậy khi xây dựng ứng dụng em mới chỉ dừng lại ở việc thực hiện được các thao tác như dò tìm các thiết bị xung quanh, thực hiện các kết nối Bluetooth, trao đổi dữ liệu văn bản.
+4.3 Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, em đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+- Nghiên cứu sâu hơn về Bluetooth và hệ điều hành Android, ngôn ngữ lập trình Java.
+- Xây dựng ứng dụng trên hệ điều hành Android với nhiều tính năng chuyên nghiệp hơn.
+
+TÀI LIỆU THAM KHẢO
+[1]	Đặng Minh Thắng, Chu Nguyên Tú, Xây dựng hệ thống điều khiển máy tính từ xa sử dụng công nghệ Bluetooth, Luận văn cử nhân tin học, Đại học Khoa học Tự nhiên TP.Hồ Chí Minh, 2004.
+[2]	Viblo, Tìm hiểu về Bluetooth API trên Android : Tạo một ứng dụng Bluetooth Scanne: https://viblo.asia/p/tim-hieu-ve-bluetooth-api-tren-android-tao-mot-ung-dung-bluetooth-scanner-3wjAM7JARmWe
+[3] 	Nghiên cứu tài liệu Android của khoa Công nghệ thông tin trường Đại học Sư phạm Kỹ thuật Hưng Yên.    [4] 	Hoàng Quốc Việt, Giáo trình Lập trình Android cơ bản. Hưng Yên, Việt Nam: Khoa Công nghệ thông tin - UTEHY, 2016    [5] 	Documentation Bluetooth API của Àdroid: https://developer.android.com/guide/topics/connectivity/bluetooth                
+
+Nghiên cứu và xây dựng ứng dụng Bluetooth
+    
+    
+2
+    
+    

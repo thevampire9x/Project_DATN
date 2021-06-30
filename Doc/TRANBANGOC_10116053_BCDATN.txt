@@ -1,0 +1,360 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Trong những năm gần đây, ngành công nghệ phần mềm nói chung và lập trình phát triển game nói riêng đang có những bước đột phá mới, thị trường game đang hết sức rộng mở, số công ty và các studio game được thành lập ngày càng nhiều. Tất cả tạo điều kiện cho việc trở thành một lập tình viên về game, và tạo ra các sản phẩm của riêng mình.
+    Với sự phát triển mạnh mẽ của các công cụ hỗ trợ lập trình game tạo điều kiện cho các lập trình viên non trẻ, trong đó có phần mềm Unity, là nền tảng phát triển game miễn phí hoàn toàn cho người dùng mới.
+    Với những thuận lợi nêu trên, em quyết định chọn đề tài Lập trình game Dark Hunter trên android sử dụng Unity.
+1.2 Mục tiêu của đề tài
+    Xây dựng được một hệ thống trong game hoàn chỉnh, cho phép người chơi tương tác và thực hiện các thao tác qua nhân nhận giống so với thực tế.
+1.3 Giới hạn và phạm vi của đề tài
+    Đề tài xây dựng một game sử dụng các công nghệ trong lập trình như Unity Shader, Particlesytem, Scriptable Object và công cụ lập trình Visual Studio 2015.
+    Hệ thống các chức năng trong game được thực hiện nhằm tạo ra một tựa game chân thực nhất, gần gũi nhất với người chơi.
+1.4 Nội dung thực hiện
+    	Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Ngiên cứu các tựa game sinh tồn cùng thể loại.
+- Phân tích yêu cầu và đề xuất hướng giải quyết các chức năng trong game.
+- Thiết kế đặc tả hệ thống.
+- Lập trình các chức năng của hệ thống.
+- Kiểm thử hệ thống game.
+- Triển khai thực nghiệm game.
+1.5 Phương pháp tiếp cận
+- Cách tiếp cận : 
+o Nghiên cứu ngôn ngữ lập trình C#
+o Nghiên cứu công cụ Unity
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu;
+o Phương pháp phân tích mẫu;
+o Phương pháp thực nghiệm.
+    
+1.6 Kết quả dự kiến của đề tài
+- Xây dựng được game hoàn thiện với các chức năng:
+- Chức năng di chuyển
+- Chức ăn sử dụng vật phẩm
+- Chức năng kho đồ
+- Chức năng thu thập vật phẩm
+- Chức năng chế tạo
+- Chức năng thời gian trong ngày
+- Chức năng trang bị
+- Chức năng tương tác môi trường
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Unity
+2.1.1 Unity là gì?
+      Unity là một phần mềm làm game đa nền tảng được phát triển bởi Unity Technologies, mà chủ yếu để phát triển video game cho máy tính, consoles và điện thoại. Lần đầu tiên nó được công bố chạy trên hệ điều hành OS X, tại Apple's Worldwide Developers Conference vào năm 2005, đến nay đã mở rộng 27 nền tảng.
+      Unity hỗ trợ đồ họa 2D và 3D, các chức năng được viết chủ yếu qua ngôn ngữ C#. Hai ngôn ngữ lập trình khác cũng được hỗ trợ: Boo, đã bị loại cùng với việc phát triển Unity 5 và UnityScript bị loại vào tháng 8 năm 2017 sau khi phát hành Unity 2017.1. UnityScript là một ngôn ngữ lập trình độc quyền có cú pháp tương tự JavaScript. Phần mềm nhắm mục tiêu các đồ họa APIs sau: Direct3D trên Windows và Xbox One; OpenGL trên Linux, macOS, và Windows; OpenGL ES trên Android và iOS; WebGL trên web; và APIs độc quyền trên các máy chơi video game. Ngoài ra, Unity hỗ trợ APIs cấp thấp như Metal trên iOS và macOS và Vulkan trên Android, Linux, và Windows, cũng như Direct3D 12 trên Windows và Xbox One. Trong 2D games, Unity cho phép nhập sprites và một renderer thế giới 2D tiên tiến. Đối với 3D games, Unity cho phép thiết lập các đập điểm kĩ thuật của các kết cấu và độ phân giải mà công cụ trò chơi hỗ trợ, cung cấp các hỗ trợ cho bump mapping, reflection mapping, parallax mapping, cảnh không gian ambient occlusion (SSAO), hiệu ứng bóng đổ bằng cách sử dụng shadow maps, render thiết lập toàn cảnh đến hiệu ứng. Unity cũng cung cấp các dịch vụ cho nhà phát triển, bao gồm: Unity Ads, Unity Analytics, Unity Certification, Unity Cloud Build, Unity Everyplay, Unity API, Unity Multiplayer, Unity Performance Reporting and Unity Collaborate.
+      Unity nổi bật với khả năng xây dựng trò chơi chạy trên nhiều nền tảng. Các nền tảng được hỗ trợ hiện nay là Android, Android TV, Facebook Gameroom, Fire OS, Gear VR, Google Cardboard, Google Daydream, HTC Vive, iOS, Linux, macOS, Microsoft HoloLens, Nintendo 3DS family, Nintendo Switch, Oculus Rift, PlayStation 4, PlayStation Vita, PlayStation VR, Samsung Smart TV, Tizen, tvOS, WebGL, Wii U, Windows, Windows Phone, Windows Store, và Xbox One. Unity trước đây cũng đã hỗ trợ 7 nền tảng khác chạy trên Unity Web Player. Unity Web Player là một plugin của trình duyệt chạy trên Windows và OS X, đã bị gỡ bỏ vì lợi ích của WebGL.
+    Unity là bộ công cụ phát triển phần mềm mặc định (SDK) cho máy chơi game video game Wii U của Nintendo, kèm theo bản miễn phí của Nintendo với mỗi giấy phép phát triển Wii U. Unity Technologies gọi việc kết hợp sản xuất SDK với một bên thứ ba là "industry first".
+2.1.2 Unity3D
+    Unity3D là một dạng lập trình game của unity, phần mềm làm games trực tiếp theo thời gian thực, mà không cần render, cho phép người design game có thể thiết kế InterfaceGraphic, map hay character… từ một phần mềm thứ 2 (thường là các phần mềm thiết kế đồ họa chuyên nghiệp như 3Dsmax, Blender, Maya, XSL,Cinema4D,Cheetah3D, Modo, Autodesk FBX, LightWave…) sau đó chỉ việc import nó vào trong Unity với định dạng của tập tin là *.FBX hay *.dae, *.3DS, *.dxf và *.obj, nhưng định dạng *.FBX hay được dùng vì được tối ưu hóa hơn, còn dùng các định dạng khác ngoài FBX thì phải cài phần mền thiết kế character tưng ứng thì mới dùng được (tức là dùng Maya có định dạng *.mb, *.ma thì muốn dùng được phải cài Maya).
+2.1.3 Các thành phần trong Unity
+
+     Hình 2. 1: Màn hình tổng quan Unity khi tạo và code cho ứng dụng
+- Mỗi Project của Unity đều chứa một thư mục Assets. Nội dung của thư
+mục này được hiển thị trong Project View. Đây là nơi chứa tất cả các
+assets để tạo Game của bạn như Scenes, Script, 3D models, Textures,
+Audio, Prefabs. Chúng ta không nên di chuyển asseets bằng cách sử dụng
+Window Explorer (hay Finder trong MAC), vì nó sẽ phá vỡ cấu trúc siêu
+dữ liệu của assets với nhau, và luôn sử dụng Project View để cấu trúc
+assets của mình. Để thêm assets vào project của mình, chúng ta có thể kéo
+thả bất kỳ file nào vào trong project view hoặc vào công cụ Assets –
+Import new Assets(Click chuột phải vào Project View). Scenes cũng được
+lưu trữ trong Project view, và đây là một level độc lập mang tính cá nhân. Chúng ta dễ dàng tạo một assets game trong Unity bằng cách chọn hình
+tam giác nhỏ nằm bên phải Create trong cửa sổ Project hoặc click chuột
+phải trong Project View, sau đó chọn assets tương ứng. Ngoài ra bạn cũng
+có thể thêm các assets và đổi tên các assets một cách dễ dàng Hierarchy
+Tức là hệ thống phân cấp Trong Hierarchy chứa các GameObject hiện
+thời, một số có thể trỏ trực tiếp tới những file assets như 3D models, một
+số khác đại diện cho Prefabs – những đối tượng đã được tùy biến, dùng
+làm các công việc khác nhau sau này trong Game của bạn. Bạn có thể
+chọn và parenting Object trong Hierarchy. Một Object có thể được thêm
+vào hay loại bỏ trong scene và có thể thấy nó mất đi hay xuất hiện trong
+Hierarchy. Parenting Tức là thư mục chứa hay thư mục gốc, bất kỳ một
+game object nào muốn là đối tượng con(child) thì ta chỉ việc kéo thả đối
+tượng đó vào trong đối tượng dự tính làm Parenting trong Hierarchy và nó
+sẽ kế thừa chuyển động và quay của parenting.
+- Toolbar chứa 5 loại điều khiển cơ bản, mỗi loại giữ một vai trò quan trọng trong Editor.
+• Transform Tool: được dung với Scene view, như quay trái , phải, lên trên, xuống dưới, phóng to thu nhỏ đối tượng.
+• Transform Gizmo Toggles: dung cho việc thể hiện Scene view.
+• Play/Pause/Step Buttons: dung cho view game, chỵ game ngay trong Editor để kiểm tra.
+• Layer Drop-down kiểm soát đối tượng nào đang được thục hiện trong Scene view
+• Layout Drop-down kiểm soát sự sắp xếp cảu các Views.
+- Scene View
+• Là nơi bạn Design Game của bạn, đối tượng Maneuvering và Importanting trong Scene view (chuyển động và điều khiển) là hai trong số các chức năng quan trọng của Unity, ở góc bên phải của Scene là Scene Gizmo, nó thể hiện hướng nhìn trong không gian của camera trong Scene View hiện thời, cho phép thay đổi góc nhìn trực quan và nhanh chóng.
+• Click lên các nhánh hình nón để chuyển qua các góc nhìn khác nhau có thể xem ở chế độ Isometric Model(tức ở dạng mặt cắt hai chiều), để chuyển qua chế độ 3D bạn Click vào hình vuông ở giữa hay giữ phím Shift + Click để chuyển đổi chế độ nhìn.
+• Khi xây dựng một Game, bạn sẽ đặt rất nhiều đối tượng vào trong Game của bạn. Bạn có thể dử dụng các công cụ Transform Tools ở trong Toolbar để di chuyển, xoay, phóng to tu nhỏ từng đối tượng.Khi bạn chọn một đối tượng trong Scene View, xung quanh đối tượng được chọn sẽ có những thay đổi tương ứng với từng chế độ trong Transform Tools.Sau đó bạn thay đổi đối tượng tùy ý, nếu muốn chính xác bạn có thể chỉnh chi tiết ở bảng Inspector.
+• Scene View Control Bar
+• Thanh điều khiển Scene view cho phép bạn xem screen Game với nhiều chế độ như đã phủ vật liệu (material), khung lưới(wireframe), RGB, Overdraw, …Bạn cũng có thể xem và cả nghe những hiệu ứng ánh sáng, âm thanh, những thành phần động trong Game… ngay tại Scene.
+
+    Hình 2. 2: Mô phỏng Scene
+- Game View được rendered từ những Camera trong Game. Đó là những gì được nhìn thấy khi hoàn tất, khi Game được xuất bản. Bạn sẽ cần ít nhất là một hoặc nhiều hơn số lượng các Camera để quết định những gì mà người chơi sẽ nhìn thấy khi họ chơi Game.
+- Play Mode Sử dụng những nút trên Toolbar để điều khiển Editor Play Mode, và xem trước Game của bạn sẽ như thế nào khi chơi. Trong chế Play, mọi giá trị thay đổi sẽ được lưu tạm, và bị xóa khi thoát khỏi chế độ play.
+- Game Object: Khi Asset được sử dụng trong các Scene, Unity định nghĩa đó là Game Object. Đây là một thuật ngữ thông dụng, đặc biệt trong mảng lập trình. Tất cả các Game Object đều chứa ít nhất một thành phần cơ bản là Transform, lưu trữ thông tin về vị trí, góc xoay và tỉ lệ của Game Object. Thành phần Transform có thể được tuỳ biến và chỉnh sửa trong quá trình lập trình.
+- Components: là các thành phần trong game, bổ sung tính năng cho các Game Object. Mỗi Component có chức năng riêng biệt. Đa phần các Component phụ thuộc vào Transform, vì nó lưu trữ các thông số cơ bản của Game Object. Bản chất của Game Object là không có gì cả, các đặc tính và khả năng của Game Object nằm hoàn toàn trong các Component. Do đó chúng ta có thể xây dựng nên bất kỳ Game Object nào trong game mà chúng ta có thể tưởng tượng được.
+
+     Hình 2. 3: Components
+- Scripts: Scripts được Unity xem như một Component. Đây là thành phần thiết yếu trong quá trình phát triển game. Bất kỳ một game nào, dù đơn giản nhất đều cần đến Scripts để tương tác với các thao tác của người chơi, hoặc quản lý các sự kiện để thay đổi chiều hướng của game tương ứng với kịch bản game.Unity cung cấp cho lập trình viên khả năng viết Script bằng các ngôn ngữ: JavaScript, C#. Unity không đòi hỏi lập trình viên phải học cách lập trình trong Unity, nhưng trong nhiều tình huống, chúng ta cần sử dụng Script trong mỗi phần của kịch bản game. Để viết Script, chúng ta có thể làm việc với một trình biên tập Script độc lập của Unity, hoặc làm việc trên Mono Developer được tích hợp vào Unity trong những phiên bản gần đây. Mono Developer là một IDE khá tốt, cung cấp nhiều chức năng tương tự Visual Studio. Mã nguồn viết trên Mono Developer sẽ đươc cập nhật và lưu trữ trong dự án trên Unity.
+
+     Hình 2. 4:  Khu chứa các file Script
+- Prefabs: Prefabs thực chất là Game Object được lưu trữ lại để tái sử dụng. Các Game Object được nhân bản từ một prefab sẽ giống nhau hoàn toàn, ngoại trừ thành phần Transform để phân biệt và quản lý được tốt hơn. Để tạo ra một prefab, ta đơn giản chỉ cần kéo một Game Object vào cửa sổ Project.
+
+     Hình 2. 5: Các Prefab trong ứng dụng game trên Unity
+2.1.4 Tại sao nên sử dụng Unity
+      Một hệ sinh thái game cần phải có các chức năng cơ bản như: cung cấp công cụ dựng hình (kết xuất đồ họa) cho các hình ảnh 2D hoặc 3D, công cụ vật lý (tính toán và phát hiện va chạm), âm thanh, mã nguồn, hình ảnh động, trí tuệ nhân tạo, phân luồng, tạo dò nguồn dữ liệu xử lý, quản lý bộ nhớ, dựng ảnh đồ thị và kết nối mạng. Unity là engine đáp ứng đầy đủ các yêu cầu đó.
+Ngoài những chức năng cơ bản của một hệ sinh thái đó, Unity còn có những ưu việt vượt trội so với các engine khác:
+• Sử dụng ngôn ngữ lập trình phổ biến tại Việt Nam là C#.
+• Hỗ trợ đa nền tảng: Lập trình viên dùng Unity3D Engine và ngôn ngữ C# hoặc script để phát triển game hoàn thiện, sau đó Unity cho phép bạn “build” ra các phiên bản cho các nền tảng khác mà không cần viết thêm dòng code nào, giúp bạn rút ngắn rất nhiều thời gian xây dựng game cũng như nâng cao mức độ an toàn khi lập trình game. Những nền tảng mà Unity đang hỗ trợ gồm PlayStation 3, Xbox 360, Wii U, iOS, Android, Windows, Blackberry 10, OS X, Linux, trình duyệt web.
+• Dễ sử dụng, ngay cả với Lập trình viên nghiệp dư, do Unity3D được xây dựng trong một môi trường phát triển tích hợp, cung cấp một hệ thống toàn diện cho các lập trình viên, từ soạn thảo mã nguồn, xây dựng công cụ tự động hóa đến trình sửa lỗi.
+• Tính kinh tế cao: Những cá nhân và doanh nghiệp có doanh thu dưới 100.000 USD/năm được dùng miễn phí Unity3D, và Unity Technology chỉ thu phí 1.500 USD/năm cho bản Pro- một con số rất khiêm tốn so với những gì engine này mang lại.
+• Rất được ưa chuộng tại Việt Nam, ngay cả trong các game studio lớn như VTC, VNG, Glass-Egg.
+• Thư viện phong phú, đa dạng: Unity có nhiều thư viện, các công cụ hỗ trợ làm game nhanh hơn, thông minh hơn, các đối tượng được tạo sẵn, và tất cả các thư viện này đều “mở”, cho phép cộng đồng tự do sử dụng và sáng tạo nên các sản phẩm của chính mình, thậm chí có thể bán trên Asset Store của Unity.
+• Cộng đồng rất lớn mạnh: là engine phổ biến nhất trên thế giới, Unity có cộng đồng sử dụng rất lớn mạnh. Mọi thắc mắc của bạn về Unity đều sẽ được trả lời trên website cộng đồng http://answers.unity3d.com.
+• Hỗ trợ Networking để phát triển MMO game.
+2.1.5 Particle System trong Unity
+a) Particle System trong Unity là gì?
+Particle system là một hệ thống các hạt dùng để tạo ra các hiệu ứng trong game như mưa, tuyết rơi, khói, lửa, hiệu ứng phép…, giúp làm cho game trở nên sinh động hơn, nhất là đối với game 3D.
+b) Cách sử dụng của Particle System
+Shape
+    Hình dạng của nguồn phát ra hạt là điều chúng ta cần quan tâm đầu tiên khi làm việc với particle system. Tất nhiên trước bắt tay vào tạo ra hiệu ứng của riêng mình thì bạn đã phải có ý tưởng hoặc concept cho fx đó rồi. Hãy tính toán xem bạn sẽ dùng shape gì, nguồn phát ra hạt sẽ ảnh hưởng khá nhiều đến kết quả. Bạn không thể tạo ra một hiệu ứng tuyết rơi mà nguồn phát ra hạt của bạn lại chỉ từ một điểm phải không ?
+Emission
+    Về cơ bản thì thằng này cho phép bạn kiểm soát tỉ lệ hạt bung ra theo thời gian hoặc theo chiều sâu. Các thông số về Burst cho phép chúng ta ép particle system sinh ra bao nhiêu hạt vào chính xác thời điểm mà chúng ta muốn
+Duration
+    Thông số tiếp theo là thời gian sinh ra hạt. Nó hoàn toàn khác với Start Lifetime . Ví dụ nôm na cho dễ hiểu thì Duration là khoảng thời gian mang thai của một người mẹ thì Start Lifetime là khoảng thời gian sống trên đời của đứa trẻ sau khi nó được sinh ra. Hiểu hem ?
+Size hạt
+    Kích thước một hạt particle trong Unity được điều chỉnh dựa trên 2 thông số đó là Start Size và Size Over Lifetime. Start Size cho phép chúng ta xác định kích thước của một hạt particle trước khi nó được bung ra còn Size Over Lifetime cho phép ta điều chỉnh kích thước của hạt sau khi nó được sinh ra. Bạn có thể xem thêm video mình hướng dẫn làm hiệu ứng hạt lấp lánh để hiểu hơn về cách điều chỉnh kích thước hạt – <Dust Effect – Sử dụng Size Over Lifetime trong Particle System>
+Rotation
+    Tương tự như Size hạt bên trên. Rotation cho phép chúng ta điều chỉnh về góc xoay của hạt trước và sau khi hạt được sinh. Cả Rotation và Size đều có thể tùy chỉnh random để cho các hạt sinh ra được tự nhiên chứ không bị đều đều.
+Physic
+    Về mặt vật lý thì mình nói chung cho cả 2 tab là Velocity over Lifetime và Force over Lifetime. Hai thuộc tính này gần như tương đồng nhau, Velocity cho phép bạn kiểm soát quỹ đạo bay của từng hạt particle trong khi đó Force kiểm soát lực đẩy của từng hạt trong suốt quá trình hạt hiển thị
+Color
+    Việc kiểm soát màu sắc khi làm Game effect trong Unity 3d còn phụ thuộc vào nhiều yếu tố khác ngoài particle system. Nhưng về cơ bản thì particle chi ra thành Start color và Color over Lifetime. Bảng màu của Unity cũng cho phép chúng ta kiểm soát được opacity của texture bằng kênh Alpha.
+Noise
+    Thuộc tính noise được Unity thêm vào từ bản update 2017. Thuộc tính này về cơ bản sẽ tạo ra Turbulance cho những effect nào có nhiều hạt. Ví dụ như khi tạo hiệu ứng những tàn lửa bay lên trong không khí mà thiếu Turbulance sẽ không tạo ra cảm giác chân thực. Mặc dù mình có nhiều cách để giả Turbulance nhưng yếu tố này thực sự rất quan trọng khi làm việc với particle system. Nó còn là yếu tố không thể thiếu trong các phần khác. Mình vẫn không hiểu tại sao Unity họ không update thuộc tính quan trọng này mà lại thay bằng Noise. Tuy nhiên Noise vẫn thực hiện tốt nhiệm vụ của nó. Nếu bạn làm effect game mobile bằng Unity 3D thì nên hạn chế sử dụng thuộc tính này
+Collision
+    Là thuộc tính thể hiện sự va chạm của hạt với các object khác trong Scene đồng thời kiểm soát được những gì xảy ra sau sự va chạm đó. Ví dụ sau khi hạt chạm vào mặt đất thì hạt đó biến mất ngay hoặc hạt đó sinh ra một Particle System mới. Điều đó tùy thuộc vào ý đồ của bạn. Đây cũng là một thuộc tính quan trọng khi làm Game effect với Unity 3d.
+Texture Sheet Animation
+    Thuộc tính dùng để kiểm soát việc hiển thị của texture. Có nhiều effect trong game phải sử dụng texture frame by frame hoặc có những effect cần phải random giữa nhiều texture khác nhau. Thuộc tính này chỉ hoạt động với 1 tấm texture là prite sheet. 
+Renderer
+    Việc kiểm soát hình ảnh hiển thị ra màn hình thực sự phức tạp hơn những gì chúng ta nhìn thấy và nó không chỉ phụ thuộc vào mỗi Renderer của particle system mà còn phụ thuộc vào setup ánh sáng và camera trong Scene. Cơ bản thì bạn chỉ cần quan tâm đến Render Mode mà thôi, bao gồm : Billboard (texture luôn hướng theo góc quay của camera) Stretched Billboard (texture bị kéo dãn) Horizontal Billboard (texture nằm ngang song song với mặt đất) Vertical Billboard (texture vuông góc với mặt đất) Mesh (texture hiển thị theo bề mặt của vật thể 3d)
+2.1.6 Shader trong Unity
+a) Shader trong Unity là gì?
+    Shader là các đoạn script nhỏ có chứa những cái tính toán về toán học, thuật toán để tính toán màu sắc cho từng pixel rendered, dựa trên ánh sáng và những tùy chỉnh Material.
+    Unity có hỗ trợ 3 loại Shader. Nhưng chỉ có 2 loại thường được sử dụng đó là Suface Shader và Fragment and Vertex Shaders, loại còn lại là Fixed Function Shader, nhưng loại này giờ hầu như không còn được sử dụng nữa bởi vì nó đã quá lỗi thời so với các loại Shader đang sử dụng hiện giờ.
+b) Phân loại Shader trong Unity
+      Trong những ngày đầu khi mà phần cứng đồ họa chưa phát triển mạnh như bây giờ thì Shader chỉ có một loại đó là Fixed Function shader với rất nhiều hạn chế khi nó được thiết lập sẵn trên các card đồ họa. Hiện nay, phần cứng đồ họa đã trở nên mạnh mẽ rất nhiều, nhiều bộ nhớ hơn, khả năng tính toán mạnh hơn cùng với đó thì các lập trình viên cũng được tiếp cận với nhiều loại Shader hơn và người ta gọi chung các loại Shader mới này là Programmable Shader còn Fixed Function shader là loại Non-Programmable Shader. Dựa trên tính năng và mục đích của shader mà chúng được phân loại như sau:
+• Vertex shader
+• Pixel shader
+• Geometry shader
+• Compute shader
+• Tessellation shader
+2.1.7 Scriptable Object trong Unity
+a) Scriptable Object trong Unity là gì?
+    Scriptable object đơn giản giống như là một object trong Unity, tuyên nhiên chức năng chính của Scriptable object là để lưu dữ liệu game như audio, text, film. Một game ngoài gameplay hay và các asset siêu đẹp thì những dữ liệu như audio, text, short film cũng rất quan trọng và scriptable object sẽ là nơi chứa tất cả các thứ đó.
+b) Cách sử dụng Scriptable Object
+    Các trường hợp sử dụng chính cho ScriptableObjects là:
+•  Lưu trữ dữ liệu và Asset trong Editor session
+• Lưu dữ liệu dưới dạng Asset trong Project của bạn để sử dụng  trong thời gian chạy
+Để sử dụng ScriptableObject, hãy tạo tập lệnh trong application’s thư mục Asset của bạn và làm cho nó kế thừa từ class ScriptableObject . Bạn có thể sử dụng thuộc tính CreateAssetMenu để dễ dàng tạo tài sản tùy chỉnh bằng lớp của bạn. 
+2.1.8 Tải và cài đặt unity
+- . Vào trang web www.unity3d.com để tải bản cài đặt unity.
+- Click tab Unity 
+
+     Hình 2. 6: Tải và cài đặt Unity - 1
+- Sang tab unity click dowload bản free
+
+    Hình 2. 7:  Tải và cài đặt Unity - 2
+- Khởi động bộ cài và chọn next
+
+     Hình 2. 8: Tải và đài đặt Unity - 3
+- Tích chọn và nhấn next
+
+    Hình 2. 9: Tải và cài đặt Unity - 4
+- Tích chọn theo hệ điều hành của máy bạn 32 hoặc 64 bit và chọn next.
+
+    Hình 2. 10: Tải và cài đặt Unity - 6
+- Để mặc định nếu bạn lập trình game cho máy tính. Tick chọn theo thể loại hệ điều hành bạn muốn tạo game và next.  
+
+     Hình 2. 11: Tải và cài đặt Unity -  7
+- Chọn thư mục cài đặt và nhấn next
+
+     Hình 2. 12: Tải và cài đặt Unity - 8
+- Ứng dụng tự dowload và cài unity cho các  bạn
+
+    Hình 2. 13: Tải và cài đặt Unity - 9
+- Dowload xong và tự động cài đặt và chờ đợi
+
+    Hình 2. 14: Tải và cài đặt Unity - 10
+- Tới đây nhấn finish là xong việc cài đặt
+
+    Hình 2. 15: Tải và cài đặt Unity - 11
+2.2 Tổng quan về Visual Studio
+2.2.1 Visual Studio là gì?
+      Microsoft Visual Studio là một môi trường phát triển tích hợp (IDE) từ Microsoft. Nó được sử dụng để phát triển chương trình máy tính cho Microsoft Windows, cũng như các trang web, các ứng dụng web và các dịch vụ web. Visual Studio sử dụng nền tảng phát triển phần mềm của Microsoft như Windows API, Windows Forms, Windows Presentation Foundation, Windows Store và Microsoft Silverlight. Nó có thể sản xuất cả hai ngôn ngữ máy và mã số quản lý.
+      Visual Studio bao gồm một trình soạn thảo mã hỗ trợ IntelliSense cũng như cải tiến mã nguồn. Trình gỡ lỗi tích hợp hoạt động cả về trình gỡ lỗi mức độ mã nguồn và gỡ lỗi mức độ máy. Công cụ tích hợp khác bao gồm một mẫu thiết kế các hình thức xây dựng giao diện ứng dụng, thiết kế web, thiết kế lớp và thiết kế giản đồ cơ sở dữ liệu. Nó chấp nhận các plug-in nâng cao các chức năng ở hầu hết các cấp bao gồm thêm hỗ trợ cho các hệ thống quản lý phiên bản (như Subversion) và bổ sung thêm bộ công cụ mới như biên tập và thiết kế trực quan cho các miền ngôn ngữ cụ thể hoặc bộ công cụ dành cho các khía cạnh khác trong quy trình phát triển phần mềm.
+      Visual Studio hỗ trợ nhiều ngôn ngữ lập trình khác nhau và cho phép trình biên tập mã và gỡ lỗi để hỗ trợ (mức độ khác nhau) hầu như mọi ngôn ngữ lập trình. Các ngôn ngữ tích hợp gồm có C, C++ và C++/CLI (thông qua Visual C++), VB.NET (thông qua Visual Basic.NET), C# (thông qua Visual C#) và F# (như của Visual Studio 2010). Hỗ trợ cho các ngôn ngữ khác như J++/J#, Python và Ruby thông qua dịch vụ cài đặt riêng rẽ. Nó cũng hỗ trợ XML/XSLT, HTML/XHTML, JavaScript và CSS.
+      Microsoft cung cấp phiên bản "Express" (đối với phiên bản Visual Studio 2013 trở về trước) và "Community" (đối với bản Visual Studio 2015 trở về sau) là phiên bản miễn phí của Visual Studio.
+2.2.2 Cấu trúc của Visual Studio
+      Các Visual Studio không hỗ trợ cho bất kỳ ngôn ngữ lập trình nào về giải pháp hoặc công cụ thực chất, thay vào đó nó cho phép cắm chức năng được mã hóa như là một VSPackage. Khi cài đặt, các chức năng có sẵn như là một dịch vụ. IDE cung cấp ba dịch vụ: SVsSolution cung cấp khả năng liệt kê các dự án và các giải pháp; SVsUIShell cung cấp cửa sổ và giao diện người dùng và SVsShell. Ngoài ra, IDE cũng có trách nhiệm điều phối và cho phép truyền thông giữa các dịch vụ. Tất cả các biên tập viên, nhà thiết kế, các loại dự án và các công cụ khác được thực hiện theo VSPackages. Visual Studio sử dụng COM để truy cập VSPackages. Visual Studio SDK cũng bao gồm Managed Package Framework (MPF) là một tập hợp quản lý bao bọc quanh các COM-interfaces cho phép các gói được viết bằng bất kỳ ngôn ngữ nào. Tuy nhiên, MPF không cung cấp tất cả các chức năng bộc lộ trong Visual Studio COM-interfaces.[9] Các dịch vụ có thể được tiêu thụ để tạo ra các gói khác, để thêm chức năng cho Visual Studio IDE.
+Hỗ trợ cho các ngôn ngữ lập trình được thêm vào bằng cách sử dụng một VSPackage đặc biệt được gọi là một dịch vụ ngôn ngữ. Một dịch vụ ngôn ngữ định nghĩa giao tiếp khác nhau mà việc thực hiện VSPackage có thể thực hiện để hỗ trợ thêm cho các chức năng khác nhau. Các chức năng có thể được thêm vào theo cách này bao gồm cú pháp màu, hoàn thành báo cáo kết quả, kết hợp đôi, công cụ chú giải tham số thông tin, danh sách thành viên và đánh dấu lỗi trên nền biên dịch. Nếu giao diện được thực hiện, các tính năng sẽ có sẵn ngôn ngữ. Dịch vụ ngôn ngữ sẽ được thực hiện trên cơ sở mỗi ngôn ngữ. Việc triển khai có thể tái sử dụng mã từ phân tích cú pháp hoặc trình biên dịch cho ngôn ngữ. Dịch vụ ngôn ngữ có thể được triển khai hoặc trong mã nguồn gốc hoặc mã số quản lý. Đối với mã nguồn gốc, thì cả COM-interfaces gốc hoặc Babel Framework (một phần của Visual Studio SDK) đều có thể được sử dụng. Đối với mã số quản lý thì các MPF sẽ bao hàm các dịch vu quản lý văn bản. 
+Visual Studio không bao gồm bất kỳ Hệ thống quản lý phiên bản hỗ trợ kiểm soát mã nguồn nhưng nó xác định hai cách thay thế cho các hệ thống kiểm soát mã nguồn để tích hợp với IDE. Một VSPackage kiểm soát mã nguồn có thể cung cấp giao diện người dùng tùy chỉnh của riêng mình. Ngược lại, một plugin kiểm soát mã nguồn bằng cách sử dụng MSSCCI (Microsoft Source Code Control Interface) cung cấp một tập các chức năng được sử dụng để thực hiện chức năng kiểm soát mã nguồn khác nhau, với một giao diện người dùng Visual Studio tiêu chuẩn. MSSCCI lần đầu tiên được sử dụng để tích hợp Visual SourceSafe với Visual Studio 6.0 nhưng sau đó được mở ra thông qua Visual Studio SDK. Visual Studio.NET 2002 dùng MSSCCI 1.1, và Visual Studio.NET 2003 dùng MSSCCI 1.2. Visual Studio 2005, 2008 và 2010 dùng MSSCCI 1.3. 
+Visual Studio hỗ trợ chạy nhiều cá thể của môi trường (tất cả đều có VSPackages riêng của mình). Những trường hợp sử dụng các registry hives khác nhau để lưu trữ trạng thái cấu hình và được phân biệt bởi AppID (Application ID). Các trường hợp được đưa ra bởi một AppId-specific.exe cụ thể mà lựa chọn AppID, thiết lập các hive gốc và khởi chạy IDE. VSPackages đăng ký một AppID được tích hợp với VSPackages khác cho AppID đó. Các phiên bản sản phẩm khác nhau của Visual Studio được tạo ra bằng cách sử dụng AppIds khác nhau. Các sản phẩm phiên bản Visual Studio Express được cài đặt với AppIds riêng nhưng với các sản phẩm Standard, Professional và Team Suite chia sẻ cùng AppID. Do đó, người ta có thể cài đặt các phiên bản Express song song với các phiên bản khác, không giống như các phiên bản khác cập nhật các cài đặt tương tự. Phiên bản Professional bao gồm các VSPackages khổng lồ trong phiên bản Standard và Team. Hệ thống AppID được thừa hưởng bởi Visual Studio Shell trong Visual Studio 2008.
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Nêu bài toán
+      Nhiều ngành giải trí đang phát triển, đặc biệt là ngành game giải trí. Bạn muốn tìm hiểu và xây dựng những game của bạn, ý tưởng của bạn và bạn muốn mọi người yêu thích và cài đặt game của bạn. Vậy bạn cần làm những gì.Và câu hỏi đặt ra là làm thế nào với bài toán này?
+      Câu trả lời là: Nghiên cứu lập trình game Unity chính là một trong những việc đầu tiên mà bạn cần phải thực hiện. Đó không chỉ là nền tảng bắt đầu mà còn giúp cho bạn có thể tạo ra thu nhập với những game bạn xây dựng. 
+      Trong quá trình xây dựng Game: Đối với mỗi cá nhân hay tổ chức, việc game đó xây dựng ra sao, cách thức xử lý quá trình chơi game như nào đều hết sức quan trọng. Và đặc biệt việc tạo ra game cấu hình vừa, và hay, gây hứng thú là điều hết sức quan trọng trong việc khẳng định chỗ đứng đối với khách hàng. Một logo game thiết kế bắt mắt sẽ giúp game bạn trở nên nổi bật trong lĩnh vực của làng game. 
+    Để đáp ứng được các yêu cầu đó em đã khảo sát và phân tích các yêu cầu để xây dựng Game Dark Hunter trên Unit
+3.2 Xây dựng hệ thống các chức năng
+3.2.1 Xác định yêu cầu của hệ thống
+    Hệ thống của game Dark Hunter bao gồm các chức năng :
+- Di chuyển: Tọa độ và các hình ảnh của nhân vật sẽ di chuyển theo hướng mà người chơi nhấn nút.
+- Tính điểm
+- Xây dựng các các item
+- Xây dựng nhân vật (máu, kinh nghiệm, thông tin nộ, sát thương,...)
+- Xây dựng kẻ địch (máu, sát lực, loại kẻ địch, 
+3.2.2 Phân tích yêu cầu của hệ thống
+    Biểu đồ use-casse Player
+
+    Hình 3.2 Biểu đồ Use-case tổng quát hệ thống
+    
+    Biểu đồ use-case vật cản
+    
+    
+    Hình 3. 3 Biểu đồ use-case vật cản
+Tóm tắt
+- Người chơi phải tránh những vật cản do hệ thống tạo ra như đá và các nhóm vật cản gộp lại với nhau.
+- Người chơi ăn được càng nhiều vàng càng tốt. 
+ Dòng sự kiện chính
+- Mỗi khi người chơi va chạm vào vàng vàng sẽ biến mất và nhân vật sẽ được tăng 1 điểm vàng.,
+- Va chạm vào đá sẽ dẫn đến game over.
+- Khởi động và vào trò chơi
+ Trạng thái sau khi thực hiện usecase
+- Màn hình xuất hiện các vật cản khi nhân vật di chuyển.
+    
+    
+    
+    
+    
+	Biểu đồ use – case kẻ địch
+
+
+- Tóm tắt
+- Người chơi game sẽ đối mặt với kẻ địch, kẻ địch sẽ gây ra sát thương và trừ máu của người chơi
+- Người chơi game có thể dùng kỹ năng để tiêu diệt kẻ địch
+-  Dòng sự kiên chính
+-  Kẻ địch sẽ là đối thủ gây dame lên người chơi.
+-  Trạng thái khi bắt đầu thực hiện Use Case
+- Khởi động trò chơi, và vào trò chơi
+- Trạng thái khi kết thức Use Case
+-  Nhân vật thay đổi vị trí trong màn hình game
+
+
+3.2.3 Thiết kế cơ sở dữ liệu
+    3.2.3.1 Nhân vật
+    	Với thông tin thuộc tính của các nhân vật bao gồm:
+• Health (max, current): Thông tin máu của nhân vật.
+o  Max: Lượng máu tối đa.
+o  Current: Lượng máu hiện tại.
+• Experience (max, current): Thông tin kinh nghiệm.
+o Max: Lượng kinh nghiệm tối đa.
+o Current: Lượng kinh nghiệm hiện tại.
+• Infuriate (max, current): Thông tin nộ (hoán đổi nhân vật khi nộ đạt max)
+o Max: Lượng nộ tối đa.
+o Current: Lượng nộ hiện tại. 
+• Level : Cấp độ của nhân vật.
+• Gold: Lưu trữ lượng vàng nhân vật nhặt được.
+• Damage: Lực sát thương cơ bản của nhân vật.
+• PointSkill: Điểm thông thạo (+1 khi nhân vật đạt một cấp độ mới).
+    3.2.3.2 Kẻ địch
+    Với thông tin thuộc tính của kẻ địch gồm:
+• Health (max, current): Lưu thông tin máu. 
+• Damage: Lực sát thương cơ bản.
+• Type: Loại kẻ địch (đánh gần, đánh xa,…).
+• Level: Cấp độ kẻ địch (dùng để quy định máu và sát thương).
+• Boss: Để xác nhận kẻ địch này là trùm của cảnh nào.
+    3.2.3.3 Ngọc
+    
+Hình 4. 1: Thông tin vật phẩm ngọc nâng cấp
+    	Với thông tin của viên ngọc sẽ bao gồm:
+• ID: Mã để quản lý ngọc.
+• Name: Tên của ngọc.
+• Quality: Số lượng hiện tại.
+    3.2.3.4 Kỹ năng
+    	Với thông tin của kỹ năng sẽ bao gồm:
+• ID: Mã kỹ năng.
+• Name: Tên kỹ năng.
+• Receive (current, next): Thông tin tùy chỉnh cho kỹ năng như: lượng sát thương hoặc lượng máu hồi.
+o Current: Lượng máu/sát thượng của cấp hiện tại.
+o Next: Lượng máu/sát thương được cộng dồn cho cấp tiếp theo.
+• Time Count Down (current, next): Thời gian hồi kỹ năng.
+o Current: Lượng thời gian hồi của cấp hiện tại.
+o Next: Lượng thời gian hồi được trừ dồn cho cấp tiếp theo.
+• Time Live (current, next): Thời gian tồn tại của kỹ năng.
+o Current: Lượng thời gian tồn tại của cấp hiện tại.
+o Next: Lượng thời gian tồn tại được cộng dồn cho cấp tiếp theo.
+• Relationship: Thể hiện rằng kỹ năng đang thuộc nhân vật nào.
+• Condition Level Player: Điều kiện để người chơi có thể mở được kỹ năng.
+• Level (current, max): Cấp độ của kỹ năng.
+o Current: Cấp độ hiện tại.
+o Max: Cấp độ tối đa mà kỹ năng có thể đạt được.
+• Description: Mô tả đôi nét về kỹ năng.
+• Status: Trạng thái kỹ năng: true/false = mở/khóa.
+
+3.3 Thiết kế giao diện của hệ thống.
+3.3.1 Giao diện chính
+    
+    Hình 3. 4 Giao diện chính
+3.3.2 Chọn cảnh chơi
+    Màn hình chọn cảnh chơi, gồm 4 cảnh với mỗi cảnh sẽ có từ 4 – 5 màn, khi người chơi hoàn thành xong một cảnh thì cảnh tiếp theo sẽ được mở.
+    
+    Hình 3.5 Chọn cảnh chơi
+3.3.3 Giao diện chọn màn chơi
+    Màn hình chọn màn chơi sẽ có từ 4-5 màn tùy theo mỗi cảnh. Mỗi màn sẽ yêu cầu một cấp độ. Khi người chơi đạt được cấp độ yêu cầu của từng màn, thì màn đó sẽ được mở khóa.
+
+    Hình 3.6 Giao diện chọn màn chơi
+3.3.4 Màn hình mô tả màn chơi của cảnh 1
+
+    Hình 3.7 Màn chơi cảnh 1
+    
+3.3.5 Màn hình mô tả màn chơi của cảnh 2
+
+    Hình 3.8 Màn chơi cảnh 2
+3.3.6 Giao diện màn chơi cảnh 3
+
+    Hình 3.9 Giao diện màn chơi cảnh 3
+3.3.7 Giao diện màn chơi cảnh 4
+
+3.3.8 Màn hình hiển thị tùy chọn
+
+3.3.9 Màn hình hiển thị thông tin cá nhân
+
+
+3.3.10 Màn hình hiển thị thông tin ngọc
+
+3.3.11 Màn hình hiển thị thông tin kỹ năng
+
+
+
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau thời gian nghiên cứu và phát triển, em đã hoàn thành cơ bản các chức năng chức năng ban đầu đề ra của đề tài. Thực hiện các animtion và các hiệu ứng môi trường chân thực nhất.
+    Em đã xây dựng được một hệ thống game 2D cơ bản, giúp người chơi có thể hòa mình vào thế giới trong game, tương tác và thực hiện các hành động với thế giới trong game. Hệ thống vật phẩm trong game được thiết kế đa dạng, thêm nhiều nhất có thể, giúp người chơi tự do khám phá đỡ nhàm chán.
+    Sau thời gian tìm hiểu và thiết kế hệ thống các chức năng cho game. Em đã thực hiện thành công đề tài, kết quả đạt được đã có các chức năng cơ bản, chạy ổn định và củng cố được kiến thức về lập trình game.
+4.2 Hạn chế của đề tài
+    Hệ thống game Dark Hunter mới chỉ dừng lại ở các chức năng cơ bản, chưa tối ưu hóa hoàn thiện game, các model trong game được sử dụng hoàn toàn là em tìm kiếm ở mọi nguồn trên Internet chứ chưa thể tự mình thiết kế được.
+4.3 Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, em đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+• Xây dựng hoàn thiện các chức năng của một game sinh tồn.
+• Thêm nhiều vật phẩm mới, giúp người chơi dễ dàng trải nghiệm thế giới trong game.
+TÀI LIỆU THAM KHẢO
+[1] https://docs.unity3d.com/Manual/class-ScriptableObject.html
+[2] https://docs.unity3d.com/Manual/class-ParticleSystem.html
+[3] https://docs.unity3d.com
+[4] https://learn.unity.com/
+[5] https://www.mixamo.com/
+[6] https://blendervn.org/t/tai-lieu-nhap-mon-blender-danh-cho-nguoi-dung-moi/2217
+    
+    
+Xây dựng game Dark Hunter trên hệ điều hành Android
+    
+    
+43
+    
+    

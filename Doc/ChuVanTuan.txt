@@ -1,0 +1,461 @@
+﻿CHƯƠNG 1: MỞ ĐẦU
+1.1 Lý do chọn đề tài
+ 	Do nhu cầu của mỗi người hay đơn giản là việc nhát đi ra ngoài mua đồ ăn vừa chen lấn, vừa tốn thời gian và không có nhiều sự lựa chọn thì hiện nay các dịch vụ giao đồ ăn đều trở nên phổ biến và nhu cầu sử dụng của mọi người càng tăng lên. Không phải do bản thân mình hay không chứ riêng mình cảm thấy khi bạn sử dụng dịch vụ giao đồ ăn trực tuyến càng nhiều thì nó như thành thói quen của bạn cứ thèm gì, muốn ăn gì lại nghĩ ngay đến việc mở ứng dụng lên đặt.
+ 	Ngoài ra việc đặt đồ ăn trực tuyến đối khi còn rẽ hơn so với việc bạn đi ra ngoài tự ăn vì hiện tại sự cạnh tranh giữa các thương hiệu giao đồ ăn quá khốc liệt chính vì vậy người dùng được hưởng lợi từ việc khuyến mãi, ưu đãi từ các đơn vị này.
+1.2 Mục tiêu của đề tài
+- Xây dựng ứng dụng phải đảm bảo tính tiện dụng đối với người sử dụng. Nội dung và cách trình bày của Ứng dụng phải rõ ràng mạch lạc và dễ sử dụng.
+- Vận dụng các kiến thức đã được học về Java cùng với việc tìm hiểu thêm về Firebase.
+- Ứng dụng được thiết kế và lập trình trên ngôn ngữ Java, cơ sở dữ liệu Firebase.
+
+1.3 Giới hạn và phạm vi của đề tài
+- Giới hạn: Ứng dụng hiện tại giới hạn sử dụng trên các thiết bị mobile.
+- Phạm vi: mọi người biết dùng smartphone và có mạng Internet.
+
+1.4 Kết quả dự kiến của đồ án
+  - Xây dựng ứng dụng Food Now: 
+  * Quản lý đăng nhập
+  * Quản lý thông tin tài khoản.
+  * Hiển thị món ăn 
+  * Đặt hàng
+  * Quản lý giỏ hàng
+  * Hiển thị đơn hàng
+1.5 Phương pháp tiếp cận
+- Phương pháp đọc tài liệu.
+- Phương pháp thực nghiệm.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Android Studio
+2.1.1 Giới thiệu về Android Studio
+    Android là một hệ điều hành dựa trên nền tảng Linux được thiết kế dành cho các thiết bị di động có màn hình cảm ứng như điện thoại thông minh và máy tính bảng. Ban đầu, Android được phát triển bởi Tổng công ty Android, với sự hỗ trợ tài chính từ Google và sau này được chính Google mua lại vào năm 2005. Android ra mắt vào năm 2007 cùng với tuyên bố thành lập Liên minh thiết bị cầm tay mở: một hiệp hội gồm các công ty phần cứng, phần mềm, và viễn thông với mục tiêu đẩy mạnh các tiêu chuẩn mở cho các thiết bị di động. Chiếc điện thoại đầu tiên chạy Android được bán vào năm 2008. 
+      Android có mã nguồn mở và Google phát hành mã nguồn theo Giấy phép Apache. Chính mã nguồn mở cùng với một giấy phép không có nhiều ràng buộc đã cho phép các nhà phát triển thiết bị, mạng di động và các lập trình viên nhiệt huyết được điều chỉnh và phân phối Android một cách tự do. Ngoài ra, Android còn có một cộng đồng lập trình viên đông đảo chuyên viết các ứng dụng để mở rộng chức năng của thiết bị, bằng một loại ngôn ngữ lập trình Java có sửa đổi. Vào tháng 10 năm 2012, có khoảng 700.000 ứng dụng trên Android, và số lượt tải ứng dụng từ Google Play, cửa hàng ứng dụng chính của Android, ước tính khoảng 25 tỷ lượt.
+      Android cung cấp một phương pháp tiếp cận thống nhất để lập trình ứng dụng cho các thiết bị di động, nghĩa là các lập trình viên chỉ cần lập trình cho Android, và các ứng dụng của họ sẽ có thể chạy trên các thiết bị khác nhau được hỗ trợ bởi Android.
+      Những yếu tố này đã giúp Android trở thành nền tảng điện thoại thông minh phổ biến nhất thế giới, vượt qua Symbian OS vào quý 4 năm 2010, và được các công ty công nghệ lựa chọn khi họ cần một hệ điều hành không nặng nề, có khả năng tinh chỉnh, và giá rẻ chạy trên các thiết bị công nghệ cao thay vì tạo dựng từ đầu. Kết quả là mặc dù được thiết kế để chạy trên điện thoại và máy tính bảng, Android đã xuất hiện trên TV, máy chơi game và các thiết bị điện tử khác. Bản chất mở của Android cũng khích lệ một đội ngũ đông đảo lập trình viên và những người đam mê sử dụng mã nguồn mở để tạo ra những dự án do cộng đồng quản lý. Những dự án này bổ sung các tính năng cao cấp cho những người dùng thích tìm tòi hoặc đưa Android vào các thiết bị ban đầu chạy hệ điều hành khác.
+      Android chiếm 87,7% thị phần điện thoại thông minh trên toàn thế giới vào thời điểm quý 2 năm 2017, với tổng cộng 2 tỷ thiết bị đã được kích hoạt và 1,3 triệu lượt kích hoạt mỗi ngày. Sự thành công của hệ điều hành cũng khiến nó trở thành mục tiêu trong các vụ kiện liên quan đến bằng phát minh, góp mặt trong cái gọi là "cuộc chiến điện thoại thông minh" giữa các công ty công nghệ. 
+2.1.2 Các tính năng của hệ điều hành android
+    Giao diện người dùng đẹp: Màn hình cơ bản hệ điều hành Android cung cấp một giao diện người dùng đẹp và trực quan.
+    Kết nối: GSM/EDGE, IDEN, CDMA, EV-DO, UMTS, Bluetooth, Wi-Fi, LTE, NFC and WiMAX.
+    Lưu trữ: SQLite, một cơ sở dữ liệu quan hệ nhẹ, được sử dụng cho mục đích lưu trữ dữ liệu.
+    Hỗ trợ phương tiện truyền thông: H.263, H.264, MPEG-4 SP, AMR, AMR-WB, AAC, HE-AAC, AAC 5.1, MP3, MIDI, Ogg Vorbis, WAV, JPEG, PNG, GIF, and BMP.
+    Tin nhắn: SMS and MMS
+    Trình duyệt web: Dựa vào cơ chế WebKit mã nguồn mở, kết hợp với công cụ V8 JavaScript của Chrome hỗ trợ HTML5 và CSS3.
+    Cảm ứng đa điểm: Android có hỗ trợ cho cảm ứng đa điểm mà ban đầu đã được thực hiện có sẵn trong điện thoại như HTC Hero.
+    Multi-tasking: Người dùng có thể nhảy từ một nhiệm vụ nàyđến nhiệm vụ khác và cùng một thời gian, các ứng dụng khác nhau có thể chạy đồng thời.
+    Resizable widgets: Widget là thay đổi kích thước, vì vậy người dùng có thể mở rộng chúng để hiển thị nội dung nhiều hơn hoặc thu nhỏ chúng để tiết kiệm không gian.
+    Đa ngôn ngữ: Hỗ trợ thư mục đơn và văn bản hai chiều.
+    GCM: Google Cloud Messaging (GCM) là một dịch vụ cho phép các nhà phát triển gửi tin nhắn dữ liệu lên user của họ trên các thiết bị Android, mà không cần một giải pháp đồng bộ hóa độc quyền.
+    Wi-Fi Direct: Một công nghệ cho phép các ứng dụng Tìm thấy và ghép đôi trực tiếp, qua một băng thông cao kết nối peer-to-peer.
+    Android Beam: Một công nghệ NFC cho phép người dùng chia sẻ ngay lập tức, chỉ bằng cách chạm hai điện thoại NFC với nhau.
+2.1.3 Kiến trúc hệ điều hành Android
+    Kiến trúc hệ điều hành Android gồm 4 phần chính, mô hình dưới đây sẽ cho ta cái nhìn tổng quan về kiến trúc Android. Nhân của Android được phát triển dựa vào Kernel Linux 2.6. Mỗi tầng trong kiến trúc Android hoạt động dựa vào tầng bên dưới nó.
+    Có thể ban đầu bạn thấy sơ đồ hơi rối mắt nhưng không sao, chúng ta sẽ lần lượt tìm hiểu theo thứ tự từ dưới lên.
+ 
+    Hình 2.1  Kiến trúc hệ điều hành android
+    Nhân Linux (Linux kernel)
+    Nằm ở tầng dưới cùng là lớp Linux kernal – Linux 3.6 với khoảng 115 patches. Lớp này liên hệ với phần cứng và nó chứa tất cả driver phần cứng cần thiết như camera, bàn phím, màn hình…
+    Thư viện Android (Android libraries) và Android Runtime
+    Phía trên tầng Linux kernel là tầng libraries, chứa những thư viện hỗ trợ. Một số có thể kể đến như là bộ máy trình duyệt web mã nguồn mở WebKit, thư viện libc, cơ sở dữ liệu SQLite tiện lợi cho việc lưu trữ và chia sẻ dữ liệu, thư viện hỗ trợ thu phát âm thanh và video, thư viện SSL giúp bảo mật mạng…
+    Tầng này chứa tất cả các thư viện Java, được viết đặc biệt cho Android như các thư viện framework, các thư viện xây dựng giao diện, đồ họa và cơ sở dữ liệu. Dưới đây là một số thư viện quan trọng mà các lập trình viên nên biết:
+• android.app − Cung cấp quyền truy cập tới mô hình ứng dụng và là nền tảng của mọi ứng dụng Android applications.
+• android.content − Cho phép truy cập nội dung, phát hành và tin nhắn giữa các ứng dụng và các thành phần trong một ứng dung.
+• android.database −  Được dùng để truy cập vào dữ liệu được đưa ra bởi bộ phận cung cấp nội dung, bao gồm các lớp quản lý cơ sở dữ liệu SQLite.
+• android.opengl − Cho phép tương tác với thư viện đồ họa OpenGL ES 3D.
+• android.os − Giúp ứng dụng truy cập những dịch vụ cơ bản của hệ điều hành bao gồm tin nhắn, dịch vụ hệ thống và liên lạc nội bộ (inter-process communication).
+• android.text − Được dùng để vẽ và thao tác văn bản trên màn hình.
+• android.view − Các khối xây dựng cơ bản của giao diện người dùng.
+• android.widget − Một tập hợp rất nhiều thành phần giao diện được xây dựng sẵn như nút bấm (button), nhãn (label), danh sách hiển thị (list views), quản lý bố cục (layout managers)…
+• android.webkit − Tập hợp các lớp (classes) cho phép trình duyệt web được nhúng vào ứng dụng.
+    Trong tầng này còn có một phần không kém phần quan trọng là Android runtime, bây giờ chúng ta sẽ tìm hiểu các thư viện C/C++ trong tầng này.
+    Android Runtime chứa Dalvik Virtual Machine (DVM) – một biến thể của Java Virtual Machine, đặc biêt thiết kế và tối ưu hóa cho Android. DVM giúp mỗi ứng dụng Android chạy trong chính tiến trình (process) của nó với một đại diện (instance) của DVM.
+    Ngoài ra, Android Runtime cũng chứa tập hợp các thư viện quan trong cho phép người lập trình viết ứng dụng sử dụng ngôn ngữ lập trình Java.
+    Application Framework
+    Application Framework cung cấp nhiều dịch vụ cấp cao dưới dạng các lớp viết bằng Java (Java classes) Lập trình viên được phép sử dụng các lớp này để tạo ra các ứng dụng.
+    Android framework chứa các dịch vụ quan trọng như:
+• Activity Manager − Quản lý tất cả các phần của vòng đời (lifecycle) ứng dụng và các hoạt động ngăn xếp (activity stack).
+• Content Providers − Cho phép ứng dụng phát hành và chia sẻ dữ liệu với ứng dụng khác.
+• Resource Manager − Cho phép truy cập tới những tài nguyên không phải là mã nguồn như chuỗi, cài đặt màu, bố cục giao diện.
+• Notifications Manager − Giúp ứng dụng hiển thị thông báo và nhắc nhở người dùng.
+• View System − Một tập hợp mở rộng giúp tạo giao diện người dùng.
+    Ứng dụng (applications)
+    Ở tầng trên cùng là các ứng dụng Android đi kèm với hệ điều hành như Contacts Books, Browser, Games… Thiết nghĩ không cần nói nhiều thêm về tầng này.
+2.2 Tổng quan về WebService
+2.2.1 WebService là gì?
+    Web Service là một khái niệm rộng hơn so với khái niệm web thông thường. Nó là sự kết hợp các máy tính cá nhân với các thiết bị khác, các cơ sở dữ liệu và các mạng máy tính để tạo thành một cơ cấu tính toán ảo mà người sử dụng có thể làm việc thông qua các trình duyệt mạng. Các Web Service thường cung cấp các dữ liệu thô mà nó khó hiểu đối với đa số người dùng thông thường, chúng thường được trả về dưới dạng XML hoặc JSON. Hiện nay, web service trở thành dịch vụ mạnh mẽ, cung cấp lợi ích cho cả doanh nghiepj, khách hàng, cá nhân, trong nhiều lĩnh vực thực tế: thông tin thương mại, dịch vụ du lịch, tỉ giá, chứng khoán...
+2.2.2 So sánh WebSevice và API
+    API và Web Service hoạt động như một phương tiện giao tiếp. Sự khác biệt duy nhất là một Web Service là tạo điều kiện cho sự tương tác giữa hai máy trên mạng. API hoạt động như một giao diện giữa hai ứng dụng khác nhau để chúng có thể giao tiếp với nhau. API là phương thức tạo điều kiện cho các nhà cung cấp bên thứ ba có thể viết các chương trình giao diện dễ dàng giao tiếp với các chương trình khác. Một Web Service được thiết kế để có một giao diện được mô tả trong một định dạng có thể xử lý bằng máy thường được chỉ định trong ngôn ngữ mô tả dịch vụ web (WSDL). Thông thường, "HTTP" là giao thức được sử dụng phổ biến nhất để giao tiếp. Web Service cũng sử dụng SOAP, REST và XML-RPC như một phương tiện giao tiếp. API có thể sử dụng bất kỳ phương tiện giao tiếp nào để bắt đầu tương tác giữa các ứng dụng. Ví dụ, các lời gọi hệ thống được gọi bằng cách sử dụng các ngắt chương trình (interrupt) của API hạt nhân Linux.
+    Một API xác định chính xác các phương thức cho một chương trình phần mềm để tương tác với một chương trình phần mềm khác. Khi hành động này (API) liên quan đến việc gửi dữ liệu qua mạng, thì đó chính là bạn đã sử dụng một Web Service. Một API thường liên quan đến các chức năng gọi từ bên trong một chương trình phần mềm.
+    Trong trường hợp các ứng dụng Web, API được sử dụng là dựa trên web. Các ứng dụng dành cho máy tính để bàn như bảng tính và tài liệu từ sử dụng VBA và API dựa trên COM không liên quan đến Web Service. Một ứng dụng máy chủ như Joomla có thể sử dụng một API dựa trên nền PHP trong máy chủ không yêu cầu Web Service.
+    Một Web Service chỉ đơn thuần là một API được bao bọc trong HTTP. API không phải lúc nào cũng cần dựa trên web. Một API bao gồm một bộ đầy đủ các quy tắc và thông số kỹ thuật cho một chương trình phần mềm làm theo để tạo điều kiện tương tác. Web Service có thể không chứa một bộ thông số kỹ thuật hoàn chỉnh và đôi khi có thể không thực hiện được tất cả các tác vụ có thể thực hiện được từ API hoàn chỉnh.
+           
+    Hình 2.2 Mô hình Client – Web Service
+2.2.3 Một số thư viện xử lý Server- client cho Android
+    2.2.3.1 Retrofit
+• Retrofit là gì?
+    Retrofit là một type-safe HTTP client cho Android và Java. Retrofit giúp dễ dàng kết nối tới một dịch vụ REST ở trên web bằng cách dịch API thành các Interface của Java
+    Thư viện mạnh mẽ này giúp bạn lấy dữ liệu trả về dạng JSON hoặc XML, sau đó phần tích cú pháp thành Plain Old Java Objects (POJOs). Các request GET, POST, PUT, PATCH, DELETE đều có thể được thực thi
+    Retrofit được xây dựng trên nền một số thư viện mạnh mẽ và công cụ khác, đằng sau nó có sử dụng OkHttp. Ngoài ra Retrofit không tích hợp sẵn bộ chuyển đổi JSON -> Java, thay vào đó ta có thể sử dụng các thư viện sau:
+o Gson: com.squareup.retrofit:converter-gson
+o Jackson: com.squareup.retrofit:converter-jackson
+o Moshi: com.squareup.retrofit:converter-moshi
+o Vs Protocol buffers, Retrofit hỗ trợ
+o Protobuf: com.squareup.retrofit2:converter-protobuf
+o Wire: com.squareup.retrofit2:converter-wire
+    Và đối với XML, Retrofit hỗ trợ:
+    Simple Framework: com.squareup.retrofit2:converter-simpleframework
+• Tại sao lại dung Retrofit
+o Retrofit đơn giản trong việc setup và sử dụng : phát triển thư viện type-safe HTTP của riêng của bạn để giao tiếp với một REST API có thể thật sự rất khó: bạn phải xử lý nhiều khía cạnh, chẳng hạn như kết nối, bộ nhớ đệm, thử lại yêu cầu sai, luồng, phân tích phản hồi, xử lý lỗi và nhiều thứ khác. Mặt khác, Retrofit là một thư viện được tổ chức tốt, tài liệu hướng đầy đủ và đã thử nghiệm sẽ giúp bạn tiết kiệm rất nhiều thời gian quý báu và những đau đầu không cần thiết.
+o Retrofit là một type-safe HTTP client: trình biên dịch sẽ xác nhận hợp lệ các kiểu dữ liệu trong khi biên dịch và ném một lỗi nếu bạn cố gán kiểu sai cho một biến.
+o Retrofit nhanh hơn rất nhiều so với việc sử dụng Volley, AysncTask
+    2.2.3.2 Volley
+• Volley là gì?
+    Volley là một HTTP library giúp các app Android kết nối mạng đơn giản, developer viết code ít hơn. Đặc biệt là thư viện Volley giúp tăng tốc độ ứng dụng nhờ hỗ trợ cache.
+
+Hình 2.3 Thư viện Volley
+• Một số tính năng nổi bật của Volley
+o Hỗ trợ lên schedule để tạo request
+o Cho phép cùng lúc thực hiện nhiều request trên các thread khác nhau theo độ ưu tiên.
+o Cache trên Disk hay RAM
+o Cho phép hủy một request.
+o Dễ dàng tùy chỉnh cho phù hợp với yêu cầu của ứng dụng. Như thiết lập retry, back off.
+o Dễ debug.
+2.3 Tổng quan về JPA (Java Persistence API)
+2.3.1 Khái quát về JPA
+    JPA là một đặc tả của Sun, ra đời cùng với bản đặc tả J2EE 5. JPA không phải là một sản phẩm và không thể nó như thành phần persistence. Nó cần phải có một cài đặt ORM để hoạt động và persist các đối tượng Java. Các Framework ORM có thể sử dụng cho JPA như Hibernate, Toplink, Open JPA, …
+    Ngày nay đa số các nhà cung cấp đều hỗ trợ cài đặt JPA cho Framework persistence của họ. Vì vây, người lập trình có thể lựa chọn nhà cung cấp tốt nhất tùy thuộc yêu cầu ứng dụng của mình.
+    Lợi ích của JPA:
+• Đơn giản hóa công nghệ cho tầng persistence (tầng dữ liệu)
+• Không phụ thuộc vào các Framework ORM
+• Có nhiều nhà cung cấp hỗ trợ cài đặt JPA
+• Dữ liệu có thể được lưu trữ thông qua việc ORM
+    Phiên bản hiện tại của JPA: Hiện tại JPA đã có phiên bản 2.2, cung cấp nhiều tính năng hữu ích cho người lập trình.
+2.3.2 Kiến trúc JPA
+    JPA sử dụng metadata để ánh xạ các đối tượng persistence với các bảng trong cơ sở dữ liệu. JPA hỗ trợ SQL như là một ngôn ngữ truy vấn để dễ dàng xử lý các truy vấn cơ sở dữ liệu. Ngôn ngữ truy vấn JPA có thể dùng thực thi cả truy vấn tĩnh và truy vấn động.
+    Các khái niệm JPA: 
+• Entity: Entity là các đối tượng persistence thể hiện một mẫu tin trong cơ sở dữ liệu. Entity chỉ là các lớp POJO đơn giản, dễ dàng tạo. 
+Dưới đây là một số đặc điểm của một Entity:
+o Entity có thể tương tác với cơ sở dữ liệu quan hệ.
+o Entity được xác định thông qua một định danh (tương đương với khóa chính trong table của cơ sở dữ liệu quan hệ).
+o Entity hỗ trợ giao tác (transaction).
+o Entity hỗ trợ kế thừa giống như những lớp thường khác.
+• EntityManager: EntityManager là một giao diện (interface) cung cấp các API cho việc tương tác với các Entity. 
+Một số chức năng cơ bản của EntityManager như:
+o Persist: phương thức này dùng để lưu một thực thể mới tạo vào cơ sở dữ liệu.
+o Merge: dùng để cập nhật trạng thái của entity vào cơ sở dữ liệu.
+o Remove: xóa một thể hiện của entity.
+• EnityManagerFactory: EntityManagerFactory được dùng để tạo ra một thể hiện của EntityManager.
+    Các tính năng của JPA: Việc giới thiệu JPA vào trong đặc tả J2EE 5 là một bước tiến lớn trong việc đơn giản hóa các quy trình phát triển ứng dụng. JPA đơn giản hóa mô hình thực thể dữ liệu và cộng thểm một số tính năng mới mà phiên bản EJB trước (EJB 2.0) không có. Giờ đây người lập trình có thể ánh xạ trực tiếp các đối tượng persistence với cơ sở dữ liệu quan hệ. JPA có thể sử dụng bên ngoài container, điều này không dễ thực hiện trong EJB 2.1. Bạn cũng có thể sử dụng JPA trong các ứng dụng swing.
+    Một số tính năng của JPA:
+• JPA hỗ trợ pluggable, tức là có thể sử dụng nhiều nhà hãng cung cấp thứ ba như Hibernate hay Toplink.
+• Hỗ trợ annotation.
+• Giảm bớt số lớp yêu cầu cho việc phát triển persistence.
+• Không cần phải viết các mô tả triển khai trong xml. Annotation dựa trên metadata đã hỗ trợ trong các ứng dụng JPA.
+• Đã chuẩn hóa ORM và dễ dàng phát triển hơn.
+• JPA hỗ trợ truy vấn động và tĩnh.
+• Nhiều IDE hỗ trợ phát triển ứng dụng JPA và có thể tự động sinh code ánh xạ từ cơ sở dữ liệu thành các entity và ngược lại.
+2.3.3 Các JPA anotation chính
+• Các anotation liên quan đến khai báo Entity
+o @Entity: Biến một JavaBean trở thành một entity để chúng ta có thể thao tác với Database thông qua việc sử dụng entity này.
+o @Table: Định nghĩa một entity tương ứng với một bảng trong cơ sở dữ liệu. Nếu một entity không có anotation này, mặc định tên bảng trong database được map có tên tương ứng với tên của entity.
+o @Column: Định nghĩa một thuộc tính trong một entity sẽ tương ứng là một trường của một bảng tương ứng trong cơ sở dữ liệu
+o @Id: Định nghĩa một thuộc tính trong một entity sẽ là trường khóa chính tương ứng trong cơ sở dữ liệu.
+o @GeneratedValue: Định nghĩa một thuộc tính có giá trị tăng tự động tương ứng với trường tăng tự động trong cơ sở dữ liệu. Tùy cơ sở dữ liệu khác nhau, các strategy truyền vào cũng khác nhau.
+o @Embeddable: Định nghĩa một composite key chứa các thuộc tính là các khóa chính của một bảng trong cơ sở dữ liệu.
+o @IdClass: Chức năng tương tự như @Embeddable, tuy nhiên, nó chỉ khai báo một class khác là composite key của một entity và class khác đó có định nghĩa các thuộc tính là khóa chính.
+• Các anotation liên quan đến Relationship:
+o @ManyToOne: Định nghĩa mối quan hệ nhiều - một giữa các Entity tương ứng với mối quan hệ gữa các bảng trong cơ sở dữ liệu.
+o @OneToMany: Định nghĩa mối quan hệ một - nhiều giữa các Entity tương ứng với mối quan hệ gữa các bảng trong cơ sở dữ liệu.
+o @OneToOne: Định nghĩa mối quan hệ một – một giữa các Entity tương ứng với mối quan hệ gữa các bảng trong cơ sở dữ liệu.
+o @ManyToMany: Định nghĩa mối quan hệ nhiều – nhiều giữa các Entity tương ứng với mối quan hệ gữa các bảng trong cơ sở dữ liệu.
+           
+    Hình 2.4 Ví dụ về định nghĩa một entity với các JPA anotation
+2.4 Tổng quan về Google API
+    2.4.1  Tương tác giữa Server App và Google Servers
+    Để xử dụng các dịch vụ của Google bạn cần tạo 1 tài khoản mới(project service) trên https://console.developers.google.com.
+    Service Accounts xác thực đối tượng truy cập Google API’s bằng cách sử dụng OAuth trên danh nghĩa là 1 ứng dụng web thay vì là 1 người dùng. Tức là nó sử dụng chứng chỉ tài khoản dịch vụ của ứng dụng để chứng thực.
+Trước khi tạo request truy cập API, cần phải có 1 access token bằng cách sử dụng các tài khoản dịch vụ đã được chứng nhận. request này là POST request với các params như grant-type và JWT(JSON Web Token) đã đăng nhập bằng key.
+Các loại tham số cấp đầu tiên là 1 jet-bearer (chỉ cần 1 access token mà không cần refresh token). Param thứ 2 là JWT chứa thông tin xác thực tài khoản trong chuỗi mã hóa được định dạng trước chứa tiêu đề, tập các yêu cầu(claim set) và chữ ký. Tiêu đề định nghĩa thuật toán signin được sử dụng trong việc signing JWT, claim setchứa địa chỉ email của tài khoản dịch vụ, phạm vi, thời gian hết hạn… Chữ ký là thành phần có chữ ký của tiêu đề và claim set
+Sau khi tạo request tới máy chủ ủy quyền, chúng ta nhận được một access token kéo dài ít nhất là 1 giờ. Sử dụng access token này, chúng ta có thể truy cập vào Google APIs theo cách sau : sử dụng user’s credential, cách thức như hình dưới đây :
+              
+    Hình 2.5 Tương tác giữa Server App và Google Servers
+    Tiến trình trên yêu cầu ứng dụng phải tạo và ký hiệu mã hóa JWT’s, rất dễ để phạm sai lầm nghiêm trọng tác động rất lớn tới sự an toàn của ứng dụng. Thay vào đó tất cả có thể được thực hiện bởi việc sử dụng các thư viện client . Ruby chứa gem google_api_client cho việc lấy `access token, tạo ra các yêu cầu để truy cập vào API và phân tích kết quả.
+2.5 Google Map API
+        2.5.1  Google Map API là gì?
+    Google Map là một dịch vụ ứng dụng vào công nghệ bản đồ trực tuyến trên web miễn phí được cung cấp bởi Google, hỗ trợ nhiều dịch vụ khác của Google đặc biệt là dò đường và chỉ đường; hiển thị bản đồ đường sá, các tuyến đường tối ưu cho từng loại phương tiện, cách bắt xe và chuyển tuyến cho các loại phương tiện công cộng (xe bus, xe khách …), và những địa điểm (kinh doanh, trường học, bệnh viện, cây ATM…) trong khu vực cũng như khắp nơi trên thế giới.
+    Map API là gì?Là một phương thức cho phép 1 website B sử dụng dịch vụ bản đồ của website A (gọi là Map API) và nhúng vào website của mình (site B). Site A ở đây là google map, site B là các website cá nhân hoặc tổ chức muốn sử dụng dịch vụ của google (di chuột, room, đánh dấu trên bản đồ…)
+    Các ứng dụng xây dựng trên maps được nhúng vào trang web cá nhân thông qua các thẻ javascripts do vậy việc sử dụng API google rất dễ dàng.
+    Google Map API đã được nâng cấp lên phiên bản v3 không chỉ hỗ trợ cho các máy để bàn truyền thống mà cho cả các thiết bị di động; các ứng dụng nhanh hơn và nhiều hơn .
+    Các dịch vụ hoàn toàn miễn phí với việc xây dựng một ứng dụng nhỏ. Trả phí nếu đó là việc sử dụng cho mục đích kinh doanh, doanh nghiệp.
+    2.5.2  Một số ứng dụng của Google Map API
+    Đánh dấu các địa điểm trên bản đồ kèm theo thông tin cho địa điểm đó : khu vui chơi giải trí, nhà hàng khách sạn, cây ATM, bệnh viện, trường học,… bất cứ địa điểm nào bạn muốn
+    Chỉ dẫn đường đến các địa điểm cần tìm(đường tối ưu và nhiều option khác),chỉ dẫn đường giao thông công cộng, có thể là các địa điểm cung cấp như trên. Ở đây sử dụng các service google cung cấp.
+    Khoanh vùng khu vực: các trung tâm kinh tế, khu đô thị, khu ô nhiễm…
+    Tình trạng giao thông các khu vực… từ đó đưa ra các giải pháp…
+    2.5.3 Tạo 1 Google Map đơn giản
+    Truy cập vào https://code.google.com/apis/console và đăng nhập bằng tài khoản gmail của mình.
+    Click the APIs & auth -> APIs.
+    Kéo xuống dưới tìm Google Maps JavaScript API v3 và kích hoạt dịch vụ bằng việc click vào button chuyển trạng thái từ OFF sang ON.
+
+
+    Hình 2.6  Google Map API
+    
+2.6 Tổng quan về Firebase
+2.6.1 Firebase là gì?
+     Firebase là một nền tảng di động giúp bạn nhanh chóng phát triển các ứng dụng chất lượng cao, phát triển ứng dụng cho người dùng quy mô lớn và kiếm được nhiều tiền hơn.
+    Firebase là một dịch vụ hệ thống backend được Google cung cấp sẵn cho ứng dụng Mobile của bạn, với Firebase bạn có thể rút ngắn thời gian phát triển, triển khai và thời gian mở rộng quy mô của ứng dụng mobile mình đang phát triển. Hỗ trợ cả 2 nền tảng Android và IOS, Firebase mạnh mẽ, đa năng, bảo mật và là dịch vụ cần thiết đầu tiên để xây dưng ứng dụng với hàng triệu người sử dụng.
+2.6.2 Lợi ích khi sử dụng Firebase
+    Xây dựng ứng dụng nhanh chóng mà không tốn thời gian, nhân lực để quản lý hệ thống và cơ sơ sở hạ tầng phía sau: Firebase cung cấp cho bạn chức năng như phân tích, cơ sở dữ liệu, báo cáo hoạt động và báo cáo các sự cố lỗi để bạn có thể dễ dàng phát triển, định hướng ứng dụng của mình vào người sử dụng nhằm đem lại các trải nghiệm tốt nhất cho họ.
+    Uy tín chất lượng đảm bảo từ Google: Firebase được google hỗ trợ và cung cấp trên nền tảng phần cứng với quy mô rộng khắp thế giới, được các tập đoàn lớn và các ưng dụng với triệu lượt sử dụng từ người dùng.
+    Quản lý cấu hình và trải nghiệm các ứng dụng của Firebase tập trung trong một giao diện website đơn giản, các ứng dụng này hoạt động độc lập nhưng liên kết dữ liệu phân tích chặt chẽ.
+2.6.3 Điểm yếu của Firebase
+    Điểm yếu duy nhất của “Firebase” chính là phần Realtime Database, mà đúng hơn chỉ là phần Database. Cơ sở dữ liệu của họ được tổ chức theo kiểu trees, parent-children, không phải là kiểu Table nên những ai đang quen với SQL có thể sẽ gặp khó khăn từ mức đôi chút tới khá nhiều.
+    
+2.7 Tổng quan các dịch vụ mà Firebase cung cấp
+Firebase cung cấp cho chúng ta công cụ Firebase Analytics và 2 nhóm sản phẩm chính tập trung vào 2 đối tượng là:
+• Develop & test your app: phát triển và kiểm thử các ứng dụng được thiết kế.
+• Grow & engage your audience: Phân tích dữ liệu và tối ưu hóa trải nghiệm đối với người dùng.
+
+    Hình 2.7  Tổng quan và các dịch vụ của Firebase
+    2.7.1   Firebase Analytics
+    Là một giải pháp miễn phí và phân tích không giới hạn. Quản lý hành vi người dùng và các biện pháp từ một bảng điều khiển duy nhất. Phân tích thuộc tính và hành vi của người dùng trong một bảng điều khiển đơn để đưa ra các quyết định sáng suốt về lộ trình sản phẩm của bạn. Nhận thông tin chi tiết về thời gian thực từ báo cáo hoặc xuất dữ liệu thô sự kiện của bạn tới Google BigQuery để phân tích tùy chỉnh.
+
+    Hình 2.8  Firebase Analytics
+     2.7.2   Nhóm công cụ Develop & test your app
+    Realtime Database: Lưu trữ và đồng bộ dữ liệu người dùng thời gian thực, các ứng dụng hỗ trợ tính năng này có thể lưu trữ và lấy dữ liệu từ máy chủ trong tích tắc. Các dữ liệu được lưu trữ trong hệ thống cơ sở dữ liệu hỗ trợ NoSQL và được đặt trên nền tảng máy chủ Cloud, dữ liệu được ghi và đọc với thời gian thấp nhất tính bằng mili giây. Nền tảng này hỗ trợ đồng bộ hóa dữ liệu của người dùng kể cả khi không có kết nối mạng, tạo nên trải nghiệm xuyên suốt bất chấp tình trạng kết nối internet của người sử dụng. Reatime Database của Firebase hỗ trợ: android, ios, web, c++, unity, và cả xamarin.
+    Crashlytics: Hệ thống theo dõi và lưu trữ thông tin lỗi của ứng dụng đang chạy trên máy người dùng. Các thông tin lỗi này được thu thập một các toàn diện và ngay tức thời. Cách trình bày hợp lý với từng chu trình hoạt động đến khi xảy ra lỗi, các báo cáo trực quan giúp người phát triển có thể nắm bắt và xử lý kịp thời các lỗi chính của ứng dụng.
+    Cloud Firestore: Lưu trữ và đồng bộ dữ liệu giữa người dùng và thiết bị – ở quy mô toàn cầu – sử dụng cơ sở dữ liệu noSQL được lưu trữ trên hạ tầng cloud. Cloud Firestore cung cấp cho bạn tính năng đồng bộ hóa trực tuyến và ngoại tuyến cùng với các truy vấn dữ liệu hiệu quả. Tích hợp với các sản phẩm Firebase khác cho phép bạn xây dựng các ứng dụng thực sự ngay cả khi kết nối internet bị gián đoạn.
+    Authentication: Quản lý người dùng một cách đơn giản và an toàn. Firebase Auth cung cấp nhiều phương pháp để xác thực, bao gồm email và mật khẩu, các nhà cung cấp bên thứ ba như Google hay Facebook, và sử dụng trực tiếp hệ thống tài khoản hiện tại của bạn. Xây dựng giao diện của riêng bạn hoặc tận dụng lợi thế của mã nguồn mở, giao diện người dùng tùy biến hoàn toàn.
+    Cloud Functions: Mở rộng ứng dụng của bạn bằng mã phụ trợ tùy chỉnh mà không cần quản lý và quy mô các máy chủ của riêng bạn. Các chức năng có thể được kích hoạt bởi các sự kiện, được phát sinh ra bởi các sản phẩm Firebase, dịch vụ Google Cloud hoặc các bên thứ ba có sử dụng webhooks.
+    Cloud Storage: Lưu trữ và chia sẻ nội dung do người dùng tạo ra như hình ảnh, âm thanh và video với bộ nhớ đối tượng mạnh mẽ, đơn giản và tiết kiệm chi phí được xây dựng cho quy mô của Google. Các Firebase SDK cho Cloud Storage thêm tính năng bảo mật của Google để tải lên và tải tệp cho các ứng dụng Firebase của bạn, bất kể chất lượng mạng.
+    Hosting: Đơn giản hóa lưu trữ web của bạn với các công cụ được thực hiện cụ thể cho các ứng dụng web hiện đại. Khi bạn tải lên nội dung web, chúng tôi sẽ tự động đẩy chúng đến CDN toàn cầu của chúng tôi và cung cấp cho họ chứng chỉ SSL miễn phí để người dùng của bạn có được trải nghiệm an toàn, đáng tin cậy, độ trễ thấp, dù họ ở đâu.
+    Test Lab: Chạy thử nghiệm tự động và tùy chỉnh cho ứng dụng của bạn trên các thiết bị ảo và vật lý do Google cung cấp. Sử dụng Firebase Test Lab trong suốt vòng đời phát triển của bạn để khám phá lỗi và sự không nhất quán để bạn có thể cung cấp một trải nghiệm tuyệt vời trên nhiều thiết bị.
+    Performance Monitoring: Chẩn đoán các vấn đề về hiệu suất ứng dụng xảy ra trên thiết bị của người dùng của bạn. Sử dụng dấu vết để theo dõi hiệu suất của các phần cụ thể trong ứng dụng của bạn và xem chế độ xem tổng hợp trong bảng điều khiển Firebase. Luôn cập nhật thời gian khởi động của ứng dụng và theo dõi các yêu cầu HTTP mà không cần viết bất kỳ mã nào.
+    2.7.3   Nhóm công cụ Grow & engage your audience
+    Google Analytics: Phân tích thuộc tính và hành vi của người dùng trong một bảng điều khiển đơn để đưa ra các quyết định sáng suốt về lộ trình sản phẩm của bạn. Nhận thông tin chi tiết về thời gian thực từ báo cáo hoặc xuất dữ liệu sự kiện thô của bạn tới Google BigQuery để phân tích tùy chỉnh.
+    Cloud Messaging: Gửi tin nhắn và thông báo cho người dùng qua các nền tảng Android, iOS và web một cách miễn phí. Bạn có thể gửi tin nhắn đến các thiết bị, nhóm thiết bị hoặc các chủ đề hoặc phân đoạn người dùng cụ thể. Nhắn tin đám mây Firebase (FCM) thậm chí là các ứng dụng lớn nhất, cung cấp hàng trăm tỷ thư mỗi ngày.
+    Predictions: Firebase Predictions áp dụng deep learning máy học với dữ liệu phân tích của bạn để tạo các nhóm người dùng năng động dựa trên hành vi dự đoán. Các nhóm người dùng này có thể được sử dụng để nhắm mục tiêu trong các sản phẩm khác như thông báo, Cấu hình từ xa và nhiều hơn nữa.
+    Dynamic Links: Sử dụng Liên kết động để cung cấp trải nghiệm người dùng tùy chỉnh cho iOS, Android và web. Bạn có thể sử dụng chúng để hỗ trợ web di động để thúc đẩy chuyển đổi ứng dụng gốc, người dùng chia sẻ người dùng, các chiến dịch xã hội và tiếp thị và hơn thế nữa. Dynamic Links cung cấp cho bạn các thuộc tính bạn cần để hiểu rõ hơn về tăng trưởng di động của bạn. Đây là dịch vụ thay thế goo.gl của Google.
+    Remote Config: Tùy chỉnh cách ứng dụng của bạn hiển thị cho mỗi người dùng. Thay đổi giao diện, triển khai các tính năng dần dần, chạy thử nghiệm A / B, cung cấp nội dung tùy chỉnh cho người dùng nhất định hoặc thực hiện các cập nhật khác mà không cần triển khai một phiên bản mới-tất cả từ bảng điều khiển Firebase. Giám sát tác động của những thay đổi của bạn và thực hiện các điều chỉnh chỉ trong vài phút.
+    Invites: Cho phép người dùng chia sẻ tất cả các khía cạnh của ứng dụng của bạn, từ mã giới thiệu đến nội dung yêu thích, qua email hoặc SMS. Giải pháp out-of-the-box này hoạt động với Google Analytics for Firebase, để bạn biết khi người dùng mở hoặc cài đặt một ứng dụng qua lời mời.
+    App Indexing: Thu hút lại người dùng bằng các ứng dụng đã cài đặt của họ với tích hợp Google Tìm kiếm này. Nếu người dùng có ứng dụng của bạn và họ tìm kiếm nội dung có liên quan, họ có thể khởi chạy nó trực tiếp từ kết quả. Nếu người dùng chưa có ứng dụng của bạn, một thẻ cài đặt sẽ xuất hiện khi họ tìm kiếm các ứng dụng tương tự.
+    AdMob: Kiếm tiền bằng cách hiển thị quảng cáo hấp dẫn cho khán giả toàn cầu. AdMob có tất cả những gì bạn cần để thực hiện chiến lược kiếm tiền trên lớp bậc nhất và để tối đa hóa doanh thu do mỗi người dùng tạo ra. Nó có thể được điều chỉnh cho ứng dụng của bạn, và API của nó được xây dựng để tích hợp các định dạng quảng cáo phong phú một cách dễ dàng.
+    AdWords: Có được thông tin và níu kéo lại người dùng với khả năng của Google. Bạn có thể chạy quảng cáo trên Tìm kiếm, hiển thị và video cũng như nhắm mục tiêu phân khúc người dùng cụ thể mà bạn xác định trong Google Analytics for Firebase. Cải thiện nhắm mục tiêu quảng cáo và tối ưu hóa hiệu suất chiến dịch của bạn. Tóm lại: Hiện project của mình chỉ tích hợp tính năng Cloud Messaging gửi tin nhắn và thông báo cho người dùng qua các nền tảng Android, iOS. Nên chúng ta sẽ tìm hiểu cách tích hợp Firebase vào project của mình.
+2.8   Tích hợp Firebase vào project ứng dụng
+    Tích hợp Firebase vào Project Android, iOS và Web, cần trải qua các step sau:
+• Bước 1: Login vào Firebase console với tài khoản Google của mình.
+• Bước 2: Create new project
+• Bước 3: Xem các thông số config
+• Bước 4: Setting và tích hợp vào Android và iOS
+    2.8.1   Login vào Firebase
+• Truy cập vào địa chỉ https://console.firebase.google.com/ hoặc 
+• https://console.firebase.google.com/?hl=ja
+• Login với tài khoản Google.
+    2.8.2   Create new project
+    Trên màn hình click vào Add project, sau đó nhập thông tin project mà mình muốn thêm vào. Rồi nhấn button Create project.
+
+    Hình 2.9 Tạo mới một project
+    2.8.3   Các thông số config
+Vào phần project setting chúng ta sẽ thấy được các thông số config do Firebase cũng cấp sẵn cho mình. Một số thông số chúng ta có thể thay đổi được, một số thì sẽ không.Vào phần setting bằng cách, click vào link project settings như hình dưới.
+
+    Hình 2.10 Các thông số Config
+    Sau đó màn hình thông tin có các thông số sẽ như sau: Ở tab “General” sẽ có các thông số:
+• Project name: Tên của project
+• Project ID
+• Web API Key
+
+    Hình 2.11 Các thông số tab General
+    Ở tab “Cloud Messaging” sẽ có các thông số.
+• Server key: thông số này rất quan trọng, nó chính là API_KEY khi ta gọi API của Firebase để đăng ký tokens và gửi message cho tokens.
+• Legacy server key
+• Sender ID
+
+    Hình 2.12 Các thông số tab Cloud Messaging
+    Ở tab “Users and permissions”, tab này sẽ add thêm các member để có thể thao tác trên Firebase project. Bạn chỉ cần click vào button “Add member”, nhập các thông số: email, role. Là sẽ chia sẻ cho member nào đó về Firebase project của bạn.
+
+    Hình 2.13 Các thông số tab User và Permission
+    2.3.4	Setting và tích hợp vào Android và IOS
+    Bên dưới tab “General” sẽ có phần để thêm Firebase vào ứng dụng của bạn trên Android, iOS và Web.
+• Với Android cần thêm các config:
+
+    Hình  2.14 Tab General trên Android
+
+
+• Với IOS cần thêm các config:
+
+    Hình  2.15 Tab General trên IOS
+
+CHƯƠNG 3: PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG
+3.1 Khảo sát, xác định yêu cầu
+- Khảo sát nhu cầu thị trường, xác định hướng dựng App.
+- Xác định những mong muốn từ người sử dụng.
+- Đưa ra UIUX phù hợp với mong muốn của người sử dụng.
+3.1.1 Phân tích thiết kế chức năng của hệ thống
+3.1.1.1   Khách hàng
+● Hiển thị món ăn
+      Hệ thống cung cấp chức năng hiển thị thông tin các món ăn bao gồm: hình ảnh món ăn, tên món ăn, thông tin về món ăn, giá của món ăn, mức giảm giá của món ăn.
+● Tìm kiếm món ăn
+    Hệ thống phải cung cấp chức năng tìm kiếm món ăn theo tên khi khách hàng có nhu cầu tìm kiếm một món ăn nào đó.
+● Mua món ăn
+    Hệ thống phải cung cấp chức năng mua món ăn khi khách hàng muốn mua một món ăn nào đó kèm theo số lượng món ăn mà khách muốn mua.khi món ăn được chọn mua thì hệ thống phải cho phép thêm món ăn đó vào trong giỏ hàng của khách hàng.
+● Quản lí giỏ hàng
+      ○ Hiển thị thông tin giỏ hàng
+      Hệ thống phải cung cấp chức năng hiển thị các món ăn mà khách
+      hàng đã chọn mua trong giỏ hàng.
+      ○ Cập nhật thông tin giỏ hàng
+      Hệ thống phải cung cấp chức năng cập nhật số lượng của mỗi món
+      ăn trong giỏ hàng khi người mua muốn giảm hoặc thêm suất ăn.
+      ○ Xóa thông tin giỏ hàng
+      Hệ thống phải cung cấp chức năng xóa các món ăn mà khách hàng đã chọn mua ở trong giỏ hàng khi khách hàng không có nhu cầu mua món đó nữa.
+● Đặt hàng
+      Hệ thống cung cấp chức năng đặt hàng khi khách hàng muốn đặt hàng các món ăn từ giỏ hàng. Trong quá trình đặt hàng, hệ thống phải cung cấp chức năng nhập địa chỉ giao hàng để khách hàng có thể cho nhân viên biết được địa chỉ mà khách hàng
+muốn nhận đơn hàng đó.
+● Hiển thị đơn hàng
+      Hệ thống cung cấp chức năng hiển thị đơn hàng khi khách hàng muốn xem và tra cứu đơn hàng của mình. các đơn hàng sẽ được hiển thị theo trạng thái. điều này sẽ giúp cho khách hàng dễ dàng tra cứu thông tin đơn hàng của mình.
+● Thông báo
+      Hệ thống cung cấp chức năng thông báo cho khách hàng khi có một cập nhật
+thông tin liên quan đến menu, món ăn hay về trạng thái của đơn hàng.
+● Quản lí tài khoản
+      ○ Hiển thị thông tin tài khoản
+      Hệ thống phải cung cấp chức năng hiển thị tài khoản ch khách hàng
+tra cứu. trong đó các thông tin riêng tư và bảo mật gồm có: tên đăng nhập, mật khẩu, câu hỏi bảo mật, câu trả lời.
+      ○ Cập nhật thông tin tài khoản
+      Hệ thống phải cung cấp chức năng cập nhật thông tin tài khoản khi khách hàng có nhu cầu cập nhật thông tin.
+      ○ Xóa thông tin tài khoản
+      Hệ thống phải cung cấp chức năng xóa thông tin tài khoản khi khách hàng không có nhu cầu sử dụng ứng dụng hoặc muốn đổi tải khoản.khi xóa tài khoản hệ thống sẽ xóa toàn bộ dữ liệu của khách hàng. Điều kiện để có thể xóa tài khoản là khách hàng hpari hòn tất toàn bộ các đơn hàng mới có thể xóa tài khoản.
+● Đăng kí tài khoản
+      Hệ thống cung cấp chức năng đăng kí tài khoản khi có khách hàng có nhu cầu sử dụng phần mềm.
+● Quản lí địa chỉ
+      ○ Hiển thị thông địa chỉ
+      Hệ thống phải cung cấp chức năng hiển thị thông tin địa chỉ cho khách hàng có nhu cầu tra cứu thông tin.
+      ○ Cập nhật thông địa chỉ
+Hệ thống phải cung cấp chức năng cập nhật thông tin địa chỉ cho khách hàng có nhu cầu muốn sửa thông tin.
+      ○ Xóa thông địa chỉ
+      Hệ thống phải cung cấp chức năng xóa thông tin địa chỉ cho khách hàng muốn xóa địa chỉ đó vì không có nhu cầu dùng tới.
+      ○ Thêm thông địa chỉ
+      Hệ thống phải cung cấp chức năng thêm thông tin địa chỉ cho khách hàng có nhu cầu muốn thêm thông tin.
+3.2 Phân tích và thiết kế hệ thống
+3.2.1 Biểu đồ Usecase
+
+    Hình 3.1 Biểu đồ Usecase
+    3.2.1.1. Quản lí giỏ hàng
+    
+    
+    Hình  3.2  Quản lí giỏ hàng
+    3.2.1.2. Quản lí đơn hàng
+
+    Hình 3.3  Quản lí đơn hàng
+    
+    
+    3.2.1.3. Quản lí menu món ăn
+    
+
+    Hình 3.4  Quản lí menu món ăn
+    3.2.1.4. Quản lí món ăn
+
+
+    Hình 3.5  Quản lí món ăn
+    3.2.1.5. Quản lí tài khoản
+    
+
+    Hình 3.6  Quản lí tài khoản
+    3.2.1.6. Quản lí thông báo
+
+    Hình 3.7 Quản lí thông báo
+
+    3.2.1.7. quản lí yêu thích
+    
+
+    Hình 3.8 Quản lí yêu thích
+
+3.2.2  Biểu đồ lớp
+
+    Hình 3.9 Biểu đồ lớp
+3.2.2 Biểu đồ tuần tự
+    3.2.2.1 Giỏ hàng
+    
+    Hình 3.10 Biểu đồ tuần tự giỏ hàng
+    
+    3.2.2.2 Đơn hàng
+    
+    Hình 3.11 Biểu đồ tuần tự đơn hàng
+    3.2.2.3 Món ăn
+    
+    Hình 3.12 Biểu đồ tuần tự món ăn
+    
+    3.2.2.4 Yêu thích
+    
+    Hình 3.13 Biểu đồ tuần tự yêu thích
+    3.2.2.5 Tài khoản
+    
+    Hình 3.14 Biểu đồ tuần tự tài khoản
+
+3.2.3 Cơ sở dữ liệu của hệ thống
+Danh sách các lớp đối tượng và quan hệ
+    Bảng 3.1 Danh sách các lớp đối tượng và quan hệ
+STTTên lớp/quan hệLoạiÝ nghĩa/Ghi chú1userObjectTài khoản2giohangObjectGiỏ hàng3adressObjectĐịa chỉ4donhangObjectĐơn hàng5yeuthichObjectYêu thích6categoryObjectThể loại món ăn7foodObjectMón ăn                 
+Mô tả chi tiết từng lớp đối tượng
+Bảng 3.1 Bảng category
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1categoryidintDuy nhấtMã2nameStringTên3descriptionStringThông tin4imageStringẢnh
+    Bảng 3.2 Bảng food
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1foodidintDuy nhấtMã2categoryidintDuy nhấtMã3nameStringTên4descriptionStringThông tin5priceStringGía6discountStringGiảm giá7imageStringẢnh
+    Bảng 3.3 Bảng user
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1useridintDuy nhấtMã2nameStringTên3genderStringGiới tính4birthdayStringNgày sinh5phoneStringĐiện thoại6emailStringEmail7passwordStringMật khẩu8cauhoibaomatStringCâu hỏi bảo mật9cautraloiStringCâu trả lời10typeintLoại tài khoản
+    Bảng 3.4 Bảng giỏ hàng
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1giohangidintDuy nhấtMã2foodObjectMón ăn3soluongintSố lượng    
+    
+    Bảng 3.5 Bảng đơn hàng
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1donhangidIntDuy nhấtMã2nameStringTên người nhận3phoneStringSố điện thoại người nhận4dateStringThời gian5diachiStringĐịa chỉ người nhận6diachicutheStringĐịa chỉ chi tiết người nhận6statusintTrạng thái7chuthichStringChú thích8tienthanhtoanStringTiền thanh toán9tongtienhangStringTổng tiền của tất cả món ăn10phivanchuyenStringPhí vận chuyển11descriptionStringDanh sách món ăn được lưu dưới dạng chuỗi    
+3.2.4 Thiết kế giao diện
+    
+    Hình 3.15 Màn hình home
+    
+    Hình  3.16  Màn hình thể loại
+    
+    Hình 3.17  Màn hình giỏ hàng
+    
+    Hình 3.18  Màn hình món ăn
+    
+    Hình 3.19 Màn hình giỏ hàng
+    
+    Hình 3.20 Màn hình đơn hàng
+CHƯƠNG 4: 	KẾT LUẬN
+3.3 Kết quả đạt được của đề tài
+- Tìm hiểu, nắm bắt được các công cụ Android Studio, hệ quản trị CSDL Firebase.
+- Rèn luyện phân tích thiết kế hứớng đối tượng
+- Tìm hiểu và nắm được nghiệp vụ của bài toán
+- Vận dụng được các công nghệ mới vào ứng dụng.
+- Học và tổ chức được dữ liệu cho bài toán theo thiết kế 
+- Xây dựng được ứng dụng với cac chức năng cơ bản
+- Nâng cao khả năng tư duy logic, kỹ năng lập trình, phát hiện và sửa lỗi.
+- Có module cho khách hàng: quản lí món ăn, đặt hàng, quản lí giỏ hàng, quản lí đơn hàng, bình luận, nhận xét món ăn.
+3.4 Hạn chế của đề tài
+- Code còn chưa được tối ưu.
+- Cấu trúc project chưa tối ưu.
+- Chưa có module cho người quản lí: thêm, sửa, xóa món ăn, xem và sửa đơn hàng…
+3.5 Hướng phát triển của đề tài
+- Xây dựng thuật toán thông minh cho phép đề xuất món ăn theo thói quen của người sử dụng.
+- Xây dựng thuật toán sử dụng google map để biết đường đi của người ship hàng.
+- Xây dựng module quản lí admin cho phép người quản lí có thể xem thông tin đơn hàng.
+- Xây dựng cơ sở dự liệu phong phú hơn.
+TÀI LIỆU THAM KHẢO
+1. Khoa CNTT, “Giáo trình lập trình hướng đối tượng”, Đại Học Sư Phạm Kỹ Thuật Hưng Yên. 
+2. Nguyễn Văn Hậu, “Giáo trình Java nâng cao”. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin- UTEHY.
+3. Nguyễn Hoàng Điệp, “Lập trình mạng trên android”. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY.4. Nguyễn Thị Hải Năng, “Giáo trình Lập trình đa phương tiện”. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY, 2017.
+5. Trang web tham khảo:
+Tài liệu về React Native: https://reactnative.dev/
+    w3schools: https://www.w3schools.com/
+    Stackoverflow: https://stackoverflow.com
+    topdev: https://topdev.vn/
+    
+     
+
+        
+x
+x
+        
+    
+    
+
+Xây dựng ứng dụng Food Now
+
+    
+    3
+    
+    

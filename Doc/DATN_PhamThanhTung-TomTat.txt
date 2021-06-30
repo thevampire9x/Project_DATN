@@ -1,0 +1,321 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+➢ Hiện nay ngành công nghệ thông tin đang rất phát triển, mọi thứ đều được công nghệ hóa,ngay cả đến vấn đề giải trí cũng vậy, nó cũng được người tiêu dùng đánh giá rất khắt khe.Ngành công nghệ game không còn quá xa lại với mọi người nữa và nó đang dần có thị trường riêng của mình. Để có 1 sản phẩm game hay chúng ta cần rất nhiều yếu tố một trong số đó phải nói tới Game Engine. 
+➢ Game Engine là một công cụ hỗ trợ, một Middleware giúp người phát triển viết Game một cách nhanh chóng và đơn giản, đồng thời cung cấp khả năng tái sử dụng các tài nguyên và mã nguồn cao do đó có thể phát triển Game từ một Game Engine.Do đó game Đại chiến Dragon đã bắt đầu được hình thành và xây dung.
+1.2 Mục tiêu của đề tài
+Ứng dụng Game Đại chiến Dragon cần đạt được những mục tiêu sau:
+➢ Chuyển động của các nhân vật trong game hoạt động uyển chuyển, mượt mà, linh hoạt, không lặp đi lặp lại hành động gây nhàm chán.
+➢ Hình ảnh, âm thanh sinh động tạo hứng thú cho người chơi.
+➢ Ứng dụng chạy mượt, không bị lag, giật.
+1.3 Giới hạn và phạm vi của đề tài
+➢ Môi trường phần cứng
+• CPU: Snapdrgon 400 trở lên
+• RAM: tối thiểu 1GB
+• HDD: dung lượng tối thiểu trống 1GB
+➢ Môi trường phần mềm
+• Hệ điều hành: Android
+1.4 Nội dung thực hiện
+	Nội dung thực hiện/nghiên cứu cụ thể như sau:
+➢ Nghiên cứu công nghệ lập trình Game Unity trên nền tảng C#.
+➢ Thiết kế giao diện, xây dựng đúng chủ đề.
+➢ Lập trình chuyển động, âm thanh, hình ảnh, thuộc tính cho các đối tượng có trong Game.
+➢ Kiểm thử hệ thống.
+1.5 Phương pháp tiếp cận
+➢ Cách tiếp cận: Nghiên cứu các ngôn ngữ lập trình C#, java,…
+➢ Sử dụng các phương pháp nghiên cứu: 
+• Phương pháp đọc tài liệu;
+• Phương pháp phân tích mẫu;
+• Phương pháp thực nghiệm.
+
+           CHƯƠNG 2: NỘI DUNG THỰC HIỆN
+2.1 Phát biểu bài toán
+   2.1.1.	Tổng quan về hệ thống mới
+Game đại chiến Dragon là một ứng dụng mang lại những trải nhiệm thú vị cho người chơi với rất nhiều thử thách và chướng ngại vật cản trở, đặc biệt là tạo các map chơi mang tính chinh phục, thử thách cho người chơi.
+➢ Người chơi cần điều khiển nhân vật của mình tiêu diệt các con quái vật bằng những khẩu súng trên tay, họ phải trải nghiệm tường màn 1 với những nguy hiểm không thể lường trc.
+   2.1.2. Các mục tiêu chính của hệ thống
+   Ứng dụng Game đại chiến Dragon cần đạt được những mục tiêu sau:
+➢ Chuyển động của boss dễ dàng thực hiện và hành động nhanh, dứt khoát, không lặp đi lặp lại hành động gây nhàm chán.
+➢ Hình ảnh, âm thanh sinh động tạo hứng thú cho người chơi.
+   2.1.3. Môi trường phát triển
+➢ Môi trường phần cứng
+• CPU: Snapdrgon 400 trở lên
+• RAM: tối thiểu 1GB
+• HDD: dung lượng tối thiểu trống 1GB
+➢ Môi trường phần mềm
+• Hệ điều hành: Android
+• Công cụ phát triển: Unity
+2.2 Yêu cầu của hệ thống
+Hệ thống game đại chiến Dragon cung cấp các chức năng các thao tác như điều khiển nhân vật, chọn map chơi, … Hệ thống thao tác 1 cách dễ dàng cùng với 1 giao diện đẹp mắt dễ sử dụng. Game sẽ đáp ứng được nhu cầu giải trí của người chơi.
+Ứng dụng game đại chiến Dragon trên Unity cần đạt được những mục tiêu sau:
+➢ Hệ thống cho người chơi chọn màn.
+➢ Hệ thống cung cấp chức năng nhặt đồ.
+➢ Hệ thống cung cấp chức năng cho phép di chuyển nhân vật khi tham gia màn chơi.
+➢ Hệ thống cung cấp việc tạm dừng.
+➢ Xử lý hiệu ứng khi bắn súng tương tác giống thật có độ giật nhẹ.
+➢ Xử lí việc tính đạn khi nhặt được vật phẩm.
+➢ Xử lí việc ra vào cửa.
+➢ Xử lí mất máu khi bị tấn công, tăng máu khi nhặt được vật phẩm.
+➢ Xử lý game khi hoàn màn chơi.
+2.2.1 Yêu cầu về các chức năng
+2.2.1.1 Menu trong game
+Hiển thị menu khi vào game cho phép người chơi chọn chơi (play) hoặc chọn thoát game(quit).
+    2.2.1.2. Chức năng nhặt vật phẩm
+Cung cấp chức năng nhặt vật phẩm cho người chơi, sẽ có nhưng vật phẩm ngẫu nhiên xuất hiện trên đường đi người chơi có thể nhặt vật phẩm để giúp ích cho mình, nhưng vật phẩm này có thể tăng đạn hoặc tăng máu cho người chơi
+        2.2.1.3. Chức năng nhiệm vụ 
+Cung cấp chứ năng nhiệm vụ để tang tính thích thú cho người chơi, ở mỗi màn sẽ có những nhiệm vụ quy định sẵn và người chơi cần vượt qua.
+       
+     2.2.1.4. Chức năng tạm dùng khi chơi game
+Cho phép người chơi tạm dùng khi đang chơi game và hiển thị bảng chọn(menu). Bảng menu cho phép người chơi chơi tiếp (resume) chơi lại (restart) hoặc thoát về menu chính (exit).
+        2.2.1.5. Kết thúc game 
+Khi người chơi kết thúc màn chơi, họ sẽ được chuyển sang 1 màn chơi khác.
+2.3 Biểu đồ UseCase
+2.3.1 Danh sách các Actor 
+STTTên ActorÝ nghĩa/Ghi chú1UserNgười sử dụng ứng dụngBảng 3. 1: Danh sách Actor 
+2.3.2. Danh sách các Use-case
+STTTên Use-caseÝ nghĩa/Ghi chú1Manage LevelQuản lý màn chơi2Manage EnemyQuản lý enemy3Manage weaponsQuản lý vũ khíBảng 3. 2: Danh sách các Use-case
+2.3.3 Biểu đồ UseCase mức tổng quát
+
+Hình 3. 1: UseCase mức tổng quát
+2.3.4 Đặc tả UseCase
+2.3.4.1. Đặc tả Use-case “Manage Enemy”
+
+
+Hình 3. 2: Usecase “Manage Enemy”
+
+➢ Quản lý đối thủ: khi bắt đầu vào game và chơi game sau 1 khoảng thời gian nhất định hệ thống sẽ tự sinh enemy.
+➢ Dòng sự kiện
+➢ Dòng sự kiện chính
+• Tự sinh Enemy tại những vị trí cho phép.
+• Trong lúc chơi hệ thống vẫn tiếp tục sinh ra Enemy, khi bị bắn trúng quân enemy sẽ biến mất.
+• 
+• Các dòng sự kiện khác: tự động cập nhật số lượng enemy.
+• Các yêu cầu đặc biệt: 
+• Giảm sự tràn các enemy
+• Tránh việc đơ game khi chơi
+Trạng thái hệ thống sau khi bắt đầu thực hiện Use-case
+➢ Hệ thống không yêu cầu người dùng đăng nhập. 
+➢ Sinh enemy ở các vị trí khác nhau.
+
+2.3.4.2. UseCase “Manager weapons”
+
+Hình 3. 3: Usecase “Manage weapons”
+
+➢ Quản lý weapons: vũ khi sẽ được đặt sẵn chỗ quy định người chơi sẽ sử dụng tay để điều khiển và bán đạn ra theo hướng mình muốn.
+➢ Dòng sự kiện
+➢ Dòng sự kiện chính
+• Tự điều khiển vũ khí bán đạn.
+➢ Các dòng sự kiện khác: 
+• Không có
+➢ Các yêu cầu đặc biệt: 
+• Không có
+2.4 Biểu đồ lớp
+2.4.1 Biểu đồ lớp (mức phân tích)
+
+Hình 3. 4: Biểu đồ lớp mức phân tích
+
+
+2.4.2 Danh sách các lớp đối tượng và quan hệ
+STTTên lớp/quan hệÝ nghĩa/Ghi chú1EnemyLớp quái2WeaponsLớp vũ khíBảng 3. 3: Danh sách các lớp đối tượng và quan hệ
+2.4.3 Mô tả chi tiết từng lớp đối tượng
+2.4.3.1. Lớp Enemy
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IDeNvarchar(50)Không trùngMã xe đua2NameNvarchar(50)Tên xe đua3MoneyeNvarchar(50)Giá tiền xe đua4SpeedNvarchar(50)Tốc độ tối đa5HpNvarchar(50)Máu của quái vật6idlNvarchar(50)Khóa ngoại tham chiếu tới bảng LevelBảng 3. 4: Mô tả chi tiết lớp Enemy
+2.4.3.2. Lớp Weapons
+
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IDwNvarchar(50)Không trùngMã Weapons2NameNvarchar(50)Tên Weapons3RangeNvarchar(50)Phạm vi của Weapons4TypewNvarchar(50)Kiểu Weapons5idlNvarchar(50)Khóa ngoại tham chiếu tới bảng LevelBảng 3. 5: Mô tả chi tiết lớp Weapons
+
+
+
+
+
+
+
+2.5 Biểu tuần tự
+2.5.1 Biểu đồ tuần tự Manage enemy
+
+
+Hình 3. 5: Biểu đồ tuần tự enemy
+
+
+
+2.5.2 Biểu đồ tuần tự Manage weapons
+
+
+Hình 3. 6: Biểu đồ tuần tự weapons
+
+
+2.6.   Thiết kế giao diện
+2.6.1. Một số giao diện chính của chương trình
+
+2.6.1.1. Giao diện menu
+
+
+Hình 3.7: Giao diện menu
+
+STTTên controlSự kiệnÝ nghĩa1btnplayClickBắt đầu trò chơi2btoptionsClickChức năng hướng dẫn chơi game 3btnexitClickThoát khỏi trò chơi
+
+➢ Chức năng: Giúp người dùng dễ dàng thực hiện việc bắt bầu chơi.
+➢ Sự kiện: 
+•    Nhấn “Play”: Người dùng có thể bắt đầu start game.
+•    Nhấn “Options”: Hiển thị hướng dẫn trò chơi giúp người dùng dễ hiểu cách chơi hơn khi chưa chơi bao giờ.
+•    Nhấn “Exit”: Thoát khỏi game.
+2.6.1.2. Giao diện phòng sách
+
+Hình 3. 8. Giao diện phòng sách
+➢ Khi bắt đầu trò chơi, người dùng vào level 1.
+➢ Vị trí nhắm bắt của súng bắt đầu từ giữa màn hình.
+➢ Khu vưc này cũng hay xuất hiện nhưng vật phẩm hữu ích.
+➢ Khu vực này cũng dễ gặp phải nhưng nguy hiểm không lường trước được.
+
+
+2.6.1.3. Giao diện ngoại cảnh
+
+Hình 3. 9. Giao diện ngoại cảnh
+➢ Khi người chơi ra khỏi khu vực bị ngăn chặn bở tường, rào bao quanh thì sẽ được gọi là ngoại cảnh.
+➢ Người chơi sẽ bị chặn lại nếu muốn di chuyển qua tường.
+➢ Nếu muốn di chuyển sang phía bên kia để vào phía bên trong của tường thì người chơi phải tìm cách trèo qua hoặc dùng các vật bất kì xung quanh nào để bật qua tường.
+
+
+
+2.6.1.4. Giao diện nội cảnh
+
+
+Hình 3. 10. Giao diện nội cảnh
+➢ Khi người chơi đã di chuyển vào trong khu vực ma trận thì sẽ bị bao quanh bởi những bức tường, những chướng ngại vật.
+➢ Người chơi dễ dàng ẩn nấp, nhắm bắn đối thủ khi vào những địa hình này.
+➢ Khu vực này cũng có thể xuất hiện nhưng vật phẩm hữu ích cho bạn.
+
+
+2.6.1.5. Giao diện địa hình trang trại
+
+
+Hình 3. 11. Giao diện địa hình trang trại
+
+➢ Khung cảnh của địa hình này được dựa trên bối cảnh của một trang trại, có giếng nước, lều, hàng rào, …
+➢ Những chướng ngại vật như hàng rào, giếng nước làm giảm độ sát thương của viên đạn.
+➢ Quái vật ở ngoài rào sẽ không được phép di chuyển vào phía bên trong hàng rào.
+➢ Ở địa hình này rất dễ cho việc nhắm bắn vì người chơi luôn giữ được khỏang cách đối với quái vật qua hàng rào.
+
+
+
+
+
+
+
+2.6.1.6. Giao diện địa hình phòng bếp
+
+
+      Hình 3. 12. Giao diên phòng bếp
+
+➢ Ở giao diện này, địa hình có các đồ vật như trong phòng bếp, ví dụ tủ lạnh, bàn ghế, bồn rửa bát, …
+➢ Quái thú xuất hiện ngẫu nhiên trong lúc bạn khám phá địa hình.
+➢ Nhiều đồ vật trong bếp dẫn sẽ khó bắn trúng quái thú hơn nên đòi hỏi bạn phải thật chuẩn xác trong từng viên đạn vì só lượng đạn có hạn.
+
+
+
+
+
+
+
+2.6.1.7. Giao diện địa hình trong hẻm
+
+      Hình 3. 13. Giao diện hẻm
+
+➢ Địa hình trong hẻm dễ bắn quá thú hơn các địa hình khác vì có thể dễ dàng nhìn thấy quái thú hơn.
+➢ Vì địa hình này thuộc dạng mở nên trường hợp bị sát thương cũng tương đối cao.
+➢ Địa hình này giống như ma trận, người chơi càng tiến sâu thì sẽ càng khó tìm được đường ra. Nếu muốn thoát khỏi địa hình này, người chơi sẽ phải sử dụng bản đồ.
+
+
+
+
+
+
+2.6.1.8. Giao diện địa hình ngõ cụt
+
+      Hình 3. 14. Giao diện ngõ cụt
+➢ Địa hình này hiện lên khi người chơi di chuyển đến ngõ cụt, bị chắn bởi bức tường ngay trước mắt và sẽ không thể di chuyển thẳng được nữa.
+➢ Để thoát khỏi địa hình này, người chơi buộc phải đi ngược lại hoặc rẽ sang hướng khác để tiếp tục di chuyển.
+➢ Nếu đứng mãi một chỗ mà không có cách giải quyết thì sẽ tốn thời gian chơi game.
+➢ Người chơi nếu gặp phải ngõ cụt như thế này nên di chuyển bằng đường khác nhanh vì  tình thế sẽ rất bất lợi khi quái thú xuất hiện sẽ gây sát thương đến người chơi một cách dễ dàng.
+
+
+2.6.1.9. Giao diện nhắm bắn qua cửa sổ
+
+      Hình 3. 15. Giao diện góc phòng
+➢ Ở giao diện này, người chơi có thể nhắm bắn qua cửa sổ một cách dễ dàng.
+➢ Trường hợp quái thú xuất hiện ngẫu nhiên cũng có thể tháo chạy bằng cách nhảy qua khung cửa sổ.
+➢ Người chơi có thể ẩn nấp bên dưới, trái hoặc phải khung để nhắm bắn.
+➢ Khung cửa có kích thước không quá lớn khiến cho quá thú không thể chui qua được nên người chơi sẽ giảm được trường hợp quái xuất hiện và chui qua cửa sổ.
+➢ Nếu như không muốn ở địa hình này bạn có thể nhảy qua khung hoặc quay lại đi đường khác.
+➢ Âm thanh khi nhảy lên cửa khác với âm thanh bước trên đường bằng phẳng, tạo cảm giác hồi hộp, gay cấn như chính mình đang ở trong game
+
+
+
+
+2.6.1.10. Giao diện địa hình phòng tắm
+
+
+
+      Hình 3. 16. Giao diện phòng tắm
+➢ Ở địa hình này có tất cả các đò dùng trong phòng tắm như: đèn, bồn vệ sinh, bồn tắm, …
+➢ Địa hình này rất chật hẹp và nhiều chướng ngại vật, cản trở độ chính xác của viên đạn.
+➢ Nếu di chuyển vào địa hình này bạn cần bước đi này lập tức nếu không quái thú xuất hiện sẽ rất khó khi tiêu diệt chúng.
+➢ Nếu quái vật xuất hiện mà người chơi chưa kịp di chuyển thì có thể dùng các chướng ngại vật sẵn có để ẩn nấp, nhưng việc ẩn nấp sẽ không được lâu nếu quái thú không bỏ đi mà tiếp tục đi quanh nhà tắm, việc này sẽ rất tốn thời gian chơi game.
+➢ Giải pháp tốt nhất nếu như gặp phải tình huống này là bạn phải ngắm bắn thật chuẩn xác khi bắn quái thú nếu không bạn sẽ chịu sát thương.
+
+
+Hình 3. 17. Giao diện di chuyển trong nhà tắm
+➢ Khu vực càng tối tăm này thì càng dễ dàng nhặt được vật phẩm hữu ích.
+➢ Bạn nên chú ý ở nhưng góc khuất và tối, nơi đây dù có thể chứa nhưng nguy hiểm dình dập nhưng cũng có thể là nguồn sống mãnh liệt.
+➢ Cửa sổ cũng có thể giúp bạn quan sát bên ngoài 1 cách kĩ lưỡng nhưng cũng cẩn thận vì có thể bạn sẽ đụng độ quái vật.
+
+
+
+2.6.1.11. Giao diện địa hình vườn cây
+
+
+Hình 3. 18. Giao diện địa hình vườn cây
+➢ Khu vực vườn cây này có nhiều vật cẩn dẫn đế di chuyển khó khăn.
+➢ Khu vực này cũng là một nơi lí tưởng để ẩn lấp và chạy trốn quái vật vì do thân hình to lớn nên quái vật di chuyển 1 cách chậm chạp.
+➢ Với khung cảnh rộng chúng ta có thể dễ dàng quan sát từ xa và tránh việc gặp phải quái vật.
+
+
+2.6.1.12. Giao diện địa hình vách nhà
+
+Hình 3. 19. Giao diện địa hình vách nhà
+➢ Giao diện này là chuyển giao giữa hai địa hình ví dụ địa hình phòng khách và địa hình nhà bếp.
+➢ Giao diện này có vùng khuất rất lớn nên dễ bị quái thú xuất hiện bất ngờ sát thương, người chơi cần  tập trung khi bước vào điạ hình này.
+➢ Địa hình này cũng có rất nhiều cách để tháo chạy như di chuyển lên phía trước để tới địa hình khác nhiều vật cản hơn để ẩn nấp hoặc nhảy qua khung cửa hoặc di chuyển ngược lại để dụ quái vật đến địa hình khác có lợi cho mình hơn.
+
+
+2.6.1.13. Giao diện xuất hiện nhiều quái thú
+
+Hình 3. 20. Giao diện xuất hiện nhiều quái thú
+➢ Khung cảnh này là một nơi rất là nguy hiểm do hành lang chống nên dễ dàng thu hút nhiều quái vật.
+➢ Ở khung cảnh này bạn cần sự khéo léo để có thể tiêu diệt và vượt qua nhưng con quái vật 1 cách hợp lý nhất.
+➢ Đây mặc dù là nhưng con quái vật cấp đầu với lượng máu thấp và sát thương nhỏ nhưng do chúng rất đông nên bạn hết sức chú ý giữ máu để cho nhưng lút thắt tiếp theo.
+CHƯƠNG 3: KẾT LUẬN
+3.1 Kết quả đạt được của đề tài
+➢ Tìm hiểu, nắm bắt được các công cụ thiết kế game 
+➢ Biết được cách thiết kế game động và cách tổ chức dữ liệu
+➢ Game tương đối dễ điều khiển phù hợp với nhiều lứa tuổi khác nhau
+➢ Tương thích nhiều màn chơi, giúp người chơi có nhưng trải nghiệm khác nhau.
+➢ Âm thanh sống động tạo cảm giác như thật.
+➢ Hiệu ứng giúp người chơi trải nghiệm cảm giác mới.
+➢ Game chạy mượt mà, không giật lag
+➢ Có nhiều hiệu ứng trong game
+3.2 Hạn chế của đề tài
+➢ Hệ thống game Đại chiến Dragon mới dừng lại ở giải các module cơ bản của game, chưa phong phú ở các loại súng và enemy.
+➢ Chưa có bảng xếp hạng.
+➢ Chưa có sự kết nối nhiều người chơi.
+➢ Giao diện game còn tương đối đơn giản và chưa thật sự phong phú.
+3.3 Hướng phát triển của đề tài
+➢ Xây dựng thêm các phần bổ trợ thêm cho game cũng như số lượng các loại vũ khí, enemy. Bổ sung các module hỗ trợ cho các game.
+➢ Xây dựng tương tác nhiều người chơi.
+➢ Xây dựng bảng xếp hạng giúp người chơi có sự ganh đua.
+➢ Thiết kế giao diện 1 cách chân thực hơn.
+
+Xây dựng game Đại chiến Dragon trên Unity
+
+21
+
+

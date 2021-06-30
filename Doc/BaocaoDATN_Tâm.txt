@@ -1,0 +1,915 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Các thiết bị di động đang ngày càng phổ biến và các loại ứng dụng phát triển cho loại thiết bị này ngày càng nhiều. Đi theo đó là nhu cầu kiểm định các ứng dụng trên thiết bị di động cũng tăng theo, đặc biệt là nhu cầu về kiểm thử ứng dụng trên mobile. 
+    Android là một hệ điều hành phổ biến nhất trên các thiết bị di động hiện nay bởi nhiều ưu điểm nổi bật của nó so với các hệ điều hành khác như: độ tin cậy, dễ sử dụng và sở hữu nhiều ứng dụng có dung lượng tốt. 
+    Kiểm thử phần mềm nói chung và kiểm thử trên ứng dụng Android nói riêng thường thực hiện trên các khía cạnh kiểm thử như: giao diện, chức năng, gián đoạn, bảo mật, hiệu năng… Hiện tại hầu như tất cả các tổ chức, công ty phát triển phần mềm đều lựa chọn kiểm thử thủ công cho mọi sản phẩm. Kiểm thử thủ công cho phép tester thực hiện việc kiểm thử bằng tay và giảm được chi phí trong quá trình kiểm thử. Kiểm thử thủ công là phương pháp không thể thay thay thế. Cho dù có áp dụng kiểm thử tự động vào giai đoạn nào của dự án thì vẫn cần thực hiện kiểm thử thủ công nhằm đảm bảo giảm tối đa những lỗi không thể lường trước trong bất kỳ kịch bản nào. Bên cạnh đó kiểm thử tự động cũng không thể thiếu trong quá trình kiểm thử. VD Trong trường hợp dữ liệu test lặp đi lặp lại nhiều lần trong cùng một trường hợp. Nó cũng giúp làm rút ngắn thời gian kiểm thử. Nắm bắt được yêu cầu thực tế, em chọn đề tài “Kiểm thử ứng dụng mobile sử dụng công cụ Appium” làm đồ án tốt nghiệp của mình.
+1.2 Mục tiêu của đề tài
+- Hiểu được lý thuyết về kiểm thử phần mềm.
+- Hiểu được cách hoạt động của Cucumber và Appium
+- Áp dụng được các loại kiểm thử vào testcase.
+- Áp dụng các kiến thức kiểm thử hộp đen và tối ưu hóa bộ test case.
+- Xây dựng được tài liệu kiểm thử tự động cho ứng dụng trên Android.
+- Kết hợp được Appium và Cucumber để thực hiện test ứng dụng mobile.
+- Viết Test Script để test cho ứng dụng “Green Note”.
+1.3 Giới hạn và phạm vi của đề tài
+- Tập trung vào các chức năng chính của ứng dụng “Green Note”.
+- Xây dựng được các testcase kiểm thử trên ứng dụng “Green Note”. 
+- Xây dựng được bộ dữ liệu kiểm thử tự động trên ứng dụng “Green Note”. 
+- Lấy được dữ liệu test từ excel.
+1.4 Nội dung thực hiện
+- Xây dựng được các testcase kiểm thử trên ứng dụng “Green Note”. 
+- Xây dựng được bộ dữ liệu kiểm thử tự động trên ứng dụng “Green Note”.
+- Chạy tự dộng được các testcase trên công cụ kiểm thử Appium kết hợp với cucumber.
+- Xuất được kết quả test ra excel.
+1.5 Phương pháp tiếp cận
+    Đề tài đã ứng dụng những kiến thức đã học trong công nghệ phần mềm, kiểm thử phần mềm góp phần nghiên cứu khả năng tự động hóa kiểm thử chấp nhận cho ứng dụng web.
+- Cách tiếp cận: Tìm hiểu về kiểm thử chấp nhận thông qua việc thu thập, nghiên cứu các tài liệu liên quan .
+- Các phương pháp tiếp cận :
+    + Phương pháp đọc tài liệu.
+    + Phương pháp thực nghiệm.
+    + Phương pháp phân tích mẫu.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Giới thiệu công cụ Appium
+2.1.1 Khái niệm
+    Appium là một công cụ kiểm thử tự động cho các ứng dụng UI trên thiết bị di động. Appium cho phép kiểm thử các ứng dụng Native, Hybrid hay Web, trên các thiết bị vật lý thực (physical device) và cả thiết bị ảo (simulator/emulator). 
+    Appium được phát triển từ nền tảng hệ thống Selenium (kế thừa các đối tượng, cấu trúc và cú pháp) nên Appium có khả năng làm việc với nhiều nền tảng khác nhau, iOS và Android, trên cùng một mã kiểm thử (cross-platforms). 
+    Khả năng cross-platforms của Appium đến từ việc sử dụng các thư viện của Appium, thông qua một chương trình server, chuyển các câu lệnh sử dụng trong mã kiểm thử thành các lệnh UIAutomation (với iOS) hay UIAutomator (với Android) để tương tác với thiết bị.
+2.1.2 Các thành phần
+    Chương trình máy chủ Appium – Appium Server: là một chương trình tạo lập một máy chủ Java, dùng để chuyển các lệnh trong mã kiểm thử thành các lệnh có thể tương tác với thiết bị: UIAutomation với iOS hay UIAutomator với Android. 
+    Hệ thống thư viện Appium: Cũng như Selenium, Appium có một hệ thống thư viện dùng để nhận diện và tương tác với các đối tượng UI trên ứng dụng di động. Hệ thống thư viện Appium được cung cấp cho nhiều ngôn ngữ lập trình khác nhau như C#, Java, Python… để kỹ sư kiểm thử tự động có thể chọn ngôn ngữ lập trình quen thuộc cho việc tự động hóa kiểm thử.
+2.1.3 Giới hạn khi sử dụng Appium
+- Appium không support cho Android version nhỏ hơn 4.2.
+- Giới hạn support cho hybrid testing.
+    
+    Hình 21: So sánh công cụ Appium với các công cụ khác.
+2.1.4 Các bước để tiến hành chạy trên appium
+- Bước 1: Tạo project android trên Eclipse
+- Bước 2. Add thư viện về selenium và webdriver vào project.
+- Bước 3: Cài đặt TestNG trên Eclipse
+- Bước 4: Kết nối máy genymotion với Eclipse
+- Bước 5: Chuẩn bị file test .apk
+- Bước 6: Viết test script
+- Bước 7: Start Appium
+- Bước 8: Thực hiện chạy testscript
+- Bước 9: Đọc report kết quả test.
+2.1.5 Hướng dẫn cài đặt công cụ Appium
+• Các phần mềm yêu cầu trước khi tiến hành cài đặt:
+- JavaJDK http://www.oracle.com/technetwork/java/javase/downloads/index.html
+- Android SDK https://developer.android.com/sdk/index.html
+- Appium Desktop Apps http://appium.io/downloads.html
+• Sau khi đã chuẩn bị các phần mềm ta tiến hành cài đặt theo thứ tự:
+Bước 1: Cài đặt Java JDK. Tiến hành cài đặt như bình thường và tạo biến môi trường: JAVA_HOME.
+    
+    Hình 22: Hướng dẫn cài đặt Java_Home
+- Ta tạo biến môi trường JAVA_HOME theo các bước:
+1. Chuột phải My Computer -> Properties -> Chọn tab Advanced -> Environment Variables
+    
+    Hình 23: Hướng dẫn cài đặt Environment Variables
+2. Phía dưới mục System Variables. Chọn New
+    
+    Hình 24: Hướng dẫn tạo Variable
+3. Dòng Variable name: JAVA_HOME
+    Dòng Variable value: C:\Program Files\Java\jdk1.8.0_60. Là đường dẫn đến thư mục jdk mà bạn đã cài khi nãy. Windows 64bit là Program Files còn 32bit sẽ là Program Files(x86).
+    
+    Hình 25: Hướng dẫn tạo điền value
+4. Cũng trong phần System variable này ta chọn Path. Chọn Edit điền thêm đoạn‘;%JAVA_HOME%\bin‘ hoặc ‘; C:\Program Files\Java\jdk1.8.0_45\bin‘ vào sau cuối. (Các giá trị của Path được cách nhau bằng dấu “;”)
+    
+    Hình 26: Hướng dẫn điền đường dẫn JDK vào path
+5. Kiểm tra: Vào Start gõ cmd trong Run rồi ấn Enter. Cửa sổ cmd sẽ mở ra, các bạn gõ ‘java -version‘.
+
+    Hình 27: Hướng dẫn kiểm tra version của java
+    Sau khi hoàn thành nên khởi động lại máy để cài tiếp bước 2.
+Bước 2: Android SDK: Cài đặt và tải SDK Packages mới nhất. Sau khi cài đặt xong sẽ tạo thêm biến môi trường ANDROID_HOME.
+Thêm biến môi trường cho Android (ANDROID_HOME):
+1. Chọn Advanced system settings:
+    
+    Hình 28: Hướng dẫn tìm đến Advanced system setting
+2. Ở tab Advance chọn Enviroment Variable…
+3. Trong mục System variables chọn New
+    
+    Hình 29: Hướng dẫn tạo Android_Home
+4. Dòng Variable name: ANDROID_HOME
+Dòng Variable value: C:\Users\12120_000\AppData\Local\Android\sdk
+    
+    Hình 2-9: Hướng dẫn đưa đường dẫn sdk vào variable value
+5. Cũng trong mục System variables chọn Path rồi chọn Edit. Thêm chuỗi “;%ANDROID_HOME%\tools” vào phía sau: 
+    
+    Hình 210: Hướng dẫn đưa Android_Home vào path
+6. Chọn Path 1 lần nữa để thiết lập đường dẫn đến platform-tools. Điền chuỗi “;%ANDROID_HOME%\platform-tools” vào sau cùng.
+    
+    Hình 211: Hướng dẫn đưa platform-tools vào path
+    Bước 3: Cài đặt Appium. 
+    
+    
+    
+    Hình 212: Hướng dẫn cài đặt phần mềm Appium
+    Giao diện  Appium khi cài hoàn thành:
+    
+    Hình 213: Màn hình giao diện Appium
+    Nên khởi động lại khi cài xong !
+
+
+2.1.6 Ưu điểm và khuyết điểm của công cụ Appium
+• Ưu điểm:
+    Vẻ đẹp của Appium là, tất cả sự phức tạp là dưới mui xe của Appium máy chủ và cho một nhà phát triển tự động hóa các ngôn ngữ lập trình và toàn bộ kinh nghiệm sẽ vẫn giống nhau không phân biệt nền tảng ông được tự động hoá (iOS hoặc Android).
+    Các lợi ích khác của Appium là nó sẽ mở ra cánh cửa để kiểm tra điện thoại di động đa nền tảng có nghĩa là cùng một thử nghiệm sẽ làm việc trên nhiều nền tảng.
+    Không giống như các công cụ khác Appium không yêu cầu bạn phải có một số đại lý thêm trong ứng dụng của bạn để làm cho nó tự động hóa thân thiện. Nó tin rằng trong triết lý của thử nghiệm các ứng dụng tương tự mà chúng ta sẽ phải nộp trong các cửa hàng ứng dụng.
+    Nó được phát triển và hỗ trợ bởi Sauce Labs và nó được nhận được chọn thực sự nhanh chóng với trong WebDriver cộng đồng cho tự động hóa điện thoại di động.
+    Nó có thể tự động Web, Hybrid và Native ứng dụng di động.
+• Nhược điểm:
+    Mở rộng quy mô là một cân nhắc quan trọng với hội nhập liên tục và Appium đi qua như là một công cụ tuyệt vời để đáp ứng sự mong đợi này. Lý do cho điều này là một hạn chế kỹ thuật, trong iOS chúng ta chỉ có thể chạy một ví dụ về dụng cụ mỗi Mac OS nên chúng tôi chỉ có thể chạy các kịch bản iOS của chúng tôi trên một thiết bị cho mỗi máy mac. Vì vậy, nếu chúng ta muốn chạy thử nghiệm trên nhiều thiết bị iOS cùng một lúc sau đó chúng tôi sẽ cần phải sắp xếp cùng một số máy Mac, đó sẽ là tốn kém ngoại tình. Nhưng hạn chế này có thể được giải quyết nếu chúng ta thực thi kịch bản của chúng tôi trong đám mây di động Sauce Lab mà hiện nay hỗ trợ các script chạy trên nhiều iOS mô phỏng cùng một lúc.
+    Appium sử dụng UIAutomator cho Android tự động hóa mà chỉ hỗ trợ  Android SDK Platform, API 16 hoặc cao hơn để hỗ trợ các API cũ họ đã sử dụng một thư viện mã nguồn mở được gọi là Selendroid . Vì vậy, tôi sẽ không nói đó là một hạn chế nhưng nó chắc chắn là một chi phí về mặt cấu hình.
+2.2 Tổng quan về Cucumber và BDD
+2.2.1 Khái niệm Cucumber
+● Cucumber là một công cụ kiểm thử tự động dựa trên việc thực thi các chức năng được mô tả dướng dạng plain-text, mục đích là để hỗ trợ cho việc viết BDD. 
+● Cucumber hỗ trợ viết hành vi kiểm thử cho khoảng 60 ngôn ngữ khác nhau (Ngôn ngữ Gherhin) 
+● Các plain-text này có thể được đọc bởi mã nguồn được viết bằng nhiều ngôn ngữ như Java, .Net, Python... 
+2.2.2 BDD là gì?
+    BDD (Behavior Driven Development) là một quá trình phát triển phần mềm dựa trên kiểm thử hướng hành vi. BDD quy định rằng các developer và product owner cần hợp tác và xác định hành vi của người sử dụng. BDD sinh ra hướng tới các feature test mà người thực hiện là các Acceptance Tester.
+    Trong BDD, người dùng (business analysts – người phân tích nghiệp vụ, product owners – người sỡ hửu sản phẩm) sẽ viết kịch bản(scenarios) hoặc acceptance test ( kiểm thử chấp nhận) mô tả hành vi của hệ thống từ quan điểm của khách hàng trước và trong giai đoạn phát triển. Cucumber và BDD giải quyết hạn chế rất hay gặp trong các dự án phần mềm: mỗi người hiểu hệ thống một cách khác nhau.
+    
+    Hình 214: BDD
+    BDD có khả năng tạo ra các kịch bản test dựa trên góc nhìn của bên phát triển cũng như góc nhìn của bên khác hàng. Ngay từ ban đầu, các thành viên dự án sẽ thảo luận để tạo ra các kịch bản trước, sau đó sẽ cài đặt dựa trên kịch bản đó, tất cả kịch bản test gần gũi với ngôn ngữ tiếng Anh, do đó nó đóng luôn vai trò của tài liệu.
+    Workflow BDD
+    Sau khi kịch bản test chạy, Cucumber sẽ đọc mã Gherkin từ file feature, sau đó nó sẽ tìm đoạn mã trong file step definition mô tả đúng với hành động trong file feature và thực hiện đoạn code, ở bước chạy code Cucumber có thể kết hợp với các framework khác như Ruby on Rails, Selenium, Spring,...
+    
+    Hình 215: Workflow BDD
+Lợi Ích:
+- Giúp cho các bên liên quan đến dự án (stakeholders) có thể follow hoạt động test mà không cần kiến thức kĩ thuật chuyên môn
+- Cucumber tập trung vào trải nghiệm người dùng cuối
+- Style viết mã dễ bảo trì và thực hiện
+- Công cụ hiệu quả cho kiểm thử
+2.2.3 Ngôn ngữ Gherkin  
+● Cucumber thực thi các .feature file. Các feature files chứa các đặc tả (step) thực thi, các step này được viết bằng ngôn ngữ Gherkin 
+● Gherkin là 1 ngôn ngữ mà Cucumber đọc ngôn ngữ ấy chuyển thành test. Gherkin khá dễ hiểu, người đọc có thể hiểu kịch bản và hành động mà không cần biết chi tiết chúng được cài đặt như thế nào 
+
+2.2.4 Chạy một Cucumber Junit test 
+
+2.2.5 Chu trình 
+ 
+    Hình 216: Chương trình chạy test với Cucumber 
+● Mô tả lại hành vi dưới dạng plain-text (sử dụng ngôn ngữ Gherhin) 
+● Định nghĩa các step 
+● Chạy test và xem test fail 
+● Viết code làm cho các step pass 
+● Chạy lại test và xem những step pass 
+● Lặp lại các bước đến khi toàn bộ các step pass 
+2.2.6 Sơ đồ workflow xử lý các steps trong cucumber 
+ 
+    Hình 217: Workflow trong Cucumber 
+2.2.7 Cấu trúc dự án cài đặt Cucumber 
+ 
+    Hình 218: Cấu trúc dự án cài đặt Cucumber
+2.2.8 Các thư viện cần thiết để chạy Cucumber 
+    ● Danh sách các thư viện Cucumber cần cài đặt 
+ 
+    Hình 219: Thư viện Cucumber cần cài đặt
+    
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Giới thiệu ứng dụng di động “Green Note” 
+3.1.1 Ứng dụng kiểm thử “Green Note”
+- Mọi công việc đều được ghi lại thủ công với cuốn sổ dày bịch, khá bất tiện đối với những người hay đi công tác hay những người công việc bận rộn. Để thực hiện tốt và không muốn bỏ qua một lịch trình nào đó là rất khó, đối với người công việc bận rộn và thường xuyên làm việc với giấy tờ như văn phòng hay học sinh, sinh viên, một lịch trình hay danh sách công việc trên một mẩu giấy ghi chú nhỏ thì rất dễ bị mất thông tin hay bị lãng quên đi như những mẩu giấy thông thường.
+- Hệ thống được xây dựng nhằm cung cấp cho người dùng có thể ghi lại một nội dung nào đó như: số điện thoại, email, ngày sinh nhật hay một lịch trình làm việc trong ngày hay trong tháng và cần nhắc nhở. 
+3.1.2 Các chức năng chính
+    
+    Hình 31 Các chức năng chính
+3.2 Đặc tả yêu cầu của ứng dụng “Green Note”
+3.2.1 Biểu đồ use case tổng quát
+    
+    Hình 32: Biểu đồ use case tổng quát
+3.2.2 Danh sách các actor
+    Bảng 31: Danh sách các actor
+STT    Tên Actor    Ý nghĩa/Ghi chú1Người dùngTương tác với hệ thống thực hiện các thao tác quản lý2AdministratorĐược kế thừa từ Actor người dùng, thực hiện các thao tác quản lý người dùng3.2.3 Danh sách các use case
+    
+    
+Bảng 32: Danh sach các use case
+STTTên Use-caseÝ nghĩa/Ghi chú1Quản lý ghi chúChức năng cho phép thao tác quản lý ghi chú như thêm, sửa, xóa ghi chú2Tìm kiếm ghi chúChức năng cho phép tìm kiếm bản hoặc danh sách ghi chú bất kỳ3Thống kê báo cáoChức năng thống kê tổng số các bản ghi chú3.2.4 Quản lý ghi chú
+    a) Thêm ghi chú
+• Màn hình hiện thị
+    
+    Hình 33: Giao diện chức năng thêm ghi chú
+    Bảng 33: Bảng Các control và sự kiện trong giao diện thêm ghi chú
+STTTên controlSự kiệnÝ nghĩa1edtTitle    Cho phép nhập tiêu đề cho bản ghi chú2edtContent    Cho phép nhập nội dung cho bản ghi chú3btnDoneClickThực hiện lưu lại thông tin bản ghi chú4btnClearClickThực hiện xóa tất cả nội dung đã nhập và cho phép nhập lại từ đầu5bntOptionClickHiển thị các chức năng tùy chọn6btnBackClickQuay trở lại Giao diện chính• Thông tin chung của chức năng
+    Bảng 34: Thông tin về chức năng thêm ghi chú
+Tên chức năngThêm ghi chúMô tảChức năng cho phép người dùng thêm một bản ghi chú mới.Tác nhânNgười dùng, adminĐiều kiện trướcKhông cóĐiều kiện sauKhông cóNgoại lệKhông cóCác yêu cầu đặc biệtKhông có• Mô tả dòng sự kiện
+    Bảng 35: Mô tả dòng sự kiện của chức năng”Thêm ghi chú”
+    Hành động của tác nhânPhản ứng hệ thốngDòng sự kiện chính1. Người dùng nhập nội dung văn bản ghi chú.    2.  Nhấn nút btnDoneHệ thống sẽ lưu lại nội dung ghi chú vừa nhập và quay trở về giao diện chính.Dòng sự kiện phụ2.1 Nhấn nút btnClearHệ thống sẽ xóa toàn bộ nội dung vừa nhập và cho phép nhập lại từ đầu2.2 Nhấn btnOptionHệ thống sẽ cho phép chọn các chức năng phụ.2.3 Nhấn btnBackHệ thống sẽ quay trở lại Giao diện chính và hủy bỏ việc tạo ghi chú.
+b) Sửa ghi chú
+• Màn hình hiển thị
+    
+    Hình 34: Giao diện sửa ghi chú
+    Bảng 36: Các control và sự kiện trong giao diện thông tin ghi chú
+STTTên controlSự kiệnÝ nghĩa    1    edtTitleTextChangeCho phép thay đổi thông tin tiêu đề của bản ghi chú đó    2    edtContentTextChangeCho phép thay đổi nội dung của bản ghi chú đó    3    btnOKClickThực hiện cập nhật và lưu lại thông tin bản ghi chú đó    4    btnDeleteClickThực hiện xóa thông tin bản ghi chú đó    5    bntOptionClickHiển thị các chức năng tùy chọn    6    btnBackClickQuay trở lại Giao diện chính
+• Thông tin chung của chức năng
+    Bảng 37: Thông tin chức năng “Sửa ghi chú”
+Tên chức năngSửa ghi chúMô tảChức năng cho phép người dùng sửa một bản ghi chú đã được lưu.Tác nhânNgười dùng, adminĐiều kiện trướcKhông cóĐiều kiện sauKhông cóNgoại lệKhông cóCác yêu cầu đặc biệtKhông có• Mô tả dòng sự kiện
+    Bảng 38: Mô tả dòng sự kiện “Sửa ghi chú”
+Hành động của tác nhânPhản ứng của hệ thốngDòng sự kiện chính1. Người dùng chọn một ghi chú và thay đổi.    2.  Nhấn nút btnOkHệ thống sẽ cập nhật và lưu lại bản ghi chú đó, cập nhật bản ghi chú thành công sẽ quay trở lại giao diện chínhDòng sự kiện phụ2.1 Nhấn nút btnDeleteHệ thống sẽ xóa bản ghi chú đó2.2 Nhấn btnOptionHệ thống sẽ cho phép chọn các chức năng phụ.2.3 Nhấn btnBackHệ thống sẽ quay trở lại Giao diện chính và hủy bỏ việc tạo ghi chú.
+c) Xóa ghi chú
+• Màn hình hiển thị 
+    
+    Hình 35: Giao diện xóa ghi chú
+    Bảng 39: Các control và sự kiện trong giao diện “Xóa ghi chú”
+STTTên controlSự kiện    Ý nghĩa    1btnDeleteClickXóa toàn bộ thông tin bản ghi chú đó    2btnCancelClickHủy bỏ việc xóa thông tin ghi chú
+• Thông tin chung của chức năng
+    Bảng 310: Thông tin chức năng “Xóa ghi chú”
+Tên chức năngXóa ghi chúMô tảChức năng cho phép người dùng xóa một bản ghi chú đã được lưu.Tác nhânNgười dùng, adminĐiều kiện trướcKhông cóĐiều kiện sauKhông cóNgoại lệKhông cóCác yêu cầu đặc biệtKhông có• Mô tả dòng sự kiện
+    Bảng 311: Mô tả dòng sự kiện “Xóa ghi chú”
+Hành động của tác nhânPhản ứng của hệ thốngDòng sự kiện chính1. Người dùng chọn một bản ghi chú cần xóa    2. Nhấn nút btDeleteHệ thống sẽ thực hiện xóa toàn bộ thông tin bản ghi chú đó, sau khi xóa thành công sẽ quay trở lại giao diện chính
+Dòng sự kiện phụ2.1 Nhấn nút btnCancelHệ thống sẽ dừng việc xóa bản ghi chú đó và quay lại giao diện sửa thông tin ghi chú.3.2.5 Tìm kiếm ghi chú
+a) Màn hình hiển thị
+    
+    Hình 36: Giao diện chức năng “Tìm kiếm”
+    Bảng 312:Các control và sự kiện trong giao diện “Tìm kiếm”
+STT    Tên control    Sự kiện    Ý nghĩa    1    lstNote    ClickHiển thị danh sách các bản ghi chú được tìm kiếm    2    edtSearch    TextChangeCho phép nhập vào thông tin cần tìmb) Thông tin chung của chức năng
+    Bảng 313: Thông tin chức năng “Tìm kiếm”
+Tên chức năngTìm kiếm ghi chúMô tảChức năng cho phép người dùng tìm kiếm một bản ghi chú đã được lưu.Tác nhânNgười dùng, adminĐiều kiện trướcKhông cóĐiều kiện sauKhông cóNgoại lệKhông cóCác yêu cầu đặc biệtKhông cóc) Mô tả dòng sự kiện
+    Bảng 314: Mô tả dòng sự kiện chức năng “Tìm kiếm”
+Hành động của tác nhânPhản ứng của hệ thốngDòng sự kiện chínhNgười dùng nhập nội dung cần tìm kiếm     Nhấn EnterHệ thống sẽ tự dộng tìm kiếm các bản ghi chú phù hợp với nội dung người dùng đã nhập vào và hiển thị lên màn hình.
+    Dòng sự kiện phụ2.1 Khi nhấn vào một ghi chú nào đó trong danh sách tìm kiếm.Hệ thống sẽ chuyển sang giao diejn xem và cho phép thay đổi bản ghi đó.
+3.3 Bảng “Ghi Chú”
+    Bảng 315: Bảng ghi chú
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1IdIntNot nullKhóa chính2tieuDeNvarchar(50)NullTiêu đề của ghi chú3noiDungNvarchar(1000)Not nullNội dung của ghi chú4thoiGianDatetimeNullThời gian của ghi chú5diaDiemNvarchar(50)NullMô tả địa điểm của ghi chú    
+3.4 Thiết kế TestDesgin
+3.4.1 Chức năng “Quản lý ghi chú”
+a) Kiểm tra giao diện
+
+    Hình 37: Design chức năng “Quản lý ghi chú”
+
+
+b) Kiểm tra chức năng
+    
+• Chức năng “Thêm ghi chú”
+
+    Hình 38: Design chức năng “Thêm ghi chú”
+• Chức năng “Sửa và xóa ghi chú”
+
+    Hình 39: Design chức năng “Sửa ghi chú”
+
+
+3.4.2 Chức năng “Tìm kiếm”
+    Kiểm tra giao diện, chức năng, hiệu năng
+    
+    Hình 310: Design  chức năng “Tìm kiếm”
+    
+3.5 Thiết kế TestCase
+3.5.1 Quản lý ghi chú
+    Bảng 316: TestCase của chức năng “Quản lý ghi chú”
+IDTest Case DescriptionPre-conditionTest Case ProcedureExpected OutputActual ResultQuản lý ghi chú     [Quản lý ghi chú-1］[COMMON INTERFACE]
+Kiểm tra giao diện màn hình chức năng [Quản lý ghi chú] Mở ứng dụng [Green Note]Màn hiển thị giao diện chính [Quản lý ghi chú]Pass[Quản lý ghi chú-2］[COMMON INTERFACE]
+Kiểm tra màu nền, kiểu chữ, cỡ chữ  1. Mở ứng dụng [Green Note]
+2. Kiểm tra màu nền, cỡ chữ, kiểu chữ2. Màu nền: màu xanh lá cây
+Kiểu chữ: Time New Roman
+Cỡ chữ: 13Pass[Quản lý ghi chú-3］[COMMON INTERFACE]
+Kiểm tra hiển thị ghi chú của chức năng [Quản lý ghi chú] Mở ứng dụng [Green Note]Màn hiển thị danh sách các ghi chú đã được lưu lại trước đóPass[Quản lý ghi chú-4］[COMMON INTERFACE]
+Kiểm tra căn lề dữ liệu của các trường khi nhập 1. Mở ứng dụng [Green Note].
+2. Chọn [Creat a text note].
+3. Nhập dữ liệu cho trường [Tiêu đề] và [Nội dung].
+[Tiêu đề]="Exam schedule"
+[Nội dung]="Second, math test.
+Tuesday, physics exam"
+4. Kiểm tra dữ liệu của các trường sau khi nhập4. Dữ liệu của trường [Tiêu đề], [Nội dung] được căn lề tráiPassThêm ghi chú     [Quản lý ghi chú-6］[COMMON INTERFACE]
+Kiểm tra giao diện cho chức năng [Thêm ghi chú]Mở ứng dụng [Green Note]1. Chọn nút 
+2. Chọn [Create a text note]Màn hình hiển thị giao diện chức năng [Thêm ghi chú]Pass[Quản lý ghi chú-7］[COMMON INTERFACE]
+Kiểm tra thứ tự di chuyển con trỏ trên màn hình khi nhấn phím Enter 1. Click vào chức năng [Creat a text note]
+2. Nhấn Enter liên tục2. Con trỏ di chuyển lần lượt từ trên xuống duới, theo thứ tự từ [Tiêu đề] xuống [Nội dung]Pass[Quản lý ghi chú-8］[COMMON INTERFACE]
+Kiểm tra vị trí của con trỏ chuột khi chọn [Creat a text note] lần đầu tiên. 1. Click vào chức năng [Creat a text note].
+2. Kiểm tra vị trí của con trỏ chuột.2. Con trỏ chuột hiển thị ở trường [Tiêu đề]Pass[Quản lý ghi chú-9］[COMMON FUNCTIONS]
+Nhập dữ liệu hợp lệ cho trường [Tiêu đề] và [Nội dung] 1. Nhập dữ liệu hợp lệ cho trường [Tiêu đề].
+[Tiêu đề]="Exam schedule"
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung] hợp lệ.
+[Nội dung]="Second, math test."
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và hiển thị ghi chú vừa lưu.Pass[Quản lý ghi chú-10］[COMMON FUNCTIONS]
+Kiểm tra tính hợp lệ cho trường [Tiêu đề] 1. Để trống trường [Tiêu đề].
+[Tiêu đề]=""
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung].
+[Nội dung]="Second, math test."
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và hiển thị ghi chú vừa lưu. Pass[Quản lý ghi chú-11］  1. Nhập dữ liệu trường [Tiêu đề] chứa 49 ký tự.
+[Tiêu đề]="Exam schedulejfhjfdhdj…a"
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung].
+[Nội dung]="Second, math test."
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và hiển thị ghi chú vừa lưu. Pass[Quản lý ghi chú-12］  1. Nhập dữ liệu trường [Tiêu đề] chứa 50 ký tự.
+[Tiêuđề]="Exam schedulejfhjfdhdj…ab"
+2. Nhập dữ liệu hợp lệ cho trường [Nộidung].
+[Nội dung]="Second, math test."
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và hiển thị ghi chú vừa lưu. Pass[Quản lý ghi chú-13］  1. Nhập dữ liệu trường [Tiêu đề] chứa 51 ký tự.
+[Tiêuđề]="Exam schedulejfhjfdhdj…abc"
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung].
+[Nội dung]="Second, math test."
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và dữ liệu vừa thêm không được lưu.  [Quản lý ghi chú-14］  1. Nhập dữ liệu trường [Tiêu đề] chứa ký tự cách ở đầu.
+[Tiêu đề]="Exam schedule"
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung].
+[Nội dung]="Second, math test."
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và dữ liệu vừa thêm không được lưu. Fail[Quản lý ghi chú-15］  1. Nhập dữ liệu trường [Tiêu đề] dưới dạng unicode có dấu.
+[Tiêu đề]="Kiểm tra học kỳ"
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung].
+[Nội dung]="Second, math test."
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và dữ liệu vừa thêm không được lưu. Fail[Quản lý ghi chú-16］[COMMON FUNCTIONS]
+Kiểm tra tính hợp lệ cho trường [Nội dung] 1. Để trống trường [Nội dung]
+[Nội dung]=""
+2. Nhập dữ liệu hợp lệ cho trường [Tiêu đề].
+[Tiêu đề]="lich thi hoc ky"
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và hiển thị ghi chú vừa lưu.Pass[Quản lý ghi chú-17］  1. Nhập dữ liệu trường [Nội dung] chứa ký tự cách ở đầu.
+[Nội dung]="Second, math test."
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung].
+[Tiêu đề]="Exam schedule"
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và dữ liệu vừa thêm không được lưu. Fail[Quản lý ghi chú-18］  1. Nhập dữ liệu trường [Nội dung] dưới dạng unicode có dấu.
+[Nội dung]="Thứ hai thi toán văn anh"
+2. Nhập dữ liệu hợp lệ cho trường [Tiêu đề].
+[Tiêu đề]="Second, math test."
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và dữ liệu vừa thêm không được lưu. Fail[Quản lý ghi chú-19］  1. Để trống trường [Tiêu đề].
+[Tiêu đề]=""
+2. Nhập dữ liệu cho trường [Nội dung] hợp lệ.
+[Nội dung]="Second, math test."
+3. Nhấn [Clear]3. Hệ thống xóa toàn bộ dữ liệu và cho phép nhập lại.
+[Tiêu đề]=""
+[Nội dung]=""Pass[Quản lý ghi chú-20］  1. Nhập dữ liệu hợp lệ cho trường [Tiêu đề] và trường [Nội dung].
+[Tiêu đề]=""
+[Nội dung]="Second, math test."
+3. Nhấn [Clear]3. Hệ thống xóa toàn bộ dữ liệu và cho phép nhập lại.
+[Tiêu đề]=""
+[Nội dung]=""Pass[Quản lý ghi chú-21］  1. Nhập dữ liệu cho trường [Tiêu đề].
+[Tiêu đề]="Exam schedule"
+2. Để trống trường [Nội dung] hợp lệ.
+[Nội dung]=""
+3. Nhấn [Clear]3. Hệ thống xóa toàn bộ dữ liệu và cho phép nhập lại.
+[Tiêu đề]=""
+[Nội dung]=""Pass[Quản lý ghi chú-22］  1. Nhập dữ liệu hợp lệ cho trường [Tiêu đề] và trường [Nội dung].
+[Tiêu đề]="Exam schedule"
+[Nội dung]="Second, math test."
+3. Nhấn [Clear]3. Hệ thống xóa toàn bộ dữ liệu và cho phép nhập lại.
+[Tiêu đề]=""
+[Nội dung]=""PassSửa ghi chú     [Quản lý ghi chú-23］[COMMON INTERFACE]
+Kiểm tra giao diện của màn hình sửa ghi chú 1. Chọn một ghi chú bất kỳ.
+2. Kiểm tra giao diện màn hình sửa ghi chúHiển thị màn hình sửa ghi chúPass[Quản lý ghi chú-24］[COMMON FUNCTIONS]
+Kiểm tra lưu khi không thay đổi dữ liệu 1. Chọn một ghi chú bất kỳ.
+2. Không thay đổi dữ liệu của trường [Tiêu đề] và [Nội dung].
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và hiển thị ghi chú vừa lưu.Pass[Quản lý ghi chú-25］[COMMON FUNCTIONS]
+Kiểm tra tính hợp lệ cho trường [Tiêu đề] 1. Để trống trường [Tiêu đề].
+[Tiêu đề]=""
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung].
+[Nội dung]="Second, math test."
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và hiển thị ghi chú vừa lưu. Pass[Quản lý ghi chú-26］  1. Nhập dữ liệu trường [Tiêu đề] chứa 49 ký tự.
+[Tiêu đề]="Exam schedulejfhjfdhdj…a"
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung]
+[Nội dung]="Second, math test."
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và hiển thị ghi chú vừa lưu. Pass[Quản lý ghi chú-27］  1. Nhập dữ liệu trường [Tiêu đề] chứa 50 ký tự.
+[Tiêu đề]="Exam schedulejfhjfdhdj…ab"
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung].
+[Nội dung]="Second, math test."
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và hiển thị ghi chú vừa lưu. Pass[Quản lý ghi chú-28］  1. Nhập dữ liệu trường [Tiêu đề] chứa 51 ký tự.
+[Tiêu đề]="Exam schedulejfhjfdhdj…abc"
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung].
+[Nội dung]="Second, math test."
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và dữ liệu vừa thêm không được lưu.  [Quản lý ghi chú-29］  1. Nhập dữ liệu trường [Tiêu đề] chứa ký tự cách ở đầu.
+[Tiêu đề]="Exam schedule"
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung].
+[Nội dung]="Second, math test."
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và dữ liệu vừa thêm không được lưu. Fail[Quản lý ghi chú-30］  1. Nhập dữ liệu trường [Tiêu đề] dưới dạng unicode có dấu.
+[Tiêu đề]="Kiểm tra học kỳ"
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung].
+[Nội dung]="Second, math test."
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và dữ liệu vừa thêm không được lưu. Fail[Quản lý ghi chú-31］[COMMON FUNCTIONS]
+Kiểm tra tính hợp lệ cho trường [Nội dung] 1. Để trống trường [Nội dung].
+2. Nhập dữ liệu hợp lệ cho trường [Tiêu đề].
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và hiển thị ghi chú vừa lưu.Pass[Quản lý ghi chú-32］  1. Nhập dữ liệu trường [Nội dung] chứa ký tự cách ở đầu.
+[Nội dung]="Second, math test."
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung].
+[Tiêu đề]="Exam schedule"
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và dữ liệu vừa thêm không được lưu. Fail[Quản lý ghi chú-33］  1. Nhập dữ liệu trường [Nội dung] dưới dạng unicode có dấu.
+[Nội dung]="Thứ hai thi toán văn anh"
+2. Nhập dữ liệu hợp lệ cho trường [Tiêu đề].
+[Tiêu đề]="Second, math test."
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và dữ liệu vừa thêm không được lưu. FailXóa ghi chú     [Quản lý ghi chú-34］[COMMON INTERFACE]
+Kiểm tra giao diện của màn hình xóa ghi chú 1. Chọn một ghi chú bất kỳ.
+2. Kiểm tra giao diện màn hình xóa ghi chúHiển thị màn hình xóa ghi chúPass[Quản lý ghi chú-35］[COMMON FUNCTIONS]
+Kiểm tra xóa ghi chú 1. Chọn 1 ghi chú bất kỳ 
+2. Nhấn [Delete] 2. Màn hình quay trở về giao diện ban đầu và mất ghi chú vừa xóa.Pass[Quản lý ghi chú-36］[COMMON COMPATIBILITY]
+Kiểm tra khả năng tương thích trên điện thoại Galaxy J5 Chạy ứng dụng [Green Note] trên điện thoại Galaxy J5 có các thông số sau:
+Hệ điều hành Android 5.1
+Công nghệ màn hình Super AMOLED
+Kích thước màn hình 4.5 Inch
+Camera Trước 2 MP
+Camera sau 5 MP
+Số nhân 4 nhân
+Vi xử lý 1.2 GHz
+Dung lượng RAM 1 GB
+Độ phân giải WVGA 480 x 800pxỨng dụng [Green Note] hoạt động bình thường.Pass[Quản lý ghi chú-37］[COMMON COMPATIBILITY]
+Kiểm tra khả năng tương thích trên điện thoại Iphon 5s Chạy ứng dụng [Green Note] trên điện thoại Iphone 5s có các thông số sau:
+Màn hình: IPS LCD, 4", Retina
+Hệ điều hành: iOS 9
+CPU: Apple A9 2 nhân 64-bit
+RAM: 2 GB
+Bộ nhớ trong: 16 GB
+Dung lượng pin: 1642 mAhỨng dụng [Green Note] hoạt động bình thường.Fail[Quản lý ghi chú-38］[COMMON COMPATIBILITY]
+Kiểm tra khả năng tương thích trên máy tính bảng Ipad Chạy ứng dụng [Green Note] trên điện thoại Ipad có các thông số sau:
+Màn hình LED backlit LCD, 7.9"
+Hệ điều hành iOS 9
+CPU Apple A8, 1.5 GHz
+RAM 2 GB
+Bộ nhớ trong 64 GB
+Camera trước 1.2 MPỨng dụng [Green Note] hoạt động bình thường.Fail[Quản lý ghi chú-39］[COMMON COMPATIBILITY]
+Kiểm tra khả năng tương thích trên điện thoại HTC Desiren 616 dual sim Chạy ứng dụng [Green Note] trên điện thoại HTC Desiren 616 dual simcó các thông số sau:
+Hệ điều hành: Android 4.2
+Kích thước sản phẩm (D x R x C cm): 15.8 x 7.8 x 0.8
+Trọng lượng (KG): 0.2
+Sản xuất tại: Đài Loan
+RAM memory: 6GB
+Bộ nhớ trong: 16GBỨng dụng [Green Note] hoạt động bình thường.Pass[Quản lý ghi chú-40］[COMMON DISCONTINUITY]
+Kiểm tra ứng dụng khi có người gọi đến Thực hiện thêm một ghi chúSau khi kết thúc cuộc gọi vừa nhận, quay trở về màn hình trước khi nhận cuộc gọi. Dữ liệuđược ghi chú vẫn còn tồn tại và cho phép thực hiện tiếp các bước tiếp.Pass[Quản lý ghi chú-41］  Thực hiện sửa một ghi chúSau khi kết thúc cuộc gọi vừa nhận, quay trở về màn hình trước khi nhận cuộc gọi. Dữ liệuđược thay đổi vẫn còn tồn tại và cho phép thực hiện tiếp các bước tiếp.Pass[Quản lý ghi chú-42］  Thực hiện xóa một ghi chúSau khi kết thúc cuộc gọi vừa nhận, quay trở về màn hình trước khi nhận cuộc gọi. Ghi chú được chọn vẫn còn tồn tại và cho phép thực hiện tiếp các bước tiếp.Pass[Quản lý ghi chú-43］[COMMON DISCONTINUITY]
+Kiểm tra ứng dụng khi máy hết pin Thực hiện thêm một ghi chúSau khi sạc pin xong, bật nguồn lên thì ứng dụng đã bị thoát ra ngoài và các bước thực hiện trên ứng dụng trước đó bị xóa trắng.Pass[Quản lý ghi chú-44］  Thực hiện sửa một ghi chúSau khi sạc pin xong, bật nguồn lên thì ứng dụng đã bị thoát ra ngoài và các bước thực hiện trên ứng dụng trước đó bị xóa trắng.Pass[Quản lý ghi chú-45］  Thực hiện xóa một ghi chúSau khi sạc pin xong, bật nguồn lên thì ứng dụng đã bị thoát ra ngoài và các bước thực hiện trên ứng dụng trước đó bị xóa trắng.Pass    
+3.5.2 Tìm kiếm ghi chú
+    Bảng 317: TestCase chức năng “Tìm kiếm”
+IDTest Case DescriptionPre-conditionTest Case ProcedureExpected OutputActual ResultTìm kiếm ghi chú     [Tìm kiếm ghi chú-1］[COMMON INTERFACE]
+Kiểm tra giao diện  1. Chọn [Seach]
+2. Kiểm tra giao diện của tìm kiếm.Màn hình tìm kiếmPass[Tìm kiếm ghi chú-2］[COMMON INTERFACE]
+Kiểm tra vị trí của con trỏ chuột  1. Chọn [Seach]
+2. Kiểm tra vị trí của con trỏ chuột.2. Con trỏ chuột hiển thị ở trường [Tìm kiếm]Fail[Tìm kiếm ghi chú-3］[COMMON FUNCTIONS]
+Để trống trường tìm kiếm 1. Nhập dữ liệu đã tồn tại cho trường[Tìm kiếm]
+ [Tìm kiếm]=""
+2. Nhấn [Enter]2. Hệ thống không có phản ứngPass[Tìm kiếm ghi chú-4］[COMMON FUNCTIONS]
+Tìm kiếm tuyệt đối- dữ liệu đã tồn tạiTrong cơ sở dữ liệu [Quản lý ghi chú] đã tồn tại ghi chú có [Tiêu đề]="Lich thi"1. Nhập dữ liệu đã tồn tại cho trường[Tìm kiếm]
+ [Tìm kiếm]="Lich thi"
+2. Nhấn [Enter]2. Hệ thống hiện thị danh sách tất cả các ghi chú có tiêu đề "Lich thi" .Pass[Tìm kiếm ghi chú-5］[COMMON FUNCTIONS]
+Tìm kiếm tuyệt đối- dữ liệu chưa tồn tạiTrong cơ sở dữ liệu [Quản lý ghi chú] không tồn tại ghi chú có [Tiêu đề]="adb"1. Nhập dữ liệu chưa tồn tại cho trường[Tìm kiếm]
+ [Tìm kiếm]="adb"
+2. Nhấn [Enter]2. Hiển thị thông báo "No result for search"Pass[Tìm kiếm ghi chú-6］[COMMON FUNCTIONS]
+Tìm kiếm tương đốiTrong cơ sở dữ liệu [Quản lý ghi chú] đã tồn tại ghi chú có [Tiêu đề]="Bao cao do an"1. Nhập dữ liệu đã tồn tại cho trường[Tìm kiếm]
+ [Tìm kiếm]="B"
+2. Nhấn [Enter]2. Hệ thống hiện thị danh sách tất cả các ghi chú có tiêu đề chứa "B" hoặc "b"Pass[Tìm kiếm ghi chú-7］[COMMON PERFORMANCE]
+Kiểm tra thời gian phản hồi khi tìm kiếm 1. Nhập dữ liệu bất kì cho trường [Tìm kiếm]
+[Tìm kiếm]="lichthi"
+2. Nhấn [Enter]
+3. Kiểm tra thời gian phản hồi của hệ thống3. Hệ thống đáp trả lại kết quả sau 2sPass[Tìm kiếm ghi chú-8］[COMMAN COMPATIBILITY]
+Kiểm tra khả năng tương thích trên điện thoại Galaxy J5 Chạy ứng dụng [Green Note] trên điện thoại Galaxy J5 có các thông số sau:
+Hệ điều hành Android 5.1
+Công nghệ màn hình Super AMOLED
+Kích thước màn hình 4.5 Inch
+Camera Trước 2 MP
+Camera sau 5 MP
+Số nhân 4 nhân
+Vi xử lý 1.2 GHz
+Dung lượng RAM 1 GB
+Độ phân giải WVGA 480 x 800pxỨng dụng [Green Note] hoạt động bình thường.Pass[Tìm kiếm ghi chú-9］[COMMAN COMPATIBILITY]
+Kiểm tra khả năng tương thích trên điện thoại Iphon 5s Chạy ứng dụng [Green Note] trên điện thoại Iphone 5s có các thông số sau:
+Màn hình: IPS LCD, 4", Retina
+Hệ điều hành: iOS 9
+CPU: Apple A9 2 nhân 64-bit
+RAM: 2 GB
+Bộ nhớ trong: 16 GB
+Dung lượng pin: 1642 mAhỨng dụng [Green Note] hoạt động bình thường.Fail[Tìm kiếm ghi chú-10］[COMMAN COMPATIBILITY]
+Kiểm tra khả năng tương thích trên máy tính bảng Ipad Chạy ứng dụng [Green Note] trên điện thoại Ipad có các thông số sau:
+Màn hình LED backlit LCD, 7.9"
+Hệ điều hành iOS 9
+CPU Apple A8, 1.5 GHz
+RAM 2 GB
+Bộ nhớ trong 64 GB
+Camera trước 1.2 MPỨng dụng [Green Note] hoạt động bình thường.Fail[Tìm kiếm ghi chú-11］[COMMAN COMPATIBILITY]
+Kiểm tra khả năng tương thích trên điện thoại HTC Desiren 616 dual sim Chạy ứng dụng [Green Note] trên điện thoại HTC Desiren 616 dual simcó các thông số sau:
+Hệ điều hành: Android 4.2
+Kích thước sản phẩm (D x R x C cm): 15.8 x 7.8 x 0.8
+Trọng lượng (KG): 0.2
+Sản xuất tại: Đài Loan
+RAM memory: 6GB
+Bộ nhớ trong: 16GBỨng dụng [Green Note] hoạt động bình thường.Pass[Tìm kiếm ghi chú-12］[COMMAN DISCONTINUITY]
+Kiểm tra ứng dụng khi có người gọi đến Thực hiện tìm kiếm ghi chúSau khi kết thúc cuộc gọi vừa nhận, quay trở về màn hình trước khi nhận cuộc gọi. Dữ liệu  được ghi chú vẫn còn tồn tại và cho phép thực hiện tiếp các bước tiếp.Pass[Tìm kiếm ghi chú-13］[COMMAN DISCONTINUITY]
+Kiểm tra ứng dụng khi máy hết pin Thực hiện tìm kiếm ghi chúSau khi sạc pin xong, bật nguồn lên thì ứng dụng đã bị thoát ra ngoài và các bước thực hiện trên ứng dụng trước đó bị xóa trắng.Pass3.6 Thiết kế Test Data
+3.6.1 Chức năng “Thêm”
+    Bảng 318: Test Data của chức năng “Thêm ghi chú”
+ Test Case ProcedureExpected OutputActual Result[TestCase-1］1. Nhập dữ liệu hợp lệ cho trường [Tiêu đề]
+[Tiêu đề]="lich thi hoc ky"
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung] hợp lệ.
+[Nội dung]="toan van anh"
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và hiển thị ghi chú vừa lưu.PASS[TestCase-2］1. Để trống trường [Tiêu đề].
+[Tiêu đề]=" "
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung].
+[Nội dung]="toan van anh"
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và hiển thị ghi chú vừa lưu. PASS[TestCase-3］1. Để trống trường [Nội dung]
+[Nội dung]=""
+2. Nhập dữ liệu hợp lệ cho trường [Tiêu đề]
+[Tiêu đề]="Toan van anh"
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và hiển thị ghi chú vừa lưu.PASS[TestCase-4］1. Để trống trường [Tiêu đề] và [Nội dung]
+[Tiêu đề]=""
+[Nội dung]=""
+2. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và dữ liệu vừa thêm không được lưu. FALSE[TestCase-5］1. Nhập dữ liệu trường [Tiêu đề] chứa 49 ký tự.
+[Tiêu đề]="Exam schedulejfhjfdhdj…a"
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung]
+[Nội dung]="Second, math test."
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và hiển thị ghi chú vừa lưu. PASS[TestCase-6］1. Nhập dữ liệu trường [Tiêu đề] chứa 50 ký tự.
+[Tiêu đề]="Exam schedulejfhjfdhdj…ab"
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung].
+[Nội dung]="Second, math test."
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và hiển thị ghi chú vừa lưu. PASS[TestCase-7］1. Nhập dữ liệu trường [Tiêu đề] chứa 51 ký tự.
+[Tiêu đề]="Exam schedulejfhjfdhdj…abc"
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung].
+[Nội dung]="Second, math test."
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và dữ liệu vừa thêm không được lưu. PASS[TestCase-8］1. Nhập dữ liệu trường [Tiêu đề] chứa ký tự cách ở đầu.
+[Tiêu đề]="Exam schedule"
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung]
+[Nội dung]="Second, math test."
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và dữ liệu vừa thêm không được lưu. FALSE[TestCase-9］1. Nhập dữ liệu trường [Tiêu đề] dưới dạng unicode có dấu.
+[Tiêu đề]="Kiểm tra học kỳ"
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung].
+[Nội dung]="Second, math test."
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và dữ liệu vừa thêm không được lưu. FALSE[TestCase-10］1. Nhập dữ liệu trường [Nội dung] chứa ký tự cách ở đầu.
+[Nội dung]="Second, math test."
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung]
+[Tiêu đề]="Exam schedule"
+3. Nhấn [Save]3. Màn hình quay trở về giao diện ban đầu và dữ liệu vừa thêm không được lưu. FALSE    
+
+
+3.6.2 Chức năng “Clear”
+    Bảng 319: Test Data của chức năng “Clear”
+ Test Case ProcedureExpected OutputActual Result[TestCase-1］1. Nhập dữ liệu hợp lệ cho trường [Tiêu đề].
+[Tiêu đề]="lich thi hoc ky"
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung] hợp lệ.
+[Nội dung]="toan van anh"
+3. Nhấn [Clear]3. Hệ thống xóa toàn bộ dữ liệu và cho phép nhập lại.
+[Tiêu đề]=""
+[Nội dung]=""PASS[TestCase-2］1. Bỏ trống trường [Tiêu đề].
+[Tiêu đề]=""
+2. Nhập dữ liệu hợp lệ cho trường [Nội dung] hợp lệ.
+[Nội dung]="toan van anh"
+3. Nhấn [Clear]3. Hệ thống xóa toàn bộ dữ liệu và cho phép nhập lại.
+[Tiêu đề]=""
+[Nội dung]=""PASS[TestCase-3］1. Bỏ trống trường [Nội dung].
+[Nội dung]=""
+2. Nhập dữ liệu hợp lệ cho trường [Tiêu đề].
+[Tiêu đề]="lich thi hoc ky"
+3. Nhấn [Clear]3. Hệ thống xóa toàn bộ dữ liệu và cho phép nhập lại.
+[Tiêu đề]=""
+[Nội dung]=""PASS[TestCase-4］1. Bỏ trống trường [Tiêu đề] và [Nội dung].
+[Tiêu đề]=""
+[Nội dung] =""
+2. Nhấn [Clear]3. Hệ thống xóa toàn bộ dữ liệu và cho phép nhập lại.
+[Tiêu đề]=""
+[Nội dung]=""PASS    
+    
+    
+    
+    
+    
+    
+3.6.3 Chức năng “Tìm kiếm”
+    Bảng 320: Test Data của chức năng “Tìm kiếm”
+ Test Case ProcedureExpected OutputActual Result[TestCase-1］1. Nhập dữ liệu hợp lệ cho trường.
+[Tìmkiếm]
+ [Tìmkiếm]="Lichthi"
+2. Nhấn [Enter]2. Hệ thống hiện thị danh tất cả các ghi chú có tiêu đề xuất hiện chữ "lich thi".PASS[TestCase-2］1. Để trống trường tìm kiếm.
+[Tìm kiếm]=""
+2. Nhấn Enter2. Hệ thống không có phản ứngPASS[TestCase-3］1. Nhập dữ liệu chứa khoảng trắng ở đầu cho trường [Tìm kiếm]
+ [Tìm kiếm] =" Lich thi"
+2. Nhấn [Enter]2. Hiển thị thông báo "No result for search"PASS[TestCase-4］1. Nhập dữ liệu không hợp lệ cho trường [Tìm kiếm] ="sndb"
+2. Nhấn [Enter]2. Hiển thị thông báo "No result for search"PASS    
+3.7. 
+3.7 Trình tự các bước xây dựng một frameword Appium
+3.7.1 Start Appium Server
+
+    Hình 311: Mở ứng dụng Appium
+3.7.2 Start Genymotion
+
+    Hình 312: Mở ứng dụng test trên máy ảo genymotion
+    
+3.7.3 Thực hiện lấy id, class, name trên ứng dụng android
+
+    Hình 313: Sử dụng tool “UIautomatorviewer.bat” trong bộ SDK
+
+    Hình 314: Run “uiautomatorviewer.bat”
+    Chọn biểu tượng như hình trên tool sẽ tự động chụp màn hình máy ảo gennymotion như sau:
+
+    Hình 315: Tool chụp màn hình máy ảo gennymotion
+    Sau đó tự chọn trường muốn lấy id copy id trong phần “Node Detail”
+3.7.4 Thực hiện viết test case tren eclipse
+    package APPIUM;
+    
+    import java.io.File;
+    import java.net.MalformedURLException;
+    import java.net.URL;
+    import java.util.concurrent.TimeUnit;
+    
+    import jxl.Cell;
+    import jxl.Sheet;
+    import jxl.Workbook;
+    import org.openqa.selenium.By;
+    import org.openqa.selenium.WebDriver;
+    import org.openqa.selenium.WebElement;
+    import org.openqa.selenium.remote.DesiredCapabilities;
+    import org.openqa.selenium.remote.RemoteWebDriver;
+    import org.testng.Assert;
+    import org.testng.annotations.AfterMethod;
+    import org.testng.annotations.BeforeMethod;
+    import org.testng.annotations.DataProvider;
+    import org.testng.annotations.Test;
+    public class Them {
+    	WebDriver driver;
+    	@Test(dataProvider = "dp")
+    	public void Testcase(String Title, String Content) {
+    		// 1. click nút +
+    		WebElement btn_cong = driver.findElement(By.id("vn.dat.greennote:id/fab_expand_menu_button"));
+    		btn_cong.click();
+    		// 2. click nút creat a new text
+    		WebElement btn_them = driver.findElement(By.id("vn.dat.greennote:id/fabCreateText"));
+    		btn_them.click();
+    		// 3. nhập tiêu đề
+    		WebElement txt_tieude = driver.findElement(By.id("vn.dat.greennote:id/edtTitle"));
+    		txt_tieude.clear();
+    		txt_tieude.sendKeys(Title);
+    		// 4. nhập nội dung
+    		WebElement txt_noidung = driver.findElement(By.id("vn.dat.greennote:id/viewBody"));
+    		txt_noidung.clear();
+    		txt_noidung.sendKeys(Content);
+    		// 5. nhấn save
+    		WebElement btn_save = driver.findElement(By.id("vn.dat.greennote:id/itmCreateDone"));
+    		btn_save.click();
+    		// So sánh kết quả mong đợi vói kết quả thực tế
+    
+    		WebElement txt_thucte = driver.findElement(By.id("vn.dat.greennote:id/txtTitleView"));// kết  quả thực tế
+    		Assert.assertEquals(txt_thucte.getText(), (Title));// kết quả mong đợi
+    				}
+    	@BeforeMethod
+    	public void beforeMethod() throws MalformedURLException {
+    		File appDir = new File("D://Testting//");
+    		File app = new File(appDir, "app_green_note.apk");
+    		DesiredCapabilities cap = new DesiredCapabilities();
+    		cap.setCapability("platformName", "Android");
+    		cap.setCapability("deviceName", "192.168.58.105:5555");					
+    		cap.setCapability("platformVersion", "4.3");
+    		cap.setCapability("app-package", "vn.dat.greennote");
+    													cap.setCapability("app", app.getAbsolutePath());
+    	driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+    	driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+    	}
+    	@AfterMethod
+    	public void afterMethod() {
+    		driver.quit();
+    	}
+    	@DataProvider(name = "dp")
+    	public Object[][] createData() throws Exception {
+    		Object[][] rearr = getTableArray("D:\\TÀI LIỆU\\Đồ án 4\\Appium_Automatic\\src\\Data\\Data.xls", "Sheet1", "Save");
+    		return (rearr);
+    	}
+    	public String[][] getTableArray(String xlFilePath, String sheetName, String tableName) throws Exception {
+    		String[][] tabArray = null;
+    		Workbook workbook = Workbook.getWorkbook(new File(xlFilePath));
+    		Sheet sheet = workbook.getSheet(sheetName);
+    		int startRow, startCol, endRow, endCol, ci, cj;
+    		Cell tableStart = sheet.findCell(tableName);
+    		startRow = tableStart.getRow();
+    		startCol = tableStart.getColumn();
+    		Cell tableEnd = sheet.findCell(tableName, startCol + 1, startRow + 1, 100, 64000, false);
+    		endRow = tableEnd.getRow();
+    		endCol = tableEnd.getColumn();
+    		System.out.println(
+    				"startRow=" + startRow + ",endRow=" + endRow + ",startCol=" + startCol + ",endCol=" + endCol + "");
+    		tabArray = new String[endRow - startRow - 1][endCol - startCol - 1];
+    		ci = 0;
+    		for (int i = startRow + 1; i < endRow; i++, ci++) {
+    			cj = 0;
+    			for (int j = startCol + 1; j < endCol; j++, cj++) {
+    				tabArray[ci][cj] = sheet.getCell(j, i).getContents();
+    			}
+    		}
+    		return (tabArray);
+    	}
+    }    
+3.7.5 Kết quả test export ra excel
+a) Summary
+CategoryCountPassed7Failed1Skipped0Total8Start Time2017-11-08T01:18:22ZEnd Time2017-11-08T01:30:49ZDuration747409 ms
+    Hình 316:Biểu đồ trạng thái Test Report xuất dưới dạng excel
+b) Default Test
+
+    Bảng 321: Bảng trạng thái chi tiết của từng testcase
+    
+3.8 Phần mở rộng “Appium kết hợp với cucumber”
+3.8.1 Các bước thực hiện
+a) Helpers
+● DataHelpers
+package Helpers;
+import java.io.FileInputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+public class DataHelper {
+	@SuppressWarnings("unchecked")
+	public static HashMap<String,String> storeValues = new HashMap();
+	@SuppressWarnings("deprecation")
+	public static List<HashMap<String,String>> data(String filepath,String sheetName)
+	{
+		List<HashMap<String,String>> mydata = new 
+				 ArrayList<HashMap<String, String>>();
+				try
+		{
+			FileInputStream fs = new FileInputStream(filepath);
+			@SuppressWarnings("resource")
+			XSSFWorkbook workbook = new XSSFWorkbook(fs);
+			XSSFSheet sheet = workbook.getSheet(sheetName);
+			Row HeaderRow = sheet.getRow(0);
+			for(int i=1;i<sheet.getPhysicalNumberOfRows();i++)
+			{
+				Row currentRow = sheet.getRow(i);
+				HashMap<String,String> currentHash = new                HashMap<String,String>();
+				for(int j=0;j<currentRow.getPhysicalNumberOfCells();j++)
+				{
+					Cell currentCell = currentRow.getCell(j);
+					switch (currentCell.getCellType())
+					{
+					case Cell.CELL_TYPE_STRING:
+						System.out.print(currentCell.getStringCellValue()                + "\t");
+						currentHash.put(HeaderRow.getCell(j).getStringCellValue(), currentCell.getStringCellValue());
+						break;
+					}
+				}
+				mydata.add(currentHash);
+			}
+			fs.close();
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		return mydata;
+	}
+}● Log
+package Helpers;
+import org.apache.log4j.Logger;
+
+public class Log {
+
+	private static Logger Log = Logger.getLogger(Log.class.getName()); 
+	
+	public static void startTestCase(String sTestCaseName){
+		Log.info("Started Test case");
+	}
+	public static void endTestCase(String sTestCaseName){
+		Log.info("Ended Test Case");
+	}
+	public static void info(String message)
+	{
+		Log.info(message);
+	}
+}b) Home
+    package Home;
+    import java.io.File;
+    import java.net.MalformedURLException;
+    import java.net.URL;
+    import java.util.concurrent.TimeUnit;
+    import org.openqa.selenium.OutputType;
+    import org.openqa.selenium.TakesScreenshot;
+    import org.openqa.selenium.WebDriver;
+    import org.openqa.selenium.WebDriverException;
+    import org.openqa.selenium.remote.DesiredCapabilities;
+    import org.openqa.selenium.remote.RemoteWebDriver;
+    import cucumber.api.Scenario;
+    import cucumber.api.java.After;
+    import cucumber.api.java.Before;
+    public class Hook {
+    	 public static WebDriver driver;
+          @Before
+        /**
+         * Delete all cookies at the start of each scenario to avoid
+         * shared state between tests
+         */
+        public void openBrowser() throws MalformedURLException {
+        	File appDir = new File("D://Testting//");
+    		File app = new File(appDir, "app_green_note.apk");
+    		DesiredCapabilities cap = new DesiredCapabilities();
+    		cap.setCapability("platformName", "Android");
+    		cap.setCapability("deviceName", "192.168.69.102:5555");				
+    		cap.setCapability("platformVersion", "4.3");
+    		cap.setCapability("app-package", "vn.dat.greennote")					cap.setCapability("app", app.getAbsolutePath());
+    	driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+    	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        }
+        @After
+        /**
+         * Embed a screenshot in test report if test is marked as failed
+         */
+        public void embedScreenshot(Scenario scenario) {
+            if(scenario.isFailed()) {
+            try {
+            	 scenario.write("Current Page URL is " + driver.getCurrentUrl());
+    //            byte[] screenshot = getScreenshotAs(OutputType.BYTES);
+                byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+                scenario.embed(screenshot, "image/png");
+            } catch (WebDriverException somePlatformsDontSupportScreenshots) {
+                System.err.println(somePlatformsDontSupportScreenshots.getMessage());
+            }
+            
+            }
+            driver.quit();
+        }
+        
+c) Step
+    package Step;
+    import Helpers.DataHelper;
+    import java.util.HashMap;
+    import java.util.List;
+    import org.openqa.selenium.By;
+    import org.openqa.selenium.WebDriver;
+    import org.openqa.selenium.WebElement;
+    import org.openqa.selenium.support.ui.Select;
+    import org.testng.Assert;
+    import Home.Hook;
+    import cucumber.api.java.en.Then;
+    import cucumber.api.java.en.When;
+    public class DataDrivenFramework {
+    public WebDriver driver;
+     public List<HashMap<String,String>> datamap;
+     public DataDrivenFramework()
+        {
+        	driver = Hook.driver;
+         	datamap = DataHelper.data(System.getProperty("user.dir")+"//src//test//resources//TestData/default.xlsx","Sheet1");
+        }
+     	@When("^click button cong$")
+    	public void click_button_cong() throws Throwable {
+    	driver.findElement(By.id("vn.dat.greennote:id/fab_expand_menu_button")).click();
+    	}
+    	@When("^click creat text$")
+    	public void click_creat_text() throws Throwable {
+    	driver.findElement(By.id("vn.dat.greennote:id/fabCreateText")).click();
+    	}
+        @Then("^I contact the customer service with excel row \"([^\"]*)\" dataset$")
+        public void i_contact_the_customer_service_with_excel_row_dataset(String arg1) throws Throwable {
+            int index = Integer.parseInt(arg1)-1;
+            System.out.println("Printing current data set...");
+            for(HashMap h:datamap)
+            {
+                System.out.println(h.keySet());
+                System.out.println(h.values());
+            }
+                // WebElement txt_thucte = driver.findElement(By.id("vn.dat.greennote:id/txtTitleView"));	
+driver.findElement(By.id("vn.dat.greennote:id/edtTitle")).sendKeys(datamap.get(index).get("Title"));        driver.findElement(By.id("vn.dat.greennote:id/viewBody")).sendKeys(datamap.get(index).get("Content"));
+driver.findElement(By.id("vn.dat.greennote:id/itmCreateDone")).click();
+WebElement txt_thucte = driver.findElement(By.id("vn.dat.greennote:id/txtTitleView"));	Assert.assertEquals(txt_thucte.getText(), (datamap.get(index).get("Title")));
+                }
+    }d) RunTest
+package Step_Difinitions;
+import org.junit.runner.RunWith;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+@RunWith(Cucumber.class)
+@CucumberOptions(
+		features = "src//test//resources//Feature"
+		,glue={"Home","Step"},
+		plugin = {"pretty", "html:target/cucumber-html-report"},
+		tags = {}
+				)
+		public class Run_TestJunit {
+}e) TestReport
+package TestReport;
+import org.automationtesting.excelreport.Xl;
+public class Report {
+
+	public static void main(String[] args)throws Exception {
+		// TODO Auto-generated method stub
+		Xl.generateReport("report.xlsx");
+	}
+}f) Features
+Feature: Fill a simple form with excel data
+@web
+  Scenario Outline: Data driven with excel and data sets
+     When click button cong
+    And click creat text
+    Then I contact the customer service with excel row "<row_index>" dataset
+  Examples:
+    |row_index|
+    |2|
+    |3|
+    |4|
+    |5|    
+3.8.2 Kết quả test dạng HTML
+    
+    Hình 317: Biểu đồ trạng thái Test Report xuất dưới dạng HTML
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau thời gian nghiên cứu và phát triển, tác giả đã hoàn thành mục tiêu và yêu cầu đặt ra ban đầu.
+- Trình bày được khái niệm, giới hạn và các bước để tiến hành cài đặt Appium.
+- Trình bày được khái niệm về Cucumber và tồng quan về ngông ngữ Gherkin.
+- Xây dựng được đặc tả yêu cầu của ứng dụng “Green Note”.
+- Xây dựng được Test Design của ứng dụng “Green Note”.
+- Xây dựng được Test Case của ứng dụng “Green Note”.
+- Xây dựng được Test Script  của ứng dụng “Green Note” lấy dữ liệu từ excel, xuất báo cáo ra excel
+- Kết hợp được Appium và Cucumber để chạy kiểm thử tự động lấy dữ liệu từ excel và xuất báo cáo dạng HTML.
+4.2 Hạn chế của đề tài
+- Ứng dụng mới dừng lại ở việc tự động hóa kiểm thử cho ứng dụng “Green Note” cho 2 chức năng thêm và clear.
+- Số lượng test case còn hạn chế.
+- Chưa sử dụng nhiều công cụ hơn để hỗ trợ cho quá trình kiểm thử ứng dụng Android.
+- Chưa thực hiện được kiểm thử hiệu năng trên công cụ Appium.
+4.3 Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, tác giả đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+- Xây dựng được 1 tool kiểm thử tự động trên ứng dụng mobile.
+- Xây dựng một kịch bản kiểm thử tổng quát test cho mọi chức năng bất kỳ trên các ứng dụng mobile bất kỳ nào đó.
+- Áp dụng thêm được nhiều loại kiểm thử khác để kiểm thử: hiệu năng, bảo mật.
+
+TÀI LIỆU THAM KHẢO
+    
+[1] Bộ môn Công nghệ phần mềm, Kiểm thử phần mềm, Trường Đại học Sư phạm kỹ thuật Hưng Yên. [2] Bộ môn Công nghệ phần mềm, Lập trình Java, Trường Đại học Sư phạm kỹ thuật Hưng Yên. [3] Bộ môn Công nghệ phần mềm, Phân tích thiết kế phần mềm, Trường Đại học Sư phạm kỹ thuật Hưng Yên. [4] Bộ môn Công nghệ phần mềm, Phân tích thiết kế phần mềm, Trường Đại học Sư phạm kỹ thuật Hưng Yên. [5] LAKSHAY SHARMA , "Tool QA," 2013. [Online]. Available: http://toolsqa.com/selenium-webdriver/keyword-driven-framework/steps-set-framework/. [Accessed 10 02 2018].[6] Thủy Lê, “Làm quen với Appium thông qua ví dụ,” 11 12 2018. [Trực tuyến]. Available: https://blog.siliconstraits.vn/kiem-thu-tu-dong-voi-appium/. [Đã truy cập 12 01 2018].[7] Karthik kk, "Execute Automation," 12 12 2016. [Online]. Available: http://executeautomation.com/blog/. [Accessed 17 01 2018].[8] Verma, Nishant, "Automate your mobile app testing.," Packt Publishing, 2017. [9] Matt Wynne, "The Cucumber Book: BehaviourDriven Development for Testers," Originally published, 2012. [10] Nguyễn Thị Hải Yến, “Giới thiệu về Appium và hướng dẫn cài đặt Appium,” [Trực tuyến]. Available: https://viblo.asia/p/gioi-thieu-ve-appium-va-huong-dan-cai-dat-appium-phan-1-1Je5EYN15nL. [Đã truy cập 12 2 2018].[11] “Appium – Android,” 26 09 2015. [Trực tuyến]. Available: https://meoptn.wordpress.com/category/appium-android/. [Đã truy cập 11 01 2017].
+Kiểm thử ứng dụng mobile sử dụng công cụ Appium
+    
+85
+    
+    

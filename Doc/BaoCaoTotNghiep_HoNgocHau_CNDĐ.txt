@@ -1,0 +1,608 @@
+﻿CHƯƠNG I: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+       Công nghệ ngày càng phát triển, nhưng chiếc smart phone ngày càng chiềm lĩnh thị trường. Mọi công việc đều được thực hiện ngay trên chính điện thoại. Ngồi nhà lướt mạng tha hồ chọn mua cho mình những món đồ ưng ý và được giao hàng tới tận nhà. Những hình thức mua bán mới, điển hình là mua bán trực tiếp qua website hoặc qua app trên điện thoại di động. Hình thức này hỗ trợ đắc lực cho người kinh doanh tiếp xúc với nhiều khách hàng, còn đối với khách hàng thì công việc mua bán trở nên thuận tiện và dễ dàng hơn. Tiết kiệm và chủ động về thời gian, tránh khỏi những phiền phức khó chịu.
+    Vì vậy, để phù hợp với công việc và thuận tiện cho đồ án đề tài: “ Xây dựng ứng dụng bán hàng điện tử cho cửa hàng HnH Electronics Store trên mobile” làm đồ án tốt nghiệp.
+1.2 Mục tiêu của đồ án
+   - Tìm hiểu được API để xây dựng ứng dụng trên hệ thống.
+   - Nghiên cứu các công nghệ lập trình ứng dụng với Android.
+   - Nghiên cứu được website quản lý sử dụng công nghệ Framework Laravel.
+   - Ứng dụng được database với MySQL.
+   - Xây dựng và triển khai ứng dụng bán hàng điện tử cho cửa hàng HnH Electronics Store trên Mobile.
+   - Phát triển ứng dụng có tính thực tiễn cao, có khả năng triển khai ứng dụng vào thực tế, giúp nhu cầu của người dùng có thể thao tác dễ dàng và tiện lợi.
+1.3 Giới hạn và phạm vi của đồ án
+   - Xây dựng được ứng dụng bán hàng điện tử cho cửa hàng HnH Electronics Store trên Mobile.
+- Sử dụng ngôn ngữ Java( Android), PHP, API.
+- Ứng dụng chỉ bán các mặt hàng điện tử chứ không bán mặt hàng nào khác nữa.
+1.4 Nội dung thực hiện
+- Xây dựng API để xây dựng ứng dụng trên hệ thống
+- Xây dựng ứng dụng chạy trên điện thoại được phát triển trên nền Adroid SDK
+- Xây dựng phần mềm quản lý cho phép quản lý có thể thêm sửa xóa cập nhật mặt hàng, xử lý thông tin ứng dụng Android gửi về
+- Phát triển website quản lý bán hàng
+- Tìm hiểu mô hình MVVM trong Android
+- Tìm hiểu thư viện EventBus, Retrofit trong Android
+- Tìm hiểu kết nối giữa Android và WebSevice
+- Tìm hiểu bộ Android Development Tool
+- Tìm hiểu  bộ công cụ Visual Studio Code ( chủ yếu ngôn ngữ C#, PHP)
+- Tìm hiểu cách thức xây dựng ứng dụng bán hàng
+- Tìm hiểu hoạt động kinh doanh trong thực tế
+- Tìm hiểu cách thức xây dựng một ứng dụng trên Android
+    - Xây dựng phát triển và triển khai thành công ứng dụng bán hàng điện tử cho cửa hàng HnH Electronics Store trên  Mobile
+1.5 Phương pháp tiếp cận
+    Xây dựng hệ thống bao gồm ứng dụng chạy trên điện thoại và một phần mềm quản lý (nếu có ) để quản lý các thông tin cần rất nhiểu thời gian, tâm huyết và cả công sức.
+    Khảo sát lấy yêu cầu người sử dụng điện thoại về các ứng dụng mua bán trên mobile để xây dựng ý tưởng, khảo sát các trang web chuyên về kinh doanh.
+    Nghiên cứu công nghệ phát triển ứng dụng chạy trên hệ điều hành Android. Xây dựng phía client một app có thể cài đặt trên điện thoại chạy Android đáp ứng các yêu cầu cơ bản của hệ thống
+     Cách tiếp cận : Nghiên cứu công nghệ sử dụng để xây dựng ứng dụng 
+- Android SDK.
+- C#, PHP
+- Web Sevice
+- Java
+- MySQL
+- Framework Laravel
+     Sử dụng các phương pháp nghiên cứu:
+- Phương pháp đọc tài liệu.
+- Phương pháp phân tích mẫu.
+- Phương pháp thực nghiệm.
+- Nội dung thực hiện.
+- Phương pháp tiếp cận
+    Sử dụng, tập trung tìm hiểu các cơ sở lý thuyết liên quan, các công cụ hỗ trợ xây dựng ứng dụng như.
+- Lý thuyết về Android
+- Visual Studio Code
+- Cơ sở dữ liệu MySQL
+
+
+CHƯƠNG II : CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan Android
+2.1.1 Cơ sở lý thuyết về Android
+a) Lịch sử Android
+ Ban đầu, Android là hệ điều hành cho các thiết bị cầm tay dựa trên lõi Linux do công ty Android Inc.( California, Mỹ) thiết kế. Công ty này sau đó được Google mua lại vào năm 2005 và bắt đầu xây dựng Android Platform. Các thành viên chủ chốt ở Android Inc. gồm có: Andy Rubin, Rich Miner, Nick Sears and Chris White.
+      
+Hình 2-1:Android Timeline
+    Và sau tiếp, vào cuối năm 2007, thuộc về Liên minh Thiết bị Cầm tay Mã nguồn mở ( Open Handset Alliance ) gồm các thành viên nổi bật trong ngành viễn thông và thiết bị cầm tay như: Texas Instruments, Tập đoàn Broadcom, Google, HTC, Intel, LG, Tập đoàn Marvell Technology, Motorola, Nvidia, Qualcomm, Sammsung Electronics, Sprint Nextel và T-Mobile được thành lập với mục đích phát triển các tiêu chuẩn mở cho thiết bị di động.
+      Mục tiêu của Liên minh này là nhanh chóng đổi mới để đáp ứng tốt hơn cho nhu cầu người tiêu dùng và kết quả đầu tiên của nó chính là nền tảng Android. Android được thiết kế để phục vụ nhu cầu của các nhà sản xuất thiết bị, các nhà khai thác và các lập trình viên thiết bị cầm tay.
+      Phiên bản SDK lần đầu tiên phát hành vào tháng 11 năm 2007, hãng T-Mobile cũng công bố chiếc điện thoại Android đầu tiên là chiêc T-Mobile G1, chiếc smartphone đầu tiên dựa trên nền tảng Android. Một vài ngày sau đó, Google lại tiếp tục công bố sự ra mắt phiên bản Android SDK release Canidate 1.0. Trong đó tháng 10 năm 2008, Google được cấp giấy phép mã nguồn mở cho Android Platform.
+      Khi Android được phát hành thì một số các mục tiêu trong kiến thức của nó là cho phép các ứng dụng có thể tương tác được với nhau và có thể sử dụng lại các thành phần từ những ứng dụng khác. Việc tái sử dụng không chỉ được áp dụng cho các dịch vụ mà nó còn được áp dụng cho cả các thành phần dữ liệu và giao diện người dùng.
+      Vào cuối năm 2008, Google cho phát hành một thiết cầm tay được gọi là Android Dev Phone 1 có thể chạy được các ứng dụng Android mà không bị ràng buộc vào các nhà cung cấp mạng điện thoại di động. Mục tiêu của thiết bị này là cho phép các nhà phát triển  thực hiện các cuộc thí nghiệm trên một thiết bị thực có thể chạy điều hành Android mà không phải ký một bản hợp đồng nào . Vào khoảng cùng thời gian đó thì Google cũng cho phát hành một phiên bản vá lỗi 1.1 của hệ điều hành này. Ở cả hai phiên bản 1.0 và 1.1 Android chưa hỗ trợ soft-keyboard mà đòi hỏi các thiết bị phải sử dụng bàn phím vật lý. Android cố định vấn đề này bằng cách phát hành SDK 1.5 vào tháng 4 năm 2009, cùng với một số tính năng khác. Chẳng hạn như nâng cao khả năng ghi âm truyền thông, vật dụng và các live folder.
+b) 	Kiến trúc của Android
+    Mô hình sau thể hiện một cách tổng quát các thành phần của hệ điều hành Android. Mỗi một phần sẽ được đặc tả chi tiết dưới đây.
+
+Hình 2-2:Cấu trúc stack hệ thống Android
+c) Application Framework 
+    Bằng cách cung cấp một nền tảng phát triển mở, Android cung cấp cho các nhà phát triển khả năng xây dựng các ứng dụng cực kỳ phong phú và sáng tạo. Nhà phát triển được tự do tận dụng các thiết phần cứng, thông tin địa điểm truy cập, các dịch vụ chạy nền, thiết lập hệ thống báo động, thêm các thông báo để ác thanh trạng thái, và nhiều, nhiều hơn nữa.
+ 
+Hình 2-3: Application framework
+    Nhà phát triển có thể truy cập vào các API cùng một khuôn khổ được sử dụng bởi các ứng dụng lõi. Các kiến trúc ứng dụng được thiết kế để đơn giản hóa việc sử dụng lại các thành phần, bất kỳ ứng dụng có thể xuất khả năng của mình và ứng dụng nào khác sau đó có thể sử dụng những khả năng( có thể hạn chế bảo mật được thực thi bởi khuôn khổ ). Cơ chế này cho phép các thành phần tương tự sẽ được thay thế bởi người sử dụng.
+    Cơ bản tất cả các ứng dụng là một bộ các dịch vụ và hệ thống, bao gồm:
+- Một tập hợp rất nhiều các View có khả năng kế thừa lẫn nhau dùng để thiết kế phần giao diện ứng dụng như: gridview, tableView, linearlayout,…
+- Một “Content Provider” cho phép các ứng dụng có thể truy xuất dữ liệu từ các ứng dụng khác (chẳng hạn như Contacts) hoặc là chia sẻ dữ liệu giữa các ứng dụng đó.
+- Một “Resource Manager” cung cấp truy xuất tới các tài nguyên không phải là mã nguồn, chẳng hạn như: localized strings, graphics and layout files.
+- Một “Notifycation Manager” cho phép tất cả các ứng dụng hiển thị các custom alerts trong status bar.
+    Cung cấp một nền tảng phát triển ứng dụng mở qua đó cho phép nhà triển ứng dụng có khả năng tạo ra các ứng dụng của riêng họ gồm các package chính:
+- Activity Manager: Quản lý vòng đời của ứng dụng
+- Window Manager: Quản lý form các ứng dụng
+- Package Manager: Cài đặt hoặc xóa các ứng dụng
+- Content Manager: Chia sẻ tin nhắn, dữ liệu và thông tin
+- ViewSystem: Hiện thị giao diện người dùng, ListView, TextView, Button, …
+- Notification Manager: Hiển thị và thông báo Arlaming như Receiving call, message, battery, chaning signal network status
+- Telephone Manager: Voice và Call, MMS/SMS, SIM/USIM
+- Location Manager: Cung cấp vị trí thông tin
+- Resource Manager: Lưu trữ đồ họa hoặc tập tin tài nguyên của ứng dụng
+d) Library
+     Android bao gồm một tập hợp các thư viện C/C++ được sử dụng bởi nhiều thành phần khác nhau trong hệ thống Android. Điều này được thể hiện thông qua nền tảng ứng dụng Android. Một số các thư viện cơ bản được liệt kê như sau:
+- System C library
+- Media libraries
+- Suface manager
+- LibWebCore
+- SGL
+- 3D libraries
+- FreeType
+- SQLite
+- Event Bus
+- Retrofit
+e) Android Emulator
+    Android SDK và Plugin Eclipse được gọi là một  Android Deverloper Tool (ADT). Các Android coder sẽ cần phải sử dụng công cụ IDE ( Integrated Development Enveronment) này để phát triển, debugging và testing cho ứng dụng. Tuy nhiên, các coder cũng có thể không cần phải sử dụng IDE mà thay vào đó là sử dụng Command line để biên dịch và tất nhiên là vẫn có Emulator như thường.
+    Android Emulator được trang bị đầy đủ hết các tính năng của một thiết bị thật. Tuy nhiên, một số đã bị giới hạn như là kết nối qua cổng USB, camera và video, nghe phone, nguồn điện giả lập và bluetooth.
+    Android Emulator thực hiện các công việc thông qua một bộ xử lý mã nguồn mở, công nghệ này được gọi là QEMU (http://bellard.org/qemu) được phát triển bởi Fabrice Bellard
+2.1.2  Mô hình Model-View-ViewModel (MVVM)
+a) Model View ViewModel (MVVM) là gì
+    MVVM là một cách tiếp cận architecural sử dụng để tóm tắt các trạng thái và hành vi của một view, trong đó cho phép chúng tách biệt sự phát triển của giao diện người dùng từ logic kinh doanh. Điều này được thực hiện bằng việc giới thiệu một ViewModel, có trách nhiệm là để lộ các đối tượng dữ liệu của một model và xử lý bất kỳ của logic ứng dụng liên quan đến màn hình hiển thị của một View
+    
+Hình 2-4: Mô hình MVVM
+         - Model: Trong MVVM thì model sẽ thể hiện cho dữ liệu + trạng thái + các logic của đối tượng. Nó không có ràng buộc với View hoặc Contronller vì có thể được sử dụng lại dễ dàng.
+         - View: Liên kết các biến quan sát và hành động bởi ViewModel. Quan hệ giữa ViewModel và View là 1-n, nghĩa là nhiều View có thể liên kết với 1 ViewModel
+        - ViewModel: Chứa các model và chuẩn bị các dữ liệu quan sát cho View. Nó cung cấp các móc để truyền dữ liệu từ View sang Model. Lưu ý: ViewModel sẽ không ràng buộc vào View
+         - Data Binding: La điều không bắt buộc trong MVVM, một số implement chỉ đơn giản làm ViewModel như một lớp trung gian giữa model-View, lớp này giữ nhiệm vụ format data hoặc mapping trạng thái của View
+b) Cách thức hoạt động của MVVM
+       Ở mô hình MVVM, ViewModel là nơi thực hiện hầu hết tất cả các business logic, quản lý methods, properties khác để duy trì viewstate. Điều này đồng nghĩa với việc View trở thành một ánh xạ hiển thị trạng thái của ViewModel tại mọi thời điểm.
+     Lưu ý, trong MVVM, các tầng bên dưới sẽ không biết được thông tin, dữ liệu của tầng bên trên. Điều này giúp đem đến sự tách biệt rõ ràng giữa giao diện người dùng và ứng dụng logic.
+c) Ưu nhược điểm của MVVM là gì ?
+- Ưu điểm :
+• Người dùng có thể thực hiện unit testing dễ dàng do không phải phụ thuộc vào View
+- Nhược điểm: 
+• Khả năng duy trì thấp
+• Khi gán biến và biểu thức vào View, các logic rải rác sẽ tăng dẫn theo thời gian, khiến việc kiểm soát và thêm code dần trở nên khó khăn hơn
+2.2 Tổng quan về Framework Laravel
+2.2.1. Khái niệm MySQL 
+    MySQL là chương trình dùng để quản lý hệ thống cơ sở dữ liệu (CSDL), trong đó CSDL là một hệ thống lưu trữ thông tin. được sắp xếp rõ ràng, phân lớp ngăn nắp những thông tin mà mình lưu trữ.
+    Vì thế, bạn có thể truy cập dữ liệu một cách thuận lợi, nhanh chóng. MySQL hỗ trợ đa số các ngôn như lập trình. Chính vì thế mà mã nguồn mở phổ biến nhất hiện nay là WordPress đã sử dụng MySQL làm cơ sở dữ liệu mặc định.
+2.2.2. Lý do chọn và sử dụng MySQL
+a) Khả năng mở rộng tính linh hoạt
+     Máy chủ cơ sở dữ liệu MySQL đáp ứng nhiều tính năng linh hoạt, nó có sức chứa để xử lý các ứng dụng được nhúng sâu với 1MB dung lượng để chạy kho dữ liệu khổng lồ lên đến hàng terabytes thông tin. Đặc tính đáng chú ý của MySQL là sự linh hoạt về flatform với tất cả các phiên bản của Windows, Unix và Linux đang được hỗ trợ. Và đương nhiên, tính chất mã nguồn mở của MySQL cho phép tùy biến theo ý muốn để thêm các yêu cầu phù hợp cho database server.
+b) Hiệu năng cao
+      Với kiến trúc storage-engine cho phép các chuyên gia cơ sở dữ liệu cấu hình máy chủ cơ sở dữ liệu MySQL đặc trưng cho các ứng dụng chuyên biệt. Dù ứng dụng là website dung lượng lớn phục vụ hàng triệu người/ngày hay hệ thống xử lý giao dịch tốc độ cao thì MySQL đều đáp ứng được khả năng xử lý khắt khe của mọi hệ thống. Với những tiện ích tải tốc độ cao, cơ chế xử lý nâng cao khác và đặc biệt bộ nhớ caches, MySQL đưa ra tất cả nhưng tính năng cần có cho hệ thống doanh nghiệp khó tính hiện nay.
+c) Tình sẵn sàng cao
+     MySQL đảm bảo sự tin cậy và có thể sử dụng ngay. MySQL đưa ra nhiều tùy chọn có thể “mì ăn liền” ngay từ cấu hình tái tạo chủ/tớ tốc độ cao, để các nhà phân phối thứ 3 có thể đưa ra những điều hướng có thể dùng ngay duy nhất cho server cơ sở dữ liệu MySQL.
+d) Hỗ trợ giao dịch mạnh mẽ
+     MySQL đưa ra một trong số những engine giao dịch cơ sở dữ liệu tốt nhất trên thị trường. Các đặc trưng bao gôm, khóa mức dòng không hạn chế, hỗ trợ giao dịch ACID hoàn thiện, khả năng giao dịch được phân loại và hỗ trợ giao dịch đa dạng (multi-version) mà người đọc không bao giờ cản trở cho người viết và ngược lại. Dữ liệu được đảm bảo trong suốt quá trình server có hiệu lực, các mức giao dịch độc lập được chuyên môn hóa, khi phát hiện có lỗi khóa chết ngay tức thì.
+e)  Điểm mạnh của Web và Data Warehouse
+    Theo công ty thiết kế website Mona Media thì MySQL là nơi cho các website trao đổi thường xuyên bởi nó có engine xử lý tốc độ cao, khả năng chèn dữ liệu cực nhanh và hỗ trợ mạnh các chức năng chuyên dụng của web. Các tính năng này cũng được sử dụng cho môi trường lưu trữ dữ liệu mà MySQL tăng cường đến hàng terabyte cho các server đơn. Những tính năng khác như chỉ số băm, bảng nhớ chính, bảng lưu trữ và cây B đã được gói lại để giảm các yêu cầu lưu trữ tới 80%. Vì thế, MySQL là sự chọn lựa tốt nhất cho cả ứng dụng web và các ứng dụng của doanh nghiệp.
+f) Bảo vệ dữ liệu mạnh mẽ
+    Việc quan trong của các doanh nghiệp là bảo mật dữ liệu, MySQL tích hợp các tính năng bảo mật an toàn tuyệt đối. Với việc xác nhận truy cập cơ sở dữ liệu, MySQL trang bị các kỹ thuật mạnh, chỉ có người sử dụng đã được xác nhận mới truy cập được vào cơ sở dữ liệu. SSH và SSL cũng được hỗ trợ để đảm bảo kết nối an toàn và bảo mật. Tiện ích backup và recovery cung cấp bởi MySQL và các hãng phần mềm thứ 3 cho phép backup logic và vật lý cũng như recovery toàn bộ hoặc tại một thời điểm.
+g) Phát triển ứng dụng toàn diện
+    MySQL trở thành cơ sở dữ liệu mã nguồn mở phổ biến nhất hiện nay một phần là do cung cấp hỗ trợ hỗn hợp cho bất cứ sự phát triển ứng dụng nào cần. Trong cơ sở dữ liệu, hỗ trợ có thể được tìm thấy trong các trigger, stored procedure, cursor, view, ANSI-standard SQL,… MySQL cũng cung cấp các bộ kết nối như: JDBC, ODBC,… để tất cả các form của ứng dụng sử dụng MySQL như một erver quản lí dữ liệu được đề xuất hàng đầu.
+h) Quản lý dễ dàng
+    Cài đặt MySQL khá nhanh và trung binh từ khi download phần mềm tới khi cài đặt thành công chỉ mất chưa đầy 15 phút. Cho dù flatform là Linux, Microsoft Windows, Macintosh hoặc Unix thì quá trình cũng diễn ra nhanh chóng. Khi đã cài đặt, tính năng quản lý như tự khởi động lại, tự động mở rộng không gian và cấu hình động sẵn sàng cho người quản trị cơ sở dữ liệu bắt đầu làm việc. MySQL cung cấp toàn bộ công cụ quản lý đồ họa cho phép một DBA quản lý, sửa chữa và điều khiển hoạt động của nhiều server MySQL từ một máy trạm đơn.
+i) Mã nguồn mở tự do và hỗ trợ 24/7
+    Nhiều doanh nghiệp còn băn khoăn trong việc giao toàn bộ cho phần mềm mã nguồn mở bởi khó có thể tìm được hỗ trợ hay bảo mật an toàn phục vụ chuyên nghiệp. Với MySQL mọi sự cam kết đều rõ ràng, MySQL cam kết bồi thường khi gặp sự cố
+j) Chi phí sở hữu thấp 
+    Sử dụng MySQL cho các dự án, doanh nghiệp đều nhận thấy sự tiết kiệm chi phí đáng kể. Người dùng MySQL cũng không mất nhiều thời gian để sữa chữa hoặc vấn đề thời gian chết.
+2.3 Tổng quan về API
+2.3.1 Khái niệm API
+
+Hình 2-5:API
+      API (Application Programming Interface), phương thức kết nối với các thư viện và ứng dụng khác, giúp ích trong việc xây dựng các HTTP service một cách rất đơn giản và nhanh chóng. 
+      Trong API, thường sử dụng giao thức để Client và server giao tiếp với nhau. Trong đó giao thức chính là HTTP. Và API được xây dựng trên chính 2 thành phần: Request và Reponse.
+Một request thường sử dụng 4 phương thức chính đó là:
+• GET để truy vấn object
+• POST để tạo object mới
+• PUT để sửa đổi hoặc thay thế một object
+• DELETE để loại bỏ một object.
+2.3.2   Rest – Restful API trong thiết kế website
+   Web API là công nghệ mới nhất, tân tiến và đột phá nhất hiện nay. Nó vẫn tuân thủ các tiêu chuẩn của một API phổ biến, kèm theo là những ưu điểm mới vượt trội hơn công nghệ cũ.
+
+Hình 2-6:Mô hình giao tiếp giữa ứng dụng
+         - Rest – Restful API
+     •  REST được viết tắt bởi Representational State Transfer, là cấu trúc mẫu quy định các ứng dụng giao tiếp và tương tác với nhau. Nó bao gồm 3 bộ phận cơ bản như: bộ máy chủ ngoài chứa dữ liệu (external server), máy chủ API và máy chủ khách (client). Trong đó, máy khách có thể là bất cứ thứ gì, ứng dụng trên nền web, thư viện hoặc thậm chí là các phần mềm khác nhau của một phần mềm máy tính.
+     • REST cho phép các máy khách truy cập máy chủ API và thực hiện các lệnh lấy về, chỉnh sửa hay xóa dữ liệu từ external server. Các lập trình viên có thể thoải mái truy xuất, chỉnh sửa dữ liệu từ máy chủ mà không cần biết hệ thống hoạt động như thế nào. Phát triển phần mềm theo phương pháp Agile và giảm việc thực hiện kiểm thử hồi quy bằng tay
+     • Ngoài ra, REST cũng có ưu điểm khi sử dụng giao thức stateless (không trạng thái). Hệ thống này không sử dụng session, cookie, không cần biết những thông tin đó trong mỗi lần request đến máy chủ ngoài. Điều này giúp REST giảm tải cho máy chủ ngoài, nâng cao hiệu suất làm việc.
+     • Giao thức chính của REST sử dụng là HTTP, một giao thức phổ biến với hầu hết các ứng dụng hay dịch vụ web hiện nay. Nó đem tới hiệu quả nhanh chóng trong bối cảnh đường truyền mạnh mẽ và khiến cho REST kiến trúc tốc độ nhanh hơn.
+     • REST ban đầu được thiết kế để sử dụng cho các dịch vụ web. Tuy nhiên, bất cứ phần mềm nào cũng có thể ứng dụng REST làm cầu nối giao tiếp với các ứng dụng khác tốt và hiệu quả hơn. Đó cũng là lý do giúp cho REST trở thành tiêu chuẩn mặc định cho hầu hết các giao thức. Và những API được thiết kế theo cấu trúc REST được gọi là RESTful API.
+     - Lệnh CRUD cơ bản
+    • CRUB bao gồm: Create, Read, Update, Delete. Đây là 4 chức năng cơ bản của bất kỳ cơ sở dữ liệu nào. REST và RESTful cũng không ngoại lệ. Cá kiến trúc này đều hỗ trợ đầy đủ 4 lệnh, giúp bạn có thể thao tác với dữ liệu lấy từ máy chủ dễ dàng hơn.
+       - Khái niệm về authentication và authorization
+       • Authentication là một hành động nhằm thiết lập hoặc chứng thực một cái gì đó (hoặc một người nào đó) đáng tin cậy, có nghĩa là, những lời khai báo do người đó đưa ra hoặc về vật đó là sự thật.
+       • Authorization là việc cấp quyền cho người dùng trong một hệ thống sau khi người dùng đã xác thực (authentication).
+    Bảng 2-1:So sánh Authentication và Authorization
+STTAuthenticationAuthorination 1Authentication xác nhận danh tính của bạn để cấp quyền truy cập vào hệ thống.Authorization xác định xem bạn có được phép truy cập tài nguyên không. 2Đây là quá trình xác nhận thông tin đăng nhập để có quyền truy cập của người dùng.Đó là quá trình xác minh xem có cho phép truy cập hay không. 3Nó quyết định liệu người dùng có phải là những gì anh ta tuyên bố hay không.Nó xác định những gì người dùng có thể và không thể truy cập. 4Authentication thường yêu cầu tên người dùng và mật khẩu.Các yếu tố xác thực cần thiết để authorization có thể khác nhau, tùy thuộc vào mức độ bảo mật. 5Authentication là bước đầu tiên của authorization vì vậy luôn luôn đến trước.Authorization được thực hiện sau khi authentication thành công.
+Hình 2-7: Quy trình hoạt động
+
+
+2.4        Mô hình thiết kế Web Sevice, MySQL và ứng dụng Android
+2.4.1 Khái niệm về Web Service
+       WebService là một dịch vụ cung cấp cơ chế triệu gọi các đối tượng từ xa thông qua giao thức HTTP cùng với cơ chế truyền tải định dạng đối tượng theo công nghệ XML.
+       Chính vì sử dụng giao thức HTTP của Web nên giờ đây các lời gọi trở nên đơn giản và thông qua được các rào cản về tường lửa. Để đảm bảo điều này, một giao thức mới SOAP (Simple Object Access Protocol) ra đời để hỗ trợ cho WebServices. SOAP được định nghĩa dựa trên giao thức chuẩn HTTP, SOAP cho phép dữ liệu chuyển đi bằng HTTP và định dạng theo chuẩn XML. Các lời gọi hàm tham số truyền hàm, dữ liệu tar về từ hàm, tất cả đều được chuyển sang dạng XML và có thể dễ dàng xử lý bởi tất cả các ngôn ngữ. Một thế mạnh khác đó nếu các đối tượng phân tán xây dựng trên mô hình Web Services sẽ có thể triệu gọi lẫn nhau, bất chấp đối tượng đó được viết trên ngôn ngữ Java của Sun hay .NET của Microsoft. Hiện tại, SOAP được coi là một sự thay đổi lớn kể từ khi COM, RMI, CORBA ra đời.
+       
+Hình 2-8: Sơ đồ giao tiếp với các ứng dụng thông qua Web service
+2.4.2 Giới thiệu về Laravel-Laragon 
+   Laravel là một framework mạnh mẽ, giúp cho việc viết code trở nên "thú vị" hơn cũng như ít code hơn. Nhưng đối với các bạn mới bắt đầu tìm hiểu về Laravel từ nền tảng PHP cơ bản hay từ các framework khác chuyển qua thì việc cài đặt Laravel là cả 1 vấn đề. Bao gồm 1 webserver PHP cơ bản (từ PHP 5.4.0 thì PHP có built-in webserver tích hợp nên bước này có thể bỏ qua), Composer, Mcrypt, thiết lập Virtual host,...
+   Thông thường trên các hệ điều hành *NIX (Linux, MacOS). Bạn có thể dễ dàng cài đặt chúng qua Laragon ra đời nhằm mục đích khắc phục điều đó. Và theo video trên trang chủ thì bạn chỉ mất 1 phút để cài đặt xong Laragon.
+2.4.3 Download và cài đặt Laragon
+   	Là một công cụ mã nguồn mở, laragon có thể download dễ dàng. Dưới đây là các bước để cài đặt: 
+Bước 1: Truy cập https://laragon.org/download/index.html và chọn hệ điều hành Mac, Windows or Linux. Bấm Download.
+
+Hình 2-9: Download Laragon
+Bước 2: Thông báo quá trình download của bạn hiển thị trên trang ứng dụng. Khi download đã hoàn thành, bấm vào Run.
+
+Hình 2-10:Cài đặt chạy file setup
+Bước 3: Bắt đầu cài đặt
+
+Hình 2-11: Giao diện chọn nơi lưu trữ
+
+Hình 2-12:Giao diện chon khởi động, tự dộng thiết lập host ảo
+Bước 4: Trong của sổ tiếp theo, hỗ trợ tạo dự án Laravel
+
+Hình 2-13:Giao diện hỗ trợ tạo dự án
+Bước 5: Tạo host tự động tạo ra tên miền ảo
+
+Hình 2-14: Giao diện tên miền ảo
+
+Bước 6: Bạn sẽ nhìn thấy màn hình khởi động
+
+Hình 2-15: Giao diện cài đặt thành công
+
+
+
+Bước 7: Mở trình duyệt và chạy thử 
+
+Hình 2-16: Mở trình duyệt truy cập địa chỉ thành công
+2.4.4 Thao tác với Retrofit và Ok Http trong Android
+a) Retrofit trong Android
+       Retrofit là một type-safe HTTP client cho Android và Java. Retrofit giúp dễ dàng kết nối tới một dịch vụ REST ở trên web bằng cách dịch API thành các Interface của Java. cú pháp thành Plain Old Java Objects (POJOs). 
+       Các request GET, POST, PUT, PATCH, DELETE đều có thể được thực thi. Ngoài ra Retrofit không tích hợp sẵn bộ chuyển đổi JSON -> Java, thay vào đó ta có thể sử dụng các thư viện sau:
+- Gson: com.squareup.retrofit:converter-gson
+- Jackson: com.squareup.retrofit:converter-jackson
+- Moshi: com.squareup.retrofit:converter-moshi
+- Vs Protocol buffers, Retrofit hỗ trợ
+- Protobuf: com.squareup.retrofit2:converter-protobuf
+- Wire: com.squareup.retrofit2:converter-wire
+- Và đối với XML, Retrofit hỗ trợ:
+- Simple Framework: com.squareup.retrofit2:converter-simpleframework
+b) OkHttp trong Android
+         Một trong những việc rất nhàn chán khi phát triển ứng dụng trên nền tảng Android đó là xử lý kết nối mạng, bắt lỗi và exception, kiểm soát kích thước file download và thời gian download file đó...
+        Tuy nhiên có một thư viện giúp chúng ta giải quyết các vấn đề đó một cách nhanh gọn, đó là OkHttp.
+        OkHttp sẽ giúp :
+- Kiểm soát kết nối tới server
+- Kiểm soát các kết nối không tốt và thử kết nối lại khi có thể
+- Nó sẽ thử thay thế server IP address nếu kết nối tới một IP nào đó bị thất bại vào IP thay thế được chuẩn bị sẵn
+- Giảm độ trễ của request, giảm size của file cần download
+- Tránh lặp lại các request đã được hoàn thành
+
+Hình 2-17:Quan hệ ứng dụng Android với dữ liệu
+
+
+Hình 2-18:Làm việc với service trong Android
+CHƯƠNG  3: NỘI DUNG THỰC HIỆN
+    Mục đích của tài liệu này để xác định và nêu rõ các chức năng và các yêu cầu khác về ứng dụng bán hàng điện tử , bao gồm giới thiệu tổng quát về hệ thống, yêu cầu, tính ứng dụng và hiệu suất. Tài liệu này được dùng cho đội dự án để phát triển sản phẩm.
+3.1 Khảo sát thông tin ứng dụng
+    Thương mại điện tử (TMĐT) đang được nhiều quốc gia quan tâm,coi là một trong những động lực phát triển chủ yếu của nền kinh tế. TMĐT đem lại những lợi ích tiềm năng, giúp doanh nghiệp thu được thông tin phong phú về thị trường và đối tác, giảm chi phí và giao dịch, tạo dựng và củng cố quan hệ bạn hàng.
+    Việc mua hàng online (trực tuyến) chỉ với thủ tục đăng ký mua sắm đơn giản nhưng đem lại nhiều lợi ích: tiết kiệm và chủ động về thời gian, tránh khỏi những phiền phức khó chịu.
+    Chính vì những lợi ích mà TMĐT đem lại thì việc khảo sát thông tin người dùng cũng như mô hình hoạt động của ứng dụng là hết sức cần thiết và được thực hiện một cách nghiêm túc.
+       -  Phục vụ tốt hơn so với yêu cầu từ khách hàng và quản lý của ứng dụng trong hoạt động kinh doanh
+       - Đáp ứng nhu cầu : tiện lợi, đơn giản, đảm bảo, chất lượng, chính xác
+    Cách thức hoạt động mua bán hiện nay ở các website/app mua bán trực tuyến trong và ngoài nước
+       - Các website/app trong nước:
+•  Website/app mua sắm Shoppe https://shopee.vn/
+• Website/app mua sắm Lazada https://www.lazada.vn/
+• Website/app mua sắm Tiki https://tiki.vn/
+• Website/app mua sắm Nguyễn Kim https://www.nguyenkim.com/
+• Website mua sắm Điện máy xanhhttps://www.dienmayxanh.com/
+• Website mua sắm Sendo https://www.sendo.vn/
+• Các website/app nước ngoài: 
+• Website/app mua sắm Amazon https://www.amazon.com/
+• Website/app mua sắm Ebay https://www.ebay.com/
+3.2 Giới thiệu chức năng ứng dụng
+    Ứng dụng bán hàng điện tử cho cửa hàng là ứng dụng cung cấp các chức năng hỗ trợ người dùng có thể lựa chọn, tìm kiếm, theo dõi sản phẩm yêu thích, cập nhật các vochuer,…từ đó dành nhiều tiện ích, tiết kiệm thời gian hơn cho việc khác.
+    Các chức năng chính của ứng dụng
+Bảng 3-2 :Chức năng ứng dụng
+STTChức năngMô Tả1Chức năng đăng nhậpChức năng này cho phép người dùng đăng nhập và sử dụng các chức năng của ứng dụng2Chức năng đăng ký Chức năng này cho phép người dùng đăng ký,tạo tài khoản và sử dụng các chức năng của hệ thống3Chức năng xem  sản phẩmChức năng cho phép người dùng chỉ xem danh sách các sản phẩm liên quan đến loại sản phẩm4Chức năng tìm kiếmChức năng cho phép người dùng tìm kiếm theo tên sản phẩm hay theo loại sản phẩm5Chức năng đặt hàngChức năng cho phép người dùng đặt hàng6Chức năng phản hồi, đánh giá, vote saoChức năng cho phép người dùng đánh giá, phản hồi, vote sao cho sản phẩm7Chức năng quản lý sản phẩm đã xemChức năng cho phép người dùng xem được danh sách những sản phẩm đã xem 8Chức năng quản lý sản phẩm đã đánh giáChức năng cho phép người dùng xem được danh sách những sản phẩm đã đánh giá9Chức năng update thông tin tài khoảnChức năng cho phép người dùng cập nhập lại thông tin cá nhân10Thông tin các APICác API dùng trong đồ án3.2.1 Chức năng đăng nhập 
+- Mô tả yêu cầu
+Bảng 3- 3: Mô tả yêu cầu chức năng đăng nhập
+MụcNội dungMục đích:Người dùng có chức năng đăng nhập vào  ứng dụngMô tả:Chức năng giúp người dùng có thể đăng nhập và sử dụng chức năng của ứng dụngTác nhân:Người dùngĐiều kiện trước:Đã có tài khoảnLuồng sự kiện chính - Đăng nhập vào hệ thốngLuồng sự kiện phụ- Kiểm tra tài khoảnĐiều kiện sau:Đăng nhập thành công- Thông tin quản lý
+Bảng 3- 4:Thông tin chức năng đăng nhập
+STTThông tinMô tảĐiều kiện logic1 UsernameTên tài khoảnKiểm tra đúng/sai tên tài khoản2 PasswordMật khẩuKiểm tra đúng/sai mật khẩu ứng với tài khoản
+- Sản phẩm đầu ra
++ Đăng nhập ứng dụng thành công
++ Thông tin tài khoản
++ Chức năng của hệ thống
+- Phác họa giao diện
+
+Hình 3-19: Màn hình đăng nhập ứng dụng
+
+3.2.2 Chức năng đăng ký
+- Mô tả yêu cầu
+Bảng 3- 5:Mô tả yêu cầu chức năng đăng ký
+MụcNội dungMục đích:Người dùng có chức năng đăng ký vào  ứng dụngMô tả:Chức năng giúp người dùng có thể đăng ký và sử dụng chức năng của ứng dụngTác nhân:Người dùngĐiều kiện trước:Chưa có tài khoảnLuồng sự kiện chính Tạo mới một tài khoảnLuồng sự kiện phụKiểm tra trùng email Điều kiện sau:Đăng ký thành công- Thông tin quản lý
+Bảng 3-6: Thông tin chức năng đăng ký
+STTThông tinMô tảĐiều kiện logic1UsernameTên tài khoản Kiểm tra đúng/sai tên tài khoản2PasswordMật khẩuKiểm tra đúng/sai mật khẩu ứng với tài khoản- Sản phẩm đầu ra
+- + Đăng nhập ứng dụng thành công
+- + Thông tin tài khoản
+- + Chức năng của hệ thống
+- Phác họa giao diện
+
+Hình 3-20: Giao diện chức năng đăng ký
+
+3.2.3 Chức năng xem sản phẩm
+- Mô tả yêu cầu:
+Bảng 3- 7: Mô tả yêu cầu chức năng xem sản phẩm
+MụcNội dungMục đích:Người dùng xem các thông tin sản phẩmMô tả:Chức năng cho phép xem  các thông tin của sản phẩm Tác nhân:Người dùngĐiều kiện trước:Đã có danh sách các sản phẩmLuồng sự kiện chính Xem chi tiết các thông tin sản phẩmLuồng sự kiện phụĐiều kiện sau:Chọn mua sản phẩm - Thông tin quản lý
+Bảng 3- 8: Thông tin quản lý sản phẩm
+STTThông tinMô tảĐiều kiện logic1ID sản phẩmMã sản phẩmAuto2ID loại sản phẩmMã loại sản phẩm3Tên sản phẩmTên sản phẩm4Mô tả sản phẩmMô tả sản phẩm5Giá sản phẩmGiá sản phẩm6Hình ảnh sản phẩmHình ảnh sản phẩm7Đánh giá sản phẩmĐánh giá sản phẩm- Sản phẩm đầu ra
++ Quản lý được toàn bộ danh sách sản phẩm
++ Phân loại sản phẩm theo mã loại sản phẩm
+- Phác họa giao diện
+Mục đích: Để xem và chọn mua sản phẩm
+
+Hình 3-21: Giao diện chức năng xem sản phẩm
+3.2.4 Chức năng tìm kiếm
+- Mô tả yêu cầu:
+Bảng 3-9: Mô tả chức năng tìm kiếm
+MụcNội dungMục đích:Người dùng tìm kiếm sản phẩm theo tên, theo loại sản phẩm Mô tả:Chức năng cho phép tìm kiếm sản phẩm Tác nhân:Người dùngĐiều kiện trước:Đã có danh sách các sản phẩmLuồng sự kiện chính - Duyệt, yêu cầu xử lý lại, xử lý yêu cầu
+Luồng sự kiện phụĐiều kiện sau:- Thông tin quản lý
+- Sản phẩm đầu ra
++ Tìm kiếm sản phẩm theo tên
++ Tìm kiếm sản phẩm sản phẩm theo loại sản phẩm
+- Phác họa giao diện:
+Mục đích: Tìm kiếm sản phẩm theo nhu cầu
+
+Hình 3-22: Giao diện chức năng tìm kiếm
+3.2.5 Chức năng đặt hàng
+- Mô tả yêu cầu
+    Bảng 3-10: Mô tả yêu cầu chức năng đặt hàng
+MụcNội dungMục đích:Người dùng đặt chọn mua những sản phẩm ưng ýMô tả:Cho phép người dùng mua các sản phẩmTác nhân:Người dùngĐiều kiện trước:Đã có danh sách sản phẩmLuồng sự kiện chính Xem chi tiết các đơn hàngLuồng sự kiện phụĐiều kiện sau:- Thông tin quản lý
+    Bảng 3-11: Thông tin chức năng đặt hàng
+STTThông tinMô tảĐiều kiện logic1IDMãAuto2ID UserMã người dùng 3Status Trạng thái4TotalpriceTổng giá trị5ID Hóa đơnMã hóa đơn6ID sản phẩmMã sản phẩm7Số lượngSố lượng sản phẩm8GiáGiá sản phẩm9Tên sản phẩmTên sản phẩm10Hình ảnhHình ảnh sản phẩm11Mô tảMô tả sản phẩm- Sản phẩm đầu ra:
++ Quản lý được danh sách hóa đơn
++ Xem chi tiết hóa đơn
++ Xem trạng thái đơn hàng
+- Phác họa giao diện
+Mục đích: Để xem danh sách công việc, chi tiết đơn hàng và trạng thái đơn hàng
+
+Hình 3-23: Chức năng đặt hàng
+3.2.6 Chức năng phản hồi, đánh giá, vote sao
+- Mô tả yêu cầu
+Bảng 3-12: Mô tả yêu cầu chức năng đánh giá
+MụcNội dungMục đích:Người dùng xem sản phẩm, đánh giá về sản phẩmMô tả:Chức năng cho phép xem, đánh giáTác nhân:Người dùngĐiều kiện trước:Đã có danh sách các sản phẩmLuồng sự kiện chính Xem chi tiết các sản phẩm đánh giá, phản hồiLuồng sự kiện phụ- Thông tin quản lý
+Bảng 3-13: Thông tin chức năng đánh giá
+STTThông tinMô tảĐiều kiện logic1IDMã công việcAuto2ID sản phẩmMã sản phẩm1 ID UserMã người dùng2 ContentNội dung phản hồi3 FeedDateNgày đánh giá4 RateĐánh giá sản phẩm bằng vote sao- Sản phẩm đầu ra:
++ Xem được danh sách sản phẩm đánh giá
++ Đánh giá sản phẩm
+- Phác họa giao diện
+Mục đích: Để đánh giá sản phẩm
+
+    Hình 3-24: Giao diện chức năng đánh giá
+3.2.7 Chức năng quản lý sản phẩm đã xem
+- Mô tả yêu cầu
+
+
+Bảng 3-14: Mô tả chức năng quản lý sản phẩm đã xem
+MụcNội dungMục đích:Người dùng xem sản phẩmMô tả:Chức năng cho phép xemTác nhân:Người dùngĐiều kiện trước:Đã có danh sách các sản phẩmLuồng sự kiện chính Xem chi tiết các sản phẩm Luồng sự kiện phụ- Thông tin quản lý
+Bảng 3-15: Thông tin chức năng quản lý sản phẩm đã xem
+STTThông tinMô tảĐiều kiện logic1IDMã công việcAuto2ID sản phẩmMã sản phẩm5 ID UserMã người dùng6 ContentNội dung phản hồi7 FeedDateNgày đánh giá8 RateĐánh giá sản phẩm bằng vote sao- Sản phẩm đầu ra:
++ Xem được danh sách sản phẩm đánh giá
++ Đánh giá sản phẩm
+- Phác họa giao diện
+Mục đích: Để đánh giá sản phẩm
+
+Hình 3-25: Giao diện chức năng quản lý sản phẩm đã xem
+3.2.8 Chức năng quản lý sản phẩm đã đánh giá
+- Mô tả yêu cầu
+    Bảng 3-16: Mô tả chức năng quản lý sản phẩm đã đánh giá
+MụcNội dungMục đích:Người dùng xem sản phẩm đã đánh giá đã cho ý kiến Mô tả:Chức năng cho phép xem sản phẩm đã đánh giáTác nhân:Người dùngĐiều kiện trước:Đã có danh sách các sản phẩm đã đánh giáLuồng sự kiện chính Xem chi tiết các sản phẩm đánh giá, phản hồiLuồng sự kiện phụ- Thông tin quản lý
+Bảng 3-17: Thông tin chức năng quản lý sản phẩm đã đánh giá
+STTThông tinMô tảĐiều kiện logic1IDMã công việcAuto2ID sản phẩmMã sản phẩm9 ID UserMã người dùng10 ContentNội dung phản hồi11 FeedDateNgày đánh giá12 RateĐánh giá sản phẩm bằng vote sao- Sản phẩm đầu ra:
++ Xem được danh sách sản phẩm đánh giá
++ Đánh giá sản phẩm
+- Phác họa giao diện
+Mục đích: Để đánh giá sản phẩm
+    
+Hình 3-26: Giao diện chức năng quản lý sản phẩm đã đánh giá
+3.2.9 Chức năng update thông tin tài khoản
+- Mô tả yêu cầu
+    Bảng 3-18: Mô tả chức năng update thông tin tài khoản
+MụcNội dungMục đích:Người dùng xem, sửa thông tin cá nhânMô tả:Chức năng thêm, sửa, xóa thông tinTác nhân:Người dùngĐiều kiện trước:Đã có tài khoản đăng ký Luồng sự kiện chính Luồng sự kiện phụ- Thông tin quản lý
+    Bảng 3-19: Thông tin chức năng update thông tin tài khoản
+STTThông tinMô tảĐiều kiện logic1IDMã Auto2AccountTên đăng nhập13 EmailEmail người dùng14 AddressĐịa chỉ15 PhoneSố điện thoại- Sản phẩm đầu ra:
++ Xem được thông tin cá nhân
++ Sửa, xóa thông tin muốn thay đổi
+- Phác họa giao diện
+Mục đích: Để thay đổi update thông tin cá nhân
+    
+Hình 3-27: Giao diện chức năng cập nhâp thông tin
+3.2.10 Các API của ứng dụng
+    Các API chính của ứng dụng: 
+Bảng  3-20: Bộ API của ứng dụng bán hàng
+STTChức năngAPIPhương thức1Thông báohttp://192.168.2.91/huhu/public/api/putnotifiPOST2Userhttp://192.168.2.91/huhu/public/api/registernomalPOST3Sản phẩmhttp://192.168.2.91/huhu/public/api/LoadmoreWithproductTypePOST4Loại sản phẩmhttp://192.168.2.91/huhu/public/api/getfeedbackWithIdUserPOST5Chi tiết sản phẩmhttp://192.168.2.91/huhu/public/api/getAllLoaiSpPOST6Chi tiết hóa đơnhttp://192.168.2.91/huhu/public/api/hoadonPOST7Loginhttp://192.168.2.91/huhu/public/api/CheckUserPOST8Feedbackhttp://192.168.2.91/huhu/public/api/getfeedbackPOST3.3 Thiết kế cơ sở dữ liệu 
+       Ứng dụng bán hàng điện tử cho cửa hàng là ứng dụng được thiết kế cơ sở dữ liệu  từ đó xây dựng nên các chức năng hỗ trợ người dùng có thể lựa chọn, tìm kiếm, theo dõi sản phẩm yêu thích, cập nhật các vochuer,…từ đó dành nhiều tiện ích, tiết kiệm thời gian hơn cho việc khác.
+
+    Hình 3- 28: Cơ sở dữ liệu
+3.3.1 Bảng loại sản phẩm
+Bảng 3-21: Thông tin bảng loại sản phẩm
+STTThông tinMô tảKiểu dữ liệuĐiều kiện logic1IDMã loại sản phẩmIntAuto2NameTên loại sản phẩmVarchar (255)3ImageHình ảnh loại sản phẩmVarchar(255)3.3.2 Bảng sản phẩm
+Bảng 3-22: Thông tin bảng sản phẩm
+STTThông tinMô tảKiểu dữ liệuĐiều kiện logic1IDMã sản phẩmIntAuto2ID Product Type Mã loại sản phẩmInt3NameTên loại sản phẩmVarchar(255)4DescribeNội dung sản phẩmLongText5PriceGiá sản phẩmInt6ImageHình ảnh sản phẩmVarchar(500)7RateĐánh giá sản phẩmFloat
+3.3.3 Bảng user
+Bảng 3-23: Thông tin bảng user
+STTThông tinMô tảKiểu dữ liệuĐiều kiện logic1IDMã IntAuto2Account Tài khoảnVarchar(255)3PasswordMật khẩuVarchar(255)4EmailEmailVarchar(255)5AddressĐịa chỉVarchar(255)6PhoneSố điện thoạiVarchar(500)7NameTên đăng nhậpVarchar(255)8Fb NameTên FacebookVarchar(255)9Link FbLink FacebookVarchar(255)10Image FbẢnh FacebookVarchar(255)3.3.4 Bảng hóa đơn
+Bảng 3-24: Thông tin bảng hóa đơn
+STTThông tinMô tảKiểu dữ liệuĐiều kiện logic1IDMã IntAuto2IDuser Mã Tài khoảnInt3StatusTrạng tháiVarchar(255)4TotalpriceTổng giá tiềnInt5BookingtimeNgày đặt hàngDate
+3.3.5 Bảng chi tiết hóa đơn
+Bảng 3-25: Thông tin bảng chi tiết hóa đơn
+STTThông tinMô tảKiểu dữ liệuĐiều kiện logic1IDMã IntAuto2ID hóa đơnTài khoảnVarchar(255)3ID sản phẩmMật khẩuVarchar(255)4Số lượngEmailVarchar(255)5GiáĐịa chỉVarchar(255)6Tên sản phẩmSố điện thoạiVarchar(500)7Hình ảnhTên đăng nhậpVarchar(255)8Mô tảTên FacebookVarchar(255)
+3.3.6 Bảng Feedback_products
+Bảng 3-26: Thông tin bảng Feedback_products
+STTThông tinMô tảKiểu dữ liệuĐiều kiện logic1IDMã IntAuto2ID productMã sản phẩmInt3ID userMã người dùngInt4ContentNội dungVarchar(255)5FeedDateNgày đánh giáDate6RateĐánh giá saoFloat
+3.4 Thiết kế Cấu trúc Java, PHP
+3.4.1 Cấu trúc Java trong Android Studio
+Bước1. Thiết lập môi trường
+- Cài đặt Java
+
+Hình 3-29: Cài đặt Java
+- Cài đặt Android Studio
+
+    Hình 3-30: DownLoad Android Studio
+
+
+Hình 3-31:Cài đặt thành công
+Bước2. Tạo ứng dụng 
+
+Hình 3-32: Tạo ứng dụng, đặt tên ứng dụng
+
+    Hình 3-33:Chọn nền tảng phát triển
+
+Hình 3-34:Tạo mới đưa Activity vào ứng dụng
+
+Hình 3-35:Giao diện ban đầu
+
+Hình 3-36:Giao diện Java
+
+3.4.2 Cấu trúc PHP trong Visual Studio Code
+Bước1. Thiết lập môi trường
+
+Hình 3-37:Downloads Visual Studio
+
+Hình 3-38:Tạo Project
+Bước2. Tạo ứng dụng
+
+Hình 3-39:Chon và cài đặt môi trường php
+
+Hình 3-40: Cấu hình PHP
+
+Hình 3-41: Định nghĩa Function
+
+Hình 3-42:HTTP trong Visual Studio Code
+3.5 Thiết kế biều đồ Use-Case
+3.5.1 Biểu đồ Use-case phân giã phía người dùng
+a) Biểu đồ Use-case tổng quát
+
+    Hình 3-43:Biểu đồ Use-case tổng quát người dùng
+
+b) Biều đồ Use-case DangKy
+
+Hình 3-44: Biểu đồ Use-case DangKy
+• Tóm tắt
+- Người sử dụng :  người dùng mới..
+- Chức năng :
+o Đăng ký tài khoản.
+o Nhập thông tin.
+o Thông báo.
+- Ý nghĩa : đăng ký tài khoản cho người chưa có tài khoản đăng nhập vào ứng dụng
+• Dòng sự kiện
+- Dòng sự kiện chính
+o Nhấn đăng ký tài khoản
+- Các dòng sự kiện khác
+Không có.
+- Trạng thái hệ thống khi bắt đầu
+o Hiển thị giao diện đăng ký
+o Cho phép người dùng nhập thông tin.
+- Trạng thái thực hiện khi kết thúc 
+o Hiển thị thông báo nếu các trường thuộc tính trống.
+o Hiển thông báo đăng ký thành công hoặc đăng ký không thành công.
+
+c)  Biều đồ Use-case TimKiem
+
+Hình 3-45:Biều đồ Use-case TimKiem
+• Tóm tắt
+- Người sử dụng : người dùng
+- Chức năng :
+o Tìm kiếm theo tên sản phẩm
+o Tìm kiếm theo loại sản phẩm.
+- Ý nghĩa : người dùng tìm kiếm theo tên hoặc loại sản phẩm
+• Dòng sự kiện chính
+- Dòng sự kiện chính
+o Sự kiện nhấn vào tìm kiếm
+- Các dòng sự kiện khác
+o Không có.
+- Trạng thái hệ thống sau khi bắt đầu
+          o Hiển thị tìm kiếm, cho người dùng nhập.
+- Trạng thái hệ thống sau khi kết thúc
+          o Hiển thị sản phẩm tìm kiếm được.
+d) ) Biều đồ Use-case DangNhap
+
+Hình 3-46:Biểu đồ Use-case DangNhap
+• Tóm tắt
+o Người sử dụng : người dùng
+o Chức năng :
+o Đăng nhập.
+o Kiểm tra thông tin
+o Nhập dữ liệu
+o Thông báo.
+o Ý nghĩa :
+• Các dòng sự kiện
+- Dòng sự kiện chính
+o Sự kiện nhấn đăng nhập
+- Các dòng sự kiện
+Không có.
+- Trạng thái hệ thống khi bắt đầu Use-case
+o Thông báo lỗi cho người dùng.
+- Trạng thái hệ thống khi kết thúc Use-case
+o Hiển thị thông báo lỗi.
+o Hiển thị thông tin đăng nhập thành công và chuyển màn hình.
+e) ) Biểu đồ Use-case ThongTinSanPham
+
+Hình 3-47:Biểu đồ Use-case ThongTinSanPham
+- Người sử dụng : người dùng
+- Chức năng :
+o Hiển thị thông tin sản phẩm
+o Hiện thị đánh giá sản phẩm
+o Chọn mua sản phẩm
+o Đánh giá về sản phẩm
+- Ý nghĩa : Quản lý tất cả thông tin của người dùng.
+• Dòng sự kiện
+- Dòng sự kiện chính
+o Sự kiện nhấn vào sản phẩm
+- Các dòng sự kiện khác
+- Trạng thái hệ thống sau khi bắt đầu Use-case
+o Hiển thị giao diện thông tin sản phẩm 
+o Hiển thị các danh mục tài khoản : đánh giá về sản phẩm,…
+- Trạng thái hệ thống sau khi kết thúc Use-case
+o Hiển thị đầy đủ tất cả thông tin.
+3.5.2 Biểu đồ Use-case phân giã phía quản trị
+a) Biểu đồ Use-case tổng quát
+
+    Hình 3-48:Biểu đồ Use-case tổng quát
+
+b) Biều đồ Use-case QuanLyNguoiDung
+
+    Hình 3-49:Biểu đồ Use-case phân rã Quản lý người dùng
+• Tóm tắt
+- Người sử dụng :  người quản trị
+- Chức năng :
+o Hiện thị thông tin người dùng
+- Ý nghĩa : quản lý người dùng
+• Dòng sự kiện
+- Dòng sự kiện chính
+o Sự kiên nhấn vào người dùng, thiết lập trạng thái
+- Các dòng sự kiện khác
+o Hiển thị thông tin.
+c) Biều đồ Use-case QuanLySanPham
+
+Hình 3-50:Biều đồ Use-case QuanLySanPham
+• Tóm tắt
+- Người sử dụng :  người quản trị
+- Chức năng :
+o Hiện thị thông tin sản phẩm
+o Thêm sản phẩm
+o Xóa sản phẩm
+- Ý nghĩa : quản lý sản phẩm
+• Dòng sự kiện
+- Dòng sự kiện chính
+o Sự kiên nhấn vào sản phẩm
+- Các dòng sự kiện khác
+o Hiển thị thông tin, thêm, sửa , xóa
+3.5.3 Biểu đồ Use-case lớp (mứcphân tích)
+
+Hình 3-51:Biểu đồ Use-case lớp phân tích
+
+
+3.5.4 Biểu đồ Use-case lớp tuần tự
+a) Use-case tuần tự DangKy
+
+Hình 3-52:Biểu đồ tuần tự DangKy
+b) Use-case tuần tự DangNhap
+
+Hình 3-53:Biều đồ tuần tự DangNhap
+c) Use-case tuần tự TimKiem
+
+Hình 3-54:Biểu đồ tuần tự TimKiem
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+   	Qua quá trình tìm hiểu nghiên cứu thực hiện đồ án “Xây dựng ứng dụng bán hàng điện tử cho cửa hàng HnH Electronics Store trên Mobile” , tôi đã đạt được những kết quả và có hướng nghiên cứu như sau:
+   - Xây dựng được ứng dụng bán hàng điện tử cho cửa hàng HnH Electronics Store trên Mobile.
+   - Xây dựng thiết kế ứng dụng kết nối cơ sở dữ liệu với service và cách tổ chức dữ liệu.
+   - Áp dụng các dịch vụ trên Internet đặc biệt là dịch vụ bán hàng online.
+   - Hoàn thành các chức năng yêu cầu đề ra: đặt hàng, mua hàng, tìm kiếm, thanh toán sản phẩm, quản lý thông tin,…
+   - Đáp ứng đúng các tiêu chí, yêu cầu của khách hàng.
+   - Ứng dụng dễ sử dụng phù hợp với người dùng
+   Nghiên cứu, hệ thống lại các kiến thức được dùng trong xây dựng ứng dụng trên Android. Tìm hiểu công cụ API Postman. Tìm hiểu, viết API kết hợp với web service trong android. Tính thực tiễn, nhu cầu của người dùng áp dụng vào xây dựng ứng dụng thực tế.
+4.2 Hạn chế của đề tài
+- Giao diện còn hạn chế
+- Các chức năng vẫn chưa được phù hợp với người dùng.
+- Tính thống nhất chưa cao
+- Chưa thêm dược hình thức hỗ trợ thanh toán và giao hàng dành cho người dùng
+- Chưa có nhiều module tiện ích cho người dùng: báo cáo, thăm dò khảo sát ý kiến, chia sẻ,..
+- Chức năng đăng ký, đăng nhập cần chuyên nghiệp hơn và tích hợp MXH.
+4.3 Hướng phát triển của đề tài
+Trong thời gian nghiên cứu và thực hiện đề tài, tôi đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+- Xây dựng phát triển đưa sản phẩm ra cộng đồng
+- Bổ sung các Module hỗ trợ cho các website giới thiệu sản phẩm và thương mại điện tử.
+- Xây dựng thêm các chức năng: báo cáo, phương thức thanh toán, giao hàng, quét mã Qr code.
+- Liên kết với website nhằm mở rộng thị trường kinh doanh.
+- Xây dựng Website
+- Nghiên cứu và triển khai đề tài theo hướng xây dựng ứng dụng phù hợp nhất với người dùng.
+                         
+TÀI LIỆU THAM KHẢO
+[1].Bộ môn Công nghệ phần mềm, Công nghệ di động, trường Đại học Sư phạm Kỹ thuật Hưng Yên, 2016[2].Bộ môn Công nghệ phần mềm, Lập trình hướng đối tượng với Java, trường Đại học Sư phạm Kỹ thuật Hưng Yên, 2016[3].Bộ môn Công nghệ phần mềm, Lập trình Android cơ bản, trường Đại học Sư phạm Kỹ thuật Hưng Yên, 2016[4].Bộ môn Công nghệ phần mềm, Lập trình đa phương tiện trên Android, trường Đại học Sư phạm Kỹ thuật Hưng Yên, 2016[5].Bộ môn Công nghệ phần mềm, Phân tích thiết kế phần mềm, trường Đại học Sư phạm Kỹ thuật Hưng Yên, 2016[6].Bộ môn Công nghệ phần mềm, Lập trình đa phương tiện trên Android, trường Đại học Sư phạm Kỹ thuật Hưng Yên, 2016 [7]https://laragon.org/download/index.html[8]https://laravel.com/docs/7.x/installation[9].https://stackoverflow.com/[10].https://www.postman.com/
+
+
+9
+
+

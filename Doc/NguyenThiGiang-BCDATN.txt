@@ -1,0 +1,510 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Ngày nay cùng với sự phát triển của xã hội, đời sống của chúng ta cũng ngày càng được nâng cao hơn. Nhu cầu của con người cũng được tăng cao, vấn đề giải trí và tìm hiểu thông tin cũng rất được quan tâm, đặc biệt là đối với giới trẻ bây giờ. Đối với thế hệ tuổi thanh niên, thiếu niên thì việc đọc truyện tranh, đọc sách báo không chỉ giúp thư giãn sau những giờ học mà còn giúp trau dồi nhiều kĩ năng bổ ích trong cuộc sống.
+    Công nghệ thông tin ngày càng bùng nổ mạnh mẽ những năm gần đây thúc đẩy sự phát triển của xã hội và dần trở thành một phần không thể thiếu trong cuộc sống của chúng ta, từ đó nhu cầu của con người đều được thúc đẩy nhờ ứng dụng của công nghệ thông tin, chúng giải quyết mọi việc nhanh gọn mà không tốn nhiều thời gian, công sức. Mọi người chỉ cần tranh thủ giờ nghỉ ở trường học, cơ quan hay tranh thủ thời gian nghỉ ngơi bên gia đình đã có thể đặt mua cho bản thân hoặc người thân của mình những cuốn truyện tranh, sách báo bổ ích. Chính vì lí do đó mà em đã lựa chọn đề tài: “Xây dựng website giới thiệu và bán truyện tranh” nhằm đáp ứng nhu cầu thực tế này. Hệ thống sẽ cung cấp cho người dùng những cuốn truyện tranh, sách báo phù hợp với nhu cầu của từng người và từng lứa tuổi.
+1.2 Mục tiêu của đề tài
+    Đây là một website nhằm giới thiệu và bán những cuốn truyện tranh đến người tiêu dùng với chi tiết, chất lượng và bổ ích nhất.
+➢ Khách hàng :
+- Tìm kiếm và lựa chọn những cuốn truyện tranh cần mua : Khách hàng khi truy cập trang web thường tìm kiếm sản phẩm họ cần và muốn mua. Nhưng đôi khi cũng có nhiều khách hàng vào website này mà không có ý định muốn mua hay không biết mua gì thì yêu cầu đặt ra cho hệ thống là làm thế nào để khách hàng thấy sự tiện lợi, chất lượng của các sản phẩm đồng thời có thể tìm kiếm nhanh và hiệu quả những thứ cần tìm.
+- Đặt mua hàng : Sau khi khách hàng lựa chọn xong những cuốn truyện cần mua thì đơn đặt hàng sẽ được hiển thị để khách hàng nhập vào những thông tin cần thiết, tránh những đòi hỏi hay những thông tin yêu cầu quá nhiều từ phía khách hàng, tạo cảm giác thoải mái, riêng tư cho khách hàng.
+- Theo dõi đơn hàng của mình.
+- Gửi ý kiến đóng góp
+➢ Người quản lý :
+-  Là người có quyền đăng nhập, quản lý và làm chủ mọi hoạt động của hệ thống trang web. Người quản lý có một username và một password để truy cập vào hệ thống nhằm thực hiện các chức năng sau :
+- Quản lý các bộ truyện tranh một cách dễ dàng.
+- Thêm, xóa, sửa thông tin các cuốn truyện tranh vào cơ sở dữ liệu
+- Kiểm tra và xử lý những cuốn truyện tranh đã được mua
+- Thống kê số lượng
+1.3 Giới hạn và phạm vi của đề tài
+    Đề tài xây dựng một hệ thống thông tin với mục đích giới thiệu và bán trực tuyến qua điện thoại, qua website, dịch vụ hỗ trợ khách hàng.
+    Trong phần này từng bộ phận được tổ chức lại, xây dựng một hệ thống lưu trữ cơ sở dữ liệu phù hợp với nhu cầu, hỗ trợ các công việc mua bán truyện tranh qua mạng nhằm mở rộng phạm vi tìm kiếm thông tin của người dùng và tăng doanh thu của website.
+1.4 Nội dung thực hiện
+    Bài toán đòi hỏi hệ thống phải có các khả năng kỹ thuật :
+- Thực hiện được đầy đủ các chức năng cần thiết
+- Tương thích với hầu hết các trình duyệt
+- Dễ dàng nâng cấp sửa đổi
+- Thân thiện, tối ưu với các máy tìm kiếm
+- Tốc độ cao, sử dụng ít tài nguyên và băng thông
+- Độ bảo mật, an toàn tương đối khả năng chạy được trên môi trường Internet.
+Một số yêu cầu khác :
+- Giao diện hệ thống thân thiện, dễ sử dụng.
+- Dễ dàng triển khai và cài đặt.
+1.5 Phương pháp tiếp cận
+- Cách tiếp cận : Nghiên cứu các Web Framework trên nền tảng công nghệ .NET
+- Sử dụng các phương pháp nghiên cứu:
+o Phương pháp đọc tài liệu;
+o Phương pháp phân tích mẫu;
+o Phương pháp thực nghiệm.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về ASP.NET
+2.1.1 Giới thiệu về ASP.NET
+    Đầu năm 2002, Microsoft giới thiệu một kỹ thuật lập trình Web khá mới mẻ với tên gọi ban đầu là ASP+, tên chính thức sau này là ASP.Net. Với ASP.Net, không những không cần đòi hỏi bạn phải biết các tag HTML, thiết kế web, mà nó còn hỗ trợ mạnh lập trình hướng đối tượng trong quá trình xây dựng và phát triển ứng dụng Web.ASP.Net là kỹ thuật lập trình và phát triển ứng dụng web ở phía Server (Server-side) dựa trên nền tảng của Microsoft .Net Framework.
+    Hầu hết, những người mới đến với lập trình web đều bắt đầu tìm hiểu những kỹ thuật ở phía Client (Client-side) như: HTML, Java Script, CSS (Cascading Style Sheets). Khi Web browser yêu cầu một trang web (trang web sử dụng kỹ thuật client-side), Web server tìm trang web mà Client yêu cầu, sau đó gởi về cho Client. Client nhận kết quả trả về từ Server và hiển thị lên màn hình.
+    ASP.Net sử dụng kỹ thuật lập trình ở phía server thì hoàn toàn khác, mã lệnh ở phía server (ví dụ: mã lệnh trong trang ASP) sẽ được biên dịch và thi hành tại Web Server. Sau khi được Server đọc, biên dịch và thi hành, kết quả tự động được chuyển sang HTML/JavaScript/CSS và trả về cho Client. Tất cả các xử lý lệnh ASP.Net đều được thực hiện tại Server và do đó, gọi là kỹ thuật lập trình ở phía server. 
+2.1.2 Tìm hiểu về mô hình lập trình Web MVC trong ASP.NET
+    Mẫu kiến trúc Model – View – Controller được sử dụng nhằm chi ứng dụng thành ba thành phần chính: model, view và controller. Nền tảng ASP.NET MVC giúp cho chúng ta có thể tạo được các ứng dụng web áp dụng mô hình MVC thay vì tạo ứng dụng theo mẫu ASP.NET Web Forms. Nền tảng ASP.NET MVC có đặc điểm nổi bật là nhẹ, dễ kiểm thử phần giao diện (so với ứng dụng Web Forms), tích hợp các tính năng có sẵn của ASP.NET. Nền tảng ASP.NET MVC được định nghĩa trong namespace System.Web.Mvc và là một phần của name space System.Web.
+    MVC là một mẫu thiết kế (design pattern) chuẩn mà nhiều lập trình viên đã quen thuộc. Một số loại ứng dụng web sẽ thích hợp với kiến trúc MVC. Một số khác vẫn thích hợp với ASP.NET Web Forms và cơ chế postbacks. Đôi khi có những ứng dụng kết hợp cả hai kiến trúc trên.
+    Nền tảng MVC bao gồm các thành phần dưới đây:
+    Models: Các đối tượng Models là một phần của ứng dụng, các đối tượng này thiết lập logic của phần dữ liệu của ứng dụng. Thông thường, các đối tượng model lấy và lưu trạng thái của model trong CSDL. 
+    Views: Views là các thành phần dùng để hiển thị giao diện người dùng (UI). Thông thường, view được tạo dựa vào thông tin dữ liệu model. 
+    Controllers: Controller là các thành phần dùng để quản lý tương tác người dùng, làm việc với model và chọn view để hiển thị giao diện người dùng. Trong một ứng dụng MVC, view chỉ được dùng để hiển thị thông tin, controller chịu trách nhiệm quản lý và đáp trả nội dung người dùng nhập và tương tác với người dùng. 
+    Sự phân tách rạch ròi ba thành phần của ứng dụng MVC còn giúp cho việc lập trình diễn ra song song. Ví dụ như một lập trình viên làm việc với view, lập trình viên thứ hai lo cài đặt logic của controller và lập trình viên thứ ba có thể tập trung vào logic tác vụ của model tại cùng một thời điểm.
+    Một ứng dụng web được phát triển theo mô hình MVC, có nguyên lý hoạt động xử lý yêu cầu của người dùng như sau :
+- Khi có yêu cầu phát sinh từ người dùng (phía Client), yêu cầu này sẽ được gửi đến phía Server, tại đây Controller sẽ tiếp nhận yêu cầu để xử lý.
+- Bên trong Controller chứa nhiều phương thức (action), mỗi action tương ứng với một yêu cầu cụ thể từ phía người dùng.Controller sẽ lựa chọn action phù hợp với yêu cầu để xử lý. Trong quá trình xử lý, Controller sẽ tương tác với Model để có được dữ liệu mà người dùng mong muốn.
+- Sau khi Controller làm việc với Model để có được dữ liệu theo yêu cầu, Controller sẽ gửi về cho View thành phần Data Model và nhiệm vụ của View là chuyển Data Model nhận được thành dữ liệu ứng dụng và gửi trả về phía Client để hiển thị kết quả yêu cầu.
+2.2 Ưu khuyết điểm của ASP.NET
+2.2.1 Ưu điểm
+    ASP.NET được xây dựng với bộ thư viện đa dạng và phong phú của .Net Framewrork, hỗ trợ vượt trội về XML và khả năng truy cập cơ sở dữ liệu qua ADO.net. Bên cạnh đó, ASP và ASPX có thể hoạt động trong cùng một ứng dụng mang lại hiệu năng cao cho website. Có thể nhận thấy ASP.NET mang một phong cách hoàn toàn mới, bạn có thể tách giao diện và code thành 2 phần khác biệt. Điều này giúp cho cho việc quản lý và bảo trì trở nên rõ ràng và đơn giản hơn.
+    Thiết kế web bằng ASP.NET giúp cho hệ điều hành hoạt động trơn tru cũng như tăng tốc độ tải cho trang web của bạn. Với kiến trúc tương tự như các ứng dụng trên Windows, việc sử dụng cũng trở nên dễ dang hơn rất nhiều. Bên cạnh đó ASP.NET có khả năng tự động tạo ra mã HTML cho các Server để website có thể hoạt động trên hầu hết các trình duyệt được khách hàng sử dụng. Đặc biệt, ASP.NET là một ngôn ngữ mất phí nên bạn có thể hoàn toàn yên tâm về vấn đề bảo mật của nó. Với những ưu điểm vượt trội như vậy, ASP.NET luôn được rất nhiều nhà thiết kế web chuyên nghiệp ưa chuộng và sử dụng. Tuy nhiên, nó vẫn còn một số nhược điểm cần khắc phục mà bạn cần chú ý khi xây dựng web doanh nghiệp.
+2.2.2 Nhược điểm
+    Đối với dự án nhỏ, việc áp dụng mô hình MVC gây cồng kềnh, tốn thời gian trong quá trình phát triển
+    Tốn thời gian trung chuyển dữ liệu của các thành phần.
+2.3 Mô hình 3 lớp (3-Layers)
+2.3.1 Giới thiệu về mô hình 3 lớp
+    Mô hình 3 lớp hay còn được gọi là mô hình Three Layer(3-Layer), mô hình này ra đời nhằm phân chia các thành phần trong hệ thống, các thành phần cùng chức năng sẽ được nhóm lại với nhau và phân chia công việc cho từng nhóm để dữ liệu không bị chồng chéo và chạy lộn xộn.
+    Mô hình này phát huy hiệu quả nhất khi muốn xây dựng một hệ thống lớn, việc quản lý code và xử lý dữ liệu lỗi sẽ dễ dàng hơn.
+2.3.2 Các thành phần chính 
+    Mô hình 3 lớp gồm 3 thành phần chính: 
+- Presentation Layer (GUI): lớp này có nhiệm vụ giao tiếp với người dùng. Nó gồm các thành phần giao diện (Win Form, Web Form…) và thực hiện các công việc như nhập liệu, hiển thị dữ liệu, kiểm tra tính đúng đắn của dữ liệu trước khi gọi đến lớp Business Logic Layer để xử lý dữ liệu.
+- Business Logic Layer (BLL): lớp này được phân thành 2 nhiệm vụ chính
+• Là nơi đáp ứng các yêu cầu thao tác dữ liệu của Presentation layer, xử lý nguồn dữ liệu từ Presentation layer trước khi truyền xuống Data Access Layer và lưu vào CSDL.
+• Là nơi kiểm tra các ràng buộc, tính toàn vẹn và hợp lệ dữ liệu, thực hiện tính toán và xử lý các yêu cầu nghiệp vụ trước khi trả kết quả về Presentation layer.
+- Data Access Layer (DAL): lớp này có chức năng giao tiếp với hệ quản trị CSDL như thực hiện các công việc liên quan đến lưu trữ và truy vấn dữ liệu (tìm kiếm, thêm, sửa, xóa…).
+2.3.3 Ưu điểm 
+- Việc phân chia thành từng lớp giúp cho code được tường minh hơn. Nhờ vào việc chia ra từng lớp đảm nhận các chức năng khác nhau và riêng biệt như giao diện, xử lý, truy vấn thay vì để tất cả lại một chỗ. Nhằm giảm sự kết dính.
+- Dễ bảo trì khi được phân chia, thì một thành phần của hệ thống sẽ dễ thay đổi. Việc thay đổi này có thể được cô lập trong 1 lớp, hoặc ảnh hưởng đến lớp gần nhất mà không ảnh hưởng đến cả chương trình.
+- Dễ phát triển, tái sử dụng: khi chúng ta muốn thêm một chức năng nào đó thì việc lập trình theo một mô hình sẽ dễ dàng hơn vì chúng ta đã có chuẩn để tuân theo. Và việc sử dụng lại  khi có sự thay đổi giữa hai môi trường ( Win Form sang Web Form ) thì chỉ việc thay đổi lại lớp GUI.
+- Dễ bàn giao. Nếu mọi người đều theo một quy chuẩn đã được định sẵn, thì công việc bàn giao, tương tác với nhau sẽ dễ dàng hơn và tiết kiệm được nhiều thời gian.
+- Dễ phân phối khối lượng công việc. Mỗi một nhóm, một bộ phận sẽ nhận một nhiệm vụ trong mô hình 3 lớp. Việc phân chia rõ ràng như thế sẽ giúp các lập trình viên kiểm soát được khối lượng công việc của mình.
+2.4 HTML và CSS
+2.4.1 HTML
+    HTML (Hyper Text Markup Languages – tiếng Anh) hay còn gọi là “Ngôn ngữ đánh dấu siêu văn bản” nó được sử dụng để tạo nên các trang web thông qua các thẻ đánh dấu. Do vậy HTML không phải là một ngôn ngữ lập trình mà nó chỉ là ngôn ngữ đánh dấu. Phần mở rộng của tập tin HTML thường là .html hoặc .htm. Các trình duyệt sẽ đọc tập tin HTML và hiển thị chúng dưới dạng trang web. Các thẻ HTML sẽ được ẩn đi, chỉ hiển thị nội dung văn bản và các đối tượng khác: hình ảnh, media.  Với các trình duyệt khác nhau đều hiển thị một tập HTML với 1 kết quả nhất định. Các trang HTML được gửi đi qua mạng internet theo giao thức HTTP.
+    HTML không những cho phép nhúng thêm các đối tượng hình ảnh, âm thanh mà còn cho phép nhúng các kịch bản vào trong đó như các ngôn ngữ kịch bản như JavaScript để tạo hiệu ứng động cho trang web. Để trình bày trang web hiệu quả hơn thì HTML cho phép sử dụng kết hợp với CSS. HTML chính thức là chuẩn của W3C từ tháng 1 năm 97 với phiên bản HTML 3.2.trước đó thì HTML xuất bản theo chuẩn của RFC.  
+    HTML được tương thích vỡi mọi hệ điều hành cùng các trình duyệt của nó. Khả năng dễ học, dễ viết là một ưu điểm của HTML. Không những vậy việc soạn thảo đòi hỏi hết sức đơn giản và thông thường sử dụng notepad là đã đủ. HTML vẫn tiếp tục được phát triển, phiên bản hiện tại là HTML 5 – một phiên bản nâng cấp của XHTML. HTML cải tiến khá nhiều đặc biệt hỗ trợ mạnh mẽ các phần tử multimedia mà không cần các plugin. HTML5 nói chung mãnh mẽ hơn nhiều không chỉ về tốc độ và độ thích ứng cao mà chính là khả năng hỗ trợ API (Application Programming Interface - giao diện lập trình ứng dụng) và DOM (Document Object Model – mô hình đối tượng tài liệu hay cây cấu trúc dữ liệu).
+    HTML5
+    HTML4 đã làm việc rất tốt, nhưng nó rõ ràng là có một số nhược điểm. Nhóm phát triển HTML5 chắc chắn đã có một phương án cao hơn cho bước tiếp theo của HTML, điều đó có nghĩa là HTML5 phải được xây dựng dựa trên các nguyên tắc sau đây:
+- Ít phụ thuộc vào các plugin cho các chức năng.
+- Scripting nên được thay thế bằng markup bất cứ khi nào có thể.
+- Độc lập thiết bị (ví dụ, có sẵn trên tất cả các thiết bị và cung cấp các trải nghiệm giống nhau đối với người dùng).
+- Công bố quá trình phát triển để mọi người đều có thể nhìn thấy những gì đang diễn ra.
+    Cụ thể hơn, HTML5 đã bổ sung thêm rất nhiều các thẻ đánh dấu (markup) mới:
+- Các thẻ <header> và <footer> giúp bạn tách các phần trên và dưới của các block nội dung. Để có thể sử dụng nhiều lần trên một trang duy nhất. 
+- Thẻ <article> giúp xác định một phần cụ thể về nội dung, ví dụ, một bài blog hoặc một bình luận của độc giả.
+- Thẻ <nav> để xác định những phần nào được coi là khối điều hướng.
+- Thẻ <section> cho phép bạn xác định một phần nội dung nào đó; tương tự như các thẻ <div> hiện nay.
+- Các thẻ <audio> và <video> để đánh dấu những nội dung bao gồm âm thanh hoặc video.
+- Thẻ <canvas> cho phép bạn vẽ đồ họa sử dụng một ngôn ngữ kịch bản riêng biệt.
+- Thẻ <embed> dùng để nhúng các nội dung hoặc các ứng dụng bên ngoài vào trang web.
+    HTML5 cũng bỏ đi một số thẻ: <acronym>, <applet>, <font>, <frame>, <frameset>, <noframes>, và một số thẻ khác.
+    Các tiêu chuẩn đặc tả kỹ thuật đầy đủ cho HTML5 đã được lên kế hoạch hoàn thành từ năm 2014, nhưng HTML5 đã có nhiều tiến bộ đã và nó có thể được sử dụng để thực hiện các tính năng cho đến hiện nay. Các tiêu chuẩn đặc tả kỹ thuật đầy đủ cho HTML5.1 được hoàn thành vào năm 2016.
+2.4.2 CSS
+    CSS -  Cascading Style Sheet dùng để trình bày các tài liệu viết bằng HTML hoặc XHTML. Ngoài ra ngôn ngữ định kiểu theo tầng cũng có thể dùng cho XML, SVG, XUL,… Các đặc điểm kĩ thuật của CSS được duy trì bởi tổ chức W3C.  
+    CSS có cấu trúc đơn giản và sử dụng các từ tiếng Anh để đặt tên cho các thuộc tính.CSS khi sử dụng có thể viết trực tiếp xen lẫn vào mã HTML hoặc tham chiếu từ một file css riêng biệt. Và hiện nay CSS thường được viết riêng thành một tập tin với mở rộng là .css Chính vì vậy mà các trang web có sử dụng CSS thì mã HTML sẽ trở nên ngắn gọn và trong sáng hơn. Ngoài ra có thể sử dụng 1 tập tin CSS đó cho nhiều website tiết kiệm rất nhiều thời gian và công sức. Một đặc điểm quan trọng đó là tính kế thừa của CSS do đó sẽ giảm được số lượng dòng code mà vẫn đạt được yêu cầu.  
+    Tuy nhiên đối với CSS thì các trình duyệt hiểu theo kiểu riêng của nó. Do vậy việc trình bày 1 nội dung trên các trình duyệt khác nhau là không thống nhất.
+    CSS3 là một tiêu chuẩn mới và bản nâng cấp đáng kể của CSS. Là một thành phần làm nên trang website một cách toàn diện nhất với các hỗ trợ sẵn có mà không cần phải dùng tới các thành phần bổ sung bên như như: JavaScript, Jquery, Flash,... khiến cho trang web tải nhanh chóng hơn. Tuy nhiên, với tiêu chuẩn mới này thì trình duyệt của bạn cũng phải là phiên bản mới nhất có hỗ trợ CSS3.
+    CSS3 bổ sung rất nhiều thành phần mới giúp người lập trình web giảm thiểu được rất nhiều tài nguyên từ thành phần bổ sung bên ngoài, đặc biệt CSS3 rất có lợi cho website làm việc hiệu quả mà ít tốn dung lượng tài nguyên, thời gian tải trang.
+    Thành phần mới của CSS3
+    - CSS3 Border
+    - CSS3 Backgrounds
+    - CSS3 Gradients
+    - CSS3 Text Effects
+    - CSS3 Fonts
+    - CSS3 2D Transforms
+    - CSS3 3D Transforms
+    - CSS3 Transitions
+    - CSS3 Animations
+    - CSS3 Multiple Columns
+    - CSS3 User Interface
+2.5 JQuery
+    JQuery là một thư viện JavaScript mở để tạo ra các hiệu ứng có thể tương tác trực tiếp với người dùng một cách nhanh chóng, dễ dàn và hiệu quả hơn nhiều lần với việc sử dụng JavaScript thuần. Để sử dụng ta cần khai báo thư viện của jquery giống như khai báo một tập tin java script. 
+    Cách khai báo sử dụng từ máy chủ google.  
+    <script 
+    src=http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js type="text/javascript">
+    </script>
+    Hoặc bạn có thể tải về thư viện Jquery từ chính trang chủ của nó: http://jquery.com JQuery có đã phát hành các phiên bản khác nhau, phiên bản hiện tại là phiên bản 1.5.2   
+    Hiện nay Jquery sử dụng rất nhiều trong các ứng dụng web. Với jquery cho phép các nhà phát triển dễ dàng chia sẻ plugin với nhau. Đó là các thư viện jquery được các nhà phát triển sử dụng và chia sẻ với người khác.
+    Để tránh tình trạng quá tải tính năng JQuery cho phép người dung tạo và sử dụng các plugin nếu cần. Cách tạo 1 plugin không quá phức tạp và được hướng dẫn cụ thể, chính vì thế mà cộng đồng sử dụng JQuery đã tạo ra rất nhiều các plugin sang tạo và hữu dụng. Bạn hoàn toàn có thể triển khai các ứng dụng với Jquery mà không cần phải tìm hiểu quá nhiều về Jquery. Thật đơn giản là sử dụng các Plugin được các nhà phát triển và cộng đồng sử dụng xây dựng và chia sẻ. Ví dụ: shadows box, rating stars, Menu, Form,…Bạn có thể tìm hiểu tại: 
+- http://jqueryui.com/  -  Trang chủ về JQuery UI 
+- http://plugins.jquery.com/ - Trang plugin của JQuery
+- http://code.google.com/p/flot/ - Thư viện flot cho JQuery
+2.6 Ajax
+    AJAX (Asynchronous JavaScript and XML)là một nhóm các công nghệ phát triển web được sử dụng để tạo các ứng dụng web động hay các ứng dụng giàu tính Internet (rich Internet application). Từ Ajax được ông Jesse James Garrett đưa ra và dùng lần đầu tiên vào tháng 2 năm 2005 để chỉ kỹ thuật này, mặc dù các hỗ trợ cho Ajax đã có trên các chương trình duyệt từ 10 năm trước. Ajax là một kỹ thuật phát triển web có tính tương tác cao bằng cách kết hợp các ngôn ngữ:
+    HTML (hoặc XHTML) với CSS trong việc hiển thị thông tin
+    Mô hình DOM (Document Object Model), được thực hiện thông qua JavaScript, nhằm hiển thị thông tin động và tương tác với những thông tin được hiển thị
+    Đối tượng XMLHttpRequest để trao đổi dữ liệu một cách không đồng bộ với máy chủ web. (Mặc dù, việc trao đổi này có thể được thực hiện với nhiều định dạng như HTML, văn bản thường, JSON và thậm chí EBML, nhưng XML là ngôn ngữ thường được sử dụng).
+    XML thường là định dạng cho dữ liệu truyền, mặc dù bất cứ định dạng nào cũng có thể dùng, bao gồm HTML định dạng trước, văn bản thuần (plain text), JSON và ngay cả EBML.
+    Giống như DHTML, LAMP hay SPA, Ajax tự nó không phải là một công nghệ mà là một thuật ngữ mô tả việc sử dụng kết hợp một nhóm nhiều công nghệ với nhau. Trong đó, HTMLvà CSS được kết hợp với nhau để đánh dấu và định kiểu thông tin. DOM và JavaScript kết hợp lại để hiển thị thông tin động và cho phép người dùng tương tác với các thông tin này. JavaScript cùng với đối tượng XMLHttpRequest hỗ trợ việc trao đổi dữ liệu bất đồng bộ giữa trình duyệt và máy chủ nhằm hạn chế việc tải lại nguyên trang.
+    Trong thực tế, các công nghệ dẫn xuất hoặc kết hợp dựa trên Ajax như AFLAX cũng đã xuất hiện.
+a) Ưu điểm
+    Trong nhiều trường hợp, các trang web chứa rất nhiều nội dung thông thường trong trang. Nếu sử dụng các phương pháp truyền thống, những nội dung đó sẽ phải nạp lại toàn bộ với từng yêu cầu. Tuy nhiên, nếu sử dụng Ajax, một ứng dụng web có thể chỉ yêu cầu cho các nội dung cần thiết phải cập nhật, do đó giảm lượng lớn băng thông và thời gian nạp trang.
+    Việc dùng các yêu cầu không đồng bộ (asynchronous request) cho phép giao diện người dùng của ứng dụng hiển thị trên trình duyệt giúp người dùng trải nghiệm sự tương tác cao, với nhiều phần riêng lẻ.
+    Việc sử dụng Ajax có thể làm giảm các kết nối đến server, do các mã kịch bản (script) và các style sheet chỉ phải yêu cầu một lần. 
+b) Nhược điểm
+    Các trang web được tạo động không được ghi vào bộ lưu lịch sử lướt web của trình duyệt, do đó nút "back" (quay lui) của trình duyệt sẽ mất tác dụng quay lại trang thái trước đó của trang sử dụng Ajax, thay vào đó sẽ quay lại trang web trước đó mà người dùng ghé thăm. Để khắc phục có thể dùng các IFrame không hiển thị để gây ra sự thay đổi trong lịch sử trình duyệt và thay đổi phần neo của URL (bằng mã a #) khi chạy Ajax và theo dõi những sự thay đổi của nó. 
+    Việc cập nhật các trang web động cũng gây khó khăn cho người dùng trong việc bookmark (đánh dấu địa chỉ yêu thích) một trạng thái nào đó của ứng dụng. Cũng có những cách khắc phục cho vấn đề này, một số trong đó sử dụng mã xác định đoạn (fragment identifier) URL (phần URL ở sau dấu '#') để lưu vết, và cho phép người dùng đánh dấu và quay lại một trạng thái nào đó của ứng dụng. 
+    Do hầu hết các web crawler không thực thi mã JavaScript, các ứng dụng web sẽ cung cấp một phương thức thay thế để truy cập nội dung thông thường được truy cập bằng Ajax, để cho phép các máy tìm kiếm lập chỉ mục chúng. 
+    Bất kỳ người dùng nào có trình duyệt không hỗ trợ Ajax hay JavaScript, hoặc đơn giản là đã bị vô hiệu hóa JavaScript, sẽ đương nhiên không thể sử dụng Ajax. Tương tự, các thiết bị như điện thoại di động, PDA,và thiết bị đọc màn hình (screen reader) có thể không hỗ trợ JavaScript hay đối tượng XMLHttp được yêu cầu. Ngoài ra, các thiết bị đọc màn hình nếu có thể sử dụng Ajax đi nữa cũng vẫn có thể không đọc chính xác các nội dung động. 
+    Chế độ same origin policy (chế độ gốc đơn điệu) có thể không cho phép sử dụng Ajax thông qua các tên miền, mặc dù W3C đã có một đồ án sơ thảo để cho phép điều này. 
+    Việc thiếu các chuẩn cơ bản của Ajax đồng nghĩa với việc không có nhiều sự chọn lựa thực tiễn tốt nhất để kiểm tra các ứng dụng Ajax. Các công cụ kiểm thử cho Ajax thường không hiểu các mô hình sự kiện, mô hình dữ liệu và giao thức của Ajax.
+    Mở ra một cách thức khác cho việc tấn công của các đoạn mã độc mà những nhà phát triển web có thể không kiểm thử hết được
+
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Giới thiệu chung
+3.1.1 Tổng quan về đề tài
+    Đời sống xã hội được nâng cao, nhu cầu của mọi người cũng được tăng lên, giới trẻ cũng có nhiều hơn nhu cầu giải trí, tìm hiểu thông tin. Sau những giờ học trên lớp căng thẳng thì các bạn trẻ cũng cần có cho mình những giờ phút thư giãn bằng cách đọc truyện, đọc sách báo. Mỗi bạn trẻ sẽ tìm cho mình những cuốn truyện, cuốn sách có nội dung phù hợp với nhu cầu đọc của bản thân.
+    Công nghệ thông tin ngày càng phát triển theo đó là các dịch vụ cũng phát triển theo. Không phải ai cũng có thời gian đi đến tận các cửa hàng sách báo để lựa chọn cho mình một cuốn sách, truyện. Vì vậy, việc tiết kiệm được thời gian và công sức mà vẫn đáp ứng được nhu cầu của bản thân là việc nên được chú trọng. Việc tạo ra 1 hệ thống website giới thiệu và bán truyện tranh sẽ giúp giải quyết được vấn đề này.
+3.1.2 Xác định yêu cầu hệ thống
+    Server:
+• Lưu trữ CSDL 
+• Admin và client sẽ gửi request lên server để thực hiện chức năng của mình.
+    Admin:
+• Quản lý người dùng: Xem danh sách người dùng, xem thông tin của người dùng, xóa người dùng.
+• Quản lý truyện: Admin thêm, sửa, xóa truyện, cập nhật thông tin những cuốn truyện đã có trên hệ thống.
+• Quản lý loại truyện: Admin thêm, sửa, xóa loại truyện, cập nhật thông tin những loại truyện đã có trên hệ thống. 
+• Quản lý tác giả: Admin thêm, sửa, xóa tác giả, cập nhật thông tin những tác giả đã có trên hệ thống.
+• Quản lý nhà xuất bản: Admin thêm, sửa, xóa nhà xuất bản, cập nhật thông tin những nhà xuất bản đã có trên hệ thống.
+• Quản lý hóa đơn: Admin thêm, sửa, xóa hóa đơn, cập nhật thông tin những hóa đơn đã có trên hệ thống.
+• Quản lý chi tiết hóa đơn: Admin thêm, sửa, xóa chi tiết hóa đơn, cập nhật thông tin các chi tiết hóa đơn đã có trên hệ thống. 
+• Quản lý bình luận: Admin thêm, sửa, xóa bình luận, cập nhật thông tin những bình luận đã có trên hệ thống.
+    Client:
+• Muốn truy cập website cần có kết nối internet.
+• Đăng kí tài khoản: Người dùng truy cập vào website gửi yêu cầu đăng kí tài khoản lên server. Server nhận thông tin tài khoản người dùng đăng ký và lưu vào CSDL. 
+• Đăng nhập: Người dùng sau khi đăng kí tài khoản có thể sử dụng tài khoản đó để đăng nhập.
+• Xem thông tin sản phẩm: Người dùng truy cập vào hệ thống có thể xem được thông tin của sản phẩm mà không cần đăng kí cũng như đăng nhập thành viên.
+• Nhận xét sản phẩm: Người dùng sau khi đăng nhập vào hệ thống có thể bình luận để nhận xét sản phẩm và xem được tất cả bình luận của những người dùng khác.
+• Thêm sản phẩm vào giỏ hàng: Người dùng truy cập vào hệ thống và đăng nhập thì có thể chọn sản phẩm để thêm vào giỏ hàng.
+• Đặt mua sản phẩm: Sau khi đã có giỏ hàng chứa mặt hàng mà người dùng muốn đặt mua thì người dùng có thể chọn order để đặt hàng sản phẩm.
+• Đánh giá sản phẩm: Người dùng có thể đánh giá sản phẩm bằng cách đưa ra nhận xét công khai trên trang thông tin của sản phẩm, tất cả mọi người khi xem thông tin sản phẩm sẽ xem được các đánh giá đó.
+3.1.3 Xác định yêu cầu nghiệp vụ
+    Hệ thống cần xử lý được các chức năng sau:
+• Chức năng đăng nhập, đăng kí thành viên.
+• Chức năng xem thông tin sản phẩm.
+• Chức năng tìm kiếm thông tin về sản phẩm.
+• Chức năng bình luận về sản phẩm.
+• Chức năng thêm vào giỏ hàng và thanh toán.
+    Hệ thống cần lưu trữ:
+• Hệ thống phải lưu trữ các thông tin về người dùng.
+• Hệ thống cần lưu trữ thông tin về sản phẩm.
+• Hệ thống cần lưu trữ thông tin về các đơn đặt hàng
+• Hệ thống cần lưu trữ thông tin về các đơn hàng thanh toán.
+Yêu cầu phi chức năng    Mô tả    Ví dụ    Thao tácMôi trường kỹ thuật và vật lý mà hệ thống sẽ hoạt động.Hệ thống có thể tích hợp với webserver hiện thời, cập nhật dữ liệu tự động    Bảo mậtAi có quyền truy cập hệ thống cho 1 số chức năng nào đóNgười dùng chỉ có thể xem sản phẩm, tìm kiếm sản phẩm, bình luận sản phẩm,... Admin có quyền quản lý người dùng, thêm, sửa, xóa sản phẩm,...    			Bảng 1 Các yêu cầu phi chức năng
+3.2 Xác định và mô tả các tác nhân của hệ thống (Actor)
+STTTên ActorMô tả1Quản trị hệ thống (Admin)Quản trị viên truy cập vào trang quản trị hệ thống để cập nhật các thông tin liên quan tới hệ thống như thêm, sửa, xóa...
+Là người có quyền cao nhất, quyết định tới vận hành hệ thống.2Người dùng (User)Người dùng truy cập vào website để xem nội dung mà hệ thống cung cấp: Xem sản phẩm, bình luận sản phẩm, đặt mua, thanh toán,...      Bảng 2 Các Actor của hệ thống
+3.3 Biểu đồ Use Case
+3.3.1 Biểu đồ Use Case tổng quát
+
+    Hình 1: Biểu đồ Use Case tổng quát
+    
+3.3.2 Danh sách các Use Case
+STTTên Use-caseÝ nghĩa/Ghi chú1UC SearchTìm kiếm 2UC View InformationXem thông tin3UC OrderĐặt hàng4UC CommentBình luận5UC PaymentThanh toán6UC Book ManagerQuản lý truyện (thêm, sửa, xóa)7UC Author ManagerQuản lý tác giả (thêm, sửa, xóa)8UC Publisher ManagerQuản lý nhà xuất bản (thêm, sửa, xóa)9UC Category Manager Quản lý thể loại (thêm, sửa, xóa)10UC Order ManagerQuản lý hóa đơn (thêm, sửa, xóa)11UC Order Detail ManagerQuản lý chi tiết hóa đơn (thêm, sửa, xóa)12UC Review ManagerQuản lý bình luận (thêm, sửa, xóa)13UC LoginĐăng nhập    
+      Bảng 3: Danh sách các Use Case
+    
+    
+    
+
+
+3.3.3 Đặc tả Use Case
+a) Đặc tả UC Đăng nhập
+    Tên use case    Đăng nhậpTác nhân chínhUserTiền điều kiện    Đảm bảo thành côngUser đăng nhập thành công vào hệ thốngKích hoạtUser chọn chức năng đăng nhập Chuỗi sự kiện chính:
+1: Người dùng chọn chức năng đăng nhập trên giao diện chính của hệ thống.
+2: Màn hình hiện lên giao diện và khung đăng nhập.
+3: Người dùng nhập tên đăng nhập cùng password. Nhấn nút “Đăng nhập”.
+4: Hệ thống kiểm tra tên đăng nhập và password, hiển thị thông báo đăng nhập thành công. Ngoại lệ:
+4.1: Người dùng nhập thiếu tên đăng nhập hoặc password
+       4.1.1: Hệ thống báo lỗi và yêu cầu nhập đầy đủ thông tin.
+4.2: Người dùng đăng nhập sai tên đăng nhập hoặc mật khẩu
+       4.2.1. Hệ thống thông báo lỗi và yêu cầu nhập lại.
+                                           Bảng 4: Đặc tả UC Đăng nhập
+    
+    
+    
+b) Đặc tả UC Đăng ký
+Tên use case    Đăng kýTác nhân chínhUserTiền điều kiện    Đảm bảo thành côngUser đăng ký thành viên được vào hệ thống và hệ thống thông báo đăng ký thành côngKích hoạtUser chọn chức năng đăng kí Chuỗi sự kiện chính:
+ 1: Khách hàng chọn chức năng đăng kí trên giao diện chính của hệ thống.
+ 2: Màn hình hiện lên giao diện form đăng kí
+ 3: Khách hàng nhập email, password, password confirmation và đăng kí.
+ 4: Hệ thống thông báo kết quả đăng kí thành công và lưu thông tin khách hàng vào CSDL.Ngoại lệ:
+ 4.1: Khách hàng nhập sai định dạng thông tin:
+    4.1.1: Hệ thống thông báo lỗi và yêu cầu nhập lại.
+ 4.2: Khách hàng đăng kí tài khoản bằng email đã tồn tại:
+    4.2.1: Hệ thống thông báo lỗi và yêu cầu nhập lại.
+                                                Bảng 5: Đặc tả UC Đăng ký
+    
+
+c) Đặc tả UC Tìm kiếm
+Tên use caseTìm kiếm theo tên sản phẩmTác nhân chínhUserTiền điều kiện    Đảm bảo thành côngUser tìm kiếm được sản phẩm theo tên sản phẩmKích hoạtUser click vào trường nhập tên sản phẩm để tìm kiếmChuỗi sự kiện chính:
+   1: User sau khi truy cập vào hệ thống click chọn vùng nhập thông tin tìm kiếm
+   2: Hệ thống cho phép user nhập thông tin
+   3: User nhập tên sản phẩm muốn tìm kiếm và nhấp nút “Tìm kiếm”
+   4: Hệ thống trả về kết quả tương ứng với tên sản phẩm user đã nhập.Ngoại lệ: 
+   4.1: User nhập tên sản phẩm không có trên hệ thống
+       4.1.1: Hệ thống trả về thông báo không có sản phẩm tương ứng.                                             Bảng 6: Đặc tả UC Tìm kiếm
+
+
+d) Đặc tả UC Xem thông tin
+Tên use caseXem thông tin sản phẩmTác nhân chínhUserTiền điều kiện    Đảm bảo thành côngUser xem được thông tin chi tiết về sản phẩmKích hoạtUser click chọn sản phẩm muốn xem thông tinChuỗi sự kiện chính:
+    1: User sau khi truy cập vào hệ thống click chọn sản phẩm muốn xem thông tin chi tiết
+    2: Hệ thống hiển thị thông tin chi tiết về sản phẩm      Bảng 7: Đặc tả UC Xem thông tin
+e) Đặc tả UC Bình luận
+Tên use caseBình luận Tác nhân chínhUserTiền điều kiệnUser đã đăng nhập vào hệ thốngĐảm bảo thành côngUser bình luận sản phẩm và hệ thống hiển thị bình luậnKích hoạtUser click chọn trường bình luậnChuỗi sự kiện chính:
+   1: User sau khi đăng nhập, click chọn sản phẩm muốn xem
+   2: Hệ thống hiển thị thông tin chi tiết của sản phẩm, vùng nhập bình luận và một nút “Comment”
+   3: User nhập nội dung bình luận và nhấp chọn “Comment”      Bảng 8: Đặc tả UC Bình luận
+f) Đặc tả UC Đặt hàng
+    Tên use case    Đặt hàngTác nhân chínhUserTiền điều kiệnUser đã đăng nhập vào hệ thốngĐảm bảo thành côngUser thêm được sản phẩm vào giỏ hàngKích hoạtUser click chọn “thêm vào giỏ hàng”Chuỗi sự kiện chính:
+   1: User đăng nhập vào hệ thống
+   2: Hệ thống hiển thị thông báo đăng nhập thành công
+   3: User xem thông tin của sản phẩm, nhập số lượng muốn thêm vào giỏ hàng, click chọn thêm vào giỏ hàng
+   4: Hệ thống hiển thị thông báo thêm sản phẩm thành công.Ngoại lệ: 
+   2.1: User nhập sai thông tin đăng nhập
+       2.1.1: Hệ thống hiển thị thông báo thông tin được nhập sai và cho phép nhập lại
+   3.1: User chưa đăng nhập
+       3.1.1: Hệ thống hiển thị màn hình đăng nhập và yêu cầu user đăng nhập.
+   4.1: User chọn thêm vào giỏ hàng với sản phẩm đã hết
+       4.1.1: Hệ thông hiển thị thông báo sản phẩm đã được bán hết.      Bảng 9: Đặc tả UC Đặt hàng
+      
+      
+      
+g) Đặc tả UC Thanh toán
+Tên use caseThanh toánTác nhân chínhUserTiền điều kiệnUser đã đăng nhập vào hệ thốngĐảm bảo thành côngUser đặt hàng thành côngKích hoạtUser click chọn “đặt hàng”Chuỗi sự kiện chính:
+   1: User đăng nhập vào hệ thống
+   2: Hệ thống hiển thị thông báo đăng nhập thành công
+   3: User xem thông tin của sản phẩm, click chọn thêm vào giỏ hàng
+   4: Hệ thống hiển thị giỏ hàng
+   5: User nhấp chọn “Đặt hàng”
+   6: Hệ thống hiển thị các thông tin của đơn đặt hàng gồm thông tin của user và một số thông tin cần user nhập vào: Tên, số điện thoại, địa chỉ,...
+   7: User nhấp chọn “Thanh toán” 
+   8: Hệ thống hiển thị các hình thức thanh toán để user có thể lựa chọn.
+   9: User lựa chọn hình thức thanh toán và nhấp chọn “OK”
+   10: Hệ thống hiển thị thông báo đặt hàng thành công kèm theo đơn hàng bao gồm nút “hủy” cho phép user hủy đơn hàng.Ngoại lệ: 
+   2.1: User nhập sai thông tin đăng nhập
+       2.1.1: Hệ thống hiển thị thông báo thông tin được nhập sai và cho phép nhập lại
+   3.1: User chưa đăng nhập
+       3.1.1: Hệ thống hiển thị màn hình đăng nhập và yêu cầu user đăng nhập.
+   4.1: User chọn thêm vào giỏ hàng với sản phẩm đã hết
+       4.1.1: Hệ thông hiển thị thông báo sản phẩm đã được bán hết.      Bảng 10: Đặc tả UC Thanh toán
+h) Đặc tả UC Quản lý thông tin
+Tên use caseQuản lý thông tinTác nhân chínhAdminTiền điều kiệnAdmin đã đăng nhập vào hệ thốngĐảm bảo thành côngAdmin xem được danh sách tất cả sản phẩm trên hệ thốngKích hoạtAdmin click chọn “quản lý sản phẩm”, …Chuỗi sự kiện chính:
+   1: Sau khi đăng nhập, Admin chọn “Quản lý sản phẩm”, …
+   2: Giao diện hệ thống hiển thị gồm danh sách sản phẩm có trên hệ thống, button “Xóa”, button “Sửa” với mỗi sản phẩm, button “Thêm mới”      Bảng 11: Đặc tả UC Quản lý thông tin
+i) Đặc tả UC Thêm thông tin
+Tên use caseThêm thông tinTác nhân chínhAdminTiền điều kiệnAdmin đã đăng nhập vào hệ thốngĐảm bảo thành côngAdmin thêm thông tin thành công và hệ thống hiển thị thông báo thành côngKích hoạtAdmin click chọn “thêm mới” trong quản lý thông tinChuỗi sự kiện chính:
+   1: Sau khi đăng nhập, Admin chọn “Quản lý thông tin”, …
+   2: Giao diện hệ thống hiển thị gồm danh sách sản phẩm có trên hệ thống, button “Xóa”, button “Sửa” với mỗi sản phẩm, button “Thêm mới”
+   3: Admin click chọn “Thêm mới”
+   4: Giao diện hiển thị gồm các trường nhập thông tin về sản phẩm gồm: tên, loại sản phẩm, giá, số lượng, hình ảnh, mô tả, ….
+   5: Admin nhập thông tin của sản phẩm và click chọn “OK”
+   6: Giao diện hiển thị thông báo thêm thông tin thành công.Ngoại lệ: 
+   6.1: User nhập thiếu hoặc sai định dạng thông tin 
+        6.1.1: Hệ thống hiển thị thông báo lỗi và yêu cầu người dùng nhập lại.      Bảng 12: Đặc tả UC Thêm thông tin
+j) Đặc tả UC Sửa thông tin
+Tên use caseSửa thông tinTác nhân chínhAdminTiền điều kiệnAdmin đã đăng nhập vào hệ thốngĐảm bảo thành côngAdmin sửa thông tin thành công và hệ thống hiển thị thông báo thành côngKích hoạtAdmin click chọn “Sửa” với thông tin tương ứng trong quản lý thông tinChuỗi sự kiện chính:
+   1: Sau khi đăng nhập, Admin chọn “Quản lý thông tin”, …
+   2: Giao diện hệ thống hiển thị gồm danh sách sản phẩm có trên hệ thống, button “Xóa”, button “Sửa” với mỗi sản phẩm, button “Thêm mới”
+   3: Admin click chọn “Sửa” với thông tin tương ứng
+   4: Giao diện hiển thị gồm các trường cho phép sửa thông tin về sản phẩm gồm: tên, thương hiệu, giá, số lượng, hình ảnh, mô tả,….
+   5: Admin nhập thông tin cần sửa và click chọn “OK”
+   6: Giao diện hiển thị thông báo sửa thông tin thành công.Ngoại lệ: 
+   6.1: User nhập thiếu hoặc sai định dạng thông tin 
+        6.1.1: Hệ thống hiển thị thông báo lỗi và yêu cầu người dùng nhập lại.      Bảng 13: Đặc tả UC Sửa thông tin
+k) Đặc tả UC Xóa thông tin
+Tên use caseXóa thông tinTác nhân chínhAdminTiền điều kiệnAdmin đã đăng nhập vào hệ thốngĐảm bảo thành côngAdmin xóa thông tin thành công và hệ thống hiển thị thông báo thành côngKích hoạtAdmin click chọn “Xóa” đối với thông tin tương ứng trong phần quản lýChuỗi sự kiện chính:
+   1: Sau khi đăng nhập, Admin chọn “Quản lý thông tin”, …
+   2: Giao diện hệ thống hiển thị gồm danh sách sản phẩm có trên hệ thống, button “Xóa”, button “Sửa” với mỗi sản phẩm, button “Thêm mới”
+   3: Admin click chọn “xóa” đối với thông tin tương ứng.
+   4: Hệ thống hiển thị hộp thoại xác nhận xóa sản phẩm với button “cancel” và “OK”.
+   5: Admin click chọn “OK” 
+   6: Giao diện hiển thị thông báo xóa thông tin thành công.Ngoại lệ: 
+   4.1: Admin nhấp “cancel” để hủy xóa thông tin
+        4.1.1: Hệ thống quay trở lại trang chủ quản lý thông tin      Bảng 14: Đặc tả UC Xóa thông tin
+    
+    
+    
+
+3.4 Biểu đồ lớp
+3.4.1 Biểu đồ lớp mức phân tích
+
+    Hình 2: Biểu đồ lớp mức phân tích
+3.4.2 Lược đồ cơ sở dữ liệu quan hệ
+    
+    Hình 3: Lược đồ cơ sở dữ liệu quan hệ
+3.4.3 Danh sách các lớp đối tượng và quan hệ
+    Bảng 15: Danh sách các lớp đối tượng và quan hệ
+STTTên lớp/quan hệLoạiÝ nghĩa/Ghi chú1BooksTruyện2CategoriesThể loại3PublishersNhà xuất bản4AuthorsTác giả5OrdersHóa đơn6Order DetailsChi tiết hóa đơn7ReviewsBình luận
+3.4.4 Chi tiết các lớp đối tượng
+a) Bảng Books
+      
+      Hình 4: Bảng Books
+b) Bảng Categories
+    
+      Hình 5: Bảng Categories
+    
+
+c) Bảng Authors
+    
+      Hình 6: Bảng Authors
+d) Bảng Publishers
+    
+      Hình 7: Bảng Publishers
+e) Bảng Orders
+
+      Hình 8: Bảng Orders
+
+
+f) Bảng Order Details
+
+      Hình 9: Bảng Order Details
+g) Bảng Reviews
+
+  Hình 10: Bảng Reviews
+3.5 Biểu đồ tuần tự
+3.5.1 Biểu đồ tuần tự cho chức năng đăng nhập
+
+    Hình 11: Biểu đồ tuần tự cho chức năng Đăng nhập
+3.5.2 Biểu đồ tuần tự quản lý Đăng kí
+
+      Hình 12: Biểu đồ tuần tự cho chức năng Đăng Kí
+3.5.3 Biểu đồ tuần tự cho chức năng xem thông tin
+
+    Hình 13: Biểu đồ tuần tự cho chức năng xem thông tin
+3.5.4 Biểu đồ tuần tự cho chức năng bình luận
+
+    Hình 14: Biểu đồ tuần tự cho chức năng bình luận
+3.5.5 Biểu đồ tuần tự cho chức năng xem sản phẩm theo loại
+
+    Hình 15: Biểu đồ tuần tự cho chức năng xem sản phẩm theo loại
+    
+3.5.6 Biểu đồ tuần tự cho chức năng tìm kiếm
+
+    Hình 16: Biểu đồ tuần tự cho chức năng Tìm Kiếm
+3.5.7 Biểu đồ tuần tự cho chức năng thêm thông tin
+
+    Hình 17: Biểu đồ tuần tự cho chức năng thêm thông tin
+
+3.5.8 Biểu đồ tuần tự cho chức năng sửa thông tin
+
+    Hình 18: Biểu đồ tuần tự cho chức năng sửa thông tin
+
+3.5.9 Biểu đồ tuần tự cho chức năng xóa thông tin
+
+    Hình 19: Biểu đồ tuần tự cho chức năng xóa thông tin
+3.5.10 Biểu đồ tuần tự cho chức năng thêm sản phẩm vào giỏ hàng
+
+    Hình 20: Biểu đồ tuần tự cho chức năng thêm sản phẩm vào giỏ hàng
+3.5.11 Biểu đồ tuần tự cho chức năng sản phẩm khỏi giỏ hàng
+
+    Hình 21: Biểu đồ tuần tự cho chức năng xóa sản phẩm khỏi giỏ hàng
+3.5.12 Biểu đồ tuần tự cho chức năng đặt hàng và thanh toán
+
+    Hình 22: Biểu đồ tuần tự cho chức năng đặt hàng và thanh toán
+
+    
+3.6 Thiết kế cơ sở dữ liệu cho hệ thống.
+3.6.1 Bảng tbl_Books
+    Bảng 16: Bảng Books
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1BookIdIntNot nullMã truyện (Khóa chính)2TitleStringTiêu đề3SummaryStringTóm tắt4ImageUrlStringẢnh5PriceDecimalGiá6QuantityIntSố lượng7CreatedDateDatetimeNgày tạo8ModifiedDateDatetimeNgày sửa9IsActiveBitTrạng thái10CategoryIdIntNot nullMã loại (Khóa ngoại)11AuthorIdIntNot nullMã tác giả (Khóa ngoại)12PublisherIdIntNot nullMã NXB (Khóa ngoại)
+
+
+
+
+
+3.6.2 Bảng tbl_Authors
+    Bảng 17: Bảng Authors
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1AuthorIdIntNot nullMã tác giả (Khóa chính)2AuthorNameStringTên tác giả3DescriptionStringMô tả
+3.6.3 Bảng tbl_Categories
+    Bảng 18: Bảng Categories
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1CategoryIdIntNot nullMã loại (Khóa chính)2CategoryNameStringTên loại3DescriptionStringMô tả
+3.6.4 Bảng tbl_Publishers
+    Bảng 19: Bảng Publishers
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1PublisherIdIntNot nullMã NXB (Khóa chính)2PublisherNameStringTên NXB3DescriptionStringMô tả
+
+3.6.5 Bảng tbl_Orders
+    Bảng 20: Bảng Orders
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1OrderIdIntNot nullMã hóa đơn (Khóa chính)2CreatedDateDatetimeNgày tạo3ModifiedDateDatetimeNgày sửa4ShippedDateDatetimeNgày giao hàng5ShipNameStringTên giao hàng6ShipAddressStringĐịa chỉ giao hàng7ShipCityStringThành phố giao hàng8PhoneNumberIntSố điện thoại    
+3.6.6 Bảng tbl_Order Details
+    Bảng 21: Bảng Order Details
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1OrderIdIntNot nullMã hóa đơn (Khóa chính)2BookIdIntNot nullMã truyện (Khóa chính)3QuantityIntSố lượng4UnitPriceDecimalĐơn giá    
+    
+    
+3.6.7 Bảng tbl_Reviews
+    Bảng 22: Bảng Reviews
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1ReviewIdIntNot nullMã bình luận (Khóa chính)2CommentStringNội dung3CreatedDateDatetimeNgày tạo4ModifiedDateDatetimeNgày sửa5IsActiveBitTrạng thái6BookIdIntNot nullMã truyện (Khóa ngoại)7UserIdIntNot nullMã user (Khóa ngoại)
+    
+    
+    
+    
+3.7 Thiết kế giao diện
+3.7.1 Giao diện trang chủ
+
+    Hình 23: Giao diện trang chủ
+3.7.2 Giao diện đăng nhập
+
+    Hình 24: Giao diện trang Đăng Nhập
+3.7.3 Giao diện trang đăng ký 
+
+    Hình 25: Giao diện trang đăng ký
+3.7.4 Giao diện trang chi tiết sản phẩm
+
+    Hình 26: Giao diện trang chi tiết sản phẩm
+3.7.5 Giao diện trang danh sách sản phẩm
+
+    Hình 27: Giao diện trang danh sách sản phẩm
+3.7.6 Giao diện trang sửa thông tin tài khoản
+
+    Hình 28: Giao diện trang sửa thông tin tài khoản
+3.7.7 Giao diện trang giỏ hàng
+
+    Hình 29: Giao diện trang giỏ hàng
+3.7.8 Giao diện trang thanh toán
+
+    Hình 30: Giao diện trang thanh toán
+3.7.9 Giao diện trang admin quản lý sản phẩm
+
+    Hình 31: Giao diện trang admin quản lý sản phẩm
+3.7.10 Giao diện trang admin thêm sản phẩm
+
+    Hình 32: Giao diện trang admin thêm sản phẩm
+
+3.7.11 Giao diện trang admin sửa thông tin sản phẩm
+
+    Hình 33: Giao diện trang admin sửa thông tin sản phẩm
+
+
+
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau thời gian nghiên cứu hệ thống cùng với sự hướng dẫn tận tình của thầy giáo hướng dẫn đồ án tốt nghiệp, em đã dần hoàn thành bài báo cáo của mình. Tuy nhiên, với yêu cầu đề ra em vẫn còn những hạn chế nhất định.
+    Trong quá trình thực hiện cùng với sự hướng dấn tận tình của thầy, em đã cố gắng tìm hiểu để hiểu hệ thống và đạt được một số kết quả sau :
+    Về công nghệ :
+• Tìm hiểu và nắm bắt được các công cụ thiết kế Web
+• Các dịch vụ trên Internet và thương mại điện tử
+• Tìm hiểu về ASP.NET MVC
+• Hệ quản trị cơ sở dữ liệu SQL Server 2014
+• Ngôn ngữ lập trình C#
+    Ứng dụng cơ sở lý thuyết vào việc xây dựng Website :
+• Tìm hiểu được về nghiệp vụ website giới thiệu và bán truyện tranh
+• Phân tích thiết kế và xây dựng được cơ sở dữ liệu hệ thống
+• Thiết kế được giao diện cơ bản của trang Web
+• Cho phép khách hàng tìm kiếm, xem và mua sản phẩm
+• Hỗ trợ quản trị được website cũng như quản lý được các chức năng cơ bản của website
+4.2 Hạn chế của đề tài
+    Hệ thống website giới thiệu và bán truyện tranh mới dừng lại ở các module cơ bản của hệ thống tin tức, chưa có nhiều module tiện ích cho người dùng như: Thống kê lượt truy cập theo tháng, thăm dò ý kiến, hỏi đáp,…
+    Hệ thống website chưa giải quyết hết các vấn đề bài đã phân tích đặt ra.
+4.3 Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, em đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+• Xây dựng thêm các Control làm phong phú trên việc tùy biến giao diện của website.
+• Bổ sung các Module hỗ trợ cho các website giới thiệu sản phẩm và thương mại điện tử.
+TÀI LIỆU THAM KHẢO
+x
+[1]Phạm Hữu Khang, Lập trình ASP.NET 2.0. Hà Nội, Việt Nam: Nhà xuất bản Lao Động Xã Hội, 2005.[2]Nguyễn Văn Quyết, Giáo trình Công nghệ Web và ứng dụng. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY, 2010.x
+    
+    
+    
+Xây dựng Website Giới Thiệu và Bán Truyện Tranh
+    
+    
+20
+    
+    

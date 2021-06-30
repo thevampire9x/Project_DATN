@@ -1,0 +1,479 @@
+﻿
+CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1.  Tên đề tài
+Xây dựng ứng dụng học Tiếng Việt cho trẻ em 3-5 tuổi trên hệ điều hành Android
+1.2. Lý do chọn đề tài.
+  Công nghệ thông tin (CNTT) và truyền thông giờ đây đã có mặt ở nhiều phương diện trong cuộc sống hàng ngày của chúng ta, từ thương mại đến giải trí và thậm chí cả văn hóa, xã hội và giáo dục. Trong những năm qua, với sự ra đời của smartphone - điện thoại di động đã mang đến cho con người chúng ta hàng loạt ứng dụng thông minh mới đáp ứng nhu cầu cuộc sống trong nhiều lĩnh vực như dùng để trao đổi thông tin, làm việc, và có tính năng giải trí mọi lúc mọi nơi.
+  Trong hệ thống giáo dục và đào tạo các ngành nghề ở các bậc Đại học, Cao đẳng, Trung cấp… hay thậm chí là Tiểu học, công nghệ thông tin và truyền thông luôn được xem là sự lựa chọn thông minh để truyền tải đến các học sinh, sinh viên và các bậc phụ huynh trong việc hướng nghiệp và học tập cho con em mình.
+  Nhiều ứng dụng thực tiễn được áp dụng hàng ngày đã đem lại hiệu quả cao trong công việc và học tập cho người dùng. Với khả năng di động cao, phần cứng mạnh mẽ, cùng hàng trăm ngàn ứng dụng trên nhiều lĩnh vực, smartphone ngày nay đã trở thành một thiết bị all-in-one nhỏ gọn luôn sẵn sàng phục vụ người dùng mọi lúc mọi nơi. Đặc biệt, việc phát triển các phần mềm học tập trên điện thoại di động hỗ trợ cho học sinh, sinh viên là điều vô cùng tuyệt vời và hữu ích. 
+  Là sinh viên ngành CNTT, em luôn mong muốn mình sẽ làm được một việc gì đó để ứng dụng những kiến thức đã học xây dựng được những sản phẩm có tính ứng dụng thực tế. Với mong muốn áp dụng những kiến thức mình đã học được tạo ra sản phẩm hữu ích, đồng thời giúp nâng cao khả năng lập trình và đúc  rút được nhiều kinh nghiệm cho những công việc trong tương lai sau khi ra trường, cùng với sự đồng ý của giáo viên hướng dẫn đề tài, em quyết định lựa chọn đề tài “Xây dựng ứng dụng học Tiếng Việt cho trẻ em 3-5 tuổi trên hệ điều hành Android”.
+1.3. Đối tượng nghiên cứu
+• Với đề tài này, em tập trung vào các nội dung:
+- Tìm hiểu, nghiên cứu phát triển ứng dụng trên hệ điều hành Android.
+- Phân tích và thiết kế hệ thống bằng UML.
+- Xây dựng cơ sở dữ liệu trên SQLite Manager.
+-  Tìm hiểu các công cụ xây dựng chương trình: sử dụng Android Studio để thiết kế giao diện và xây dựng phần mềm, sử dụng SQLite Manager để thiết kế CSDL cho ứng dụng. 
+1.4. Giới hạn và phạm vị nghiên cứu
+- Giới hạn: 
+• Ứng dụng dành riêng cho trẻ em từ ba đến năm tuổi. 
+• Ứng dụng giúp trẻ có thể học bảng chữ cái-số, kiểm tra chữ cái-số và tập viết theo mẫu.
+• Kích thích ham muốn học tập, tìm tòi và ghi nhớ bảng chữ cái một cách hiệu quả thông qua phương pháp “học mà chơi, chơi mà học”.
+- Phạm vi đề tài: 
+• Đề tài được phát triển trên hệ điều hành android. 
+• Ứng dụng gồm 3 chức năng chính:
+• Học chữ cái và số.
+• Kiểm tra khả năng nhận biết.
+• Tập viết bảng chữ cái.
+1.5. Mục đích của đề tài
+- Thiết kế học liệu, video, hình ảnh, file âm thanh cần thiết.
+- Nghiên cứu tâm sinh lý của trẻ từ 3 đến 5 tuổi
+- Ứng dụng kiến thức xây dựng nên phần mềm học tiếng việt cho trẻ em 3-5 tuổi trên hệ điều hành Android giúp trẻ có thể học bảng chữ cái-số, kiểm tra chữ cái-số và tập viết.
+1.6. Phương pháp nghiên cứu
+- Cách tiếp cận: Nghiên cứu ngôn ngữ lập trình Java.
+- Sử dụng các phương pháp nghiên cứu:
+• Phương pháp đọc tài liệu.
+• Phương pháp phân tích mẫu.
+• Phương pháp thực nghiệm.  
+1.7. Ý nghĩa của đề tài
+- Ý nghĩa lý luận: Đây là đề tài góp phần củng cố kĩ năng lập trình, đặc biệt là kỹ năng lập trình Android và phân tích bài toán sao cho áp dụng dược thực tế. Củng cố kỹ năng sáng tạo giao diện đẹp mắt, phù hợp với yêu cầu bài toán.
+- Ý nghĩa thực tiễn: rèn luyện, phát huy tính sáng tạo và làm việc độc lập.
+1.8. Môi trường thực hiện đề tài
+- Hệ điều hành windows XP hoặc cao hơn.
+- Phần mềm android studio 2.0 trở lên.
+- Bộ cài UML.
+- SQLite manager.
+1.9. Kết quả dự kiến đạt được
+- Mã nguồn ứng dụng: Học tiếng việt cho trẻ từ 3 đến 5 tuổi.
+- Một bản báo cáo (bản cứng và bản mềm) gồm đầy đủ các phần theo quy định chuẩn của khoa Công Nghệ Thông Tin - trường Đại học Sư phạm Kỹ thuật Hưng Yên.
+- Xây dựng được học Tiếng Việt cho trẻ em 3-5 tuổi có các chức năng sau:
+- Phần nhận biết chữ cái-số.
+• Cho phép học 29 chữ cái đi kèm ví dụ minh họa. Mỗi chữ cái có 4 ví dụ.
+• Cho phép học 10 số đếm tự nhiên từ 0 đến 9. Có minh họa đi kèm.
+- Phần ôn tập khả năng nhận biết.
+• Câu hỏi nhận biết chữ cái.
+• Câu hỏi nhận biết chữ cái đi kèm hinh ảnh minh họa.
+- Phần tập viết.
+• Tập viết 29 chữ cái trong bảng chữ cái,
+• Tập viết 10 số tự nhiên từ 0 đến 9.
+
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1. Tổng quan về lập trình android
+2.1.1 Giới thiệu
+    Android là một hệ điều hành dựa trên nền tảng Linux được thiết kế dành cho các thiết bị di động có màn hình cảm ứng như điện thoại thông minh và máy tính bảng. Ban đầu, Android được phát triển bởi Tổng công ty Android, với sự hỗ trợ tài chính từ Google và sau này được chính Google mua lại vào năm 2005. Android ra mắt vào năm 2007 cùng với tuyên bố thành lập Liên minh thiết bị cầm tay mở: một hiệp hội gồm các công ty phần cứng, phần mềm, và viễn thông với mục tiêu đẩy mạnh các tiêu chuẩn mở cho các thiết bị di động. Chiếc điện thoại đầu tiên chạy Android được bán vào tháng 10 năm 2008.
+    Android có mã nguồn mở và Google phát hành mã nguồn theo Giấy phép Apache. Chính mã nguồn mở cùng với một giấy phép không có nhiều ràng buộc đã cho phép các nhà phát triển thiết bị, mạng di động và các lập trình viên nhiệt huyết được điều chỉnh và phân phối Android một cách tự do. Ngoài ra, Android còn có một cộng đồng lập trình viên đông đảo chuyên viết các ứng dụng để mở rộng chức năng của thiết bị, bằng một loại ngôn ngữ lập trình Java có sửa đổi. Vào tháng 10 năm 2012, có khoảng 700.000 ứng dụng trên Android, và số lượt tải ứng dụng từ Google Play, cửa hàng ứng dụng chính của Android, ước tính khoảng 25 tỷ lượt.
+    Những yếu tố này đã giúp Android trở thành nền tảng điện thoại thông minh phổ biến nhất thế giới, vượt qua Symbian vào quý 4 năm 2010, và được các công ty công nghệ lựa chọn khi họ cần một hệ điều hành không nặng nề, có khả năng tinh chỉnh, và giá rẻ chạy trên các thiết bị công nghệ cao thay vì tạo dựng từ đầu. Kết quả là mặc dù được thiết kế để chạy trên điện thoại và máy tính bảng, Android đã xuất hiện trên TV, máy chơi game và các thiết bị điện tử khác. Bản chất mở của Android cũng khích lệ một đội ngũ đông đảo lập trình viên và những người đam mê sử dụng mã nguồn mở để tạo ra những dự án do cộng đồng quản lý. Những dự án này bổ sung các tính năng cao cấp cho những người dùng thích tìm tòi hoặc đưa Android vào các thiết bị ban đầu chạy hệ điều hành khác.
+    Android chiếm 75% thị phần điện thoại thông minh trên toàn thế giới vào thời điểm quý 3 năm 2012, với tổng cộng 500 triệu thiết bị đã được kích hoạt và 1,3 triệu lượt kích hoạt mỗi ngày. Sự thành công của hệ điều hành cũng khiến nó trở thành mục tiêu trong các vụ kiện liên quan đến bằng phát minh, góp mặt trong cái gọi là "cuộc chiến điện thoại thông minh" giữa các công ty công nghệ.
+2.1.2 Lịch sử phát triển hệ điều hành android
+    Tổng công ty Android (Android, Inc.) được thành lập tại Palo Alto, California vào tháng 10 năm 2003 bởi Andy Rubin (đồng sáng lập công ty Danger), Rich Miner (đồng sáng lập Tổng công ty Viễn thông Wildfire), Nick Sears (từng là Phó giám đốc T-Mobile), và Chris White (trưởng thiết kế và giao diện tại WebTV) để phát triển, theo lời của Rubin, "các thiết bị di động thông minh hơn có thể biết được vị trí và sở thích của người dùng". DÙ những người thành lập và nhân viên đều là những người có tiếng tăm, Tổng công ty Android hoạt động một cách âm thầm, chỉ tiết lộ rằng họ đang làm phần mềm dành cho điện thoại di động. Trong năm đó, Rubin hết kinh phí. Steve Perlman, một người bạn thân của Rubin, mang cho ông 10.000 USD tiền mặt nhưng từ chối tham gia vào công ty.
+    Google mua lại Tổng công ty Android vào ngày 17 tháng 8 năm 2005, biến nó thành một bộ phận trực thuộc Google. Những nhân viên của chủ chốt của Tổng công ty Android, gồm Rubin, Miner và White, vẫn tiếp tục ở lại công ty làm việc sau thương vụ này. Vào thời điểm đó không có nhiều thông tin về Tổng công ty, nhưng nhiều người đồn đoán rằng Google dự tính tham gia thị trường điện thoại di động sau bước đi này. Tại Google, nhóm do Rubin đứng đầu đã phát triển một nền tảng thiết bị di động phát triển trên nền nhân Linux. Google quảng bá nền tảng này cho các nhà sản xuất điện thoại và các nhà mạng với lời hứa sẽ cung cấp một hệ thống uyển chuyển và có khả năng nâng cấp. Google đã liên hệ với hàng loạt hãng phần cứng cũng như đối tác phần mềm, bắn tin cho các nhà mạng rằng họ sẵn sàng hợp tác với các cấp độ khác nhau.
+    Ngày càng nhiều suy đoán rằng Google sẽ tham gia thị trường điện thoại di động xuất hiện trong tháng 12 năm 2006. Tin tức của BBC và Nhật báo phố Wall chú thích rằng Google muốn đưa công nghệ tìm kiếm và các ứng dụng của họ vào điện thoại di động và họ đang nỗ lực làm việc để thực hiện điều này. Các phương tiện truyền thông truyền thống lẫn online cũng viết về tin đồn rằng Google đang phát triển một thiết bị cầm tay mang thương hiệu Google. Một vài tờ báo còn nói rằng trong khi Google vẫn đang thực hiện những bản mô tả kỹ thuật chi tiết, họ đã trình diễn sản phẩm mẫu cho các nhà sản xuất điện thoại di động và nhà mạng. Tháng 9/2007, InformationWeek đăng tải một nghiên cứu của Evalueserve cho biết Google đã nộp một số đơn xin cấp bằng sáng chế trong lĩnh vực điện thoại di động.
+    Ngày 5 tháng 11 năm 2007, Liên minh thiết bị cầm tay mở (Open Handset Alliance), một hiệp hội bao gồm nhiều công ty trong đó có Texas Instruments, Google, HTC, tập đoàn Broadcom,  Intel, LG, Motorola, Nvidia, Qualcomm, Samsung Electronics, Sprint Nextel, tập đoàn Marvell Technology và T-Mobile được thành lập với mục đích phát triển các tiêu chuẩn mở cho thiết bị di động. Cùng ngày, Android cũng được ra mắt với vai trò là sản phẩm đầu tiên của Liên minh, một nền tảng thiết bị di động được xây dựng trên nhân Linux phiên bản 2.6. Chiếc điện thoại chạy Android đầu tiên được bán ra là HTC Dream, phát hành ngày 22 tháng 10 năm 2008. Biểu trưng của hệ điều hành Android mới là một con rôbốt màu xanh lá cây do hãng thiết kế Irina Blok tại California vẽ.
+    Từ năm 2008, Android đã trải qua nhiều lần cập nhật để dần dần cải tiến hệ điều hành, bổ sung các tính năng mới và sửa các lỗi trong những lần phát hành trước. Mỗi bản nâng cấp được đặt tên lần lượt theo thứ tự bảng chữ cái, theo tên của một món ăn tráng miệng; ví dụ như phiên bản 1.5 Cupcake (bánh bông lan nhỏ có kem) tiếp nối bằng phiên bản 1.6 Donut (bánh vòng). Phiên bản mới nhất hiện nay là 6.0 Marshmallow (kẹo dẻo) và 7.0 Nougat Beta. Vào năm 2010, Google ra mắt loạt thiết bị Nexus - một dòng sản phẩm bao gồm điện thoại thông minh và máy tính bảng chạy hệ điều hành Android, do các đối tác phần cứng sản xuất. HTC đã hợp tác với Google trong chiếc điện thoại thông minh Nexus đầu tiên, Nexus One. Kể từ đó nhiều thiết bị mới hơn đã gia nhập vào dòng sản phẩm này, như điện thoại Nexus 4 và máy tính bảng Nexus 10, lần lượt do LG và Samsung sản xuất. Google xem điện thoại và máy tính bảng Nexus là những thiết bị Android chủ lực của mình, với những tính năng phần cứng và phần mềm mới nhất của Android.
+2.1.3 Kiến trúc hệ điều hành android
+    Kiến trúc hệ điều hành Android gồm 4 phần chính, mô hình dưới đây sẽ cho ta cái nhìn tổng quan về kiến trúc Android. Nhân của Android được phát triển dựa vào Kernel Linux 2.6. Mỗi tầng trong kiến trúc Android hoạt động dựa vào tầng bên dưới nó.
+
+Hình 1: Kiến trúc hệ điều hành Android.
+    Có thể ban đầu bạn thấy sơ đồ hơi rối mắt nhưng không sao, chúng ta sẽ lần lượt tìm hiểu theo thứ tự từ dưới lên.
+Nhân Linux (Linux kernel)
+    Nằm ở tầng dưới cùng là lớp Linux kernal – Linux 3.6 với khoảng 115 patches. Lớp này liên hệ với phần cứng và nó chứa tất cả driver phần cứng cần thiết như camera, bàn phím, màn hình…
+Thư viện Android (Android libraries) và Android Runtime
+    Phía trên tầng Linux kernel là tầng libraries, chứa những thư viện hỗ trợ. Một số có thể kể đến như là bộ máy trình duyệt web mã nguồn mở WebKit, thư viện libc, cơ sở dữ liệu SQLite tiện lợi cho việc lưu trữ và chia sẻ dữ liệu, thư viện hỗ trợ thu phát âm thanh và video, thư viện SSL giúp bảo mật mạng…
+    Tầng này chứa tất cả các thư viện Java, được viết đặc biệt cho Android như các thư viện framework, các thư viện xây dựng giao diện, đồ họa và cơ sở dữ liệu. Dưới đây là một số thư viện quan trọng mà các lập trình viên nên biết:
+• android.app − Cung cấp quyền truy cập tới mô hình ứng dụng và là nền tảng của mọi ứng dụng Android applications.
+• android.content − Cho phép truy cập nội dung, phát hành và tin nhắn giữa các ứng dụng và các thành phần trong một ứng dung.
+• android.database − Được dùng để truy cập vào dữ liệu được đưa ra bởi bộ phận cung cấp nội dung, bao gồm các lớp quản lý cơ sở dữ liệu SQLite.
+• android.opengl − Cho phép tương tác với thư viện đồ họa OpenGL ES 3D.
+• android.os − Giúp ứng dụng truy cập những dịch vụ cơ bản của hệ điều hành bao gồm tin nhắn, dịch vụ hệ thống và liên lạc nội bộ (inter-process communication).
+• android.text − Được dùng để vẽ và thao tác văn bản trên màn hình.
+• android.view − Các khối xây dựng cơ bản của giao diện người dùng.
+• android.widget − Một tập hợp rất nhiều thành phần giao diện được xây dựng sẵn như nút bấm (button), nhãn (label), danh sách hiển thị (list views), quản lý bố cục (layout managers)…
+• android.webkit − Tập hợp các lớp (classes) cho phép trình duyệt web được nhúng vào ứng dụng.
+    Trong tầng này còn có một phần không kém phần quan trọng là Android runtime, bây giờ chúng ta sẽ tìm hiểu các thư viện C/C++ trong tầng này.
+    Android Runtime chứa Dalvik Virtual Machine (DVM) – một biến thể của Java Virtual Machine, đặc biêt thiết kế và tối ưu hóa cho Android. DVM giúp mỗi ứng dụng Android chạy trong chính tiến trình (process) của nó với một đại diện (instance) của DVM.
+    Ngoài ra, Android Runtime cũng chứa tập hợp các thư viện quan trong cho phép người lập trình viết ứng dụng sử dụng ngôn ngữ lập trình Java.
+Application Framework
+    Application Framework cung cấp nhiều dịch vụ cấp cao dưới dạng các lớp viết bằng Java (Java classes) Lập trình viên được phép sử dụng các lớp này để tạo ra các ứng dụng.
+    Android framework chứa các dịch vụ quan trọng như:
+• Activity Manager − Quản lý tất cả các phần của vòng đời (lifecycle) ứng dụng và các hoạt động ngăn xếp (activity stack).
+• Content Providers − Cho phép ứng dụng phát hành và chia sẻ dữ liệu với ứng dụng khác.
+• Resource Manager − Cho phép truy cập tới những tài nguyên không phải là mã nguồn như chuỗi, cài đặt màu, bố cục giao diện.
+• Notifications Manager − Giúp ứng dụng hiển thị thông báo và nhắc nhở người dùng.
+• View System − Một tập hợp mở rộng giúp tạo giao diện người dùng.
+Ứng dụng (applications)
+Ở tầng trên cùng là các ứng dụng Android đi kèm với hệ điều hành như Contacts Books, Browser, Games… Thiết nghĩ không cần nói nhiều thêm về tầng này.
+2.2. Tổng quan về  SQLite
+2.2.1. Khái niệm  SQlite 
+  Nói một cách đơn giản SQLite là phần mềm quản lý cơ sở dữ liệu (DBMS) tương tự như Mysql, PostgreSQL... Đặc điểm của SQLite là gọn, nhẹ, đơn giản. Chương trình gồm 1 file duy nhất vỏn vẹn chưa đến 400kB, không cần cài đặt, không cần cấu hình hay khởi động mà có thể sử dụng ngay. Dữ liệu Database cũng được lưu ở một file duy nhất. Không có khái niệm user, password hay quyền hạn trong SQLite Database.
+  SQLite không thích hợp với những hệ thống lớn nhưng ở quy mô vừa tầm thì SQLite phát huy uy lực và không hề yếu kém về mặt chức năng hay tốc độ. Với các đặc điểm trên SQLite được sử dụng nhiều trong việc phát triển, thử nghiệm … và là sự lưa chọn phù hợp cho những người bắt đầu học Database.
+  SQLite Engine không là một Standalone Process giống như các cơ sở dữ liệu khác, bạn có thể liên kết nó một cách tĩnh hoặc một cách động tùy theo yêu cầu với ứng dụng của bạn. SQLite truy cập các file lưu giữ của nó một cách trực tiếp…
+2.2.2. Tại sao nên sử dụng SQLite.
+- SQLite không yêu cầu một tiến trình Server riêng rẽ để hoạt động.
+- SQLite không cần cấu hình, nghĩa là không cần thiết phải cài đặt.
+- Một SQLite Database đầy đủ được lưu giữ trong một disk file đơn.
+- SQLite là rất nhỏ gọn, nhỏ hơn 400kB đã đươc cấu hình đầy đủ hoặc nhỏ hơn 250kB khi đã bỏ qua các tính năng tùy ý.
+- SQLite là tự chứa, nghĩa là không có sự phụ thuộc vào ngoại vi.
+- Các Transaction trong SQLite là tuân theo đầy đủ chuẩn ACID, đảm bảo truy cập an toàn từ nhiều tiến trình hoặc thread.
+- SQLite hỗ trợ hầu hết các tính năng của một ngôn ngữ truy vấn trong chuẩn SQL92.
+- SQLite được viết bằng ANSI-C và cung cấp API đơn giản và dễ dàng sử dụng.
+- SQLite là có sẵn trên UNIX (Linux, Mac OS-X, Android, iOS) và Windows (Win32, WinCE, WinRT).
+2.2.3.  SQLite trong android.
+      Là cơ sở dữ liệu nhỏ tương tự như MySQL, SQL server… với đặc điểm là nhỏ , gọn và nhẹ. Trong lập trình android thì SQLite sẽ được lưu trong ổ đĩa của thiết bị chứ không phải lưu trên server hay bất kì nơi nào khác.
+      SQLite được nhúng trong các thiết bị Android, sử dụng một cơ sở dữ liệu SQLite trong Android. Không yêu cầu thủ tục thiết lập hoặc quản lý cơ sở dữ liệu.
+      Bạn chỉ phải xác định các câu lệnh SQL để tạo và cập nhật cơ sở dữ liệu. Sau đó các cơ sở dữ liệu được quản lý tự động cho bạn bởi các nền tảng Android.
+      Nếu ứng dụng của bạn tạo ra một cơ sở dữ liệu, cơ sở dữ liệu này mặc định được lưu trong thư mục DATA/data/APP_NAME/databases/FILENAME.
+      Việc truy vấn trong SQLite sẽ tương tự như các hệ cơ sở dữ liệu khác nên bạn sẽ không phải gặp khó khăn gì khi sử dụng và bạn cũng chẳng cần user, mật khẩu khi truy cập vào trong database gì cả.
+2.2.4.  SQLite được sử dụng khi nào?
+    Nó được sử dụng khi yêu cầu bài toán đưa ra là hãy lưu những dữ liệu lớn ở dạng Object, dạng text… xuống thiết bị để có thể lấy ra bất kỳ khi nào.Dữ liệu lớn là dữ liệu nhiều chứ không phải là nặng. Vì dữ kiệu dạng text, object nên lưu xuống sẽ nhẹ.
+    Do SQLite được tích hợp trong thiết bị android nên khả năng lưu trữ sử liệu chỉ khoảng vài ngàn dòng. Nếu CSDL quá lớn sẽ khiến ứng dụng android chạy chậm.
+
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Phát biểu bài toán
+   3.1.1 Khái quát
+   Trẻ em rất hiếu động và thích được vui chơi. Việc ngồi học bảng chữ cái trên giấy hay đếm những con số sẽ dễ khiến cho trẻ em nhanh chán và không tập trung. Ở trường các bé được cô giáo dạy học bảng chữ cái và số trên những trang giấy bìa lớn và bảng, học đọc và học viết trên vở. Về nhà được ông, bà, bố, mẹ ... dạy học giống như ở trường. Việc học như vậy có thể không tạo ra hứng thú học tập cho các em.
+   Thực tế, ở nhà bố mẹ không có thời gian sát sao dạy bé học, ở lớp giáo viên quản lý rất nhiều học sinh nên việc kích thích khả năng học tập cho các em trong cùng một lớp là rất khó. Vậy tại sao chúng ta không nghĩ đến việc tạo ra một phần mềm ứng dụng trên điện thoại di động để có thể vừa hỗ trợ phụ huynh và giáo viên trong việc dạy học trẻ vừa kích thích hứng thú học tập cho trẻ, giúp các em rèn luyện kiến thức 1 cách tốt nhất. 
+   Thế kỉ 21 là thế kỉ của công nghệ thông tin phát triển mạnh mẽ. Việc ứng dụng công nghệ thông tin vào đời sống là vô cùng cần thiết. Nếu bỏ qua việc phát triển giáo dục trên thiết bị di động thì thực sự là một thiếu sót lớn. Bởi tính ứng dụng và tiện lợi của điện thoại là vô cùng hữu ích. Bạn có thể học mọi lúc, mọi nơi và dễ dàng mang theo bên mình. 
+    Để đáp ứng được các yêu cầu đó em đã khảo sát và phân tích các yêu cầu để xây dựng “Ứng dụng học Tiếng Việt cho trẻ em 3-5 tuổi trên hệ điều hành Android”.
+3.1.2 Phát biểu bài toán
+a) Tổng quan về hệ thống
+    Ứng dụng giúp cho người dùng có thể học mọi lúc, mọi nơi và không nhất thiết phải có internet. Ứng dụng cung cấp chức năng học tập, ôn tập và tập viết. Chức năng học tập giúp bé học và ghi nhớ bảng chữ cái và số. Chức năng ôn tập sẽ có những câu hỏi nhỏ để giúp bé ghi nhớ bài học một cách dễ dàng hơn. Chức năng tập viết sẽ giúp bé biết viết đúng các chữ cái và số theo quy tắc. 
+    Ứng dụng có giao diện hài hòa, đơn giản, dễ sử dụng. 
+b) Mục tiêu chính của hệ thống
+    “Ứng dụng học Tiếng Việt cho trẻ em 3-5 tuổi trên hệ điều hành Android”  cần đạt được những mục tiêu sau:
+1. Ứng dụng có giao diện đẹp mắt, hài hòa phù hợp với lứa tuổi 3-5 tuổi.
+2. Có chức năng học bảng chữ cái và số.
+3. Có chức năng ôn tập để kiểm tra khả năng ghi nhớ của trẻ.
+4. Có chức năng tập viết để bé làm quen với cách viết bảng chữ cái và số. Có hướng dẫn nét vẽ theo từng chữ hoặc số.
+5. Ứng dụng chạy ổn định
+c) Môi trường phát triển
+- Hệ điều hành windows XP hoặc cao hơn.
+- Phần mềm Android studio 2.0 trở lên.
+- Bộ cài UML.
+- SQLite Manager.
+3.2 Phân tích hệ thống
+3.2.1 Yêu cầu chức năng.
+Bảng 1: Các yêu cầu chức năng
+STTTên chức năngMô tả1Giao diện chínhGiao diện chính của ứng dụngChữ cáiNhận biết chữ cái trong bảng chữ cáiHọc sốNhận biết số đếm trong bảng chữ cáiKiểm traKiểm tra về chữ cái và sốTập viếtTập viết bảng chữ cái và số.2Giao diện chức năngDành cho người sử dụngHọc chữ cáiGiao diện học chữ cái và các ví vụ minh họaHọc sốGiao diện học số và các ví vụ minh họaKiểm tra sốGiao diện kiểm tra số đếmKiểm tra chữGiao diện kiểm tra nhận biết chữTập viếtGiao diện tập viết chữ cái và số.
+3.2.2 Biểu đồ Use-case
+3.2.2.1 Danh sách các Use-case
+    Qua khảo sát hiện trạng thực tế, kết hợp với việc tham khảo tài liệu và phân tích ý kiến của người dùng, hệ thống có các use case sau:
+Bảng 2: Danh sách các use case.
+STTTên UseCaseActor liên quanGhi chú1Nhận biếtActor_NguoidungBao gồm nhận biết chữ cái và nhận biết số đếm.2Kiểm traActor_NguoidungBao gồm kiểm tra chữ cái và kiểm tra số đếm.3Tập viếtActor_NguoidungTập viết chữ-số.
+
+
+3.2.2.2  Danh sách các Use-case
+3.2.2.3  Biểu đồ use case tổng quát. 
+
+Hình 2: Use case tổng quát.
+3.2.2.4  Đặc tả Use-case 
+A, Use case nhận biết.
+
+Hình 3: Use case (mức phân rã) của Use case nhận biết
+
+
+-  Đặc tả Usce ”Nhận biết”:
+* Tác nhân:  Actor_Nguoidung.
+* Mô tả: người dùng có quyền sử dụng chức năng này để nhận biết về bảng chữ cái và số.
+o Nhận biết bảng chữ cái: Hình ảnh, âm thanh chữ cái, ví dụ minh họa.
+o Nhận biết số: Hình ảnh, âm thanh, minh họa.
+- Dòng sự kiện chính:
+Hành động của tác nhânPhản ứng của hệ thống
+
+
+
+
+
+Nhận biết chữ cái1.Người dùng chọn chức năng nhận biết chữ cái.
+
+
+
+
+3.Người dùng nhấn vào hình ảnh của chữ cái hoặc hình ảnh minh họa.
+5.Người dùng nhấn vào nút next .
+7.Người dùng nhấn nút back.
+9. .Người dùng nhấn nút exit.2.Hiển thị chữ cái A đầu tiên lên màn hình: Hệ thống lấy thông tin gồm: tên chữ cái, hình ảnh, âm thanh của chữ cái và hình ảnh, âm thanh, tên của các con vật, đồ vật minh họa liên quan.
+4.Phát ra âm thanh tương ứng.
+
+
+6.Hệ thống load chữ cái tiếp theo  
+
+8.Hệ thống load chữ cái trước đó
+8. Trở về màn hình chính.
+
+
+Hành động của tác nhânPhản ứng của hệ thống
+
+
+
+Nhận biết
+số1.Người dùng chọn chức năng nhận biết số.
+
+
+3.Người dùng nhấn vào số.
+
+5.Người dùng nhấn vào nút next.
+7.Người dùng nhấn vào nút next.
+9.Người dùng nhấn nút thoát.2.Hiển thị số 0 đầu tiên lên màn hình: Hệ thống lấy thông tin gồm: hình ảnh, âm thanh của số và hình ảnh, âm thanh của ví dụ minh họa.
+4.Hệ thống load âm thanh của số đang hiển thị.
+6. Hệ thống load số tiếp theo.
+8. Hệ thống load số tiếp theo.
+10.Ứng dụng trở về màn hình chính.
+- Dòng sự kiện phụ: 
+* Không có.
+* Yêu cầu đặc biệt: Không.
+B, Use case Kiểm tra.
+
+Hình 4: Use case Kiểm tra.
+-  Đặc tả Usce ”Kiểm tra”:
+- Tác nhân: Actor_NguoiDung
+- Tóm lược: người dùng sử dụng chức năng kiểm tra để ôn tập khả năng nhận biết đã học.
+
+
+- Dòng sự kiện chính:
+Hành động của tác nhânPhản ứng của hệ thống
+
+Kiểm tra chữ cái1.Người dùng chọn chức năng kiểm tra chữ cái.
+3.Người dùng chọn đáp án.
+
+
+6.Người dùng nhấn nút thoát.2. Hệ thống lấy thông tin câu hỏi gồm: câu hỏi, đáp án. Hiển thị câu hỏi và 6 đáp án lên màn hình.
+4.Hệ thống kiểm tra đáp án:
+- Đúng: âm thanh tán thưởng.
+- Sai: âm thanh báo sai.
+5. Hệ thống load câu hỏi tiếp theo, quay lại 3.
+7.Trở về màn hình chính.
+Hành động của tác nhânPhản ứng của hệ thống
+
+Kiểm tra
+số1.Người dùng chọn chức năng kiểm tra số.
+
+3.Người dùng chọn đáp án.
+
+
+6.Người dùng nhấn nút thoát.2. Hệ thống lấy thông tin câu hỏi gồm: câu hỏi, đáp án. Hiển thị câu hỏi và 4 đáp án lên màn hình.
+4.Hệ thống kiểm tra đáp án:
+- Đúng: âm thanh tán thưởng.
+- Sai: âm thanh báo sai.
+5. Hệ thống load câu hỏi tiếp theo, quay lại 3.
+7.Trở về màn hình chính.- Dòng sự kiện phụ: 
++ Không có
+- Yêu cầu đặc biệt
++ Không có
+
+
+C, Use case tập viết.
+
+Hình 5: Use case tập viết.
+-  Đặc tả Usce ”Tập viết”:
+- Tác nhân: Nguoi_dung
+- Tóm lược: Người dùng sử dụng chức năng tập viết để tập viết bảng chữ cái và số.
+Dòng sự kiện chính:
+
+Hành động của tác nhânPhản ứng của hệ thống
+
+Tập viết
+chữ1.Người dùng chọn chức năng tập viết chữ. 
+3.Người dùng tô chữ theo mẫu đang hiển thị.
+5.Người dùng nhấn nút next.
+
+7.Người dùng nhấn nút back.
+9.Người dùng nhấn nút reset.
+11.Người dùng nhấn nút thoát.2. Hệ hiển thị chữ A đầu tiên.
+
+4. Hiển thị nét chữ của người dùng.
+6. Hệ thống hiển thị chữ cái tiếp theo.
+8. Hệ thống hiển thị chữ cái trước đó
+10.Hệ thống set lại hình ảnh mẫu.
+12.Trở về màn hình chính.
+
+
+Hành động của tác nhânPhản ứng của hệ thống
+
+Tập viết
+số1.Người dùng chọn chức năng tập viết số. 
+3.Người dùng tô chữ theo mẫu đang hiển thị.
+5.Người dùng nhấn nút next.
+7.Người dùng nhấn nút back.
+9.Người dùng nhấn nút reset.
+11.Người dùng nhấn nút thoát.2. Hệ hiển thị số 0 đầu tiên.
+
+4. Hiển thị nét chữ của người dùng.
+6. Hệ thống hiển thị số tiếp theo.
+8. Hệ thống hiển thị số trước đó.
+10.Hệ thống set lại hình ảnh mẫu.
+12.Trở về màn hình chính.
+- Dòng sự kiện phụ: 
+- Không có
+- Yêu cầu đặc biệt
+- Không có
+
+
+3.2.3 Biểu đồ tuần tự.
+3.2.3.2  Biểu đồ tuần tự chức năng học chữ.
+
+Hình 6: Biểu đồ tuần tự chức năng học chữ.
+- Mô tả: Khi người dùng yêu cầu chức năng học chữ cái, hệ thống sẽ hiển thị giao diện học chữ cái. Hệ thống load lên chữ A, hình ảnh minh họa và âm thanh của chữ cái đầu tiên-chữ A.
+- Người dùng click vào chữ A hoặc hình ảnh minh họa, hệ thống sẽ load lên âm thanh tương ứng.
+- Người dùng chọn Next => Hệ thống load số tiếp theo. 
+- Người dùng chọn Back => Hệ thống load số trước đó.
+- Người dùng chọn quay lại => Hệ thống thoát chức năng
+
+
+3.2.3.3  Biểu đồ tuần tự chức năng học số.
+
+Hình 7: Biểu đồ tuần tự chức năng học số.
+- Mô tả: Khi người dùng yêu cầu chức năng học số, hệ thống sẽ hiển thị giao diện học số. Hệ thống load lên số 0, hình ảnh minh họa và âm thanh. 
+- Người dùng chọn Next => Hệ thống load số tiếp theo. 
+- Người dùng chọn Back => Hệ thống load số trước đó.
+- Người dùng chọn quay lại => Hệ thống thoát chức năng
+
+
+3.2.3.4  Biểu đồ tuần tự chức năng kiểm tra chữ.
+
+Hình 8: Biểu đồ tuần tự chức năng kiểm tra chữ.
+- Khi người dùng yêu cầu chức năng kiểm tra chữ, hệ thống sẽ hiển thị giao diện kiểm tra chữ. Hệ thống load lên câu hỏi, hình ảnh minh họa và âm thanh và đáp án tương ứng. 
+- Người dùng chọn đúng đáp án => Hệ thống phát âm thanh tán thường đồng thời chuyển câu hỏi tiếp theo.
+- Người dùng chọn sai đáp án => Hệ thống phát âm thanh báo sai đồng thời chuyển câu hỏi tiếp theo.
+- Người dùng chọn quay lại => Hệ thống thoát chức năng.
+
+
+3.2.3.5  Biểu đồ tuần tự chức năng kiểm tra số.
+
+
+Hình 9: Biểu đồ tuần tự chức năng kiểm tra số.
+- Khi người dùng yêu cầu chức năng kiểm tra số, hệ thống sẽ hiển thị giao diện kiểm tra số. Hệ thống load lên câu hỏi, hình ảnh minh họa và âm thanh và đáp án tương ứng.
+- Người dùng chọn đúng đáp án => Hệ thống phát âm thanh tán thường đồng thời chuyển câu hỏi tiếp theo.
+- Người dùng chọn sai đáp án => Hệ thống phát âm thanh báo sai đồng thời chuyển câu hỏi tiếp theo.
+- Người dùng chọn quay lại => Hệ thống thoát chức năng.
+
+
+3.2.3.6  Biểu đồ tuần tự chức năng tập viết.
+
+Hình 10: Biểu đồ tuần tự chức năng tập viết.
+- Khi người dùng yêu cầu chức năng tập viết, hệ thống sẽ hiển thị giao diện tập viết. Hệ thống load lên hình ảnh mẫu.
+- Người dùng chọn tô theo mẫu chữ hiển thị => Hệ thống hiển thị nét vẽ của người dùng vẽ.
+- Người dùng chọn Next => Hệ thống hiển thị chữ tiếp theo.
+- Người dùng chọn Back => Hệ thống hiển thị chữ trước đó
+- Người dùng chọn Reply => Hệ thống set lại chữ mẫu.
+3.2.4 Biểu đồ lớp.
+    Biểu đồ lớp mô tả các lớp, là các viên gạch để xây dựng bất kì hệ thống hướng đối tượng nào.Khả năng cộng tác giữa chúng, bằng cách truyền thông điệp, được chỉ ra trong các mối quan hệ giữa chúng.
+    Biểu đồ lớp cho ta một khung nhìn tĩnh của các lớp trong mô hình hoặc một phần của mô hình. Nó chỉ cho ta thấy các thuộc tính và các thao tác của lớp, cũng như các loại quan hệ giữa các lớp.Biểu đồ lớp giống như một tấm bản đồ, với các lớp là các thành phố còn các mối quan hệ là các đường nối giữa chúng.
+3.2.4.1 Biểu đồ lớp mức phân tích
+• Xác định các lớp
+    Từ việc phân tích biểu đồ UseCase ta có các đối tượng sau:
+    - Chữ cái: Lưu thông tin và ví dụ minh họa của chữ cái.
+    - Kiểm tra chữ cái: Lưu thông tin câu hỏi và đáp án ôn tập của chữ cái.
+    - Số: Lưu thông tin và ví dụ minh họa của số.
+    - Kiểm tra số: Lưu thông tin câu hỏi và đáp án ôn tập của số.
+    - Tập viết: Lưu thông tin chữ và số để tập viết.
+• Thể hiện biểu đồ lớp
+
+Hình 11: Biểu đồ lớp mức phân tích.
+
+
+3.2.4.2 Thiết kế cơ sở dữ liệu của hệ thống.
+a) Bảng chữ cái.
+Lưu trữ thông tin về chữ cái, hình ảnh, âm thanh và minh họa.
+Bảng 3: Bảng chữ cái.
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú.1idintKhóa chínhid của chữ cái2Chữ cáiText Not nullHình ảnh chữ cái3Tên chữ cáiTextNot nullTên của chữ cái.4Hình ảnh 1TextNot nullHình ảnh minh họa 15Hình ảnh 2TextNot nullHình ảnh minh họa 26Hình ảnh 3TextNot nullHình ảnh minh họa 37Hình ảnh 4TextNot nullHình ảnh minh họa 48Tên 1TextNot nullTên minh họa 19Tên 2TextNot nullTên minh họa 210Tên 3TextNot nullTên minh họa 311Tên 4TextNot nullTên minh họa 4
+
+b) Bảng kiểm tra chữ cái.
+    Lưu trữ thông tin câu hỏi về chữ cái, hình ảnh và các đáp án.
+Bảng 4: Bảng kiểm tra chữ cái.
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú.1idintKhóa chínhid của chữ cái2Câu hỏiText Not nullHình ảnh chữ cái3Hình ảnh 1TextNot nullHình ảnh minh họa 14Hình ảnh 2TextNot nullHình ảnh minh họa 25Hình ảnh 3TextNot nullHình ảnh minh họa 36Hình ảnh 4TextNot nullHình ảnh minh họa 47Hình ảnh 5TextNot nullHình ảnh minh họa 58Hình ảnh 6TextNot nullHình ảnh minh họa 69Tên 1Text Null Tên minh họa 110Tên 2TextnullTên minh họa 211Tên 3TextnullTên minh họa 312Tên 4TextnullTên minh họa 413Tên 5TextnullTên minh họa 514Tên 6 TextnullTên minh họa 6
+
+c) Bảng số.
+Lưu trữ thông tin thông tin số, hình ảnh, âm thanh và minh họa số.
+Bảng 5: Bảng số.
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú.1SốintKhóa chínhId của số.2Text Text Not nullTên của số.3Hình ảnh TextNot nullHình ảnh của số.
+d) Bảng kiểm tra số.
+Lưu trữ thông tin câu hỏi, đáp án và minh họa vê số.
+Bảng 6: Bảng kiểm tra số.
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú.1IdintKhóa chínhId câu hỏi.2Câu hỏi Text Not nullNội dung câu hỏi.3Đáp án 1 TextNot nullĐáp án 1.4Đáp án 2TextNot nullĐáp án 2.5Đáp án 3TextNot nullĐáp án 3.6Đáp án 4TextNot nullĐáp án 4.7Đáp án đúngTextNot nullĐáp án đúng.
+
+e) Bảng tập viết.
+Lưu trữ thông tin hình ảnh mẫu để người dùng tập viết.
+Bảng 7: Bảng tập viết.
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú.1idintKhóa chínhId của chữ cái/số2Text Text Not nullTên của chữ cái/số.3Hình ảnh TextNot nullHình ảnh mẫu để tập viết
+3.3.2 Thiết Kê Giao Diện
+3.3.2.1 Giao Diện Chính Của Ứng Dụng.
+
+Hình 12: Giao diện chính của ứng dụng.
+Mô tả giao diện.
+STTTên controllLoạiSự kiệnÝ nghĩa1HocChuButtonClickĐến giao diện học chữ cái.2HocSo ButtonClickĐến giao diện học số.3TapViet ButtonClickĐến giao diện kiểm tra.4KiemTraButtonClick Đến giao diện tập viết.3.3.2.2 Giao Diện học Chữ.
+
+Hình 13: Giao diện học chữ.
+Mô tả giao diện.
+STTTên controllLoạiSự kiệnÝ nghĩa1iconMenuButtonclickĐến giao diện chính2next_leftButtonclickLoad chữ cái phía trước 3next_rightButtonclickLoad chữ cái phía sau 4imgChuImageViewclickLoad hình ảnh chữ cái5img1ImageViewclickLoad hình ảnh minh họa 16img2ImageViewclickLoad hình ảnh minh họa 27img3ImageViewclickLoad hình ảnh minh họa 38img4ImageViewclickLoad hình ảnh minh họa 49txt1TextViewLoad tên hình ảnh minh họa 110txt2TextViewLoad tên hình ảnh minh họa 211txt3TextViewLoad tên hình ảnh minh họa 312txt4TextViewLoad tên hình ảnh minh họa 4
+3.3.2.3 Giao Diện Học Số.
+
+Hình 14: Giao diện học số.
+Mô tả giao diện.
+STTTên controllLoạiSự kiệnÝ nghĩa1imgSoImageViewclickLoad chữ số/âm thanh2imageViewImageViewLoad hình ảnh minh họa 13imageView2ImageViewLoad hình ảnh minh họa 24imageView3ImageViewclickLoad hình ảnh minh họa 35imageView4ImageViewLoad hình ảnh minh họa 46imageView5ImageViewclickLoad hình ảnh minh họa 57imageView6ImageViewLoad hình ảnh minh họa 68imageView7ImageViewLoad hình ảnh minh họa 79imageView8ImageViewLoad hình ảnh minh họa 810imageView9ImageViewLoad hình ảnh minh họa 9
+
+
+3.3.2.4 Giao Diện Kiểm tra.
+
+Hình 15: Giao diện kiểm tra.
+Mô tả giao diện.
+STTTên controllLoạiSự kiệnÝ nghĩa1imgSoButtonclickĐến giao diện kiểm tra số2imageViewButtonclickĐến giao diện kiểm tra chữ
+
+
+3.3.2.5 Giao Diện Kiểm Tra Số.
+
+Hình 16: Giao diện kiểm tra số.
+STTTên controllLoạiSự kiệnÝ nghĩa1imageView1ImageViewLoad hình ảnh minh họa 12imageView2ImageViewLoad hình ảnh minh họa 23imageView3ImageViewLoad hình ảnh minh họa 34imageView4ImageViewLoad hình ảnh minh họa 45imageView5ImageViewLoad hình ảnh minh họa 56imageView6ImageViewLoad hình ảnh minh họa 67imageView7ImageViewLoad hình ảnh minh họa 78imageView8ImageViewLoad hình ảnh minh họa 89imageView9ImageViewLoad hình ảnh minh họa 910Btn1Button clickLoad đáp án 111Btn2ButtonclickLoad đáp án 212Btn3ButtonclickLoad đáp án 313Btn4ButtonClick Load đáp án 43.3.2.6 Giao Diện Kiểm Tra Chữ Cái.
+
+
+Hình 17: Giao diện kiểm tra chữ cái.
+Mô tả giao diện.
+STTTên controllLoạiSự kiệnÝ nghĩa1imageButtonImageButtonclickTrở về màn hình chính2txtCauHoiTextViewLoad câu hỏi3img1ImageViewclickLoad hình ảnh đáp án 14img2ImageViewclickLoad hình ảnh đáp án 25img3ImageViewclickLoad hình ảnh đáp án 36img4ImageViewclickLoad hình ảnh đáp án 47Img5ImageViewclickLoad hình ảnh đáp án 58Img6TextViewclickLoad hình ảnh đáp án 69txt1TextViewLoad tên hình ảnh đáp án 110txt2TextViewLoad tên hình ảnh đáp án 211txt3TextViewLoad tên hình ảnh đáp án 312txt4TextViewLoad tên hình ảnh đáp án 413txt5TextViewLoad tên hình ảnh đáp án 514txt6TextViewLoad tên hình ảnh đáp án 6
+3.3.2.7 Giao Diện Tập Viết.
+    
+    
+Hình 18: Giao diện tập viết.
+STTTên controllLoạiSự kiệnÝ nghĩa1ImageViewImageViewLoad ảnh tập viết.2iconSoundButtonclickLoad nhạc nền3BtnBackImageViewclickLoad hình ảnh tiếp theo.4BtnNextImageViewclickLoad hình ảnh trước đó.5BtnReloadImageViewclickXóa các nét đã vẽ trước đó.3.3 Cài đặt và triển khai hệ thống
+- Ứng dụng đã cài đặt thành và chạy thành công trên điện thoại di động.
+
+
+CHƯƠNG 4: KẾT LUẬN
+4.1. Kết quả đạt được
+    Quá trình nghiên cứu và thực hiện cài đặt ứng dụng theo sự khảo sát và yêu cầu của người dùng em đã hoàn thành và đạt một số kết quả sau:
+- Về mặt giao diện
+• Thiết kế được “Ứng dụng học Tiếng Việt cho trẻ từ 3 đến 5 tuổi trên hệ điều hành Android” có giao diện thân thiện với người sử dụng.
+• Bố cục giao diện: cân đối, hài hòa, phù hợp với nội dung hiển thị của ứng dụng.
+• Màu sắc hài hòa, trang nhã giúp cho người dùng không mỏi mắt.
+- Về mặt chức năng ứng dụng
+• Cung cấp được chức năng nhận biết chữ và nhận biết số.
+• Cung cấp được chức năng kiểm tra chữ và số.
+• Cung cấp được chức năng tập viết.
+- Về mặt dữ liệu
+• Dữ liệu nhận biết bảng chữ cái đủ 29 chữ và 10 số tự nhiên.
+• Dữ liệu kiểm tra đủ 160 câu.
+• Dữ liệu tập viết bảng chữ cái đủ 29 chữ và 10 số tự nhiên.
+- Thông qua nghiệp vụ kết hợp với mục đích thực hiện tin học hóa, mô tả chức năng của từng hệ thống, xây dựng các biểu đồ UML hệ quản trị cơ sở dữ liệu SQLite.
+- Xây dựng chương trình thông qua kết quả thu thập được qua quá trình khảo sát, phân tích hệ thống và đặc tả giao diện.
+- Yêu cầu về khả năng thay đổi, bảo trì :
+• Nội dung có thể sửa đổi được.
+• Dễ thay đổi và bảo trì.
+• Có thể nâng cấp lên các cấp học cao hơn.
+
+
+4.2. Hướng phát triển
+    Trong thời gian nghiên cứu và thực hiện đề tài, em đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+- Phần học chữ: các ví dụ minh họa có chứa từ cần minh họa được tô màu nổi bật để bé dễ nhận biết.
+Ví dụ: Chữ A minh họa quả na, con cá, con dao, cái áo. 
+- Phần tập viết: cho phép bé viết theo mẫu có sẵn, kiểm tra bé vẽ đúng theo thứ tự hay sai. Bổ sung các nét vẽ cơ bản cho bé.
+- Phần mềm: có thể update tự động từ server khi có phiên bản mới.
+
+TÀI LIỆU THAM KHẢO
+1. Hoàng Quốc Việt, "Lập Trình android cơ bản" 
+2. Nguyễn Thị Hải Năng, " Lập trình đa phương tiện"
+3. Harvey M. Deitel, Paul J. Deitel “How To program java 8th”, amazon,2008
+4. Khoa Phạm, “TextTospeech”. 
+5. Bộ sách Công nghệ giáo dục, “https://bigschool.vn/danh-van-tieng-viet-theo-sach-cong-nghe-giao-duc”
+Xây dựng ứng dụng học Tiếng Việt cho trẻ em 3-5 tuổi trên hệ điều hành Android.
+    
+
+37
+    
+

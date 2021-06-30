@@ -1,0 +1,598 @@
+﻿1.1 Lý do chọn đề tài
+      Sản phẩm cửa nhôm kính là một mặt hàng bán chạy trên thị trường hiện nay.Các công trình kiến trúc nhà cửa liên tục mọc lên, tạo ra nguồn tiêu thụ sản phẩm cửa nhôm kính rất lớn. Bên cạnh đó, yêu cầu của khách hàng về sản phẩm cũng như dịch vụ ngày càng nhiều hơn bởi vì rất nhiều những cửa hàng bán sản cửa nhôm kính mọc lên, tạo ra sự cạnh tranh là rất lớn
+      Một website trưng bày và giới thiệu cửa nhôm kính sẽ giúp cho sản phẩm tiếp cận được với người tiêu dùng dễ dàng hơn. Họ có thể lựa chọn những sản phẩm hợp với không gian nhà của họ và tham khảo giá thành cũng như chất liệu, thay vì họ phải đến tận nơi chọn mua sản phẩm.
+      Em chọn xây dựng website bày bán cửa nhôm kính XingFa dựa trên nền tảng Asp.Net MVC và sử dụng Entity FrameWork để thiết kế webwebsite lần này bởi vì Asp.Net hỗ trợ rất nhiều cho người lập trình như các Package, một bộ control mạnh mẽ trên javascript, html, css. Bên cạnh đó, thiết kế website bằng Asp.Net vẫn luôn được nhiều công ty ưa chuộng và khuyên dùng. 
+      
+1.2 Mục tiêu của đề tài
+- Phân tích được bài toán quản lý đồ án, hiểu được các yêu cầu và quy trình quản lý của hệ thống. 
+- Tìm hiểu cơ sở lý thuyết của hệ quản trị SQL Server, ngôn ngữ lập trình Asp.Net Mvc, EntityFramework
+- Phân tích và thiết kế được CSDL, các biểu đồ use case và tuần tự.
+-  Thiết kế được một số giao diện cho hệ thống và hoàn thành chức năng đăng ký, đăng nhập.
+1.3 Giới hạn và phạm vi của đề tài
+Đề tài xây dựng. Các kiens thức được sử dụng bao gồm :
+- Lập trình Asp.Net, sử dụng Entity Framework, sử dụng Css, Html, Javascript
+- Công cụ sử dụng bao gồm : Visual Studio, SqlServer
+1.4 Nội dung thực hiện
+      Nội dung thực hiện/nghiên cứu cụ thể của đề tài:
+- Khảo sát thực tế, tìm hiểu những cửa hàng bày bán sản phẩm cửa nhôm kính đê thu tập những dữ liệu cụ thể sát với thực tế nhất. Bên cạnh đó, tham khảo những website có nội dung liên quan đến đồ nhôm kính. Từ đó biết thêm kiến thức về quy trình quản lý và xaayy dựng mô hình hợp lý cho website. Và cuối cùng rút ra cơ sở dữ liệu hợp lý cho dự án.
+- Tiến hành thiết kế các control cho sản phẩm.
+- Xây dựng Fontend cho sản phẩm.
+- Kiểm thử các chức năng cho sản phẩm.
+- Xây dựng báo cáo đồ án.
+
+
+
+
+
+
+
+
+
+
+
+
+CHƯƠNG 1: GIỚI THIỆU VỀ ASP.NET MVC VÀ HỆ QUẢN TRỊ CƠ SỞ DỮ LIỆU
+2.1 Giới thiệu về ngôn ngữ lập trình ASP.Net MVC
+2.1.1 Xuất xứ của MVC (Model- View –Controller)
+ 	Tất cả bắt đầu vào những năm 70 của thế kỷ 20, tại phòng thí nghiệm Xerox PARC ở Palo Alto. Sự ra đời của giao diện đồ họa và lập trình hướng đối tượng cho phép lập trình viên làm việc với những thành phần đồ họa như những đối tượng đồ họa có thuộc tính và phương thức riêng của  nó. Không dừng lại ở đó, những  nhà nghiên cứu ở Xerox PARC còn đi xa hơn khi cho ra đời cái gọi là kiến trúc MVC.
+      MVC được phát minh tại Xerox Parc vào những năm 70, bởi  TrygveReenskaug. MVC lần đầu tiên xuất hiện công khai là trong Smalltalk 80. Sau đó trong một thời gian dài hầu như không có thông tin nào về MVC, ngay cả trong  tài liệu 80 Smalltalk. Các giấy tờ quan trọng đầu tiên được công bố trên MVC là “A Cookbook  for Using the Model - View - Controller User Interface Paradigm in Smalltalk -  80”, bởi Glenn Krasner và Stephen Pope, xuất bản trong tháng 8/ tháng 9 năm 1988.
+2.1.2 Lợi ích của MVC
+-  Có tính mở rộng do có thể thay thế từng thành phần một cách dễ dàng.
+-  Không sử dụng Viewstate, điều này làm các nhà phát triển dễ dàng điều khiển ứng dụng của mình.
+-  Hệ thống định tuyến mới mạnh mẽ.
+-  Hỗ trợ tốt hơn cho mô hình phát triển kiểm thử cài đặt các kiểm thử đơn vị tự động, xác định và kiểm tra lại các yêu cầu trước khi bắt tay vào viết code.
+-  Hỗ trợ kết hợp rất tốt giữa người lập trình và người thiết kế giao diện.
+-  Sử dụng các tính năng tốt nhất đã có của ASP.NET.
+2.1.3 Các thành phần của mô hình MVC
+ASP.NET MVC4 là một bộ khung cho phép xây dựng những ứng dụng web chuẩn, có khả năng mở rộng, sử dụng các mẫu thiết kế tốt và sức mạnh của ASP.NET cũng  như  NET  Framework.
+ 	Mô hình kiến trúc này chia ứng dụng thành 3 thành phần khác nhau: Model, View và Controller. Với những ưu điểm như: nhẹ, trình bày trực quan, dễ quản lý, bảo mật cao. Đây xứng đáng là mô hình thay thế cho ASP.NET Web Forms thông thường.
+
+    Hình 21: Mô hình kiến trúc MVC
+Model: là thành phần có nhiệm vụ lưu trữ thông tin, trạng thái của các đối tượng. Thông thường nó là một lớp được ánh xạ từ một bảng trong cơ sở dữ liệu.   
+          View: là các thành phần chịu trách nhiệm hiển thị các thông tin cho người dùng thông qua giao diện. Thông thường, các thông tin cần hiển thị được lấy từ thành phần Model thông qua sự điều khiển của Controller. Trong ASP.NET     MVC4, có thể chọn View bằng Aspx hoặc Razor View Engine.
+         Controller: chịu trách nhiệm làm việc trực tiếp với Model và lấy dữ liệu truyền cho View hiển thị lên người dùng. Trong MVC, View chỉ có trách nhiệm hiển thị dữ liệu, còn việc điều khiển dữ liệu và thao tác của người dùng vẫn do Controller phụ trách.
+2.2.1 So sánh ASP.NET MVC với ASP.NET
+         Bạn đã được nghe qua về điểm yếu và giới hạn của ASP.NET WebForm truyền thống và làm thế nào mà ASP.NET MVC vượt qua những vấn đề này. Điều đó không có nghĩa là ASP.NET WebForm đã chết mà chỉ là: Microsoft muốn mọi người hiểu rằng có hai nền tảng song song nhau, hỗ trợ cho nhau và cả hai  đều là đối tượng cho việc phát triển hiện tại. Nói chung, việc bạn chọn lựa giữa hai mô hình còn tùy vào hoàn cảnh.
+         ASP.NET WebForm mang tới một trang web mà giao diện có thể lưu giữ trạng thái và cuối cùng thêm vào một lớp trừu tượng tinh vi nằm trên HTTP và HTML, sử dụng ViewState và postback để tạo ra hiệu ứng của việc có trạng thái. Điều này thích hợp với phong cách phát triển kéo và thả của Window Form, tức là bạn đặt các đối tượng có giao diện lên trang và mã xử lý vào trình xử lý sự kiện của chúng.
+        MVC hòa vào bản chất không trạng thái của HTTP, làm việc chung với nó hơn là chống lại. Điều này yêu cầu bạn phải hiểu thật sự cách làm việc của một   ứng dụng web, để đạt được điều đó, MVC cung cấp một cách tiếp cận đơn giản, mạnh mẽ và hiện  đại cho việc viết các ứng dụng web với mã có trật tự mà  dễ dàng để kiểm thử và bảo trì sau này, giải phóng những phức tạp khó chịu và các giới hạn không đáng có.
+ 	Điều đặc biệt là ASP.NET MVC có mã nguồn mở, không giống các nền tảng 
+trước đó, bạn có thể dễ dàng tải mã nguồn gốc của ASP.NET MVC, thậm chí bạn có thể sửa đổi và tạo ra phiên bản của riêng bạn. Có những tình huống mà  ASP.NET WebForm khá tốt thậm chí còn tốt hơn .
+        Nhưng mặt khác, nếu bạn một viết một ứng dụng trên Internet, hoặc các ứng dụng nội bộ lớn hơn, bạn sẽ hướng tới tốc độ download nhanh và tương thích trình  duyệt chéo, được xây dựng  với chất lượng cao hơn, mã kiến trúc tốt thích hợp cho  việc test tự động, trong trường hợp đó ASP.NET MVC sẽ mang lại những ưu điểm quan trọng.
+Bảng 21: So sánh giữa ASP.NET Webform và ASP.NET MVC
+Tính năngASP.NetASP.Net MVCKiến trúc chương trìnhKiến  trúc  mô  hình 
+WebForm->Business->Database
+Kiến trúc sử dụng việc 
+phân chia chương trình 
+thành Controllers, 
+Models, ViewCú pháp chương trìnhSử dụng cú pháp WebForm, tất cả các sự
+kiện và control do server quản lýCác sự kiện được kiều 
+khiển bởi controllers, các control không do server quản lýTốc độ  phân tải  
+Phân tải nhanh hơn do không phải quản lý ViewState để quản lý các 
+control trong trangTốc  độ  phân  tải  chậm trong  khi  trang có quá nhiều các controls vì 
+ViewState quá lớn
+Debug  
+Debug chương trình phải thực hiện tất cả bao gồm các lớp truy cập  dữ  liệu, sự hiển thị, điều khiển các controls
+Debug có thể sử dụng các unit test kiểm tra các phương thức trong 
+ControllersTương tác với javascrip   
+Tương  tác với javascrip 
+khó  khăn vì các controls được điều khiển bởi server
+Tương tác với javascrip dễ dàng vì các đối tượng không do server quản lý điều khiển không khóURL Address  
+Cấu trúc địa chỉ URL có dạng <filename>.aspx&<các 
+tham số>
+Cấu trúc địa chỉ rành 
+mạch theo dạng 
+Controllers/Action/ID
+
+
+
+2.2 Hệ quản trị SQL Server
+2.2.1 Các thành phần của một cơ sở dữ liệu trong SQL Server
+- Tables: Table là đối tượng chính của CSDL dùng lưu trữ dữ liệu cần quản lý. Mỗi table có 1 hay nhiều Field. Mỗi Field ứng với một loại dữ liệu cần lưu trữ. Table còn có các thành phần liên quan như: Constraint, Triggers, Indexs.
+- Diagram – Sơ đồ quan hệ: Thể hiện mối quan hệ dữ liệu giữa các table. 
+- Views – Khung nhìn hay table ảo: Là đối tượng dùng hiển thị dữ liệu được rút trích, tính toán từ các Table theo nhu cầu của người dùng. 
+- Stored Procedure – Thủ tục nội: Chứa các lệnh T-SQL dùng thực hiện một số tác vụ nào đó. Stored Proc có thể nhận và truyền tham số. Stored Proc được biên dịch trước, do đó thời gian thực hiện nhanh khi được gọi. Có nhiều Stored Proc hệ thống được định nghĩa với tiền tố “sp_” có nhiệm vụ thu thập thông tin từ các bảng hệ thống và rất có ích cho việc quản trị. 
+- User Defined Function: Hàm do người dùng định nghĩa 
+- Users: Chứa danh sách User sử dụng CSDL. Người quản trị hệ thống cao nhất có User Name là dbo, tên đăng nhập (Login Name) hệ thống mặc định là sa. Tài khoản sa luôn tồn tại và không thể bỏ đi. 
+- Roles: Các qui định vai trò và chức năng của User trong hệ thống SQL Server. 
+- Rules: Các qui tắc ràng buộc dữ liệu được lưu trữ trên Table.
+- Defaults: Các khai báo giá trị mặc định.
+- User Defined Data Type: Kiểu dữ liệu do người dùng tự định nghĩa 
+- Full Text Catalogs: Tập phân loại dữ liệu Text. 
+2.2.2 Tạo các ràng buộc
+a) Ràng buộc khóa chính( Primary key)
+- Primary Key: Ràng buộc khóa chính nhằm xác định chính xác bản ghi duy nhất trong một bảng. Cột khóa chính không thể nhân đôi và không thể chứa giá trị null.
+- Cú pháp: CONSTRAINT ten_rang_buoc  PRIMARY KEY.
+b) Ràng buộc khóa ngoại(Foreign Key)
+- Foreign Key: Ràng buộc khóa ngoại trong bảng cơ sở dữ liệu là trường phù hợp với trường khóa chính trong bảng khác. Trường khóa ngoại được sử dụng để tạo ra mối quan hệ với trường khóa chính của bảng chính. Điều này ngăn cản chèn thêm bất kỳ dữ liệu không hợp lệ trong trường khóa ngoại vì trường khóa ngoại chỉ chấp nhận những giá trị đã có trong trường khóa chính.
+- Cú pháp: CONSTRAINT (tên ràng buộc) FOREIGN KEY (tên trường làm khóa) REFERENCES tên bảng tham chiếu (khóa chính).
+c) Ràng buộc Check
+- Dùng để khai báo những quy định mà mỗi dòng đều phải thỏa mãn, dùng để kiểm tra miền giá trị của dữ liệu.
+- Cú pháp: CONSTRAINT (tên ràng buộc)  CHECK (bieu_thuc_datgiatri).
+
+CHƯƠNG 2: XÂY DỰNG WEBSITE CỬA NHÔM KÍNH TRÊN NỀN TẢNG ASP.NET MVC
+3.1. Khảo sát và phân tích yêu cầu
+3.1.1 Thời gian và địa điểm khảo sát
+-  Tham khảo hệ thống website Xingfa Group, một website bày bán cửa nhôm kính uy tín của Việt Nam.
+3.1.2 Thông tin liên hệ
+   - Bộ môn MMT&TT - Khoa Công Nghệ Thông Tin - Trường ĐHSPKT Hưng Yên - Mỹ Hào – Hưng Yên.
+3.1.3 Thông tin dự án
+- Tên dự án: “XÂY DỰNG WEBSITE BÀY BÁN NHÔM KÍNH XINGFA DỰA TRÊN NỀN TẢNG ASP.NET”.
+- Người thực hiện: Vũ Văn Quỳnh
+- Người hướng dẫn: Phạm Ngọc Hưng
+- Ngày thực hiện: 
+- Ngày dự kiến hoàn thành: 10 – 05 - 2019
+3.1.4 Yêu cầu của hệ thống sau khảo sát
+Bảng 31: Yêu cầu khách hàng
+STTTên yêu cầu1Quản lý thông tin các loại sản phẩm được cung cấp2Quản lý thông tin sản phẩm dựa trên các loại sản phẩm trong cửa hàng3Lập trình chức năng tìm kiếm sản phẩm dựa theo các tiêu chí như giá thành, tên sản phẩm, loại sản phẩm.4Quản lý chức năng đặt hàng, xem giỏ hàng, và chức năng xác nhận đặt hàng5Quản lý thông tin các đơn hàng đã và đang được đặt trong hệ thống6Quản lý thống kê về số lượng những mặt hàng đã được bán ra. Tổng số tiền thu nhập theo từng thơi điểm cụ thể.7Quản lý các bài viết trên trang chủ8Website phải có giao diện dễ sử dụng, thân thiện với người dùng.9Update thông tin một cách chính xác và nhanh chóng10Tốc độ truy xuất nhanh chóng, hợp lý, hiệu quả và tuyệt đối chính xác      3.1.5 Mô tả yêu cầu của hệ thống
+• Các yêu cầu chức năng
+Bảng 3-2: Các yêu cầu chức năng
+STTTên yêu cầuMô tả yêu cầuICác yêu cầu chức năng nghiệp vụLà các chức năng của phần mềm tương ứng với các công việc trong thế giới thực.1Quản lý thông tin loại sản phẩmChức năng này cho phép quản lý loại sản phẩm có trong cửa hàng. Các chức năng thêm mới, sửa , xóa và tìm kiếm thông tin loại sản phẩm2Quản lý thông tin sản phẩmChức năng này cho phép quản lý sản phẩm có trong cửa hàng. Phân loại sản phẩm theo từng loại. Các chức năng thêm mới, sửa, xóa và tìm kiếm thông tin sản phẩm trên hệ thống3Chức năng tìm kiếmChức năng này cho phép nguời dùng tìm kiếm sản phẩm trên hệ thống. Tìm kiếm theo các cách như chọn từng loại sản phẩm, tìm kiếm theo từ khóa, tìm kiếm theo đơn giá của sản phẩm4Chức năng đặt hàngChức năng này cho phép người dùng đặt hàng trong hệ thống, đưa vào trong giỏ hàng và thực hiện nhập thông tin hóa đơn. Thêm sửa xóa các sản phẩm có trong giỏ hàng.5Quản lý các đơn hàngChức năng này cho phép người quản lý quản lý được thông tin các đơn đặt hàng trên hệ thống. thông tin người đặt, địa chỉ cả các sản phẩm đượt đặt. 6Thống kê, báo cáoChức năng này cho phép người quản lý xem được thống kê các sản phẩm đã được bán trong hệ thống. sản phẩm bán chạy cũng như doanh thu• Các yêu cầu phi chức năng
+Bảng 3-3: Các yêu cầu phi chức năng
+STTTên yêu cầuMô tả yêu cầu1Hệ thống chạy ổn địnhHệ thống chạy ổn định trên môi trường Web, không cần cài đặt nhiều ứng dụng hỗ trợ.2Giao diện thân thiệnGiao diện thân thiện, dễ nhìn, dễ dàng thao tác, dễ sử dụng.3Bảo mật dữ liệuĐảm bảo dữ liệu được bảo mật , số lượng các đơn hàng cũng như số lượng sản phẩm, giá thành phải được bảo mật3.2 Phân tích thiết kế với UML
+3.2.1 Biểu đồ Use case
+• Xác định các tác nhân và tình huống sử dụng Use case 
+   Qua khảo sát hiện trạng thực tế, kết hợp với, việc tham khảo tài liệu và phân tích ý kiến của người dùng, hệ thống quản lý đồ án có các tác nhân sau:
+Bảng 3-4: Xác định tác nhân
+STTTác NhânDiễn Giải
+
+1
+Admin có thể quản lý các chức năng bên trong hệ thống như thêm sửa xóa , theo dõi báo cáo thống kê sản phẩm 2
+Người dùng chỉ có thể được xem các mặt hàng trên website và tiến hành đặt hàng
+• Biểu đồ Use Case tổng quát
+
+Hình 3-1: Biểu đồ Use case cho hệ thống
+Mục đích: Sử dụng hệ thống “Website bán cửa nhôm kính” nhằm mục đích bày bán các sản phẩm cửa nhôm kính
+      - Tác nhân: Người dùng hệ thống : Admin và khách hàng
+      - Mô tả: Hệ thống cho phép Admin thực hiện các chức năng quản lý hệ thống và người tiêu dùng xem, và mua các sản phẩm trên hệ thống
+    
+• Biểu đồ Use Case “Quản lý Loại sản phẩm”
+
+Hình 3-2: Biểu đồ Use Case quản lý loại sản phẩm
+Mục đích: Quản lý và nhập dữ liệu cho hệ thống.
+      - Tác nhân: Admin.
+      - Mô tả: Chức năng này cho phép Admin quản lý loại sản phẩm
+Điều kiện cần: Phải là người đã có tài khoản trong hệ thống, có quyền sử dụng chức năng này và thực hiện đăng nhập vào hệ thống.
+Dòng sự kiện:
+	Dòng sự kiện chính:
+Bảng 3-6: Dòng sự kiện chính cho Use case “Quản lý loại sản phẩm”
+Hành động của tác nhânPhản ứng của hệ thống1 - Kích hoạt chức năng đăng nhập hệ thống, thực hiện việc đăng nhập.
+3 - Kích hoạt chức năng quản lý loại sản phẩm
+5 - Sử dụng các chức năng: Quản lý, thêm mới, sửa thông tin, xóa…2 - Kiểm tra đăng nhập, nếu thành công hiện các chức năng mà người dùng có thể thực hiện.
+4 - Hiển thị giao diện quản lý loại sản phẩm.
+6 - Thực hiện xử lý và lưu trữ dữ liệu.    Dòng sự kiện phụ:
+    - Người dùng nhập sai thông tin đăng nhập. Hiện thông báo sai thông tin đăng nhập. Hủy bỏ việc đăng nhập hiện thời và trở lại giao diện ban đầu.
+    - Người dùng thoát chức năng quản lý sản phẩm. Hệ thống  thực hiện thoát và đóng giao diên, kết thúc sự kiện.
+• Biểu đồ Use Case “Quản lý sản phẩm”
+
+Hình 3-3: Biểu đồ Use Case quản lý sản phẩm
+Mục đích: Quản lý và nhập dữ liệu cho hệ thống.
+      - Tác nhân: người dùng hệ thống là Admin
+      - Mô tả: Chức năng này cho phép người dùng quản lý các thông tin về sản phẩm.
+Điều kiện cần: Phải là người đã có tài khoản trong hệ thống, có quyền sử dụng chức năng này và thực hiện đăng nhập vào hệ thống.
+	Dòng sự kiện:
+	Dòng sự kiện chính:
+Bảng 3-7: Dòng sự kiện chính cho Use case “Quản lý Sản phẩm”
+Hành động của tác nhânPhản ứng của hệ thống1 - Kích hoạt chức năng đăng nhập hệ thống, thực hiện việc đăng nhập.
+3 - Kích hoạt chức năng quản lý sản phẩm
+5- Sử dụng các chức năng: Quản lý, thêm mới, sửa thông tin, xóa…2 - Kiểm tra đăng nhập, nếu thành công hiện các chức năng mà người dùng có thể thực hiện.
+4 - Hiển thị giao diện quản lý sản phẩm
+6- Thực hiện xử lý và lưu trữ dữ liệu.    Dòng sự kiện phụ:
+    - Người dùng nhập sai thông tin đăng nhập. Hiện thông báo sai thông tin đăng nhập. Hủy bỏ việc đăng nhập hiện thời và trở lại giao diện ban đầu.
+    - Người dùng thoát chức năng quản lý sản phẩm trên hệ thống, theo dõi số lượng các sản phẩm
+• Biểu đồ Use Case “Quản lý đơn hàng”
+
+Hình 3-4: Biểu đồ Use case “Quản lý đơn hàng”
+Mục đích: Quản lý và nhập dữ liệu cho hệ thống.
+      - Tác nhân: người dùng hệ thống là Admin.
+      - Mô tả: Chức năng này cho phép người dùng quản lý đơn hàng có trên hệ thống
+Điều kiện cần: Phải là người đã có tài khoản trong hệ thống, có quyền sử dụng chức năng này và thực hiện đăng nhập vào hệ thống.	
+Dòng sự kiện:
+	Dòng sự kiện chính:
+Bảng 3-8: Dòng sự kiện chính cho Use case “Quản lý đơn hàng”
+Hành động của tác nhânPhản ứng của hệ thống1 - Kích hoạt chức năng đăng nhập hệ thống, thực hiện việc đăng nhập.
+3 - Kích hoạt chức năng quản lý đơn hàng
+5 - Sử dụng các chức năng: Quản lý, thêm mới, sửa thông tin, xóa thông tin đơn hàng2 - Kiểm tra đăng nhập, nếu thành công hiện các chức năng mà người dùng có thể thực hiện.
+4 - Hiển thị giao diện quản lý đơn hàng
+6 - Thực hiện xử lý và lưu trữ dữ liệu.    Dòng sự kiện phụ:
+    - Người dùng nhập sai thông tin đăng nhập. Hiện thông báo sai thông tin đăng nhập. Hủy bỏ việc đăng nhập hiện thời và trở lại giao diện ban đầu.
+    - Người dùng thoát chức năng quản lý giảng viên. Hệ thống thực hiện thoát và đóng giao diên, kết thúc sự kiện.
+• Biểu đồ Use Case “Thống kê báo cáo”
+
+Hình 3-5: Biểu đồ Use case “Thống kê báo cáo”
+Mục đích: Thống kê báo cáo.
+      - Tác nhân: người dùng hệ thống là Admin
+      - Mô tả: Chức năng này cho phép người dùng xem thống kê báo cáo của website
+Điều kiện cần: Phải là người đã có tài khoản trong hệ thống, có quyền sử dụng chức năng này và thực hiện đăng nhập vào hệ thống.
+Dòng sự kiện:
+	Dòng sự kiện chính:
+Bảng 3-9:  Dòng sự kiện chính cho Use case “Quản lý lớp”
+Hành động của tác nhânPhản ứng của hệ thống1 - Kích hoạt chức năng đăng nhập hệ thống, thực hiện việc đăng nhập.
+3 - Kích hoạt chức năng thống kê báo cáo
+5- Sử dụng các chức năng: thống kê, theo dõi , thiết đặt lại thống kê2 - Kiểm tra đăng nhập, nếu thành công hiện các chức năng mà người dùng có thể thực hiện.
+4 - Hiển thị giao diện thống kê báo cáo
+6- Thực hiện xử lý và lưu trữ dữ liệu.    Dòng sự kiện phụ:
+    - Người dùng nhập sai thông tin đăng nhập. Hiện thông báo sai thông tin đăng nhập. Hủy bỏ việc đăng nhập hiện thời và trở lại giao diện ban đầu.
+    - Người dùng thoát chức năng quản lý lớp. Hệ thống  thực hiện thoát và đóng giao diện, kết thúc sự kiện.
+• Biểu đồ Use Case “Tìm kiếm”
+
+Hình 3-6: Biểu đồ Use case “Tìm kiếm”
+Mục đích: Quản lý và nhập dữ liệu cho hệ thống.
+      - Tác nhân: người dùng
+      - Mô tả: Chức năng này cho phép người dùng tìm kiếm thông tin sản phẩm
+Điều kiện cần: Người dùng truy cập vào website của hệ thống
+Dòng sự kiện:
+	Dòng sự kiện chính:
+Bảng 3-10:  Dòng sự kiện chính cho Use case “Tìm kiếm”
+Hành động của tác nhânPhản ứng của hệ thống1 Người dùng yêu cầu chức năng tìm kiếm theo các tiêu trí
+2 – hệ thống phân tích các tiêu trí và hiển thị giao diện tìm kiếm và sản phẩm cho người dùng    Dòng sự kiện phụ:
+    - Người dùng nhập thông tin nhưng không có trên hệ thống. hệ thống tự động trả lại trang trống và thông báo không tìm thấy sản phẩm theo yêu cầu của người dùng
+    - Người dùng thoát chức năng quản lý sinh viên. Hệ thống  thực hiện thoát và đóng giao diện, kết thúc sự kiện.
+• Biểu đồ Use Case “Quản lý giỏ hàng”
+
+Hình 3-7: Biểu đồ Use case “Quản lý giỏ hàng”
+Mục đích: Quản lý và nhập dữ liệu cho hệ thống.
+      - Tác nhân: Người dùng.
+      - Mô tả: Chức năng này cho phép người dùng đưa sản phẩm vào giỏ hàng, tiến hành chỉnh sửa giỏ hàng và thực hiện checkout
+Điều kiện cần: phải truy cập vào chức năng giỏ hàng	
+Dòng sự kiện:
+	Dòng sự kiện chính:
+Bảng 3-11: Dòng sự kiện chính cho Use case “Quản lý giỏ hàng”
+Hành động của tác nhânPhản ứng của hệ thống1 – Người dùng tiến hành đặt hàng.
+3 – Người dùng tiến hàng chỉnh sửa giỏ hàng, bao gồm việc thêm sửa xóa
+5 – Người dùng nhập thông tin2 – Hệ thống sẽ đưa sản phẩm vào trong giỏ hàng.
+4 - Hiển thị giao diện checkout
+6- Thực hiện xử lý và lưu trữ dữ liệu.    Dòng sự kiện phụ.
+    - Người dùng thoát chức năng check out. Hệ thống thực hiện thoát và đóng giao diện, kết thúc sự kiện.
+   
+3.2.2 Biểu đồ lớp
+• Biểu đồ lớp tổng quát
+
+Hình 3-8: Biểu đồ lớp tổng quát
+
+
+
+
+• Danh sách các lớp đối tượng
+Bảng 3-12: Danh sách các lớp
+STTTên lớp/quan hệÝ nghĩa/Ghi chú1ProductsSản phẩm2CategoriesLoại sản phẩm3PublisherNhà cung cấp4UserThông tin tài khoản của người quản trị5UserDetailChi tiết thông tin6CommentBình luận của khách hàng7OrderHóa đơn8OrderDetailChi tiết hóa đơn
+3.2.3 Biểu đồ tuần tự
+• Biểu đồ tuần tự tổng quát
+
+Hình 3-9: Biểu đồ tuần tự tổng quát
+
+
+
+• Biểu đồ tuần tự cho chức năng đăng nhập
+
+Hình 3-10: Biểu đồ tuần tự cho chức năng đăng nhập
+• Biểu đồ tuần tự cho chức năng nhập mới
+
+Hình 3-11: Biểu đồ tuần tự cho chức năng nhập mới
+• Biểu đồ tuần tự cho chức năng sửa
+
+Hình 3-12: Biểu đồ tuần tự cho chức năng sửa
+• Biểu đồ tuần tự cho chức năng xóa
+
+Hình 3-13: Biểu đồ tuần tự cho chức năng xóa
+• Biểu đồ tuần tự cho chức năng thống kê, báo cáo
+
+Hình 3-14: Biểu đồ tuần tự cho chức năng thống kê, báo cáo
+• Biểu đồ tuần tự cho chức năng tìm kiếm
+
+Hình 3-15: Biểu đồ tuần tự cho chức năng tìm kiếm
+3.3 Thiết kế cơ sở dữ liệu
+3.3.1 Các bảng dữ liệu
+• Bảng Sản phẩm: Products
+Bảng 3-13: sản phẩm
+Tên trườngKiểu dữ liệuKích thướcRàng buộcGhi chúProductIdIntKhóa chínhMã sản phẩmProductNameNvarchar(100)100Tên sản phẩmCategoryIdIntKhóa ngoạiMã loại sản phẩmProductImgNvarchar(200)200Hình ảnh sản phẩmPriceDecimal18Giá sản phẩmQuantityIntSố lượngCreateDateDatetimeoffset7Ngày tạoNumberOfBoughtIntSố lượt muaPublisher_PubliserIdIntKhóa ngoạiMã loại nhà cung cấp• Bảng Loại sản phẩm: Categories
+Bảng 3-14: loại sản phẩm
+Tên trườngKiểu dữ liệuKích thướcRàng buộcGhi chúCategoryIdIntKhóa chínhMã loại sản phẩmCategoryNameNvarchar(200)200Tên loại sản phẩmCategoryImgNvarchar(200)200Hình ảnhSpecificationsNumber01Nvarchar(1000)1000Thông số kỹ thuật 01SpecificationsNumber02Nvarchar(1000)1000Thông số kỹ thuật 02SpecificationsNumber03Nvarchar(1000)1000Thông số kỹ thuật 03SpecificationsNumber04Nvarchar(1000)1000Thông số kỹ thuật 04SpecificationsNumber05Nvarchar(1000)1000Thông số kỹ thuật 05• Bảng nhà cung cấp: Publisher
+Bảng 3-15: Nhà cung cấp
+Tên trườngKiểu dữ liệuKích thướcRàng buộcGhi chúPublisherIdIntKhóa chínhMã nhà cung cấpNameNvarchar(50)50Tên nhà cung cấpDescriptionNvarchar(1000)1000Mô tả• Bảng bình luận: Comment
+Bảng 3-16: Comment
+Tên trườngKiểu dữ liệuKích thướcRàng buộcGhi chúCommentIDIntKhóa chínhMã commentProductIdIntKhóa ngoạiMã sản phẩmContentNvarchar(Max)MaxNội dung bình luậnCreateddateDatetimoffset7Ngày bình luận• Bảng Hóa đơn: Order
+Bảng 3-17: Bảng hóa đơn
+Tên trườngKiểu dữ liệuKích thướcRàng buộcGhi chúOrderIdIntKhóa chínhMã hóa đơnNameCustomerNvarchar(50)50Tên khách hàngShippAddressNvarchar(100)100Địa chỉ nhận sản phẩmPhoneNumberNvarchar(13)13Số điện thoại đặt hàngCreateDateDatetimeoffsetNgày đặt hàng• Bảng chi tiết hóa đơn: OrderDetails
+Bảng 3-18: Chi tiết hóa đơn
+Tên trườngKiểu dữ liệuKích thướcRàng buộcGhi chúOrderDetailIdIntKhóa chínhMã chi tiết hóa đơnOrderIdIntKhóa ngoạiMã hóa đơnProductIdIntKhóa ngoạiChức vụ của giảng viên trong hội đồng
+
+
+• Bảng người dùng: User
+Bảng 3-19: bảng người dùng
+Tên trườngKiểu dữ liệuKích thướcRàng buộcGhi chúUserNameNvarchar(50)50Khóa chínhTên tài khoảnPasswordNvarchar(50)50Mật khẩu• Bảng chi tiết người dùng: UserDetail
+Bảng 3-20: Chi tiết người dùng
+Tên trườngKiểu dữ liệuKích thướcRàng buộcGhi chúUserDetailIdIntKhóa chínhMã chi tiết userFullNameNvarchar(50)50Tên người dùngPhoneNumberNvarchar(20)20Số điện thoạiEmailNvarchar(50) 50Địa chỉ EmailAddressNvarchar(100)100Địa chỉ nhà3.3.2 Mô hình cơ sở dữ liệu
+
+Hình 3-16: Mô hình cơ sở dữ liệu
+
+
+3.4 Thiết kế đặc tả giao diện
+3.4.1 Chức năng đăng nhập hệ thống
+• Mục đích
+   Chức năng này cho phép user đăng nhập vào hệ thống để quản lý website
+• Phạm vi
+   Hệ thống sẽ kiểm tra xem tên tài khoản và mật khẩu của người dùng có tồn tại hay không nhằm để bảo mật thông tin
+• Ràng buộc
+   Khi giảng viên kích vào đăng nhập, giao diện chức năng đăng nhập sẽ hiện lên, cho phép người dùng nhập tài khoản mật khẩu.
+• Giao diện của chức năng
+
+Hình 3-17: Giao diện chức năng đăng nhập
+
+• Mô tả chức năng
+   Khi truy cập vào trang web, chức năng này sẽ hiển thị đầu tiên hoặc khi người dùng đang đăng nhập khi click vào  “Đăng xuất” trên giao diện chính thì giao diện chính sẽ bị ẩn đi và giao diện đăng nhập này cũng sẽ hiện nên, Sau khi người dùng đã điền đầy đủ thông tin người dùng nhấn “Đăng nhập” nếu thông tin hợp lệ sẽ vào được hệ thống với các chức năng được cấp hiện nên cho phép người dùng sử dụng.
+3.4.2 Chức năng quản lý sản phẩm
+• Mục đích
+   Chức năng này giúp người dùng quản lý sản phẩm.
+• Phạm vi
+   Chức năng này sẽ giúp người dùng xem danh sách sản phẩm. Tiến hành sửa thông tin sản phẩm, thêm mới và xóa sản phẩm. 
+• Ràng buộc
+   Khi người dùng đăng nhập thành công, hoặc chọn quản lý sản phẩm. Giao diện quản lý sản phẩm sẽ được hiển thị lên
+• Giao diện của chức năng
+
+
+Hình 3-18: Giao diện chức năng quản lý sản phẩm 
+
+Hình 3-19: Giao diện chức năng chỉnh sửa sản phẩm
+
+
+• Mô tả chức năng
+   Khi người dùng truy cập vào chức năng quản lý sản phẩm, giao diện bao gồm danh sách sản phẩm sẽ được hiển thị lên. Giao diện sẽ hiển thị danh sách sản phẩm, và phân trang cho sản phâm(6 sản phẩm 1 trang)
+   Khi người dùng click chọn sửa sản phẩm, giao diện sửa sản phẩm sẽ hiển thị lên. 
+   Ngoài ra còn có chức năng thêm mới sản phẩm , xóa sản phẩm.
+3.4.3 Chức năng quản lý loại sản phẩm
+• Mục đích
+   Giúp người dùng quản lý loại sản phẩm.
+• Phạm vi
+   Người dùng có quyền thêm , sửa xóa loại sản phẩm.
+• Ràng buộc
+   Sau khi click chọn quản lý loại sản phẩm. giao diện loại sản phẩm sẽ được hiển thị lên.
+• Giao diện  chức năng
+
+Hình 3-20: Giao diện chức năng quản lý loại sản phẩm
+
+Hình 3-21: Giao diện chức năng thêm mới loại sản phẩm
+
+• Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng “quản lý loại sản phẩm”:
+   - Chức năng thêm loại sản phẩm: khi thêm loại sản phẩm, người dùng phải nhập đầy đủ thông tin bao gồm tên sản phẩm, hình ảnh của sản phẩm, và các thông số kỹ thuật
+   - Chức năng sửa khi người dùng ấn chọn chỉnh sửa một loại sản phẩm nào đó, giao diện quản lý chỉnh sửa loại sản phẩm sẽ được hiển thị lên. Người dùng tiến hành chỉnh sửa lại các thông tin cẩn chỉnh sửa của sản phẩm và tiến hành lưu
+   - Chức năng xoá khi người sử dụng chọn xóa một loại sản phẩm nào đó.
+3.4.4 Chức năng quản lý hóa đơn
+• Mục đích
+   Giúp người quản lý quản lý quản lý hóa đơn hiện có trong cửa hàng, thông tin chi tiết hóa đơn
+• Phạm vi
+   Người dùng có thể xem chi tiết hóa đơn và tiến hành xóa hóa đơn nếu như khách hàng yêu cầu
+• Ràng buộc
+   Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng quản lý hóa đơn
+• Giao diện  chức năng
+
+Hình 3-22: Giao diện chức năng quản lý hóa đơn
+
+Hình 3-23: Giao diện chức năng chi tiết hóa đơn
+
+• Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng quản lý hóa đơn
+- Người dùng có thể xem danh sách hóa đơn đang hiện được lưu trên hệ thống,
+- Người dùng có thể xem chi tiết hóa đơn, số lượng các sản phẩm có trong hóa đơn
+- Người dùng có thể xóa hóa đơn bằng cách click chọn xóa hóa đơn, hóa đơn sẽ được xóa đi và không thể phục hồi lại
+3.4.5 Chức năng xem thông tin mặt hàng
+• Mục đích
+   Giúp người sử dụng hệ thống xem thông tin các sản phẩm có trong hệ thống, bao gồm các sản phẩm, các loại sản phẩm.
+• Phạm vi
+   Người dùng truy cập vào hệ thống đều có thể xem
+• Ràng buộc
+   Sau khi người dùng truy cập vào hệ thống.
+• Giao diện  chức năng
+
+
+  Hình 3-24: Giao diện chức năng xem sản phẩm
+• Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng “Xem sản phẩm”:
+   - Khi người dùng truy cập vào hệ thống trên trang chủ, một vài sản phẩm sẽ được hiển thị lên cho người dùng xem. Người dùng có thể truy cập vào Các loại sản phẩm hoặc tùy chỉnh tìm kiếm để tìm thêm nhiều sản phẩm hơn nữa
+   - Khi người dùng click chọn chi tiết một sản phẩm nào đó. Giao diện chi tiết sản phẩm sẽ được hiển thị lên, bao gồm thông tin chi tiết sản phẩm như Tên sản phẩm , loại sản phẩm , giá sản phẩm, và các đặc tính liên quan của sản phẩm .
+3.4.6 Chức năn tìm kiếm sản phẩm
+• Mục đích
+   Giúp người dùng hệ thống tìm kiếm sản phẩm
+• Phạm vi
+   Người dùng truy cập vào hệ thống
+• Ràng buộc
+   Sau khi người dùng chọn chức năng tìm kiếm trên menu hoăc hộp tìm kiếm ở đầu trang
+• Giao diện  chức năng
+
+Hình 3-25: Giao diện chức năng tìm kiếm sản phẩm
+• Mô tả chức năng
+   Các thao tác khi người dùng chọn chức năng tìm kiếm:
+   - Khi người dùng nhập key tìm kiếm trên hộp tìm kiếm ở đầu trang, hệ thống sẽ phân tích từ khóa và chuyển đến trang tìm kiếm với nội dung đã được tìm kiếm của người dùng
+   - Khi người dùng chọn chức năng tùy chỉnh tìm kiếm, hệ thống sẽ chuyển đến giao diện trang tùy chỉnh tìm kiếm cho người dùng. Người dùng có thể nhập khoảng giá mà mình mong muốn, và loại sản phẩm mình cần thiết để tìm kiếm. Sau khi click tìm kiếm, hệ thống sẽ phân tích và đưa ra những sản phẩm phù hợp với từ khóa tìm kiếm của người dùng
+3.4.7 Chức năng đặt hàng
+• Mục đích
+   Giúp người sử dụng đưa sản phẩm vào giỏ hàng
+• Phạm vi
+   Người sử dụng truy cập vào hệ thống
+• Ràng buộc
+   Sau khi người sử dụng chọn đặt hàng trên trang chi tiết
+• Giao diện chức năng
+
+
+
+Hình 3-26: Giao diện chức năng đặt hàng
+• Mô tả chức năng
+   Các thao tác cho chức năng đặt hàng
+   - Khi người dùng truy cập vào giao diện chi tiết sản phẩm để tiến hành xem sản phẩm.
+   - Khi người dùng chọn số lượng sản phẩm, và nhấn vào nút đặt hàng. Số lượng sản phẩm cũng như thông tin của sản phẩm sẽ được đưa vào giỏ hàng của người dùng.
+3.4.8 Chức năng quản lý giỏ hàng
+• Mục đích
+   Giúp người quản dùng quản lý giỏ hàng hiện tại
+• Phạm vi
+   Người dùng truy cập vào hệ thống
+• Ràng buộc
+   Sau khi người dùng click chọn giỏ hàng
+• Giao diện  chức năng
+
+Hình 3-27: Giao diện chức năng giỏ hàng
+
+• Mô tả chức năng
+   Các thao tác cho chức năng giỏ hàng.
+   - Khi người dùng chọn giỏ hàng, các sản phẩm hiện có trong giỏ hàng sẽ được hiển thị lên
+   - Người dùng có thể thay đổi thông tin số lượng của sản phẩm bằng cách thay đổi số lượng trong hộp số lượng, và nhấn update
+   - Người dùng có thể xóa sản phẩm trong giỏ hàng bằng cách nhấn vào nút có biểu tượng thùng rác. Sản phẩm sẽ được xóa đi 
+3.4.9 Chức năng checkout
+• Mục đích
+   Giúp người dùng nhập thông tin sau khi đã chọn lựa xong sản phẩm
+   
+• Phạm vi
+   Người dùng đăng nhập vào hệ thống
+• Ràng buộc
+   Sau khi người dùng chọn chức năng checkout
+• Giao diện  chức năng
+
+
+Hình 3-28: Giao diện chức năng checkout
+• Mô tả chức năng
+   Các thao tác cho chức năng checkout
+   - Chức năng checkout khi người dùng chọn checkout trong giỏ hàng
+   - Người dùng nhập đầy đủ thông tin vào trong các trường cần thiết và tiến hành xác nhận
+   - Một giao diện sẽ được hiển thị ra bao gồm họ tên , số điện thoại, địa chỉ của người đặt hàng, số lượng mặt hàng và giá thành của chúng
+3.4.10 Chức năng bình luận
+• Mục đích
+   Giúp người dùng có thể để lại nội dung mình muốn bình luận
+• Phạm vi
+   Người dùng đăng nhập vào hệ thống
+• Ràng buộc
+   Sau khi người dùng chọn chức năng bình luận
+• Giao diện  chức năng
+
+  
+Hình 3-29: Giao diện chức năng bình luận
+
+  
+• Mô tả chức năng
+   Các thao tác cho chức năng bình luận
+   - Khi người dùng truy cập vào giao diện chi tiết sản phẩm, kéo xuống dưới cùng sẽ có chức năng bình luận
+   - Người dùng nhập thông tin của mình bao gồm tên(nếu không muốn để lại thông tin), hoặc số điện thoại, gmail để cửa hàng liên hệ lại
+   - Sau khi người dùng nhập xong nội dung bình luận , nhấn phím comment, nội dung sẽ được lưu lại trong cơ sở dữ liệu, và hiển thị lên cho người dùng.
+3.4.11 Chức năng quản lý bình luận
+• Mục đích
+   Giúp quản lý quản lý những bình luận có trong hệ thống, những bình luận của từng sản phẩm
+• Phạm vi
+   Admin đăng nhập vào hệ thống
+• Ràng buộc
+   Sau khi admin chọn chức năng quản lý bình luận
+• Giao diện  chức năng
+
+  
+Hình 3-30: Giao diện chức năng quản lý bình luận
+• Mô tả chức năng
+   Các thao tác cho chức năng quản lý bình luận
+   - Khi quản lý chọn vào chức năng quản lý bình luận, giao diện trang bình luận sẽ hiện ra bao gồm danh sách các bình luận được sắp xếp theo thời gian đăng gần nhất
+   - Người quản lý có thể tìm kiếm thông tin bình luận thông qua tên của sản phẩm bằng cách chọn tên sản phẩm và nhấn tìm kiếm.
+   - Người dùng có thể chọn xem chi tiết sản phẩm thông qua nút chi tiết. giao diện sẽ được chuyển hướng đến trang chi tiết sản phẩm nơi mà bình luận được đặt
+   - Người dùng có thể xóa bình luận của khách hàng, nếu như cảm thấy điều đó ảnh hưởng đến cửa hàng và website
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+CHƯƠNG 3: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau một thời gian tìm hiểu và nghiên cứu đề tài “Xây dựng  website bày bán sản phẩm cửa nhôm kính dựa trên mô hình Asp.Net” đề tài đã đạt được một số kết quả sau:
+- Phía quản trị : Giúp cho quản trị viên dễ dàng quản trị hệ thống. bao gồm các công việc cần thiết để quản lý website. Và đưa sản phẩm đến gần hơn với khách hàng
+- Phía người tiêu dùng: dễ dàng tìm kiếm được sản phẩm phù hợp với nhu cầu của mình, dễ dàng chọn mua và đặt mua sản phẩm cùng các thông tin cần thiết
+         Ngoài những kết quả trên, qua quá trình thực hiện đề tài “Xây dựng website bày bán sản phẩm cửa nhôm kính dựa trên mô hình Asp.Net MVC” em đã có được:
+- Những kinh nghiệm quý báu về quy trình, nghiệp vụ quản lý đồ án.
+- Trau dồi kiến thức về Linq và biết lập trình bằng ngôn ngữ MVC.
+- Tiếp thu thêm được nhiều kiến thức về Entity Framework
+- Cái quý báu nhất em nhận được đó chính là khả năng fix bug cho hệ thống, khi mà mình có khả năng và kỹ năng fix bug, mình sẽ biết được hệ thống đang lỗi ở đâu và vì sao lỗi để lần sau mình có thể tránh bug đó
+- Rèn luyện kỹ năng làm việc cá nhân, khả năng tư duy và sáng tạo.
+4.2 Hạn chế của đề tài
+     Do thời gian nghiên cứu chưa được nhiều, bên cạnh những kết quả đạt được còn tồn tại một số vấn đề hạn chế:
+- Tìm kiếm trong trang chủ chưa được tối ưu nhất. ví dụ như từ khóa liên quan.
+- Trong phần thống kê load dữ liệu còn chậm do sử dụng ngôn ngữ lập trình MVC.
+- Chưa triển khai hệ thống thực tế được.
+4.3 Hướng phát triển
+   - Tối ưu hóa các chức năng, mã hóa dữ liệu để đáp ứng tốt hơn nhu cầu của người sử dụng.
+   - Hỗ trợ thao tác nhanh trong quá trình nhập liệu.
+   - Hỗ trợ thêm các dạng thống kê, các biểu đồ, trực quan, dễ nhìn.
+   - Thực hiện việc triển khai hệ thống thực tế.
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+TÀI LIỆU THAM KHẢO
+[1]Nguyễn Văn Quyết, Đề cương Công nghệ Web và ứng dụng. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY, 2010.[2]Jess Chadwick, Programming ASP.NET MVC 4, Nhà xuất bản O'Reilly Media.[3]Website : https://www.entityframeworktutorial.net/[4]Website: https://www.tutorialsteacher.com/mvc/asp.net-mvc-tutorials[5] Jquery, Jascript, C#, Linq trên website : https://www.tutorialsteacher.com/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TRƯỜNG ĐẠI HỌC SPKT HƯNG YÊNCỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAMKHOA CÔNG NGHỆ THÔNG TINĐộc lập – Tự do – Hạnh phúc
+ĐỀ TÀI TỐT NGHIỆP ĐẠI HỌC
+Sinh viên thực hiện:
+Họ và tên:Vũ Văn Quỳnh Mã SV:10115315Ngày sinh:02/11/1997Mã lớp:101154Trình độ, loại hình đào tạo:		ĐHCQ
+Ngành đào tạo:	Công nghệ Thông tin
+Chuyên ngành:	Công nghệ phần mềm
+Khóa học: 		2015-2019
+Tên đề tài:	XÂY DỰNG WEBSITE BÀY BÁN NHÔM KÍNH XINGFA
+Mục tiêu: 
+- Xây dựng website bày bán nhôm kính Xingfa
+- Xây dựng website dựa trên mô hình code-first của Entity Framework
+Nội dung cần hoàn thành:
+- Tìm hiểu kỹ mô hình 3 lớp, mô hình code-first của Entity Framework. Các thư viện hỗ trợ việc triển khai viết chương trình như Identity, Log4Net, unity.
+- Khảo sát thực tế, tìm hiểu những cửa hàng bày bán sản phẩm cửa nhôm kính để thu thập những dữ liệu cụ thể sát với thực tế nhất. 
+- Xây dựng cơ sở dữ liệu hợp lý cho dự án.
+- Xây dựng báo cáo đồ án
+Sản phẩm dự kiến:
+- Sản phẩm là 1 website bày bán nhôm kính Xingfa
+- Một cuốn báo cáo đồ án.
+Thời gian thực hiện:	Ngày giao:01/03/2019, ngày hoàn thành 31/05/2019
+Người hướng dẫn:
+- Thứ nhất: ...................................................... Ký xác nhận: ..............................
+- Thứ hai:..........................................................Ký xác nhận:................................
+Đề tài đã được Hội đồng Khoa học và Đào tạo Khoa thông qua.
+
+HỘI ĐỒNG KH&ĐT KHOA
+(Ký, ghi rõ họ và tên)Hưng Yên, ngày .... tháng .... năm ........
+TRƯỞNG BỘ MÔN
+(Ký, ghi rõ họ và tên)
+18
+
+

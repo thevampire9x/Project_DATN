@@ -1,0 +1,339 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1  Lý do chọn đề tài
+   Trong khoảng một thập kỉ trở lại đây, sự bùng nổ của các thiết bị di động thông minh đã diễn ra một cách vô cùng mạnh mẽ. Các thiết bị thông minh, đặc biệt là điện thoại di động đã trở thành vật bất ly thân của mỗi người bởi sự tiện dụng và lợi ích mà nó mang lại. 
+   Điện thoại thông minh hiện nay được phát triển dựa trên hai nền tảng hệ điều hành là IOS và Android. Trong đó, Android được biết đến như một hệ điều hành mã nguồn mở với tốc độ phát triển cực nhanh. Tính đến đầu năm 2020 Android vẫn chiếm hơn 70% thị phần các thiết bị thông minh (theo statista, diviceatlast, cnet và macworld). Bên cạnh đó, chính bởi tính mở của Android nên ngoài điện thoại di động, nó còn được đa số các hãng sử dụng làm hệ điều hành cho các thiết bị thông minh như TV, đồng hồ, máy tính bảng hay thậm chí là toàn bộ hệ thống nhà thông minh. Như vậy, việc phát triển một ứng dụng trên Android cũng đồng nghĩa với việc phát triển một ứng dụng cho hầu hết người dùng và các thiết bị thông minh.
+   Đi cùng với nhu cầu người dùng là sự bùng nổ về việc phát triển ứng dụng di động. Chúng ta đang ở trong thời đại mà người người làm app, nhà nhà làm app. Các công ty, tổ chức có ứng dụng riêng để quản lý nội bộ hoặc đưa sản phẩm đến người dùng. Các nhà phát triển tạo ứng dụng để phục vụ mọi nhu cầu của người dùng từ liên lạc, học tập, giải trí đến phục vụ công việc chuyên biệt. 
+   Tuy nhiên, có một nhu cầu quan trọng mà người phát triển thường không để ý tới bởi tính đơn giản của nó, đó là nhu cầu lưu trữ thông tin một cách nhanh chóng. Chúng ta đang sống giữa một xã hội thông tin số, dù là người đang đi học hay người đi làm thì lượng thông tin chúng ta tiếp nhận vô cũng cùng nhiều, đòi hỏi chúng ta phải chắt lọc và lưu trữ nó. Trong đó thông tin mà chúng ta cần lưu trữ nhanh thường là những định nghĩa, khái niệm mới hay công việc cần làm và sự nhắc nhở cho công việc đó.
+   Nhận thấy đây là một đề tài vừa thú vị vừa có tính ứng dụng thực tế, đồng thời nhằm ứng dụng những kiến thức đã học được để xây dựng một sản phẩm ứng dụng hoàn chỉnh. Bên cạnh đó được sự đồng ý của giảng viên hướng dẫn, em quyết định chọn đề tài “Xây dựng ứng dụng Take Note & Self Dictionary trên hệ điều hành Android” làm đề tài đồ án tốt nghiệp.
+1.2  Mục tiêu của đề tài
+   Nghiên cứu ngôn ngữ lập trình Kotlin, một ngôn ngữ mới và mô hình MVVM. Cả hai đều được Google đề xuất sử dụng trong việc xây dựng ứng dụng Android.
+   Phát triển một ứng dụng trên điện thoại thông minh sử dụng hệ điều hành Android nhằm đáp ứng nhu cầu của người dùng về lưu trữ thông tin một cách ngắn gọn, đơn giản và nhanh chóng.
+1.3  Giới hạn và phạm vi của đề tài
+   Đề tài xây dựng ứng dụng cho điện thoại thông minh trên trên điều hành Android sử dụng ngôn ngữ lập trình Kotlin và công cụ Android Studio.
+   Hệ thống các chức năng trong ứng dụng được thực hiện nhằm tạo ra một ứng dụng đáp ứng đủ nhu cầu của người dùng, có giao diện thân thiện và dễ sử dụng.
+1.4  Nội dung thực hiện
+   Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Xác định đối tượng sử dụng ứng dụng
+- Khảo sát và xác định chức năng của ứng dụng
+- Phân thích và thiết kế ứng dụng
+- Phát triển ứng dụng
+- Kiểm thử ứng dụng
+
+
+1.5  Phương pháp tiếp cận
+   Cách tiếp cận :  
+- Nghiên cứu các thành phần của một ứng dụng trong hệ điều hành Android.
+- Nghiên cứu ngôn ngữ lập trình Kotlin.
+- Nghiên cứu công cụ Android Studio.
+   Sử dụng các phương pháp nghiên cứu :
+- Phương pháp đọc tài liệu.
+- Phương pháp phân tích mẫu.
+- Phương pháp thực nghiệm.
+CHƯƠNG 2: 
+CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Android
+2.1.1 Android là gì?
+   Android là một hệ điều hành và nền tảng lập trình được phát triển bởi Google dành cho điện thoại di động và các thiết bị thông minh khác, ví dụ như máy tính bảng. Nó có thể chạy trên nhiều thiết bị khác nhau từ các nhà sản xuất khác nhau. Android bao gồm bộ phát triển phần mềm (SDK) giúp chúng ta viết mã nguồn và kết hợp các modules phần mềm để tạo ra ứng dụng cho người dùng. Android cũng cung cấp một thị trường để phân phối ứng dụng. Cùng kết hợp lại, Android đại diện cho hệ sinh thái các ứng dụng di động.
+
+    Hình 2.1 Các thiết bị Android
+
+
+   Android có mã nguồn mở và được Google phát hành mã nguồn theo giấy phép Apache. Ban đầu, Android được phát triển bởi Tổng công ty Android, với sự hỗ trợ tài chính từ Google và sau này được chính Google mua lại vào năm 2005. Android ra mắt vào năm 2007. Chiếc điện thoại đầu tiên chạy Android được bán vào năm 2008. Android cung cấp một kiến trúc phát triển phong phú, sơ đồ sau đây cho thấy các thành phần chính của Android stack – hệ điều hành và kiến trúc phát triển:
+   
+    Hình 2.2 Kiến trúc của Android OS
+Trong hình trên:
+1. Apps: Tầng ứng dụng, các ứng dụng của người dùng (User Apps) tồn tại ở đây, bên cạnh đó là các ứng dụng hệ thống (System Apps) cốt lõi dành cho email, nhắn tin SMS, lịch, trình duyệt web và  danh bạ.
+2. Java API Framework: Bao gồm tất cả các tính năng dành cho việc phát triển, chẳng hạn như các thành phần UI, quản lý tài nguyên, và quản lý vòng đời. Thông thường, chúng ta không cần biết chi tiết về cách thức hoạt động của các API, chỉ cần học cách sử dụng chúng.
+3. Libraries and Android runtime: Mỗi ứng dụng Android chạy trên tiến trình (process) của chính nó, cùng với phiên bản riêng của trình thực thi ứng dụng Android (Android runtime). Android chứa tập các thư viện thực thi cốt lõi, cung cấp hầu hết các tính năng của ngôn ngữ lập trình Java. Nhiều thành phần hệ thống cốt lõi và các dịch vụ của Android được xây dựng từ native code, yêu cầu các thư viện viết bằng C, C++. Các thư viện này được cung cấp sẵn qua Java API Framework.
+4. Hardware Abstraction Layer (HAL): Tầng này cung cấp các interfaces tiêu chuẩn để cung các khả năng của thiết bị phần cứng tới Java API Framework cấp cao hơn. HAL bao gồm nhiều modules thư viện, mỗi module triển khai một interface cho một loại thành phần phần cứng cụ thể, ví dụ như máy ảnh hoặc Bluetooth.
+5. Linux kernel: Android được xây dựng trên lõi Linux, các tầng phía trên dựa vào lõi Linux để phân luồng, quản lý bộ nhớ cấp thấp và các chức năng cơ bản khác. Sử dụng lõi Linux cho phép Android tận dụng lợi ích từ các tính năng bảo mật và cho phép các nhà sản xuất phát triển drivers.
+
+
+2.1.2 Tại sao nên lựa chọn Android?
+Android là nền tảng phổ biến nhất dành cho phát triển ứng dụng di động
+   Android cung cấp hàng trăm triệu thiết bị di động cho hơn 190 quốc gia trên toàn thế giới. Nó có lượng cài đặt lớn nhất trong tất cả các nền tảng di động và vẫn đang tiếp tục phát triển nhanh chóng. Mỗi ngày có đến cả triệu người dùng khởi động thiết bị Android của họ lần đầu tiên và bắt đầu tìm kiếm các ứng dụng, trò chơi hay các nội dung số khác.
+Trải nghiệm người dùng tuyệt nhất
+   Android cung cấp giao diện người dùng màn hình cảm ứng (UI) để tương tác với các ứng dụng. Giao diện người dùng của Android chủ yếu dựa trên thao tác trực tiếp. Người sử dụng các cử chỉ chạm như vuốt, chạm và véo để thao tác với các đối tượng trên màn hình. Ngoài bàn phím, còn có một bàn phím trên màn hình có thể tùy chỉnh để nhập văn bản. Android cũng có thể hỗ trợ bộ điều khiển trò chơi và bàn phím vật lý kích thước đầy đủ được kết nối bằng Bluetooth hoặc USB. Biểu tượng ứng dụng trên màn hình chính (trái), phát nhạc (giữa) và hiển thị các tiện ích (phải)
+   Màn hình chính của Android có thể chứa một vài biểu tượng ứng dụng, khởi chạy các ứng dụng liên quan của chúng. Các tấm màn hình chính cũng có thể chứa các widget ứng dụng, hiển thị trực tiếp, tự động cập nhật nội dung như thời tiết, hộp thư đến email của người dùng hoặc một dấu kiểm tin tức. Android cũng có thể phát nội dung đa phương tiện như âm nhạc, hoạt hình và video. Hình trên hiển thị các biểu tượng ứng dụng trên màn hình chính (trái), phát nhạc (giữa) và hiển thị các tiện ích ứng dụng (phải). Dọc phía trên màn hình là một thanh trạng thái, hiển thị thông tin về thiết bị và khả năng kết nối của thiết bị. Màn hình chính của Android có thể được tạo thành từ nhiều tấm và người dùng vuốt qua lại giữa các tấm.
+   Android được thiết kế để cung cấp phản hồi ngay lập tức cho đầu vào của người dùng. Bên cạnh một giao diện động phản ứng ngay lập tức khi chạm vào, một thiết bị hỗ trợ Android có thể rung để cung cấp phản hồi xúc giác. Nhiều ứng dụng tận dụng phần cứng bên trong như gia tốc kế, con quay hồi chuyển và cảm biến tiệm cận để đáp ứng với các hành động bổ sung của người dùng. Những cảm biến này cũng có thể phát hiện xoay màn hình. Ví dụ: một trò chơi đua xe trong đó người dùng xoay thiết bị như thể đó là vô lăng.
+   Nền tảng Android, dựa trên lõi Linux, được thiết kế chủ yếu cho các thiết bị di động màn hình cảm ứng như điện thoại di động và máy tính bảng. Vì các thiết bị chạy Android thường chạy bằng pin, Android được thiết kế để quản lý các quy trình nhằm giữ mức tiêu thụ năng lượng ở mức tối thiểu, cung cấp thời gian sử dụng pin lâu hơn.
+Dễ dàng phát triển ứng dụng
+   Để phát triển các ứng dụng tận dụng hệ điều hành và giao diện người dùng Android, chúng ta sử dụng bộ công cụ phát triển phần mềm Android (SDK). SDK bao gồm các thư viện phần mềm mã được viết sẵn, trình gỡ lỗi, trình giả lập thiết bị, tài liệu, mã mẫu và hướng dẫn. Sử dụng SDK để tạo các ứng dụng và tận dụng các khả năng phần cứng có sẵn trên mỗi thiết bị hỗ trợ Android.
+   Để phát triển ứng dụng bằng SDK, chúng ta sử dụng ngôn ngữ lập trình Java hoặc Kotlin để phát triển ứng dụng và các tệp XML để mô tả tài nguyên dữ liệu. Khi chạy, Android áp dụng các bộ tài nguyên chính xác dựa trên kích thước màn hình, mật độ màn hình, ngôn ngữ, v.v. của thiết bị.
+   Để giúp phát triển ứng dụng của mình một cách hiệu quả, Google cung cấp một môi trường phát triển tích hợp (IDE) có tên là Android Studio. Nó cung cấp các tính năng nâng cao để phát triển, gỡ lỗi và đóng gói các ứng dụng Android.
+
+
+2.1.3 Các thành phần trong một ứng dụng Android
+   Các ứng dụng Android có thể được viết bằng các ngôn ngữ Kotlin, Java và C++. Các công cụ SDK Android biên dịch codes cùng với bất kỳ tệp dữ liệu và tài nguyên nào thành APK,  một Android package, là tệp lưu trữ có hậu tố .apk. Một tệp APK chứa tất cả nội dung của ứng dụng Android và là tệp mà các thiết bị hỗ trợ Android sử dụng để cài đặt ứng dụng.
+   Các thành phần ứng dụng là các khối xây dựng thiết yếu của ứng dụng Android. Mỗi thành phần là một điểm vào thông qua đó hệ thống hoặc người dùng có thể nhập ứng dụng của bạn. Một số thành phần phụ thuộc vào những thành phần khác. Có 4 thành phần ứng dụng cơ bản: 
+   
+    Hình 2.3 Các thành phần của ứng dụng Android
+1. Activities: Một Activity là điểm vào để tương tác với người dùng. Nó đại diện cho một màn hình duy nhất với giao diện người dùng. Ví dụ: một ứng dụng email có thể có một hoạt động hiển thị danh sách các email mới, một hoạt động khác để soạn email và một hoạt động khác để đọc email. Mặc dù các Activity phối hợp với nhau để tạo thành trải nghiệm người dùng gắn kết trong ứng dụng email, nhưng mỗi Activity đều độc lập với các Activity khác. Như vậy, một ứng dụng khác có thể bắt đầu bất kỳ một trong những Activity này nếu ứng dụng email cho phép.
+2. Services: Service là một điểm vào với mục đích chung là để giữ cho ứng dụng chạy trong nền. Nó là một thành phần chạy trong nền để thực hiện các hoạt động chạy dài hoặc để thực hiện công việc cho các process từ xa. Một dịch vụ không cung cấp giao diện người dùng. Ví dụ: một dịch vụ có thể phát nhạc ở chế độ nền trong khi người dùng ở một ứng dụng khác hoặc có thể tìm tải dữ liệu qua mạng mà không chặn tương tác của người dùng với một Activity. Một thành phần khác, chẳng hạn như một Activity, có thể khởi chạy Service và cho phép nó chạy hoặc liên kết với nó để tương tác với nó. 
+3. Broadcast Recievers: là một thành phần cho phép hệ thống phân phối các sự kiện đến ứng dụng ngoài luồng người dùng thông thường, cho phép ứng dụng phản hồi các thông báo phát sóng toàn hệ thống. Vì các Broadcast Reciever là một điểm truy cập khác vào ứng dụng, nên hệ thống có thể truyền phát ngay cả đến các ứng dụng hiện không chạy.
+4. Content Providers: Content Provider quản lý một tập hợp dữ liệu ứng dụng được chia sẻ (cho các ứng dụng khác) mà chúng ta có thể lưu trữ trong hệ thống file, trong cơ sở dữ liệu SQLite, trên web hoặc trên bất kỳ vị trí lưu trữ liên tục nào khác mà ứng dụng của bạn có thể truy cập. Thông qua Content Provider, các ứng dụng khác có thể truy vấn hoặc sửa đổi dữ liệu nếu Content Provider cho phép. Ví dụ: hệ thống Android cung cấp Content Provider quản lý thông tin liên hệ (danh bạ) của người dùng.
+5. Các thành phần khác: Ngoài 4 thành phần chính, một ứng dụng Android còn bao gồm nhiều các thành phần khác như: Views, Fragment là các thành phần con của Activity, Resources cung cấp tài nguyên nội bộ trong ứng dụng, Intents giúp giao tiếp giữa 4 thành phần chính trên, … 
+2.1.4 Android Jetpack
+    Trong việc lập trình nói chung và Android nói riêng, việc hỗ trợ các phiên bản cũ và việc giảm boilerplate code (những đoạn code xuất hiện nhiều nơi và ít có sự thay đổi) luôn là vấn đề đau đầu với các nhà phát triển.
+    Nắm bắt được điều này, Google đã cho ra mắt gói thư viện Android Jetpack. Đây là một gói thư viện cực kì mạnh mẽ, hạn chế lỗi, giảm memory leaks và hỗ trợ tương thích ngược với các phiên bản cũ của Android thay thế cho Support Library cũ đang dần bị loại bỏ – một thư viện có thể hỗ trợ đến tận API level 4. Đồng thời, thư viện Jetpack còn được thiết kế để hướng những nhà phát triển theo mô hình hiện đại và quy chuẩn chung của Google đề ra. Trong Android, xưa nay vốn chưa có quy chuẩn hay mô hình thiết kế chung, tất cả đều do các nhà phát triển tự định nghĩa, nay đã có một mô hình và quy chuẩn chung..
+    
+    Hình 2.4 Các thành phần của Android Jetpack
+    Trong Android Jetpack, Architecture Components là tập các thư viện nhằm xây dựng kiến trúc ứng dụng một cách mạnh mẽ, dễ dàng kiểm thử và bảo trì. Việc sử dụng các components này sẽ tăng hiệu năng rất lớn trong việc phát triển ứng dụng. Đề tài này sẽ chủ yếu sử dụng các thành phần thuộc Architecture Components.
+2.2 Tổng quan về Kotlin
+2.2.1 Giới thiệu chung
+   Kotlin là một ngôn ngữ lập trình hiện địa, mã nguồn mở, hỗ trợ cả lập trình hướng đối tượng và lập trình chức năng. Kotlin cung cấp cú pháp và khái niệm tương tự từ các ngôn ngữ khác, bao gồm C #, Java và Scala. Kotlin không hướng đến mục tiêu trở thành một ngôn ngữ độc nhất, nó lấy cảm hứng từ nhiều thập kỷ phát triển ngôn ngữ lập trình. Nó tồn tại trong các biến thể của JVM (Kotlin / JVM), JavaScript (Kotlin / JS) và mã gốc (Kotlin / Native). Kotlin có thể được biên dịch cho một số nền tảng khác nhau. Kotlin được giới thiệu là tương thích 100% với Java, codes sẽ được biên dịch sang bytecode Java và do đó sẽ tương thích với hệ sinh thái lớn của các thư viện Java.
+   Năm 2017, Google đã thông báo rằng sẽ hỗ trợ Kotlin như là ngôn ngữ chính thức để phát triển ứng dụng trên Android, thay thế cho Java. Một dự án Android có thể vừa được viết bằng Java và Kotlin. Trong đề tài đồ án này, toàn bộ ứng dụng sẽ được viết bằng Kotlin.
+   
+    Hình 2.5 Kotlin
+   
+2.2.2 Ưu điểm
+    
+    Hình 2.6 Kotlin vs Java
+Sử dụng Kotlin để phát triển Android có một số lợi ích như:
+- Ít code kết hợp với khả năng đọc lớn hơn. Dành ít thời gian hơn để viết code của bản thân và làm việc để hiểu code của người khác.
+- Ngôn ngữ và môi trường trưởng thành. Kể từ khi được thành lập vào năm 2011, Kotlin đã phát triển liên tục, không chỉ là ngôn ngữ mà còn là toàn bộ hệ sinh thái với công cụ mạnh mẽ. Giờ đây, nó được tích hợp hoàn toàn trong Android Studio và được nhiều công ty tích cực sử dụng để phát triển ứng dụng Android.
+- Hỗ trợ Kotlin trong Android Jetpack và các thư viện khác. Các tiện ích extensions KTX thêm các tính năng của ngôn ngữ Kotlin, chẳng hạn như coroutines, extension function, lambdas và các named parameters, vào các thư viện Android hiện có.
+- Khả năng tương tác với Java. Các nhà phát triển có thể sử dụng Kotlin cùng với ngôn ngữ lập trình Java trong các ứng dụng mà không cần phải chuyển đổi tất cả codes sang Kotlin.
+- Hỗ trợ phát triển đa nền tảng. Chúng ta có thể sử dụng Kotlin để phát triển không chỉ Android mà cả iOS, phụ trợ và ứng dụng web. Tận hưởng lợi ích của việc chia sẻ codes chung giữa các nền tảng.
+- Codes an toàn. Ít code hơn và dễ đọc hơn dẫn đến ít lỗi hơn. Trình biên dịch Kotlin phát hiện các lỗi còn lại, làm cho code trở lên an toàn.
+- Học dễ dàng. Kotlin rất dễ học, đặc biệt là đối với các nhà phát triển Java.
+- Cộng đồng lớn. Kotlin có sự hỗ trợ lớn và nhiều đóng góp từ cộng đồng, đang phát triển trên toàn thế giới. Theo Google, hơn 60% trong số 1000 ứng dụng hàng đầu trên Play Store sử dụng Kotlin.
+2.3 Tổng quan về mô hình MVVM
+   Trong Google I/O 2017, Google đã giới thiệu các Architecture Components trong đó bao gồm LiveData và ViewModel, tạo điều kiện phát triển ứng dụng Android bằng cách sử dụng MVVM pattern. 
+   MVVM là một trong những Architectural Pattern giúp tăng cường phân tách, nó cho phép tách logic giao diện người dùng khỏi logic nghiệp vụ (hoặc back-end). Mục tiêu của là đạt được nguyên tắc “Giữ cho mã UI đơn giản và không có logic ứng dụng để giúp quản lý dễ dàng hơn”.
+   MVVM chủ yếu có các lớp sau:
+- Model: Mô hình đại diện cho dữ liệu và business logic của ứng dụng. Một trong những chiến lược triển khai được đề xuất của tầng này là hiển thị dữ liệu của nó thông qua các observable được tách rời hoàn toàn khỏi ViewModel hoặc bất kỳ observers/consumers khác.
+- ViewModel: ViewModel tương tác với Model và cũng chuẩn bị các observable mà View có thể quan sát được. ViewModel có thể tùy chọn cung cấp các hook cho View để truyền các sự kiện cho Model. Một trong những chiến lược triển khai quan trọng của tầng này là tách nó khỏi View, tức là, ViewModel không nên biết về tác nhân nào đang tương tác với View.
+- View: Cuối cùng, vai trò của View trong pattern này là quan sát (hoặc đăng ký) một ViewModel có thể quan sát được để lấy dữ liệu để cập nhật các thành phần UI phù hợp.
+    
+    Hình 2.7 MVVM pattern
+CHƯƠNG 3: 
+NỘI DUNG THỰC HIỆN
+3.1 Yêu cầu của hệ thống
+Ứng dụng Take Note & Self Dictionary cần cung cấp những chức năng sau:
+● Quản lý các ghi chú: Tạo mới, sửa, xóa các ghi chú với các thông tin về tiêu đề, nội dung, danh mục và hình ảnh bổ sung.
+● Quản lý từ điển cá nhân: Tạo mới, sửa, xóa các từ vựng với các thông tin về từ ngữ, ý nghĩa, danh mục, từ loại và các ví dụ đi kèm.
+● Quản lý và tạo nhắc nhở công việc: Tạo mới, sửa, xóa và đặt giờ báo cho các công việc với các thông tin về tiêu đề, lời nhắn và thời gian.
+● Tìm kiếm ghi chú và từ điển theo các tiêu chí tên, tiêu đề, ý nghĩa
+3.2 Thiết kế hệ thống
+3.2.1 Biểu đồ Use-case
+Biểu đồ Use-case mức tổng quát
+
+    Hình 3.1 Biểu đồ Use-case tổng quát
+Biểu đồ Use-case ManageCategory
+
+    Hình 3.2 Biểu đồ Use-case ManageCategory
+● Tóm tắt
+- Tác nhân: Người dùng
+- Chức năng: Tạo danh mục, sửa danh mục, xóa danh mục 
+● Dòng sự kiện
+Dòng sự kiện chính
+1. Người dùng chọn chức năng 
+2. Hệ thống hiển thị các danh mục hiện có và các tùy chọn
+3. Người dùng chọn danh mục
+4. Người dùng chọn chức năng tùy chọn
+5. Hệ thống hiển thị xác nhận
+6. Người dùng xác nhận
+7. Hệ thống lưu thay đổi
+Các dòng sự kiện khác
+4.1. Người dùng chọn cập nhật danh mục
+4.2. Hệ thống hiển thị hộp thoại chỉnh sửa
+4.3. Người dùng chỉnh sửa thông tin và xác nhận
+4.4. Hệ thống lưu thay đổi
+
+Biểu đồ Use-case ManageDictionary
+
+    Hình 3.3 Biểu đồ Use-case ManageDictionary
+● Tóm tắt
+- Tác nhân: Người dùng
+- Chức năng: Tạo từ vựng, sửa từ vựng, xóa từ vựng 
+● Dòng sự kiện
+Dòng sự kiện chính
+1. Người dùng chọn chức năng 
+2. Hệ thống hiển thị các từ vựng theo danh mục mặc định và các tùy chọn
+3. Người dùng chọn tạo từ vựng
+4. Hệ thống hiển thị màn hình chỉnh sửa
+5. Người dùng nhập thông tin
+6. Hệ thống kiểm tra thông tin
+7. Người dùng chọn lưu
+8. Hệ thống cập nhật thay đổi
+Các dòng sự kiện khác
+3.1. Người dùng chọn danh mục khác
+3.2. Hệ thống cập nhật từ vựng theo danh mục được chọn
+3.3. Người dùng chọn từ được hiển thị và chọn xóa
+3.4. Hệ thống hiển thị xác nhận
+3.5. Người dùng xác nhận
+3.6. Hệ thống xóa từ vựng đã chọn và cập nhật giao diện
+
+Biểu đồ Use-case ManageNote
+
+    Hình 3.4 Biểu đồ Use-case ManageNote
+● Tóm tắt
+- Tác nhân: Người dùng
+- Chức năng: Tạo ghi chú, sửa ghi chú, xóa ghi chú 
+● Dòng sự kiện
+Dòng sự kiện chính
+1. Người dùng chọn chức năng 
+2. Hệ thống hiển thị các ghi chú theo danh mục mặc định và các tùy chọn
+3. Người dùng chọn tạo ghi chú
+4. Hệ thống hiển thị màn hình chỉnh sửa
+5. Người dùng nhập thông tin
+6. Hệ thống kiểm tra thông tin
+7. Người dùng chọn lưu
+8. Hệ thống cập nhật thay đổi
+Các dòng sự kiện khác
+5.1. Người dùng chọn thêm ảnh
+5.1.1 Hệ thống hiển thị các ảnh 
+5.1.2. Người dùng chọn ảnh
+5.1.3. Hệ thống cập nhật giao diện
+5.2. Người dùng chọn vẽ 
+5.2.1. Hệ thống hiển thị giao diện vẽ
+5.2.2. Người dùng tạo hình vẽ tùy chọn và lưu
+5.2.3. Hệ thống cập nhật giao diện
+
+
+Biểu đồ Use-case ScheduleJob
+
+    Hình 3.5 Biểu đồ Use-case ScheduleJob
+● Tóm tắt
+- Tác nhân: Người dùng
+- Chức năng: Tạo công việc, bật/tắt nhắc nhở, xóa công việc 
+● Dòng sự kiện
+Dòng sự kiện chính
+1. Người dùng chọn chức năng 
+2. Hệ thống hiển thị các công việc theo danh mục mặc định 
+3. Người dùng chọn tạo công việc
+4. Hệ thống hiển thị màn hình chỉnh sửa
+5. Người dùng nhập thông tin
+6. Hệ thống kiểm tra thông tin
+7. Người dùng chọn lưu
+8. Hệ thống cập nhật thay đổi
+Các dòng sự kiện khác
+3.1. Người dùng chọn công việc cụ thể
+3.2. Hệ thống hiển thị các tùy chọn xóa, bật/tắt nhắc nhở
+3.3. Người dùng chọn tùy chọn tương ứng
+3.4. Hệ thống cập nhật giao diện
+
+Biểu đồ Use-case Search
+
+    Hình 3.6 Biểu đồ Use-case Search
+● Tóm tắt
+- Tác nhân: Người dùng
+- Chức năng: Tìm kiếm công việc, ghi chú 
+● Dòng sự kiện
+Dòng sự kiện chính
+1. Người dùng chọn chức năng 
+2. Hệ thống hiển thị các tùy chọn 
+3. Người dùng nhập từ khóa, chọn mục tìm kiếm
+4. Hệ thống tìm kiếm và cập nhật giao diện
+5. Người chọn mục kết quả
+6. Hệ thống hiển thị chi tiết của kết quả được chọn
+
+
+
+3.2.2 Thiết kế cơ sở dữ liệu
+Biểu đồ thực thể – quan hệ
+    
+    Hình 3.7 Biểu đồ thực thể – quan hệ
+Danh sách các bảng
+Bảng category
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả    1category_namevarcharnot nullTên danh mục        Bảng 3.1 category
+Bảng word_type
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả    1type_namevarcharnot nullTên từ loại        Bảng 3.2 word_type
+Bảng note
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả    1idvarcharnot null, primary keyTên từ loại    2titlevarcharnot nullTiêu đề    3detailvarcharThông tin chi tiết    4categoryvarcharnot null, foreign keyDanh mục    5created_datevarcharNgày tạo    6image_urivarcharĐường dẫn ảnh        Bảng 3.3 note
+    
+Bảng word
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả    1wordvarcharnot null, primary keyTừ vựng    2meaningvarcharnot nullÝ nghĩa    3notevarcharGhi chú bổ sung    4categoryvarcharnot null, foreign keyDanh mục    5typevarcharnot null, foreign keyLoại từ        Bảng 3.4 word
+
+
+Bảng word_example
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả    1example_idvarcharnot null, primary keyMã định danh    2examplevarcharnot nullNội dung ví dụ    3meaningvarcharnot nullÝ nghĩa    4notevarcharGhi chú bổ sung    5wordvarcharnot null, foreign keyLoại từ        Bảng 3.5 word_example
+Bảng job
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả    1idvarcharnot null, primary keyMã định danh    2job_namevarcharnot nullTên công việc    3messagevarcharLời nhắn    5datevarcharNgày diễn ra    6timevarcharThời gian diễn ra        Bảng 3.6 job
+    
+
+
+3.2.3 Biểu đồ tuần tự
+    Biểu đồ tuần tự thêm ghi chú
+    
+    
+    Hình 3.8 Biểu đồ tuần tự thêm ghi chú
+
+
+    Biểu đồ tuần tự thêm từ vựng
+    
+    Hình 3.9 Biểu đồ tuần tự thêm từ vựng
+
+
+    Biểu đồ tuần tự thêm công việc
+    
+    Hình 3.10 Biểu đồ tuần tự thêm công việc
+3.3 Xây dựng giao diện của ứng dụng
+3.3.1 Giao diện chính
+    
+    Hình 3.11 Giao diện chính
+3.3.2 Giao diện sửa ghi chú
+
+    Hình 3.12 Giao diện sửa ghi chú
+3.3.3 Giao diện từ điển
+    
+    Hình 3.13 Giao diện từ điển
+3.3.4 Giao diện Sửa từ vựng
+
+    Hình 3.14 Giao diện sửa từ vựng
+3.3.5 Giao diện chọn mục sắp xếp
+    
+    Hình 3.15 Giao diện chọn mục sắp xếp
+3.3.6 Giao diện công việc
+    
+    Hình 3.16 Giao diện công việc
+3.3.7 Giao diện sửa công việc
+    
+    Hình 3.17 Giao diện sửa công việc
+3.3.8 Giao diện chọn từ loại
+    
+    Hình 3.18 Giao diện chọn từ loại
+3.3.9 Giao diện vẽ hình
+    
+    Hình 3.19 Giao diện vẽ hình
+3.3.10 Giao diện chọn ảnh
+    
+    Hình 3.20 Giao diện chọn ảnh
+3.3.11 Giao diện lọc ghi chú
+    
+    Hình 3.21 Giao diện lọc ghi chú
+3.3.12 Giao diện xem thông tin chi tiết ghi chú
+    
+    Hình 3.22 Giao diện thông tin chi tiết ghi chú
+CHƯƠNG 4: 
+KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+● Xây đựng dược ứng dụng Take Note & Self Dictionary với đầy đủ các chức năng đã đề ra, bao gồm:
+- Quản lý ghi chú với văn bản và hình ảnh
+- Quản lý từ điển cá nhân theo danh mục tùy chọn và từ loại
+- Quản lý và tạo nhắc nhở công việc theo thời gian thực
+- Tìm kiếm ghi chú, từ vựng theo tên, danh mục và thời gian
+● Ứng dụng mô hình MVVM và các Architecture Components của Android Jetpack trong sản phẩm giúp tăng sự tương thích và giảm memory leaks
+● Giao diện thân thiện, dễ sử dụng
+4.2 Hạn chế của đề tài
+● Chưa hỗ trợ ngôn ngữ tượng hình
+● Chưa hỗ trợ đồng bộ thời gian thực
+4.3 Hướng phát triển của đề tài
+● Xây dựng kho lưu trữ từ xa cho người dùng
+● Xây dựng đồng bộ thời gian thực trên nhiều thiết bị khác nhau
+● Xây dựng tính năng chia sẻ từ điển giữa các người dùng khác nhau
+
+TÀI LIỆU THAM KHẢO
+[1] https://developer.android.com, tài liệu chính thức về các API của Android, cập nhật bởi Google 
+[2] https://kotlinlang.org, tài liệu chính thức về ngôn ngữ Kotlin, phát triển bởi JetBrain và Google 
+[3] https://stackoverflow.com, diễn đàn trao đổi thông tin lớn nhất của lập trình viên  
+[4] https://proandroiddev.com, blog phân tích về các công nghệ, cập nhật mới của Android và các Developer 
+    
+    
+Xây dựng ứng dụng Take Note & Self Dictionary trên hệ điều hành Android
+    
+    
+2
+    
+    

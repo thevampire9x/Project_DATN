@@ -1,0 +1,447 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+           Nguyên tắc cơ bản của Bảo hiểm – chia sẻ rủi ro, lấy số đông bù số ít – đã có từ rất lâu khi con người mới bắt đầu xây dựng các bộ lạc, những cộng đồng đầu tiên vào thuở sơ khai của văn minh nhân loại. Thay vì một mình đi săn, tổ tiên của chúng ta đã biết săn bắn theo nhóm lớn, giảm thiểu những thiệt hại nhân mạng và đảm bảo được thành quả to lớn hơn. Những người thợ săn bị thương cũng được chia phần và quan trọng hơn, được chăm sóc đến khi sức khỏe hồi phục.
+          Ngày nay, những nguy hiểm xưa cũ đã không còn, thay vào đó là bất trắc khác đi kèm với cuộc sống hiện đại. Từ đó, các công ty Bảo hiểm ra đời, đảm nhận vai trò gánh vác, chia sẻ những rủi ro quá lớn mà các cá nhân đơn lẻ không thể đương đầu. Không như những nhóm thợ săn thuở xưa có những thỏa thuận cá nhân về việc san sẻ rủi ro cũng như thành quả, cộng đồng nhân loại đã trở nên quá to lớn, chúng ta đã quá bận bịu để tìm và theo dõi hàng trăm thỏa  thuận cá nhân. Các Công ty Bảo hiểm tồn tại như một bộ máy phân phối và điều hướng, đơn giản hóa các thỏa thuận ấy. Khi tham gia Bảo hiểm, bạn đang đóng góp vào việc chia sẻ rủi ro với hàng trăm ngàn người khác. Khoản tiền bạn đóng góp chính là những hỗ trợ, bù đắp đến những người gặp khó khăn trong hiện tại.
+          Khi xảy ra các sự cố tai nạn khi tham gia giao thông gây thiệt hại cho người khác, nếu như không có bảo hiểm, thì bên gây tai nạn sẽ phải đứng ra bồi thường cho các thiệt hại của bên bị hại. Trong nhiều trường hợp, với số tiền bồi thường lớn, bên gây tai nạn không có đủ khả năng để chi trả các khoản bồi thường phát sinh như chi phí y tế chữa trị, tài sản bị hư hại… dẫn đến bên bị hại không nhận được tiền để khắc phục hậu quả và bên gây thiệt hại có khả năng phải bị xét xử trước pháp luật. Với những trường hơp như vậy xảy ra dẫn đến tạo ra gánh nặng cho xã hội.
+Nếu như có bảo hiểm dân sự, thì các trường hợp như vậy công ty bảo hiểm sẽ đứng ra thay cho bên gây thiệt hại chi trả số tiền bồi thường cho bên bị hại nhằm sớm khắc phục các hậu quả do tai nạn gây ra.
+        Số tiền bồi thường thường lớn hơn rất nhiều so với số tiền phí phải đóng, nguyên nhân do nguyên tắc của bảo hiểm là chia sẽ rủi ro, lấy số đông bù số ít. Vì vậy càng nhiều người mua bảo hiểm thì số tiền phí phải đóng càng thấp xuống.
+        Từ đó khi quy định toàn bộ người tham gia giao thông bắt buộc phải mua bảo hiểm sẽ giảm thiểu các trường hợp tạo ra gánh nặng cho xã hội và số tiền mà mỗi người phải đóng góp sẽ là thấp nhất.
+          Vì vậy, việc xây dựng một ứng dụng hỗ trợ bán bảo hiểm online lúc này là cần thiết, ứng dụng bán bảo hiểm sẽ giúp cho người nhân viên hay quản lý sẽ dễ dàng nhập các thông tin cũng như quản lý thông tin của khách hàng dễ dàng và đơn giản hơn trước.
+1.2 Mục tiêu của đề tài
+- Xây dựng được ứng dụng hỗ trợ  bán bảo hiểm chạy trên mobile bằng phần mềm Android studio.
+- Hỗ trợ nhân viên và người quản lý quản lý thông tin bảo hiểm 1 cách dễ dàng hơn.
+- Người dùng có thể đặt mua các loại bảo hiểm thông qua ứng dụng và đọc những thông tin cần thiết liên quan đến các loại bảo hiểm như phạm vi bảo hiểm, quyền lợi của bảo hiểm.
+- Người nhân viên thông qua ứng dụng có thể quản lý được hóa đơn và tổng hợp được doanh thu một cách dễ dàng.
+- Thiết kế được ứng dụng hoàn thiện, đáp ứng được yêu cầu của thị trường và khách hàng và có tính thực tiễn cao.
+1.3 Giới hạn và phạm vi của đề tài
+1.3.1 Phạm vi đề tài
+  - Đề tài nghiên cứu và phát triển dự trên các kiến thức tác giả đã được học liên quan đến nghiệp vụ bảo hiểm và phát triên dự trên một ứng dụng bán hàng trên Internet.
+  - Đề tài được nghiên cứu và phát triển quy mô nhỏ dựa trên sự khảo sát tại chi nhánh bảo hiểm BSH Mỹ hào. Vì vậy ứng dụng chỉ phù hợp với phạm vi hoạt động của một chi nhánh.
+  - Đề tài được xây dựng để giúp các nhân viên trong một chi nhánh bảo hiểm dễ dàng quản lý thông tin khách hàng cũng như truy xuất dữ liệu khách hàng khi có sai xót trong việc quản lý thông tin của khách hàng.
+1.3.2 Giới hạn
+  - Hệ thống Server sử dụng cho đề tài là Free host với quy mô nhỏ và dung lượng lưu chữ hạn chế và tốc độ kết nối đến Server chưa được nhanh.
+  - Thiết kế giao diện của ứng dụng chưa được chuyên nghiệp.
+  - Thanh toán: chưa có hình thức liên kết và thanh toán nhanh qua thẻ ngân hàng.
+1.4 Nội dung thực hiện
+    	Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Nghiên cứu và phân tích các control các thành phần và các thư viện trên ứng dụng Android Studio và các nền tảng công nghệ khác như PHP và MySQL.
+- Phân tích yêu cầu và đề xuất cách thiết kế ứng dụng trên nền tảng Android và thiết kế Server trên tảng công nghệ PHP và MySQL.
+- Thiết kế đặc tả hệ thống, phân tích và vẽ các biểu đồ Use case, biểu đồ Class và biểu đồ Sequence Diagram.
+- Xây dựng và thiết kế Cơ sở dữ liệu.
+- Lập trình cho các Module của ứng dụng.
+- Kết nối ứng dụng đến Server để truy xuất dữ liệu.
+- Triển khai thực nghiệm ứng dụng trên mạng Internet.
+1.5 Phương pháp tiếp cận
+- Cách tiếp cận : Nghiên cứu các thành phần của nền tảng công nghệ PHP và MySQL để thiết kế dữ liệu Server, nghiên cứu và sử dụng các control các thư viện có sẵn trong Android studio để thiết kế ứng dụng.
+- Sử dụng các phương pháp để nghiên cứu và thiết kế ứng dụng: 
+o Phương pháp đọc tài liệu, giáo trình lập trình Android đã được học ở các môn chuyên đề;
+o Tìm hiểu các tài liệu về PHP và MySQL trên Internet;
+o Tham khảo cách lập trình một ứng dụng điện thoại trên Internet;
+o Tham khảo các nguồn tài liệu khác thông qua bạn bè;
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Android studio
+2.1.1 Giới thiệu về Android
+      Android là hệ điều hành dựa trên nền tảng Linux được thiết kế dành cho các thiết bệ di động có màn hình cảm ứng như điện thoại thông minh hay máy tính bảng. Ban đầu, Android được phát triển bời Tổng công ty Android, với sự hỗ trợ tài chính từ Google và sau này được mua lại vào năm 2005. Android được ra mắt vào năm 2007 cùng với sự tuyên bố thành lập Liên minh thiết bị cầm tay mở: một hiệp hội gồm các công ty phần mềm, phần cứng, và viễn thông với mục tiêu đầy mạnh các tiêu chuẩn mở cho các thiết bị di động. Chiếc điện thoại đầu tiên chạy Android được bán vào tháng 10 năm 2008. Bộ Android SDK cung cấp các công cụ và API cần thiết để phát triển các ứng dụng trên nền tảng Android bằng ngôn ngữ lập trình Android.
+      Theo thống kê của statistic, quý II năm 2018, Android chiếm hơn 80% thị phần điện thoại thông minh trên toàn cầu.
+- Công cụ lập trình Android phổ biến nhất hiện nay là Android Studio, được chính Google phát hành.
+- Lập trình Android hiện nay dựa trên hai ngôn ngữ là Java và Kotlin.
+2.1.2 Các thành phần trong Android
+- Framework phát triển ứng dụng cho phép tái sử dụng và thay thế các thành phần.
+- Máy ảo Java Dalvik được tối ưu hóa cho các thiết bị di động.
+- Trình duyệt tích hợp dựa trên engine Webkit mã nguồn mở.
+- Hệ thống đồ họa được tối ưu hóa được hỗ trợ bởi một thư viện đồ họa 2D 3D đặc biệt dựa trên đặc tả kỹ thuật của OpenGL ES 1.0 (tùy chọn phần cứng tăng tốc đồ họa).
+- SQLite dùng cho việc lưu trữ cấu trúc dữ liệu.
+- Hỗ trợ các định dạng video, audio và hình ảnh phổ biến. (MPEG4, H.264, MP3, AAC, AMR, JGP, PNG, GIF).
+- Hỗ trợ GSM (Phụ thuộc phần cứng ).
+- Bluetooth, GPS, la bàn, và cảm ứng gia tốc (phụ thuộc phần cứng).
+- Mỗi trường phát triển phong phú, bao gồm hệ mô phỏng thiết bị, công cụ gỡ lỗi, tối ưu hóa bộ nhớ và hiệu suất.
+- Các control và view được sử dụng:
+- TextView : Hiển thị một nhãn hay chuỗi ký tự
+- EditText : Nhập một nhãn hay một chuỗi kí tự
+- Button : nút nhấn cho phép người dùng thao thác các chức năng sử dụng
+- CheckBox : Có chức năng cho phép người dùng tích vào mục muốn lựa chọn
+- ListView : Hiển thị danh sách theo chiều học của layout (danh sách có thể là các dòng text hoặc hình ảnh +text …)
+- GridView : tương tự như ListView nhưng các thành phần bên trong được sắp xếp theo 2 chiều, giống như các ô lưới (các thành phần bên trong giống như ListView).
+- ImageView : Dùng để hiển thị một hình ảnh nào đó
+- ImageButton : Dùng để hiển thị một hình ảnh nào đó và có chức năng như một nút ấn
+- Spinner : Hiển thị lựa chọn, xổ xuống 1 danh sách các lựa chọn cho người dùng
+- ScrollView : chế độ xem cuộn hỗ trợ theo chiều dọc
+- ViewPager : Chuyển tiếp giữa toàn bộ màn hình với màn hình khác
+2.1.3 Ưu nhược điểm của Android
+- Ưu điểm nổi bật nhất của Android là hệ điều hành mã nguồn mở cho phép người dùng cũng như những nhà phát triển dễ dàng tùy biến.
+- Giao diện thân thiện, dễ sử dụng.
+- Tương thích với đa dạng hệ thống phần cứng.
+- Hệ thống cửa hàng ứng dụng đa dạng, đồ sộ.
+- Đối với người lập trình, cộng đồng đông đảo là một lợi thế, có thể dễ dàng thêm vào các thư viện cũng như nhận được sự trợ giúp khi gặp khó khăn.
+- Giao diện chỉnh sửa WYSIWYG Editor hỗ trợ Live-layout có thể dựng ứng dụng và xem trước theo thời gian thực.
+-   Có tùy chọn để xem trước giao diện với nhiều thiết lập trên nhiều màn hình  khi viết ứng dụng.
+ -   Cho phép tạo ra file cài đặt APK (file cài đặt ứng dụng Android) hàng loạt.
+ -   Hỗ trợ công cụ Lint để kiểm tra tính tương thích, hiệu năng ứng dụng và khả  năng hoạt động trên nhiều phiên bản Android...
+ -   Hỗ trợ phát triển ứng dụng cho Android Wear, Android TV và Android Auto.
+ -  Có thể tích hợp với nền tảng đám mây Google Cloud Platform (App Engine    và Google Cloud Messaging)
+2.1.4 Tại sao nên sử dụng Android
+
+    Hình 2. 1: Tại sao cần sử dụng Android
+- Open Soure: Mã nguồn mở.
+- Larger Developer and Community Reach: Có những lập trình viên và cộng đồng phát triển lớn.
+- Increased marketing: phát triển thương mại.
+- Inter app integration: ứng dụng hội nhập quốc tế.
+- Reduce cost of development: giảm chi phí phát triển.
+- Higher Success Ratio: Tỷ lệ thành công cao hơn.
+- Rich development Environment:Môi trường phát triển đa dạng
+2.1.5 Giới thiệu về Android studio và Android SDK
+• Android Studio chạy trên Windows, Mac và Linux, nhằm thay thế cho Eclipse Android Development Tool (ADT) vốn được sử dụng làm IDE chính trong các năm trước đó.
+    Một số tính năng nổi bật:
+• Bộ công cụ build ứng dụng dựa trên Gradle (thay vì Maven).
+• Chức năng dò và sửa lỗi nhanh, hướng Android.
+• Công cụ chỉnh sửa màn hình dạng kéo thả tiện lợi.
+• Các wizard tích hợp nhằm giúp lập trình viên tạo ứng dụng từ mẫu có sẵn.
+• Tích hợp Google Cloud Platform, dễ dàng tích hợp với Google Cloud Messaging và App Engine của Google.
+• The Android SDK (software development kit) là một tập hợp các công cụ được sử dụng để phát triển ứng dụng cho Android. 
+    Android SDK bao gồm:
+• Các thư viện đòi hỏi
+• Bộ dò lỗi (Debugger)
+• Thiết bị mô phỏng (emulator)
+• Các tài liệu liên quan cho Android API.
+• Các đoạn code mẫu.
+• Các hướng dẫn cho hệ điều hành Android
+    Nếu Android Studio là trình soạn thảo code (IDE) thì Android SDK là bộ tổng hợp các công cụ để build app, các bản mẫu máy ảo Android (sử dụng để test app) cần thiết để làm ra một ứng dụng Android hoàn chỉnh.
+2.2 Tổng quan về PHP và MySQL
+2.2.1 PHP là gì ?
+              PHP viết tắt của Hypertext Preprocessor, là một ngôn ngữ kịch bản mã nguồn mở, được sử dụng trong các tài liệu HTML để thi hành những chức năng tương tác phía trình chủ (server-side). PHP chạy trên tất cả các hệ điều hành phổ biến và được sử dụng phổ biến trên các máy chủ Web Linux/UNIX hoặc trên các máy chủ Windows có cài đặt phần mềm bổ sung.
+       PHP có thể được nhúng vào trong trang Web và được dùng để truy cập hoặc ngăn chặn truy cập thông tin trong cơ sở dữ liệu. PHP hỗ trợ nhiều hệ quản trị cơ sở dữ liệu như MySQL, PostgreSQL, mSQL, Infomix, Oracle, Sysbase, Solid, Interbase, SQL Server, MS Access, Generic ODBC… Một tài liệu HTML chứa kịch bản PHP thường có phần mở rộng tập tin .php.
+       Ban đầu PHP là viết tắt của Personal Home Page, nhưng các phiên bản về sau đã sử dụng tên gọi “PHP Hypertext Preprocessor”, gọi tắt là PHP. Cú pháp của PHP khá đơn giản và rất giống với ngôn ngữ Perl, có một số đặc trưng của shell Bourne, Java Script và C. PHP cũng được xem như một công nghệ, là môi trường phía trình chủ cho các động cơ kịch bản khả chuyển, giống ASP.
+2.2.2 MySQL là gì ?
+    MySQL là một hệ quản trị cơ sở dữ liệu mã nguồn mở thích hợp cho các ứng dụng có phạm vi vừa và nhỏ. Tuy không phải là hệ quản trị cơ sở dữ liệu mạnh nhất, nhưng MySQL lại được sử dụng rộng rãi nhất trên thế giới. MySQL hỗ trợ ngôn ngữ SQL chuẩn và được biên dịch trên nhiều nền khác nhau như Linux, Windows… Tất nhiên, cũng giống như các phần mềm nguồn mở khác, cả PHP và MySQL đều miễn phí.
+2.2.3 Kết hợp sử dụng PHP và MySQL
+            Cả PHP và MySQL đều có tính khả chuyển cao, có thể chạy trên nhiều nền khác nhau, tương thích với hầu hết các máy chủ Web hiện nay như Apache trên Linux/UNIX, IIS (Internet Information Services) trên Windows. Sử dụng PHP và MySQL chúng ta có thể tạo ra các ứng dụng chéo nền (cross-platform), chẳng hạn có thể vận hành máy chủ cơ sở dữ liệu trên Linux và sử dụng ứng dụng trên Windows.
+2.3 Tổng quan về PHPMyAdmin
+         PhpMyAdmin là phần mềm mã nguồn mở được viết bằng ngôn ngữ PHP nhằm giúp người dùng (thường là các nhà quản trị cơ sở dữ liệu hay database administrator) có thể quản lý cơ sở dữ liệu MySQL thông qua giao diện web thay vì sử dụng giao diện cửa sổ dòng lệnh (command line interface). Sử dụng phpMyadmin người dùng có thể thực hiện được nhiều tác vụ khác nhau như khi sử dụng cửa sổ dòng lệnh. Các tác vụ này bao gồm việc tạo, cập nhật và xoá các cơ sở dữ liệu, các bảng, các trường, dữ liệu trên bảng, phân quyền và quản lý người dùng....
+* Tính bảo mật của PhpMyAdmin
+           Cũng giống các phần mềm mã nguồn mở khác phpMyadmin được phát triển bởi cộng đồng các lập trình viên trên thế giới. Điều này có nghĩa là bất cứ ai biết lập trình đều có thể đóng góp mã lệnh của mình để giúp cải tiến phần mềm này. Chính vì tính mở của nó nên trong một phiên bản của phpMyadmin trước đây đã xuất hiện các lỗi bảo mật khi cho phép hacker truy cập vào database mà không cần sử dụng mật khẩu. Với phiên bản hiện tại thì lỗi bảo mật này đã được khắc phục và hiện nay thì người ta vẫn chưa phát hiện ra được lỗi bảo mật đáng kể nào của phần mềm này. Tuy nhiên thông thường thì các nhà quản trị cơ sở dữ liệu cũng đều hạn chế việc truy cập vào địa chỉ URL của phpMyadmin cho những I.P nhất định để tránh những rủi ro có thể xảy ra với database.
+
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Phát biểu bài toán
+3.1.1 Mô tả hệ thống hiện tại
+    Hiện nay, công việc bán bảo hiểm ô tô – xe máy còn được thực hiện theo cách giao bán truyền thống và ghi chép dữ liệu bằng việc ghi chép trên giấy. Việc lưu trữ khách hàng và lưu trữ dữ liệu hóa đơn này có nhiều hạn chế, không khoa học, dễ xảy ra trường hợp quên dẫn đến dữ liệu quản lý bị sai sót và gây thất thoát doanh thu, gây ra nhiều hậu quả, khó khăn trong hoạt động kinh doanh của cơ quan, doanh nghiệp kinh doanh mặt hàng bảo hiểm.
+    Cùng với sự phát triển của smartphone trong thời đại công nghệ số, việc xây dựng ứng dụng trên thiết bị di động Android trở nên phổ biến. Thì việc quản lý dữ liệu khách hàng, dữ liệu hóa đơn của cơ quan, doanh nghiệp ngày càng thuận lợi và dễ dàng hơn, một ứng dụng trên di dộng sẽ giúp cho công việc quản lý của nhân viên dễ dàng và năng xuất hơn người dùng có thể di động trong các công việc kinh doanh của mình cũng như tiện tra cứu dữ liệu trên chiếc điện thoại.
+    Từ những thực tế trên đặt ra yêu cầu cần xây dựng một ứng dụng hỗ trợ bán bảo hiểm trên nền tảng Android giúp người dùng có thể đồng bộ dữ liệu và quản lý khách hàng và hóa đơn một cách hiệu quả nhất.
+3.1.2 Phát biểu bài toán
+        3.1.2.1. Tổng quan về hệ thống mới
+• Với giao diện thân thiện với người dùng, cách sử dụng dễ dàng, hệ thống giúp người dùng quản lý và lưu trữ dữ liệu bảo hiểm một cách đơn giản và dễ dàng hơn.
+• Một số chức năng chính: 
+* Quản lý tài khoản: hệ thống cần quản lý được việc đăng ký, đăng nhập và đăng xuất của người dùng.
+* Quản lý dữ liệu hóa đơn và khách hàng: hệ thống cần quản lý được dữ liệu hóa đơn và thông tin khách hàng.
+• Dữ liệu hóa đơn: gồm các thuộc tính, đối tượng trong bảng hóa đơn như mã hóa đơn, tên hóa đơn, tổng tiền, ngày xuất.
+• Thông tin khách hàng : lưu trữ thông tin của khách hàng như họ tên, địa chỉ, số điện thoại, biển số xe, để tiện truy xuất khi khách hàng thông báo có sự cố về phương tiện của họ.
+* Thông tin bảo hiểm: hiển thị những thông tin quan trọng của bảo hiểm như tên bảo hiểm, phạm vi bảo hiểm và quyền lợi bảo hiểm để người dùng nắm được và từ đó có thể tư vấn cho khách hàng.
+* Thông tin liên hệ: hiển thị thông tin của các nhân viên khác trong cơ quan và từ đó có thể liên hệ chia sẻ thông tin cho nhau.
+        3.1.2.2. Các mục tiêu chính của hệ thống
+    Ứng dụng hỗ trợ bán bảo hiểm cần đạt được những mục tiêu sau:
+* Quản lý được việc đăng nhập, đăng ký và quản lý người dùng.
+* Cho phép người dùng nhập thông tin khách hàng và thực hiện thanh toán hóa đơn.
+* Quản lý và lưu trữ được thông tin khách hàng và dữ liệu hóa đơn.
+* Hiển thị được các thông tin quan trong của các mặt hàng bảo hiểm.
+* Cho phép người dùng cập nhật dữ liệu khách hàng, cập nhật tài khoản
+        3.1.2.3. Môi trường phát triển
+• Môi trường phần cứng
+    CPU: Core i3 hoặc cao hơn
+    RAM: tối thiểu 4 GB
+    HDD: dung lượng tối thiểu trống 2G
+• Môi trường phần mềm
+    Hệ điều hành: Android
+    Công cụ phát triển: Android  studio, PHPmyAdmin và 000Webhost.
+3.2 Xác định yêu cầu của hệ thống
+3.2.1 Danh sách yêu cầu của khách hàng
+a) Quản lý tài khoản
+* Đăng nhập
+- Hệ thống cho phép người dùng đăng nhập để sử dụng các chức năng của hệ thống.
+- Thông tin đăng nhập gồm : tài khoản, mật khẩu
+- Sau khi người dùng điền thông tin đăng nhập sẽ kiểm tra tài khoản có hợp lệ hay không. Nếu hợp lệ, cho phép người dùng đăng nhập, nếu không hợp lệ, yêu cầu người dùng nhập lại.
+* Đăng ký
+- Hệ thống cho phép người dùng đăng ký tài khoản nếu chưa có tài khoản.
+- Thông tin yêu cầu gồm tài khoản và mật khẩu.
+- Sau khi người dùng điền thông tin đăng ký sẽ kiểm tra tài khoản có hợp lệ hay không. Nếu hợp lệ, tài khoản sẽ được tạo và cho phép người dùng đăng nhập, nếu không hợp lệ, yêu cầu người dùng nhập lại.
+b) Nhập thông tin khách hàng
+* Hệ thống cho phép nhập thông tin của khách hàng, các trường thông tin như: Tên chủ xe, địa chỉ, số điện thoại, biển số kiểm soát, số khung, loại bảo hiểm….
+* Sau khi nhập xong các trường thông tin khách hàng hệ thống chuyển sang màn hình khai báo giá trị xe. Người dùng nhập giá trị xe nếu mua bảo hiểm vật chất xe, hoặc chọn giá tiền của các loại bảo hiểm khác trên Spinner. Khi nhập xong hệ thống sẽ tính toàn và trả về giá tiền trong text tổng tiền và truyền dữ liệu sang màn hình thanh toán, sau khi thanh toán hệ thông sẽ lưu trữ hóa đơn vào server.
+c) Quản lý thông tin khách hàng
+* Khi chọn chức năng thông tin khách hàng hệ thống sẽ hiển thị dữ liệu danh sách những khách hàng, người dùng chọn và click vào một list hệ thống sẽ hiển thị chi thiết thông tin của khách hàng, trong màn hình chi tiết khách hàng có thêm hai chức năng là cập nhật và xóa khách hàng.
+* Người dùng chọn chức năng cập nhật, hệ thống sẽ chuyển đến màn hình cập nhật người dùng có thể sửa dữ liệu khách hàng ngoại trừ (mã khách hàng và loại bảo hiểm) sau đó update lại dữ liệu lên Server.
+* Người dùng chọn chức năng xóa khách hàng, hệ thống sẽ hiển thị ra màn hình dialog để người dùng chọn có hoặc không.
+- Khi người dùng chọn có hệ thống sẽ xóa dữ liệu khách hàng đó và cập nhật lại dữ liệu và chuyển về màn hình dữ liệu khách hàng.
+d) Quản lý hóa đơn
+* Khi chọn chức năng quản lý hóa đơn hệ thống sẽ hiển thị dữ liệu danh sách hóa đơn, người dùng chọn và click vào một list hệ thống sẽ hiển thị chi thiết thông tin của hóa đơn đó.
+e) Quản lý liên hệ
+* Khi chọn chức năng quản lý liên hệ hệ thống sẽ hiển thị dữ liệu danh sách những liên hệ, người dùng chọn và click vào một list hệ thống sẽ kết nối đến chức năng gọi điện thoại của máy điện thoại người dùng, từ đó người dùng có thể liên hệ với người mà mình đã chọn chức năng liên hệ.
+f) Quản lý thông tin bảo hiểm
+* Khi chọn chức năng quản lý thông tin bảo hiểm thống sẽ hiển thị dữ liệu danh sách các loại bảo hiểm, người dùng chọn và click vào một list hệ thống sẽ hiển thị chi thiết thông tin của bảo hiểm  đó như: Mã bảo hiểm, Loại bảo hiểm, phạm vi bảo hiểm, quyền lợi bảo hiểm.
+g) Chức năng tìm kiếm
+* Khi chọn chức năng tìm kiếm, hệ thống sẽ lọc trong mảng những list có từ ngữ trùng với từ mà người dùng đang tìm kiếm.
+3.2.2 Phạm vi công việc
+   Dựa trên bản mô tả hệ thống và xác định yêu cầu, ứng dụng hỗ trợ bán bảo hiểm trên Android cần được phát triển trong các phạm vi dưới đây:
+• Các yêu cầu phải được phân tích. Với mỗi yêu cầu phải xác định rõ dữ liệu đầu vào, đầu ra, và quy trình xử lý.
+• Hệ thống phải được lập trình trên nền tảng Android, ngôn ngữ lập trình Java.
+3.3 Phân tích yêu cầu hệ thống
+3.3.1 Biểu đồ Use – case
+ 3.3.1.1	 Danh sách các Actor
+    Bảng 3. 1: Danh sách các Actor
+STT    Tên Actor    Ý nghĩa/Ghi chú1    User     Người dùng3.3.1.2	 Danh sách các Use case
+    Bảng 3. 2: Danh sách các Use case
+STT    Tên Use-case    Ý nghĩa/Ghi chú1Use case tổng quát Bao quát chức năng chính của hệ thống2Taikhoan Use case3Thongtinkhachhang Use case4Hoadon Use case5Lienhe Use case6Baohiem Use case7Dangnhap use case  3.3.1.3	 Biểu đồ Use case
+
+    Hình 3. 1 : Biểu đồ Use case tổng quát
+3.3.1.4  Đặc tả Use case tài khoản
+    
+    
+    
+a)      Biểu đồ Use case của use case đặc tả
+
+    Hình 3. 2: Biểu đồ Use case Tài khoản
+b)       Tóm tắt
+    Người dùng có quyền sử dụng chức năng này để thêm tài khoản, cập nhật và xóa tài khoản.
+- Thêm tài khoản: đăng ký tài khoản mới.
+- Cập nhật: cập nhật tài khoản .
+- Xóa: xóa tài khoản khỏi thiết bị.
+c) Dòng sự kiện
+ ➢ Dòng sự kiện chính
+• Nếu người dùng chưa có tài khoản thì đăng ký tài khoản mới để đăng nhập.
+• Người dùng có thể thay đổi cập nhật tài khoản nếu tài khoản bị trùng lặp và thiếu tính bảo mật. 
+• Xóa tài khoản khỏi thiết bị nếu người dùng không sử dụng.
+➢ Các dòng sự kiện khác
+    “Không có”
+d) Các yêu cầu đặc biệt
+    “Không có”
+3.3.1.5  Đặc tả Use case Thông tin khách hàng
+a)      Biểu đồ Use case của use case đặc tả
+
+                                   Hình 3. 3: Biểu đồ Use case Thông tin khách hàng
+b)       Tóm tắt
+    Người dùng có quyền sử dụng chức năng này để lưu thông tin khách hàng tiện cho việc quản lý.
+- Thêm khách hàng: Nhập thông tin khách hàng khi họ có nhu cầu mua bảo hiểm.
+- Cập nhật: cập nhật thông tin khách hàng .
+- Xóa: xóa thông tin khách hàng.
+c) Dòng sự kiện
+ ➢ Dòng sự kiện chính
+• Nhập thông tin khách hàng khi họ có nhu cầu mua bảo hiểm các thông tin cần thiết như chủ xe, địa chỉ, biển kiểm soát, số điện thoại khách hàng, loại bảo hiểm,….
+• Người dùng có thể thay đổi cập nhật thông tin của khách hàng nếu thông tin khách hàng có sai sót cần sửa chữa. 
+• Xóa thông tin khách hàng nếu khách hàng hết hạn bảo hiểm.
+➢ Các dòng sự kiện khác
+    “Không có”
+d) Các yêu cầu đặc biệt
+    “Không có”
+3.3.1.6  Đặc tả Use case Hóa đơn
+a)      Biểu đồ Use case của use case đặc tả
+
+    Hình 3. 4: Đặc tả Use case hóa đơn
+b)       Tóm tắt
+    Người dùng có quyền sử dụng chức năng này để lưu thông tin hóa đơn tiện cho việc quản lý và thống kê.
+- Thêm hóa đơn: Thêm và xuất hóa đơn.
+c) Dòng sự kiện
+ ➢ Dòng sự kiện chính
+• Sau khi thông tin khách hàng được nhập hệ thống sẽ chuyển sang màn hình thanh toán hóa đơn, và các thuộc tính của màn hình trước để thanh toán và hoàn thành xuất hóa đơn để lưu trữ.
+➢ Các dòng sự kiện khác
+    “Không có”
+d) Các yêu cầu đặc biệt
+    “Không có”
+3.3.1.7  Đặc tả Use case Liên hệ
+a)      Biểu đồ Use case của use case đặc tả
+
+    Hình 3. 5: Đặc tả Use case liên hệ
+b)       Tóm tắt
+    Người dùng có quyền sử dụng chức năng này để hiển thị thông tin liên hệ của người dùng.
+- Thêm liên hệ: Thêm liên hệ người dùng.
+- Cập nhật: cập nhật liên hệ .
+c) Dòng sự kiện
+ ➢ Dòng sự kiện chính
+• Chức năng này hệ thống hiển thị thông tin liên hệ của người dùng lên, từ đó cho phép người dùng có thể trao đổi thông tin bằng cách gọi điện thoại cho nhau.
+
+➢ Các dòng sự kiện khác
+    “Không có”
+d) Các yêu cầu đặc biệt
+    “Không có”
+3.3.1.8  Đặc tả Use case Thông tin bảo hiểm
+a)      Biểu đồ Use case của use case đặc tả
+
+    Hình 3. 6: Đặc tả Use case thông tin bảo hiểm
+b)       Tóm tắt
+    Người dùng có quyền sử dụng chức năng này để hiển thị thông tin những mặt hàng bảo hiểm của người dùng.
+- Thêm bảo hiểm: Thêm mặt hàng bảo hiểm.
+- Cập nhật: cập nhật thông tin bảo hiểm .
+c) Dòng sự kiện
+ ➢ Dòng sự kiện chính
+• Chức năng này hệ thống hiển thị thông tin các mặt hàng bảo hiểm của người dùng lên, từ đó cho phép người dùng có thể tìm hiểu những kiến thức và thông tin bảo hiểm để tư vấn cho khách hàng.
+• Khi có sự thay đổi nào đó về các phạm vi hay quyền lợi của bảo hiểm người dùng có thể nhờ tác giả cập nhật trên Server hệ thống.
+
+➢ Các dòng sự kiện khác
+    “Không có”
+d) Các yêu cầu đặc biệt
+    “Không có”
+3.3.1.9 Đặc tả Use case Dangnhap
+a)      Biểu đồ Use case của use case đặc tả
+    
+    Hình 3. 7: Đặc tả Use case Đăng nhập
+b)       Tóm tắt
+    Người dùng có quyền sử dụng chức năng này để đăng nhập hoặc đăng ký để sử dụng ứng dụng:
+- Đăng nhập: đăng nhập vào hệ thống .
+- Đăng ký: đăng ký tài khoản
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+• Khi người dùng đăng ký, hệ thống sẽ lưu trữ dữ liệu tài khoản đăng ký vào bảng Tài khoản
+• Khi người dùng đăng nhập, hệ thống sẽ so sánh tài khoản và mật khẩu vừa nhập với dữ liệu trong bảng tài khoản, nếu đúng thì cho vào hệ thống và nếu sai thì yêu cầu nhập lại.
+➢ Các dòng sự kiện khác
+    “Không có”
+d) Các yêu cầu đặc biệt
+    “Không có”
+3.3.2 Biểu đồ lớp
+3.3.2.1  Biểu đồ lớp( mức phân tích)
+
+    Hình 3. 8: Biểu đồ lớp
+3.3.2.2  Danh sách các loại đối tượng và quan hệ
+    Bảng 3. 3: Danh sách các loại đối tượng và quan hệ
+STTTên lớp/quan hệLoạiÝ nghĩa/Ghi chú1DangnhapEntityLớp đăng nhập2ThongtinkhachhangEntityLớp lưu trữ thông tin của khách hàng3TaikhoanEntityLớp lưu trữ tài khoản4ThongtinbaohiemEntityLớp lưu trữ dữ liệu bảo hiểm5HoaDonEntityLớp lưu trữ dữ liệu hóa đơn6ChitiethoadonEntityLớp lưu trữ chi tiết hóa đơn7UserEntity3.3.3 Biểu đồ tuần tự
+3.3.3.1  Biểu đồ tuần tự chức năng đăng nhập
+
+    Hình 3. 9: Biểu đồ tuần tự chức năng đăng nhập
+    
+3.3.3.2  Biểu đồ tuần tự chức năng bảo hiểm
+
+    Hình 3. 10: Biểu đồ tuần tự chức năng bảo hiểm
+ 3.3.3.3  Biểu đồ tuần tự chức năng khách hàng
+
+    Hình 3. 11: Biểu đồ tuần tự chức năng khách hàng
+3.3.3.4  Biểu đồ tuần tự cập nhật tài khoản
+
+    Hình 3. 12: Biểu đồ tuần tự cập nhật tài khoản
+3.4 Thiết kế cơ sở dữ liệu
+3.4.1 Mô hình dữ liệu quan hệ
+a) Lược đồ quan hệ
+
+        Hình 3. 13: Lược đồ quan hệ
+b) Danh sách các bảng trong lược đồ quan hệ
+    Bảng 3. 4: Danh sách các bảng trong lược đồ quan hệ
+STTTên lớp/quan hệLoạiÝ nghĩa/Ghi chú1ThongtinkhachhangpublicLớp lưu trữ thông tin của khách hàng2TaikhoanPublicLớp lưu trữ tài khoản3LienHePublicLớp lưu trữ dữ liệu liên hệ4ThongtinbaohiempublicLớp lưu trữ dữ liệu bảo hiểm5HoaDonpublicLớp lưu trữ dữ liệu hóa đơn6ThongkepublicLớp kết xuất nhanh dữ liệu hóa đơn
+3.4.2 Mô tả chi tiết từng bảng trong CSDL
+      3.4.2.1 Bảng Taikhoan
+    Bảng 3. 5: Bảng tài khoản
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1MataikhoanintNot nullKhóa chính2Usernamenvarchar(50)Not nullTên đăng nhập3Passwordnvarchar(50)Not nullMật khẩu       3.4.2.2 Bảng Thongtinkhachhang
+    Bảng 3. 6: Bảng thông tin khách hàng
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1MakhachhangintNot nullKhóa chính2Chuxenvarchar(100)Not nullTên chủ xe3Diachinvarchar(100)Not nullĐịa chỉ4Sodienthoainvarchar(11)Not nullSố điện thoại5Bienkiemsoatnvarchar(100)Not nullBiển kiểm soát6Sokhungnvarchar(100)Not nullSố khung7Somaynvarchar(100)Not nullSố máy8Loaixenvarchar(100)Not nullLoại xe9TrongtaiintNot nullTrọng tải10SochongoiintNot nullSố chỗ ngồi11MabaohiemintNot nullKhóa ngoại       3.4.2.3 Bảng Thongtinbaohiem
+    Bảng 3. 7: Bảng thông tin bảo hiểm
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1MabaohiemintNot nullKhóa chính2Loaibaohiemnvarchar(100)Not nullLoại bảo hiểm3Phamvibaohiemnvarchar(1000)Not nullPhạm vi bảo hiểm4Quyenloibaohiemnvarchar(1000)Not nullQuyền lợi bảo hiểm
+       3.4.2.4 Bảng Lienhe
+    Bảng 3. 8: Bảng liên hệ
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1MalienheintNot nullKhóa chính2Hinhanhlienhenvarchar(500)Not nullHình ảnh liên hệ3Tenlienhenvarchar(50)Not nullTên liên hệ4Sodienthoainvarchar(11)Not nullSố điện thoại liên hệ       3.4.2.5 Bảng Hoadon
+    Bảng 3. 9: Bảng hóa đơn
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1MahoadonintNot nullKhóa chính2Tenhoadonnvarchar(50)Not nullTên hóa đơn3Tenkhachhangnvarchar(50)Not nullTên khách hàng4Hinhthucttnvarchar(50)Not nullHình thức thanh toán5TongtienintNot nullTổng tiền6NgayxuatdateNot nullNgày xuất7MakhachhangintNot nullKhóa ngoại
+       3.4.2.6 Bảng Viewhoadon
+    Bảng 3. 10: Bảng hiện thị hóa đơn
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1MahoadonintNot nullKhóa chính2TongtienintNot nullTổng tiền3NgayxuatdateNot nullNgày xuất                     
+    
+3.5 Thiết kế giao diện
+3.5.1 Giao diện đăng nhập
+                 
+    Hình 3. 14: Giao diện đăng nhập
+- Mô tả: Cho phép người dùng đăng nhập hệ thống ứng dụng
+3.5.2 Giao diện đăng ký
+                  
+     Hình 3. 15: Giao diện đăng ký
+- Mô tả: Cho phép người dùng đăng ký tài khoản để đăng nhập vào ứng dụng.
+
+3.5.3 Giao diện Chính
+                    
+     Hình 3. 16: Giao diện chính
+    Mô tả: Cho phép hiển thị những chức năng chính của ứng dụng
+3.5.4 Giao diện menu.
+                     
+    Hình 3. 17: Giao diện menu
+    Mô tả: Cho phép hiển thị những chức năng phụ của ứng dụng
+3.5.5 Giao diện thông tin khách hàng
+                                      
+    Hình 3. 18: Giao diện khai báo thông tin
+    Mô tả: Cho phép người dùng ghi lại thông tin của khách hàng khi họ mua bảo hiểm
+3.5.6 Giao diện thanh toán
+                     
+    Hình 3. 19: Giao diện thanh toán hóa đơn
+    Mô tả: Cho phép người dùng thanh toán và xuất hóa đơn
+3.5.7 Giao diện dữ liệu khách hàng
+                     
+                Hình 3. 20: Giao diện dữ liệu khách hàng
+    Mô tả: Cho phép hiển thị danh sách các khách hàng
+3.5.8 Giao diện chi tiết khách hàng
+                                 
+                            
+               Hình 3. 21: Giao diện chi tiết khách hàng
+    Mô tả: Cho phép hiển thị chi tiết thông tin của khách hàng và có các nút chức năng cập nhật và xóa thông tin khách hàng
+3.5.9 Giao diện dữ liệu khách hàng
+                                
+    Hình 3. 22: Giao diện dữ liệu hóa đơn
+    Mô tả: Cho phép hiển thị danh sách các hóa đơn
+    
+3.5.10 Giao diện chi tiết hóa đơn
+                            
+    Hình 3. 23: Giao diện chi tiết hóa đơn
+    Mô tả: Cho phép hiển thị những nội dung chi tiết trong hóa đơn
+3.5.11     Giao diện thông tin bảo hiểm
+                           
+          Hình 3. 24: Giao diện thông tin bảo hiểm
+    Mô tả: Cho phép hiển thị những danh sách các mặt hàng bảo hiểm mà người dùng kinh doanh
+3.5.12 Giao diện chi tiết bảo hiểm
+                              
+                 Hình 3. 25: Giao diện chi tiết bảo hiểm
+    Mô tả: Cho phép hiển thị những nội dung chính của một sản phẩm bảo hiểm như: mã bảo hiểm, loại bảo hiểm, phạm vi bảo hiểm và quyền lợi bảo hiểm.
+3.5.13 Giao diện thống kê
+                              
+    Hình 3. 26: Giao diện thống kê
+    Mô tả: Cho phép hiển thị nhanh các thông tin của hóa đơn như: mã hóa đơn, tổng tiền, ngày xuất.
+3.5.14 Giao diện thông tin tài khoản
+                                
+    Hình 3. 27: Giao diện thông tin tài khoản
+    Mô tả: Cho phép hiển thị danh sách những tài khoản đã đăng ký của ứng dụng
+3.5.15 Giao diện liên hệ
+                               
+         Hình 3. 28: Giao diện liên hệ
+    Mô tả: Cho phép hiển thị danh sách của những người trong một nhóm bán bảo hiểm, từ đó họ có thể liên hệ cho nhau
+    
+    
+
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+- Kết quả đạt được: Sau thời gian nghiên cứu và phát triển, ứng dụng đã hoàn thành cơ bản các mục tiêu ban đầu đề ra của đề tài hỗ trợ bán bảo hiểm online với các chức năng như: Đăng ký mua bảo hiểm, thanh toán, quản lý khách hàng, quản lý hóa đơn, quản lý tài khoản….
+- Kết nối và tạo dữ liệu trên Webhost bằng PhpMyAdmin để quản lý dữ liệu trên internet.
+- Xây dựng được một ứng dụng hoàn thiện với các chức năng và cơ sở lý thuyết nghiệp vụ của mặt hàng bảo hiểm.
+4.2 Hạn chế của đề tài
+  - Hệ thống Server sử dụng cho đề tài là Free host với quy mô nhỏ và dung lượng lưu chữ hạn chế và tốc độ kết nối đến Server chưa được nhanh.
+  - Thiết kế giao diện của ứng dụng chưa được chuyên nghiệp.
+  - Thanh toán: chưa có hình thức liên kết và thanh toán nhanh qua thẻ ngân hàng
+  - Tính bảo mật của sản phẩm chưa được cao.
+4.3 Hướng phát triển của đề tài
+Thiết kế giao diện hoàn thiện hơn để tạo cảm giác gần gũi với người sử dụng
+- Xây dựng hệ thống Server mạnh với dung lượng và tốc độ truy cập nhanh để đáp ứng nhiều khách hàng sử dụng.
+- Nâng cấp tính bảo mật của sản phẩm và mã hóa dữ liệu.
+- Từ chương trình đã làm được có thể phát triển thêm để có thể xây dựng một hệ thống bán bảo hiểm online hoàn thiện hơn hỗ trợ nhiều người dùng tạo cho người họ có cảm giác hứng thú khi đặt mua, cũng như trong việc quản lý
+- Xây dưng các chức năng một cách chuyên nghiệp hơn để đưa lên Store.
+TÀI LIỆU THAM KHẢO
+x
+[1]. Giáo trính môn Chuyên đề 1: Lập trình Android cơ bản, Bộ môn CNPM, Trường ĐHSPKTHY.
+[2]. Giáo trính môn Chuyên đề 2: Lập trình đa phương tiện trên Android, Bộ môn CNPM, Trường ĐHSPKTHY.
+[3]. Giáo trính môn Chuyên đề 3: Lập trình dịch vụ mạng trên Android, Bộ môn CNPM, Trường ĐHSPKTHY.
+[4]. Giáo trính môn Chuyên đề 4: Lập trình GAME trên UNITY, Bộ môn CNPM, Trường ĐHSPKTHY.
+[5]. Giáo trính môn lập trình hướng đối tượng với Java, Bộ môn CNPM, Trường ĐHSPKTHY.
+[6]. Giáo trính môn phân tích thiết kế phần mềm, Bộ môn CNPM, Trường ĐHSPKTHY.
+[7]. Giáo trính môn phân tích thiết kế hướng đối tượng với UML, Bộ môn CNPM, Trường ĐHSPKTHY.
+[8]. Ed Burnette, Hello, Android Introducing Google’s Mobile Development Platform, The Pragmatic Bookshelf, 2010.
+[9]. Marziah Karch, Android for Work Productivity for Professional, Press, 2010.
+[10]. J.F. DiMarzio, Android A Programmer’s Guide, The McGraw-Hill Companies, 2008.
+[11]. Chris Haseman, Android Essentials, Apress, 2008.
+[12]. Sams, Android Application Development, Lauren Darcey and Shane Conder, 2010.
+[13]. stackoverflow.com, https://stackoverflow.com
+    
+PHỤ LỤC
+    
+Xây dựng ứng dụng hỗ trợ bán bảo hiểm BSH
+    
+    
+10
+    
+    

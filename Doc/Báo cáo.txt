@@ -1,0 +1,355 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Mạng xã hội ngày càng phổ biến và gần gũi với mọi người, đặc biệt đối với giới trẻ. Những lợi ích của mạng xã hội sẽ đem lại cho chúng ta rất nhiều và tác động tích cực nếu chúng ta biết cách sử dụng chúng một cách hợp lí. Nó có thể giúp chúng ta dễ dàng tìm hiểu, nắm bắt được nhiều thông tin quan trọng, giao lưu kết bạn với tất cả mọi người ở khắp mọi nơi và bạn hoàn toàn có thể tận dụng để giải đáp những thắc mắc.
+    Mạng xã hội là một trong những cách tốt nhất để giới thiệu ứng dụng đến với tất cả mọi người. Nó cũng giúp cho chúng ta tìm hiểu được nhiều thông tin quan trọng mà các phương tiện truyền thông khác không có. Tiếp cận thông tin từ trên mạng xã hội là một cách rất hiệu quả. Bạn có thể học hỏi thêm rất nhiều kiến thức và tìm kiếm những thông tin cần thiết. Mạng xã hội cũng có thể chia sẻ những thông tin, quan điểm của bản thân mình với tất cả mọi người trên mạng xã hội.
+    Nhận thấy nhu cầu của người dùng thông qua thiết bị di động là rất lớn, dưới sự hướng dẫn và chỉ bảo của cô, em đã thực hiện đồ án với đề tài “XÂY DỰNG ỨNG DỤNG KỂ CHUYỆN CHO BÉ” nhằm hiểu rõ các kỹ thuật lập trình trên thiết bị di động, đặc biệt là kỹ thuật để có thể xây dựng một ứng dụng hoàn chỉnh.
+1.2 Mục tiêu của đề tài
+      Xây dựng ứng dụng kể chuyện cho bé trên Android gồm các chức năng: 
+      A, Tìm kiếm chuyện
+- Hiển thị chức năng tìm kiếm theo tên chuyện ngay tại trang chủ.
+- Cho phép tìm kiếm theo thể loại tại menu.
+- Ngoài ra chỉ cần nhập 1 ký tự thì hệ thống sẽ gợi ý tên chuyện theo ký tự đã nhập
+B. Chức năng kể chuyện bằng giọng nói
+- Cho phép người dùng vừa đọc chuyện vừa có thể nghe chuyện bằng giọng nói kể lại chuyện.
+C. Chức năng hình ảnh chuyển động
+- Cung cấp cho người dùng một cái nhìn đẹp khi đọc chuyện. Ứng dụng cho phép người dùng đọc chuyện bằng mắt, âm thanh bằng tai kèm theo đó là những hình ảnh chuyển động tương ứng với mỗi đoạn chuyện.
+D. Vote chuyện yêu thích
+- Cho phép người sử dụng ứng dụng có thể chọn ra câu chuyện yêu thích và quan tâm để được đưa về một giao diện riêng.
+E. Trợ giúp ứng dụng
+- Khi người dùng có gì không hiểu khi sử dụng ứng dụng thì liên hệ với nhà phát triển thì có thể vào mục hỗ trợ trong menu để xem hướng dẫn cụ thể một cách chi tiết.
+F. Chia sẻ ứng dụng
+- Người dùng có thể chia sẻ ứng dụng cho bạn bè hoặc người thân chức năng này cho phép chia sẻ qua sms hay các trang mạng xã hội rất thuận tiện.
+1.3 Giới hạn và phạm vi của đề tài
+	Đề tài xây dựng ứng kể chuyện cho bé sử dụng các công nghệ trong lập trình như: 
+-  SQL Server 2012 
+- Môi trường lập trình Android Studio.
+1.4 Nội dung thực hiện
+- Xây dựng một ứng dụng kể chuyện cho bé gồm các chức năng trên.
+- Một bản báo cáo gồm đầy đủ các phần theo quy định của khoa Công Nghệ Thông Tin – trường Đại học Sư phạm Kỹ thuật Hưng Yên.
+1.5 Phương pháp tiếp cận
+- Sử dụng các phương pháp nghiên cứu : 
+o Phương pháp đọc tài liệu;
+o Phương pháp thực nghiệm.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Android
+2.1.1 Hệ điều hành Android là gì?
+  Android là một mã nguồn mở và dựa trên hệ điều hành Linux, chạy trên các thiết bị di động như điện thoại thông minh và máy tính bảng. Android được phát triển bởi Open Handset Alliance, dẫn đầu bởi Google, và các công ty khác.
+  Android cung cấp một phương pháp tiếp cận thống nhất để lập trình ứng dụng cho các thiết bị di động, nghĩa là các lập trình viên chỉ cần lập trình cho Android, và các ứng dụng của họ sẽ có thể chạy trên các thiết bị khác nhau được hỗ trợ bởi Android.
+  Các phiên bản beta đầu tiên của Software Development Kit Android (SDK) được phát hành bởi Google trong năm 2007 trong khi đó phiên bản thương mại đầu tiên, Android 1.0, được phát hành vào tháng 9 năm 2008.
+  Mã nguồn của Android được phát hành theo giấy phép phần mềm tự do và nguồn mở. Google công khai hầu hết các mã theo giấy phép phiên bản Apache 2.0 và phần còn lại, Linux kernel, theo giấy phép phiên bản GNU General Public 2.
+2.1.2 Tại sao nên sử dụng Android?
+      
+- Open Soure: Mã nguồn mở.
+- Larger Developer and Community Reach: Có những lập trình viên và cộng đồng phát triển lớn.
+- Increased marketing: phát triển thương mại.
+- Inter app integration: ứng dụng hội nhập quốc tế.
+- Reduce cost of development: giảm chi phí phát triển.
+- Higher Success Ratio: Tỷ lệ thành công cao hơn.
+- Rich development Environment:Môi trường phát triển đa dạng
+2.1.3 Giới thiệu về Android studio và Android SDK
+• Android Studio chạy trên Windows, Mac và Linux, nhằm thay thế cho Eclipse Android Development Tool (ADT) vốn được sử dụng làm IDE chính trong các năm trước đó.
+   Một số tính năng nổi bật:
+• Bộ công cụ build ứng dụng dựa trên Gradle (thay vì Maven).
+• Chức năng dò và sửa lỗi nhanh, hướng Android.
+• Công cụ chỉnh sửa màn hình dạng kéo thả tiện lợi.
+• Các wizard tích hợp nhằm giúp lập trình viên tạo ứng dụng từ mẫu có sẵn.
+• Tích hợp Google Cloud Platform, dễ dàng tích hợp với Google Cloud Messaging và App Engine của Google.
+• The Android SDK (software development kit) là một tập hợp các công cụ được sử dụng để phát triển ứng dụng cho Android. 
+   Android SDK bao gồm:
+• Các thư viện đòi hỏi
+• Bộ dò lỗi (Debugger)
+• Thiết bị mô phỏng (emulator)
+• Các tài liệu liên quan cho Android API.
+• Các đoạn code mẫu.
+• Các hướng dẫn cho hệ điều hành Android
+Nếu Android Studio là trình soạn thảo code (IDE) thì Android SDK là bộ tổng hợp các công cụ để build app, các bản mẫu máy ảo Android (sử dụng để test app) cần thiết để làm ra một ứng dụng Android hoàn chỉnh.
+2.2 Tổng quan về Firebase
+2.2.1 Firebase là gì?
+   Firebase là một nền tảng di động giúp bạn nhanh chóng phát triển các ứng dụng chất lượng cao, phát triển ứng dụng cho người dùng lớn, và kiếm được nhiều tiền hơn.
+2.2.2  Tại sao nên sử dụng Firebase?
+• Triển khai ứng dụng cực nhanh
+    Với Firebase bạn có thể giảm bớt rất nhiều thời gian cho việc viết các dòng code để quản lý và đồng bộ cơ sở dữ liệu, mọi việc sẽ diễn ra hoàn toàn tự động với các API của Firebase. Không chỉ có vậy Firebase còn hỗ trợ đã nền tảng nên bạn sẽ càng đỡ mất thời gian rất nhiều khi ứng dụng bạn muốn xây dựng là ứng dụng đa nền tảng.
+    Không chỉ nhanh chóng trong việc xây dựng database, Google Firebase còn giúp ta đơn giản hóa quá trình đăng kí và đăng nhập vào ứng dụng bằng các sử dụng hệ thống xác thực do chính Firebase cung cấp.
+• Bảo mật
+     Firebase hoạt động dựa trên nền tảng cloud và thực hiện kết nối thông qua giao thức bảo mật SSL, chính vì vậy bạn sẽ bớt lo lắng rất nhiều về việc bảo mật của dữ liệu cũng như đường truyền giữa client và server. Không chỉ có vậy, việc cho phép phân quyền người dùng database bằng cú pháp javascipt cũng nâng cao hơn nhiều độ bảo mật cho ứng dụng của bạn, bởi chỉ những user mà bạn cho phép mới có thể có quyền chỉnh sửa cơ sở dữ liệu.
+• Tính linh hoạt và khả năng mở rộng
+     Sử dụng Firebase sẽ giúp bạn dễ dàng hơn rất nhiều mỗi khi cần nâng cấp hay mở rộng dịch vụ. Ngoài ra firebase còn cho phép bạn tự xây dựng server của riêng mình để bạn có thể thuận tiện hơn trong quá trình quản lý.
+     Sử dụng Firebase sẽ giúp bạn dễ dàng hơn rất nhiều mỗi khi cần nâng cấp hay mở rộng dịch vụ. Ngoài ra firebase còn cho phép bạn tự xây dựng server của riêng mình để bạn có thể thuận tiện hơn trong quá trình quản lý.
+     Việc Firebase sử dụng NoSQL, giúp cho database của bạn sẽ không bị bó buộc trong các bảng và các trường mà bạn có thể tùy ý xây dựng database theo cấu trúc của riêng bạn.
+• Sự ổn định
+     Firebase hoạt động dựa trên nền tảng cloud đến từ Google vì vậy hầu như bạn không bao giờ phải lo lắng về việc sập server, tấn công mạng như DDOS, tốc độ kết nối lúc nhanh lúc chậm, … nữa, bởi đơn giản là Firebase hoạt động trên hệ thống server của Google. Hơn nữa nhờ hoạt động trên nền tảng Cloud nên việc nâng cấp, bảo trì server cũng diễn ra rất đơn giản mà không cần phải dừng server để nâng cấp như truyền thống.
+• Giá thành 
+     Google Firebase có rất nhiều gói dịch vụ với các mức dung lượng lưu trữ cũng như băng thông khác nhau với mức giá dao động từ Free đến $1500 đủ để đáp ứng được nhu cầu của tất cả các đối tượng. Chính vì vậy bạn có thể lựa chọn gói dịch vụ phù hợp nhất với nhu cầu của mình. Điều này giúp bạn tới ưu hóa được vốn đầu tư và vận hành của mình tùy theo số lượng người sử dụng. Ngoài ra bạn còn không mất chi phí để bảo trì, nâng cấp, khắc phục các sự cố bởi vì những điều này đã có Firebase lo.
+    
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Phát biểu bài toán
+Hoạt động của ứng dụng Kể Chuyện Cho Bé hiện tại có thể mô tả như sau:
+• Hiện tại việc tiếp cận công nghệ thông tin rất phổ biến, hầu hết mọi người đều cho con em xem nhạc và nghe chuyện và tivi sách báo…
+• Hiện nay tuy có một số ứng dụng nghe nhạc và kể chuyện xong vẫn chưa đầy đủ
+• Do vậy cần một ứng dụng kể chuyện cho bé với nhiều chức năng và phong phú về nội dung: có thể xem và nghe chuyện online và cũng có thể nghe nhạc, giúp cho bé có thể học hỏi qua các câu chuyện và phụ huynh có thể dạy cho con em…
+3.1.1 Mô tả hệ thống hiện tại
+3.1.2 Phát biểu bài toán
+    3.1.2.1 Tổng quan về hệ thống mới
+     Ứng dụng kể chuyện cho bé cung cấp các chức năng như: cho bé và phụ huynh có thể xem các câu chuyện, và xem các câu chuyện hay và bổ ích, học được các điều từ câu chuyện, khi nhàm chán nghe chuyện thì có thể nghe và phát các bài nhạc thiếu nhi cho trẻ…. 
+ Hệ thống gồm các chức năng:
+  • Danh mục truyện:
+      Người dùng có thể tra cứu theo tên loại truyện khác nhau và từ đó hệ thống sẽ hiển thị các tên, các câu chuyện tương ứng với loại truyện vừa được chọn. Khi người dùng nhấn chọn một câu truyện thì ứng dụng sẽ hiển thị nội dung chi tiết của câu chuyện đó và phần video…
+ • Tìm kiếm chuyện:
+      Người dùng sẽ nhấp vào mục tìm kiếm và nhập tên chuyện cần tìm kiếm, khi nhập đúng thì các câu chuyện liên quan đến từ khóa sẽ hiển thị ra.
+ •  Hình ảnh chuyển động:
+        Cung cấp cho người dùng một cái nhìn đẹp khi đọc chuyện. Ứng dụng cho phép người dùng đọc chuyện bằng mắt, âm thanh bằng tai kèm theo đó là những hình ảnh chuyển động tương ứng với mỗi đoạn chuyện.
+ • Vote cho chuyện yêu thích:
+      Người dùng có thể tích vào biểu tượng vote, để đánh dấu các câu chuyện mà người dùng thấy thích và quan tâm. Và cũng có thể là chức năng đánh dấu một câu chuyện.
+  • Chia sẻ ứng dụng:
+        Người dùng có thể chia sẻ ứng dụng cho bạn bè hoặc người thân, chức năng này cho phép chia sẻ qua sms hay các trang mạng xã hội rất thuận tiện như: Facebook, Zalo, Gmail, …
+
+   • Trợ Giúp:
+        Khi người dùng có gì không hiểu khi sử dụng ứng dụng thì liên hệ với nhà phát triển thì có thể vào mục hỗ trợ trong menu để xem hướng dẫn cụ thể một cách chi tiết.
+3.1.2.2 Mục tiêu chính của hệ thống
+Hệ thống xây dựng dựng ứng kể chuyện cho bé cần đạt được những mục tiêu sau:
+   • Hiển thị các chuyện theo từng thể loại.
+   • Cho phép tìm kiếm chuyện theo tên hoặc thể loại.
+   • Người dùng có thể phát các bài nhạc có trên kho dữ liệu ở mục nhạc.
+   • Hệ thống phải quản lý được việc cập nhập dữ liệu trên trên kho lưu trữ, tìm kiếm những truyện mới.
+3.1.2.3 Môi trường phát triển
+• Môi trường phần cứng
+      CPU: Pentium IV 3.0 GHz hoặc cao hơn
+      RAM: tối thiểu 512 MB
+      HDD: dung lượng tối thiểu trống 2G
+ • Môi trường phần mềm
+      Hệ điều hành: Android
+      Công cụ phát triển: Android Studio
+3.2 Xác định yêu cầu của hệ thống
+3.2.1 Danh sách yêu cầu khách hang
+3.2.1.1 Danh mục truyện
+      Ứng dụng hỗ trợ chức năng chọn ra thể loại truyện các loại truyện khác nhau như: truyện cổ tích, truyện ngụ ngôn ...khi người dùng ấn chọn vào loại truyện thì ứng dụng sẽ hiển thị các tên truyện tương ứng.
+      Khi người dùng nhấn vào tên câu chuyện thì ứng dụng sẽ đưa màn hình play của câu chuyện đó và các chi tiết liên quan.
+3.2.1.2 Tìm kiếm truyện 
+      Ứng dụng hỗ trợ người dùng có thể tìm ra các câu chuyện mà người dùng muốn nghe, muốn tìm kiếm cho con em nghe.
+      Khi người dùng nhấn vào phần tìm kiếm và đánh các từ khóa cần tìm kiếm: từ khóa tra cứu đúng thì sẽ hiển thị ra các câu chuyện liên quan đến từ khóa cần tìm…
+3.2.1.3 Hình ảnh chuyển động
+      Ứng dụng cung cấp chức năng hình ảnh chuyển động bắt mắt giúp cho trẻ thích và vui hơn, không bị nhàm chán khi nghe chuyện
+3.2.1.4 Vote cho chuyện yêu thích
+Ứng dụng hỗ trợ chức năng vote.
+      Khi người dùng nhấn vào biểu tượng vote thì biểu tượng sẽ chuyển màu, cũng có thể dùng chức năng này để đánh dấu về câu chuyện cần quan tâm hoặc đang nghe dở và đưa về một layout riêng…
+
+
+
+
+3.2.1.5 Chia sẻ ứng dụng
+ 
+      Ứng dụng hỗ trợ chức năng chia sẻ khi người dùng muốn chia sẻ lên mạng xã hội. Ứng dụng sẽ lấy các mạng xã hội được cài đặt trong máy tùy vào máy của người dùng được cài đặt những mạng xã hội nào để lấy về như: Facebook, Zalo, Gmail…
+3.2.1.6 Trợ giúp
+             Ứng dụng hỗ trợ chức năng trợ giúp người dùng khi gặp vấn đề về hoặc khó khăn khúc mắc có thể liên hệ với nhà phát hành qua địa chỉ liên lạc cụ thể.
+ 3.2.2 Phạm vi công việc.
+    Dựa trên bản mô tả hệ thống và yêu cầu của khách hàng, hệ thống ứng dụng kể chuyện cho bé cần được phát triển trong các phạm vi dưới đây:
+ • Sưu tầm các câu truyện.
+ • Lưu các câu truyện lên FireBase
+ • Hiển thị các câu truyện trên thiết bị.
+ • Hệ thống phải được lập trình trên nền .Net Framework, ngôn ngữ lập trình java.
+ • Hệ thống phải được phát triển trên môi trường Android studio 1.5 trở lên.
+
+
+3.3 Phân tích yêu cầu của hệ thống.
+3.3.1 Biểu đồ Use-case
+3.3.1.1 Danh sách các Actor
+    Bảng 1:Danh sách các Actor.
+STT    Tên Actor    Ý nghĩa/Ghi chú1    Người dùng    Trẻ em, phụ huynh
+3.3.1.2 Danh sách các Use-case
+    Bảng 2:Danh sách các Use case
+STT Tên Use-case    Ý nghĩa/Ghi chú1 Chọn thể loạiTrẻ hoặc phụ huynh sẽ chọn thể loại chuyện2 Tìm kiếmTìm kiếm theo tên chuyện ngay tại trang chủ3.3.2 Biểu đồ Use-case
+    
+    
+    Hình 1: Biểu đồ Use case tổng quát
+ 3.3.3 Đặc tả Use-case
+3.3.3.1 Đặc tả use-case Chọn Khác
+a. Biểu đồ Use case của Use case đặc tả
+
+    Hình 2: Biểu đồ use case chọn Khác
+a. Tóm tắt
+Người dùng có quyền sử dụng chức năng này để chọn các thể loại truyện đã được sắp xếp sẵn: 
+- Chọn truyện cổ tích: Load ra list tryện đã được sắp xếp sẵn
+- Chọn truyện nước ngoài: Load ra list tryện đã được sắp xếp sẵn.
+- Chọn truyện dân gian: Load ra list tryện đã được sắp xếp sẵn.
+b. Dòng sự kiện
+➢ Dòng sự kiện chính
+Chọn thể loại Truyện cổ tích  Người dùng chọn thể loại truyện cổ tích:
+  Màn hình sẽ hiển thị ra danh sách các tuyện thuộc thể loại cổ tích, đã được load lên và sắp xếp theo trình tự bảng chữ cái.
+  Khi người dùng nhấn vào bất kì 1 truyện. Màn hình sẽ chuyển sang chế độ người dùng tự kể hoặc nghe audio.
+  Khi nhấn Back sẽ quay trở về lại danh sách truyện.     Truyện nước ngoài
+
+  Người dùng chọn thể loại truyện nước ngoài:
+  Màn hình sẽ hiển thị ra danh sách các tuyện thuộc thể loại nước ngoài đã được load lên và sắp xếp theo trình tự bảng chữ cái.
+  Khi người dùng nhấn vào bất kì 1 truyện. Màn hình sẽ chuyển sang chế độ người dùng tự kể hoặc nghe audio.
+  Khi nhấn Back sẽ quay trở về lại danh sách truyện.
+   về menu chính.     Truyện dân gian  Người dùng chọn thể loại truyện dân gian:
+  Màn hình sẽ hiển thị ra danh sách các tuyện thuộc thể loại dân gian, đã được load lên và sắp xếp theo trình tự bảng chữ cái.
+  Khi người dùng nhấn vào bất kì 1 truyện. Màn hình sẽ chuyển sang chế độ người dùng tự kể hoặc nghe audio.
+  Khi nhấn Back sẽ quay trở về lại danh sách truyện. Về menu chính.
+➢ Các dòng sự kiện khác
+      “Không có”
+- Các yêu cầu đặc biệt
+“Không có”
+- Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Điều kiện trước: Người dùng cần xác định thể loại truyện cần tìm là gì. Từ đó sẽ tìm được chuyện chính xác.
+- Điều kiện sau 
+- Trạng thái hệ thống sau khi thực hiện Use-case
+- Hệ thống thực hiện thành công: Load được hết nội dung của từng bài viết hay nội dung chi tiết của từng câu chuyện.
+- Hệ thống thực hiện nhiệm vụ thất bại: Thông báo lỗi. Quay lại chức năng trước, chờ người dùng chọn chức năng tiếp theo
+- Điểm mở rộng
+- “Không có”
+3.3.3.2 Đặc tả use-case Tìm kiếm
+a) Biểu đồ Use case của Use case đặc tả
+
+    Hình 3: Biểu đồ use case Tìm kiếm.
+
+
+b) Tóm tắt
+      Người dùng có thể tìm kiếm như sau: 
+- Tìm kiếm chuyện theo tên.
+- Tìm kiếm chuyện theo thể loại …
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+
+
+
+
+
+
+
+Tìm kiếm
+
+Theo
+thể
+loại    Người dùng chọn chức năng tìm kiếm theo thể loại:
+    Khi người dùng gõ thể loại muốn tìm ra. Màn hình sẽ hiển thị ra các thể loại mà giống với chữ mà người dùng đã gõ ở ô tìm kiếm.
+    Khi nhấn vào thể loại muốn tìm, màn hình sẽ hiển thị ra danh sách truyện ở thể loại đó. Khi nhấn Back sẽ quay trở về lại danh sách truyện. về menu chính.
+
+
+
+Theo tên    Người dùng chọn chức năng tìm kiếm theo tên: 
+    Khi người dùng gõ tên chuyện muốn tìm ra. Màn hình sẽ hiển thị đáp án phù hợp nhất với chữ mà người dùng đã gõ ở ô tìm kiếm.
+    Khi nhấn vào tên tác giả muốn tìm, màn hình sẽ hiển thị ra danh sách truyện có tên đó.
+  Khi nhấn Back sẽ quay trở về lại danh sách truyện về menu chính➢ Các dòng sự kiện khác
+ “Không có”
+d) Các yêu cầu đặc biệt
+ “Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Người dùng cần chọn loại thể loại định tìm.
+- Hệ thống sẽ load dữ liệu của mục thể loại.
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+- Hệ thống load được hết nội dung của từng thể loại truyện.
+g) Điểm mở rộng
+ “Không có”
+3.3.3.3 Đặc tả use-case Yêu Thích
+a) Biều đồ Use case của Use case đặc tả
+
+
+    Hình 4: Biểu đồ use case Yêu thích.
+b) Tóm tắt
+Người dùng có thể đọc tin xem những câu chuyện đánh dấu là yêu thích.
+
+
+
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+• Người dùng chọn đọc mục Yêu Thích
+• Hệ thống lấy về những câu chuyện mà người dùng đã đánh dấu biểu tượng yêu thích.
+• Khi người dùng muốn xem thì màn hình hiển thị video.
+➢ Các dòng sự kiện khác
+ “Không có”
+d) Các yêu cầu đặc biệt
+ “Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Người dùng cần chọn chuyện muốn xem.
+- Thực hiện các chức năng của hệ thống.
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+- Load được nội dung của câu chuyện và phát.
+g) Điểm mở rộng
+ “Không có”
+3.3.4 Biểu đồ lớp
+
+    Hình 5: Biểu đồ lớp mức phân tích.
+3.3.5 Danh sách các lớp đối tượng và quan hệ
+    Bảng 3:Danh sách các lớp đối tượng.
+STTTên lớp/quan hệLoạiÝ nghĩa/Ghi chú1Thể loạiPublicLớp đối tượng lưu trữ chữ cái 2Truyện PublicLớp đối tượng lưu trữ chữ cáiSTTTên lớp/quan hệLoạiÝ nghĩa/Ghi chú3.3.6 Mô tả chi tiết từng lớp đối tượng
+a)  Lớp thể loại.
+Bảng 4: Bảng mô tả lớp Thể Loại.
+     STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú     1idText Khóa chínhMã id kí tự: chữ cái và số     2Tên thể loạiTextNot nullChữ cái
+
+
+b) Lớp Truyện
+Bảng 5:Bảng mô tả lớp Truyện
+     STT     Tên thuộc tính     Loại     Ràng buộc     Ý nghĩa/ghi chú1idTruyệnText Khóa chínhMã id của Truyện2Id thể loạiTextKhóa ngoạiKhóa ngoại  ien kết lớp truyện3Tên truyệnTextNot nullTên của truyện4Ảnh TextNot nullHình ảnh của câu truyện.5Âm thanhTextNot nullÂm thanh của câu truyện khi phát.6Số trangText Not nullSố 3.3.7 Biểu đồ tuần tự
+3.3.7.1 Biểu đồ tuần tự thứ 1 (Quản lý thể loại)
+ 
+    Hình 6: Biểu đồ tuần tự quản lý thể loại.
+     
+3.3.7.2 Biểu đồ tuần tự thứ 2(tìm kiếm)
+    
+    Hình 7 Biểu đồ tuần tự tìm kiếm.
+3.4 Thiết kế cơ sở dữ liệu
+3.4.1 Mô hình dữ liệu quan hệ
+3.4.1.1 Lược đồ quan hệ
+    
+    Hình 8: Lược đồ quan hệ.
+3.4.1.2 Danh sách các bảng trong lược đồ quan hệ
+    Bảng 6:Danh sách các bảng trong lược đồ quan hệ.
+STT    Tên bảng    Ý nghĩa/ Ghi chú1ChuyenLưu các thuộc tính có trong chuyện.2TheLoaiLưu tên các thể loại. 
+
+
+   3.4.2 Mô tả chi tiết từng bảng trong CSDL
+a) TheLoai
+Bảng 7:Mô tả chi tiết thể loại
+ TT Tên trường Kiểu dữ liệu Ràng buộc Mô tả1idTLIntPrimary KeyTham Chiếu từ bảng Chuyen2tenTheLoaiString Not nullLưu tên TLb) Bảng Truyện
+Bảng 8: Mô tả chi tiết truyện.
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1idTruyenintPrimary KeyIDTruyen2idTheLoaiintNot nullidTL3tenTruyenNvarchar(50)Not nullTên của câu chuyện4LinkTruyenIntNot nullĐường dẫn của truyện5CommentNvarchar(MAX)Not nullComment6Miêu TảNvarchar(MAX)Not nullMiêu tả3.5 Thiết kế giao diện
+3.5.1 Giao diện màn hình chính của chương trình
+    
+    Hình 9: Giao diện màn hình chính.
+3.5.2 Giao diện khi chọn Khác.
+    
+    Hình 10: Giao diện khi chọn Khác.
+    
+    Hình 11: Giao diện lựa chọn nghe nhạc.
+3.5.3 Giao diện khi chọn thông tin.
+
+    Hình 12: Giao diện khi chọn thông tin.
+3.5.4 Giao diện khi chọn trợ giúp.
+
+    Hình 13: Giao diện khi chọn trợ giúp.
+3.5.5 Giao diện khi chọn Yêu thích.
+    
+    Hình 14: Giao diện khi chọn yêu thích.
+3.5.6 Giao diện tìm kiếm.
+
+    Hình 15: Giao diện tìm kiếm.
+3.5.7 Giao diện khi Play truyện
+    
+    Hình 16: Giao diện khi play truyện.
+3.5.8 Giao diện khi play nhạc.
+    
+    Hình 17: Giao diện khi play nhạc.
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau thời gian nghiên cứu và phát triển, tác giả đã hoàn thành cơ bản các mục tiêu ban đầu đề ra của đề tài. Đã thực hiện nghiên cứu và đề ra giải pháp lấy dữ liệu từ server và firebase để kết nối với android. Bao gồm giải pháp về thiết kế cơ sở dữ liệu, tổ chức dữ liệu trên FireBase.
+    Xây dựng Ứng dụng kể chuyện cho bé bước đầu cho phép người dùng có thể đọc và nghe các câu chuyện có ích dành cho con em mình. Ứng dụng còn hỗ trợ chức năng nghe nhạc khi bé và phụ huynh cảm thấy nhàm chán với chuyện. Ngoài ra, hình ảnh và âm thanh bắt mắt với trẻ nhỏ.
+4.2 Hạn chế của đề tài
+    Ứng dụng Kể Chuyện cho Bé vẫn chưa được tối ưu được nhiều, và còn mắc các lỗi logic cơ bản.
+4.3 Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, hướng phát triển tiếp theo của đề tài như sau:
+• Xây dựng thêm chức năng đọc offline.
+• Xây dựng và phát triển để ứng dụng được phát triển hơn.
+TÀI LIỆU THAM KHẢO
+x
+[1]Hoàng Quốc Việt, "Lập Trình android cơ bản".[2]Nguyễn Thị Hải Năng, "Giáo trình Lập trình đa phương tiện". 
+ [3]
+    x
+    
+    
+Xây dựng ứng dụng Kể chuyện cho bé.
+    
+    
+6
+    
+    

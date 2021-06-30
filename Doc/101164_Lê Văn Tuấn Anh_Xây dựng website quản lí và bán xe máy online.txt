@@ -1,0 +1,531 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Ngày nay, cùng với sự phát triển của ngành khoa học công nghệ thông tin, các dịch vụ bán hàng online cũng trở nên vô cùng đa dạng và phong phú. Với sự xuất hiện của các website bán hàng, khách hàng vừa có thể tiết kiệm được thời gian, có thể nắm bắt, cập nhật được những tình hình mới nhất đang diễn trên thị trường hàng hóa một cách nhanh chóng nhất. Hình thức cũng rất đa dạng, tạo điều kiện tốt nhất cho khách hàng có thể mua sắm một cách thuận tiện nhất.
+    Nhận thấy cầu ngày càng tăng của thị trường đối với các sản phẩm công nghệ cao,chúng em đã xây dựng website“quản lí và bán xe máy online” cũng với mục đích giúp tiết kiệm thời gian và công sức để nắm bắt những thông tin quan trọng, cần thiết cho người tiêu dùng
+    
+1.2 Phát biểu bài toán
+    Hoạt động quản lý bán xe máy được mô tả như sau:
+- Khách hàng khi truy cập website có thể xem được các nội dung như các xe và thông tin xe.
+- Sản phẩm trên website là xe máy có các thông tin như: tên xe máy, loại xe máy, mô tả, giá và các thông số kỹ thuật chi tiết.  
+- Khi khách hàng chọn một sản phẩm sẽ chuyển tới trang chi tiết sản phẩm, tại đây khách hàng có thể xem các thông tin chi tiết về sản phẩm và có thể đặt sản phẩm đó vào giỏ hàng với số lượng mặc định là 1 và sẽ tăng thêm 1 nếu sản phẩm đặt vào đã có trong giỏ hàng
+- Khách hàng có thể chuyển đến giỏ hàng để xem danh mục các sản phẩm đã đặt vào. Và khách hàng có thể thay đổi số lượng sản phẩm hoặc bỏ sản phẩm nào đó ra khỏi giỏ hàng. 
+- Khi đã xác định được các mặt hàng và số lượng, khách hàng sẽ tiến hành thanh toán. Khi thanh toán, khách hàng phải điền đầy đủ thông tin vào mẫu, bao gồm: tên người nhận, địa chỉ nhận, khu vực cần chuyển tới, thành phố cần chuyển tới, … Sau đó các thông tin sẽ được lưu lại để thuận tiện quản lý.
+- Website còn có nhóm người quản lý, quản lý tất cả nội dụng trên trang web như: quản lý xe , quản lý hóa đơn, quản lý danh mục.
+    
+1.3 Mục tiêu của đề tài
+• Yêu cầu về mặt giao diện:
+- Giao diện trang web thân thiện, dễ sử dụng.
+- Hiển thị đúng trên các trình duyệt khác nhau.
+- Cách trình bày nội dung hợp lý.
+- Dễ thay đổi tùy chỉnh giao diện Website theo ý muốn.
+- Giao diện tùy biến với thiết bị sử dụng như smartphone, máy tính, laptop…
+• Yêu cầu về mặt chức năng:
+- Quản lý xe máy: thêm, sửa, xóa thông tin xe máy trong cửa hàng.
+- Quản lý đặt hàng: thêm, sửa, xóa thông tin đặt hàng.
+- Quản lý loại xe: thêm, sửa, xóa thông tin loại xe
+- Chức năng tìm kiếm thông tin xe máy, loại xe máy.
+1.4 Phương pháp tiếp cận
+- Nghiên cứu quy trình quản lý và bán hàng online trên truyền thông và mạng internet, nghiên cứu ngôn ngữ mới PHP, web framework Laravel và mô hình Model - View – Template.
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu.
+o Phương pháp phân tích mẫu, thực nghiệm
+
+CHƯƠNG 2: GIỚI THIỆU PHP VÀ FRAMEWORK LARAVEL
+2.1 Giới thiệu về ngôn ngữ PHP
+2.1.1 PHP là gì ?
+    PHP – Hypertext Preprocessor hiểu ra tiếng việt PHP là bộ xử lý siêu văn bản trước đó được viết là Personal Home Pages – trang chủ cá nhân. Đây là ngôn ngữ lập trình được sử dụng chủ yếu trong việc phát triển các ứng dụng bằng một loạt các mã lệnh được viết cho máy chủ hay các mã nguồn mở, dùng trong mục đích phát triển các ứng dụng trang web, các trang web tĩnh hay trang web động. Các tệp lệnh PHP chỉ có thể được diễn giải trên một máy chủ đã cài đặt sẵn PHP. Một tệp lệnh PHP chứa các thẻ PHP được kết thúc bằng đuôi “.php”.
+    Ngôn ngữ lập trình PHP phù hợp với các web để có thể dễ dàng ứng dụng vào các trang HTML. Do đó nó được tối ưu hóa cho các ứng dụng web với những tính năng ưu việt như nhanh, gọn, cùng cấu trúc sử dụng tương tự như C hay Java. Đây cũng được xem là ngôn ngữ lập trình khá dễ học và nhanh hơn so với một số ngôn ngữ lập trình khác. Bởi vậy, rất nhanh chóng, PHP trở thành ngôn ngữ lập trình web phổ biến nhất thế giới.
+2.1.2 Lịch sử hình thành của PHP
+    PHP mà chúng ta biết đến ngày nay là sự kế thừa của một sản phẩm có tên là PHP/FI. Được viết bởi Rasmus Lerdorf, bản PHP đầu tiên là một tập hợp đơn giản các Common Gateway Interface (CGI) – một chuẩn giao tiếp giữa client và server – nhị phân viết bằng ngôn ngữ C. Ban đầu, Rasmus sử dụng nó để theo dõi người dùng truy cập vào hồ sơ cá nhân trên internet của mình. Vì vậy, ông đặt tên nó là “Personal Home Page Tools”. Theo thời gian, nhiều tính năng mới được thêm vào, và Rasmus đã viết lại PHP Tools này, tạo ra một công cụ lớn hơn và phong phú hơn về tính năng. Mô hình mới này có khả năng tương tác với cơ sở dữ liệu, và hơn nữa, nó giúp cho người dùng, có thể tạo ra một ứng dụng web động, ví dụ như guestbooks. Tháng 6/1995, Rasmus public mã nguồn của PHP Tools ra cộng đồng, cho phép các nhà phát triển có thể sử dụng và phát triển nó – một cách miễn phí.
+    Tháng 9/1995, Rasmus mở rộng PHP, thêm vào công cụ có tên là FI (Forms Interpreter), và một số chức năng như chúng ta biết ngày nay. Nó có các biến kiểu Perl và cú pháp cho phép nhúng mã HTML. Cú pháp này, tương tự Perl, nhưng hạn chế hơn, đơn giản và có phần không phù hợp. Trong thực tế, để nhúng mã lệnh PHP/FI vào một tập tin HTML, các lập trình viên phải sử dụng các comment HTML. Và mặc dù phương pháp này không được hoàn toàn đón nhận, FI vẫn tiếp tục phát triển và đem về lợi nhuận thương mại.
+    Vào năm 1997, PHP/FI 2.0, lần viết lại thứ hai của phiên bản C, đã thu hút được hàng ngàn người sử dụng trên toàn thế giới với xấp xỉ 50.000 tên miền đã được ghi nhận là có cài đặt nó, chiếm khoảng 1% số tên miền có trên mạng Internet. Tuy đã có tới hàng nghìn người tham gia đóng góp vào việc tu chỉnh mã nguồn của dự án này thì vào thời đó nó vẫn chủ yếu chỉ là dự án của một người.
+    PHP/FI 2.0 được chính thức công bố vào tháng 11 năm 1997, sau một thời gian khá dài chỉ được công bố dưới dạng các bản beta. Nhưng không lâu sau đó, nó đã được thay thế bởi các bản alpha đầu tiên của PHP 3.0.
+    PHP 3.0 là phiên bản đầu tiên cho chúng ta thấy một hình ảnh gần gũi với các phiên bản PHP mà chúng ta được biết ngày nay. Nó đã được Andi Gutmans và Zeev Suraski tạo ra năm 1997 sau khi viết lại hoàn toàn bộ mã nguồn trước đó. Lý do chính mà họ đã tạo ra phiên bản này là do nhận họ thấy PHP/FI 2.0 hết sức yếu kém trong việc phát triển các ứng dụng thương mại điện tử mà họ đang xúc tiến trong một dự án của trường đại học. Trong một nỗ lực hợp tác và bắt đầu xây dựng dựa trên cơ sở người dùng đã có của PHP/FI, Andi, Rasmus và Zeev đã quyết định hợp tác và công bố PHP 3.0 như là phiên bản thế hệ kế tiếp của PHP/FI 2.0, và chấm dứt phát triển PHP/FI 2.0.
+    Một trong những sức mạnh lớn nhất của PHP 3.0 là các tính năng mở rộng mạnh mẽ của nó. Ngoài khả năng cung cấp cho người dùng cuối một cơ sở hạ tầng chặt chẽ dùng cho nhiều cơ sở dữ liệu, giao thức và API khác nhau, các tính năng mở rộng của PHP 3.0 đã thu hút rất nhiều nhà phát triển tham gia và đề xuất các mô đun mở rộng mới. Hoàn toàn có thể kết luận được rằng đây chính là điểm mấu chốt dẫn đến thành công vang dội của PHP 3.0. Các tính năng khác được giới thiệu trong PHP 3.0 gồm có hỗ trợ cú pháp hướng đối tượng và nhiều cú pháp ngôn ngữ nhất quán khác.
+    Ngôn ngữ hoàn toàn mới đã được công bố dưới một cái tên mới, xóa bỏ mối liên hệ với việc sử dụng vào mục đích cá nhân hạn hẹp mà cái tên PHP/FI 2.0 gợi nhắc. Nó đã được đặt tên ngắn gọn là ‘PHP’, một kiểu viết tắt hồi quy của “PHP: Hypertext Preprocessor”.
+    Vào cuối năm 1998, PHP đã phát triển được con số cài đặt lên tới hàng chục ngàn người sử dụng và hàng chục ngàn Web site báo cáo là đã cài nó. Vào thời kì đỉnh cao, PHP 3.0 đã được cài đặt cho xấp xỉ 10% số máy chủ Web có trên mạng Internet.
+    PHP 3.0 đã chính thức được công bố vào tháng 6 năm 1998, sau thời gian 9 tháng được cộng đồng kiểm nghiệm.
+    Vào mùa đông năm 1998, ngay sau khi PHP 3.0 chính thức được công bố, Andi Gutmans và Zeev Suraski đã bắt đầu bắt tay vào việc viết lại phần lõi của PHP. Mục đích thiết kế là nhằm cải tiến tốc độ xử lý các ứng dụng phức tạp, và cải tiến tính mô đun (modularity) của mã PHP gốc. Những ứng dụng như vậy đã chạy được trên PHP 3.0 dựa trên các tính năng mới và sự hỗ trợ khá nhiều các cơ sở dữ liệu và API của bên thứ ba, nhưng PHP 3.0 đã không được thiết kế để xử lý các ứng dụng phức tạp như thế này một cách có hiệu quả.
+    Một “cỗ máy” mới, có tên ‘Zend Engine’ (ghép từ các chữ đầu trong tên của Zeev và Andi), đã đáp ứng được các nhu cầu thiết kế này một cách thành công, và lần đầu tiên được giới thiệu vào giữa năm 1999. PHP 4.0, dựa trên “cỗ máy” này, và đi kèm với hàng loạt các tính năng mới bổ sung, đã chính thức được công bố vào tháng 5 năm 2000, gần 2 năm sau khi bản PHP 3.0 ra đời. Ngoài tốc độ xử lý được cải thiện rất nhiều, PHP 4.0 đem đến các tính năng chủ yếu khác gồm có sự hỗ trợ nhiều máy chủ Web hơn, hỗ trợ phiên làm việc HTTP, tạo bộ đệm thông tin đầu ra, nhiều cách xử lý thông tin người sử dụng nhập vào bảo mật hơn và cung cấp một vài các cấu trúc ngôn ngữ mới. Với PHP 4, số nhà phát triển dùng PHP đã lên đến hàng trăm nghìn và hàng triệu site đã công bố cài đặt PHP, chiếm khoảng 20% số tên miền trên mạng Internet.
+    Nhóm phát triển PHP cũng đã lên tới con số hàng nghìn người, và hàng nghìn người khác tham gia vào các dự án có liên quan đến PHP như PEAR, PECL và tài liệu kĩ thuật cho PHP.
+    Sự thành công hết sức to lớn của PHP 4.0 đã không làm cho nhóm phát triển PHP tự mãn.Cộng đồng php đã nhanh chóng giúp họ nhận ra những yếu kém của PHP 4 đặc biệt với khả năng hỗ trợ lập trình hướng đối tượng (OOP), xử lý XML, không hỗ trợ giao thức máy khách mới của MySQL 4.1 và 5.0, hỗ trợ dịch vụ web yếu. Những điểm này chính là mục đích để Zeev và Andi viết Zend Engine 2.0, lõi của PHP 5.0. Một thảo luận trên Slashdot.org đã cho thấy việc phát triển PHP 5.0 có thể đã bắt đầu vào thời điểm tháng 12 năm 2002 nhưng những bài phỏng vấn Zeev liên quan đến phiên bản này thì đã có mặt trên mạng Internet vào khoảng tháng 7 năm 2002. Ngày 29 tháng 6 năm 2003, PHP 5 Beta 1 đã chính thức được công bố để cộng đồng kiểm nghiệm. Đó cũng là phiên bản đầu tiên của Zend Engine 2.0. Phiên bản Beta 2 sau đó đã ra mắt vào tháng 10 năm 2003 với sự xuất hiện của hai tính năng rất được chờ đợi: Iterators, Reflection nhưng namespaces một tính năng gây tranh cãi khác đã bị loại khỏi mã nguồn. Ngày 21 tháng 12 năm 2003: PHP 5 Beta 3 đã được công bố để kiểm tra với việc phân phối kèm với Tidy, bỏ hỗ trợ Windows 95, khả năng gọi các hàm PHP bên trong XSLT (Extensible Stylesheet Language Transformation), sửa chữa nhiều lỗi và thêm khá nhiều hàm mới. PHP 5 bản chính thức đã ra mắt ngày 13 tháng 7 năm 2004 sau một chuỗi khá dài các bản kiểm tra thử bao gồm Beta 4, RC 1, RC2, RC3. Mặc dù coi đây là phiên bản sản xuất đầu tiên nhưng PHP 5.0 vẫn còn một số lỗi trong đó đáng kể là lỗi xác thực HTTP.
+    Ngày 14 tháng 7 năm 2005, PHP 5.1 Beta 3 được PHP Team công bố đánh dấu sự chín muồi mới của PHP với sự có mặt của PDO, một nỗ lực trong việc tạo ra một hệ thống API nhất quán trong việc truy cập cơ sở dữ liệu và thực hiện các câu truy vấn. Ngoài ra, trong PHP 5.1, các nhà phát triển PHP tiếp tục có những cải tiến trong nhân Zend Engine 2, nâng cấp mô đun PCRE lên bản PCRE 5.0 cùng những tính năng và cải tiến mới trong SOAP, streams.
+2.1.3 Các đặc điểm của PHP
+- Mã nguồn mở: PHP là một sản phẩm mã nguồn mở(Open – source) nên việc cài đặt và tùy biến PHP là miễn phí và tự do. Vì có ưu thế nguồn mở nên PHP có thể được cài đặt trên hầu hết các Web Server thông dụng hiện nay như Apache, IIS…
+- Tính cộng đồng của PHP: Là một ngôn ngữ nguồn mở cùng với sự phổ biến của PHP thì cộng đồng PHP được coi là khá lớn và có chất lượng. Với cộng đồng phát triển lớn, việc cập nhật các bản vá lỗi phiên bản hiện tại cũng như thử nghiệm các phiên bản mới khiến PHP rất linh hoạt trong việc hoàn thiện mình. Cộng đồng hỗ trợ, chia sẽ kinh nghiệm của PHP cũng rất dồi dào. Với rất nhiều diễn đàn, blog trong và ngoài nước nói về PHP đã khiến cho quá trình tiếp cận của người tìm hiểu PHP được rút ngắn nhanh chóng.
+- Thư viện phong phú: Ngoài sự hỗ trợ của cộng đồng, thư viện script PHP cũng rất phong phú và đa dạng. Từ những cái rất nhỏ như chỉ là 1 đoạn code, 1 hàm (PHP.net…) cho tới những cái lớn hơn như Framework (Zend, CakePHP, CogeIgniter, Symfony…) ,ứng dụng hoàn chỉnh (Joomla, WordPress, PhpBB…). Với thư viện code phong phú, việc học tập và ứng dụng PHP trở nên rất dễ dàng và nhanh chóng. Đây cũng chính là đặc điểm khiến PHP trở nên khá nổi bật và cũng là nguyên nhân vì sao ngày càng có nhiều người sử dụng PHP để phát triển web.
+- Hỗ trợ kết nối nhiều hệ cơ sở dữ liệu: Nhu cầu xây dựng web có sử dụng cơ sở dữ liệu là một nhu cầu tất yếu và PHP cũng đáp ứng rất tốt nhu cầu này. Với việc tích hợp sẵn nhiều Database Client trong PHP đã làm cho ứng dụng PHP dễ dàng kết nối tới các hệ cơ sở dữ liệu thông dụng. Việc cập nhật và nâng cấp các Database Client đơn giản chỉ là việc thay thế các Extension của PHP để phù hợp với hệ cơ sở dữ liệu mà PHP sẽ làm việc. Một số hệ cơ sở dữ liệu thông dụng mà PHP có thể làm việc là: MySQL, MS SQL, Oracle, Cassandra…
+- Lập trình hướng đối tượng: Ngày nay, khái niệm lập trình hướng đối tượng (OOP) đã không còn xa lạ với lập trình viên. Với khả năng và lợi ích của mô hình lập trình này nên nhiều ngôn ngữ đã triển khai để hỗ trợ OOP. Từ phiên bản PHP 5, PHP đã có khả năng hỗ trợ hầu hết các đặc điểm nổi bật của lập trình hướng đối tượng như là Inheritance, Abstraction, Encapsulation, Polymorphism, Interface, Autoload…. Với việc ngày càng có nhiều Framework và ứng dụng PHP viết bằng mô hình OOP nên lập trình viên tiếp cận và mở rộng các ứng dụng này trở nên dễ dàng và nhanh chóng.
+- Tính bảo mật: Bản thân PHP là mã nguồn mỡ và cộng đồng phát triển rất tích cực nên có thể nói PHP khá là an toàn. PHP cũng cung cấp nhiều cơ chế cho phép bạn triển khai tính bảo mật cho ứng dụng của mình như session, các hàm filter dữ liệu, kỹ thuật ép kiểu, thư viện PDO (PHP Data Object) để tương tác với cơ sở dữ liệu an toàn hơn. Kết hợp với các kỹ thuật bảo mật ở các tầng khác thì ứng dụng PHP sẽ trở nên chắc chắn hơn và đảm bảo hoạt động cho website.
+- Khả năng mở rộng cho PHP: Bằng việc xây dựng trên nền ngôn ngữ C và là mã nguồn mở nên khả năng mở rộng cho ứng dụng PHP có thể nói là không có giới hạn. Với thư viện phong phú và khả năng mở rộng lớn, ứng dụng PHP có thể tương tác với hầu hết các loại ứng dụng phổ biến như xử lý hình ảnh, nén dữ liệu, mã hóa, thao tác file PDF, Office, Email, Streaming… Bạn hoàn toàn có thể tự xây dựng cho mình các Extension để tối ưu, bổ sung các chức năng cho PHP cũng như tối ưu luôn Core của PHP để phục vụ cho các mục đích mở rộng website của mình.
+2.1.4 Ứng dụng của ngôn ngữ PHP
+- Hiện nay, PHP có rất nhiều các CMS (gọi là mã mở nguồn). Vì thế, ngôn ngữ lập trình PHP rất đa dạng và nó sẽ giúp bạn thiết kế dễ dàng các web bán hàng, tin tức hay blog cá nhân cho tới những trang web giới thiệu công ty, web giới thiệu sản phẩm,…
+- PHP còn có thể giúp người dùng thực hiện các hàm hệ thống. Ví dụ như từ các file của một hệ thống cụ thể, PHP có thể tạo, mở, đọc, ghi và đóng chúng.
+- Cùng với đó, khi tìm hiểu PHP là gì, các bạn sẽ nhận thấy rằng PHP còn có thể xử lý các form một cách nhanh chóng và đơn giản như thu thập dữ liệu từ file hay lưu dữ liệu vào cùng một file,…
+- Khi sử dụng ngôn ngữ lập trình PHP, người dùng còn có thể tự thêm, sửa hoặc xóa các phần tử bên trong của Database của mình. Ngoài ra, PHP còn có khả năng thiết lập Cookie và truy cập các biến Cookie. Đồng thời, PHP cũng giúp bạn hạn chế được số lượng người sử dụng truy cập vào trang web của riêng bạn.
+2.2 Giới thiệu về web Framework  Laravel
+2.2.1 Framework là gì ?
+    Framework là một thư viện với các hàm được xây dựng sẵn phục vụ cho công việc lập trình website. Các lập trình viên phát triển web  sử dụng các framework để hỗ trợ công việc lập trình được nhanh hơn,tiết kiệm thời gian và đảm bảo bảo mật hơn cho hệ thống phát triển. Thường thì một Framework PDP được xây dựng trên mô hình MVC.
+    M là viết tắt của Model: Các thao tác làm việc với cơ sở dữ liệu, Model xử lý dữ liệu được yêu cầu từ Controller và trả về kết quả truy xuất.
+    V là từ viết tắt của View: Chức năng hiển thị các thành phần của điều hướng của controller đến với người dùng.
+    C là từ viết tắt của Controller: Tức là điều khiển, controller nhận lệnh từ người dùng sau đó xử lý, nếu có thao tác đến cơ sở dữ liệu thì gửi yêu cầu qua Model truy vấn dữ liệu sau đó truyền đến View để show dữ liệu ra màn hình.
+      
+2.2.2 Framework Laravel là gì ?
+    Laravel là 1 open source, là một framework dùng để xây dựng web application, được thiết kế dựa trên mô hình MVC (Model, Controller, View), toàn bộ source code được đặt trên github. Theo kết qủa khảo sát của các Developer vào tháng 12 năm 2013, thì Laravel Framework đứng top 1 một trong những framework phổ biến nhất, tiếp sau là Phalcon, Symfony2, CodeIgniter và các framework khác. Tháng 8 năm 2014, Laravel Framework được xem như là một dự án PHP phổ biến nhất trên Github.
+    Cho tới năm 2015, thì Framework laravel hiện đang đứng top 1 thế giới về mức độ phổ biến và ưu dùng. Được cộng đồng hỗ trợ phát triển mạnh mẽ. Tháng 8 năm 2014, Laravel Framework được xem như là một dự án PHP phổ biến nhất trên Github.
+    Sau nhiều lần được cộng đồng Laravel thế giới hỗ trợ phát triển thì phiên bản mới nhất hiện nay là Laravel 7.x.
+2.2.3 Sơ lược các tính năng cơ bản của Laravel framework	
+    Bundles : Ở laravel phiên bản 3.x, cung cấp một hệ thống đóng gói các module, với rất nhiều tính năng đi kèm.
+    Composer : Ở laravel phiên bản 4.x, được sử dụng như một công cụ quản lý với tính năng như thêm các gói cài đặt, các chức năng PHP phụ trợ cho Laravel có trong kho Packagist.
+    Eloquent ORM (object relation mapping) : ánh xạ các đối tượng và quan hệ cơ sở dữ liệu, cung cấp các phương thức nội bộ để thực thi đồng thời cũng bổ sung các tính năng hạn chế về mối quan hệ giữa các đối tượng cơ sở dữ liệu. Eloquent ORM trình bày các bảng trong cơ sở dữ liệu dưới dạng các lớp, cung cấp thêm lựa chọn truy cập cơ sở dữ liệu trực tiếp mới mẻ hơn, chuyên nghiệp hơn.
+    Application logic : Là một phần của phát triển ứng dụng, được sử dụng bởi bộ điều khiển controllers.
+    Routes : Định nghĩa mối quan hệ giữa các đường dẫn (url), các liên kết (link) . Khi một liên kết được tạo ra bằng cách sử dụng tên của routes, thì một định danh liên kết thống nhất sẽ được tạo ra bởi laravel.
+    Restful Controller : cung cấp các tùy chọn để tách các logic phía sau các request HTTP POST, GET
+    Class auto loading : cung cấp việc tải tự động các class trong PHP, mà không cần include các class vào. Tùy thuộc vào yêu cầu các class cần thiết sẽ được nạp vào, hạn chế các class không cần thiết.
+    View : chưa các mã html, hiển thị dữ liệu được chỉ định bởi controller
+    Migrations : cung cấp một hệ thống kiểm soát các phiên bản lược đồ cơ sở dữ liệu (database cheme), làm cho web ứng dụng có khả năng tương tác phù hợp những thay đổi logic, các đoạn mã code của ứng dụng và những thay đổi cần thiết trong việc bố trícơ sở dữ liệu, triển khai nới lỏng và cập nhật các ứng dụng.
+    Unit Testing : đóng một vai trò quan trọng trong Laravel, Unit testting chứa rất nhiều các hệ thống unit testing, giúp phát hiện và ngăn chặn lỗi trong khuôn khổ nhất định. Unit Testing có thể được chạy thông qua tiện ích command-line.
+    Automatic pagination : Tính năng tự động phân trang được tích hợp vào Laravel giúp đơn giản hóa các nhiệm vụ thực hiệnphân trang so với các phương pháp thông thường.
+2.2.4 Ưu điểm của Larravel framework
+- Sử dụng các tính năng mới nhất của PHP: Một trong những tính năng làm cho PHP Lararel framework trở nên nổi bật hơn tất cả đó là nó sử dụng tất cả các tính năng mới của PHP. Các framework khác không tận dụng được điểu này. Sử dụng Laravel 5 bạn sẽ sở hữu một số tính năng mới nhất mà PHP cung cấp, đặc biệt là trong Namespaces, Interfaces, Overloading, Anonymous functions và Shorter array syntax. Đã có rất nhiều .bộ CMS nổi bật được viết trên nền Laravel framework ra đời, từ những bộ CMS đơn giản nhất đến những bộ "siêu mạnh", từ mã nguồn mở đến thương mại.
+- Tài liệu tuyệt vời: Tài liệu của Laravel rất thân thiện với nhà phát triển. Tất cả các phiên bản của Laravel được phát hành cùng với các tài liệu phù hợp, bạn sẽ tìm thấy những giải thích chi tiết về coding style, methods và classes.
+- Tích hợp với dịch vụ mail: Các ứng dụng web bắt buộc phải thông báo cho người dùng về các deal và offer mới. Đăng ký người dùng mới cũng rất quan trọng (nghĩa là thông báo cho người dùng mới khi anh ấy/ cô ấy đăng ký). Framework được trang bị API sạch trên thư viện SwiftMailer. Và có các driver cho SMTP, Mailgun, SparkPost, Mandrill, PHP's "mail" function, Amazon SES, và "sendmail" giúp bạn gửi thư qua các dịch vụ dựa trên đám mây hoặc dịch vụ local.
+- Hỗ trợ cache backend phổ biến: Laravel framework hỗ trợ các cache backend như Memcached và Redis out-of-the-box. Bạn cũng có thể tùy chỉnh nhiều cấu hình cache.
+- Công cụ tích hợp do dòng lệnh - Artisan: Các nhà phát triển thường thấy tẻ nhạt khi thực hiện các nhiệm vụ lập trình lặp đi lặp lại vì chúng rất tốn thời gian. Công cụ dòng lệnh có tên Artisan giúp họ tạo khung code và quản lý hệ thống cơ sở dữ liệu hiệu quả. Artisan giúp tạo các tệp MVC cơ bản và quản lý tài sản, bao gồm cả các cấu hình tương ứng của chúng.
+- Gói và nguồn lực có sẵn: Bạn sẽ được hưởng lợi ích từ npm package và bower package bằng cách kết hợp framework với Gulp và elixir, giúp trong việc sửa đổi tài nguyên. Việc tích hợp này sẽ giải quyết các phụ thuộc và là nguồn gói đáng tin cậy nhất trong thế giới PHP.
+- Giảm chu kỳ phát triền sản phẩm: Bạn có thể giảm đáng kể chu kỳ phát triển sản phẩm vì framwork giúp tích hợp nhanh hơn, bên cạnh đó là cộng đồng hỗ trợ rất lớn - Laracasts.
+- Container IoC: Còn được gọi là Inversion of Control, đây là một phương thức để tạo các đối tượng mới mà không phải khởi động bất kỳ thư viện bên ngoài nào. Nói cách khác, bạn có thể truy cập các đối tượng này từ bất cứ nơi nào bạn đang mã hóa, bạn sẽ không còn gặp khó khăn với các cấu trúc nguyên khối không linh hoạt.
+- Reverse routing: Đây là một tính năng rất hữu ích trong framwork, bạn có thể tạo liên kết đến các route được đặt tên. Vì vậy, khi tạo các liên kết, bạn chỉ cần sử dụng tên của bộ định tuyến, framework sẽ tự động chèn URL chính xác. Nếu bạn cần thay đổi các route trong tương lai, những thay đổi sẽ tự động được thực hiện ở mọi nơi.
+- Eloquent ORM: Đây là một trong những tính năng tốt nhất của Laravel, cung cấp một triển khai ActiveRecord đơn giản và hiệu quả, làm việc với cơ sở dữ liệu. Các mô hình bạn tạo trong MVC sẽ có một bảng tương ứng trong cơ sở dữ liệu. ORM có các mối quan hệ, nếu bạn thao tác một bảng trong cơ sở dữ liệu, bạn cũng sẽ quản lý các dữ liệu liên quan. Các mối quan hệ đó là: one-to-one, one-to-many, many-to-many, has-many-through, polymorphic, và many-to-many polymorphic.
+2.3 Hệ quản trị Cơ sở dữ liệu MySql
+2.3.1 MySQL là gì ?
+    MySQL là một cơ sở dữ liệu quan hệ miễn phí hiện nay đã được hãng Oracle mua lại từ hãng Sun. Nó thường được sử dụng kết hợp với PHP để lưu trữ dữ liệu của ứng dụng website khi người dùng thao tác trên website của chúng ta. SQL Server - một hệ cơ sở dữ liệu quan hệ của Microsoft - và MySQL được xây dựng giống nhau về tư tưởng, kiến trúc.
+• Database: là một CSDL (cơ sở dữ liệu), trong CSDL bao gồm các table.
+• Table: là bảng dữ liệu, trong table bao gồm các field.
+• Field: là trường dữ liệu.
+2.3.2 Lịch sử phát triển của MySQL
+- Công ty Thuy Điển MySQL AB phát triển MySQL vào năm 1994.
+- Phiên bản đầu tiên của MySQL phát hành năm 1995.
+- Công ty Sun Microsystems mua lại MySQL AB trong năm 2008.
+- Năm 2010 tập đoàn Oracle thâu tóm Sun Microsystems. Ngay lúc đó, đội ngũ phát triển của MySQL tách MySQL ra thành 1 nhánh riêng gọi là MariaDB. Oracle tiếp tục phát triển MySQL lên phiên bản 5.5.
+- 2013 MySQL phát hành phiên bản 5.6.
+- 2015 MySQL phát hành phiên bản 5.7.
+- MySQL đang được phát triển lên phiên bản 8.0.
+- MySQL hiện nay có 2 phiên bản miễn phí (MySQL Community Server) và có phí (Enterprise Server).
+- MySQL là một hệ quản trị cơ sở dữ liệu quan hệ rất phổ biến hiện nay.
+2.3.3 Lợi ích của MySQL
+- MySQL là CSDL có tốc độ khá cao, ổn định và khá dễ sử dụng có thể hoạt động được trên khá nhiều hệ điều hành.
+- Tính bảo mật mạnh và sử dụng được trên nhiều ứng dụng mà MySQL còn hoàn toàn được sử dụng miễn phí..
+- MySQL không chỉ dừng lại ở bổ trợ cho PHP và Perl, mà nó còn bổ trợ cho nhiều ngôn ngữ khác, Nó là nơi để lưu trữ thông tin trên các trang web được viết bằng Perl hoặc PHP.
+2.4 Kết luận chương 2
+    Trong chương 2 của đồ án đã nên được nội dung lý thuyết quá trình tìm hiểu công nghệ mới về ngôn ngữ lập trình PHP, web framwork Laravel và hệ quản trị cơ sở dữ liệu MySql. Chương tiếp theo sẽ tiến hành xây dựng “Website quản lý và bán xe máy online”
+CHƯƠNG 3  XÁC ĐỊNH YÊU CẦU HỆ THỐNG
+3.1      Danh sách các yêu cầu trên trang hiển thị
+1. Hiển thị menu
+• Hiển thị menu cho người dùng lựa chọn.
+• Menu bao gồm: Trang chủ, loại sản phẩm, …
+
+2. Hiển thị content website
+• Hiển thị sản phẩm, loại sản phẩm, thông tin chi tiết sản phẩm
+
+3. Chức năng tìm kiếm sản phẩm
+• Người dùng có thể tìm kiếm các người dùng khác có đăng kí trong hệ thống và các bài viết thông qua các từ quá tìm kiếm.
+• Kết quả tìm kiếm sẽ được hiển thị để người dùng thao tác.
+    
+4. Hiển thị sản phẩm mới nhất
+• Đây là danh sách những sản phẩm mới được nhập về.
+• Hiển thị tối đa 4 sản phẩm mới nhất.
+• Khách hàng có thể xem thêm các sản phẩm khác theo thứ tự giảm dần về thời gian nhập.
+
+5. Quản lý giỏ hàng
+• Khi khách hàng vào trang web có thể xem thông tin các sản phẩm và giá cả. Sau đó thêm vào giỏ hàng. Thông tin sản phẩm trong giỏ hàng bao gồm: tên sản phẩm, hình ảnh, giá, số lượng (mặc định là 1 khi thêm vào giỏ hàng), thành tiền.
+• Khách hàng có thể sửa đổi số lượng sản phẩm muốn mua.
+• Khách hàng cũng có thể bỏ sản phẩm không cần thiết ra khỏi giỏ hàng.
+    Khách hàng sẽ được thông báo về tổng giá trị các sản phẩm có trong giỏ hàng
+    
+
+3.2        Danh sách các yêu cầu trên trang quản trị
+1. Quản lý người dùng
+• Thêm mới thông tin người dùng: người dùng bao gồm tên người dùng,tài khoản,password,
+• Cập nhật thông tin người dùng: Sửa đổi thông tin người dùng và tài khoản đó còn hoạt động hay không.
+• Hiển thị danh sách người dùng: Hiển thị danh sách thông tin người dùng hiện có.
+• Xóa người dùng: Xóa thông tin khi người dùng đó không hoạt động nữa.
+2. Quản lý loại xe máy
+• Thêm mới thông tin loại: Loại xe bao gồm tên các loại sản phẩm như:Xe ga,xe số,xe thể thao.Thông tin loại xe bao gồm: Mã loại, tên loại
+• Cập nhật thông tin loại: Sửa đổi thông tin chủng loại và tình trạng còn sản phẩm hay không.
+• Hiển thị danh sách loại: Hiển thị danh sách thông tin các chủng loại đang có.
+• Xóa loại: Xóa những loại xe khi mà cửa hàng không còn bày bán nữa.
+
+3. Quản lý xe máy
+• Thêm mới thông tin xe máy: Thêm thông tin về xe máy bày bán với những thông tin như: Id, tên xe, loại xe, hãng xe, giá bán, ,…
+• Cập nhật thông tin xe: Sửa đổi thông tin xe khi có sự thay đổi mới.
+• Hiển thị danh sách xe: Hiển thị danh sách xe đang bán trên website.
+• Xóa xe: Xóa những xe khi mà cửa hàng không còn bày bán nữa.
+4. Quản lý hãng xe
+• Thêm mới hãng: Thêm thông tin về hãng xe máy bày bán với những thông tin như: Id, tên hãng, hình ảnh,…
+• Cập nhật thông tin hãng: Sửa đổi thông tin hãng khi có sự thay đổi mới.
+• Hiển thị danh sách hãng: Hiển thị danh sách hãng đang có trên website.
+• Xóa hãng: Xóa những hãng khi mà cửa hàng không còn bày bán nữa.
+5. Quản lý slide ảnh
+• Thêm mới side: Thêm thông tin về slide 
+• Cập nhật thông tin slide: Sửa đổi thông tin slide
+• Hiển thị danh sách slide: Hiển thị danh sách slide
+• Xóa slide: Xóa slide.
+6. Quản lý tin tức
+• Thêm mới tin tức: Thêm tin tức muốn hiển thị ở trang chủ
+• Cập nhật tin tức: Sửa đổi tin tức.
+• Hiển thị danh sách tin tức: Hiển thị danh sách tin tức.
+• Xóa tin tức: Xóa những tin tức mà không dùng nữa
+7. Quản lý hoá đơn
+• Thêm mới hoá đơn: Thêm thông tin về hoá đơn như ngày đặt,giá,..
+• Cập nhật thông tin hoá đơn: Sửa đổi thông tin hoá đơn khi có thông tin mới
+• Hiển thị danh sách hoá đơn: Hiển thị danh sách hoá đơn
+• Xóa hoá đơn: Xóa những hoá đơn mà cửa hàng không dùng
+
+
+
+3.3         Yêu cầu phi chức năng
+- Yêu cầu giao diện: 
+o Website không nên quá phức tạp.
+o Thanh menu thật đơn giản.
+o Font chữ đơn giản, dễ nhìn
+o Tránh dùng chữ gạch chân.
+o Màu sắc hài hòa.
+o Tuyệt đối không nên dùng hình nền và nhạc nền.
+o Không nên dùng hiệu ứng cho trỏ chuột.
+- Tính an toàn:
+o An toàn bảo mật dữ liệu.
+o Luôn kiểm tra các đường link.
+o Phải có thông tin liên hệ.
+    
+    
+CHƯƠNG 4  THIẾT KẾ CƠ SỞ DỮ LIỆU
+
+1. Sơ đồ quan hệ của CSDL
+    
+
+    Hình 1 Sơ đồ quan hệ cơ sở dữ liệu
+
+
+2. Bảng cơ sở dữ liệu
+2.1       Bảng product
+    
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1. idintAUTO_INCREMENTKhóa chính2. namenvarchar(250)null3. id_typenvarchar(250)null4. brand_namenvarchar(250)null5. descriptionTextnull6. Unit_priceintnull7. Promotion_pricenvarchar(250)null8. imageintnull9. Newintnull10. Update_atdatenull11. created_atdatenull    Bảng 1: Bảng xe
+2.2         Bảng type_product
+    
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1. idintAUTO_INCREMENTKhóa chính2. Name_typenvarchar(250)null3. descriptionText    null4. imagenvachar    null    Bảng 2: Bảng loại xe
+2.3        Bảng user
+    
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1. idintAUTO_INCREMENTKhóa chính2. fullnamenvarchar(250)null3. emailnvarchar(50)null4. passwordnvarchar(250)    null5. levelint    null6. phoneint    null7. addressnvarchar(250)    null8. created_atdate    null9. Update_atdate    null    Bảng 3: Bảng người dùng
+    
+2.4          Bảng Brand
+
+STTTên trườngKiểu dữ liệu    Ràng buộc    Mô tả    1.idintAUTO_INCREMENTKhóa chính    2Brand_nameintnull    3imagenvarchar(250)    null    Bảng 4: Bảng hãng xe
+    
+2.5            Bảng Slide
+    
+STTTên trườngKiểu dữ liệu    Ràng buộc    Mô tả1idintAUTO_INCREMENTKhóa chính2linknvarchar(250)    null3imagenvachar    null    Bảng 6: Bảng slide
+    
+    
+2.6          Bảng  New
+    
+STTTên trườngKiểu dữ liệu    Ràng buộcMô tả1. idintAUTO_INCREMENTKhóa chính2. titlevarchar(50)null3. contentvarchar(100)null4. imagenvarcharnull5. Create_atdatenull6. Update_atdatenyll    Bảng 7: Bảng tin tức
+2.7          Bảng  khách hàng
+    
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1. idintAUTO_INCREMENTKhóa chính2. namenvarchar(250)null3. genderVarchar(10)null4. emailnvarchar(250)null5. addressnvarchar(250)null6. Phone_numberintnull7. noteVarcharnull8. Create_atdatenull9. Update_atdatenull    Bảng 8: Bảng khách hàng
+
+2.8         Bảng Bill
+    
+STTTên trườngKiểu dữ liệu    Ràng buộcMô tả1idintAUTO_INCREMENTKhóa chính2Id_customerintnull3Date_orderdatenull4Totalfloatnull5paymentVarchar(200)null6noteVarchar(500)null7Create_atdatenull8Upadate_atdatenull    Bảng 9: Bảng hoá đơn
+    
+2.9 Bảng Bill_detail
+STTTên trườngKiểu dữ liệu    Ràng buộcMô tả1idintAUTO_INCREMENTKhóa chính2Id_billintnull3Id_productintnull4quantityintnull5Unit_priceintnull6Create_atdatenull7Update_atdatenull    Bảng 10: Bảng chi tiết hoá đơn
+
+
+3  Xây dựng biểu đồ use-case
+3.1. Biểu đồ Use Case tổng quát  cho hệ thống 
+    
+    
+
+    Hình 2: Sơ đồ usecase tổng quát
+
+    
+3.2. Biểu đồ use-case “Chức năng tìm kiếm”
+    ➢ Biểu đồ Usecase:
+    
+    Hình 3: Sơ đồ Usecase tìm kiếm
+Mô tả tóm tắt:
+o Tên ca sử dụng: Tìm kiếm
+o Mục đích: giúp người sử dụng tìm kiếm thông tin về sản phầm một cách nhanh chóng và chính xác hơn
+o Tác nhân: Khách hàng
+o Tóm lược: Người dùng muốn sử dụng chức năng tìm kiếm thì cần nhập thông tin cần tìm kiếm vào thanh tìm kiếm sao đó nhấn nút tìm kiếm. Hệ thống sẽ kiểm tra thông tin mà người dùng nhập vào thanh tìm kiếm, nếu đúng hoặc có thông tin gần đúng thì hệ thông sẽ trả lại kêt quả mà người dùng cần. Nếu không có thì hệ thống thông báo không có thông tin bạn cần tìm.
+Mô tả quá trình:
+o Thông tin đầu vào:  nội dung cần tra cứu
+o Dòng sự kiện chính:
+    
+Hành động của tác nhânPhản ứng của hệ thốngChọn chức năng tìm kiếm , nhập nội dung tìm kiếm và ấn nút tìm kiếmHệ thống tìm kiếm thông tin giống hoặc gần giống với thông tin bạn cần tìm kiếm và đưa kêt quả ra màn hình    	
+o Dòng sự kiện phụ:
+- Nếu người dùng nhập từ khóa tìm kiếm không có thông tin trong hệ thống thi thông báo ra màn hình.
+
+    
+3.3      Biểu đồ use-case “Quản lý loại”
+    ➢ Biểu đồ Usecase:
+
+    Hình 4: Sơ đồ Usecase quản lý loại
+Mô tả tóm tắt:
+o Tên ca sử dụng: quản lý loại sản phẩm
+o Mục đích: giúp cho quản trị viên dễ dàng quản lý loại sản phẩm đang có trong cửa hàng
+o Tác nhân: Quản trị viên
+o Tóm lược: Khi người quản lý đăng nhập thành công vào hệ thống thì use case sẽ được gọi để giúp người quản lý tùy chọn các chức năng có liên quan: thêm, sửa, xóa, hiển thị danh mục. 
+o Mô tả quá trình:
+o Thông tin đầu vào: là các thông tin về tài khoản như:
+- Username
+- Password
+o Điều kiện đầu vào: Quản trị viên cần phải đăng nhập vào hệ thống thành công.
+
+o Dòng sự kiện chính:
+Hành động của tác nhânPhản ứng của hệ thốngQuản lý yêu cầu thêm, sửa, xóa… loại sản phẩmHệ thống yêu cầu nhân viên đăng nhập vào tài khoảnQuản lý đăng nhập vào hệ thống bằng tài khoản của mìnhHệ thống kiểm tra tài khoảnQuản lý lựa chọn các chức năng thêm, sửa , xóa loại sản phẩmHệ thống cập nhật danh mụco Dòng sự kiện phụ:
+- Khi người quản lý nhập sai các thông tin về tài khoản, hệ thống sẽ gửi thông báo lỗi và yêu cầu nhập lại các thông tin.
+- Người quản lý nhập lại các thông tin cần thiết theo yêu cầu của hệ thống, hệ thống sẽ tiến hành kiểm tra lại các thông tin mới nhập, nếu thành công thì chuyển sang trang chức năng theo yêu cầu của người quản lý.
+
+
+
+3.4     Biểu đồ use-case “Quản lý sản phẩm”
+    ➢ Biểu đồ Usecase:
+
+    Hình 5: Sơ đồ Usecase quản lý sản phẩm
+    		
+Mô tả tóm tắt:
+o Tên ca sử dụng: quản lý sản phẩm
+o Mục đích: giúp cho người quản lý dễ dàng quản lý và theo dõi sản phẩm
+trên website
+o Tác nhân: Quản trị viên
+o Tóm lược: Khi người quản lý đăng nhập thành công vào hệ thống thì use case sẽ được gọi để giúp người quản lý tùy chọn các chức năng có liên quan: thêm, sửa, xóa sản phẩm. 
+o Mô tả quá trình:
+o Thông tin đầu vào: là các thông tin về tài khoản như:
+- Username
+- Password
+o Điều kiện đầu vào: Quản trị viên cần phải đăng nhập vào hệ thống thành công.
+o Dòng sự kiện chính:
+    
+Hành động của tác nhânPhản ứng của hệ thốngQuản lý yêu cầu thêm, sửa, xóa… sản phẩm
+Hệ thống yêu cầu quản trị viên đăng nhập vào tài khoảnQuản lý đăng nhập vào hệ thống bằng tài khoản của mìnhHệ thống kiểm tra tài khoảnQuản lý lựa chọn các chức năng thêm, sửa , xóa sản phẩm
+Hệ thống cập nhật lại thông tin và lưu dữ liệu về CSDL
+
+
+o Dòng sự kiện phụ:
+- Khi người quản lý nhập sai các thông tin về tài khoản, hệ thống sẽ gửi thông báo lỗi và yêu cầu nhập lại các thông tin.
+- Người quản lý nhập lại các thông tin cần thiết theo yêu cầu của hệ thống, hệ thống sẽ tiến hành kiểm tra lại các thông tin mới nhập, nếu thành công thì chuyển sang trang chức năng theo yêu cầu của người quản lý.
+
+
+
+3.5 Biểu đồ Use case “Quản lí người dùng”
+    ➢ Biểu đồ Usecase:
+
+    Hình 6: Sơ đồ Usecase quản lý người dùng
+    		
+Mô tả tóm tắt:
+o Tên ca sử dụng: quản lý người dùng
+o Mục đích: giúp cho người quản lý dễ dàng quản lý và theo dõi tài khoản người dùng
+o Tác nhân: Quản trị viên
+o Tóm lược: Khi người quản lý đăng nhập thành công vào hệ thống thì use case sẽ được gọi để giúp người quản lý tùy chọn các chức năng có liên quan: thêm, sửa, xóa người udngf. 
+o Mô tả quá trình:
+o Thông tin đầu vào: là các thông tin về tài khoản như:
+- Username
+- Password
+o Điều kiện đầu vào: Quản trị viên cần phải đăng nhập vào hệ thống thành công.
+o Dòng sự kiện chính:
+    
+Hành động của tác nhânPhản ứng của hệ thốngQuản lý yêu cầu thêm, sửa, xóa… người dùng
+Hệ thống yêu cầu quản trị viên đăng nhập vào tài khoảnQuản lý đăng nhập vào hệ thống bằng tài khoản của mìnhHệ thống kiểm tra tài khoảnQuản lý lựa chọn các chức năng thêm, sửa , xóa người dùng
+Hệ thống cập nhật lại thông tin và lưu dữ liệu về CSDL
+
+
+o Dòng sự kiện phụ:
+- Khi người quản lý nhập sai các thông tin về tài khoản, hệ thống sẽ gửi thông báo lỗi và yêu cầu nhập lại các thông tin.
+- Người quản lý nhập lại các thông tin cần thiết theo yêu cầu của hệ thống, hệ thống sẽ tiến hành kiểm tra lại các thông tin mới nhập, nếu thành công thì chuyển sang trang chức năng theo yêu cầu của người quản lý.
+3.6 Biểu đồ Use case “Quản lí hoá đơn”
+
+    Hình 7:Biểu đồ usecase quản lý hóa đơn
+- Tác nhân: Admin
+- Mô tả: use case cho phép tìm kiếm hóa đơn, xóa hóa đơn, cập nhật tình trạng hóa đơn, xem chi tiết hóa đơn, xóa sản phẩm của hóa đơn trong hệ thống.
+- Điều kiện trước: admin đã đăng nhập vào hệ thống.
+- Dòng sự kiện chính: Người sử dụng chọn kiểu tác động: tìm kiếm hóa đơn, xuất thông tin, xóa hóa đơn, cập nhật tình trạng hóa đơn, xem chi tiết đơn hàng, xóa sản phẩm của hóa đơn.
++ Cập nhật tình trạng đơn hàng: hệ thống hiển thị danh sách hóa đơn, chọn hóa đơn cần cập nhật trạng thái, chọn trạng thái cho hóa đơn, thông tin được lưu vào danh sách hóa đơn.
++ Tìm kiếm đơn hàng: nhập dữ liệu cần tìm kiếm vào các tiêu chí tìm kiếm, hệ thống hiển thị kết quả tìm được.
++ Xóa đơn hàng: hệ thống hiển thị danh sách hóa đơn, chọn hóa đơn cần xóa, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách hóa đơn.
++ Xuất thông tin: người dùng kích chọn vào nút xuất thông tin, thông tin các đơn hàng sẽ được trích xuất.
++ Xem thông tin đơn hàng: người dùng kích vào nút xem đơn hàng để xem chi tiết đơn hàng; nếu muốn xóa sản phẩm của đơn hàng, chọn sản phẩm cần xóa cần xóa, nếu việc thay đổi thông tin thành công hệ thống sẽ đưa ra thông báo, nếu sai thì thực hiện dòng rẽ nhánh A1, lưu thông tin danh sách đơn hàng.
+- Use case kết thúc.
+- Dòng sự kiện rẽ nhánh A1: hệ thống thông báo việc nhập dữ liệu không hợp lệ, nhập lại thông tin, quay lại bước 1 của dòng sự kiện chính.
+- Hậu điều kiện: các thông tin về đơn hàng được cập nhật trong cơ sở dữ liệu.
+
+     3.7  Biểu đồ Use case “Chức năng của khách”
+    
+    Hình 8:Biểu đồ usecase quản lý khách hàng
+- Tác nhân: khách hàng 
+- Mô tả use case cho phép khách hàng thực hiện được các chức năng trên hệ thống.
+- Điều kiện trước: khách đã truy cập vào hệ thống.
+- Dòng sự kiện chính: Người dùng có thể thực hiện các chức năng sau trên website:
++ Tìm kiếm sản phẩm được đăng trên website.
++ Xem sản phẩm: chọn sản phẩm để xem thông tin chi tiết.
++ Đặt hàng: chọn sản phẩm cần mua, thay đổi thông tin mua hàng trong giỏ hàng.
++ Liên hệ: gửi thông tin liên hệ
+- Use case kết thúc
+- Hậu điều kiện: các thông tin về chức năng khách hàng được cập nhật trong cơ sở dữ liệu.
+4.   Biểu đồ tuần tự
+• Biểu đồ tuần tự cho chức năng quản lý loại sản phẩm
+    
+
+    Hình 9:Biểu đồ tuần tự chức năng quản lý loại sản phẩm
+    
+• Biểu đồ tuần tự cho chức năng quản lý sản phẩm
+
+
+    Hình 10:Biểu đồ tuần tự chức năng quản lý sản phẩm
+    
+• Biểu đồ tuần tự cho chức năng quản lý hóa đơn
+
+    Hình 11:Biểu đồ tuần tự chức năng quản lý hóa đơn
+
+Chương 5     THIẾT KẾ ĐẶC TẢ GIAO DIỆN
+5.1       Giao diện trang chủ
+a) Trang chủ
+- Mục đích
+   Cho phép người dùng khi truy cập vào website sẽ hiển thị giao diện với nội dung danh sách sản phẩm, menu, slide...
+- Phạm vi
+   Cho phép người dùng truy cập vào website có thể sử dụng.
+- Ràng buộc
+   Người dùng phải truy cập vào website.
+- Giao diện của trang chủ
+
+
+
+- Mô tả 
+   Khi người dùng truy cập vào website, trang chủ sẽ hiển thị ra với các nội dung bao gồm: khung tìm kiếm; logo website; menu; ảnh slide; thông tin sản phẩm bán trên với nội dung tên, giá, hình ảnh, thông tin và phần footer là nội dung thông tin về địa chỉ, nhà cung cấp, hỗ trợ.
+    
+b)  chi tiết sản phẩm
+- Mục đích
+Hiển thị thông tin chi tiết sản phẩm khi người dụng click vào sản phẩm nào đó trên trang chủ để xem thông tin chi tiết về sản phẩm đó.
+- Phạm vi
+   Cho phép người dùng truy cập vào website có thể sử dụng.
+- Ràng buộc
+Người dùng phải truy cập vào website và click vào sản phẩm để xem thông tin chi tiết.
+- Giao diện của trang chi tiết
+    
+    
+- Mô tả chức năng
+    Khi người dùng ấn vào xem chi tiết sản phẩm, giao diện chi tiết sản phẩm sẽ hiển thị ra với thông tin về chi tiết về sản phẩm; ảnh; giá; khuyến mãi; sản phẩm liên quan; thông số kỹ thuật và hai button là: Thêm giỏ hàng và mua ngay. Nút mua ngay này có chức năng là đưa sản phẩm khách hàng đã chọn vào giỏ hàng của mình. Người dùng vẫn sẽ ở trang hiện tại, còn với button yêu thích sản phẩm có chức năng là đưa sản phẩm khách hàng đã chọn vào trang danh sách sản phẩm yêu thích của mình.
+    
+c)  Loại sản phẩm
+- Mục đích
+   Giúp người dùng có thể xem hết tất cả các sản phẩm cùng một loại sản phẩm.
+- Phạm vi
+   Cho phép người dùng truy cập vào website có thê sử dụng.
+- Ràng buộc
+   Người dùng phải truy cập vào website và chọn vào mục các loại sản phẩm.
+- Giao diện  loại sản phẩm
+
+- Mô tả 
+   Khi người dùng chọn chức năng xem loại sản phẩm, giao diện trang loại sản phẩm sẽ hiện ra với tất cả các sản phẩm thuộc loại sản phẩm mà khác hàng muốn xem. Tại đây khách hàng cũng có thể thực hiện chức năng tìm kiếm theo từ khóa và xem thông tin chi tiết sản phẩm mỗi khi click vào hình ảnh của bất kì sản phẩm nào.
+    
+    
+    
+5.2      Giao diện quản trị
+a. Quản lí sản phẩm
+- Mục đích
+   Giúp người quản lý quản lý thông tin về sản phẩm
+- Phạm vi
+   Admin có quyền được phép truy cập chức năng quản lý sản phẩm.
+- Ràng buộc
+   Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng chọn “Product” trong mục nhập liệu ở menu bên trái.
+- Giao diện danh sách sản phẩm
+
+- Giao diện thêm mới sản phẩm
+
+- Giao diện cập nhật sản phẩm
+    
+- Giao diện xoá sản phẩm
+    
+- Mô tả chức năng
+   Các thao tác người dùng có thể thực hiện khi sử dụng chức năng “Quản lý sản phẩm”:
+   	+  Chức năng thêm: khi thêm các thông tin về tên loại sản phẩm, số lượng, giá,...khi nhấn vào Product Add thì sản phẩm mới đã được thêm vào database. 
+   +	    Chức năng sửa khi người dùng chọn thông tin dưới danh sách các thông tin sẽ hiển thị tương ứng trên điều khiển người dùng có thể sửa hình ảnh, mô tả, trạng thái. Thông tin sẽ được hiển thị dưới danh sách.
+   +      Chức năng xoá khi người sử dụng chọn thông tin dưới danh sách khi chọn xoá thì thông tin sẽ xoá trong danh sách.
+   +	    Chức năng tìm kiếm: khi người sử dụng nhập thông tin hoặc chon thông tin muốn tìm kiếm. Hệ thống sẽ hiển thị ra những sản phẩm mà người dùng muốn tìm.
+    
+    
+b. Quản lí loại sản phẩm
+- Mục đích
+   Giúp người quản lý quản lý thông tin về loại sản phẩm
+- Phạm vi
+   Admin có quyền được phép truy cập chức năng quản lý loại sản phẩm.
+- Ràng buộc
+   Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng chọn “Categories” trong mục nhập liệu ở menu bên trái.
+- Giao diện danh sách sản phẩm
+
+- Giao diện thêm loại sản phẩm
+    
+- Giao diện update loại sản phẩm
+
+
+
+    
+c. Quản lí hãng xe
+- Mục đích
+   Giúp người quản lý quản lý thông tin về hãng xe
+- Phạm vi
+   Admin có quyền được phép truy cập chức năng quản lý hãng xe.
+- Ràng buộc
+   Sau khi đăng nhập vào hệ thống người sử dụng muốn sử dụng chức năng chọn “Brand” trong mục nhập liệu ở menu bên trái.
+    
+
+
+
+
+    
+    
+    
+    
+    Chương 6: Kết luận
+    
+1. Kết quả đạt được
+    Quá trình nghiên cứu và thực hiện cài đặt chương trình theo sự khảo sát và yêu cầu của người dùng đã hoàn thành và đạt một số kết quả sau:
+    - Hiểu được nghiệp vụ của một trang bán hàng online:
+    + Nghiệp vụ quản lý sản phẩm
+    + Nghiệp vụ quản lý danh mục
+    + Nghiệp vụ quản lý người dùng
+    + Một số nghiệp vụ khác.
+    - Xây dựng chương trình thông qua kết quả thu thập được qua quá trình khảo sát,
+    phân tích hệ thống và đặc tả giao diện.
+    - Thực hiện kiểm thử chương trình ở mức độ lập trình.
+2. Ưu nhược điểm của chương trình
+• Ưu điểm:
+    - Website có giao diện thân thiện, dễ sử dụng.
+    - Hệ thống phân quyền sử dụng và quản lý các chức năng độc lập.
+• Nhược điểm	
+    - Hệ thống chỉ cài đặt chạy trên một máy tính độc lập.
+    - CSDL của hệ thống chưa được đầy đủ và tối ưu.
+    - Tốc độ chưa hiệu quả.
+3. Hướng phát triển
+    - Với sự nỗ lực, em đã cố gắng hoàn thành yêu cầu đề tài. Do thời gian có hạn, khả năng còn hạn chế nên đề tài mới chỉ đáp ứng được yêu cầu của khách hàng ở mức độ đơn giản và chưa tối ưu.
+    - Mở rộng bài toán để đáp ứng nhiều hơn các chức năng còn thiếu.
+    - Cài đặt hệ thống hoàn chỉnh hơn, để chương trình thực sự hữu ích hơn, đáp ứng
+    những nghiệp vụ phức tạp hơn, dữ liệu lớn hơn.
+    4. Đề xuất ý kiến
+    Xây dựng website “quản lí và bán vé máy bay online” Do kinh nghiệm và vốn hiểu biết của em còn hạn chế nên chương trình còn sơ sài,chưa đáp ứng đầy đủ hơn những nhu cầu đặt ra cho một ứng dụng thương mại điện tử.Em sẽ cố gắng tìm hiểu kĩ hơn,đi sâu hơn và hoàn thành tốt đề tài hơn
+Chương 7 Tài liệu tham khảo
+1. https://laravel.com/docs/7.x
+2. https://stackoverflow.com/
+3. https://www.w3schools.com/
+4. http://revolution.themepunch.com/jquery/examples-jquery/
+5. https://hocwebchuan.com/tutorial/laravel/create_project_laravel.php
+6. https://freetuts.net/
+7. https://www.studentstutorial.com/laravel/laravel-tutorial
+    
+Website giới thiệu và bán xe máy online
+    
+    
+4
+    
+    

@@ -1,0 +1,464 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Hiện nay với xu hướng công nghiệp hóa,hiện đại hóa và cuộc cách mạng 4.0.Thiết bị di động “Smartphone” là một vật không thể thiếu được với nhiều người.Nhờ có Smartphone với những công nghệ thông minh giúp người dung cập nhật tin tức,thông tin từ khắp mọi nơi.
+    Nhận thấy cùng với các ứng dụng nổi tiếng về công nghệ của các tập đoàn lớn như “Facebook” của  Facebook là ứng dụng mạng xã hội nổi tiếng nhất hay “Google Map” của Google là ứng dụng tìm kiếm bản đồ tốt nhất hiện nay.Nhưng hiện tại do ở Việt Nam cơ sở dữ liệu còn thiếu nhiều,dẫn đến việc khó khăn khi sử dụng các ứng dụng trên.Do đó chúng ta cần có một phần mềm tiếp thu được các công nghệ của các ông lớn để sử lý cơ cở dữ liệu tại Việt Nam.
+1.2 Mục tiêu của đề tài
+      Xây dựng ứng dụng Near me trên Android gồm các chức năng: 
+-  Xem danh sách các địa điểm ở gần
+-  Xem thông tin các địa điểm
+-  Hiển thị các địa điểm trực quan lên Google Map
+-  Đánh giá và bình luận các địa điểm
+- Chỉ đường đến địa điểm
+- Chat bot đơn giản
+1.3 Giới hạn và phạm vi của đề tài
+	Đề tài xây dựng ứng dụng “Near me” sử dụng các công nghệ trong lập trình như: 
+- Công cụ lập trình Android 3.0 +
+- Thiết bị Android 4.0 +
+1.4 Nội dung thực hiện
+- Xây dựng ứng dụng “Near me” gồm các chức năng trên.
+- Bản báo cáo gồm đầy đủ các phần theo quy định của khoa Công Nghệ Thông Tin trường Đại học Sư phạm Kỹ thuật Hưng Yên.
+1.5 Phương pháp tiếp cận
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu;
+o Phương pháp phân tích mẫu;
+o Phương pháp thực nghiệm.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Android
+2.1.1 Hệ điều hành Android là gì?
+  Android là một mã nguồn mở và dựa trên hệ điều hành Linux, chạy trên các thiết bị di động như điện thoại thông minh và máy tính bảng. Android được phát triển bởi Open Handset Alliance, dẫn đầu bởi Google, và các công ty khác.
+  Android cung cấp một phương pháp tiếp cận thống nhất để lập trình ứng dụng cho các thiết bị di động, nghĩa là các lập trình viên chỉ cần lập trình cho Android, và các ứng dụng của họ sẽ có thể chạy trên các thiết bị khác nhau được hỗ trợ bởi Android.
+  Các phiên bản beta đầu tiên của Software Development Kit Android (SDK) được phát hành bởi Google trong năm 2007 trong khi đó phiên bản thương mại đầu tiên, Android 1.0, được phát hành vào tháng 9 năm 2008.
+  Mã nguồn của Android được phát hành theo giấy phép phần mềm tự do và nguồn mở. Google công khai hầu hết các mã theo giấy phép phiên bản Apache 2.0 và phần còn lại, Linux kernel, theo giấy phép phiên bản GNU General Public 2.
+2.1.2 Tại sao nên sử dụng Android?
+      
+- Open Soure: Mã nguồn mở.
+- Larger Developer and Community Reach: Có những lập trình viên và cộng đồng phát triển lớn.
+- Increased marketing: phát triển thương mại.
+- Inter app integration: ứng dụng hội nhập quốc tế.
+- Reduce cost of development: giảm chi phí phát triển.
+- Higher Success Ratio: Tỷ lệ thành công cao hơn.
+- Rich development Environment:Môi trường phát triển đa dạng
+2.1.3 Giới thiệu về Android studio và Android SDK
+• Android Studio chạy trên Windows, Mac và Linux, nhằm thay thế cho Eclipse Android Development Tool (ADT) vốn được sử dụng làm IDE chính trong các năm trước đó.
+   Một số tính năng nổi bật:
+• Bộ công cụ build ứng dụng dựa trên Gradle (thay vì Maven).
+• Chức năng dò và sửa lỗi nhanh, hướng Android.
+• Công cụ chỉnh sửa màn hình dạng kéo thả tiện lợi.
+• Các wizard tích hợp nhằm giúp lập trình viên tạo ứng dụng từ mẫu có sẵn.
+• Tích hợp Google Cloud Platform, dễ dàng tích hợp với Google Cloud Messaging và App Engine của Google.
+• The Android SDK (software development kit) là một tập hợp các công cụ được sử dụng để phát triển ứng dụng cho Android. 
+   Android SDK bao gồm:
+• Các thư viện đòi hỏi
+• Bộ dò lỗi (Debugger)
+• Thiết bị mô phỏng (emulator)
+• Các tài liệu liên quan cho Android API.
+• Các đoạn code mẫu.
+• Các hướng dẫn cho hệ điều hành Android
+Nếu Android Studio là trình soạn thảo code (IDE) thì Android SDK là bộ tổng hợp các công cụ để build app, các bản mẫu máy ảo Android (sử dụng để test app) cần thiết để làm ra một ứng dụng Android hoàn chỉnh.
+2.2 Tổng quan về Firebase
+2.2.1 Firebase là gì?
+   Firebase là một nền tảng di động giúp bạn nhanh chóng phát triển các ứng dụng chất lượng cao, phát triển ứng dụng cho người dùng lớn, và kiếm được nhiều tiền hơn. 
+2.2.2 Tại sao nên sử dụng Firebase?
+• Triển khai ứng dụng cực nhanh
+Với Firebase bạn có thể giảm bớt rất nhiều thời gian cho việc viết các dòng code để quản lý và đồng bộ cơ sở dữ liệu, mọi việc sẽ diễn ra hoàn toàn tự động với các API của Firebase. Không chỉ có vậy Firebase còn hỗ trợ đã nền tảng nên bạn sẽ càng đỡ mất thời gian rất nhiều khi ứng dụng bạn muốn xây dựng là ứng dụng đa nền tảng.
+Không chỉ nhanh chóng trong việc xây dựng database, Google Firebase còn giúp ta đơn giản hóa quá trình đăng kí và đăng nhập vào ứng dụng bằng các sử dụng hệ thống xác thực do chính Firebase cung cấp.
+• Bảo mật
+Firebase hoạt động dựa trên nền tảng cloud và thực hiện kết nối thông qua giao thức bảo mật SSL, chính vì vậy bạn sẽ bớt lo lắng rất nhiều về việc bảo mật của dữ liệu cũng như đường truyền giữa client và server. Không chỉ có vậy, việc cho phép phân quyền người dùng database bằng cú pháp javascipt cũng nâng cao hơn nhiều độ bảo mật cho ứng dụng của bạn, bởi chỉ những user mà bạn cho phép mới có thể có quyền chỉnh sửa cơ sở dữ liệu.
+• Tính linh hoạt và khả năng mở rộng
+Sử dụng Firebase sẽ giúp bạn dễ dàng hơn rất nhiều mỗi khi cần nâng cấp hay mở rộng dịch vụ. Ngoài ra firebase còn cho phép bạn tự xây dựng server của riêng mình để bạn có thể thuận tiện hơn trong quá trình quản lý.
+Sử dụng Firebase sẽ giúp bạn dễ dàng hơn rất nhiều mỗi khi cần nâng cấp hay mở rộng dịch vụ. Ngoài ra firebase còn cho phép bạn tự xây dựng server của riêng mình để bạn có thể thuận tiện hơn trong quá trình quản lý.
+Việc Firebase sử dụng NoSQL, giúp cho database của bạn sẽ không bị bó buộc trong các bảng và các trường mà bạn có thể tùy ý xây dựng database theo cấu trúc của riêng bạn.
+• Sự ổn định
+Firebase hoạt động dựa trên nền tảng cloud đến từ Google vì vậy hầu như bạn không bao giờ phải lo lắng về việc sập server, tấn công mạng như DDOS, tốc độ kết nối lúc nhanh lúc chậm, … nữa, bởi đơn giản là Firebase hoạt động trên hệ thống server của Google. Hơn nữa nhờ hoạt động trên nền tảng Cloud nên việc nâng cấp, bảo trì server cũng diễn ra rất đơn giản  mà không cần phải dừng server để nâng cấp như truyền thống.
+• Giá thành 
+Google Firebase có rất nhiều gói dịch vụ với các mức dung lượng lưu trữ cũng như băng thông khác nhau với mức giá dao động từ Free đến $1500 đủ để đáp ứng được nhu cầu của tất cả các đối tượng. Chính vì vậy bạn có thể lựa chọn gói dịch vụ phù hợp nhất với nhu cầu của mình. Điều này giúp bạn tới ưu hóa được vốn đầu tư và vận hành của mình tùy theo số lượng người sử dụng. Ngoài ra bạn còn không mất chi phí để bảo trì, nâng cấp, khắc phục các sự cố bởi vì những điều này đã có Firebase lo.
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Phát biểu bài toán
+Hoạt động của ứng dụng Near me hiện tại có thể mô tả như sau:
+• Ngày xưa khi công nghệ còn chưa phát triển chúng ta muốn tìm kiếm địa điểm thật sự rất khó khăn với việc dung kính lúp để xem các địa điểm trên bản đồ giấy.
+• Hiện nay tuy có một số ứng dụng nổi tiếng về việc tìm kiếm các địa điểm nhưng do tại Việt Nam cơ sở dữ liệu vẫn còn chưa đáp ứng được sự thay đổi hang ngày.
+• Do vậy cần một ứng dụng mới với nhiều chức năng và phong phú về nội dung cũng như phù hợp với người Việt và có nguyền dữ liệu lớn tại Việt Nam
+3.1.1 Mô tả hệ thống hiện tại
+3.1.2 Phát biểu bài toán
+    3.1.2.1 Tổng quan về hệ thống mới
+Từ thực tế đó yêu cầu xây dựng ứng dụng “Near me”, ứng dụng được xây dựng trên HĐH Android nhỏ gọn, có thể giúp người dùng mang theo mọi nơi, ngay cả khi di chuyển.
+ Hệ thống gồm các chức năng:
+  •  Hệ thống quản trị người dùng.
+Hệ thống quản trị,đăng nhập đăng ký giúp quản lý ứng dụng.
+  • Hiển thị danh sách các địa điểm gần tôi.
+Hệ thống sẽ hiển thị danh sách các địa điểm với các thông số như tên,địa chỉ,điểm đánh giá và khoảng các từ người dừng đến địa điểm đó.
+ •  Đánh giá và bình luận cho địa điểm.
+Người dùng có thể đánh giá và bình các điểm theo ý thích của mình
+ •  Hiển thị thông tin chi tiết các địa điểm
+Ứng dụng sẽ hiển thị thông tn chi tiết các địa điểm
+
+ •  Thêm địa điểm
+Người dùng có thể thêm các địa điểm còn thiếu trên bản đồ.
+ • Hiển thị các địa điểm trên Google Map
+   Người dung có thể xem các địa điểm một cách trực quan trên bản đồ Google Map
+ • Chỉ đường qua Google Map
+Người dùng chọn chỉ đường với sự hỗ trợ của Google Map
+  • Chia sẻ địa điểm
+Người dùng sử dụng chức năng chia sẻ các địa điểm mình yêu thích qua chức năng chia sẻ.
+  • Tìm kiếm
+    Tìm kiếm các địa điểm trên bản đồ.
+3.1.2.2  Các mục tiêu chính của hệ thống
+Hệ thống xây dựng dựng ứng “Near me” cần đạt được những mục tiêu sau:
+   • Hệ thống phải quản lý được các chức năng của ứng dụng.
+   • Hệ thống quản lý được cơ sở dữ liệu của ứng dụng.
+   • Hệ thống thân thiện đẽ sử dụng.
+   • Hệ thống phải cung cấp nghiệp vụ chính xác.
+3.1.2.3  Môi trường phát triển
+• Môi trường phần cứng
+    CPU: Intel Core i5 2.2 GHz hoặc cao hơn
+    RAM: tối thiểu 4 GB
+    HDD: dung lượng tối thiểu trống 20 GB
+• Môi trường phần mềm
+    Hệ điều hành: Android 4.0 +
+    Công cụ phát triển: Android Studio 3.0 +
+3.2 Xác định yêu cầu của hệ thống
+3.2.1  Danh sách yêu cầu khách hàng
+a) Hiển thị danh sách các địa điểm
+Ứng dụng cần hỗ trợ chức năng hiển thị thông tin các địa điểm với các thông tin như tên địa điểm,địa chỉ,loại địa điểm,hình ảnh địa điểm,khoản cách từ người dung tới địa điểm,đánh giá và bình luận của địa điểm.
+Khi người dùng nhấn vào địa điểm sẽ hiển thị thông tin chi tiết của địa điểm đó.
+b) Hiển thị thông tin chi tiết của địa điểm
+Ứng dụng cần hỗ trợ chức năng hiển thị thông tin chi tiết của địa điểm với các thông tin tên địa điểm,hình ảnh địa điểm,địa chỉ,loại địa điểm,thời gian mở cửa,số điện thoại liên hệ,khoản giá dịch vụ,đánh giá và bình luận của địa điểm.
+Khi người dùng nhấn vào địa điểm thì ứng dụng sẽ đưa ra thông tin của địa điểm tương ứng.
+c) Hiển thị địa điểm trên Google Map
+Ứng dụng cung cấp chức năng hiển thị các địa điểm trên Google Map
+d) Đánh giá và bình luận
+Ứng dụng hỗ trợ chức năng đánh giá và chấm điểm với mỗi địa điểm với mỗi địa điểm mà người dung yêu thích.
+e) Thêm địa điểm
+Ứng dụng hỗ trợ chức năng them địa điểm giúp người dung có thể thêm các địa điểm còn thiếu lên cơ sở dữ liệu của ứng dụng.
+f) Hệ thống đăng nhập
+Ứng dụng hỗ trợ chức năng đăng nhập và đăng ký để người dung có thể đánh giá và bình luận cho địa điểm của mình.
+g) Chức năng chỉ đường đơn giản của Google Map
+Ứng dụng hỗ trợ chức năng chỉ đường đến các địa điểm trên Google Map
+h) Tìm kiếm
+Ứng dụng hỗ trợ chức năng tìm kiếm các địa điểm trên Google Map
+3.2.2  Phạm vi công việc.
+  Dựa trên bản mô tả hệ thống và xác định yêu cầu, ứng dụng Near me trên Android cần được phát triển trong các phạm vi dưới đây:
+• Các yêu cầu phải được phân tích. Với mỗi yêu cầu phải xác định rõ dữ liệu đầu vào, đầu ra, và quy trình xử lý.
+• Hệ thống phải được lập trình trên nền tảng Android, ngôn ngữ lập trình Java
+• Hệ thống phải được phát triển trên môi trường Android.
+3.3 Phân tích yêu cầu của hệ thống.
+3.3.1 Biểu đồ Use-case
+3.3.1.1 Danh sách các Actor
+STT    Tên Actor    Ý nghĩa/Ghi chú1    User    Người dùng2    Admin        Bảng 3.1: Danh sách các Actor
+3.3.1.2 Danh sách các Use-case
+STT    Tên Use-case    Ý nghĩa/Ghi chú1 Đăng nhập2 Hiển thị danh sách địa điểm3 Hiển thị địa điểm trên Google Map4 Thêm địa điểm    Bảng 3.2: Danh sách các Use case
+3.3.2 Biểu đồ Use-case
+    
+    Hình 3.1: Biểu đồ Use case tổng quát
+    
+    
+    
+    
+    
+    
+3.3.3 Đặc tả Use-case
+3.3.3.1 Đặc tả use-case Đăng nhập
+a) Biểu đồ Use case của Use case đặc tả
+
+    Hình 3.2: Biểu đồ use case Đăng nhập.
+b) Tóm tắt
+Người dùng cần Đăng nhập để sử dựng các chức năng nâng cao của ứng dụng: 
+- Bình luận
+- Đánh giá
+- Thêm địa điểm
+Khi người dùng nhấn vào chức năng Đăng nhập hệ thống sẽ hiển thị giao diện đăng nhập.Người dung có thể sử dụng chức năng mở rộng là đăng ký và quên mật khẩu để sử dụng.
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+o Hệ thống sẽ thực hiện đăng nhập tài khoản vào hệ thống
+o Chức năng đăng ký mới cho người dung chưa có tài khoản
+o Khi người dung quên mật khẩu có thể sử dụng quên mật khẩu để lấy lại mật khẩu qua Email đăng nhập
+➢ Các dòng sự kiện khác
+      “Không có”
+d) Các yêu cầu đặc biệt
+“Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Điều kiện trước: Người dung có thể chọn đăng nhập hoặc khi chọn chức năng Bình luận hệ thống sẽ yêu cầu người dung Đăng nhập
+- Điều kiện sau : “Không có”
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+- Hệ thống thực hiện thành công : Kiểm tra tài khoản chính xác hệ thống sẽ thông báo với người dung và chuyển qua chức năng nâng cao
+- Hệ thống thực hiện nhiệm vụ thất bại: Hiển thị thông báo lỗi 
+g) Điểm mở rộng
+“Không có”
+
+
+
+
+
+
+
+
+
+
+
+3.3.3.2 Đặc tả use-case Hiển thị danh sách địa điểm
+a) Biểu đồ Use case của Use case đặc tả
+
+    Hình 3.3: Biểu đồ use case Hiển thị danh sách địa điểm.
+b) Tóm tắt
+      Người dùng có thể xem danh sách các địa điểm với các thông tin: 
+- Tên địa điểm
+- Địa chỉ
+- Hình ảnh
+- Loại địa điểm
+- Khoảng cách 
+- Điểm đánh giá
+- Bình luận
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+• Hệ thống sẽ load dữ liệu các địa điểm
+• Hệ thống hiển thị được các thông tin về địa điểm
+• Khi người dùng nhấn chọn vào địa điểm sẽ hiển thị ra thông tin chi tiết của địa điểm đó
+• Khi người nhấn chọn vào địa điểm sẽ hiển thị thông tin: 
+- Tên địa điểm
+- Địa chỉ
+- Hình ảnh
+- Số điện thoại
+- Thời gian mở cửa
+- Trạng thái địa điểm
+- Khoảng giá dịch vụ
+- Loại địa điểm
+- Điểm đánh giá
+- Bình luận
+➢ Các dòng sự kiện khác
+      “Không có”
+d) Các yêu cầu đặc biệt
+“Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Người dùng mở ứng dụng
+- Hệ thống sẽ load dữ liệu và hiển thị lên danh sách
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+- Hệ thống load được hết các địa điểm lên danh sách
+g) Điểm mở rộng
+“Không có”
+    
+
+
+
+3.3.3.3 Đặc tả use-case Hiển thị địa điểm trên Google Map
+a) Biều đồ Use case của Use case đặc tả
+
+    Hình 3.4: Biểu đồ use case Hiển thị địa điểm trên Google Map.
+b) Tóm tắt
+Người dùng có thể xem các địa điểm trên Google Map
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+• Người dùng chọn tab “Khám Phá”
+• Hệ thống lấy dữ liệu về và hiển thị lên trên map
+• Khi người dùng muốn xem thông tin chi tiết chỉ cần click chọn vào địa điểm đó trên bản đồ
+➢ Các dòng sự kiện khác
+      	“Không có”
+d) Các yêu cầu đặc biệt
+“Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Người dùng mở ứng dụng
+- Thực hiện các chức năng của hệ thống.
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+- Load được các địa điểm lên Google Map
+g) Điểm mở rộng
+“Không có”
+3.3.3.4 Đặc tả use-case Thêm địa điểm
+a) Biểu đồ Use case của Use case đặc tả
+
+    Hình 3.5: Biểu đồ use case Thêm địa điểm.
+b) Tóm tắt
+Người dùng sử dụng chức năng này để them các địa điểm vào cơ sử dữ liệu của ứng dụng
+
+
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+• Người dùng chọn chức năng Thêm địa điểm.
+• Người dung nhập đầy đủ thông tin
+• Hệ thống sẽ lưu lại thông tin các địa điểm và gửi dữ liệu lên server theo yêu cầu của người dùng
+➢ Các dòng sự kiện khác
+      “Không có”
+d) Các yêu cầu đặc biệt
+   Người dung phải đăng nhập tài khoản với quyền quản trị là Admin để thực hiện chức năng này.Hoặc một user được cấp quyền quản trị là Admin
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Hệ thống yêu cầu người dùng nhấn xác nhận để gửi dữ liệu lên server
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+- Hệ thống thông báo gửi lên tành công hay thất bại
+g) Điểm mở rộng
+    	“Không có”
+    
+    
+    
+    
+    
+    
+    
+3.3.3.5 Đặc tả use-case Xem thông tin chi tiết
+a) Biểu đồ Use case của Use case đặc tả
+
+    Hình 3.6: Biểu đồ use case Thông tin chi tiết.
+b) Tóm tắt
+Người dùng sử dụng chức năng này để xem thông tin chi tiết của địa điểm được hiển thị trên danh sách hoặc trên Google Map
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+• Người dùng click chọn vào địa điểm
+• Hệ thống sẽ lấy dữ liệu từ firebase về hiển thị lên UI.
+➢ Các dòng sự kiện khác
+      “Không có”
+d) Các yêu cầu đặc biệt
+    “Không có”
+e) Trạng thái hệ thống sau khi thực hiện Use-case
+- Hệ thống yêu cầu người dùng nhấn chọn vào địa điểm.
+- Hệ thống hiển thị dữ liệu của địa điểm đó lên UI.
+- 
+f) Điểm mở rộng
+    “Không có”
+3.3.3.6 Đặc tả use-case Bình luận
+a) Biểu đồ Use case của Use case đặc tả
+
+    Hình 3.7: Biểu đồ use case Bình luận.
+b) Tóm tắt
+Người dùng sử dụng chức năng này khi muốn bình luận về một địa điểm nào nó
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+• Người dùng chọn chức năng Bình luận
+• Hệ thống sẽ kiểm tra người dung đã đăng nhập chưa
+• Hệ thống xác nhận đăng nhập thành công sẽ hiển thị UI bình luận
+➢ Các dòng sự kiện khác
+      “Không có”
+      
+d) Các yêu cầu đặc biệt
+    Người dung phải đăng nhập thành công
+e) Trạng thái hệ thống sau khi thực hiện Use-case
+- Hệ thống yêu cầu người dung nhập nội dung bình luận
+- Hệ thống gửi dữ liệu lên server và thông báo lại người dùng
+f) Điểm mở rộng
+ “Không có”
+3.3.3.7 Đặc tả use-case Chỉ đường
+a) Biểu đồ Use case của Use case đặc tả
+
+    Hình 3.8: Biểu đồ use case Chỉ đường.
+b) Tóm tắt
+Người dùng sử dụng chức năng này khi muốn tìm đường từ vị trí của mình đến địa điểm người dùng đang xem.
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+• Người dùng chọn chức năng Chỉ đường tại giao diện Thông tin chi tiết của địa điểm
+• Hệ thống sẽ lấy dữ liệu sang Google Map và kích hoạt chức năng chỉ đường.
+➢ Các dòng sự kiện khác
+      “Không có”
+d) Các yêu cầu đặc biệt
+   Yêu cầu người dung có kết nối Wifi hoặc 3G,4G
+   Thiết bị đã được bật GPS
+e) Trạng thái hệ thống sau khi thực hiện Use case
+- Hệ thống không làm gì cả
+f) Điểm mở rộng
+   “Không có”
+3.3.4 Biểu đồ lớp
+
+    Hình 3.9: Biểu đồ lớp mức phân tích.
+3.3.5 Danh sách các lớp đối tượng và quan hệ
+STTTên lớp/Thuộc tínhLoạiÝ nghĩa/Nghi chú    1UsersPublicLớp lưu trữ thông tin người dùng    2PlacesPublicLớp lưu trữ thông tin chi tiết các địa điểm    3CommentsPublicLớp lưu trữ thông tin các bình luận    Bảng 3.3: Danh sách các lớp đối tượng
+    
+3.3.6 Mô tả chi tiết từng lớp đối tượng
+a) Lớp Users
+STTTên thuộc tínhLoạiRàng buộc    Ghi chú1userIDIntPrimary KeyMã người dùng2emailText Not nullEmail người dùng3imgUserTextNot nullLink hình ảnh người dùng4adminbooleanNot nullKiểm tra admin    Bảng 3.4: Lớp Users
+b) Lớp Places
+STTTên thuộc tínhLoạiRàng buộc    Ghi chú1placeIDintPrimary KeyMã địa điểm2NameintNot nullTên địa điểm3TypeText Not nullKiểu địa điểm4PhotoText Not nullLink hình ảnh5AddressTextNot nullĐịa chỉ6LikelongNot nullLike7PhoneTextNot nullSố điện thoại8LatitudedoubleNot nullKinh độ9LongitudedoubleNot nullVĩ độ10OpenTextNot nullGiờ mở cửa11CloseTextNot nullGiờ đóng cửa12PriceTextNot nullGiá dịch vụ13VerifiedBooleanNot nullKiểm tra đã xác nhận    Bảng 3.5: Lớp Places
+c) Lớp Comments
+STTTên thuộc tínhLoạiRàng buộc    Ý nghĩa/ghi chú1commentIDIntPrimary KeyMã bình luận2placeIDint Not nullMã Địa điểm3TitleTextNot nullTiêu đề bình luận4ContentTextNot nullNội dung bình luận5LikeLongNot nullLượt thích6RatingDoubleNot nullĐánh giá    Bảng 3.6: Lớp Comments
+    
+3.3.7 Biểu đồ tuần tự
+3.3.7.1  Biểu đồ Đăng nhập 
+    
+    Hình 3.10: Biểu đồ tuần tự Đăng nhập
+3.3.7.2  Biểu đồ tuần tự Đăng ký
+
+    Hình 3.11: Biểu đồ tuần tự Đăng Ký
+3.3.7.3  Biều đồ tuần tự Quên Mật Khẩu
+    
+    Hình 3.12: Biểu đồ tuần tự Quên mật khẩu.
+3.3.7.4  Biều đồ tuần tự Hiển thị danh sách địa điểm
+
+    Hình 3.13: Biểu đồ tuần tự Hiển thị danh sách địa điểm.
+3.3.7.5  Biều đồ tuần tự Hiển thị địa điểm lên Google Map
+    
+    Hình 3.14: Biểu đồ tuần tự Hiển thị địa điểm lên Google Map.
+3.3.7.6  Biều đồ tuần tự Thêm địa điểm
+
+    Hình 3.15: Biểu đồ tuần tự Thêm địa điểm.
+3.3.7.7  Biều đồ tuần tự Chỉ đường
+    
+    Hình 3.16: Biểu đồ tuần tự Chỉ đường.
+3.4 Thiết kế cơ sở dữ liệu
+3.4.1  Mô hình dữ liệu quan hệ
+3.4.1.1  Lược đồ quan hệ
+    
+    Hình 3.17: Lược đồ quan hệ
+3.4.1.2  Danh sách các bảng trong lược đồ quan hệ
+STT    Tên bảng    Ý nghĩa/ Ghi chú1TblUsersLưu thông tin user2TblPlacesLưu thông tin địa điểm3tblCommentsLưu thông tin bình luận    Bảng 3.7: Các bảng trong lược đồ.
+    
+    
+3.4.2  Mô tả chi tiết từng bảng trong CSDL
+a) Bảng User
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1userIDintPrimary KeyMã người dùng2emailStringNot nullEmail người dùng3imgUserStringNot nullLink hình ảnh người dùng4adminbooleanNot nullKiểm tra admin    Bảng 3.8: Bảng Users.
+b) Bảng Places
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1placeIDStringPrimary KeyMã địa điểm2NameStringNot nullTên địa điểm3TypeStringNot nullKiểu địa điểm4PhotoStringNot nullLink hình ảnh5AddressStringNot nullĐịa chỉ6LikelongNot nullLike7PhoneStringNot nullSố điện thoại8LatitudedoubleNot nullKinh độ9LongitudedoubleNot nullVĩ độ10OpenStringNot nullGiờ mở cửa11CloseStringNot nullGiờ đóng cửa12PriceStringNot nullGiá dịch vụ13VerifiedbooleanNot nullKiểm tra đã xác nhận    Bảng 3.9: Bảng Places.
+c) Bảng Comments
+TTTên trườngKiểu dữ liệuRàng buộcMô tả1CommentIDintPrimary KeyMã bình luận2placeIDint Not nullMã Địa điểm3TitleStringNot nullTiêu đề bình luận4ContentStringNot nullNội dung bình luận5LikelongNot nullLượt thích6RatingdoubleNot nullĐánh giá    Bảng 3.10: Bảng Comments.
+
+
+
+
+
+
+3.5 Thiết kế giao diện
+3.5.1 Giao diện Splash Sreen
+    
+    Hình 3.18: Giao diện Splash Screen.
+3.5.2 Giao diện chính của ứng dụng
+    
+    Hình 3.19: Giao diện hiển thị danh sách địa điểm.
+    
+    Hình 3.20: Giao diện hiển thị địa điểm lên Google Map.
+3.5.3 Giao diện thông tin chi tiết địa điểm
+
+    Hình 3.21: Giao diện thông tin chi tiết địa điểm .
+3.5.4 Giao diện đăng nhập
+
+    Hình 3.22: Giao diện đăng nhập.
+
+3.5.5 Giao diện diện đăng ký
+    
+    Hình 3.23: Giao diện đăng ký.
+3.5.6 Giao diện quên mật khẩu
+
+    Hình 3.24: Giao diện quên mật khẩu.
+3.5.7 Giao diện Call
+    
+    Hình 3.25: Giao diện khi nhấn button Call.
+3.5.8 Giao diện chỉ đường
+    
+    Hình 3.26: Giao diện chỉ đường.
+
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau thời gian nghiên cứu và phát triển, tác giả đã hoàn thành cơ bản các mục tiêu ban đầu đề ra của đề tài. Đã thực hiện nghiên cứu và đề ra giải pháp lấy dữ liệu từ firebase để kết nối với Android.Xây dựng và custom lại giao diện người dung của ứng dụng Android.
+    Xây dựng bước đầu cho phép người dùng có thểm tìm được các địa điểm. Ứng dụng còn hỗ trợ chức năng chỉ đường đi ngắn nhất giúp người dùng có thể thuận tiện hơn trong việc tìm kiếm đường đi. Ngoài ra, còn có thêm thông tin về thời gian mở cửa,khoảng giá dịch vụ và các tiện ích gọi điện trực tiếp đến địa điểm hay chia sẻ thông địa điểm đó một cách nhanh nhất nên rất thuận tiện cho các bạn muốn đi xa.
+4.2 Hạn chế của đề tài
+    Ứng dụng Near me vẫn chưa tối ưu được hệ thống do sự thiếu hụt về nguồn cơ sở dữ liệu cũng như kinh phí để xây dựng một đội ngũ cộng tác viên để sử lý các nghiệp vụ cần có của ứng dụng.
+4.3 Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, hướng phát triển tiếp theo của đề tài như sau:
+• Xây dựng thêm các chức năng để phù hợp hơn với các nghiệp vụ đặc thù của ứng dụng.
+• Xây dựng và tối ưu hóa giao diện cũng như trải nghiệm người dung.
+    
+CHƯƠNG 5:TÀI LIỆU THAM KHẢO
+x
+[1]Hoàng Quốc Việt, "Lập Trình android cơ bản".[2]Nguyễn Thị Hải Năng, "Giáo trình Lập trình đa phương tiện". 
+ [3]
+    x
+    
+    
+Xây dựng ứng dụng Near me
+    
+    
+10
+    
+    

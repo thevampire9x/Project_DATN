@@ -1,0 +1,517 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Hiện nay, việc quản lý công việc còn được thực hiện theo cách truyền thống bằng việc ghi chép trên giấy. Việc lưu trữ này có nhiều hạn chế, không khoa học, dễ xảy ra trường hợp quên dẫn đến không thể thực hiện công việc đúng hạn, gây ra nhiều hậu quả, khó khăn trong việc quản lý và thực hiện công việc.
+    Cùng với sự phát triển của smartphone trong thời đại công nghệ số, việc xây dựng ứng dụng trên thiết bị di động Android trở nên phổ biến. Nhiều người dùng lựa chọn sử dụng một số ứng dụng giúp quản lý công việc như Todoist, WunderList, .... Tuy nhiên những ứng dụng này chỉ cung cấp chức năng quản lý công việc cá nhân mà chưa cung cấp chức năng quản lý công việc theo nhóm. Do vậy, người dùng chỉ có thể quản lý những công việc của bản thân mà không thể quản lý những công việc có nhiều thành viên.
+    Từ những thực tế trên đặt ra yêu cầu cần xây dựng một ứng dụng giúp quản lý  và nhắc nhở công việc trên nền tảng Android giúp người dùng có thể đồng bộ dữ liệu và quản lý công việc một cách hiệu quả nhất.
+1.2 Mục tiêu của đề tài
+- Xây dựng hệ thống nhắc việc trên điện thoại smartphone sử dụng hệ điều hành Android.
+- Hệ thống có giao diện thân thiện với người dùng, dễ sử dụng.
+- Hệ thống giúp quản lý và nhắc nhở công việc một cách hiệu quả.
+- Hệ thống có chức năng quản lý tài khoản người dùng.
+- Hệ thống có chức năng quản lý công việc theo công việc cá nhân và công việc nhóm.
+1.3 Giới hạn và phạm vi của đề tài
+- Đề tài xây dựng hệ thống nhắc việc trên Android.
+- Hệ thống được xây dựng sử dụng ngôn ngữ Java.
+- Hệ thống được xây dựng sử dụng công cụ Android Studio.
+- Hệ thống được xây dựng sử dụng công nghệ Firebase.
+1.4 Nội dung thực hiện
+    Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Khảo sát thực tế bài toán.
+- Tìm hiểu và phân tích yêu cầu bài toán.
+- Phân tích yêu cầu hệ thống về mặt chức năng.
+- Phân tích và thiết kế cơ sở dữ liệu.
+- Phân tích và thiết kế giao diện
+- Tìm hiểu và nghiên cứu về Firebase, cách triển khai Firebase áp dụng cho hệ thống.
+- Kiểm thử hệ thống.
+- Triển khai thực nghiệm hệ thống trên nhiều SmartPhone.
+1.5 Phương pháp tiếp cận
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu;
+o Phương pháp phân tích mẫu;
+o Phương pháp thực nghiệm.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Android
+2.1.1 Hệ điều hành Android là gì?
+  Android là một mã nguồn mở và dựa trên hệ điều hành Linux, chạy trên các thiết bị di động như điện thoại thông minh và máy tính bảng. Android được phát triển bởi Open Handset Alliance, dẫn đầu bởi Google, và các công ty khác.
+  Android cung cấp một phương pháp tiếp cận thống nhất để lập trình ứng dụng cho các thiết bị di động, nghĩa là các lập trình viên chỉ cần lập trình cho Android, và các ứng dụng của họ sẽ có thể chạy trên các thiết bị khác nhau được hỗ trợ bởi Android.
+  Các phiên bản beta đầu tiên của Software Development Kit Android (SDK) được phát hành bởi Google trong năm 2007 trong khi đó phiên bản thương mại đầu tiên, Android 1.0, được phát hành vào tháng 9 năm 2008.
+  Mã nguồn của Android được phát hành theo giấy phép phần mềm tự do và nguồn mở. Google công khai hầu hết các mã theo giấy phép phiên bản Apache 2.0 và phần còn lại, Linux kernel, theo giấy phép phiên bản GNU General Public 2.
+2.1.2 Tại sao nên sử dụng Android?
+      
+     Hình 1:Tại sao nên sử dụng Android?
+- Open Soure: Mã nguồn mở.
+- Larger Developer and Community Reach: Có những lập trình viên và cộng đồng phát triển lớn.
+- Increased marketing: phát triển thương mại.
+- Inter app integration: ứng dụng hội nhập quốc tế.
+- Reduce cost of development: giảm chi phí phát triển.
+- Higher Success Ratio: Tỷ lệ thành công cao hơn.
+- Rich development Environment:Môi trường phát triển đa dạng
+2.1.3 Giới thiệu về Android studio và Android SDK
+• Android Studio chạy trên Windows, Mac và Linux, nhằm thay thế cho Eclipse Android Development Tool (ADT) vốn được sử dụng làm IDE chính trong các năm trước đó.
+   Một số tính năng nổi bật:
+• Bộ công cụ build ứng dụng dựa trên Gradle (thay vì Maven).
+• Chức năng dò và sửa lỗi nhanh, hướng Android.
+• Công cụ chỉnh sửa màn hình dạng kéo thả tiện lợi.
+• Các wizard tích hợp nhằm giúp lập trình viên tạo ứng dụng từ mẫu có sẵn.
+• Tích hợp Google Cloud Platform, dễ dàng tích hợp với Google Cloud Messaging và App Engine của Google.
+• The Android SDK (software development kit) là một tập hợp các công cụ được sử dụng để phát triển ứng dụng cho Android. 
+   Android SDK bao gồm:
+• Các thư viện đòi hỏi
+• Bộ dò lỗi (Debugger)
+• Thiết bị mô phỏng (emulator)
+• Các tài liệu liên quan cho Android API.
+• Các đoạn code mẫu.
+• Các hướng dẫn cho hệ điều hành Android
+Nếu Android Studio là trình soạn thảo code (IDE) thì Android SDK là bộ tổng hợp các công cụ để build app, các bản mẫu máy ảo Android (sử dụng để test app) cần thiết để làm ra một ứng dụng Android hoàn chỉnh.
+2.2 Tổng quan về Firebase
+2.2.1 Firebase là gì?
+    Firebase là một dịch vụ hệ thống backend được Google cung cấp sẵn cho ứng dụng Mobile, với Firebase bạn có thể rút ngắn thời gian phát triển, triển khai và thời gian mở rộng quy mô của ứng dụng mobile mình đang phát triển. Firebase hỗ trợ cả 2 nền tảng Android và IOS, Firebase mạnh mẽ, đa năng, bảo mật và là dịch vụ cần thiết đầu tiên để xây dưng ứng dụng với hàng triệu người sử dụng.
+   Firebase cung cấp 2 nhóm sản phẩm chính tập trung vào 2 đối tượng là: 
+• Develop & test your app: phát triển và kiểm thử các ứng dụng được thiết kế.
+• Grow & engage your audience: Phân tích dữ liệu và tối ưu hóa trải nghiệm đối với người dùng. 
+2.2.2 Tại sao nên sử dụng Firebase?
+• Firebase là một dịch vụ API để lưu trữ và đồng bộ dữ liệu real-time (thời gian thực). Điều này có nghĩa là bạn không cần phải lo lắng về backend server, cơ sở dữ liệu, hay các thành phần real-time (socket.io). Firebase hoạt động trên nền tảng đám mây được cung cấp bởi Google nhằm giúp các lập trình phát triển nhanh các ứng dụng bằng cách đơn giản hóa các thao tác với cơ sở dữ liệu.
+• Tất cả dữ liệu được lưu trữ bằng định dạng JSON và bất kỳ sự thay đổi nào của dữ liệu thì ngay lập tức được đồng bộ cho tất cả các nền tảng.
+• Xây dựng ứng dụng nhanh chóng mà không tốn thời gian, nhân lực để quản lý hệ thống và cơ sơ sở hạ tầng phía sau: Firebase cung cấp cho bạn chức năng như phân tích, cơ sở dữ liệu, báo cáo hoạt động và báo cáo các sự cố lỗi để bạn có thể dễ dàng phát triển, định hướng ứng dụng của mình vào người sử dụng nhằm đem lại các trải nghiệm tốt nhất cho họ.
+• Uy tín chất lượng đảm bảo từ Google: Firebase được google hỗ trợ và cung cấp trên nền tảng phần cứng với quy mô rộng khắp thế giới, được các tập đoàn lớn và các ưng dụng với triệu lượt sử dụng từ người dùng.
+• Quản lý cấu hình và trải nghiệm các ứng dụng của Firebase tập trung trong một giao diện website đơn giản, các ứng dụng này hoạt động độc lập nhưng liên kết dữ liệu phân tích chặt chẽ.
+2.2.3 Thêm Firebase vào Android project
+• Điều kiện yêu cầu
+• Thiết bị chạy Android 4.0(Ice Cream Sandwich) hoặc mới hơn
+• Thiết bị có Google Play services 15.0.0 hoặc cao hơn.
+• Thêm Firebase vào ứng dụng Android
+• Với Android Studio version 2.2 hoặc version mới hơn, người dùng có thể kết nối app tới Firebase sử dụng FirebaseAssistant. Assistant có thể kết nối project cũ hoặc tạo một project mới với những dependencies cần thiết.
+• Nếu người dùng sử dụng Android Studio với version cũ hơn version 2.2, người dùng cần thêm Firebase theo cách thủ công theo các bước:
+• Tạo Firebase project trên Firebase console.
+• Click Add Firebase to your Android app.
+• Download file config.
+• Thêm SDK
+• Thêm dòng apply plugin vào dòng cuối cùng của file app/build.grade: 
+apply plugin: 'com.google.gms.google-services'
+
+• Thêm dependencies
+Firebase cung cấp nhiều dependencies sử dụng với nhiều mục đích khác nhau. Người dùng có thể add những dependencies phù hợp với mục đích sử dụng.
+
+
+
+
+
+
+
+
+Gradle Dependency LineServicecom.google.firebase:firebase-core:16.0.0Analyticscom.google.firebase:firebase-database:16.0.1Realtime Databasecom.google.firebase:firebase-firestore:17.0.1Cloud Firestorecom.google.firebase:firebase-storage:16.0.1Storagecom.google.firebase:firebase-crash:16.0.0Crash Reportingcom.google.firebase:firebase-auth:16.0.1Authenticationcom.google.firebase:firebase-messaging:17.0.0Cloud Messagingcom.google.firebase:firebase-config:16.0.0Remote Configcom.google.firebase:firebase-invites:16.0.0Invites and Dynamic Linkscom.google.firebase:firebase-ads:16.0.0AdMobcom.google.firebase:firebase-appindexing:15.0.1App Indexingcom.google.firebase:firebase-perf:16.0.0Performance Monitoringcom.google.firebase:firebase-functions:16.0.1Cloud Functions for Firebase Client SDKcom.google.firebase:firebase-ml-vision:16.0.0ML Kit (Vision)com.google.firebase:firebase-ml-tensorflow:16.0.0ML Kit (Custom Model)CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Phát biểu bài toán
+3.1.1 Mô tả hệ thống hiện tại
+    Hiện nay, việc quản lý công việc còn được thực hiện theo cách truyền thống bằng việc ghi chép trên giấy. Việc lưu trữ này có nhiều hạn chế, không khoa học, dễ xảy ra trường hợp quên dẫn đến không thể thực hiện công việc đúng hạn, gây ra nhiều hậu quả, khó khăn trong việc quản lý và thực hiện công việc.
+    Cùng với sự phát triển của smartphone trong thời đại công nghệ số, việc xây dựng ứng dụng trên thiết bị di động Android trở nên phổ biến. Nhiều người dùng lựa chọn sử dụng một số ứng dụng giúp quản lý công việc như Todoist, WunderList, Trello, .... Tuy nhiên những ứng dụng này chỉ cung cấp chức năng quản lý công việc cá nhân mà chưa cung cấp chức năng quản lý công việc theo nhóm. Do vậy, người dùng chỉ có thể quản lý những công việc của bản thân mà không thể quản lý những công việc có nhiều thành viên.
+    Từ những thực tế trên đặt ra yêu cầu cần xây dựng một ứng dụng giúp quản lý  và nhắc nhở công việc trên nền tảng Android giúp người dùng có thể đồng bộ dữ liệu và quản lý công việc một cách hiệu quả nhất.
+3.1.2  Phát biểu bài toán
+3.2.1.1  Tổng quan về hệ thống mới
+• Với giao diện thân thiện với người dùng, cách sử dụng dễ dàng, hệ thống giúp người dùng quản lý công việc và nhắc nhở công việc một cách hiệu quả.
+• Một số chức năng chính: 
+* Quản lý tài khoản: hệ thống cần quản lý được việc đăng ký, đăng nhập và đăng xuất của người dùng.
+* Quản lý công việc: hệ thống cần quản lý được công việc các nhân và công việc nhóm.
+• Công việc cá nhân: gồm các công việc của cá nhân người dùng như sinh nhật, mua sắm, du lịch,…
+• Công việc nhóm: là những công việc của một nhóm, có trưởng nhóm và các thành viên. Trưởng nhóm có quyền thêm, sửa, xóa công việc cho các thành viên, các thành viên có quyền cập nhật tiến độ công việc của mình. Từ đó giúp trưởng nhóm dễ dàng quản lý công việc cũng như tiến độ của các thành viên.
+* Quản lý lời nhắc: người dùng sẽ được nhắc nhở công việc khi đến hạn của công việc.
+* Tìm kiếm công việc: người dùng có thể tìm kiếm công việc theo tên công việc.
+3.1.2.2  Các mục tiêu chính của hệ thống
+  Hệ thống nhắc việc cần đạt được những mục tiêu sau:
+* Quản lý được việc đăng nhập, đăng ký và quản lý người dùng.
+* Quản lý được công việc theo công việc cá nhân và công việc nhóm.
+* Quản lý được việc nhắc nhở công việc khi đến hạn.
+* Tìm kiếm được công việc theo tên công việc.
+3.1.2.3 Môi trường phát triển
+• Môi trường phần cứng
+    CPU: Pentium IV 3.0 GHz hoặc cao hơn
+    RAM: tối thiểu 512 MB
+    HDD: dung lượng tối thiểu trống 2G
+• Môi trường phần mềm
+    Hệ điều hành: Android
+    Công cụ phát triển: Android  studio
+    
+3.2 Xác định yêu cầu của hệ thống
+3.2.1 Danh sách yêu cầu khách hàng
+a) Quản lý tài khoản
+* Đăng nhập
+- Hệ thống cho phép người dùng đăng nhập để sử dụng các chức năng của hệ thống. Nếu người dùng đã đăng nhập trước đó thì lần sau sẽ không cần đăng nhập lại. 
+- Thông tin đăng nhập gồm : email, password
+- Sau khi người dùng điền thông tin đăng nhập sẽ kiểm tra tài khoản có hợp lệ hay không. Nếu hợp lệ, cho phép người dùng đăng nhập, nếu không hợp lệ, yêu cầu người dùng nhập lại.
+* Đăng ký
+- Hệ thống cho phép người dùng đăng ký tài khoản nếu chưa có tài khoản.
+- Thông tin yêu cầu gồm username và password.
+- Sau khi người dùng điền thông tin đăng ký sẽ kiểm tra tài khoản có hợp lệ hay không. Nếu hợp lệ, tài khoản sẽ được tạo và cho phép người dùng đăng nhập, nếu không hợp lệ, yêu cầu người dùng nhập lại
+* Đăng xuất: Hệ thống cho phép người dùng đăng xuất tài khoản khỏi thiết bị.
+b) Quản lý công việc
+* Quản lý công việc cá nhân: 
+Hệ thống cho phép người dùng thêm, sửa, hoặc xóa công việc. 
+- Thông tin công việc gồm: tiêu đề công việc, loại công việc, thời gian bắt đầu, thời gian kết thúc, địa điểm thực hiện công việc.
+- Sau khi người dùng chọn thêm công việc, công việc sẽ được thêm vào CSDL và cập nhật lại trên giao diện
+- Người dùng có thể cập nhật tiến độ thực hiện công việc và lưu lại vào CSDL.
+* Quản lý công việc nhóm: 
+              Hệ thống cho phép người dùng quản lý công việc nhóm.
+- Mỗi nhóm sẽ có 1 tiêu đề nhóm, là tiêu đề công việc chung của cả nhóm.
+- Thông tin công việc của từng thành viên gồm: tiêu đề công việc, thời gian bắt đầu, thời gian kết thúc, tiến độ công việc.
+- Trưởng nhóm có quyền giao việc, sửa, xóa công việc của các thành viên. 
+- Các thành viên cập nhật tiến độ công việc để trưởng nhóm theo dõi được tiến độ công việc của các thành viên.
+- Thành viên chỉ có thể cập nhật tiến độ công việc của mình, không được chỉnh sửa hay xóa công việc của thành viên khác.
+c) Quản lý nhắc nhở
+Hệ thống cần quản lý được việc nhắc nhở công việc khi đến thời gian kết thúc của công việc.
+d) Tìm kiếm công việc
+* Hệ thống cần cung cấp chức năng tìm kiếm công việc theo tiêu đề công việc.
+* Người dùng nhập các từ khóa tìm kiếm, hệ thống sẽ tìm kiếm công việc theo từ khóa người dùng nhập và hiển thị danh sách công việc phù hợp lên list cho người dùng lựa chọn.
+3.2.2 Phạm vi công việc
+   Dựa trên bản mô tả hệ thống và xác định yêu cầu, hệ thống nhắc việc trên Android cần được phát triển trong các phạm vi dưới đây:
+• Các yêu cầu phải được phân tích. Với mỗi yêu cầu phải xác định rõ dữ liệu đầu vào, đầu ra, và quy trình xử lý.
+• Hệ thống phải được lập trình trên nền tảng Android, ngôn ngữ lập trình Java.
+3.3 Phân tích yêu cầu hệ thống
+3.3.1 Biểu đồ Use-case
+3.3.1.1  Danh sách các Actor
+STT    Tên Actor    Ý nghĩa/Ghi chú1    User     Người dùng     Bảng 1: Danh sách các Actor
+3.3.1.2  Danh sách Use-case
+
+STT    Tên Use-case    Ý nghĩa/Ghi chú1Manage user Chức năng quản lý người dùng: đăng nhập, đăng ký2Manage taskChức năng quản lý công việc gồm quản lý công việc cá nhân và quản lý công việc nhóm.3Manage reminderChức năng nhắc việc khi có công việc đến hạn.4Search task Tìm kiếm công việc theo tiêu đề công việc.     Bảng 2: Danh sách Use-case
+    
+    
+    
+3.3.1.3  Biểu đồ Use-case
+
+     Hình 2: Biểu đồ Use-case tổng quát
+3.3.1.4  Đặc tả Use-case
+3.3.1.4.1 Đặc tả Use-case Manage user 
+a) Biểu đồ Use case của Use case đặc tả
+   
+Hình 3: Đặc tả Use-case Manage user
+b) Tóm tắt
+Người dùng có quyền sử dụng chức năng này để đăng nhập, đăng ký và đăng xuất.
+  - Đăng nhập: đăng nhập tài khoản.
+  - Đăng ký: đăng ký tài khoản mới.
+  - Đăng xuất: đăng xuất tài khoản khỏi thiết bị
+c) Dòng sự kiện
+ ➢ Dòng sự kiện chính
+1. Nếu người dùng đã đăng nhập trước đó thì không cần đăng nhập lại.
+2. Nếu người dùng chưa đăng nhập sẽ hiển thị giao diện cho người dùng đăng nhập hoặc đăng ký.
+        + Đăng nhập: 
+• Nguời dùng nhập email và password
+• Chọn đăng nhập
+        + Đăng ký: 
+• Người dùng nhập email và password
+• Xác thực mail hợp lệ
+• Chọn đăng ký
+3. Chọn đăng xuất
+      + Chọn đăng xuất
+      + Đăng xuất 
+➢ Các dòng sự kiện khác
+    “Không có”
+d) Các yêu cầu đặc biệt
+    “Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Hệ thống không yêu cầu đăng nhập
+- Hệ thống có sẵn các chức năng để chọn
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+Hệ thống thực hiện được các chức năng theo lựa chọn của người dùng.
+          Hệ thống chuyển sang màn hình khác sau khi đăng nhập
+g) Điểm mở rộng
+ “Không có”
+3.3.1.4.2 Đặc tả Use-case Manage task 
+a) Biểu đồ Use case của Use case đặc tả
+   
+     Hình 4: Đặc tả Use-case Manage task
+b) Tóm tắt
+    Người dùng sử dụng chức năng để quản lý công việc gồm quản lý công việc cá nhân và quản lý công việc nhóm.
+    Quản lý công việc cá nhân: người dùng có thể thêm, sửa, xóa công việc.
+    Quản lý công việc nhóm: trưởng nhóm có thể thêm, sửa, xóa công việc của các thành viên. Các thành viên có thể cập nhật tiến độ thực hiện công việc.
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+* Chức năng quản lý công việc cá nhân
+• Chọn thêm công việc: 
+               Nhập thông tin công việc
+               Thêm công việc
+               Cập nhật lại danh sách công việc
+• Chọn sửa công việc:
+               Chọn công việc cần sửa
+               Cập nhật thông tin công việc sau khi sửa
+• Chọn xóa công việc:
+               Chọn công việc cần xóa
+               Cập nhật thông tin công việc sau khi xóa
+* Chức năng quản lý công việc nhóm
+• Chọn thêm công việc: 
+               Nhập thông tin công việc
+               Thêm công việc
+• Cập nhật lại danh sách công việc
+               Chọn sửa công việc:
+               Chọn công việc cần sửa
+               Cập nhật thông tin công việc sau khi sửa
+• Chọn xóa công việc:
+               Chọn công việc cần xóa
+               Cập nhật thông tin công việc sau khi xóa
+➢ Các dòng sự kiện khác
+    “Không có”
+d) Các yêu cầu đặc biệt
+    “Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+         Hệ thống yêu cầu đăng nhập
+         Hệ thống có sẵn các chức năng để chọn
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+         Hệ thống lưu lại các công việc đã thêm và các công việc đã sửa hoặc xóa.
+g) Điểm mở rộng
+“Không có”
+3.3.1.4.3 Đặc tả Use-case Manage reminder
+a) Biểu đồ Use case của Use case đặc tả
+          
+     Hình 5: Đặc tả Use-case Manage reminder
+b) Tóm tắt
+Người dùng có quyền sử dụng chức năng này quản lý việc nhắc nhở công việc.
+
+
+
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+*  Người dùng thêm công việc.
+* Hệ thống thêm nhắc nhở dựa trên thời gian kết thúc của công việc.
+* Người dùng có thể tắt thông báo bằng cách nhấn vào thông báo khi có thông báo xuất hiện.
+➢ Các dòng sự kiện khác
+      “Không có”
+d) Các yêu cầu đặc biệt
+“Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+- Hệ thống có sẵn các chức năng để chọn
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+g) Điểm mở rộng
+    “Không có”
+
+
+3.3.1.4.4 Đặc tả Use-case Search task
+a) Biểu đồ Use case của Use case đặc tả
+       
+     Hình 6: Đặc tả Use-case Search task
+b) Tóm tắt
+Người dùng sử dụng chức năng này để tìm kiếm công việc theo tiêu đề công việc 
+c) Dòng sự kiện
+➢ Dòng sự kiện chính
+    Chọn chức năng tìm kiếm công việc
+    Lấy công việc từ cơ sở dữ liệu
+    Hiển thị công việc phù hợp
+d) Các yêu cầu đặc biệt
+“Không có”
+e) Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+Hệ thống yêu cầu đăng nhập
+Hệ thống có sẵn các chức năng để chọn
+f) Trạng thái hệ thống sau khi thực hiện Use-case
+Hệ thống hiển thị danh sách công việc hợp lệ
+g) Điểm mở rộng
+            “Không có”
+           
+3.3.2 Biểu đồ lớp
+3.3.2.1  Biểu đồ lớp (mức phân tích)
+
+     Hình 7: Biểu đồ lớp
+3.3.2.2  Danh sách các lớp đối tượng và quan hệ
+STTTên lớp/quan hệLoạiÝ nghĩa/Ghi chú1UserPublicLớp lưu trữ thông tin người dùng2FriendpublicLớp lưu trữ các thông tin bạn bè3GroupPublicLớp lưu trữ nhóm4GroupInfoPublicLớp lưu trữ thông tin nhóm5DetailTaskpublicLớp lưu trữ thông tin chi tiết của công việc6ListTaskpublicLớp lưu trữ danh sách công việc7ListFriendpublicLớp lưu trữ danh sách bạn bè     Bảng 3: Danh sách các lớp đối tượng và quan hệ
+    
+    
+    
+3.3.2.3  Mô tả chi tiết từng lớp đối tượng
+a) Lớp User
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1mIDUserPrivateNot null     Id người dùng2mNamePrivatenull    Tên người dùng3mEmailPrivateNot null     Email người dùng4mPasswordprivateNot null     Password5mAvatarPrivatenull     Avatar của người dùng     Bảng 4: Lớp User
+b) Lớp Friend
+STTTên thuộc tínhLoạiRàng buộc    Ý nghĩa/ghi chú1mIDUserPrivateNot null     Id người dùng2mIDGroupPrivateNot null    Id nhóm     Bảng 5: Lớp DeThi
+c) Lớp Group
+STTTên thuộc tínhLoạiRàng buộc    Ý nghĩa/ghi chú1mIDGroupPrivateNot null     Id group2mListFriendPrivateNot null    Danh sách bạn bè     Bảng 6: Lớp Group
+    
+d) Lớp GroupInfo
+STTTên thuộc tínhLoạiRàng buộc    Ý nghĩa/ghi chú1mIDGroupInfoprivateNot null     Id group info 2mMembersPrivateNot null    Danh sách thành viên3mGroupIndoPrivateNot null     Group info     Bảng 7: Lớp GroupInfo
+e) Lớp DetailTask
+STTTên thuộc tínhLoạiRàng buộc    Ý nghĩa/ghi chú1mIDGroupInfoprivateNot null     Id group info 2mMembersPrivateNot null    Danh sách thành viên3mGroupIndoPrivateNot null     Group info     Bảng 8: Lớp DetailTask
+f) Lớp ListTask
+STTTên thuộc tínhLoạiRàng buộc    Ý nghĩa/ghi chú1mIDGroupInfoprivateNot null     Id group info 2mMembersPrivateNot null    Danh sách thành viên3mGroupIndoPrivateNot null     Group info     Bảng 9: Lớp ListTask
+g) Lớp ListFriend 
+STTTên thuộc tínhLoạiRàng buộc    Ý nghĩa/ghi chú1listFriendprivateNot null     Danh sách bạn bè      Bảng 9: Lớp ListFriend
+3.3.3 Biểu đồ tuần tự
+3.3.3.1  Biểu đồ tuần tự Manage user 
+a) Biểu đồ tuần tự Login
+
+     Hình 8: Biểu đồ tuần tự Login
+    
+    
+    
+    
+    
+    
+    
+    
+b) Biểu đồ tuần tự Register user 
+
+     Hình 9: Biểu đồ tuần tự Register user
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+3.3.3.2   Biểu đồ tuần tự Manage Task 
+a) Biểu đồ tuần tự Add perosnal task 
+
+    Hình 10: Biểu đồ tuần tự Add perosnal task
+b) Biểu đồ tuần tự Add group task 
+
+     Hình 11: Biểu đồ tuần tự Add group task
+c) Biểu đồ tuần tự Edit personal task 
+
+     Hình 12: Biểu đồ tuần tự Edit personal task
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+d) Biểu đồ tuần tự Edit group task 
+
+     Hình 13: Biểu đồ tuần tự Edit group task
+    
+    
+    
+    
+    
+    
+e) Biểu đồ tuần tự Delete perosnal task 
+
+    Hình 14 : Biểu đồ tuần tự Delete personal task
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+f) Biểu đồ tuần tự Delete group task 
+
+    Hình 15: Biểu đồ tuần tự Delete group task
+    
+    
+    
+    
+    
+    
+    
+3.3.3.3     Biểu đồ tuần tự Search task 
+
+    Hình 16: Biểu đồ tuần tự search task
+3.4 Thiết kế cơ sở dữ liệu
+3.4.1 Mô hình dữ liệu quan hệ
+a) Lược đồ quan hệ
+
+     Hình 17: Lược đồ quan hệ
+b) Danh sách các bảng trong lược đồ quan hệ
+STTTên lớp/quan hệÝ nghĩa/Ghi chú1UserLớp lưu trữ thông tin người dùng2FriendLớp lưu trữ các thông tin bạn bè3GroupLớp lưu trữ nhóm4GroupInfoLớp lưu trữ thông tin nhóm5DetailTaskLớp lưu trữ thông tin chi tiết của công việc6ListTaskLớp lưu trữ danh sách công việc7ListFriendLớp lưu trữ danh sách bạn bè     Bảng 8: Danh sách các bảng trong lược đồ quan hệ
+3.4.2 Mô tả chi tiết từng bảng trong CSDL
+a) Bảng user  
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1mIDUservarchar(50)Not null     Khóa chính2mNamenvarchar(50)null     Tên người dùng3mEmailvarchar(50)Not null     Email4mPasswordvarchar(50)Not null     Password5mAvatarvarchar(10)null     Avatar     Bảng 9: Bảng User
+b) Bảng Friend
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1mIDUservarchar(50)Not null    Khóa chính2mIDGroupvarchar(50)Not null    Khóa chính     Bảng 10: Bảng Friend
+    
+    
+c) Bảng Group
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1mIDGroupvarchar(50)Not null    Khóa chính2mListFriendNot null    Danh sách bạn bè    Bảng 11: Bảng Group
+d) Bảng GroupIfo
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1mIDGroupInfovarchar(50)Not null    Khóa chính2mMembersNot nullDanh sách thành viên 3mGroupInfoNot nullThông tin group    Bảng 12: Bảng GroupInfo
+e) Bảng ListTask 
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1listTaskDataNot null Danh sách công việc    Bảng 13: Bảng ListTask
+f) Bảng ListFriend 
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1listFriendNot null Danh sách bạn bè    Bảng 14: Bảng ListFriend
+g) Bảng DetailTask
+TTTên trườngKiểu dữ liệuRàng buộc    Mô tả1mTaskIdNot null Khóa chính2mIDUserNot null ID người dùng3mGroupIDNot null ID group4mTitleNot null Tiêu đề công việc5mStartDateNot null Thời gian bắt đầu6mEndDateNot null Thời gian kết thúc7mProcessnull Tiến độ công việc8mCategorynull Thể loại công việc9mAdressnull Địa điểm thực hiện    Bảng 15: Bảng DetailTask
+3.5 Thiết kế giao diện
+3.5.1 Giao diện đăng nhập
+    
+STTTên controlSự kiệnÝ nghĩa1mEdtEmailEditText để nhập email2mEdtPasswordEditText để nhập password3mBtLoginonClickButton đăng nhập4mBtRegisteronClickButton đăng ký    Bảng 16: Danh sách các control điều khiển của giao diện đăng nhập
+3.5.2 Giao diện đăng ký
+    
+STTTên controlSự kiệnÝ nghĩa1mEdtEmailEditText để nhập email2mEdtPasswordEditText để nhập password3mEdtConfirmPassEditText để xác nhận password3mBtLoginonClickButton đăng nhập4mBtRegisteronClickButton đăng ký    Bảng 17: Danh sách các control điều khiển của giao diện đăng ký
+3.5.3 Giao diện chính của chương trình
+    
+    
+STTTên controlSự kiệnÝ nghĩa1ll_headeronClickDrawer header hiển thị người dùng2menuonClickMenu danh sách lựa chọn    Bảng 18: Danh sách các control điều khiển của giao diện chính
+3.5.4 Giao diện thêm công việc cá nhân
+    
+STTTên controlSự kiệnÝ nghĩa1mEdtTitleEditText để nhập tiêu đề công việc2mBtCategoryonClickButton chọn loại công việc3mTvCategoryTextView hiển thị loại công việc4mBtDateStartonClickButton chọn ngày bắt đầu5mTvDateStartTextView hiển thị ngày bắt đầu6mBtTimeStartonClickButton chọn thời gian bắt đầu7mTvTimeStartTextView hiển thị thời gian bắt đầu8mBtDateEndonClickButton chọn ngày kết thúc9mTvDateEndTextView hiển thị ngày kết thúc10mBtTimeEndonClickButton chọn thời gian kết thúc11mTvTimeEndTextView hiển thị thời gian kết thúc12mEdtAdressEditText nhập địa điểm công việc13mBtAddonClickButton thêm công việc14mBtCancleonClickButton hủy thêm    Bảng 19: Danh sách các control điều khiển của giao diện thêm công việc cá nhân
+3.5.5  Giao diện danh sách nhóm
+
+STTTên controlSự kiệnÝ nghĩa1mRecyclerViewonClickRecyclerView hiển thị danh sách nhóm    Bảng 20: Danh sách các control điều khiển của giao diện danh sách nhóm
+3.5.6 Giao diện danh sách công việc nhóm
+    
+STTTên controlSự kiệnÝ nghĩa1mRecyclerViewonClickHiển thị danh sách công việc    Bảng 21: Danh sách các control điều khiển của giao diện danh sách công việc nhóm
+3.5.7 Giao diện thêm công việc nhóm
+    
+    
+    
+    
+STTTên controlSự kiệnÝ nghĩa1mEdtTitleEditText để nhập tiêu đề công việc2mTvCategoryTextView hiển thị loại công việc3mBtDateStartonClickButton chọn ngày bắt đầu4mTvDateStartTextView hiển thị ngày bắt đầu5mBtTimeStartonClickButton chọn thời gian bắt đầu6mTvTimeStartTextView hiển thị thời gian bắt đầu7mBtDateEndonClickButton chọn ngày kết thúc8mTvDateEndTextView hiển thị ngày kết thúc9mBtTimeEndonClickButton chọn thời gian kết thúc10mTvTimeEndTextView hiển thị thời gian kết thúc11mBtAddonClickButton thêm công việc12mBtCancleonClickButton hủy thêm    Bảng 22: Danh sách các control điều khiển của giao diện thêm công việc nhóm
+3.5.8 Giao diện thông tin người dùng
+    
+STTTên controlSự kiệnÝ nghĩa1mTvUsernameHiển thị username 2mTvEmailHiển thị email3mBtChangePassonClickButton đổi password4mBtSignOutonClickButton đăng xuất    Bảng 23: Danh sách các control điều khiển của giao diện thông tin người dùng
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+Sau thời gian nghiên cứu và phát triển, ứng dụng đã hoàn thành cơ bản các mục tiêu ban đầu đề ra của đề tài.
++ Chức năng quản lý người dùng: đã hoàn thành chức năng login , register, sign out.
++ Chức năng quản lý công việc: quản lý được các công việc cá nhân và công việc nhóm.
++ Chức năng quản lý nhắc nhở: hệ thống có thông báo nhắc nhở khi công việc đến hạn
++ Chức năng tìm kiếm công việc: cho phép người dùng tìm kiếm công việc.
+* Cập nhật được các công việc mới và sự thay đổi nội dung công việc của các công việc nhóm.
+4.2 Hạn chế của đề tài
+    Hệ thống quản lý nhắc việc trên Android còn nhiều hạn chế.
+* Giao diện hệ thống còn đơn giản.
+* Chưa cung cấp được các chức năng về thống kê báo cáo như: thống kê số công việc đã hoàn thành, số công việc chưa hoàn thành
+4.3 Hướng phát triển của đề tài
+  Trong thời gian nghiên cứu và thực hiện đề tài, tác giả đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+- Hoàn thiện đề tài trên phiên bản Android. 
+- Nâng cấp giao diện của hệ thống.
+- Nghiên cứu và triển khai đề tài trên phiên bản web.
+TÀI LIỆU THAM KHẢO
+[1]. Hoàng Quốc Việt , “Giáo trình Lập trình android cơ bản”. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY, 2016
+[2]. Nguyễn Thị Hải Năng, “Giáo trình Lập trình đa phương tiện”. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY, 2017
+[3]. Nguyễn Hoàng Điệp, “Giáo trình Lập trình dịch vụ mạng trên Android”. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY, 2017
+[4]. Nguyễn Minh Tiến, “Giáo trình Cơ sở kỹ thuật lập trình”, Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin – UTEHY
+[5]. Harvey M. Deitel, Paul J. Deitel “How To program java 8th”, amazon, 2008
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+PHỤ LỤC
+1. Bảng phân công nhiệm vụ thực hiện đồ án
+TTThành viênCác công việcGhi chú1Phạm Thị Lam Giang- Phát biểu bài toán
+- Xác đinh yêu cầu khách hàng
+- Phân tích yêu cầu hệ thống
+- Thiết kế giao diện người dùng     
+Xây dựng hệ thống nhắc việc
+    
+    
+3
+    
+    

@@ -1,0 +1,579 @@
+﻿
+    CHƯƠNG 1: PHÁT BIỂU BÀI TOÁN
+1.1. Mô tả hệ thống hiện tại
+      Hoạt động của website bán đồ POPE:
+● Khi khác hàng truy cập vào website có thể xem được  nội dung như: “ các sản phẩm, danh mục sản phẩm và tin tức ”.
+● Danh mục sản phẩm bao gồm các loại như trà sữa, fast food, special drink, chè, ..
+●  Về phía sản phẩm gồm trà sữa và một số option kèm theo như: hướng dương, fast  food đi kèm, …Thông tin về sản phẩm: tên sản phẩm, chủng loại, xuất xứ, mô tả, giá và các giá trị ding dưỡng.
+● Tin tức bao gồm các thông tin: thể loại, tiêu đề, chi tiết, ngày đăng, số lượt xem, sản phẩm mới nhất.
+● Khi khách hàng chọn một sản phẩm sẽ chuyển tới trang chi tiết sản phẩm, tại đây khách hàng có thể xem các thông tin chi tiết về sản phẩm và có thể đặt mua sản phẩm đó với size, đá + đường bao nhiêu %, có topping hay không ? vào giỏ hàng với số lượng mặc định là 1 và sẽ tăng thêm 1 nếu sản phẩm đặt vào đã có trong giỏ hàng.
+● Khách hàng có thể chuyển đến giỏ hàng để xem danh mục các sản phẩm đã đặt. Và khách hàng có thể thay đổi số lượng sản phẩm hoặc bỏ sản phẩm nào đó ra khỏi giỏ hàng.
+● Khi đã xác định được các mặt hàng và số lượng, khách hàng sẽ tiến hành thanh toán. Khi thanh toán, khách hàng phải điền đầy đủ thông tin vào mẫu, bao gồm: tên người nhận, địa chỉ nhận, khu vực cần chuyển tới, thành phố cần chuyển tới, ngày nhận sản phẩm,… Sau đó các thông tin sẽ được gửi lại cho nhân viên để nhân viên kiểm tra.
+● Nhân viên sẽ kiểm tra yêu cầu và nếu còn sản phẩm và có điều kiện vận chuyển thì in hóa đơn và chuyển xuống bộ phận vận chuyển.
+● Website còn có nhóm người quản lý, quản lý tất cả nội dụng trên trang web như: quản lý tin tức, quản lý sản phẩm, quản lý nhà sản xuất, quản lý xuất xứ, quản lý người dùng, quản lý vai trò, quản lý hóa đơn,…
+● Nhân viên sẽ kết xuất các thống kê, báo cáo theo ngày, theo tuần và theo tháng
+    
+  1.2. Phát biểu bài toán
+1.2.1. Tổng quan về hệ thống mới
+      Hệ thống website bán đồ POPE cung cấp các chức năng như: quản lý tin tức, quản lý sản phẩm, danh mục sản phẩm, quản lý xuất xứ, quản lý người dùng, quản lý vai trò, quản lý hóa đơn, … Hệ thống giúp khách hàng có thể nhanh chóng tìm được sản phẩm theo tên, giá hoặc chủng loại. Cũng dễ dàng hơn cho nhân viên trong việc quản lý các yêu cầu và hóa đơn.
+1.2.2. Các mục tiêu chính của hệ thống
+      Hệ thống website bán đồ POPE cần đạt được những mục tiêu sau:
+1. Hệ thống phải quản lý được thông tin các sản phẩm và tin tức.
+2. Hệ thống phải quản lý được thông tin khách hàng và nhân viên.
+3. Hệ thống phải giúp khách hàng tìm kiếm chính xác các sản phẩm dựa vào tên hoặc chủng loại hoặc giá sản phẩm và đặt hàng một cách nhanh nhất.
+4. Hệ thống phải giúp nhân viên quản lý được các đơn hàng và hóa đơn
+5. Hệ thống phải kết xuất được những báo cáo cần thiết.
+1.2.3. Môi trường phát triển
+● Môi trường phần cứng
+o CPU: Pentium IV 3.0 GHz hoặc cao hơn
+o RAM: tối thiểu 512 MB
+o HDD: dung lượng tối thiểu trống 2G
+● Môi trường phần mềm
+o Hệ điều hành: Windows XP hoặc cao hơn
+o Công cụ phát triển: Visual studio 2015 trở lên
+
+
+CHƯƠNG 2: XÁC ĐỊNH VÀ PHÂN TÍCH YÊU CẦU CỦA HỆ THỐNG2.1. Xác định yêu cầu của hệ thống
+    Dựa trên mô tả hoạt động của hệ thống  website bán POPE, hệ thống cần phải đáp ứng các yêu cầu sau:
+2.1.1. Phần quản trị
+    - Đăng nhập hệ thống: đăng nhập vào hệ thống để quản lý website
+    Người quản trị, nhân viên phải đăng nhập để quản lý website
+        - Quản lý loại sản phẩm
+    Thêm mới loại sản phẩm
+    - Hệ thống giúp quản trị viên nhập các thông tin về loại sản phẩm.Thông tin bao gồm:Mã loại và tên loại sản phẩm, ngày tạo, trạng thái.
+● Cập nhật thông tin loại sản phẩm
+      - Hệ thống phải cung cấp chức năng sửa lại thông tin của loại sản phẩm khi có sự thay đổi.
+● Hiển thị thông tin
+      - Hệ thống phải cung cấp chức năng hiển thị danh sách thông tin các loại sản phẩm hiện có.
+     - Quản lý nhà cung cấp
+● Thêm mới nhà cung cấp: Sản phẩm được nhập về từ các nhà cung cấp. Các nhà cung cấp này được quản trị viên quản lý. Thông tin của nhà cung cấp bao gồm: mã, tên công ty, tên người đại diện, địa chỉ, thành phố, điện thoại liên hệ, website nhà cung cấp và trạng thái (còn khả dụng hay không).
+● Cập nhật thông tin nhà cung cấp: Sửa đổi thông tin nhà cung cấp và tình trạng còn liên doanh hay không.
+● Hiển thị danh sách nhà cung cấp: Hiển thị danh sách thông tin các nhà cung cấp.
+        - Quản lý sản phẩm
+    Thêm mới sản phẩm
+    - Hệ thống giúp quản trị viên nhập các thông tin về sản phẩm. Những thông tin bao gồm: Mã sản phẩm, tên sản phẩm, chủng loại, nhà cung cấp, xuất xứ, giá nhập, giá bán, giá khuyến mãi, hình ảnh minh họa, các mô tả về sản phẩm, trạng thái, …
+● Cập nhật thông tin sản phẩm
+      - Hệ thống phải cung cấp chức năng sửa lại thông tin của sản phẩm khi có sự thay đổi.
+      - Cập nhật tình trạng của sản phẩm còn hàng hay hết hang.
+● Hiển thị thông tin
+      - Hệ thống phải cung cấp chức năng hiển thị danh sách thông tin các sản phẩm hiện có.
+- Quản lý khách hàng
+● Thêm mới khách hàng: Quản trị viên có nhiệm vụ thêm thông tin cho khách hàng khi có người mới hoặc khách hàng khi có yêu cầu.
+● Cập nhật khách hàng: Sửa đổi thông tin khách hàng 
+● Hiển thị khách hàng: Hiển thị danh sách khách hàng hiện có trong hệ thống.
+-Quản lý đơn hàng
+● Thêm mới đơn hàng: Sau khi khách hàng đặt hàng và xác nhận thông tin đơn hàng mới nhất sẽ được tự động thêm vào
+● Cập nhật thông tin đơn hàng: Sửa đổi thông tin đơn hàng khi có nhầm lẫn.
+● Hiển thị danh sách đơn hàng: Hiển thị danh sách các đơn hàng có trong hệ thống.
+-Quản lý chi tiết đơn hàng
+● Thêm mới chi tiết đơn hàng: Sau khi khách hàng đặt hàng và xác nhận thông tin chi tiết đơn hàng mới nhất sẽ được tự động thêm vào 
+● Cập nhật thông tin đơn hàng: Sửa đổi thông tin chi tiết đơn hàng khi có nhầm lẫn.
+● Hiển thị danh sách đơn hàng: Hiển thị danh sách các hóa đơn hàng có trong hệ thống.
+- Quản lý nhân viên
+● Thêm mới nhân viên: Quản trị viên có nhiệm vụ thêm thông tin cho nhân viên khi có người mới.
+● Cập nhật khách hàng: Sửa đổi thông tin nhân viên. 
+● Hiển thị khách hàng: Hiển thị danh sách nhân viên hiện có trong hệ thống.
+- Quản lý hóa đơn nhập
+● Thêm hóa đơn nhập: Khi có sản phẩm mới được nhập về. Quản trị viên sẽ ghi lại hóa đơn cho lần giao dịch. Thông tin bao gồm: mã hóa đơn, nhà cung cấp, hình thức thanh toán, mã sản phẩm, ngày nhập, đơn giá nhập, số lượng và tổng tiền.
+● Cập nhật thông tin hóa đơn: Sửa đổi thông tin hóa đơn khi có sai sót, nhầm lẫn.
+● Xóa hóa đơn: Xóa bỏ hóa đơn khi cần thiết..
+● Hiển thị danh sách hóa đơn: Hiển thị danh sách các hóa đơn nhập hiện có trong hệ thống.
+- Quản lý chi tiết hóa đơn nhập
+● Thêm chi tiết hóa đơn nhập: Khi có sản phẩm mới được nhập về. Quản trị viên sẽ ghi lại chi tiết hóa đơn nhập cho lần giao dịch
+● Cập nhật chi tiết thông tin hóa đơn: Sửa đổi thông tin chi tiết hóa đơn nhập khi có sai sót, nhầm lẫn.
+● Xóa chi tiết hóa đơn: Xóa bỏ chi tiết hóa đơn khi cần thiết..
+● Hiển thị danh sách chi tiết hóa đơn: Hiển thị danh sách các chi tiết hóa đơn nhập hiện có trong hệ thống.
+
+       -Chức năng thống kê, báo cáo
+● Thống kê các sản phẩm bán được, các sản phẩm nhập về
+● Thống kê doanh thu theo ngày, theo tuần, theo tháng, theo quý, theo năm, …
+● Thống kê số người dùng tương tác với website
+● Thống kê mặt hàng bán chạy, mặt hàng ngưng trệ
+● Kết xuất các báo cáo cần thiết.
+ 2.1.2. Phần giao diện người dùng.
+⮚ Hiển thị menu
+● Hiển thị menu cho khách hàng lựa chọn.
+● Menu bao gồm: Trang chủ, giới thiệu,bảo hành,liên hệ,giỏ hàng
+● Người dùng có thể chọn mục mình muốn xem trên thanh menu.
+⮚ Hiển thị danh sách sản phẩm theo giá từ lớn đến nhỏ
+● Đây là danh sách những sản phẩm có giá trị từ lớn nhất đến nhỏ nhất.
+● Hiển thị tối đa 14 sản phẩm.
+⮚ Giỏ hàng
+● Khi khách hàng vào trang web có thể xem thông tin các sản phẩm và giá cả. Sau đó thêm vào giỏ hàng. Thông tin sản phẩm trong giỏ hàng bao gồm: Tên sản phẩm, đơn giá, số lượng (mặc định là 1 khi thêm vào giỏ hàng), thành tiền.
+● Khách hàng có thể sửa đổi số lượng sản phẩm muốn mua.
+● Khách hàng cũng có thể bỏ sản phẩm không cần thiết ra khỏi giỏ hàng.
+⮚ Đặt hàng
+● Khách hàng khi đã lựa chọn được sản phẩm cần mua có thể đặt hàng với cửa hang.
+● Sau khi đặt hàng thành công khách hàng sẽ được nhận một email liên quan đến thông tin giao dịch và thanh toán.
+⮚ Chức năng tìm kiếm thông tin
+● Khách hàng có thể tìm kiếm các thông tin trên website thông qua từ khóa tìm kiếm cụ thể là tìm kiếm sản phẩm theo khách hàng mong muốn.
+● Kết quả tìm kiếm sẽ được hiển thị để người dùng thao tác.
+2.2. Phân tích yêu cầu của hệ thống
+2.2.1  Biểu đồ Use Case
+    2.2.1.1. Danh sách các Actor
+STTTên ActorÝ nghĩa1Khách hàngKhách hàng đã đăng ký làm thành viên website2AdminQuản lý cả nhân viên và mọi hành động của website3Nhân viênNhân viên quản lý mọi hành động của website
+    Bảng 1: Danh sách các Actor
+    2.2.1.2. Danh sách các Use case
+    STT    Tên Use-case    Ý nghĩa/Ghi chú    1    Quản lý loại sản phẩm    Quản lý thông tin các loại sản phẩm    3    Quản lý nhà cung cấp    Quản lý thông tin các NCC đang hợp tác    4    Quản lý sản phẩm    Quản lý thông tin sản phẩm    5    Quản lý khách hàng    Quản lý thông tin khách hàng    6    Quản lý đơn hàng    Quản lý đơn hàng khi có khách hàng đặt hàng.        Quản lý chi tiết đơn hàng    Quản lý chi tiết đơn hàng khi có khách hàng đặt hàng.    7    Quản lý hóa đơn nhập    Quản lý hóa đơn khi nhập sản phẩm mới về    9    Quản lý nhân viên    Quản lý thông tin của nhân viên    9    Quản lý hóa đơn nhập    Quản lý thông tin chi tiết hóa đơn nhập khi website nhập hàng        Quản lý chi tiết hóa đơn nhập    Quản lý thông tin chi tiết hóa đơn nhập khi website nhập hàng    
+    Bảng 2: Danh sách các Use case
+    
+    2.2.1.3. Biểu đồ Use case
+    
+    Hình 1: Biểu đồ Use case
+                        
+    
+    
+    
+    
+    
+    
+    
+    
+    2.2.1.4. Đặc tả Use case
+Đặc tả Use-case “Quản lý loại sản phẩm”
+1. Biểu đồ Use case
+    
+    Hình 2: Biểu đồ phân rã quản lý loại sản phẩm
+2. Tóm tắt
+o Người sử dụng: Quản trị viên
+o Chức năng:
+o Thêm loại sản phẩm mới
+o Cập nhật thông tin loại sản phẩm
+o Xóa loại sản phẩm
+o Tìm kiếm loại sản phẩm
+o Ý nghĩa: Quản lý thông tin loại sản phẩm (bao gồm mã loại và tên loại sản phẩm)
+3. Dòng sự kiện
+❖ Dòng sự kiện chính
+o Khi Quản trị viên chọn chức năng “Quản lý loại sản phẩm”, 1 bảng thông tin loại sản phẩm và các chức năng sẽ được hiển thị ra.
+❖ Các dòng sự kiện khác
+o Không có
+❖ Các yêu cầu đặc biệt
+o Không có
+❖ Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+o Yêu cầu đăng nhập thành công với quyền Quản trị viên
+❖ Trạng thái hệ thống sau khi thực hiện Use-case
+o Hiển thị danh sách các loại sản phẩm
+o Thêm, sửa, xóa,tìm kiếm  loại sản phẩm thành công hoặc thất bại.
+❖ Điểm mở rộng
+o Thêm mới loại sản phẩm
+o Sửa thông tin loại sản phẩm
+o Xóa loại sản phẩm
+o Tìm kiếm sản phẩm
+o Hiển thị danh sách loại sản phẩm
+Đặc tả Use-case “Quản lý nhà cung cấp”
+1. Biểu đồ Use case
+    
+    Hình 3: Biểu đồ phân rã quản lý nhà cung cấp
+2. Tóm tắt
+o Người sử dụng: Quản trị viên
+o Chức năng:
+o Thêm mới nhà cung cấp
+o Cập nhật thông tin nhà cung cấp
+o Xóa nhà cung cấp
+o Tìm kiếm nhà cung cấp
+o Hiển thị danh sách nhà cung cấp
+o Ý nghĩa: Quản lý nhà cung cấp sản phẩm
+3. Dòng sự kiện
+❖ Dòng sự kiện chính
+o Khi Quản trị viên chọn chức năng “Quản lý nhà cung cấp”, 1 bảng thông tin nhà cung cấp và các chức năng sẽ được hiển thị ra.
+❖ Các dòng sự kiện khác
+o Không có
+❖ Các yêu cầu đặc biệt
+o Không có
+❖ Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+o Yêu cầu đăng nhập thành công với quyền Quản trị viên.
+❖ Trạng thái hệ thống sau khi thực hiện Use-case
+o Hiển thị danh sách các nhà cung cấp
+o Thêm, sửa, xóa,tìm thành công hoặc thất bại
+❖ Điểm mở rộng
+o Thêm mới nhà cung cấp
+o Sửa thông tin nhà cung cấp
+o Xóa nhà cung cấp
+o Tìm kiếm nhà cung cấp
+o Hiển thị danh sách nhà cung cấp
+Đặc tả Use-case “Quản lý sản phẩm”
+1. Biểu đồ Use case
+    
+    Hình 4: Biểu đồ phân rã quản lý sản phẩm
+2. Tóm tắt
+o Người sử dụng: Quản trị viên
+o Chức năng:
+o Thêm mới thông tin sản phẩm
+o Cập nhât thông tin thí sinh
+o Hiển thị danh sách thí sinh
+o Tìm kiếm sản phẩm
+o Ý nghĩa: Quản lý thông tin sản phẩm khi có thay đổi.
+3. Dòng sự kiện
+o Dòng sự kiện chính
+o Khi quản trị viên chọn chức năng quản lý sản phẩm, 1 bảng thông tin sản phẩm và các chức năng sẽ được hiển thị ra.
+o Các dòng sự kiện khác
+o Không có
+o Các yêu cầu đặc biệt
+o Không có
+● Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+o Yêu cầu đăng nhập thành công với quyền Quản trị viên.
+Trạng thái hệ thống sau khi thực hiện Use-case
+o Hiển thị danh sách các sản phẩm sau khi tìm kiếm.
+o Thêm, Cập nhật thành công hoặc thất bại.
+Điểm mở rộng
+o Thông tin cơ bản: Tìm kiếm, Thêm mới, Cập nhật,Xóa
+Đặc tả Use-case “Quản lý khách hàng”
+1. Biểu đồ Use case
+    
+    Hình 5: Biểu đồ phân rã quản lý khách hàng
+2. Tóm tắt
+o Người sử dụng: Quản trị viên
+o Chức năng:
+o Thêm mới thông tin khách hàng
+o Cập nhật thông tin khách hàng
+o Xóa khách hàng
+o Tìm kiếm khách hàng
+o Hiển thị danh sách khách hàng
+o Ý nghĩa: Quản lý khách hàng trong hệ thống
+3. Dòng sự kiện
+❖ Dòng sự kiện chính
+o Khi Quản trị viên chọn chức năng “Quản lý khách hàng” 1 bảng thông tin khách hàng và các chức năng sẽ được hiển thị ra.
+❖ Các dòng sự kiện khác
+o Không có
+❖ Các yêu cầu đặc biệt
+o Không có
+❖ Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+o Yêu cầu đăng nhập thành công với quyền Quản trị viên.
+❖ Trạng thái hệ thống sau khi thực hiện Use-case
+o Hiển thị danh sách  khách hàng
+o Thêm, sửa, xóa,tìm kiếm thành công hoặc thất bại
+❖ Điểm mở rộng
+o Thêm mới khách hàng
+o Sửa thông tin khách hàng
+o Xóa khách hàng
+o Tìm kiếm khách hàng
+o Hiển thị danh sách khách hàng
+Đặc tả Use-case “Quản lý đơn hàng”
+1. Biểu đồ Use case
+    
+    Hình 6: Biểu đồ phân rã quản lý đơn hàng
+2. Tóm tắt
+o Người sử dụng: Quản trị viên 
+o Chức năng:
+o Thêm mới đơn hàng
+o Cập nhật thông tin đơn hàng
+o Xóa hóa đơn
+o Tìm kiếm đơn hàng
+o Hiển thị danh sách đơn hàng
+o Ý nghĩa: Quản lý hóa đơn khi có khách hàng đặt hàng
+3. Dòng sự kiện
+❖ Dòng sự kiện chính
+o Khi Quản trị chọn chức năng “Quản lý đơn hàng” 1 bảng thông tin đơn đơn hàng và các chức năng sẽ được hiển thị ra.
+❖ Các dòng sự kiện khác
+o Không có
+❖ Các yêu cầu đặc biệt
+o Không có
+❖ Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+o Yêu cầu đăng nhập thành công với quyền Quản trị viên.
+❖ Trạng thái hệ thống sau khi thực hiện Use-case
+o Hiển thị danh sách các hóa đơn bán
+o Thêm, sửa, xóa,tìm kiếm thành công hoặc thất bại
+❖ Điểm mở rộng
+o Thêm mới đơn hàng
+o Sửa thông tin đơn hàng
+o Xóa đơn hàng
+o Tìm kiếm đơn hàng
+o Hiển thị danh sách đơn hàng
+Đặc tả Use-case “Quản lý nhân viên”
+4. Biểu đồ Use case
+    
+    Hình 7: Biểu đồ phân rã quản lý nhân viên
+5. Tóm tắt
+o Người sử dụng: Quản trị viên 
+o Chức năng:
+o Thêm mới thông tin nhân viên
+o Cập nhật thông tin nhân viên
+o Xóa nhân viên
+o Tìm kiếm nhân viên
+o Hiển thị danh sách nhân viên
+o Ý nghĩa: Quản lý nhân viên trong hệ thống
+6. Dòng sự kiện
+❖ Dòng sự kiện chính
+o Khi Quản trị viên chọn chức năng “Quản lý nhân viên” 1 bảng thông tin nhân viên và các chức năng sẽ được hiển thị ra.
+❖ Các dòng sự kiện khác
+o Không có
+❖ Các yêu cầu đặc biệt
+o Không có
+❖ Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+o Yêu cầu đăng nhập thành công với quyền Quản trị viên.
+❖ Trạng thái hệ thống sau khi thực hiện Use-case
+o Hiển thị danh sách  nhân viên
+o Thêm, sửa, xóa,tìm kiếm thành công hoặc thất bại
+❖ Điểm mở rộng
+o Thêm mới nhân viên
+o Sửa thông tin nhân viên
+o Xóa nhân viên
+o Tìm kiếm nhân viên
+o Hiển thị danh sách nhân viên
+Đặc tả Use-case “Quản lý hóa đơn nhập”
+1. Biểu đồ Use case
+    
+    Hình 8: Biểu đồ phân rã quản lý hóa đơn nhập
+2. Tóm tắt
+o Người sử dụng: Quản trị viên
+o Chức năng:
+o Thêm mới hóa đơn nhập
+o Cập nhật thông tin hóa đơn nhập
+o Xóa hóa đơn nhập
+o Tìm kiếm hóa đơn nhập
+o Hiển thị danh sách hóa đơn nhập
+o Ý nghĩa: Quản lý hóa đơn khi nhập sản phẩm mới về
+3. Dòng sự kiện
+❖ Dòng sự kiện chính
+o Khi người Quản trị viên và chọn chức năng “Quản lý hóa đơn”,1 bảng thông tin hóa đơn nhập và các chức năng sẽ được hiển thị ra.
+❖ Các dòng sự kiện khác
+o Không có
+❖ Các yêu cầu đặc biệt
+o Không có
+❖ Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+o Yêu cầu đăng nhập thành công với quyền Quản trị viên.
+❖ Trạng thái hệ thống sau khi thực hiện Use-case
+o Hiển thị danh sách các hóa đơn nhập
+o Thêm, sửa, xóa,tìm kiếm thành công hoặc thất bại
+❖ Điểm mở rộng
+o Thêm mới hóa đơn nhập
+o Sửa thông tin hóa đơn nhập
+o Xóa hóa đơn
+o Tìm kiếm hóa đơn nhập
+o Hiển thị danh sách hóa đơn nhập
+⮚ 
+ Đặc tả Use-case “Đặt hàng”
+1. Biểu đồ Use case
+    
+    Hình 9: Biểu đồ phân rã đặt hàng
+2. Tóm tắt
+o Người sử dụng: Khách hàng
+o Chức năng:
+o Xem giỏ hàng
+o Thêm chi tiết yêu cầu đặt hàng
+o Hiển thị danh sách sản phẩm trong giỏ hàng
+o Ý nghĩa: Quản lý đặt hàng
+3. Dòng sự kiện
+❖ Dòng sự kiện chính
+o Khi Khách hàng chọn chức năng “Đặt hàng”, 1 form “Đặt hàng” được hiển thị.
+o Danh sách các sản phẩm trong giỏ hàng được hiển thị 
+o Khách hàng phải điền đầy đủ thông tin yêu cầu để nhân viên có thể giao hàng một cách chính xác và nhanh nhất và chọn “Đặt hàng”. 
+o Khi xác nhận đặt hàng, khách hàng sẽ được xem lại danh mục các sản phẩm trong giỏ hàng và tổng số tiền phải trả (bao gồm cả phí VAT và vận chuyển). Khách hàng phải xác nhận lại lần cuối để hoàn tất quá trình đặt hàng hoặc hủy bỏ yêu cầu nếu thoát trang hiện tại.
+❖ Các dòng sự kiện khác
+o Không có
+❖ Các yêu cầu đặc biệt
+o Không có
+❖ Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+o Yêu cầu đăng nhập thành công với quyền Khách hàng
+❖ Trạng thái hệ thống sau khi thực hiện Use-case
+o Hiển thị danh sách sản phẩm trong giỏ hàng
+o Đặt hàng thành công hoặc hủy bỏ đơn đặt hàng
+❖ Điểm mở rộng
+o Thêm mới yêu cầu đặt hàng
+o Hủy bỏ đặt hàng
+Đặc tả Use-case “Quản lý giỏ hàng”
+1. Biểu đồ Use case
+    
+    Hình 10: Biểu đồ phân rã quản lý giỏ hàng
+2. Tóm tắt
+o Người sử dụng: Khách hàng 
+o Chức năng:
+o Thêm mặt hàng mới
+o Cập nhật số lượng mua
+o Xóa bỏ sản phẩm khỏi giỏ hàng
+o Hiển thị danh sách sản phẩm
+o Ý nghĩa: Quản lý giỏ hàng
+3. Dòng sự kiện
+❖ Dòng sự kiện chính
+o Khi Khách hàng chọn “Giỏ hàng”, 1 form “Quản lý giỏ hàng” được hiển thị.
+o Danh sách các sản phẩm được hiển thị và có 2 thao tác “Sửa” và “Xóa”.
+o Khi người dùng chọn “Sửa” người dùng có thể sửa số lượng và số lượng sản phẩm sẽ được cập nhật khi người dùng chọn “Cập nhật”. 
+o Khi người dùng chọn “Xóa”, sản phẩm sẽ được xóa bỏ khỏi giỏ hàng.
+o Người dùng có thể thêm sản phẩm mới với số lượng mặc định là 1.
+❖ Các dòng sự kiện khác
+o Không có
+❖ Các yêu cầu đặc biệt
+o Không có
+❖ Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+o Không yêu cầu đăng nhập
+❖ Trạng thái hệ thống sau khi thực hiện Use-case
+o Hiển thị danh sách các sản phẩm đã thêm vào giỏ hàng.
+o Thêm, sửa, xóa thành công hoặc thất bại.
+❖ Điểm mở rộng
+o Thêm mặt hàng mới
+o Sửa số lượng mua
+o Xóa bỏ sản phẩm khỏi giỏ hàng
+o Hiển thị danh sách sản phẩm đã thêm.
+2.2.2. Biểu đồ lớp
+Biểu đồ lớp của website
+  
+    Hình 11: biểu đồ lớp của website
+  
+2.2.3 Biểu đồ tuần tự
+2.2.3.1. Biểu đồ tuần tự Thêm loại sản phẩm
+    	
+  
+    Hình 12: Biểu đồ tuần tự Thêm loại sản phẩm
+2.2.3.2. Biểu đồ tuần tự Sửa loại sản phẩm
+    
+    Hình 13: Biểu đồ tuần tự Sửa loại sản phẩm
+    
+2.2.3.3. Biểu đồ tuần tự Xóa loại sản phẩm
+    
+    Hình 14: Biểu đồ tuần tự Xóa loại sản phẩm
+2.2.3.4. Biểu đồ tuần tự Tìm Kiếm loại sản phẩm
+    
+    Hình 15: Biểu đồ tuần tự Tìm Kiếm loại sản phẩm
+    
+2.2.3.5. Biểu đồ tuần tự Thêm mới nhà cung cấp
+    
+    
+    Hình 16: Biểu đồ tuần tự Thêm NCC
+2.2.3.6. Biểu đồ tuần tự Sửa thông tin nhà cung cấp
+     
+    Hình 17: Biểu đồ tuần tự Sửa NCC
+2.2.3.7. Biểu đồ tuần tự Xóa nhà cung cấp
+    
+    Hình 18: Biểu đồ tuần tự Xóa NCC
+    
+    
+2.2.3.8. Biểu đồ tuần tự Thêm sản phẩm mới
+    
+  
+    Hình 19: Biểu đồ tuần tự Thêm sản phẩm
+2.2.3.9. Biểu đồ tuần tự Sửa thông tin sản phẩm
+ 
+    	Hình 20: Biểu đồ tuần tự Sửa sản phẩm
+2.2.3.10. Biểu đồ tuần tự Xóa sản phẩm
+ 
+    	Hình 21: Biểu đồ tuần tự Xóa sản phẩm
+2.2.3.11. Biểu đồ tuần tự Thêm mới khách hàng
+    
+    Hình 22: Biểu đồ tuần tự Thêm thông tin khách hàng
+    
+2.2.3.12. Biểu đồ tuần tự Sửa thông tin khách hàng
+    
+    Hình 23: Biểu đồ tuần tự Sửa thông tin khách hàng
+    
+    
+2.2.3.13. Biểu đồ tuần tự Sửa thông tin hóa đơn hàng
+    
+    Hình 24: Biểu đồ tuần tự Sửa thông tin đơn hàng
+2.2.3.14. Biểu đồ tuần tự Xóa đơn hàng
+    
+    Hình 25: Biểu đồ tuần tự Xóa đơn hàng
+2.2.3.14. Biểu đồ tuần tự Tìm kiếm đơn hàng
+    
+    Hình 26: Biểu đồ tuần tự Tìm Kiếm đơn hàng
+    
+      
+CHƯƠNG 3: THIẾT KẾ HỆ THỐNG
+3.1. Thiết kế cơ sở dữ liệu
+3.1.1. Danh sách các lớp đối tượng và quan hệ
+STTTên lớpÝ nghĩa, ghi chú1Loại sản phẩmPhân loại hàng hóa trong kho theo loại hàng gồm các thông tin: mã loại, tên loại.2Nhà cung cấpGồm thông tin: mã NCC, Tên NCC.
+3Sản phẩmBao gồm các thông tin như: mã SP, tên sản phẩm, số lượng, mã loại sản phẩm, nhà cung cấp…4Khách hàngGồm thông tin như: mã KH, tên KH, địa chỉ, số điện thoại..5Đơn hàngGồm thông tin : mã ĐH, mã SP, mã GH, mã KH, Tên KH, số điện thoại…6Chi tiết đơn hàngGồm thông tin: mã CTHDN, mã HDN, mã NV, mã SP, Số lượng.7Nhân viênGồm thông tin: mã NV, tên NV, giới tính, ngày sinh, số điện thoại, địa chỉ, gmail, CMTND, Tên TK …8Hóa đơn nhậpGồm thông tin: mã HDN, ngày nhập, mã NCC …9Chi tiết hóa đơn nhậpGồm thông tin: mã CTHDN, mã HDN, mã NV, mã SP, Số lượng.10Thông báoNhận thông báo khi có đơn hàng11Tài khoảnTài khoản và mật khẩu của adminBảng 3: Bảng danh sách các đối tượng và quan hệ
+
+
+
+
+
+
+
+
+3.1.2. Mô tả chi tiết từng lớp đối tượng
+  ❖ Lớp loại sản phẩm
+STT    Tên trườngKiểu dữ liệuRàng buộc    Mô tả1MaLoaiInt(10)Not nullKhóa chính2TenLoaivarchar(50)Not nullTên của loại hàng
+    Bảng 4: Lớp loại sản phẩm
+❖ Lớp Nhà cung cấp
+STTTên trườngKiểu dữ liệu    Ràng buộc    Mô tả1MaCCInt(10)Not nullKhóa chính, thuộc tính tự động tang2TênNCCvarchar(50)Not nullTên nhà cung cấp3SDTInt(11)Not nullSố điện thoại4DiaChivarchar(15)Not nullĐịa chỉ của nhà cung cấp5Websitevarchar(50)Not nullURL website nahf cung cấp6Trạng TháiBit(1)Not nullTrạng thái nhà cung cấp  
+    Bảng 5: Lớp nhà cung cấp
+❖ Lớp Sản Phẩm
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1MaSPInt(10)Not nullKhóa chính2TenSPvarchar(200)Not nullTên sản phẩm3MaLoaiInt(10)Not nullKhóa ngoại4MaNCCInt(10)Not nullKhóa ngoại5SoLuongInt(3)SoLuong>=0Số lượng sản phầm còn6HinhAnhvarchar(100)Not nullTên Hình ảnh7DonGiafloatNot nullĐơn giá của sản phẩm8BaoHanhvarchar(50)Not nullThời gian bảo hành sản phẩm9KhuyenMaivarchar(50)   
+    Bảng 6: Lớp Sản Phẩm
+
+❖ Lớp Khách Hàng
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1MaKHInt(10)Not nullKhóa chính2TenKHvarchar(50)Not nullTên của khách hàng3SDTInt(11)Not nullSố điện thoại khách hàng4NgaySinhvarchar(12)Not nullNgày sinh khách hàng5DiaChivarchar(100)Not nullĐịa chỉ khách hàng5Gmailvarchar(50)Not nullEmail của khách hàng  
+    Bảng 7: Lớp khách hàng
+❖ Lớp Đơn Hàng
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1MaDHInt(10)Not nullKhóa chính2MaKHInt(10)Not nullKhóa ngoại3NgayDatvarchar(12)Not nullNgày đặt hàng4TongTienvarchar(10)Not nullTổng tiền cần thanh toán  
+    Bảng 8: Lớp đơn hàng
+    
+    
+❖ Lớp Chi Tiết Đơn Hàng
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1MaCTDHInt(10)Not nullKhóa chính2MaDHInt(10)Not nullKhóa ngoại3MaSPInt(10)Not nullKhóa ngoại4SoLuongInt(3)Not nullSố lượng sản phẩm bán5NgayDatvarchar(12)Not nullNgày đặt hàng6ThanhTienvarchar(10)Not nullTổng tiền của sản phẩm  
+    Bảng 9: Lớp chi tiết đơn hàng
+❖ Lớp Nhân Viên
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1MaNVInt(10)Not nullKhóa chính2TenNVvarchar(50)Not nullTên nhân viên3GioiTinhvarchar(3)Not nullGiới tính nhân viên4SDTvarchar(11)Not nullSố điện thoại nhân viên5DiaChivarchar(100)Not nullĐịa chỉ nhân viên6Gmailvarchar(50)Not nullEmail nhân viên7HinhAnhvarchar(50)Ảnh nhân viên8TenTKvarchar(30)Not nullKhóa ngoại  
+    Bảng 10: Lớp nhân viên
+❖ Lớp Hóa Đơn Nhập
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1MaHDNInt(10)Not nullKhóa chính2NgayNhapdateNot nullNgày nhập3MaNCCInt(10)Not nullKhóa ngoại4TongTienfloatNot nullTổng tiền cần thanh toán    
+    Bảng 11: Lớp hóa đơn nhập
+❖ Lớp Chi Tiết Hóa Đơn Nhập
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1MaCTHDNInt(10)Not nullKhóa chính2MaDHNInt(10)Not nullKhóa ngoại3MaNVInt(10)Not nullKhóa ngoại4MaSPInt(10)Not nullKhóa ngoại5SoLuongInt(3)Not nullSố lượng nhập  
+    Bảng 12: Lớp chi tiết hóa đơn nhập
+❖ Lớp Thông Số Kỹ Thuật
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1IDTSKTInt(10)Not nullKhóa chính2MaSPInt(10)Not nullKhóa ngoại3CPUvarchar(500)Not nullCPU laptop4RAMvarchar(500)Not nullRAM laptop5HARDvarchar(500)Not nullHARD laptop6VGAvarchar(500)Not nullVGA laptop7LCDvarchar(500)Not nullLCD laptop8OSvarchar(500)Not nullOS laptop9WIFIvarchar(500)Not nullWIFI laptop10OPTIONvarchar(500)Not nullOPTION laptop11BATTERYvarchar(500)Not nullBATTERY laptop12IMG1varchar(500)Ảnh13IMG2varchar(500)Ảnh14IMG3varchar(500)Ảnh  
+    Bảng 13: Lớp thông số kĩ thuật
+    
+    
+    
+❖ Lớp Thông Báo
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1MaTBInt(10)Not nullKhóa chính2MaDHInt(10)Not nullKhóa ngoại3TenKHvarchar(50)Not nullTên khách hàng4NgayDatvarchar(12)Not nullNgày đặt hàng5Diachivarchar(500)Not nullĐịa chỉ khách hàng6TrangThaiBit(1)Not nullTrạng thái thông báo  
+    Bảng 14: Lớp thông báo
+❖ Lớp Tài Khoản
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1TenTKvarchar(30)Not nullKhóa chính2MatKhauvarchar(20)Not nullMật khẩu  
+    Bảng 15: Lớp tài khoản
+    
+    
+    		
+    
+    
+    
+
+ 
+    Hình 27: Hình biểu diễn mô hình cơ sở dữ liệu
+    
+1.1. Trang chủ
+    
+    Hình 28: Demo trang chủ
+    
+    
+    
+    
+1.2. Trang quản trị
+    
+    	Hình 29: Demo trang quản lý sản phẩm
+
+CHƯƠNG 4: KẾT LUẬN4.1. Kết quả đạt được của đề tài
+- Hoàn thành một số chức năng cơ bản của website.
+- Xây dựng website giúp cho khách hàng có thể xem sản phẩm và đặt hàng nhanh hơn và tiết kiệm hơn.
+- Sản phẩm được trình bày 1 cách rõ ràng và dễ sử dụng.
+4.2. Hạn chế của đề tài
+- Một số chức năng còn nhiều hạn chế.
+- Chưa thực sự xử lý được việc nhập nhiều thông tin trong một lần cập nhật các thông tin.
+4.3. Hướng phát triển của đề tài
+    Đề tài này có thể phát triển theo các hướng như sau:
+         - Cho phép người quản trị và khách hàng có thể chat trực tuyển.
+         - Liên kết được với nhiều website khác.
+         - Phát triển thêm đa ngôn ngữ dễ dàng cho người sử dụng.
+    
+
+PHỤ LỤC
+1. Bảng phân công nhiệm vụ thực hiện bài tập lớn
+TTThành viênCác công việcGhi chú1Nguyễn Văn Dũng-   Xây dựng giao diện web site và giao diện quản trị
+-     Làm báo cáo và slide    
+    Bảng 3: Công việc thực hiện bài tập lớn
+    
+    
+
+    
+
+    
+
+    2
+    
+
+    
+
+    
+

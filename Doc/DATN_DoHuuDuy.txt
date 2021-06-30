@@ -1,0 +1,346 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Nếu cách đây vài năm, để có trong tay một chiếc di động cảm ứng chơi game là vấn đề xa xỉ thì bây giờ việc các bạn trẻ, thậm chí học sinh cấp 2-3 sở hữu cho mình chiếc Smartphone có thể chơi được hầu hết các tựa game mobile trên thị trường là điều trở nên bình thường. Cùng với sự phát triển không ngừng của công nghệ trên di động, điều này vô hình trung tạo nên xu hướng phát triển game mobile lớn mạnh từng ngày.
+    Unity là một “Cross-platform Game Engine” tạm hiểu là công cụ phát triển game đa nền tảng được phát triển bởi Unity Technologies. Game engine này được sử dụng phổ biến để phát trển game trên PC, consoles, thiết bị di động và trên websites.
+    Sau gần 4 năm học chuyên ngành công nghệ thông tin tại trường với những hiểu biết tích lũy được, em đã lên ý tưởng sử dụng công cụ Unity xây dựng game “Road of  Ninja” với lối chơi hấp dẫn, thú vị, hướng tới đa dạng đối tượng người chơi.
+1.2 Mục tiêu của đề tài
+- Xây dựng nhân vật game với chuyển động và skin chiến đấu đa dạng.
+- Hệ thống cửa hàng vật phẩm và map chơi đầy đủ, âm thanh sinh động.
+- Cốt truyện game và lời thoại xúc tích, chặt chẽ.
+- Giao diện cùng thao tác chơi phù hợp, người chơi dễ dàng tiếp cận.
+- Đảm bảo game chạy ổn định, mượt mà trên nhiều model.
+1.3 Giới hạn và phạm vi của đề tài
+• Môi trường phần cứng
+- CPU: Pentium IV 2.4 GHz hoặc cao hơn
+- RAM: tối thiểu 4Gb
+- -HDD: dung lượng tối thiểu trống 15Gb
+• Môi trường phần mềm
+- Hệ điều hành: Windows 7 hoặc cao hơn
+- Công cụ Unity
+- Visual Studio 2015 hoặc cao hơn
+1.4 Nội dung thực hiện
+      Nội dung thực hiện/nghiên cứu trong đồ án cụ thể như sau:
+- Xây dựng cốt truyện
+- Xây dựng Animation, Animator cho từng nhân vật
+- Xây dựng thanh HP, MP, Tính điểm
+- Xây dựng hệ thống chướng ngại vật
+- Xây dựng hệ thống kẻ thù 
+- Xây dựng map chơi
+- Xây dựng hệ thống kĩ năng đặc biệt (Skin), các vật phẩm trong game (item)
+- Xây dựng âm thanh trò chơi
+- Xây dựng hiệu ứng hình ảnh (Special Effects)
+- Fix bug, tối ưu, test game
+1.5 Phương pháp tiếp cận
+- Cách tiếp cận : Nghiên cứu các game 2D platform đã được xây dựng bằng công cụ Unity.
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu;
+o Phương pháp phân tích mẫu;
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Engine Unity
+2.1.1 Unity là gì?
+    Đã qua rồi thời kỳ làm game trên nền Flash căn bản và buồn chán với những chuyển động thật cứng nhắc. Unity mang lại sức mạnh kỳ diệu cho nhân vật mà chúng ta muốn thể hiện sống động hơn trong không gian 3 chiều đầy huyền ảo. Công nghệ cao này tạo ra một bước đột phá mới về sự khác biệt trong công nghệ làm game hiện nay, mang đến cho người chơi 1 cảm giác rất khác lạ và hào hứng trong từng chuyển động, tương lai công nghệ này được áp dụng vào game Việt Nam sẽ mở ra một trang mới trong thế giới game huyền ảo.
+    Unity được dùng để làm video game, hoặc những nội dung có tính tương tác như thể hiện kiến trúc, hoạt hình thời gian thực. Unity hao hao với Director, Blender game engine, Virtools hay Torque Game Builder trong khía cạnh dùng môi trường đồ họa tích hợp ở quá trình phát triển game là chính.
+    Unity là một trong những engine được giới làm game không chuyên cực kỳ ưa chuộng bởi khả năng tuyệt vời của nó là phát triển trò chơi đa nền. Trình biên tập có thể chạy trên Windows và Mac OS, và có thể xuất ra game cho Windows, Mac, Wii, iOS, Android. Game cũng có thể chơi trên trình duyệt web thông qua plugin Unity Web Player. Unity mới bổ sung khả năng xuất ra game trên widget cho Mac, và cả Xbox 360, PlayStation 3.
+    
+    Hình 2. 1: Hình minh họa đa nền
+    Chỉ với khoản tiền bỏ ra khá khiêm tốn (1.500 USD) là phiên bản pro đã nằm trong tay của chúng ta, dĩ nhiên tại Việt Nam số tiền này vẫn là quá lớn nhưng thật may là đã có phiên bản Unity Free. Tuy nhiên, nhiều tính năng quan trọng (Network) bị cắt giảm nhưng đó không phải là vấn đề quá lớn nếu muốn phát triển một tựa game tầm trung.
+    Vào năm 2009, Unity nằm trong top 5 game engine tốt nhất cho việc sản xuất game với chỉ sau 4 năm phát triển. Unity đứng thứ 4, xếp sau Unreal Engine 3, Gamebryo Engine (được VTC Studio mua về phát triển SQUAD) và Cry Engine 2. Lượng tài liệu hướng dẫn Unity rất phong phú. Hơn thế nữa nó còn có sẵn một cộng đồng cực lớn với diễn đàn riêng. Bất cứ điều gì không hiểu chúng ta đều có thể thoải mái hỏi và nhận được câu trả lời nhanh chóng, tận tâm.
+    Quá trình tạo địa hình cũng như truy xuất từ các phần mềm 3DSMax, Maya, Cinema4D... rất nhanh chóng. Sức mạnh và sự tiện lợi của Unity là vô cùng lớn.
+    Sức mạnh: Unity có thể tạo ra được nhiều loại game 2D, 3D đa dạng, dễ sử dụng với người làm game chưa chuyên nghiệp, chất lượng cao, chạy hầu hết trên các hệ điều hành.
+    Sự tiện lợi: nếu chúng ta là một người chuyên dùng 3Dmax, hay Maya hoặc phần mềm mã nguồn mở Blender thì quả là thật tuyệt, chúng ta sẽ có một lợi thế lớn khi viết game trên Unity này, bởi công việc tạo các mô hình 2D, 3D sẽ trở lên dễ dàng hơn rất nhiều, việc kết hợp giữa người lập trình và người thiết kế các mô hình sẽ nhanh và hiệu quả hơn. Trong Unity chúng ta có thể import trực tiếp các file mô hình đang thiết kế và sẽ thiết kế hoàn thiện tiếp nếu chưa xong trong khi đó công việc import chỉ diễn ra một lần. Không như việc phải dùng các công cụ khác để thực hiện viết game chúng ta sẽ phải xuất chúng ra một dạng nào đó và mỗi lần sửa lại phần mô hình chúng ta lại phải import lại, và như thế là quá mất thời gian trong việc tạo và chỉnh sửa các mô hình theo ý muốn. Ngoài ra Unity còn cho chúng ta trực tiếp tạo các mô hình nếu muốn. Việc đặt các thuộc tính vật lý trong Unity cũng cực kỳ dễ dàng và hỗ trợ sẵn nhiều chức năng.
+2.1.2 Lịch sử hình thành và phát triển của Unity
+      Phần lõi của Unity ban đầu được viết bởi Joachim Ante vào năm 2001. Sau đó công ty được hình thành vào năm 2005 và bắt đầu với phiên bản 1.0. Đến năm 2007, Unity được nâng lên phiên bản 2.0. Unity bắt đầu hỗ trợ iPhone vào năm 2008. Vào tháng 6/2010, Unity chính thức hỗ trợ Android và cho ra đời phiên bản 3.0 có hỗ trợ Android vào tháng 9/2010. Có thể thấy tốc độ phát triển của Unity khá nhanh.
+      Năm 2012, Unity đạt 1,3 triệu người sử dụng gồm Bigpoint, Cartoon Network, Coca-Cola, Disney, Electronic Arts, LEGO, Microsoft, NASA, Ubisoft, Warner Bros, các hãng phim lớn nhỏ, các chuyên gia độc lập, sinh viên và những người đam mê.
+      
+      
+2.1.3 Kiến trúc Game Engine
+      Engine Unity hỗ trợ cho chúng ta UnityAPI để viết script game. UnityAPI là API lập trình game trong Unity rất mạnh. UnityAPI chứa các đối tượng và phương thức hỗ trợ hầu hết các đối tượng và các loại thành phần trong Unity.
+      Trong một scene thường có nhiều đối tượng game. Mỗi đối tượng này có thể có hoặc không có đoạn script nào gắn lên đó. Nếu muốn gắn script vào đối tượng, ta bắt buộc phải kế thừa class đó từ lớp MonoBehaviour của UnityAPI và tên class phải trùng với tên file script. Mỗi script khi gắn lên đối tượng game đều được đối tượng game xem như một thành phần bên trong và được cấp phát vùng nhớ khi chạy game.
+      
+    Hình 2. 2: Tổng quan kiến trúc Unity
+    Bên trong UnityAPI chứa rất nhiều lớp hỗ trợ lập trình game, trong đó có một số lớp quan trọng như :
+- MonoBehaviour: tất cả các script muốn gắn vào một đối tượng game bắt buộc phải kế thừa từ lớp này.
+- GameObject: lớp cha của tất cả các thực thể trong scene.
+- Component: lớp cha của tất cả các thành phần có thể gắn vào đối tượng.
+- Transform: giúp thay đổi vị trí, xoay, biến đổi tỉ lệ mô hình.
+- Input: hỗ trợ lập trình với chuột, cảm ứng đa điểm, cảm biến gia tốc.
+- Camera: giúp lập trình camera.
+- Light: giúp tạo ánh sáng trong game.
+- Projector: giúp chiếu texture lên bề mặ t vậ t thể.
+- ParticleEmitter: hỗ trợ tạo các hiệu ứng particle đẹp mắt.
+- Audio: hỗ trợ lập trình với âm thanh.
+- Animation: chạy chuyển động của mô hình nhân vật.
+- Rigidbody: giúp tạo hiệu ứng vật lý liên quan đến trọng lực như bóng nẩy, lăn, ..
+- CharacterController: giúp điều khiển nhân vật di chuyển theo độ cao địa  hình.
+- Collider: hỗ trợ lập trình va chạm giữa các vật thể.
+- GUI: giúp lập trình giao diện người dùng trên Unity.
+2.2 Các đặc điểm và tính năng của Unity
+2.2.1 Rendering (kết xuất hình ảnh)
+    Giống như tất cả các Engine hoàn chỉnh khác, Unity hỗ trợ đầy đủ khả năng kết xuất hình ảnh (Redering) cùng nhiều hỗ trợ cho phép áp dụng các công nghệ phổ biến trong lĩnh vực đồ họa 3D nhằm cải thiện chất lượng hình ảnh. Các phiên bản gần đây nhất của Unity được xây dựng lại thuật toán nhằm cải thiện hiệu suất kết xuất hình ảnh đồng thời tăng cường chất lượng hình ảnh sau khi kết xuất
+
+    Hình 2. 3: Rendering trong Unity
+2.2.2 Lighting (ánh sáng)
+    Ánh sáng là một điều thiết yếu giúp môi trường trở nên đẹp và thực tế hơn. Unity cũng cung cấp nhiều giải pháp đa dạng cho phép chúng ta áp dụng ánh sáng một cách tốt nhất vào môi trường trong trò chơi với nhiều loại nguồn sáng như ánh sáng có hướng (Directional Light), ánh sáng điểm (Point Light), ... Một số công nghệ và kỹ thuật về ánh sáng được Unity hỗ trợ: Lingtmapping, Realtime Shadows, hiệu ứng Sunshafts và Lens Flares.
+
+    Hình 2. 4: Lighting trong Unity
+2.2.3 Terrains (địa hình)
+      Terrains còn gọi chung là địa hình bao gồm phần đất nền của môi trường trong trò chơi cùng các đối tượng gắn liền như cây, cỏ, …
+      Unity cung cấp một công cụ hỗ trợ rất tốt khả năng này với tên gọi là Terrains Tools cho phép chúng ta thiết kế địa hình với các công cụ vẽ dưới dạng Brush có nhiều thông số tùy chỉnh để tạo hình và lát Texture cho địa hình. Cùng với Terrain Tools là Tree Creator, một công cụ mạnh mẽ cho phép chúng ta tạo ra cây cối với hình dạng, kích thước và kiểu cách đa dạng.
+
+    Hình 2. 5: Terrains trong Unity
+2.2.4 Substances (Texture thông minh)
+      Substances có thể hiểu đơn giản là một dạng tùy biến Textures nhằm làm đa dạng chúng trong nhiều điều kiện môi trường khác nhau. Unity cung cấp khả năng này thông qua các API dựng sẵn trong thư viện, hỗ trợ lập trình viên lập trình để tùy biến hình ảnh được kết xuất của Texture
+2.2.5 Physics (vật lý)
+      PhysX là một Engine mô phỏng và xử lí vật lý cực kỳ mạnh mẽ được phát triển bởi nhà sản xuất card đồ họa hàng đầu thế giới NVIDIA. Unity đã tích hợp Engine này vào để đảm nhận mọi vấn đề vật lý.
+    
+    Hình 2. 6: Physics trong Unity
+2.2.6 Pathfinding (tìm đường)
+      Đây là một tính năng rất mới mẻ đến từ phiên bản Unity 3.5. Với các phiên bản trước, để phát triển khả năng tìm đường cho trí thông minh nhân tạo (AI), nhà phát triển phải hoàn toàn tự xây dựng cho mình một hệ thống tìm đường riêng biệt. Tuy nhiên ở phiên bản 3.5 đến nay, Unity hỗ trợ cho chúng ta tính năng Pathfinding cho phép tạo ra khả năng tìm đường cho AI nhờ vào khái niệm lưới định hướng (NavMesh).
+2.2.7 Audio (âm thanh)
+      Về âm thanh, Unity tích hợp FMOD – công cụ âm thanh thuộc hàng mạnh nhất hiện nay. Qua đó Unity hỗ trợ chúng ta nhập và sử dụng nhiều định dạng tập tin âm thanh khác nhau.
+    
+    Hình 2. 7: Audio trong Unity
+2.2.8 Programming (lập trình)
+      Lập trình là một trong những yếu tố quan trọng nhất trong phát triển Game. Lập trình cho phép nhà phát triển tạo nên khả năng tương tác, trí thông minh và yếu tố Gameplay cho trò chơi. Unity cho phép chúng ta lập trình bằng nhiều ngôn ngữ mạnh mẽ và phổ biến với các lập trình viên như: C#, Java Scrip và Boo.
+2.2.9 Networking
+      Networking cho phép chúng ta tạo ra các trò chơi trực tuyến (online) – một trong những thể loại trò chơi thu hút được nhiều người chơi nhất. Tính năng này sẽ hỗ trợ đầy đủ để chúng ta tạo nên các khía cạnh phổ biến trong Game online như hệ thống điểm kinh nghiệm , chat và tương tác thời gian thực, …
+       Một số tính tăng cung cấp bởi Networking như: State Synchronization, Realtime Networking, Remote Procedure Calls, Backend Connectivity, Web Browser Integration, Web Connectivity.
+      
+    Hình 2. 8: Networking trong Unity
+2.3 Các thành phần chính trong Unity
+2.3.1 Assets
+      Assets là những tài nguyên xây dựng nên một dự án Unity. Từ những tập tin hình ảnh, mô hình 3D đến các tập tin âm thanh. Unity gọi các tập tin mà chúng ta dùng để tạo nên trò chơi là tài sản (Assets). Điều này lí giải tại sao tất cả các tập tin, thư mục của các dự án Unity đều được lưu trữ trong một thư mục có tên là “Assets”.
+
+    Hình 2. 9: Asset trong Uinty
+2.3.2 Scenes
+      Trong Unity, chúng ta cần hiểu một cảnh (hay một phân đoạn) nghĩa là một màn chơi riêng biệt hoặc một khu vực hay thành phần có trong nội dung của trò chơi (ví dụ như Game menu). Bằng cách tạo nên nhiều Scenes cho trò chơi, chúng ta có thể phân phối thời gian tải hoặc kiểm tra các phần khác nhau củ a trò chơi một cách riêng lẽ.
+      
+    Hình 2. 10: Các Scene của Unity
+2.3.3 Game Object
+      Khi Assets được sử dụng trong Scene, chúng trở thành Game Object – một thuật ngữ được sử dụng trong Unity (đặc biệt là trong mả ng lập trình). Tất cả các Game Object đều chứa ít nhất một thành phần là Transform. Transform là thông tin về vị trí, góc xoay và tỉ lệ của đối tượng, tất cả được mô tả bởi bộ 3 số X, Y, Z trong hệ trục tọa độ . Thành phần này có thể được tùy biến lại trong quá trình lập trình nhằm thay đổi vị trí, góc quay và tỉ lệ của đối tượng qua các đoạn mã. Từ các thành phần cơ bản này, chúng ta sẽ tạo ra Game Object với các thành phần khác, bổ sung chức năng cần thiết để xây dựng nên bất kỳ một thành phần nào trong kịch bản Game mà chúng ta đã tưởng tượng.
+      
+    Hình 2. 11: Kéo tài nguyên vào Scene để sử dụng
+2.3.4 Components
+      Components có nhiều hình thức khác nhau. Chúng có thể xác định hành vi, cách xuất hiện,… hay ảnh hưởng đến các khía cạnh khác trong chức năng của Game Object trong trò chơi. Bằng cách “gắn” chúng vào trong Game Object, chúng ta ngay lập tức có thể áp dụng tác động của chúng lên đối tượng. Những Components phổ biến trong quá trình phát triển trò chơi đều được Unity hỗ trợ sẵn. Ví dụ như thành phần Rigidbody đã được đề cập hay các yếu tố đơn giản khác như ánh sáng, Camera và nhiều thành phần khác. Để tạo nên các yếu tố tương tác trong trò chơi, chúng ta sẽ sử dụng Script (mã kịch bản), chúng cũng được xem như là một Components trong Unity.
+
+
+    Hình 2. 12: Các thành phần trong đối tượng Camera
+2.3.5 Scripts
+      Được Unity xem như một Components, Script là một thành phần thiết yếu trong quá trình phát triển trò chơi và đáng được đề cập đến như một khái niệm “chìa khóa”. Unity cung cấp cho chúng ta khả năng viết Script bằng cả 3 loại ngôn ngữ là: JavaScript, C# và Boo (một dẫn xuất của ngôn ngữ Python).
+      Unity không đòi hỏi chúng ta phải học làm thế nào để lập trình trong Unity, nhưng hầu như chúng ta phải sử dụng Script tại mỗi thành phần trong kịch bản mà chúng ta phát triển. Unity đã xây dựng sẵn một tập hợp đa dạng các lớp, hàm mà chúng ta hoàn toàn có thể ứng dụng trong quá trình lập trình cho trò chơi của mình.
+      Để viết script, chúng ta sẽ làm việc với một trình biên tập Script độc lập của Unity, hoặc với chương trình Mono Developer được tích hợp và đồng bộ với Unity trong những phiên bản mới nhất hiện nay.
+      Mono developer là một IDE khá tốt để lập trình khi cung cấp nhiều chức năng tương tự như Visual studio. Mã nguồn viết trên Mono Developer sẽ được cập nhật và lưu trữ trong dự án Unity.
+
+    Hình 2. 13: Cách tạo file script mới
+2.3.6 Prefabs
+      Prefabs cho phép chúng ta lưu trữ các đối tượng với những Components và những thiết đặt hoàn chỉnh. Có thể so sánh với khái niệm cơ bản là MovieClip trong Adobe Flash, Prefabs chỉ đơn giản là một Container (một đối tượng chứa) rỗng mà chúng ta có thể đưa bất kì một đối tượng hay dữ liệu mẫu nào mà chúng ta muốn tái sử dụng về sau.
+      
+    Hình 2. 14: Một số đối tượng trong Prefabs
+2.4 Giao diện của Unity
+2.4.1 Giao diện bố trí
+    Giao diện của Unity có khả năng tùy chỉnh bố trí tương tự như nhiều môi trường làm việc khác. Dưới đây là một kiểu bố trí điển hình trong Unity:
+    
+    Hình 2. 15: Giao diện bố trí
+- Scene (1): Nơi mà trò chơi sẽ đượ c xây dựng.
+- Hierarchy (2): Danh sách các Game Object trong scene.
+- Inspector (3): Những thiết lập, thành phầ n, thuộc tính củ a đố i tượ ng (hoặc Asset) đang được chọn.
+- Game (4): Cửa sổ xem trước, nó chỉ hoạ t độ ng trong chế độ “Play” (Preview – xem trước).
+- Project (5): Danh sách các Assets của dự án, được ví như thư việ n của dự án.
+2.4.2 Cửa sổ Scene và Hierarchy
+    Cửa sổ scene là nơi mà chúng ta sẽ xây dựng các thực thể, đố i tượng của dự án vào đó. Cửa sổ cung cấp góc nhìn phối cảnh (Perspective (góc nhìn 3D), chúng ta có thể chuyển qua các góc nhìn khác như từ trên xuống hoặc từ dưới lên (Top Down), từ trái sang phải hoặc phải sang trái (Side On), từ trước ra sau hoặc sau đến trước (Front On). Cửa sổ này sẽ kết hình xuất đầy đủ những hình ảnh trong thế giới của trò chơi mà chúng ta tạo ra dưới dạng một vùng biên tập mà chúng ta có thể biên tập, chỉnh sửa trực tiếp thế giới đó.
+    Khi kéo thả Assest vào cửa sổ Scene, Assets sẽ trở thành Game Object. Cửa sổ Scene được ràng buộc cùng với cửa sổ Hierarchy, cửa sổ Hierarchy liệt kệ danh sách các Game Object có trong Scene và được sắp xếp theo thứ tự chữ cái từ A­Z.
+
+    Hình 2. 16: Các nút chức năng cho cửa sổ Scene
+    Cửa sổ Scene còn đi kèm với 4 bốn nút chức năng hữu ích được hiển thị dưới dạng hình ảnh như trên. Chúng có thể được lựa chọn thông qua các phím tắ t Q, W, E và R. Những nút này có các chức năng như sau:
+    Công cụ bàn tay (Q): Công cụ này cho phép chúng ta di chuyển đến một khu vực nào đó trong Scene bằng thao tác kéo thả thuộc trái.
+    Công cụ di chuyển (W): Công cụ này cho phép chúng ta chọn một đối tượng trong cảnh và thực hiện thao tác di chuyển, thay đổi vị trí của đối tượng đó. Khi chọn, tại vị trí của đối tượng sẽ hiển thị các trục và mặt phẳng gắn liền với đối tượng cho phép chúng ta di chuyển đối tượng trượt theo các trục, mặt phẳng hoặc di chuyển một cách tùy ý.
+    Công cụ xoay (E): Công cụ này có đặc điểm và cách sử dụng giống với công cụ di chuyển, tuy nhiên thay vì để di chuyển vị trí của đối tượng thì công cụ này giúp chúng ta xoay đối tượng xoay quanh trục hay tâm của đối tượng.
+    Công cụ điều chỉnh tỉ lệ (R): Cũng tương tự như công cụ di chuyển và xoay, công cụ này cho phép chúng ta tùy chỉnh kích thước, tỉ lệ của đối tượng một cách tùy ý.
+
+    Hình 2. 17: Cửa sổ Hierarchy
+2.4.3 Cửa sổ Inspector
+    Cửa sổ Inspector có thể được xem như một công cụ cho phép chúng ta tùy chỉnh các thiết đặt, các thành phần của Game Object hoặc Assets đang được chọn.
+    
+    Cửa sổ này sẽ hiển thị đầy đủ các Components của đối tượng mà chúng ta chọn. Nó cho phép chúng ta điều chỉnh các biến của Components dưới các hình thức như: Textbox, Slider, Button, Drop­dowm Menu…
+    Ngoài việc hiển thị các Component của đối tượng được chọn, cửa sổ Inspector còn hiển thị các thiết đặt chung của hệ thống hay của trò chơi khi ta chọn chúng từ menu Edit.
+
+    Hình 2. 18: Cửa sổ Inspector
+    Trong hình trên, chúng ta thấy cửa sổ Inspector đang hiển thị một vài thuộc tính, Components của một đối tượng đang được chọn. Trong đó, bao gồm 2 Components là Transform và Animation. Cửa sổ Inspector sẽ cho phép chúng ta thay đổi các thiết đặt trên. Các Components này còn có thể được tạm thời vô hiệu hóa vào bất kỳ lúc nào chúng ta muốn bằng cách bỏ chọn Checkbox ở góc trên bên trái của mỗi Component, việc này sẽ rất hữu ích cho chúng ta khi muốn kiểm tra hay thử nghiệm các Components này. Ngoài ra, cửa Inspector còn cho phép chúng ta vô hiệu hóa toàn bộ một đối tượng đang được chọn bằng cách bỏ chọn Checkbox ở trên cùng góc trái của cửa sổ Inspector.
+2.4.4 Cửa sổ Project
+
+    Hình 2. 19: Cử a sổ Project
+    Cửa sổ Project là cửa sổ cho phép chúng ta nhìn thấy trực tiếp nội dung của thư mục Assets của dự án. Mỗi dự án Unity đều được chứa trong một thư mục cha. Trong đó có 3 thư mục con là Assets, Library và Temp (chỉ có khi Unity đang chạy). Đặt tất cả các Assets vào thư mục Assets có nghĩa là ngay lập tức chúng ta sẽ thấy chúng xuất hiện trong cửa sổ Project. Ngoài ra, khi thay đổi vị trí của Assets trong thư mục Assets hay lưu tập tin lại từ một chương trình ứng dụng thứ 3 nào khác (ví dụ như Photoshop), sẽ làm cho Unity nhập lại (Re­Import) Assets, phản ánh sự thay đổi này ngay lâp tức trong cửa sổ Project và Scene có sử dụng Assets vừa được thay đổi.
+    Cửa sổ Project được tích hợp nút Create, nút này cho phép chúng ta tạo mới bất kì một Assets mới nào, ví dụ như Script, Prefabs, Materials, …
+2.4.5 Cửa sổ Game
+    Cửa sổ Game sẽ được gọi khi chúng ta nhấn vào nút Play (là một hành động thực hiện test trò chơi). Cửa sổ này cho phép chúng ta tùy chọn về thiết đặt tỉ lệ màn hình, nó phản ánh phạm vi trong Scene mà người chơi có thể thấy được với mỗi tỉ lệ màn hình tương ứng, ví dụ như với mỗi tỉ lệ màn hình 4:3, 16:9 thì người chơi sẽ có một phạm vi nhìn thấy khác nhau.
+    Sau khi nhấn vào nút Play, chúng ta sẽ ở chế độ Testing, lúc này mọi thay đổi về các thuộc tính, Components, … của đối tượng sẽ chỉ là tạm thời. Tức là chúng sẽ trở về như ban đầu (trước khi nhấn nút Play) sau khi kết thúc chế độ Testing.
+
+    Hình 2. 20: Các loại hình ảnh trong cửa sổ game
+2.5 Tổng quan về Visual Studio
+2.5.1 Visual Studio là gì?
+    Microsoft Visual Studio là một môi trường phát triển tích hợp (IDE) từ Microsoft. Nó được sử dụng để phát triển chương trình máy tính cho Microsoft Windows, cũng như các trang web, các ứng dụng web và các dịch vụ web. Visual Studio sử dụng nền tảng phát triển phần mềm của Microsoft như Windows API, Windows Forms, Windows Presentation Foundation, Windows Store và Microsoft Silverlight. Nó có thể sản xuất cả hai ngôn ngữ máy và mã số quản lý.
+    Visual Studio bao gồm một trình soạn thảo mã hỗ trợ IntelliSense cũng như cải tiến mã nguồn. Trình gỡ lỗi tích hợp hoạt động cả về trình gỡ lỗi mức độ mã nguồn và gỡ lỗi mức độ máy. Công cụ tích hợp khác bao gồm một mẫu thiết kế các hình thức xây dựng giao diện ứng dụng, thiết kế web, thiết kế lớp và thiết kế giản đồ cơ sở dữ liệu. Nó chấp nhận các plug-in nâng cao các chức năng ở hầu hết các cấp bao gồm thêm hỗ trợ cho các hệ thống quản lý phiên bản (như Subversion) và bổ sung thêm bộ công cụ mới như biên tập và thiết kế trực quan cho các miền ngôn ngữ cụ thể hoặc bộ công cụ dành cho các khía cạnh khác trong quy trình phát triển phần mềm.
+
+    Hình 2. 21: Visual Studio
+    Visual Studio hỗ trợ nhiều ngôn ngữ lập trình khác nhau và cho phép trình biên tập mã và gỡ lỗi để hỗ trợ (mức độ khác nhau) hầu như mọi ngôn ngữ lập trình. Các ngôn ngữ tích hợp gồm có C, C++ và C++/CLI (thông qua Visual C++), VB.NET (thông qua Visual Basic.NET), C# (thông qua Visual C#) và F# (như của Visual Studio 2010). Hỗ trợ cho các ngôn ngữ khác như J++/J#, Python và Ruby thông qua dịch vụ cài đặt riêng rẽ. Nó cũng hỗ trợ XML/XSLT, HTML/XHTML, JavaScript và CSS.
+    Microsoft cung cấp phiên bản "Express" (đối với phiên bản Visual Studio 2013 trở về trước) và "Community" (đối với bản Visual Studio 2015 trở về sau) là phiên bản miễn phí của Visual Studio.
+2.5.2 Cấu trúc của Visual Studio
+    Các Visual Studio không hỗ trợ cho bất kỳ ngôn ngữ lập trình nào về giải pháp hoặc công cụ thực chất, thay vào đó nó cho phép cắm chức năng được mã hóa như là một VSPackage. Khi cài đặt, các chức năng có sẵn như là một dịch vụ. IDE cung cấp ba dịch vụ: SVsSolution cung cấp khả năng liệt kê các dự án và các giải pháp; SVsUIShell cung cấp cửa sổ và giao diện người dùng và SVsShell. Ngoài ra, IDE cũng có trách nhiệm điều phối và cho phép truyền thông giữa các dịch vụ. Tất cả các biên tập viên, nhà thiết kế, các loại dự án và các công cụ khác được thực hiện theo VSPackages. Visual Studio sử dụng COM để truy cập VSPackages. Visual Studio SDK cũng bao gồm Managed Package Framework (MPF) là một tập hợp quản lý bao bọc quanh các COM-interfaces cho phép các gói được viết bằng bất kỳ ngôn ngữ nào. Tuy nhiên, MPF không cung cấp tất cả các chức năng bộc lộ trong Visual Studio COM-interfaces.[9] Các dịch vụ có thể được tiêu thụ để tạo ra các gói khác, để thêm chức năng cho Visual Studio IDE.
+    Hỗ trợ cho các ngôn ngữ lập trình được thêm vào bằng cách sử dụng một VSPackage đặc biệt được gọi là một dịch vụ ngôn ngữ. Một dịch vụ ngôn ngữ định nghĩa giao tiếp khác nhau mà việc thực hiện VSPackage có thể thực hiện để hỗ trợ thêm cho các chức năng khác nhau. Các chức năng có thể được thêm vào theo cách này bao gồm cú pháp màu, hoàn thành báo cáo kết quả, kết hợp đôi, công cụ chú giải tham số thông tin, danh sách thành viên và đánh dấu lỗi trên nền biên dịch. Nếu giao diện được thực hiện, các tính năng sẽ có sẵn ngôn ngữ. Dịch vụ ngôn ngữ sẽ được thực hiện trên cơ sở mỗi ngôn ngữ. Việc triển khai có thể tái sử dụng mã từ phân tích cú pháp hoặc trình biên dịch cho ngôn ngữ. Dịch vụ ngôn ngữ có thể được triển khai hoặc trong mã nguồn gốc hoặc mã số quản lý. Đối với mã nguồn gốc, thì cả COM-interfaces gốc hoặc Babel Framework (một phần của Visual Studio SDK) đều có thể được sử dụng. Đối với mã số quản lý thì các MPF sẽ bao hàm các dịch vu quản lý văn bản. 
+    Visual Studio không bao gồm bất kỳ Hệ thống quản lý phiên bản hỗ trợ kiểm soát mã nguồn nhưng nó xác định hai cách thay thế cho các hệ thống kiểm soát mã nguồn để tích hợp với IDE. Một VSPackage kiểm soát mã nguồn có thể cung cấp giao diện người dùng tùy chỉnh của riêng mình. Ngược lại, một plugin kiểm soát mã nguồn bằng cách sử dụng MSSCCI (Microsoft Source Code Control Interface) cung cấp một tập các chức năng được sử dụng để thực hiện chức năng kiểm soát mã nguồn khác nhau, với một giao diện người dùng Visual Studio tiêu chuẩn. MSSCCI lần đầu tiên được sử dụng để tích hợp Visual SourceSafe với Visual Studio 6.0 nhưng sau đó được mở ra thông qua Visual Studio SDK. Visual Studio.NET 2002 dùng MSSCCI 1.1, và Visual Studio.NET 2003 dùng MSSCCI 1.2. Visual Studio 2005, 2008 và 2010 dùng MSSCCI 1.3. 
+    Visual Studio hỗ trợ chạy nhiều cá thể của môi trường (tất cả đều có VSPackages riêng của mình). Những trường hợp sử dụng các registry hives khác nhau để lưu trữ trạng thái cấu hình và được phân biệt bởi AppID (Application ID). Các trường hợp được đưa ra bởi một AppId-specific.exe cụ thể mà lựa chọn AppID, thiết lập các hive gốc và khởi chạy IDE. VSPackages đăng ký một AppID được tích hợp với VSPackages khác cho AppID đó. Các phiên bản sản phẩm khác nhau của Visual Studio được tạo ra bằng cách sử dụng AppIds khác nhau. Các sản phẩm phiên bản Visual Studio Express được cài đặt với AppIds riêng nhưng với các sản phẩm Standard, Professional và Team Suite chia sẻ cùng AppID. Do đó, người ta có thể cài đặt các phiên bản Express song song với các phiên bản khác, không giống như các phiên bản khác cập nhật các cài đặt tương tự. Phiên bản Professional bao gồm các VSPackages khổng lồ trong phiên bản Standard và Team. Hệ thống AppID được thừa hưởng bởi Visual Studio Shell trong Visual Studio 2008.
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Xây dựng nội dung
+3.1.1 Mô tả cốt truyện
+    Hayate là một cậu bé sinh ra và lớn lên trong triều đại phong kiến Nhật Bản – triều đại mà những ninja và samurai phát triển phổ biến. Người cha của cậu bé là Hayato là một ninja lão luyên nhưng không may thay ông đã tử trận trong một trận đại chiến với quân thù. Mang trong mình khao khát và đam mê trở thành một nhẫn giả thực thụ nối tiếp người cha đã khuất, cậu bé đã bắt đầu thực hiện chuyến phiêu lưu của mình. Trên con đường phiêu lưu, cậu bé lần lượt đi qua những vùng đất nguy hiểm, liên tục chiến đấu với kẻ thù nguy hiểm. Trong game, bạn sẽ hóa thân thành cậu bé Hayate thông minh,lém lỉnh .Với những kĩ năng kiếm thuật và ám khí đẹp mắt, nhiệm vụ của người chơi là giúp cậu bé vượt qua tất cả mọi thử thách khó khăn, tiêu diệt kẻ thù để trở thành một “siêu nhẫn giả” thực thụ.
+3.1.2 Mô tả gameplay
+• Thể loại: 
+    Game “Road of Ninja” là một trò chơi thuộc thể loại phiêu lưu, hành động, chặt chém cựu kì lôi cuốn và hấp dẫn. 
+• Bối cảnh
+    Game “Road of Ninja” lấy bối cảnh chính là Nhật Bản và các bối cảnh mở rộng. Ở mỗi màn chơi là một miền đất mới, tạo cảm giác mới mẻ thú vị.
+• Cách chơi
+    - Trong game, hướng di chuyển của nhân vật bao gồm di chuyển lên trước, di chuyển và sau và nhảy.
+    - Người chơi cần khéo léo kết hợp kiếm(tầm gần), ám khí(tầm xa) cùng các skin để hạ quái vật, vượt qua màn chơi
+• Nhân vật & Boss
+- Hayate :
+o Chỉ số: ATK = 20, HP = 100, tốc độ di chuyển 360, nhảy cao tối đa 6. 
+o Skill: 
+• Skill 1 “Attack”: sát thương= 20, nhân vật chém về phía trước trong thơi gian ngắn, gây sát thương lên kẻ địch.
+• Skill 2 “phi ám khí”: sát thương= 20,tung ra ám khí gây sát thương lên địch, cooldown 1s 
+• Skill 3 “Lốc xoáy”: sát thương= 30, triệu hồi lốc xoáy gây sát thuơng lên địch, cooldown 1s 
+• Skill 4 “Hỏa đạn”: sát thương= 40, ném ra hỏa đạn gây sát thuơng lên địch, cooldown 1s 
+• Skill 5 “Rồng lửa”: sát thương= 100, triệu hồi rồng lửa gây sát thuơng cực lớn lên địch, cooldown 1s 
+- Quái vật mất não:
+o Chỉ số: ATK = 10, HP = 100, tốc độ di chuyển tối đa 3
+o Skill:
+• Tấn công sau mỗi 3-5 giây di chuyển
+- Quái vật diệp hóa:
+o Chỉ số: ATK = 10, HP = 100, tốc độ di chuyển tối đa 4
+o Skill:
+•  Di chuyển kèm bắn đạn sau mỗi 2 giây
+- Quái vật nhện:
+o Chỉ số: ATK = 15, HP = 60, tốc độ di chuyển tối đa 3
+o Skill:
+•  Di chuyển  gây sát thương khi va chạm
+- Quái vật quỷ tím:
+o Chỉ số: ATK = 10, HP = 100, tốc độ di chuyển tối đa 3
+o Skill:
+•  Di chuyển  gây sát thương khi va chạm
+    
+- Quái vật dơi đêm:
+o Chỉ số: ATK = 15, HP = 80, tốc độ di chuyển tối đa 2
+o Skill:
+•  Di chuyển và áp sát khi nhân vật tiến lại gần, gây sát thương khi va chạm.
+- Boss Dơi địa ngục:
+o Chỉ số: ATK 20, HP 500, tốc độ di chuyển tối đa 3
+o Skill:
+• Áp sát khi player đến gần
+• Nhả bom sau mỗi 2 giây, bom di chuyển hướng vào player
+• Màn chơi
+- Người chơi lần lượt vượt qua 8 màn chơi với độ khó tang dần, màn cuối phải chiến đấu với boss chùm.
+- Người chơi điều khiển nhân vật di chuyển bằng 2 phím mũi tên trái- phải, nhảy bằng phím space, dùng skill 1 phím “Z”, skill 2 phím  “X”.
+• Vật phẩm
+- Đồng vàng (Xuất hiện trong mọi màn chơi): ăn mỗi đồng vàng người chơi tăng 1 vàng.
+- Item Heart: Cộng lại 10 máu đã mất.
+- Item Mana : Cộng lại 10 máu đã mất.
+- Item Flash: Tăng tốc chạy trong 5s cho nhân vật.
+• Trướng ngại vật
+- Plat: bậc thềm người chơi có thể đứng lên
+- Moving Plat: bậc thèm di chuyển ngang
+- Spike: Bẫy. Khi người chơi va chạm sẽ mất 10 máu mỗi giây
+• Nhịp độ game
+   Trong những màn chơi đầu, độ khó trò chơi sẽ ở mức cơ bản. Người chơi cần phải vượt qua các trướng ngại vật như tảng đá, hố nước hay di chuyển khéo léo qua những bậc thềm bằng cách né, nhảy, cúi và ăn các coin.
+    Ở những màn tiếp theo, những chướng ngại vật sẽ có độ khó cao hơn, đồng thời trong màn chơi sẽ xuất hiện thêm nhiều vị trí bẫy được đặt ra ở một số khu vực. Người chơi khi di chuyển sẽ cần thêm sự chú ý, tập chung.
+    Trong những màn chơi cuối, độ khó sẽ ở mức cao khi có sự xuất hiện của các thú dữ cùng quái vật boss, nếu vượt qua và hạ gục tất cả về tới đích thì người chơi sẽ danh chiến thắng.
+3.2 Xác định yêu cầu của hệ thống
+3.2.1 Biểu đồ Usecase 
+    
+- Biểu đồ use-casse Player
+
+    Hình 3. 1: Biểu đồ UC tổng quát
+3.2.2 Biểu đồ lớp
+
+    Hình 3. 2: Biểu đồ lớp
+3.2.3 Thiết kế cơ sở dữ liệu
+- Thuộc tính Player:
+Bảng 3. 1: Thuộc tính Player
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả1SpeedfloatTốc độ di chuyển2MaxspeedfloatTốc độ di chuyển tối đa3JumpPowfloatLực nhảy4CurrentHealthfloatChỉ số HP hiện tại5CurrentManafloatChỉ số MP hiện tại6GroundedboolKiểm tra nhân vật đang đứng trên mặt đất7FacerightboolKiểm tra hướng nhìn nhân vật8DoubleJumpboolKiểm tra quyền nhảy 2 lần liên tiếp9FireIntervalfloatThời gian ngắn nhất giữa 2 lần tung chiêu liên tiếp10PointsfloatĐiểm số- Thuộc tính Enemy:
+Bảng 3. 2: Thuộc tính Enemy
+STTTên thuộc tínhKiểu dữ liệuRàng buộcMô tả1MaxValfloatChỉ số HP tối đa2CurrentValfloatChỉ số HP hiện tại3DamagefloatSát thương gây ra4FacerightboolHướng nhìn5SpeedfloatTốc độ di chuyển3.3 Thiết kế giao diện của hệ thống
+- Giao diện màn hình chính:
+
+    Hình 3. 3: Giao diện màn hình chính
+- 
+- Giao diện Select Map:
+
+    Hình 3. 4: Màn hình Select Map
+- Giao diện Tạm dừng:
+
+    Hình 3. 5: Mà hình Paused
+- Giao diện kết thúc
+
+    Hình 3. 6: Màn hình Game Over
+3.3.1 Giao diện game
+- Giao diện màn chơi 1
+
+    Hình 3. 7: Giao diện màn chơi 1
+- Giao diện màn chơi 2
+
+    Hình 3. 8: Giao diện màn chơi 3
+- Giao diện màn chơi 3
+
+    Hình 3. 9: Giao diện màn chơi 3
+- Giao diện màn chơi 4
+
+    Hình 3. 10: Giao diện màn chơi 4
+- Giao diện màn chơi 5
+
+    Hình 3. 11: Giao diện màn chơi 5
+- Item trong game
+
+    Hình 3. 12: Một số item trong game
+3.3.2 Nhân vật
+- Nhân vật chính:
+
+    Hình 3. 13: Nhân vật chính
+    
+- Enemy:
+
+
+    Hình 3. 14: Một số Enemy
+- 
+- Boss cuối
+
+    Hình 3. 15: Boss cuối
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau thời gian nghiên cứu và phát triển, em đã hoàn thành cơ bản các chức năng chức năng ban đầu đề ra của đề tài. Xây dựng bố cục game rõ ràng, thao tác điều khiển linh hoạt, đồ họa game sáng tạo.
+    Em đã hoàn thiện được một game thể loại phiêu lưu, giúp người chơi có thể hòa mình vào thế giới trong game, tương tác và thực hiện các hành động với thế giới trong game. Hệ thống kĩ năng và trải nghiệm người chơi được đề cao. Game chạy mượt mà, ổn định trên nhiều model.
+4.2 Hạn chế của đề tài
+    Mặc dù rất nỗ lực nhưng game Road of Ninja vẫn còn một số thiếu sót như thiếu đi khả năng tương tác với người chơi khác, vẫn đề dung lượng game chưa được hoàn toàn tối ưu,…
+4.3 Hướng phát triển của đề tài
+    . Trong thời gian nghiên cứu và thực hiện đề tài, em đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+• Thêm khả năng tương tác giữa nhiều người chơi
+• Thêm một số skin, item mới mẻ cho trò chơi
+
+TÀI LIỆU THAM KHẢO
+[1]. Learn Unity3D Programming with UnityScript - Technology In Action
+[2]. Will  Goldstone,  Unity  Game  Development  Essential,  Packt Publishing, 2009
+[3]. Efraim Meulenberg, Game Development for iPhone/iPad Using Unity iPhone, VTC, 2010.
+[4]. Https://hoctap.tv/courses/unity-5-2d-xay-dung-mot-game-phieu-luu-4063
+x
+x
+
+    
+Xây dựng game Road of Ninja
+    
+    
+3
+    
+    
+    2
+    
+    
+    50
+    
+    

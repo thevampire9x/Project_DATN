@@ -1,0 +1,906 @@
+﻿CHƯƠNG I: TỔNG QUAN VỀ ĐỀ TÀI
+1.1. Lý do chọn đề tài
+    Công nghệ thông tin ngày càng trở thành một phần quan trọng trong mọi mặt của cuộc sống. Trong Giáo dục cũng vậy,CNTT ngày càng trở nên cần thiết vì ngành Giáo dục muốn hoạt động hiệu quả và đạt hiệu quả cao trong công tác điều hành và quản lý thì cần phải có một cơ sở hạ tầng công nghệ thông tin đủ mạnh, hiện đại và đạt tiêu chuẩn.
+    Chính vì thế hiện nay,rất nhiều trường học đã đầu tư cơ sở vật chất hiện đại phục vụ cho học tập của học sinh cũng như thuận tiện hơn trong giảng dạy của giáo viên và quản lý của nhà trường. Để có thể xây dựng một hệ thống quản lý mạng thì cần phải trải qua các bước thiết kế và xây dựng mô hình mạng. Vì vậy em đã quyết định lựa chọn đề tài “Thiết kế và xây dựng hệ thống mạng cho trường THPT Tô Hiệu” để trường có thể quản lí công việc một cách dễ dàng và có hiệu quả cao nhất
+    Nhờ sự gợi ý và định hướng của thầy “Phạm Quốc Hùng” nhóm em đã chọn đề tài “Thiết kế hệ thống mạng cho Trường “THPT Tô Hiệu”. Hi vọng với sự góp ý của thầy cô đồ án của chúng em có thể được ứng dụng trong tương lai cho việc triển khai hệ thống mạng cho trường học.
+1.2. Mục tiêu và giới hạn của đề tài
+  1.2.1. Mục tiêu đề tài là:
+      - Hiểu được từng bước trong quy trình thiết kế một hệ thống mạng cho trường học theo yêu cầu của trường học.
+      - Thiết kế được hệ thống mạng cho Trường THPT Tô Hiệu
+  1.2.2. Giới hạn của đề tài
+Trong đồ án này chúng em tập trung nghiên cứu các vẫn đề sau:
+      - Tìm hiểu kiến thức về mạng LAN cơ bản
+      - Tìm hiểu về quy trình thiết kế một hệ thống mạng.
+      - Áp dụng quy trình đó để xây dựng hệ thống mạng cho Trường THPT Tô Hiệu
+
+1.3. Nội dung thực hiện
+- Tìm hiểu về mạng LAN cơ bản.
+- Tìm hiểu về cách cấu hình các thiết bị mạng.
+- Tìm hiểu lý thuyết chung căn bản về quản trị mạng doanh nghiệp .
+- Tìm hiểu các bước thiết kế một hệ thống mạng cho doanh nghiệp.
+1.4. Phương pháp tiếp cận
+    Khảo sát yêu cầu trường học và quy mô của nơi cần thiêt kế hệ thống mạng.  Từ đó phân tích nhưng yêu cầu của trường học để thiết kế hệ thống mạng phù hợp với yêu cầu, hoạt động tốt, tính bảo mật cao.
+     - Tham khảo những hệ thống mạng đã được xây dựng của các trường có cùng quy mô để đưa ra được một hệ thống mạng tốt phù hợp.
+- Tham khảo một số hệ thống mạng qua sách, báo, internet.
+     - Đọc giáo trình, tìm hiểu trên Internet những dịch vụ và công nghệ mạng đang được các trường học sử dụng phổ biến hiện nay.
+     - Tìm hiểu kỹ về chức năng, các thông số kỹ thuật của các thiết bị để lựa chọn được thiết bị phù hợp với hệ thống mạng và tối ưu nhất.
+     - Tham khảo nhiểu website bán thiết bị mạng cần cho hệ thống để so sánh về chất lượng cũng như giá cả. Từ đó đưa ra được sự lựa chọn hợp lý.
+1.5. Giới hạn và phạm vi đề tài
+    Hệ thống mạng của trường trung học phổ thông Tô Hiệu là hệ thống mạng được dùng với mục đích vào công việc giảng dạy của nhà trường nhằm nâng cao chất lượng giáo dục của nhà trường. Từ đó hệ thống mạng triển khai phải đáp ứng được một số yêu cầu sau
+    - Trao đổi thông tin dữ liệu nhanh chóng và an toàn: việc trao đổi thông tin, dữ liệu giữa các giáo viên trong nhà trường, giữa văn phòng trung tâm với các trường học được thực hiện một cách nhanh chóng và an toàn, tốc độ truyền tải thông tin cao, đáp ứng nhu cầu hoạt động của trường học.
+    - Có khả năng quản lý tập trung thông tin dữ liệu: xây dựng được mô hình quản lý tập trung, tất cả dữ liệu được tập trung tại một nơi để vừa bảo mật thông tin vừa thuận tiện cho việc quản lý và sao lưu dự phòng dữ liệu. Đồng thời với cách quản lý tập trung từ văn phòng trung tâm có thể dễ dàng quản lý các văn phòng từ xa thông qua sự hỗ trợ của các chương trình ứng dụng. 
+    - Khả năng điều hành và quản trị từ xa: nhà trường có thể điều hành hoạt động của mình từ xa thông qua hệ thống mạng. Do đó, tiết kiệm được chi phí đi lại và nâng cao hiệu quả công tác quản lý giảng dạy của nhà trường.
+    - Một giải pháp tích hợp đa dịch vụ thoại - dữ liệu - hình ảnh: với xu hướng phát triển công nghệ mạng hiện nay thì các dịch vụ sẽ được tích hợp trên cùng một mạng IP duy nhất. Nhờ vậy tận dụng được tối đa hạ tầng cơ sở đã đầu tư, dễ dàng trong việc tích hợp nhiều loại hình dịch vụ khác nhau trên cùng một nền tảng giúp quản lý, sử dụng và khai thác hiệu quả các ứng dụng của CNTT.
+
+    
+CHƯƠNG 2: TỔNG QUAN VỀ THIẾT KẾ
+2.1. Tổng quan về mạng máy tính
+  2.1.1.  Khái niệm, lý thuyết cơ bản
+    a) Định nghĩa mạng máy tính
+    Mạng máy tính là tập hợp các máy tính độc lập (autonomous) được kết nối với nhau thông qua các đường truyền vật lý và tuân theo các quy ước truyền thông nào đó nhằm mục đích chia sẻ tài nguyên giữa các máy tính.
+Các thành phần của mạng máy tính bao gồm: 
+      - Các thiết bị đầu cuối (end system): Là các thiết bị có khả năng kết nối vào mạng máy tính như máy tính, PDA...
+      - Môi trường truyền dẫn (media): Là môi trường mà các thao tác truyền thông được thực hiện qua đó. Môi trường truyền dẫn có thể là các loại dây dẫn (dây cáp), sóng điện từ (kết nối không dây).
+      - Giao thức truyền thông (protocol): Là các quy tắc, quy định cách trao đổi dữ liệu giữa các thiết bị trong mạng máy tính.
+    b) Khái niệm LAN - VLAN
+    Mạng LAN (Local Area Network): là mạng cục bộ được thiết kế để kết nối các máy tính thiết bị khác nhau cùng hoạt động trong một khu vực địa lý nhỏ.
+    Mạng VLAN (Virtual Local Area Network):  là mạng LAN ảo. VLAN về cơ bản là một mạng LAN nhưng được định nghĩa như một nhóm logic các thiết bị mạng và được thiết lập dựa trên các yếu tố như chức năng, bộ phận, ứng dụng…của tổ chức.
+    Không giống LAN - Các máy tính trong mạng LAN thường được kết nối tới Switch, VLAN có thể được kết nối tới Switch này trong khi máy tính khác có thể kết nối tới Switch kia mà tất cả các máy tính vẫn nằm trên VLAN chung (miền quảng bá).
+    Các máy tính trên VLAN khác nhau có thể giao tiếp với một router hoặc một switch Layer 3. Do mỗi VLAN là subnet của riêng nó, router hoặc switch Layer 3 phải được dùng để định tuyến giữa các subnet.
+  
+2.1.2. Lý do nên sử dụng VLAN:
+    - Tiết kiệm băng thông của hệ thống mạng: 
+    - VLAN chia mạng LAN thành nhiều đoạn (segment) nhỏ, mỗi đoạn đó là một vùng quảng bá (broadcast domain). Khi có gói tin quảng bá (broadcast), nó sẽ được truyền duy nhất trong VLAN tương ứng. Do đó việc chia VLAN giúp tiết kiệm băng thông của hệ thống mạng.
+    - Tăng khả năng bảo mật: Do các thiết bị ở các VLAN khác nhau không thể truy nhập vào nhau (trừ khi ta sử dụng router nối giữa các VLAN). Các máy tính trong VLAN chỉ có thể liên lạc được với nhau. 
+    - Dễ dàng thêm hay bớt máy tính vào VLAN: Việc thêm một máy tính vào VLAN rất đơn giản, chỉ cần cấu hình cổng cho máy đó vào VLAN mong muốn.
+    - Giúp mạng có tính linh động cao: VLAN có thể dễ dàng di chuyển các thiết bị. Chỉ cần cấu hình lại các cổng switch rồi đặt chúng vào các VLAN theo yêu cầu. VLAN có thể được cấu hình tĩnh hay động. Trong cấu hình tĩnh, người quản trị mạng phải cấu hình cho từng cổng của mỗi switch. Sau đó, gán cho nó vào một VLAN nào đó. Trong cấu hình động mỗi cổng của switch có thể tự cấu hình VLAN cho mình dựa vào địa chỉ MAC của thiết bị được kết nối vào.
+  2.1.3. Các mô hình mạng LAN:
+    Do VLAN là mạng LAN ảo được thực hiện qua việc cấu hình cho từng cổng của mỗi switch nên mô hình vật lý là tương tự nhau.
+Các mô hình mạng LAN cơ bản:
+- Dạng hình sao – Star Topology
+- Dạng bus – Bus Topology
+- Dạng vòng – Ring Topology
+- Dạng kết hợp – Mesh Topology
+Khi xây dựng mạng LAN cần có những yêu cầu:
+- Tính thẩm mỹ cho hệ thống mạng, cách bố trí và đi dây hợp lý.
+- Tính tương thích của thiết bị, đã được cài và ứng dụng.
+- Tính kháng lỗi của hệ thống mạng.
+- Khả năng mở rộng mạng sau này.
+- Chất lượng dịch vụ (QoS) đảm bảo.
+- Khả năng bảo mật và Backup dữ liệu.
+- Giá thành, thời gian thực hiện, xác định nguồn nhân lực, xác định các tài nguyên đã có và có thể tái sử dụng.
+Môi trường truyên dẫn
+  Có 2 loại truyền dẫn chính:
+      - Hữu tuyến(bounded media):gồm dây cáp mạng (dây cáp đồng, dây cáp xoắn đôi).
+      - Vô tuyến(boundedless media):gồm radio, sóng cực ngắn, tia hồng ngoại.
+Máy chủ (Server)
+      Máy chủ (Tiếng anh là Server) là một máy tính được kết nối với một mạng máy tính hoặc internet, có IP tĩnh, có năng lực xử lý cao và trên đó người ta cài đặt các phần mềm để phục vụ cho các máy tính khác truy cập để yêu cầu cung cấp các dịch vụ và tài nguyên
+Phân Loại
+Theo phương pháp tạo ra máy chủ
+      - Máy chủ riêng (Dedicated Server): là máy chủ chạy trên phần cứng và các thiết bị hỗ trợ riêng biệt gồm: HDD, CPU, RAM, Card mạng, . Việc nâp cấp hoặc thay đổi cấu hinh của máy chủ riêng đòi hỏi phải thay đổi phần cứng của máy chủ
+      - Máy chủ ảo (Virtual Private Server - VPS): là dạng máy chủ được tạo thành bằng phương pháp sử dụng công nghệ ảo hóa để chia tách từ một máy chủ riêng thành nhiều máy chủ ảo khác nhau. Các máy chủ ảo có tính năng tương tự như một máy chủ riêng, nhưng chạy chia sẻ tài nguyên từ máy chủ vật lý gốc. Việc nâng cấp hoặc thay đổi cấu hình của máy chủ ảo rất đơn giản, có thể thay đổi trực tiếp trên phần mềm quản lý hệ thống. Tuy nhiên việc thay đổi tài nguyên của máy chủ ảo phụ thuộc và bị giới hạn bởi tài nguyên của máy chủ vật lý. 
+      - Máy chủ đám mây (Cloud Server): là máy chủ được kết hợp nhiều từ máy chủ vật lý khác nhau cùng với hệ thống lưu trữ SAN với tốc độ truy xuất vượt trội giúp máy chủ hoạt động nhanh, ổn định, hạn chế mức thấp tình trạng downtime. Máy chủ Cloud được xây dựng trên nền công nghệ điện toán đám mây nên dễ dàng nâng cấp từng phần thiết bị trong quá trình sử dụng mà không làm gián đoạn quá trình sử dụng máy chủ.
+Theo công dụng và chức năng của máy chủ
+      - Máy chủ web (Web Server)  là máy chủ mà trên đó cài đặt phần mềm phục vụ web, đôi khi người ta cũng gọi chính phần mềm đó là web server. Tất cả các web server đều hiểu và chạy được các file *.htm và *.html. Tuy nhiên mỗi web server lại phục vụ một số kiểu file chuyên biệt chẳng hạn như llS của Microsoft dành cho *.asp, *.aspx…; Apache dành cho *.php…; Sun Java system web server của SUN dành cho *.jsp…
+      - Máy chủ Database (Database Server): máy chủ mà trên đó có cài đặt phần mềm Hệ quản trị cơ sở dữ liệu. Chúng ta có hệ quản trị CSDL chẳng hạn như: SQL server, MySQL, Oracle…
+      - Máy chủ FTP (FTP server): FTP (viết tắt của File Transfer Protocol dịch ra là "Giao thức truyền tập tin") thường được dùng để trao đổi tập tin qua mạng lưới truyền thông dùng giao thức TCP/IP (chẳng hạn như Internet - mạng ngoại bộ - hoặc intranet - mạng nội bộ). Hoạt động của FTP cần có hai máy tính, một máy chủ và một máy khách). Máy chủ FTP dùng chạy phần mềm cung cấp dịch vụ FTP, gọi là trình chủ, lắng nghe yêu cầu về dịch vụ của các máy tính khác trên mạng lưới. Máy khách chạy phần mềm FTP dành cho người sử dụng dịch vụ, gọi là trình khách, thì khởi đầu một liên kết với máy chủ.
+      - Máy chủ SMTP (SMTP server): SMTP (Simple Mail Transfer Protocol - giao thức truyền tải thư tín đơn giản) là một chuẩn truyền tải thư điện tử qua mạng Internet. SMTP server là máy chủ giúp bạn gửi mail đến các địa chỉ email khác trên internet.
+      - Máy chủ DNS (DNS Server):  là máy chủ phân giải tên miền. Mỗi máy tính, thiết bị mạng tham gia vào mạng Internet đều kết nối với nhau bằng địa chỉ IP (Internet Protocol). Để thuận tiện cho việc sử dụng và dễ nhớ ta dùng tên (domain name) để xác định thiết bị đó. Hệ thống tên miền DNS (Domain Name System) được sử dụng để ánh xạ tên miền thành địa chỉ IP.
+      - Máy chủ DHCP (DHCP server): DHCP (Dynamic Host Configuration Protocol - giao thức cấu hình động máy chủ) là một giao thức cấu hình tự động địa chỉ IP. Máy tính được cấu hình một cách tự động vì thế sẽ giảm việc can thiệp vào hệ thống mạng. DHCP server là máy chủ có cài đặt dịch vụ DHCP, nó có chức năng quản lý sự cấp phát địa chỉ IP động và các dữ liệu cấu hình TCP/IP. Ngoài ra còn có nhiệm vụ trả lời khi DHCP Client có yêu cầu về hợp đồng thuê bao
+2.2.  Một số thiết bị mạng
+2.2.1  Switch
+Switch có thể liên kết được nhiều segment lại với nhau. Số lượng các segment tùy thuộc vào sô cổng (Port) trên switch
+    Switch sẽ sao chép các gói tin mà nó nhận được từ các máy trong mạng và sau đó switch tổng hợp các gói tin này lên bảng switch,bảng này có vai trò cung cấp thông tin nhằm giúp các gói tin gửi đến đúng địa chỉ trong hệ thống mạng.
+2.2.2 Router 
+    Router hay còn gọi là thiết bị định tuyến hoặc bộ định tuyến là thiết bị mạng máy tính dùng để chuyển các gói dữ liệu qua một liên mạng và đến các đầu cuối,thông qua một tiến trình được gọi là định tuyến
+    Chức năng chủ yếu của router là gửi các gói dữ liệu mạng giữa 2 hoặc nhiều mạng, từ một tới nhiều điểm đích đến cưới cùng từ router sao cho việc gửi và nhận phải đúng địa chỉ. Router còn có thể phát wifi giúp các thiết bị smartphone, máy tính bảng, máy tính,..có thể kết nối mạng mà không cần dùng đến dây.
+2.3 Quy trình thiết kế mạng
+ Thiết kế mạng theo phương thức PPDIOO bao gồm 6 bước:
+Bước 1: Prepare (Chuẩn bị)
+Bước 2: Plan (Lên kế hoạch)
+Bước 3: Design (Thiết kế)
+Bước 4: Implement (Triển khai)
+Bước 5: Operate (Vận hành)
+Bước 6: Optimize (Tối ưu hóa hệ thống)
+
+    
+CHƯƠNG 3: THIẾT KẾ HỆ THỐNG MẠNG CHO TRƯỜNG THPT TÔ HIỆU
+3.1. Giới thiệu trường THPT Tô Hiệu
+    Trường THPT Tô Hiệu được thành lập từ năm 2000 theo Quyết định số 38/QĐ-UB ngày 27/9/2000 của UBND tỉnh Hưng Yên, lễ công bố thành lập ngày 20/12/2000. Ngôi trường mang tên vị tướng tài giỏi dưới Triều đại nhà Trần, được xây dựng trên diện tích 14.000m2 trên địa bàn Thành phố Hưng Yên-  Tỉnh Hưng Yên do thầy Trần Văn Xuân làm Hiệu trưởng nhà trường. Sự ra đời của ngôi trường tại miền quê nghèo này là một mốc son lịch sử đáng nhớ của nền giáo dục huyện Khoái Châu là niềm hạnh phúc lớn lao của tuổi trẻ học đường nói riêng, cán bộ, nhân dân huyện Thành phố Hưng Yên nói chung.
+    
+   
+    Hình 3.1: Cổng trường Thpt Tô Hiệu
+3.2. Khảo sát thu thập yêu cầu khách hàng
+  3.2.1. Sơ đồ mặt cắt 3d của trường
+
+    Hình 3.2: Sơ đồ mặt cắt 3D của trường
+
+Khu Nhà A: Nhà hiệu bộ
+Gồm 2 tầng và 10 phòng (Phòng máy Server, phòng hiệu trưởng, phòng phó hiệu trưởng,phòng họp hội đồng, phòng văn thư, phòng tài chính, phòng bộ môn, và phòng nghỉ, 2 phòng vệ sinh)
+Nhà B: Nhà Thực hành
+Gồm 3 tầng, 12 phòng ( 2 phòng thực hành tin, 1 phòng thực hành hóa, 1 phòng thực hành sinh, 1 phòng thực hành vật lí, 1 phòng thực hành địa lí, và 3 phòng học có máy  chiếu  và wifi )
+Nhà D và C: Phòng học
+Gồm 3 tầng, 15 phòng tất cả các phòng dùng để học tập các môn lí thuyết trên lớp
+3.2.2. Sơ đồ logic nhà toàn trường
+ 
+    Hình 3.3: Sơ đồ Logic toàn trường
+3.2.3. Sơ đồ vật lí
+• Tầng 1 nhà hiệu bộ 
+  
+    Hình 3.4: Sơ đồ vật lí tầng 1 nhà hiệu bộ
+Tầng 1 gồm 5 phòng
+- Phòng nghỉ (1 Router)
+- Phòng bộ môn (1 máy tính)
+- Phòng kế toán hành chính (2 máy tính, 1 máy in, 1 router)
+- Phòng văn thư (1 máy tính, 1 máy in)
+- Phòng WC
+Cấu hình máy tính
+- Main: Bo mạch chủ H81 Chipset Intel, Có cổng HDMI, (Socket 1150 support)
+- Chip:Intel® Pentium® Processor G3450 (3M Cache, 3.40 GHz)
+- Ram 2Gb DDR3 Bus 1600Mhz
+- Ổ cứng 500GB/ 7200Rpm/ Cache 16MB/ SATA 3 (6.0 GB/s)
+- Nguồn máy tính Goldenfield 480/ Yetek Y500
+- Màn hình máy tính LED 18.5 Inch
+- Bộ bàn phím+ chuột genius
+- DDR3: Kingmax 4GB (1600) Thor Erosi 2 Plus (No power)
+
+ Bo mạch chủ H81 Chipset Intel,  Có cổng HDMI, (Socket 1150 support)
+Intel® Pentium® Processor G3450 (3M Cache, 3.40 GHz)
+Ram 2GB DDR3 Bus 1600MHz
+HDD 500GB
+Power Supply 480W/500W
+Màn hình Led 18.5 Inch
+Case ATX / FreeDOS Bo mạch chủ H81 Chipset Intel,  Có cổng HDMI, (Socket 1150 support)
+Intel® Pentium® Processor G3450 (3M Cache, 3.40 GHz)
+Ram 2GB DDR3 Bus 1600MHz
+HDD 500GB
+Power Supply 480W/500W
+Màn hình Led 18.5 Inch
+Case ATX / FreeDOS Bo mạch chủ H81 Chipset Intel,  Có cổng HDMI, (Socket 1150 support)
+Intel® Pentium® Processor G3450 (3M Cache, 3.40 GHz)
+Ram 2GB DDR3 Bus 1600MHz
+HDD 500GB
+Power Supply 480W/500W
+Màn hình Led 18.5 Inch
+Case ATX / FreeDOSTầng 2 nhà hiệu bộ
+ 
+    Hình 3.5: Sơ đồ vật lí tầng 2 nhà hiệu bộ
+Tầng 2 gồm 5 phòng:
+- Phòng máy Server (1 modem, 1 server, 1 switch, 1 máy tính)
+- Phòng hiệu trưởng (1 máy tính, 1 máy in, 1 router)
+- Phòng phó hiệu trưởng (1 máy tính, 1 máy in)
+- Phòng hội đồng (1 router, 1 máy tính 1 máy chiếu)
+- Phòng WC
+Cấu hình máy tính
+- Main: Bo mạch chủ H81 Chipset Intel, Có cổng HDMI, (Socket 1150 support)
+- Chip:Intel® Pentium® Processor G3450 (3M Cache, 3.40 GHz)
+- Ram 2Gb DDR3 Bus 1600Mhz
+- Ổ cứng 500GB/ 7200Rpm/ Cache 16MB/ SATA 3 (6.0 GB/s)
+- Nguồn máy tính Goldenfield 480/ Yetek Y500
+- Màn hình máy tính LED 18.5 Inch
+- Bộ bàn phím+ chuột genius
+- DDR3: Kingmax 4GB (1600) Thor Erosi 2 Plus (No power)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Bo mạch chủ H81 Chipset Intel,  Có cổng HDMI, (Socket 1150 support)
+Intel® Pentium® Processor G3450 (3M Cache, 3.40 GHz)
+Ram 2GB DDR3 Bus 1600MHz
+HDD 500GB
+Power Supply 480W/500W
+Màn hình Led 18.5 Inch
+Case ATX / FreeDOS Bo mạch chủ H81 Chipset Intel,  Có cổng HDMI, (Socket 1150 support)
+Intel® Pentium® Processor G3450 (3M Cache, 3.40 GHz)
+Ram 2GB DDR3 Bus 1600MHz
+HDD 500GB
+Power Supply 480W/500W
+Màn hình Led 18.5 Inch
+Case ATX / FreeDOS Bo mạch chủ H81 Chipset Intel,  Có cổng HDMI, (Socket 1150 support)
+Intel® Pentium® Processor G3450 (3M Cache, 3.40 GHz)
+Ram 2GB DDR3 Bus 1600MHz
+HDD 500GB
+Power Supply 480W/500W
+Màn hình Led 18.5 Inch
+Case ATX / FreeDOS Sơ đồ vật lí phòng máy
+    Phòng máy 1
+  
+    Hình 3.6: Sơ đồ vật lí Phòng máy 1
+
+Phòng máy 1 gồm:
+- 1 Switch 32 cổng 
+- 1 Router
+- 1 Máy chủ và 24 máy con
+Cấu hình máy 
+- Main: Bo mạch chủ H81M – DS2 Chipset Intel, Có cổng HDMI, (Socket 1150 support)
+- Chip:Intel® Core I3-4160 (3.6 GHz)
+- Ram 4GB DDR3 Bus 1600Mhz
+- Ổ cứng 1TB WD (GREEN)
+- Nguồn máy tính Goldenfield 480/ Yetek Y500
+- Màn hình máy tính LCD Acer 18.5” E1900HQ
+- Bộ bàn phím + chuột genius
+- DDR3: Kingmax 4GB (1600) Thor Erosi 2 Plus (No power)
+
+Phòng máy 2
+ 
+    Hình 3.7: Sơ đồ vật lí phòng máy 2
+
+Phòng máy 2 gồm:
+- 1 Switch 32 cổng
+- 1 Router Tp-Link
+- 1 Máy chủ và 24 máy con 
+Cấu hình máy 
+- Main: Bo mạch chủ H81M – DS2 Chipset Intel, Có cổng HDMI, (Socket 1150 support)
+- Chip:Intel® Core I3-4160 (3.6 GHz)
+- Ram 4GB DDR3 Bus 1600Mhz
+- Ổ cứng 1TB WD (GREEN)
+- Nguồn máy tính Goldenfield 480/ Yetek Y500
+- Màn hình máy tính LCD Acer 18.5” E1900HQ
+- Bộ bàn phím + chuột genius
+- DDR3: Kingmax 4GB (1600) Thor Erosi 2 Plus (No power)
+  
+3.2.4. Danh sách thiết bị và báo giá từng thiết bị
+    Bảng 3.1: Danh sách thiết bị và giá
+STTTên thiết bịThông số kĩ thuậtVị tríSố lượngĐơn giáThành tiền
+
+
+
+1
+
+
+Bộ phát WIFI TP-Link 841nKhoảng cách phát tối đa: 100m. Tốc độ truyền Wifi tối đa: 300Mbps.
+Số cổng kết nối: 4 LAN Tốc độ 10/100Mbps + 1 WAN  Tốc dộ 10/100Mbps Hỗ trợ chuẩn k dây : IEEE 802.11n*, IEEE 802.11g, iEEE 802.11b
+Phòng HT, HP, HĐ, VT, KTHC, Phòng nghỉ, Phòng máy 1,2
+
+
+
+7
+
+
+
+400.000
+
+
+
+2.800.000
+
+
+
+
+
+
+
+2
+
+
+
+
+
+Switch TPLINK TLSG 1016- Giao diện: 16 cổng RJ45 tốc độ 10/100,1000Mbps
+- Hỗ trợ tự học địa chỉ MAC,tự động MDI/MDIX và tự động đàm phán
+- Tốc độ lọc dữ liệu 100% sẽ loại bỏ tất cả các gói tin bị lỗi
+-Tính năng Auto-MDI/MDIX loại bỏ việc sử dụng cáp chéo
+- Nguồn điện: 100-240VAC, 50/60Hz
+- Kích thước: 17.3 x 10.2 x 1.7 in. (440 x 260 x 44 mm)
+
+
+
+
+
+
+
+Phòng HT,
+
+
+
+
+
+
+
+
+1
+
+
+
+
+
+
+
+4,500.000
+
+
+
+
+
+
+
+4,500,000
+
+
+
+
+
+
+
+
+
+3
+
+
+
+
+
+
+Switch TPLINK TLSG 1032- Giao diện: 32 cổng RJ45 tốc độ 10/100,1000Mbps
+- Hỗ trợ tự học địa chỉ MAC, tự động MDI/MDIX và tự động đàm phán
+- Tốc độ lọc dữ liệu 100% sẽ loại bỏ tất cả các gói tin bị lỗi
+-Tính năng Auto-MDI/MDIX loại bỏ việc sử dụng cáp chéo
+- Nguồn điện: 100-240VAC, 50/60Hz
+- Kích thước: 17.3 x 10.2 x 1.7 in. (440 x 260 x 44 mm)
+
+
+
+
+
+
+Phòng máy 1,2
+
+
+
+
+
+
+
+2
+
+
+
+
+
+
+
+1,200.000
+
+
+
+
+
+
+
+2,400,000
+
+
+
+
+
+
+
+
+4
+
+
+
+
+
+
+Bộ máy  tính cấu hình trung bình- Main: Bo mạch chủ H81 Chipset Intel, Có cổng HDMI, (Socket 1150 support)
+- Chip:Intel® Pentium® Processor G3450 (3M Cache, 3.40 GHz)
+- Ram 2Gb DDR3 Bus 1600Mhz
+- Ổ cứng 500GB/ 7200Rpm/ Cache 16MB/ SATA 3 (6.0 GB/s)
+- Nguồn máy tính Goldenfield 480/ Yetek Y500
+- Màn hình máy tính LED 18.5 Inch
+- Bộ bàn phím + chuột genius
+- DDR3: Kingmax 4GB (1600) Thor Erosi 2 Plus (No power)
+
+
+
+
+
+
+
+
+Phòng HT,HP
+TV,TH,
+, bộ môn
+
+
+
+
+
+
+
+7
+
+
+
+
+
+
+
+6,200,000
+
+
+
+
+
+
+
+43,400,000
+
+
+
+
+
+
+
+
+
+
+5
+
+
+
+
+
+
+
+
+
+
+Bộ máy tính cấu hình cao- Main: Bo mạch chủ H81M – DS2 Chipset Intel, Có cổng HDMI, (Socket 1150 support)
+- Chip:Intel® Core I3-4160 (3.6 GHz)
+- Ram 4GB DDR3 Bus 1600Mhz
+- Ổ cứng 1TB WD (GREEN)
+- Nguồn máy tính Goldenfield 480/ Yetek Y500
+- Màn hình máy tính LCD Acer 18.5” E1900HQ
+- Bộ bàn phím + chuột genius
+- DDR3: Kingmax 4GB (1600) Thor Erosi 2 Plus (No power)
+
+
+
+
+
+
+
+
+
+
+
+Phòng máy
+1,2
+
+
+
+
+
+
+
+
+
+
+
+
+50
+
+
+
+
+
+
+
+
+
+
+
+8,000,000
+
+
+
+
+
+
+
+
+
+
+
+400,000,000
+
+
+6
+
+
+Máy in
+(Print)Canon Đa chức năng MF232W (Print/ Copy/ Scan/Wifi)Phòng HT, HP, văn thư, hành chính
+
+
+4
+
+
+5.890.000
+
+
+23,560,000
+
+
+7
+
+
+Dây cáp mạng- Loại dây:Cáp mạng TENDA CAT6 thùng cuộn 300m
+-Trở kháng vòng ( ở 20C )
+- Kháng điện dung: 50pF / m; Trở kháng: 100 ± 15Ω 
+
+
+
+
+
+
+1 thùng
+
+
+2,450,000
+
+
+2,450,000
+8Đầu bấm mạng RJ-45
+Đầu mạng chính hiệu AMP
+100
+2000
+2,000,000
+
+9Server Dell R740 Bronze
+CPU: Intel Core Xeon
+Ram: 16GB
+    
+
+
+Phòng máy Server
+
+1
+
+79,500,000
+
+79,500,000
+      
+
+10
+
+Gói MạngSử dụng mạng cáp quang VIETTEL gói fast 100 (có thể thanh toán theo 1 tháng,3 tháng,6 tháng,12 tháng,)
+
+
+1
+
+4,400,000
+
+4,400,000
+Tổng cộng
+600,000,000  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  3.2.5. Chức năng từng phòng
+Phòng hiệu trưởng
+      Là phòng dành riêng cho hiệu trưởng làm việc. Phòng được trang bị máy tính, internet giúp hiệu trưởng có thể trao đổi thông tin với lãnh đạo, cập nhật các thông tin của bộ giáo dục. Những chỉ thị, công văn từ cấp trên. Bên cạnh đó phòng còn trang bị các thiết bị như máy in giúp hiệu trưởng in các công văn, quyết định của trưởng. Cũng như máy Fax để nhận các quyết định, công văn một cách nhanh chóng. Máy tính cài windows XP, phần mềm office 2003, bộ gõ tiếng việt Unicode.
+Phòng hiệu phó
+	Phòng là nơi làm việc của thầy hiệu phó phòng gồm có máy tính, internet, máy in giúp cho thầy truy cập internet để tham khảo các thông tin. Soạn thảo các công văn, văn bản cho trường, phòng có 1 máy in để hiệu phó có thể in các văn bản. Máy tính cài windows XP, phần mềm office 2003, bộ gõ tiếng việt Unicode.
+Phòng hội đồng 
+      Là phòng thường diễn ra các cuộc họp của trường, của đoàn. Chuyên dùng để tổ chức các cuộc họp nội bộ của trường và dùng để tiếp khách. Cần một máy tính, 1 máy chiếu để dùng cho những buổi họp có nội dung phổ biến các kiến thức mới, cách giảng dạy qua máy chiếu. Phòng còn sử dung 1 wireless để thuận tiện trong cuộc họp giáo viên có thể vào mạng, thuận tiện cho việc trao đổi thông tin. Máy Server là nơi lưu trữ dữ liệu tập chung của trường giúp giáo viên, các phòng ban có thể truy nhập vào để lấy dữ liệu phục vụ cho giảng dậy của nhà trường. Phòng là nơi thuận tiện để đặt các thiết bị mạng như Modem, Switch, Server, FireWall do phòng là nơi ở tầng 2 tránh được đánh cắp, thuận tiện cho đường dây internet nối vào để triển khai ra toàn trường.
+Chức năng của phòng kế toán – tài chính
+      Cung cấp đầy đủ toàn bộ thông tin về hoạt động kinh tế tài chính của trường nhằm giúp cho hiệu trưởng cùng ban giám hiệu nhà trường điều hành và quản lý các hoạt động kinh tế tài chính ở trường đạt kết quả cao. Phòng cần có 2 máy tính kết nối internet, một máy in để in các chi tiêu cũng như hoạt động của trường. Máy tính cài phần mềm office 2003. Bộ phông tiếng việt Unicode.
+Phòng văn thư
+      Phòng văn thư là nới lưu trữ các hồ sơ học sinh (học bạ) từ lớp 10 đến lớp 12. Phòng cần có máy tính kết nối internet để thuận tiện cho việc lưu chữ thông tin học sinh. Giúp cho nhà trưởng có thể quản lý học sinh một cách tốt nhất.
+Phòng nghỉ
+      Phòng nghỉ là nơi mà các thầy cô giáo có  thể tới để nghỉ ngơi sau khi kết thúc 1 tiết dậy học mệt mỏi có  wifi để giải trí và cập nhật thông tin hữu ích cho tiết dậy sau.
+3.3. Lắp đặt phần cứng và cài đặt hệ thống mạng
+  3.3.1. Lắp đặt phần cứng
+- Tiến hành thi công cáp mạng
+- Triển khai các thiết bị dẫn (ống nhựa,nẹp,..)
+- Lắp đặt các máy tính và các thiết bị ngoại vi đúng vị trí như trong sơ đồ vật lý.
+- Đánh dấu sợi dây và kết nối vào switch để tiện cho việc lắp đặt và bảo trì,sửa chữa sau này.
+  3.3.2. Cài đặt và cấu hình các dịch vụ mạng
+    a) Cấu hình wifi tp-link 841n
+Bước 1: Mở trình duyệt Web gõ địa chỉ IP  192.168.0.1 vào thanh địa chỉ và nhấn Enter
+    
+    Hình 3.7:  Đăng nhập TP-Link
+    UserName và mật khẩu tương ứng là admin/admin sau khi đăng nhập thành công trình duyệt sẽ chuyển trên giao diện quản trị của Router TL-WR841ND
+    
+    Hình 3.8: Giao diện TP-Link
+Chọn menu Network => WAN để xem trạng thái kết nối Internet, chọn Dynamic IP
+ 
+    Hình 3.9: Cấu hình Tp-Link
+
+Bước 2: Để thay đổi Tên cho Router bạn vào Wireless => Wireless setting 
+    
+    Hình 3.10: Cấu hình Tp-Link
+Gõ vào ô Wireless Network Name tên kết nối WiFi bạn muốn thiết lập
+    
+    Hình 3.11: Cấu hình Tp-Link
+
+Bước 3: Click chọn menu Wireless Security để thiết lập mật khẩu cho kết nối WiFi
+ 
+    Hình 3.12: Cấu hình Tp-Link
+Đặc biệt đối với sản phẩm TL-WR841ND sau khi cấu hình xong và nhấn Save quý khách không cần phải reboot lại Router, mọi thay đổi đã được lưu khi bạn nhấn Save
+   
+    Hình 3.13: Giao diện khi hoàn thành cài đặt
+Bước 4: Rút dây lan đã cắm ban đầu và kết nối laptop với TL-WR841ND với tên kết nối bạn vừa thiết lập ở trên.
+
+b) Dịch vụ DNS
+Cấu hình dịch vụ DNS 
+Bước 1: Vào dịch vụ DNS, tại mục Forward Lookup Zone. chọn New Zone…
+    
+    Hình 3.14: Forward Lookup Zone
+Bước 2: Ta nhập Zone Name là abcd.vn, chọn Next 
+    
+    Hình 3.15: Zone Name
+
+Bươc 3: Ấn Finish để hoàn thành quá trình cài đặt
+   
+    Hình 3.16: Finish
+Bước 4: Mục Reverse Lookup Zones, chọn New Zone
+    
+    Hình 3.17: Reverse Lookup Zones
+
+Bước 5: Tại mục Reverse Lookup zone name, nhập Network ID
+    
+    Hình 3.18: Network ID
+    
+Bước 6: Ấn Finish để kết thúc quá trình cài đặt
+    
+    Hình  3.19: Finish
+
+Bước 7: Chọn tên miền là abcd.vn, chọn New Host (A or AAA)
+    
+    Hình 3.20: Chọn tên miền
+    
+Bước 8: Nhập Name 1234b, địa chỉ IP là 192.168.1.5
+    
+    Hình 3.21: Nhập Name
+
+Bước 9: Qua mục Reverse Lookup Zones Chọn new poiter (ptr)
+    
+    Hình 3.22: Reverse Lookup Zones
+    
+Bước 10: Nhập địa chỉ IP, chọn Browse
+    
+    Hình 3.23: Nhập địa chỉ IP
+
+Bước 11: Ta chọn các Name và ấn OK
+    
+    Hình 3.24: Chọn các Name
+Bước 12: Chuyển qua máy Client ta gõ lệnh nslookup, ta gõ 1234.abcd.vn
+    
+    
+    Hình 3.25: Lệnh nslookup
+    
+c) Cài đặt và cấu hình DHCP server 
+Cài đặt DHCP
+Bước 1: Chọn Add Roles and features
+    
+    Hình 3.26: Chọn Add Roles and features
+Bước 2: Chọn Role-based or feature-based installation Ấn Next 
+    
+    Hình 3.27: Role-based or feature-based installation
+
+Bước 3: Cài đặt Local DHCP Role vì nó sẽ chọn một máy chủ từ Server Pool sau đó kích Next.
+    
+    Hình 3.28: Local DHCP Role
+Bước 4: Từ Roles lists, hãy chọn DHCP Server role nhấp vào Add Features 
+    
+    Hình 3.29: DHCP Server role
+
+Bước 5: Chọn Install 
+    
+    Hình 3.30: Install
+    
+Cấu hình DHCP
+Bước 1: Nhấp chuột phải vào IPv4 Chọn New Scope
+    
+    Hình 3.31: IPv4 Chọn New Scope
+
+
+Bước 2: Nhập địa chỉ Start IP và End IP của địa chỉ IP
+    
+    Hình 3.32: Start IP và End IP
+Bước 3: Nhập phạm vi IP của bạn trong danh sách loại trừ. Nếu thiết bị trên mạng yêu cầu địa chỉ IP tĩnh, hãy đảm bảo rằng phạm vi bị loại trừ thuộc phạm vi Start và End được chỉ định trước đó  nhấp vào Next
+    
+    Hình 3.33: Phạm vi IP
+Bước 4: Nhập thời hạn mong muốn cho IP được chỉ định hoặc để mặc định sau đó nhấp Next
+    
+    Hình 3.34: Nhập thời hạn mong muốn cho IP
+
+Bước 5: Chọn tùy chọn Yes, I want to activate this scope now để kích hoạt phạm vi ngay lập tức chọn Next
+    
+    Hình 3.35: Configure DHCP Options
+Bước 6: Nhập cổng mặc định là IP Router của máy Server sau đó nhấn Next.
+    
+    Hình 3.36: IP Router
+
+Bước 7: Chọn tùy chọn Yes, I want to activate this scope now để kích hoạt phạm vi ngay lập tức chọn Next
+    
+    Hình 3.37: Activate Scope
+Bước 8: Ấn Finish 
+    
+    Hình 3.38: Finish
+
+Bước 9: Giao diện khi đã cấu hình xong DHCP
+    
+    Hình 3.39: Giao diện  DHCP
+Bước 10: Ta chuyển qua máy Client, vào hộp thoại cmd và ta nhập lệnh ipconfig /release để gỡ bỏ IP cũ
+              Tiếp theo ta gõ lệnh ipconfig /renew để nhận IP mới từ DHCP Server 
+    
+    Hình 3.40: Địa chỉ DHCP máy Client
+• 
+Client nhận IP từ DHCP server và gia nhập domain và Client thử truy cập internet.
+Bước 1: Start / Control Panel
+    
+    Hình 3.41: Truy cập control pannel
+Bước 2: Chọn Network and Sharing Center
+    
+
+    Hình 3.42: Truy cập Network and Sharing Center
+
+Bước 3: Chọn Change adapter settings
+
+    
+    Hình 3.43: Truy cập Adapter Setting
+
+Bước 4: Click phải LAN / Properties
+
+    
+Hình 3.44: Truy cập LAN/Properties
+
+Bước 5: Chọn Obtain an IP address automaticcally và Obtain DNS server address automa
+    
+    Hình 3.45: Giao diện Properties
+    
+    Bước 6: Start / Nhập cmd (như hình minh họa) / Enter
+    
+    Hình 3.46: Truy cập Cmd
+Bước 8: Nhập lệnh ipconfig /all / Enter
+    
+    Hình 3.47: Nhập lệnh ipconfig /all 
+    
+Bước 9: Quan sát thấy đã nhận được IP từ DHCP server
+    
+    Hình 3.48: Giao diện khi ip được cấp từ DHCP
+
+Bước 10: Client thử truy cập internet / thành công
+
+d. Cài đặt và cấu hình File server 
+Cài đặt FSRM
+Bước 1: Vào Server Manager, chọn Add Roles and Features
+    
+    Hình 3.49: Add Roles and Features
+Bước 2: Chọn Role-based or feature-based installation, ấn Next
+    
+    Hình 3.50: Role-based or feature-based installation
+
+Bước 3: Chọn File Server Resoure Manager, ấn Next 
+    
+    Hình 3.51: File Server Resoure Manager
+Bước 4: Ấn Install để kết thúc quá trình cài đặt
+    
+    Hình 3.52: Install
+
+Cấu hình FSRM
+Bước 1: Vào Tools, chọn File Server Resoure Manager
+    
+    Hình 3.53: File Server Resoure Manager
+Bước 2: Giao diện của File Server Resoure Manager
+    
+    Hình 3.54: Giao diện File Server Resoure Manager
+    
+
+Bước 3: Vào mục Quota Template, rồi chọn Create Quota Template
+    
+    Hình 3.55: Create Quota Template
+Bước 4: Một bảng mới sẽ được mở ra, Ta ghi ở mục Template name là gioi han 200, mục Space limit ta chọn dung lượng giới hạn là 200MB, ấn OK
+    
+    Hình 3.56: Giới hạn dung lượng file
+
+Create Quota From Template
+Bước 5: Ta ấn vào mục Quotas, chọn 
+    
+    Hình 3.57: Create Quota From Template
+
+Bước 6: Ta chọn mục giới hạn file là mục dl, ấn OK 
+    
+    Hình 3.58: Mục giới hạn file
+    
+
+Bước 7: Mục Create Quota chọn Quota path là dl, mục derive properties from this file screen template (recommended) chọn là gioi han 200
+    
+    Hình 3.59: Create Quata
+Bước 8: Vào máy để xem dung lượng đã được giới hạn là 200MB
+    
+    Hình 3.60: dung lượng đã được giới hạn
+    
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được
+    Qua quá trình tìm hiểu, khảo sát quy trình, nghiệp vụ, yêu cầu của trường THPT Tô Hiệu cùng với sự nỗ lực không ngừng nghỉ em đã hoàn thành đề tài đúng thời gian quy định và đạt được một số thành quả thiết kế được hệ thoosg mạng cho trường THPT Tô Hiệu và cài được cái dịch vụ trên máy ảo như DNS , DHCP và cuốn báo cáo
+    Nắm được phần nào công việc quản lý của một nhà thiết kế, quản trị viên tương lai.
+    Củng cố lại kiến thức về thực hành mạng.
+    Nâng cao tinh thần và trách nhiệm của bản thân với công việc
+    .....
+4.2 Hạn chế
+- Hệ thống chưa hoàn toàn tối ưu, vẫn còn nhiều điểm phải khắc phục
+- Chi phí vẫn còn cao
+- Hệ thống máy thiết kế vẫn chưa khoa học
+- Các máy tính trong các phòng học thiết kế chưa được hợp lý 
+- Hệ thống mạng Internet nhiều khi còn chậm 
+- Hệ thống cơ sở dữ liệu vẫn còn ít so với nhu cầu của nhân viên
+- Các công nghệ kết nối mạng đôi khi còn lạc hậu so với thị trường
+4.3 Hướng phát triển 
+    Để có thể khắc phục được một số mặt hạn chế của đề tài thì có một số hướng phát triển như sau:
+    - Xây dựng và triển khai hệ thống thực.
+    - Thực hiện cả việc cài đặt lẫn vận hành chứ không chỉ dừng lại ở thiết kế để tìm ra lỗi để thực hiên khắc phục và bảo trì
+    - Cần học hỏi kinh nghiện người đi trước
+    - Nâng cấp hệ thống máy chủ để phục vụ tốt nhu cầu giáo viên và học sinh
+    - Bổ xung thêm các máy Client để nhiều nhân viên có thể cùng lúc sử dụng dữ liệu
+    - Cải thiện hệ thống máy chủ để nâng cấp tốc độ truy suất để cải thiện tốc độ mạng
+    - Nâng cấp gói mạng để tốc độ kết nối Internet được nhanh hơn để đáp ứng nhu cầu giải trí của nhân viên
+    - Có thể thay thế các máy tính đã cũ tốc độ không còn cao bằng máy tính mới để nâng cao hiệu quả làm việc
+    - Thay thế các dây nối đã cũ để nâng cao khả năng truy cập mạng
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+
+
+   
+    TÀI LIỆU THAM KHẢO
+Các tài liệu tham khảo
+[1].  Giáo trình “Thiết lập và cấu hình mạng LAN” bài giảng Khoa CNTT - Đại học SPKT Hưng Yên
+[2].  Giáo trình “Quản trị mạng máy tính” bài giảng Khoa CNTT - Đại học SPKT Hưng Yên
+[3].  Giáo trình “Quản quản trị mạng doanh nghiệp” bài giảng Khoa CNTT - Đại học SPKT Hưng Yên
+[4].  Huỳnh Nguyên Chính  “CCNA Routing & Switching” trung tâm đào tạo Newstart
+   
+   
+   
+   
+   
+   
+   
+Thiết kế hệ thống mạng cho trường THPT Tô Hiệu
+    
+    
+    66
+    
+    

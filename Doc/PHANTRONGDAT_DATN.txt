@@ -1,0 +1,352 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1. Lý do chọn đề tài
+    Deep learning có mặt ở mọi nơi. Trên Amazon và Netflix: cung cấp những thông tin được cá nhân hóa (personalized recommendations). Trên smartphone: giúp kích hoạt trợ lý bằng giọng nói. Trên các website và ứng dụng di động: giúp cho nội dung quảng cáo nhắm đến khách hàng tiềm năng chính xác hơn. Deep learning giúp cho doanh nghiệp thu được những thông tin hữu ích từ dữ liệu phi cấu trúc (unstructured data)
+    
+    Các doanh nghiệp ngày nay đang cố gắng tận dụng những dữ liệu phi cấu trúc (photographs, videos, chat logs, các văn bản) để đưa ra các quyết định kinh doanh hiệu quả hơn. Họ đang tận dụng khả năng thông minh của deep learning trong việc tự động hoá các tiến trình kinh doanh này.
+    
+    
+• Big data và dữ liệu khổng lồ
+    
+    Chỉ trong 24 giờ, thế giới có 3 tỉ người truy cập internet và thực hiện 2.8 tỉ lượt tìm kiếm trên Google, hơn 5.5 tỉ lượt xem video trên Youtube và gửi gần 500 triệu Tweets. Đó không phải là dữ liệu lớn (big data) mà là dữ liệu khổng lồ (massive data). Và phần lớn là dữ liệu không có cấu trúc như emails, các đoạn chat, các bài viết… Những tài liệu này thường dành cho con người chứ không được thiết kế để máy tính có thể xử lý.
+    Trong vòng vài năm qua, các doanh nghiệp đang đối mặt với một lượng lớn dữ liệu đòi hỏi họ phải chuyển trọng tâm. Thay vì dành thời gian vẽ các biểu đồ, bảng biểu, và bảng tính, họ dành thời gian tìm kiếm giải pháp thông minh hơn để tự động hoá việc phân tích dữ liệu và kết nối những tri thức lại với nhau (connecting the dots) giúp họ hiểu được khách hàng đang nói gì ở tất cả các kênh truyền thông.
+    Đây chỉ là một số ứng dụng thương mại của deep learning. Có rất nhiều các ứng dụng khác như dịch tiếng nói (speech translation), chuyển tiếng nói thành văn bản (speech transcription), phân loại văn bản (text classification), phát hiện nội dung (conten discovery), thương hiệu thông minh (brand intelligence), và theo dõi (monitoring) social media…
+• Nhận diện khuôn mặt
+    Hiện nay các công nghệ của trí tuệ nhân tạo ngày càng phổ biến, một trong số đó là công nghệ nhận dạng khuôn mặt công nghệ này ngày càng được áp dụng phổ biến trong đời sống hàng ngày, là một trong số công nghệ tiên tiến nhất hiện nay.
+    Ứng dụng của công nghệ nhận diện khuôn mặt hiện nay không thể kể hết, ví dụ như việc kiểm soát an ninh, bảo mật dữ liệu hay đơn giản là các ứng dụng, game dựa vào biểu cảm khuôn mặt...
+    Công nghệ nhận diện khuôn mặt có nhiều lợi thế như không cần tiếp xúc trực tiếp, độ chính xác cao,... cùng với sự phát triển của các thiết bị điện tử thông minh, công nghệ này có rất nhiều tiềm năng để phát triển và ứng dụng trong đời sống hiện tại và tương lai.
+    Với mong muốn tìm hiểu và học hỏi cũng như có được nền tảng các kiến thức về big data, deep learning để xây dựng những sản phẩm có ứng dụng thực tế thú vị và mang nhiều lợi ích trong cuộc sống và tương lai, cùng với sự đồn ý của giáo viên hướng dẫn đề tài, em lựa chọn đề tài “Xây dựng hệ thống nhận dạng khuôn mặt sử dụng giải thuật deep learning” làm đề tài đồ án tốt nghiệp.
+1.2. Mục tiêu của đề tài
+- Trình bày được khái niệm và các vấn đề về Deep learning.
+- Cài đặt và áp dụng thuật toán Deep learning vào ứng dụng.
+- Xây dựng được ứng dụng nhận dạng khuôn mặt.
+- Đưa ứng dụng ra các nền tảng khác.
+- Sử dụng được ứng dụng trên các nền tảng khác.
+1.3. Giới hạn và phạm vi của đề tài
+- Cần thu thập một nguồn lớn dữ liệu để training cho hệ thống.
+- Cần deploy lên server để có thể public API cho các ứng dụng trên các nền tảng khác.
+1.4. Nội dung thực hiện
+    Nội dung thực hiện/nghiên cứu cụ thể như sau:
+- Tìm hiểu ngôn ngữ, Neural networks, Deep learning.
+- Thiết kế đặc tả hệ thống.
+- Xây dựng cơ sở dữ liệu.
+- Thu thập dữ liệu training.
+- Triển khai xây dựng và phát triển hệ thống.
+1.5. Phương pháp tiếp cận
+- Cách tiếp cận : Nghiên cứu các ngôn ngữ lập trình Python, tìm hiểu neural networks, deep learing và các thư viện tensorflow, keras...
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu;
+o Phương pháp phân tích mẫu;
+o Phương pháp thực nghiệm.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1. Tổng quan về Machine learning
+
+    
+Hình 2.1. Mối liên hệ giữa Trí Tuệ Nhân Tạo với các nhánh học như Máy Học, Biểu Diễn Tri Thức và Suy Luận, Xử Lý Ngôn Ngữ Tự Nhiên, Thị Giác Máy Tính…
+2.1.1. Khái niệm
+    Có 2 định nghĩa khá rõ ràng về Machine Learning như sau:
+- Theo Arthur Samuel (1959): Máy học là ngành học cung cấp cho máy tính khả năng học hỏi mà không cần được lập trình một cách rõ ràng.
+- Theo Giáo sư Tom Mitchell – Carnegie Mellon University: Machine Learning là 1 chương trình máy tính được nói là học hỏi từ kinh nghiệm E từ các tác vụ T với độ đo hiệu suất P. Nếu hiệu suất của nó áp dụng trên tác vụ T và được đo lường bởi độ đo P tăng từ kinh nghiệm E.
+      Ví dụ cho định nghĩa của Tom Mitchell
+• Ví dụ 1: Giả sử như bạn muốn máy tính xác định một tin nhắn có phải là SPAM hay không
+    Tác vụ T: Xác định 1 tin nhắn có phải SPAM hay không?
+Kinh nghiệm E: Xem lại những tin nhắn đánh dấu là SPAM xem có những đặc tính gì để có thể xác định nó là SPAM.
+      Độ đo P: Là phần trăm số tin nhắn SPAM được phân loại đúng.
+• Ví dụ 2: Chương trình nhận dạng số (số từ 0 -> 9)
+    T: Là nhận dạng được ảnh chứa ký tự số.
+    E: Đặc trưng để phân loại ký tự số từ tập dữ liệu số cho trước.
+    P: Độ chính xác của quá trình nhận dạng.
+- Các khái niệm đi kèm với Machine Learning là:
+   Machine learning và trí tuệ nhân tạo (AI) 
+   Machine learning và Big Data.
+   Machine learning và dự đoán tương lai.
+2.1.2. Machine learning hoạt động ra sao?
+    ML cho phép máy tính học từ chính bản thân nó. Cách học này lợi dụng sức mạnh xử lý của máy tính hiện đại, những chiếc máy tính có thể dễ dàng xử lý lượng lớn các tập dữ liệu.
+    Hai methods của Machine Learning được chấp nhận rộng rãi chính là supervised learning (học có giám sát) và unsupervised learning (học không giám sát) nhưng cũng có những methods khác như semisupervised learning (học bán giám sát), reinforcement learning (học tăng cường).
+- Supervised Learning: Xây dựng mô mình từ các mối quan hệ trong dữ liệu, dựa trên các cặp input-ouput của các quan sát. 
+- VD: Phân loại email, nhận dạng chữ viết tay,…
+- Unsupervised Learning: Huấn luyện dựa trên các mối quan hệ và cấu trúc của dữ liệu.
+- VD: phát hiện các nhóm bệnh nhân trong bệnh án điện tử,…
+2.2. Tổng quan về Deep learning
+2.2.1. Khái niệm
+    Deep Learning là một kỹ thuật trong Machine Learning, liên quan đến các thuật toán lấy cảm hứng từ cấu trúc và hoạt động của bộ não động vật gọi là Mạng nơ-ron nhân tạo (artificial neural networks).
+• Mạng nơ-ron
+    Cũng giống động vật, bộ não của AI cũng có các nơ ron. Chúng được biểu diễn bằng các vòng tròn. Các nơ ron này được liên kết với nhau. 
+    
+Hình 2.2. Mô hình mạng nơ ron
+- Input layer nhận các dữ liệu đầu vào. Trong trường hợp của chúng ta, ta có 4 nơ r on trong input layer: sân bay khởi hành, sân bay đến, ngày bay, hãng bay. Input layer sẽ đưa các đầu vào này vào hidden layer thứ nhất.
+- Các hidden layer thực hiện các phép tính toán cho các đầu vào. Thử thách lớn nhất trong việc tạo mạng nơ ron là quyết định số lượng các hidden layer này, cũng như số các nơ ron cho mỗi layer.
+- Từ “Deep” trong Deep Learning chỉ đến việc có nhiều hơn một hidden layer.
+- Output layer trả về dữ liệu đầu ra, trường hợp của ta sẽ là đưa ra dự đoán về giá vé. 
+    
+Hình 2.3. Output layer dự đoán giá vé máy bay mạng nơ ron
+2.2.2. Deep learning hoạt động như nào?
+    Để huấn luyện được mạng nơ ron, bạn cần có:
+- Lượng lớn tập dữ liệu (data set)
+- Một máy tính mạnh để tính toán
+    Trở lại với bài toán dự đoán giá vé máy bay, chúng ta cần dữ liệu về lịch sử của giá vé. Và với số lượng lớn của tập hợp các sân bay, ngày bay, chúng ta cũng cần một lượng lớn tương đương về giá vé.
+    Để huấn luyện AI, chúng ta cần đưa cấc đầu vào từ tập dữ liệu, sau đó so sánh với đầu ra của nó với đầu ra của tập dữ liệu mẫu. Khi AI chưa được huấn luyện, đầu ra của nó sẽ có thể bị sai.
+    Khi ta đã hoàn thành với tập dữ liệu, ta có thể tạo một hàm hiển thị độ sai của đầu ra của AI so với đầu ra thực tế. Hàm này được gọi là Cost Function. Để giảm tối đa cost function, bạn phải lặp rất nhiều lần trong tập dữ liệu và giảm trọng số. Đây là lý do tại sao phải cần một khả năng tính toán rất lớn. Cập nhật trọng số sử dụng gradient descent (công nghệ cho phép tìm giá trị nhỏ nhất của một hàm) được hoàn thành một cách tự động.
+2.2.3. Tổng quan
+- Deep Learning sử dụng một mạng nơ ron để bắt chước trí thông minh của động vật (giống hành động của vật).
+- Có 3 loại layer chính của các nơ ron trong mạng nơ ron là: Input layer, Các hidden layer, Output layer.
+- Mối liên kết giữa nơ ron được kết hợp với một trọng số, nó chỉ ra được tầm quan trọng của giá trị đầu vào.
+- Các nơ ron áp dục một Hàm kích hoạt trên dữ liệu để chuẩn hóa đầu ra cho nơ ron.
+- Để huấn luyện một mạng nơ ron, bạn cần một tập dữ liệu lớn.
+- Việc lặp lại tập dữ liệu và so sánh các đầu ra sẽ sinh ra cost function giúp chỉ ra sai sót của AI so với đầu ra thực tế.
+- Sâu mỗi vòng lặp trong tập dữ liệu, trọng số weight giữa nơ ron sẽ được điều chỉnh bằng Gradient Descent để giảm cost function.
+2.3. Tổng quan về Tensorflow
+2.3.1. Khái niệm cơ bản về Tensorflow
+    Tensorflow là một thư viện mã nguồn mở cung cấp khả năng xử lí tính toán số học dựa trên biểu đồ mô tả sự thay đổi của dữ liệu. Tensor được sử dụng khi bạn cần giải quyết các bài toán supervised learning.
+    
+Hình 2.4. Ví dụ về 1 graph trong tensorflow
+
+• Node
+    Vì Tensorflow mô tả lại dòng chảy của dữ liệu thông qua graph nên mỗi một điểm giao cắt trong graph thì được gọi là Node. Tại sao điều này quan trọng thì là vì các Node chính là điểm đại diện cho việc thay đổi của dữ liệu nên việc lưu trữ lại tham chiếu của các Node này là rất quan trọng.
+• Tensor
+    Là khái niệm quan trọng nhất trong tensorflow, Tensorflow cung cấp một loại dữ liệu mới được gọi là Tensor . Trong thế giới của Tensorflow, mọi kiểu dữ liệu đều được quy về một mối được gọi là Tensor hay trong Tensorflow, tất cả các loại dữ liệu đều là Tensor. Vậy nên có thể hiểu được phần nào cái tên Tensorflow là một thư viện mô tả, điều chỉnh dòng chảy của các Tensor.
+    Tensor là một kiểu dữ liệu dạng mảng có nhiều chiều được mô tả dạng Tensor= [[[1,1,1],[178,62,74]],[[45,2,2],[19,0,17]],[[7,5,2],[0,11,4]],[[8,13,5],[1,6,7]]]. Mảng nhiều chiều này được đính kèm thêm một vài thuộc tính tham chiếu khác. Các thuộc tính của Tensor được mô tả trong tài liệu bao gồm:
+- device: Tên của thiết bị mà Tensor hiện tại sẽ được xuất bản. Có thể None.
+- graph: Đồ thị chứa Tensor hiện tại.
+- name: Tên của Tensor hiện tại.
+- shape: Trả về TensorShape mô tả lại Shape của Tensor hiện tại.
+- op: Operation(Toán tử / Phép toán) được sử dụng để xuất bản Tensor hiện tại.
+- dtype: Kiểu của các elements(Phần tử) trong Tensor hiện tại.
+
+
+• Rank
+    Rank là bậc hay độ sâu của một Tensor. Ví dụ như Tensor = [1] sẽ có rank là 1, Tensor=[[[1,1,1],[178,62,74]]] sẽ có rank bằng 3, Tensor = [[1,1,1],[178,62,74]] sẽ có rank bằng 2. Cách nhanh nhất để xác định rank của một Tensor là đếm số lần mở ngoặc vuông cho đến giá trị khác ngoặc vuông đầu tiên. Việc phân rank này khá quan trọng vì nó đồng thời cũng giúp phân loại dữ liệu của Tensor. Khi ở cách rank đặc biệt cụ thể, Tensor có những tên gọi riêng như sau:
+- Scalar: Khi Tensor có rank bằng 0, Tensor đại diện cho một số hoặc một chuỗi cụ thể. Ví dụ: scalar=123.
+- Vector: Vector là một Tensor rank 1. Trong python thì Vector là một list hay mảng một chiều chứa các số. Ví dụ: list=[123,345].
+- Matrix: Đây là một Tensor rank 2 hay mảng hai chiều theo khái niệm của Python. Ví dụ: matrix=[[1,2],[2,1]].
+- N-Tensor: Khi rank của Tensor tăng lên lớn hơn 2, chúng được gọi chung là N-Tensor.
+- Shape
+    Shape là một tuple có dimention(Số chiều) bằng với rank của Tensor tương ứng dùng để mô tả lại cấu trúc của Tensor đó. Dưới đây là ví dụ về Shape.
+- Tensor = 1 sẽ có Shape = ().
+- Tensor = [1] sẽ có Shape = (1).
+- Tensor = [[[1,1,1],[178,62,74]]] sẽ có Shape = (1,1,2).
+- Tensor = [[1,1,1],[178,62,74]] sẽ có Shape = (1,2).
+    Dựa vào cấu trúc của Shape, ta dễ dàng thấy rằng ràng buộc cơ bản của Tensor là chiều của các elements trong Tensor tại mỗi bậc phải bằng nhau.
+2.3.2. Tổng quan
+- Sử dụng trong rất nhiều ứng dụng của Google như phần loại email của Gmail, nhận biết phát âm và dịch tự động, nhận biết khuôn mặt trong Google Photo, tối ưu hoá kết quả tìm kiếm, quảng cáo trong Youtube, …
+- Đặc trưng của TensorFlow là xử lý được tất cả các loại dữ liệu có thể biểu diễn dưới dạng data flow graph hay low level như xử lý chữ viết tay. TensorFlow được viết bằng C++, thao tác interface bằng Python vì thế performance rất tốt, dùng được cả CPU lẫn GPU nên TF có thể chạy trên cả PC thông thường lẫn 1 server cực lớn, thậm chí cả smartphone cũng có thể sử dụng được.
+2.4. Tổng quan về Keras
+    Keras là thư viện nguồn mở được viết bằng Python dùng để build các Neural Networks ở mức high-level của interface. Thư viện này đơn giản và có khả năng mở rộng cao. Keras sử dụng backend là Theano hoặc TensorFlow.
+    Ý tưởng chung về Keras là dựa trên các layers và mọi thứ khác cũng đều được xây dựng xung quanh các layer này. Data được chuẩn bị trong các tensors, layer đầu tiên chịu trách nhiệm về input của các tensors, layer cuối cùng chịu trách nhiệm output và model được build ở giữa.
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1. Phát biểu bài toán
+    Hệ thống nhận dạng khuôn mặt là một ứng dụng máy tính tự động xác định hoặc nhận dạng một người nào đó từ một bức hình ảnh kỹ thuật số hoặc một khung hình video từ một nguồn video. Một trong những cách để thực hiện điều này là so sánh các đặc điểm khuôn mặt chọn trước từ hình ảnh và một cơ sở dữ liệu về khuôn mặt.
+    Hệ thống này thường được sử dụng trong các hệ thống an ninh và có thể được so sánh với các dạng sinh trắc học khác như các hệ thống nhận dạng vân tay hay tròng mắt. 
+    Con người có thể xử lý khuôn mặt rất nhanh. Chỉ mất chưa đến 1 giây để nhận ra ai đó và thậm chí để xác định cảm giác của họ như thế nào. Tuy nhiên, phần mềm phải mất một quy trình phức tạp hơn nhưng rất chính xác hệ thống nhận dạng khuôn mặt này sẽ làm được điều đó.
+    Hệ thống nhận dạng khuôn mặt sử dụng giải thuật deep learning cần đạt được các mục tiêu sau:
+- Load, định dạng và phân tích xử lý được dữ liệu đầu vào.
+- Xây dựng được tập dữ liệu (training và testing datasets).
+- Xây dựng được model.
+- Xây dựng được function để training, test và predict.
+- Ứng dụng hệ thống vào thực tế.
+3.2. Yêu cầu của hệ thống
+3.2.1. Phân tích dữ liệu đầu vào
+- Giai đoạn này ta cần load data và format chúng gọi chung là giai đoạn tiền xử lý dữ liệu, trong hệ thống nhận dạng khuôn mặt thì dữ liệu đầu vào của ta là một tập dữ liệu về khuôn mặt, và các biểu cảm khác nhau.
+- Từ tập dữ liệu thô là tập các hình ảnh ta cần chuyển đổi về dạng array sau đó định dạng và làm sạch chúng cho việc tính toán dữ liệu sau này.
+3.2.2. Xây dựng training và testing datasets
+- Sau khi phân tích và format dữ liệu đầu vào ta cần xây dựng tập dữ liệu training và testing cho hệ thống.
+- Tùy vào hệ thống sẽ chia tỷ lệ cho tập dữ liệu training và testing.
+3.2.3. Xây dựng model
+- Để xây dựng được model ta có thể sử dụng thư viện keras, với tensorflow là backend thì keras đóng vai trò như frontend.
+- Đầu tiên chỉ cần tạo ra một Sequential model ở mức high-level sau đó thiết lập thêm các thuộc tính cho model.
+3.2.4. Xây dựng training, testing và predict functions
+- Từ tập dữ liệu training đã xử lý được ta có thể xây dựng được model sau khi hoàn thiện model ta hoàn toàn có thể xây dựng được chức năng testing và predict với model đã xây dựng.
+3.2.5. Ứng dụng hệ thống vào thực tế
+    Từ model đã xây dựng dược trong hệ thống nhận dạng khuôn mặt ta có thể ứng dụng ra thực tế như xây dựng service và public các API cho các nền tảng khác sử dụng hoặc có thể sử dụng tensorflow để freeze graph các client sẽ sử dụng graph này để xử lý dữ liệu và tạo ra nhiều ứng dụng từ hệ thống.
+    Xây dựng ứng dụng Báo thức ứng dụng hệ thống nhận dạng khuôn mặt sử dụng giải thuật deep learning gồm các chức năng sau:
+- Thêm lịch báo thức
+- Cập nhật (xóa) thông tin báo thức
+- Báo thức (sử dụng graph để phân tích nhận dạng khuôn mặt).
+3.3. Biểu đồ UseCase
+3.3.1. Biểu đồ UseCase mức tổng quát
+
+Hình 3.1. UseCase mức tổng quát
+
+
+3.3.2. Đặc tả UseCase
+• UseCase “Data processing”
+Bảng 3.1. Bảng đặc tả UseCase Data processing
+UseCaseData processingMô tả- Xử lý phân tích và format tập dữ liệu thô ban đầu là các hình ảnh hệ thống sẽ phân tích thành dạng array và làm sạch chúng.Người dùng- Hệ thốngĐiều kiện đầu- Có tập dữ liệu thôSự kiện chính- Tiền xử lý dữ liệuĐiều kiện cuối- Tập dữ liệu sau khi format
+• UseCase “Training and testing datasets”
+Bảng 3.2. Bảng đặc tả UseCase Training and testing datasets
+UseCaseTraining and testing datasetsMô tả- Xây dựng tập dữ liệu training và testingNgười dùng- Hệ thốngĐiều kiện đầu- Tập dữ liệu đã được tiền xử lýSự kiện chính- Từ tập dữ liệu đã được xử lý hệ thống sẽ phân tích thành tập dữ liệu training và tập dữ liệu testing Điều kiện cuối- Tập dữ liệu training và tập dữ liệu testing    
+• UseCase “Build model”
+Bảng 3.3. Bảng đặc tả UseCase Build model
+UseCaseBuild modelMô tả- Tạo ra Sequential model mức high-levelNgười dùng- Hệ thốngĐiều kiện đầu- Thư viện keras và các model, layerSự kiện chính- Tạo sequential model và thiết lập các thuộc tính cho model Điều kiện cuối- Tạo ra một sequential model mức high-level    
+• UseCase “Training model”
+Bảng 3.4. Bảng đặc tả UseCase Training model
+UseCaseTraining modelMô tả- Xây dựng model từ training datasetsNgười dùng- Hệ thốngĐiều kiện đầu- training datasetsSự kiện chính- Training cho model từ training datasets Điều kiện cuối- Tạo ra một model đã được training    
+    
+
+• UseCase “Freeze graph”
+Bảng 3.5. Bảng đặc tả UseCase Freeze graph model
+UseCaseFreeze graph modelMô tả- Tạo ra một graph cho phép client sử dụng phân tích dữ liệuNgười dùng- Hệ thốngĐiều kiện đầu- Thư viện tensorflow và graph utilSự kiện chính- Generate graph từ model Điều kiện cuối- Tạo ra graph file.pb    
+• UseCase “Testing”
+Bảng 3.6. Bảng đặc tả Testing
+UseCaseTestingMô tả- Tạo ra Sequential model mức high-levelNgười dùng- Hệ thốngĐiều kiện đầu- testing datasetsSự kiện chính- Testing model đã tạo với testing datasets Điều kiện cuối- Scores sau khi test    
+    
+
+• UseCase “Predict”
+Bảng 3.7. Bảng đặc tả Predict
+UseCasePredictMô tả- Đưa vào hình ảnh phân tích và dự đoán kết quảNgười dùng- Hệ thốngĐiều kiện đầu- predict datasetsSự kiện chính- Predict data truyền vào từ modelĐiều kiện cuối- Kết quả predict    
+• UseCase “Create alarm”
+Bảng 3.8. Bảng đặc tả UseCase Create alarm
+UseCaseCreate alarmMô tả- Tạo ra một record alarmNgười dùng- UserĐiều kiện đầu- Các thông tin như time, label, và các tùy chọnSự kiện chính- Tạo ra record alarm và insert thông tin record Điều kiện cuối- Thông tin record alarm    
+    
+
+• UseCase “Update alarm”
+Bảng 3.9. Bảng đặc tả UseCase Update alarm
+UseCaseUpdate alarmMô tả- Cập nhật thông tin của một recordNgười dùng- UserĐiều kiện đầu- Thông tin recordSự kiện chính- Cập nhật các thông tin như time, label, và các tùy chọn khác và cập nhật trong database Điều kiện cuối- Thông tin record đã cập nhật    
+• UseCase “Delete alarm”
+Bảng 3.10. Bảng đặc tả UseCase Delete alarm
+UseCaseDelete alarmMô tả- Xóa một record alarmNgười dùng- UserĐiều kiện đầu- Thông tin recordSự kiện chính- Xóa thông tin record trong databaseĐiều kiện cuối- Kết quả sau khi xóa record
+    
+
+• UseCase “Dismiss alarm”
+Bảng 3.11. Bảng đặc tả UseCase Dismiss alarm
+UseCaseDismiss alarmMô tả- Dismiss một alarm khi có notifyNgười dùng- UserĐiều kiện đầu- Biểu cảm khuôn mặt (vui)Sự kiện chính- Ứng dụng sẽ phân tích biểu cảm và dismiss alarm nếu biểu cảm khuôn mặt là happyĐiều kiện cuối- Dismiss alarm    
+3.4. Biểu đồ lớp
+3.4.1. Biểu đồ lớp (mức phân tích)
+    
+Hình 3.2. Biểu đồ lớp mức phân tích hệ thông báo thức
+3.4.2. Danh sách các lớp đối tượng và quan hệ
+Bảng 3.12. Bảng danh sách các lớp đối tượng và quan hệ
+STTTên lớp/quan hệLoạiÝ nghĩa/Ghi chú1AlarmLớp Báo thức2ScheduleLớp Lịch trình báo thức     
+3.4.3. Mô tả chi tiết từng lớp đối tượng
+• I.	Lớp Alarm
+Bảng 3.13. Bảng mô tả chi tiết lớp Alarm
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1idintKhóa chínhMã alarm 2labelNvarchar(50)Nhãn của alarm3timeDateNot nullThời gian báo thức4ringToneUriNot nullĐường dẫn nhạc chuông báo thức5isVibratebooleanChế độ rung6isRepeatbooleanChế độ lặp7volumintÂm lượng nhạc báo thức8statusbooleanNot nullTrạng thái
+
+
+• II.	Lớp Schedule
+Bảng 3.14. Bảng mô tả chi tiết lớp Alarm
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1idintKhóa chínhMã schedule2alarmIdintKhóa ngoạiMã của alarm3dayInWeekintNot nullNgày trong tuần
+3.5. Biểu tuần tự
+3.5.1. Biểu đồ tuần tự tiền xử lý datasets
+    
+Hình 3.3. Biểu đồ tuần tự tiền xử lý datasets
+    
+3.5.2. Biểu đồ tuần tự Buil training and training datasets
+    
+Hình 3.4. Biểu đồ tuần tự Build training and testing datasets
+3.5.3. Biểu đồ tuần tự Building model
+    
+Hình 3.5. Biểu đồ tuần tự Building model
+3.5.4. Biểu đồ tuần tự Training model
+    
+Hình 3.6. Biểu đồ tuần tự Training model
+    
+
+
+3.5.5. Biểu đồ tuần tự export model
+    
+Hình 3.7. Biểu đồ tuần tự Export model
+
+
+3.5.6. Biểu đồ tuần tự test model
+    
+Hình 3.8. Biểu đồ tuần tự test model
+    
+
+
+3.5.7. Biểu đồ tuần tự predict
+    
+Hình 3.9. Biểu đồ tuần tự predict
+3.5.8. Biểu đồ tuần tự create alarm
+    
+Hình 3.10. Biểu đồ tuần tự create alarm
+3.5.9. Biểu đồ tuần tự update alarm
+    
+Hình 3.11. Biểu đồ tuần tự update alarm
+3.5.10. Biểu đồ tuần tự delete alarm
+    
+Hình 3.12. Biểu đồ tuần tự delete alarm
+
+3.5.11. Biểu đồ tuần tự dismiss alarm
+    
+Hình 3.13. Biểu đồ tuần tự dismiss alarm
+    
+    
+3.6. Các module của hệ thống
+    Hệ thống nhận dạng khuôn mặt sử dụng giải thuật deep learning gồm các module chính sau đây:
+- Data processing
+- Build training and testing datasets
+- Building model
+- Training model
+- Testing model
+- Prediction
+- Freeze graph
+
+
+3.7. Thiết kế đặc tả giao diện
+3.7.1. Giao diện hệ thống
+• Giao diện model summary
+    Sau khi tạo hoàn thành việc build model sẽ có model summary output như sau
+    
+Hình 3.14. Giao diện model summary
+
+
+• Giao diện training model
+    Sau khi build model hệ thống sẽ tiến hành training cho model và output các thông tin, quá trình training.
+    
+    
+Hình 3.15. Giao diện training model.
+• Giao diện testing model và predict
+    Sau khi build và training model, có thể test và đưa ra độ chính xác từ một tập dữ liệu test và predict.
+    
+Hình 3.16. Giao diện test model và predict
+
+
+	
+3.7.2. Giao diện application client
+• Giao diện Alarm manager
+    Ứng dụng cung cấp giao diện quản lý báo thức có thể tùy chọn thêm báo thức hoặc sửa hay xóa một record bất kỳ.
+
+ 
+Hình 3.17. Giao diện Alarm manager.
+
+
+
+• Giao diện Dismiss alarm
+    Ứng dụng sẽ thông báo khi đúng thời gian đã đặt, để tắt báo thức hệ thống sẽ phân tích chỉ số happy của bạn và dismiss báo thức nếu chỉ số happy > 0.5 (0-1).
+    
+Hình 3.18. Giao diện dismiss alarm.
+
+
+CHƯƠNG 4: KẾT LUẬN
+4.1. Kết quả đạt được của đề tài
+- Hiểu rõ khái niệm và các vấn đề về Deep learning.
+- Xây dựng được ứng dụng nhận dạng khuôn mặt.
+- Sử dụng được ứng dụng trên các nền tảng khác.
+4.2. Hạn chế của đề tài
+- Hệ thống chỉ cung cấp chức năng nhận dạng khuôn mặt theo một mẫu nhất định, chưa phát triển được các chức năng khác như nhận diện cảm xúc, biểu cảm, …
+- Giao diện hệ thống còn đơn giản.
+4.3. Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, tác giả đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+- Xây dựng thêm các chức năng nhận diện khác.
+- Cung cấp các API cho các nền tảng khác.
+    
+CHƯƠNG 5: TÀI LIỆU THAM KHẢO
+    
+[1]. Aurélien Géron, Hands-On Machine Learning with Scikit-Learn and TensorFlow: O'Reilly Media, March 2017.
+[2]. Prateek Joshi, Artificial Intelligence with Python – Deep Neural Networks: Packt Publishing, January 2018.
+[3]. Philippe Remy, Advanced Deep Learning with Keras: Packt Publishing, December 2017.
+[4]. Reza Zadeh, Bharath Ramsundar, TensorFlow for Deep Learning: O'Reilly Media, March 2018.
+    
+PHỤ LỤC
+    Kế hoạch thực hiện
+TTNội dung thực hiệnThời gianKết quả dự kiến1Tìm hiểu lý thuyết22/01 -22/02Hiểu về Python, Neural networks, Deep learning.2Triển khai xây dựng hệ thống:
+- Phân tích hệ thống
+- Phân tích cơ sở dữ liệu
+- Thu thập data
+- Triển khai23/02 – 23/ 04Hoàn thành hệ thống nhận dạng khuôn mặt.3Public API24/04 – 30/04Public được API cho các nền tảng khác.4Xây dựng ứng dụng Android sử dụng công nghệ nhận dạng khuôn mặt.01/05 – 15/05Hoàn thành ứng dụng trên Android.5Hoàn thiện báo cáo16/05 – 21/05Hoàn thành đề tài và báo cáo.    
+Xây dựng Hệ thống nhận dạng khuôn mặt sử dụng giải thuật deep learning
+    
+    
+23
+    
+    

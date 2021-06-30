@@ -1,0 +1,611 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+Kiểm thử là một hoạt động quan trọng trong phát triển phần mềm, nhằm đảm bảo chất lượng của sản phẩm phần mềm, chi phí cho hoạt động kiểm thử có thể chiếm 40-60% chi phí của dự án phần mềm. Vì vậy để tăng chất lượng và giảm thời gian, giảm chi phí cho các sản pẩm phần mềm là một nhu cầu cấp thiết. Các công cụ thực thi kiểm thử tự động đã ra đời để giải quyết thách thức ở trên. Trong đó, kểm thử hướng từ khóa là một phương pháp kiểm thử tự động ưu việt cho phép thực thi kiểm thử tự động từ các ca sử dụng đã được xây dựng mà khi yêu cầu thay đổi kiểm thử viên không phải chỉnh sửa lại các Test scipt. Các ca sử dụng được sử dụng rộng rãi để đặc tả các yêu cầu phần mềm. Vì vậy, kiểm thử dựa trên Use case giúp kiểm thử viên thực hiện kiểm thử sớm phần mềm. Các ca kiểm thử được xác định từ Use case không chỉ cho phép phát hiện sớm các lỗi chức năng cho kiểm thử mức hệ thống mà còn giúp phát hiến sớm các lỗi đặc tả sớm. Kiểm thử hướng ca sử dụng là một phương pháp kiểm thử được áp dụng rộng rãi trong các dự án phần mềm thực tế. Vì vậy em đã chọn đề tài “Kiểm thử hướng Use case tự động” với mong muốn xây dựng một ứng dụng có thể đáp ứng và hỗ trợ cho kiểm thử viên thực hiện công việc một cách dễ dàng, chính xác và nhanh chóng hơn.
+1.2 Mục tiêu của đề tài
+• Tìm hiểu kiểm thử tự động theo phương pháp kiểm thử hướng từ khóa.
+• Tìm hiểu kiểm thử hướng Use case.
+• Áp dụng kiểm thử hướng từ khóa để xây dựng công cụ thực thi kiểm thử tự động hướng Use case.
+1.3 Giới hạn và phạm vi của đề tài
+•   Phương pháp kiểm thử hướng từ khóa, hướng Use case, áp dụng cho ứng dụng Webform và Winform.
+1.4 Nội dung thực hiện
+• Tool kiểm thử hướng Use case tự động cho ứng dụng Webform, Winform.
+1.5 Phương pháp tiếp cận
+• Sử dụng các phương pháp nghiên cứu
+• Phương pháp đọc tài liệu
+• Phương pháp phân tích mẫu
+• Phương phápthực nghiệm
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Kiểm thử phần mềm
+2.1.1 Kiểm thử phần mềm
+➢ Khái niệm 
+   Kiểm thử phần mềm là khâu mấu chốt để đảm bảo chất lượng phần mềm, là đánh giá cuối cùng về các đặc tả, thiết kế và mã hóa.  Kiểm thử phần mềm là quá trình chạy một ứng dụng để phát hiện lỗi và xem nó có thỏa mãn các yêu cầu đặt ra không. Trong quá trình phát triển phần mềm, những người phát triển phần mềm và các kỹ sư kiểm thử cùng làm việc để phát hiện lỗi và đảm bảo chất lượng sản phẩm. Một sản phẩm phần mềm được phân phối phải có đầy đủ các chức năng yêu cầu và tương thích với phần cứng của khách hàng[9].
+➢ Mục tiêu
+     Mục tiêu đầu tiên của kiểm thử là ngăn lừa lỗi, ngăn ngừa lỗi còn tốt hơn là sửa lỗi vì ngăn ngừa được lỗi thì sẽ là tốt hơn và không phải sửa mã, giải quyết được vấn đề ngay từ đầu sẽ làm giảm bớt chi phí về thời gian và công sức sửa chữa hơn. 
+Kiểm tra phần mềm để chắc chắn kiểm thử đang thực hiện đúng cách và hệ thống đã sẵn sàng để sử dụng. Kiểm thử bao phủ các lĩnh vực khác nhau như: chức năng của các ứng dụng, khả năng tương thích của các ứng dụng với các hệ điều hành, phần cứng và các loại khác nhau của các trình duyệt, thực hiện kiểm thử để kiểm tra hiệu năng của các ứng dụng để đảm bảo rằng hệ thống đáng tin cậy và không có trục trặc hay không nên có bất kỳ vấn đề cản trở. Xác định rằng các ứng dụng có thể được triển khai một cách dễ dàng với máy tính và không có bất kỳ sự cố. Do đó các ứng dụng rất dễ dàng để cài đặt, tìm hiểu và sử dụng.
+➢ Quy trình kiểm thử phần mềm
+   Khi thực hiện kiểm thử phần mềm các hoạt động chính của kiểm thử viên sẽ được minh họa như trong Hình 2.1
+
+    Hình  2.1: Các hoạt động của kỹ sư kiểm thử [1]
+Hoạt động của kỹ sư kiểm thử thường gồm 3 bước chính:
+- Bước 1: Tạo ra các test case để thực hiện các trường hợp kiểm thử.
+- Bước 2: Chuyển các yêu cầu kiểm thử thành các giá trị cụ thể và các script sẵn sàng cho thực thi kiểm thử.
+- Bước 3: Kỹ sư kiểm thử thực hiện kiểm thử, so sánh kết quả đầu ra thực tế và đầu ra mong đợi để đánh giá kiểm thử.
+➢ Các mức kiểm thử phần mềm
+   Kiểm thử được thực hiện tại các mức khác nhau liên quan tới các hoạt động phát triển phần mềm. Hình 2.2 là mô hình chữ V (V model), mô hình minh họa các mức kiểm thử và các hoạt động phát triển phần mềm.
+
+    Hình  2.2 Các  pha kiểm thử và phát triển trong mô hình chữ V
+  Các mức kiểm thử được trình bày trong [9] gồm có kiểm thử đơn vị, kiểm thử tích hợp, kiểm thử hệ thống, và kiểm thử chấp nhận. Các ca kiểm thử của các mức kiểm thử này sẽ được thiết kế dựa vào các chế tác tương ứng trong các quy trình khác nhau trong phát triển phần mềm sau khi có code chương trình các mức kiểm thử khác nhau sẽ lần lượt được thực hiện. 
+  Trong kiểm thử đơn vị (unit testing), các lập trình viên kiểm thử riêng lẻ các đơn vị chương trình như các hàm, thủ tục, phương thức, hoặc lớp trong trong sự cô lập. Sau khi chắc chắn các đơn vị riêng lẻ làm việc thỏa mãn, các mô đun được lắp ráp để xây dựng các hệ thống con lớn hơn bằng cách thực hiện các kỹ thuật kiểm tra tích hợp.
+  Kiểm thử tích hợp (Integration testing) được thực hiện bởi các nhà phát triển phần mềm và các kỹ sư kiểm thử tích hợp. Mục tiêu của kiểm thử tích hợp là để xây dựng một hệ thống thỏa mãn ổn định có thể chịu được sự nghiêm ngặt của việc kiểm thử mức hệ thống. 
+ Kiểm thử mức hệ thống (System testing) gồm một phổ rộng các kiểm thử như kiểm thử chức năng (functionality testing), kiểm thử độ bền (robuntness), kiểm thử bảo mật (security testing), kiểm thử tải (load testing), kiểm thử kiểm thử hiệu năng (performamce testing), kiểm thử độ tin cậy (reliability testing), kiểm thử ổn đinh (stability), kiểm thử quá tải (stress testing). Kiểm thử mức hệ thống là một pha quan trọng trong quy trình phát triển phần mềm vì cần phải đáp ứng một kế hoạch chặt chẽ gần ngày chuyển giao, để khám phá hầu hết các lỗi, và xác minh sản phẩm đang làm việc và không dẫn đến các lỗi mới. Kiểm thử hệ thống gồm các hoạt động phân biệt như tạo một kế hoạch kiểm thử (test plan), thiết kế một bộ kiểm thử (test suite), chuẩn bị môi trường kiểm thử, thực hiện các kiểm thử theo một chiến lược rõ ràng và giám sát quy trình thực hiện kiểm thử.
+       Sau khi hoàn thành việc kiểm thử mức hệ thống, sản phẩm sẽ được chuyển giao đến khách hàng. Khách hàng sẽ thực hiện một loạt các kiểm thử của họ, thường biết đến như là kiểm thử chấp nhận (acceptance testing).
+➢ Các kỹ thuật kiểm thử 
+    Một hoạt động quan trọng trong kiểm thử phần mềm là thiết kế các ca kiểm thử [9]. Một quy trình phát triển phần mềm tạo ra một lượng lớn thông tin như đặc tả yêu cầu, tài liệu thiết kế và mã nguồn. Để tạo các các kiểm thử hiệu quả với chi phí thấp, các nhà thiết kế kiểm thử sẽ phân tích một số nguồn thông tin như các đặc tả yêu cầu và đặc tả chức năng (Requirements and functional specifications), mã nguồn, các miền đầu vào và đầu ra (Input and output domains), hồ sơ hoạt động (Operational profile), và mô hình lỗi. Tất cả các nguồn thông tin này cung cấp các thông tin bổ sung cho các nhà thiết kế kiểm thử. Dựa trên nguồn thông tin cho thiết kế kiểm thử, kỹ thuật kiểm thử được chia thành hai kỹ thuật chính là kiểm thử hộp trắng (white box testing) và kiểm thử hộp đen (black box testing). 
+    Kỹ thuật kiểm thử hộp đen hay còn gọi là kỹ thuật kiểm thử chức năng là kỹ thuật kiểm thử dựa vào đặc tả chương trình để xây dựng các ca kiểm thử. Kỹ thuật này gồm các kỹ thuật xây dựng kiểm thử như: kiểm thử giá trị biên, phân lớp tương đương, kiểm thử ngẫu nhiên, đồ thị nhân-quả, kiểm thử cú pháp. 
+    Hình 2.3 dưới đây minh họa cho kỹ thuật kiểm thử hộp đen.
+         Kỹ thuật kiểm thử hộp trắng hay còn gọi là kỹ thuật kiểm thử cấu trúc là kỹ thuật kiểmthử dựa trên phân tích mã nguồn. Kỹ thuật này gồm các kỹ thuật xây dựng ca kiểm thử như: kiểm thửu dựa trên đồ thị luồng điều khiển, kiểm thử dựa trên đồ thị luồng dữ liệu, kiểm thử đột biến. Hình 2.4 minh họa cho kỹ thuật này. Kỹ thuật kiểm thử hộp trắng là kỹ thuật kiểm thử dựa trên phân tích mã nguồn hay còn gọi là kỹ thuật kiểm thử cấu trúc, kỹ thuật kiểm thử hộp đen được gọi là kỹ thuật kiểm thử dựa trên đặc tả hay còn gọi là kỹ thuật kiểm thử chức năng [9].
+
+    Hình  2.3. Minh họa kỹ thuật kiểm thử hộp đen[1]
+
+    Hình  2.4: Minh họa mô hình kiểm thử hộp trắng[1]
+2.1.2 Kiểm thử tự động
+➢ Khái niệm
+  Kiểm thử tự động là quá trình thực hiện một cách tự động các bước trong một testcase. Nó sử dụng một công cụ kiểm thử tự động nào đó để rút ngắn thời gian kiểm thử. Kiểm thử tự động hỗ trợ các kiểm thử viên rất nhiều tùy vào công cụ và các nội dung kiểm thử có thể thực hiện bằng tay hay không. Đối với những nhiệm vụ kiểm tra khó mà thực hiện bằng tay hoặc yêu cầu chi phí về nhân công là quá lớn thì sử dụng tool hỗ trợ là điều hết sức cần thiết.
+➢ Mục tiêu
+- Giảm bớt công sức và thời gian thực hiện
+- Tăng độ tin cậy
+- Giảm sự nhàm chán
+- Giảm chi phí cho tổng quá trình kiểm thử
+➢ Quy trình 
+   Một công cụ kiểm thử phần mềm tự động yêu cầu phải làm được những công việc sau:
+- Hiểu các mã assembly được kiểm tra một cách tự động
+- Tiến hành các nhiệm vụ đơn giản và lặp đi lặp lại một cách tự động
+- Truy cập vào dữ liệu để xác minh lại các kết quả
+- Truy cập vào Regestry để xác minh lại các kết quả
+   Quá trình thực hiện kiểm thử thông thường được thực hiện bằng tay. Sau khi lập kế hoạch, kiểm thử viên thiết kế các test case gồm dữ liệu đầu vào, dữ liệu đầu ra mong chờ và kết quả thực hiện (điền sau khi test). Tùy theo yêu cầu và phương pháp được chọn kiểm thử viên  thực thi test bằng tay và ghi lại kết quả trên giấy cuối cùng đánh giá kết quả đó với kết quả mong chờ đã chuẩn bị trước đó. Với phương pháp kiểm thử bằng tay này chỉ sử dụng cho một số nội dung kiểm thử như kiểm thử giao diện, tài liệu hoặc test các class, phương thức đơn giản… còn với test về hiệu năng, khả năng chịu tải (stress/volume test), kiểm thử cấu hình… thì phương pháp này khó mà thực hiện được. Do vậy cần có công cụ kiểm thử tự động hỗ trợ thực hiện.
+- Quy trình của kiểm thử tự động:
+    Quy trình kiểm thử tự động phần mềm cũng giống như quy trình thực hiện bằng tay chỉ khác ở chỗ kiểm thử tự động có hỗ trợ của công cụ ít hoặc nhiều như tạo script (có thể bằng tay hoặc công cụ), công cụ hỗ trợ về ghi lại kết quả và lưu trữ kết quả trong máy tính. Quy trình này cũng gần tương tự với quy trình phát triển phần mềm, được thực hiện qua nhiều bước, được tiến hành rất sớm trong quy trình phát triển phần mềm và đội kiểm thử tiến hành thư song song cùng đội phát triển phần mềm.
+    
+    Hình  2.5: Quy trình của kiểm thử tự động
+-    Lập kế hoạch kiểm tra:
+    Mục đích: Nhằm chỉ định và mô tả các loại kiểm tra sẽ được triển khai và thực hiện. Kết quả của bước lập kế hoạch là bản tài liệu kế hoạch KTPM, bao gồm nhiều chi tiết từ các loại kiểm tra, chiến lược kiểm tra, cho đến thời gian và phân định lực lượng kiểm tra viên.
+      Bản kế hoạch kiểm tra đầu tiên được phát triển rất sớm trong chu trình phát triển phần mềm (PTPM), ngay từ khi các yêu cầu đã tương đối đầy đủ, các chức năng và luồng dữ liệu chính đã được mô tả. Bản kế hoạch này có thể được coi là bản kế hoạch chính (master test plan), trong đó tất cả các kế hoạch chi tiết cho các mức kiểm tra và loại kiểm tra khác nhau đều được đề cập.
+    Sau khi bản kế hoạch chính được phát triển, các bản kế hoạch chi tiết lần lượt được thiết kế theo trình tự thời gian phát triển của dự án. (Hình 06 minh hoạ thời điểm phù hợp để thiết lập các kế hoạch kiểm tra, gắn liền với quá trình phát triển của dự án. Quá trình phát triển các kế hoạch kiểm tra không dừng lại tại một thời điểm, mà liên tục được cập nhật chỉnh sửa cho phù hợp đến tận cuối dự án.).
+
+    Hình  2.6: Các mức kiểm thử
+- Các bước lập kế hoạch:
+     Xác định yêu cầu kiểm tra: chỉ định bộ phận, thành phần của PM sẽ được kiểm tra, phạm vi hoặc giới hạn của việc kiểm tra. Yêu cầu kiểm tra cũng được dùng để xác định nhu cầu nhân lực.
+    Khảo sát rủi ro: Các rủi ro có khả năng xảy ra làm chậm hoặc cản trở quá trình cũng như chất lượng kiểm tra. Ví dụ: kỹ năng và kinh nghiệm của kiểm tra viên quá yếu, không hiểu rõ yêu cầu.
+    Xác định chiến lược kiểm tra: chỉ định phương pháp tiếp cận để thực hiện việc kiểm tra trên PM, chỉ định các kỹ thuật và công cụ hỗ trợ kiểm tra, chỉ định các phương pháp dùng để đánh giá chất lượng kiểm tra cũng như điều kiện để xác định thời gian kiểm tra.
+     Xem xét các kế hoạch kiểm tra: phải có sự tham gia của tất cả những người có liên quan, kể cả trưởng dự án và có thể cả khách hàng. Việc xem xét nhằm bảo đảm các kế hoạch là khả thi, cũng như để phát hiện (và sữa chữa sau đó) các sai sót trong các bản kế hoạch.
+  
+- Thiết kế Test:
+   Mục đích: Nhằm chỉ định các Test Case và các bước kiểm tra chi tiết cho mỗi phiên bản PM. Giai đoạn thiết kế test là hết sức quan trọng, nó bảo đảm tất cả các tình huống kiểm tra “quét” hết tất cả yêu cầu cần kiểm tra.
+   Hình dưới cho thấy việc thiết kế test không phải chỉ làm một lần, nó sẽ được sửa chữa, cập nhật, thêm hoặc bớt xuyên suốt chu kỳ PTPM, vào bất cứ lúc nào có sự thay đổi yêu cầu, hoặc sau khi phân tích thấy cần được sửa chữa hoặc bổ sung.
+ 
+    Hình  2.7: Thời điểm phù hợp để thiết lập các kế hoạch kiểm tra
+- Các bước thiết kế test bao gồm:
+    Xác định và mô tả Test Case: xác định các điều kiện cần thiết lập trước và trong lúc kiểm tra. Mô tả đối tượng hoặc dữ liệu đầu vào, mô tả các kết quả mong chờ sau khi kiểm tra.
+    Mô tả các bước chi tiết để kiểm tra: các bước này mô tả chi tiết để hoàn thành một Test Case khi thực hiện kiểm tra. Các Test Case như đã nói ở trên thường chỉ mô tả đầu vào, đầu ra, còn cách thức tiến hành như thế nào thì không được định nghĩa. Thao tác này nhằm chi tiết hóa các bước của một Test Case, cũng như chỉ định các loại dữ liệu nào cần có để thực thi các Test Case, chúng bao gồm các loại dữ liệu trực tiếp, gián tiếp, trung gian, hệ thống…
+    Xem xét và khảo sát độ bao phủ của việc kiểm tra: mô tả các chỉ số và cách thức xác định việc kiểm tra đã hoàn thành hay chưa? bao nhiêu phần trăm PM đã được kiểm tra? Để xác định điều này có hai phương pháp: căn cứ trên yêu cầu của phần mềm hoặc căn cứ trên số lượng code đã viết.
+    Xem xét Test Case và các bước kiểm tra: Việc xem xét cần có sự tham gia của tất cả những người có liên quan, kể cả trưởng dự án nhằm bảo đảm các Test Case và dữ liệu yêu cầu là đủ và phản ánh đúng các yêu cầu cần kiểm tra, độ bao phủ đạt yêu cầu, cũng như để phát hiện (và sữa chữa) các sai sót.
+- Phát triển Test Script
+    Mục đích: Bước này thường không bắt buộc trong các loại và mức kiểm tra, chỉ yêu cầu trong những trường hợp đặc thù cần thiết kế, tạo ra các Test Script có khả năng chạy trên máy tính giúp tự động hóa việc thực thi các bước kiểm tra đã định nghĩa ở bước thiết kế test.
+- Các bước phát triển Test Script bao gồm:
+    Tạo Test Script: thủ công hoặc dùng công cụ hỗ trợ để phát sinh script một cách tự động (tuy nhiên trong hầu hết mọi trường hợp, ta vẫn phải chỉnh sửa ít hoặc nhiều trên các script được sinh tự động). Thông thường, mỗi bước kiểm tra được thiết kế trong phần thiết kế test, đòi hỏi ít nhất một Test Script. Các Test Script có khả năng tái sử dụng càng nhiều càng tốt để tối ưu hóa công việc.
+    Kiểm tra Test script: xem có “chạy” tốt không nhằm bảo đảm các Test Script hoạt động đúng yêu cầu, thể hiện đúng ý đồ của các bước kiểm tra.
+    Thành lập các bộ dữ liệu ngoài dành cho các Test Script: bộ dữ liệu này sẽ được các Test Script sử dụng khi thực hiện kiểm tra tự động. Gọi là “ngoài” vì chúng được lưu độc lập với các Test Script, tránh trường hợp vì dễ dãi, một số kiểm tra viên “tích hợp” luôn phần dữ liệu vào bên trong code của các script (thuật ngữ chuyên môn gọi là “hard-code”). Việc tách riêng dữ liệu cho phép dễ dàng thay đổi dữ liệu khi kiểm tra, cũng như giúp việc chỉnh sửa hoặc tái sử dụng các script sau này.
+    Xem xét và khảo sát độ bao phủ của việc kiểm tra: bảo đảm các Test Script được tạo ra bao phủ toàn bộ các bước kiểm tra theo yêu cầu.
+    
+- Thực hiện kiểm tra:
+    Mục đích: Thực hiện các bước kiểm tra đã thiết kế (hoặc thi hành các Test Script nếu tiến hành kiểm tra tự động) và ghi nhận kết quả.
+    Việc thực hiện kiểm tra cũng được làm rất nhiều lần trong suốt chu trình kiểm tra, cho đến khi kết quả kiểm tra cho thấy đủ điều kiện để dừng hoặc tạm dừng việc thực hiện.
+- Quá trình thực hiện kiểm tra thường thông qua các bước sau:
+    Thực hiện các bước kiểm tra: thủ công hoặc thi hành các Test Script nếu là quy trình kiểm tra tự động. Để thực hiện kiểm tra, thao tác đầu tiên cần làm là xác lập và khởi động môi trường và điều kiện kiểm tra. Việc này nhằm bảo đảm tất cả các bộ phận liên quan (như phần cứng, phần mềm, máy chủ, mạng, dữ liệu…) đã được cài đặt và sẵn sàng, trước khi chính thức bắt đầu thực hiện kiểm tra.
+    Đánh giá quá trình kiểm tra: giám sát quá trình kiểm tra suôn sẻ đến khi hoàn thành hay bị treo và dừng giữa chừng, có cần bổ sung hay sữa chữa gì không để quá trình kiểm tra được tốt hơn.
+• Nếu quá trình diễn ra trơn tru, kiểm tra viên hoàn thành chu kỳ kiểm tra và chuyển qua bước “Thẩm định kết quả kiểm tra”
+• Nếu quá trình bị treo hoặc dừng giữa chừng, kiểm tra viên cần phân tích để xác định nguyên nhân lỗi, khắc phục lỗi và lập lại quá trình kiểm tra.
+    Thẩm định kết quả kiểm tra: sau khi kết thúc, kết quả kiểm tra cần được xem xét để bảo đảm kết quả nhận được là đáng tin cậy, cũng như nhận biết được những lỗi xảy ra không phải do PM mà do dữ liệu dùng để kiểm tra, môi trường kiểm tra hoặc các bước kiểm tra (hoặc Test Script) gây ra. Nếu thực sự lỗi xảy ra do quá trình kiểm tra, cần phải sửa chữa và kiểm tra lại từ đầu.
+- Đánh giá quá trình kiểm tra:
+   Mục đích: Đánh giá toàn bộ quá trình kiểm tra, bao gồm xem xét và đánh giá kết quả kiểm tra, liệt kê lỗi, chỉ định các yêu cầu thay đổi, và tính toán các số liệu liên quan đến quá trình kiểm tra (chẳng hạn số giờ, thời gian kiểm tra, số lượng lỗi, phân loại lỗi…).
+    Mục đích của việc đánh giá kết quả kiểm tra ở bước này hoàn toàn khác với bước thẩm định kết quả kiểm tra sau khi hoàn tất một vòng kiểm tra. Đánh giá kết quả kiểm tra ở giai đoạn này mang tính toàn cục và nhằm vào bản thân giá trị của các kết quả kiểm tra.
+    Việc đánh giá quá trình và kết quả kiểm tra được thực hiện song song với bất kỳ lần kiểm tra nào và chỉ chấm dứt khi quá trình kiểm tra đã hoàn tất.
+- Đánh giá quá trình kiểm tra thường thông qua các bước sau:
+• Phân tích kết quả kiểm tra và đề xuất yêu cầu sửa chữa: Chỉ định và đánh giá sự khác biệt giữa kết quả mong chờ và kết quả kiểm tra thực tế, tổng hợp và gửi thông tin yêu cầu sửa chữa đến những người có trách nhiệm trong dự án, lưu trữ để kiểm tra sau đó.
+• Đánh giá độ bao phủ: Xác định quá trình kiểm tra có đạt được độ bao phủ yêu cầu hay không, tỷ lệ yêu cầu đã được kiểm tra (tính trên các yêu cầu của PM và số lượng code đã viết).
+• Phân tích lỗi: Đưa ra số liệu phục vụ cho việc cải tiến các qui trình phát triển, giảm sai sót cho các chu kỳ phát triển và kiểm tra sau đó. Ví dụ, tính toán tỷ lệ phát sinh lỗi, xu hướng gây ra lỗi, những lỗi “ngoan cố” hoặc thường xuyên tái xuất hiện.
+• Xác định quá trình kiểm tra có đạt yêu cầu hay không: Phân tích đánh giá để xem các Test Case và chiến lược kiểm tra đã thiết kế có bao phủ hết những điểm cần kiểm tra hay không? Kiểm tra có đạt yêu cầu dự án không? Từ những kết quả này, kiểm tra viên có thể sẽ phải thay đổi chiến lược hoặc cách thức kiểm tra.
+• Báo cáo tổng hợp: Tổng hợp kết quả các bước ở trên và phải được gửi cho tất cả những người có liên quan.
+    
+    
+
+- Quy trình thực hiện kiểm thử tự động của một Tool tự động:
+
+      Hình  2.8: Quy trình thực hiện kiểm thử của công cụ tự động
+- Quy trình được thực hiện theo vòng tròn, lặp đi lặp lại, các bước thực hiện:
+• Cung cấp mã assembly.
+• Thu gom thông tin.
+• Sinh ra các test script.
+• Chỉnh sửa các dữ liệu test.
+• Chạy test script.
+• Sửa lỗi.
+      Web Framework được phát triển trên nền tảng mỗi nền tảng khác nhau là một hệ thống quản trị nội dung web (CMS) tổng thể. Các công cụ được xây dựng trong Web Framework dễ dàng sử dụng cho người quản trị, biên tập, lập trình viên, thiết kế đồ họa để xây dựng, triển khai, quản trị tất cả những tương tác được cung cấp trong hệ thống bao gồm: nội dung, giao diện, bố cục, thành viên, các tính năng (modules)... Web Framework cung cấp một nền tảng ứng dụng đáp ứng nhanh, tức thời và dễ sử dụng cho những ứng dụng, website thương mại lẫn không thương mại với giá thành rẻ hơn nhiều lần so với những giải pháp nền tảng đã có sẵn.
+2.1.3 Kiểm thử ứng dụng Web
+➢ Khái niệm
+   Các ứng dụng web càng ngày càng trở nên phổ biến và phát triển mạnh mẽ, nhằm đáp ứng tối đa những đòi hỏi của người dùng khi họ bật trình duyệt web của mình lên. Gần như những gì phần mềm truyền thống làm được thì ứng dụng web cũng có thể làm được. Và cho đến nay, các ứng dụng web đóng vai trò quyết định trong thương mại điện tử và trao đổi thông tin.
+➢ Mục tiêu
+   Muốn tạo ra được ứng dụng web có hiệu năng cao, đáng tin cậy như vậy thì sau khâu tạo dựng, cần phải kiểm thử ứng dụng đó một cách tỉ mỉ, cẩn thận và chặt chẽ. Về mặt bản chất, các ứng dụng web cũng là phần mềm, nên các loại kiểm thử áp dụng cho phần mềm cũng được áp dụng khi kiểm thử ứng dụng web. Tuy nhiên, người kiểm thử cũng không thể áp dụng một cách cứng nhắc các phương pháp đó, mà cần phải linh hoạt, biến nó trở nên phù hợp, thích ứng với kiểm thử ứng dụng web.
+➢ Các loại kiểm thử ứng dụng Web
+   Một ứng dụng web thường có rất nhiều nhóm người sử dụng với nhiều nền tảng khác nhau (hệ điều hành, trình duyệt…), người ta cũng rất khó có thể đoán được số lượng người sử dụng một ứng dụng web là bao nhiêu, rồi thời gian hồi đáp yêu cầu của người sử dụng đối với ứng dụng là một trong những yếu tố mang tính quyết định thành bại của ứng dụng…dẫn đến việc kiểm thử ứng dụng web sẽ có những khác biệt nhất định so với kiểm thử phần mềm truyền thống. Trong đó, kiểm thử giao diện người dùng, kiểm thử hiệu năng và kiểm thử bảo mật là những loại kiểm thử mà ứng dụng web cần chú trọng.
+- Kiểm thử chức năng
+   Việc kiểm thử chức năng yêu cầu tester thực hiện test tất cả các link trong trang web, định dạng được sử dụng trong các trang web để gửi và nhận các thông tin cần thiết từ người dùng. Ngoài ra còn có kết nối cơ sở dữ liệu, kiểm tra cookies và xác minh HTML/CSS.
+• Kiểm tra các liên kết (links) bao gồm kiểm tra liên kết ngoài trang web, liên kết nội bộ, liên kết tới các vị trí trong cùng trang, liên kết sử dụng để gửi email tới admin hoặc người dùng khác trong trang…
+• Kiểm tra form của các trang: form là phần cơ bản của các trang web, nên cần được kiểm tra một cách kỹ càng, bao gồm các yêu cầu sau:
+• Không nhập gì vào các trường bắt buộc thì sao?
+• Giá trị mặc định của các trường là gì?
+• Nhập đầu vào không đúng validate của các trường thì sao?
+• Thao tác trên các trường: xem, nhập, lưu, sửa, xóa…
+• Kết nối cơ sở dữ liệu: yêu cầu kiểm tra tính toàn vẹn của dữ liệu khi tạo, sửa, xóa form…hoặc bất cứ chức năng nào có liên quan tới cơ sở dữ liệu. Khi truy vấn cơ sở dữ liệu thì kết quả trả về có tương ứng với kết quả nhìn thấy được trên giao diện không, dữ liệu có được lấy và cập nhật chính xác không?...
+• Kiểm thử cookies: cookies là các tệp được tạo bởi trang web đã truy cập để lưu trữ thông tin duyệt web, như các tùy chọn trang web hoặc thông tin đăng nhập của người dùng. Người dùng có thể tùy chỉnh trên trình duyệt nhằm quản lý cookies, thực hiện các thao tác cho phép lưu, hoặc xóa, hoặc chặn…để kiểm tra các tính năng lưu hoặc không lưu trạng thái đăng nhập, tính năng bảo mật của ứng dụng web.
+    Xác minh HTML/CSS: việc xác minh này đặc biệt quan trọng khi developer thực hiện tối ưu hóa trang web cho các công cụ tìm kiếm, chủ yếu liên quan tới lỗi cú pháp HTML. Tester sẽ kiểm tra xem trang web có được nhận diện bởi các công cụ tìm kiếm khác nhau hay không (ví dụ: Google, Yahoo, Bing…)
+- Kiểm thử tính khả dụng
+• Tính khả dụng của trang web được định nghĩa là trang web dễ sử dụng, có hướng dẫn sử dụng rõ ràng, rành mạch, mỗi trang đều có menu chính và menu này phải nhất quán. Tester cần lưu ý những điều này.
+• Ngoài ra, khi kiểm thử tính khả dụng, tester còn cần thực hiện kiểm thử các điều khiển chuyển hướng (như button, text box, text link, bread crum…), nội dung của trang web phải dễ hiểu và thân thiện với người sử dụng. Không có lỗi chính tả, không khó để đọc chữ, hình ảnh được sắp xếp gọn gàng, hợp lý.
+- Kiểm thử giao diện
+Các giao diện chính bao gồm:
+•  Giao diện web server và server ứng dụng
+• Giao diện server ứng dụng và giao diện server dữ liệu
+   Kiểm tra tất cả các tương tác giữa các server. Nếu server dữ liệu hoặc web server trả lại bất kỳ báo lỗi nào cho bất kỳ truy vấn nào từ server ứng dụng thì ngay lập tức server ứng dụng phải nhận được và cho hiển thị cảnh báo tới người dùng. Kiểm tra các trường hợp giao dịch bị ngắt đột ngột do người dùng, hoặc kết nối tới server bị gián đoạn, bị khởi động lại…
+- Kiểm thử khả năng tương thích
+ Yêu cầu thực hiện các kiểm tra như sau:
+• Tương thích với trình duyệt (trên máy tính và điện thoại di động): Người dùng khác nhau có thể sử dụng trình duyệt khác nhau tùy theo nhu cầu, thói quen…của họ. Cần phải kiểm tra ứng dụng web trên càng nhiều trình duyệt càng tốt (IE, Firefox, Chrome, Safari, Opera…) để kiểm tra sự tương thích. Kiểm tra trên cả các phiên bản khác nhau của trình duyệt. Kiểm tra trên cả trình duyệt của thiết bị điện thoại thông minh. Nếu ứng dụng chạy tốt hơn, hoặc có ưu tiên tương thích hơn với trình duyệt nào đó thì cần có thông báo tới người dùng.
+• Tương thích với hệ điều hành: một số chức năng của ứng dụng có thể không tương thích với một số hệ điều hành, hoặc có những lưu ý khác khi sử dụng, điều này cần phải được kiểm tra kỹ và thông báo cho người dùng được biết.
+• Tương thích với các thiết bị ngoại vi (máy in…): khi người dùng có lệnh in trang thì phải đảm bảo tính chính xác của fonts, cỡ chữ, cỡ giấy…mà người dùng đã chọn.
+- Kiểm thử hiệu năng
+Bao gồm các yêu cầu:
+• Kiểm thử tải: kiểm thử hiệu năng của ứng dụng với các tốc độ kết nối mạng khác nhau. Kiểm thử khi có nhiều người dùng cùng truy cập hoặc cùng yêu cầu một trang xem hệ thống có thể duy trì hoạt động được không? Hoặc kiểm thử khi người dùng tải lên hoặc tải xuống một số lượng dữ liệu đặc biệt lớn…
+• Kiểm thử áp lực: tức là việc đẩy hệ thống ra ngoài giới hạn của nó, thử làm gián đoạn trang web bằng cách tăng lượng tải cao hơn và kiểm tra xem hệ thống phản ứng như thế nào và phục hồi như thế nào.
+- Kiểm thử bảo mật
+Một số case cho kiểm thử bảo mật web như sau:
+• Gõ trực tiếp url vào thanh địa chỉ của trình duyệt mà không qua đăng nhập. Các trang nội bộ phải không được mở.
+• Sau khi đăng nhập và mở các trang nội bộ, thay đổi url trực tiếp bằng cách đổi tham số ID của trang tới trang thuộc quyền người dùng đã đăng nhập khác. Truy cập phải bị từ chối bởi người dùng này không thể xem trang thống kê của người dùng khác.
+• Thử các giá trị đầu vào không hợp lệ trong các trường username, password. Hệ thống phải báo lỗi.
+• Các thư mục web, các tệp tin không được truy nhập trực tiếp mà không có tùy chọn “Download”.
+• Kiểm tra CAPTCHA cho các đăng nhập tự động
+• Tất cả các phiên giao dịch, các thông báo lỗi, các hành vi cố gắng xâm phạm an ninh phải ghi trong log và lưu tại web server.
+    
+    
+2.2 Tổng quan về Selenium Framework
+➢ Selenium Framework là gì?
+- Selenium Framework là một cấu trúc mã giúp bảo trì mã dễ dàng. Bằng cách đặt mã cũng như dữ liệu ở 1 nơi để có thể đọc và sử dụng lại.
+- Sử dụng Frameworks, tạo ra các kết quả có lợi như tăng việc sử dụng mã, tính di động cao hơn, giảm chi phí bảo trì tập lệnh, khả năng đọc mã cao hơn, v.v.
+➢ Tại sao sử dụng Automation Framework?
+- Kiểm soát các thi công được thực hiện.
+- Để có được Báo cáo Thực hiện Kiểm tra tùy chỉnh.
+- Để duy trì tốt hơn kiểm thử dữ liệu và các đối tượng thử nghiệm (Bảo trì chi phí thấp).
+- Bảo hiểm toàn diện đối với yêu cầu.
+- Thực hiện Test case với nhiều bộ dữ liệu.
+Kiểm thử hướng từ khóa với Selenium 
+➢ Khái niệm
+Kiểm thử hướng từ khóa là một loại kiểm thử tự động chức năng, nó được gọi là kiểm thử theo bảng hoặc kiểm thử dựa trên các từ khóa hành động[10]. Công việc chính của kiểm thử hướng từ khóa là chia test case thành bốn phần khác nhau:
+- Bước kiểm thử (Test step)
+- Đối tượng của bước kiểm thử (Object of Test step)
+- Hành động trong kiểm thử đối tượng (Action on Test object)
+- Dữ liệu cho kiểm thử đối tượng ( Data for Test object)
+Việc phân loại trên có thể được thực hiện và duy trì với sự trợ giúp của các bảng Excel:
+- Bước kiểm thử: Mô tả rất nhỏ về bước kiểm thử hoặc mô tả về hành động được thực hiện trong kiểm thử đối tượng.
+- Đối tượng kiểm thử: Tên của đối tượng hay thành phần web
+Ví dụ: Đó là Username và Password
+- Hành động: Tên của hành động thực hiện trên nhiều đối tượng, có thể là các hành động: click, open browser, input…
+- Dữ liệu kiểm thử: Dữ liệu có thể là nhiều bộ giá trị cần để đối tượng thực hiện các hành động
+		Ý tưởng đằng sau phương pháp Tiếp cận Từ khoá trong tự động hóa là tách mã hóa khỏi trường hợp thử nghiệm và bước kiểm tra. Điều này giúp một người không phải kỹ thuật để hiểu được tự động hóa rất tốt. Với trình kiểm tra thủ công này có thể viết các kịch bản Tự động hóa. Điều này không có nghĩa là người kiểm tra tự động hóa không cần thiết nhưng trong bất kỳ dự án từ khoá Driven nào, một coder kỹ thuật cốt lõi cứng là cần thiết để thiết lập khuôn khổ và làm việc với những thay đổi thường xuyên và cập nhật mã tự động nền. Nhưng ví dụ một nhóm tự động hóa có thể có hai thử nghiệm thủ công và một coder tự động hóa.
+ 	Tìm hiểu khái niệm này qua ví dụ về các hành động khi bạn sử dụng ứng dụng web. Hãy xem xét rằng bạn cần tự động hóa các hành động sau:
+1. Mở trình duyệt
+2. Điều hướng tới Url
+3. Chọn nút Tài khoản của tôi
+4. Nhập Username
+5. Nhập Password
+6. Chọn nút Đăng nhập
+7. Chọn nút Đăng xuất
+8. Đóng trình duyệt.
+    Theo sau là danh sách các thành phần phổ biến mà bạn sẽ cần để thực hiện được yêu cầu:
+1.  Bảng excel: Đây là trang tính lưu giữ hầu hết dữ liệu cho việc kiểm thử hướng từ khóa: Test case, Test steps, Test objects và Actions.
+2.  Kho đối tượng: Tệp thuộc tính dùng lưu trữ các thuộc tính các phần từ html của ứng dụng web, tệp thuộc tính này liên kết với các đối tượng trong thử nghiệm.
+3.  Thư viện từ khóa: Tệp danh sách từ khóa là rất quan trọng vì nó lưu trữ hoạt động của các hành động, để ỗi hành động đều có thể được gọi từ tệp này
+4.  Bảng dữ liệu: Tệp excel để lưu trữ giá trị dữ liệu cần thiết của đối tượng để thực hiện một số hành động trên nó.
+5.  Thực thi : Kiểm thử là kịch bản thử nghiệm duy nhất mà chúng tôi có trong framework hướng từ khóa và nó bao gồm tất cả các mã để thực hiện kiểm thử từ bảng excel, chức năng Lib và tập tin Properties.
+Hình ảnh sau đây cho thấy về luồng hoạt động của framework hướng từ khóa: 
+
+    Hình  2.9: Luồng hoạt động của framework hướng từ khóa
+Từ hình ảnh trên, bạn có thể thấy luồng hoạt động chung của một framework hướng từ khóa là:
+- Thực thi: Bắt đầu việc kiểm thử, kết nối các trường hợp kiểm thử và bắt đầu thực hiện từng cái một
+- Khi Tesr case được chọn, các bước kiểm thử được liên kết theo tuần tự.
+- Các bước kiểm thử được kết nối thêm với Đối tượng của trang, hành động và dữ liệu kiểm thử
+- Khi thực thi nhận được tất cả các thông tin cần thiết để thực hiện một bước kiểm thử, nó kết nối với ứng dụng và thực hiện bước này.
+ Ưu điểm:
+1. Ít kỹ thuật chuyên môn: Khi framework được thiết lập, người kiểm thử viên thủ công hay người kiểm thử không có kinh nghiệm có thể dễ dành viết kịch bản kiểm thử để tự động hóa.
+2. Dễ hiểu: Vì nó được duy trì trong trang tính excel và không mã hóa được hiển thị, các kịch bản kiểm thử rất dễ đọc và dễ hiểu. Từ khóa và hành động tương tự như trường hợp kiểm thử thủ công, điều này trở nên dễ dàng hơn để viết và duy trì.
+3. Bắt đầu sớm: Bạn có thể bắt đầu tạo ra các trường hợp kiểm thử hướng từ khóa khi ứng dụng được phát hành vì kho lưu trữ đối tượng có thể dễ dàng thiết lập ở giai đoạn sau. Sử dụng thông tin thu thập được từ tài liệu yêu cầu hoặc tài liệu khác, các bảng dữ liệu chứa từ khóa có thể được tạo ra để phản ánh thủ tục kiểm thử thủ công tương ứng.
+4. Khả năng sử dụng lại của thành phần: Với việc triển khai thực hiện môđun hóa trong hướng từ khóa, khả năng tái sử dụng có thể được tăng thêm.
+5. Khả năng sử dụng lại mã: Vì chỉ có một công cụ thực thi trong framework hướng từ khóa nên nó khuyến khích khả năng sử dụng lại mã rất nhiều.
+- Kỹ thuật lập trình sử dụng tệp dữ liệu để chứa không chỉ dữ liệu thử nghiệm và kết quả mong đợi mà còn các từ khoá liên quan đến ứng dụng đang được thử nghiệm. Các từ khóa được giải thích bởi các kịch bản hỗ trợ đặc biệt được gọi bởi tập lệnh kiểm soát cho bài kiểm tra.
+- Là cách để mô tả các trường hợp thử nghiệm bằng cách sử dụng bộ Từ khoá được xác định trước. Các từ khoá này là tên được liên kết với một tập hợp các hành động được yêu cầu để thực hiện một bước cụ thể trong một trường hợp thử nghiệm. Bằng cách sử dụng từ khoá để mô tả các bước kiểm tra thay vì ngôn ngữ tự nhiên, các trường hợp thử nghiệm có thể được dễ dàng hơn để hiểu, để duy trì và tự động hóa.
+- Là một loại Khung Kiểm tra Tự động hoá Chức năng cũng được biết đến như thử nghiệm theo bảng hoặc thử nghiệm dựa trên hành động.
+➢ Đặc điểm
+- Kiểm tra dựa trên Từ khoá Trong thử nghiệm dựa trên từ khóa kiểm tra mọi hoạt động (kiểm tra) như nhấp chuột, tổ hợp phím, mở hoặc đóng trình duyệt hoặc các hành động khác được mô tả bởi "từ khoá" như Click, SetText, OpenBrowser, Enter, Navigate, CloseBrowser... hành động bao gồm các tương tác với giao diện người dùng, xác minh, hành động cụ thể để thiết lập một kịch bản thử nghiệm ...
+- Mục tiêu là cung cấp một bộ từ khóa toàn diện để tất cả các trường hợp thử nghiệm bắt buộc có thể được hoàn toàn bao gồm các từ khóa này.
+- Các trường hợp thử nghiệm có từ khoá để kiểm tra dựa trên từ khóa là một chuỗi các từ khóa cấp cao và cấp độ thấp, bao gồm các đối số từ khóa, nếu có, được soạn thảo để mô tả hành động của một trường hợp thử nghiệm.
+- Mã kiểm thử tự động đôi khi được lưu trữ ở một tập tin bên ngoài mã nguồn giống như mô hình hướng dữ liệu. Các bước của kịch bản kiểm thử được viết từng bước với định dạng bảng, nơi mà sử dụng các từ khóa và dữ liệu kiểm thử.
+
+➢ Ưu điểm
+- Ít chuyên môn kỹ thuật: Các bài kiểm tra có thể được phát triển mà không cần kiến ​​thức lập trình Không phụ thuộc vào một công cụ cụ thể hoặc ngôn ngữ lập trình.
+- Dễ hiểu: Khi nó được duy trì trong bảng tính Excel và không có mã hóa được tiếp xúc, kịch bản thử nghiệm rất dễ dàng để đọc và hiểu.
+- Bắt đầu sớm: Bạn có thể bắt đầu tạo thử nghiệm Từ khoá được Driven trường hợp trước khi ứng dụng được chuyển giao, như đối tượng Kho có thể dễ dàng thiết lập ở giai đoạn sau.
+- Khả năng sử dụng lại thành phần: Với việc thực hiện mô-đun hóa trong Từ khoá được Driven, khả năng sử dụng lại có thể được tăng thêm.
+- Khả năng sử dụng lại mã: vì chỉ có một lần thực hiệnCông cụ trong Khung động Tạo từ khoá, nó khuyến khích khả năng sử dụng lại cực cực mã.
+➢ Nhược điểm
+- Phát triển các từ khóa và các chức năng liên quan của nó có thể mất nhiều thời gian hơn Các nhân viên phải được đào tạo để sử dụng các từ khoá để kiểm tra trường hợp đặc điểm kỹ thuật cao trung bình cao học ban đầu đòi hỏi kiến ​​thức về siêu ngôn ngữ.
+- Ở vài trường hợp phức tạp, khi mà các đối tượng UI không thể được xác định dễ dàng, chúng ta phải sử dụng nhiều kỹ thuật khác nhau để xử lý, mô hình này không hữu dụng cho lắm…
+- Đầu tư trả trước đáng kể cho việc thiết kế và thực hiện khuôn khổ yêu cầu chuyên môn về tự động hóa cao têu cầu hạn chế từ khoá hạn chế sự phức tạp của các trường hợp thử nghiệm...
+
+
+
+
+
+Kiến trúc phổ biến của một công cụ kiểm thử hướng từ khoá:
+    
+    Hình  2.10: Cấu trúc Keyword Driven Framework
+2.3 Kiểm thử dựa trên Use case
+2.3.1 Khái niệm Use case
+    Trong rất nhiều tổ chức, chi phí cho kiểm thử chiếm tới 30 đến 50% giá trị sản xuất sản phẩm[1]
+- Trong một dự án phát triển phần mềm, use case được sử dụng để định nghĩa tài liệu yêu cầu hệ thống phần mềm. Use case được xây dựng sớm trong quy trình phát triển phần mềm, vì vậy các use case cho các chức năng chính của chương trình là có sẵn ngay lần lặp đầu. Theo RUP, một use case “mô tả đầy đủ một chuỗi các tuần tự của hành động được thực hiện bởi một hệ thống để cung cấp một kết quả có thể quan sát về giá trị cho một người hay hệ thống sử dụng khác”.  Use case cho người sử dụng biết kết quả mong đợi mà các nhà phát triển thực hiện mã lệnh, kết quả được trả về các tài liệu và người kiểm thử thực hiện kiểm tra.[8]
+- Tập hợp tât cả Use case của hệ thống sẽ mô tả tất cả các trường hợp mà hệ thống có thể được sử dụng.
+- Mỗi Use case mô tả cách thức actor tương tác với hệ thống để đạt được mục tiêu nào đó.
+- Một hoặc nhiều kịch bản (scenario) có thể được tạo ra từ mỗi use case, tương ứng với chi tiết về mỗi cash thức đạt được mục tiêu nào đó.
+- Khi mô tả Use case, người ta thường tránh dùng thuật ngữ kỹ thuật, thay vào đó họ sử dụng ngôn ngữ của người dùng cuối hoặc chuyên gia về lĩnh vực đó. Để tạo ra use case, cần phải có sự hợp tác chặt chẽ giữa người phân tích hệ thống và người dùng cuối.
+- Một trong những cách biểu diễn trực quan phổ biến hiện nay là lược đồ use case của UML.
+
+    Hình  2.11: Mô hình Use case
+2.3.2 Phương pháp xác định các Test case từ Use case
+    Trong [2] đã trình bày rõ, kiểm thử viên tiến hành đọc đặc tả ca sử dụng từ đó xác định thủ công các ca kiểm thử theo các bước như sau:
+- Xác định các kịch bản kiểm thử: Dựa theo các luồng điều khiển đã mô tả trong luồng chính và luồng rẽ nhánh trong đặc tả ca sử dụng, chúng ta sẽ xác định được các đường đi khác nhau khi thực hiện một ca sử dụng mỗi một đường đi là một kịch bản ca sử dụng. Tương ứng với mỗi kịch bản ca sử dụng là một kịch bản kiểm thử.
+-  Xác định ca kiểm thử: Mỗi kịch bản kiểm thử, kiểm thử viên sẽ xác định các bộ giá trị của dữ liệu đầu vào khác nhau thỏa mãn và dữ liệu đầu ra mong đợi. Các dữ liệu đầu vào và các bộ giá trị thỏa mãn khác nhau của đầu vào được xác định thông qua đọc đặc tả luồng để nhận biết các dữ liệu đầu vào và các giá trị theo phương pháp kết hợp các điều kiện trong các phép toán quan hệ and, or. Tương ứng với một kịch bản kiểm thử, kiểm thử viên có thể xác định được nhiều ca kiểm thử thỏa mãn một kịch bản kiểm thử.
+- Xác định các giá trị cụ thể cho từng ca kiểm thử: khi thực thi kiểm thử, kiểm thử viên sẽ nhập các giá trị cụ thể ứng với các trường hợp làm cho dữ liệu đầu vào thỏa mãn, không thỏa mãn theo miền giá trị.
+    Hoạt động thiết kế ca kiểm thử từ đặc tả ca sử dụng được thực hiện thủ công. Khi yêu cầu phần mềm thay đổi, kiểm thử viên phải thực hiện thiết kế lại các ca kiểm thử. Để giảm chi phí cho hoạt động này, giải pháp đưa ra là cần tự động hóa trong thiết kế ca kiểm thử từ đặc tả ca sử dụng. Nhưng với đặc tả ca sử dụng bằng ngôn ngữ tự nhiên, việc tự động hóa gặp nhiều khó khăn do kỹ thuật xử lý ngôn ngữ tự nhiên là rất khó hơn nữa một vấn đề trong ngôn ngữ tự nhiên có thể được diễn đạt bằng nhiều cách khác nhau. Vì vậy để tự động hóa hoạt động này, ca sử dụng cần được đặc tả bằng một ngôn ngữ hình thức để máy có thể hiểu được đặc tả và tự động sinh các ca kiểm thử. Ngôn ngữ đặc tả hình thức cho đặc tả ca sử dụng cần biểu diễn chính xác các đặc tả ca sử dụng, tương ứng với mỗi ca sử dụng thì chuỗi hành động nào xảy ra, trên các hành động đó dữ liệu đầu vào như thế nào để ca sử dụng thực hiện theo kịch bản, kết thúc đầu ra là gì.
+
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+    Trong chương trình này chúng tôi sẽ trình bày về Framework kiểm thử hướng từ khóa đã được xây dựng để kiểm thử các chức năng của ứng dụng Web dựa trên Use case. Mục đích của framework này là thực thi trực tiếp các ca kiểm thử mà không cần tạo ra các test scripts để thực hiện kiểm thử. Lợi ích của công cụ đem lại là khi yêu cầu phần mềm thay đổi, các test case được thiết kế lại thì kiểm thử viên không phải bảo trì sửa chữa các test scripts. Hình 3.1 minh họa công dụng tự động hóa của công cụ trong kiểm thử phần mềm.
+    
+    Hình  3.1: Công dụng tự động hóa của công cụ trong KTPM
+3.1 Các chức năng của Framework
+    Thực hiện kiểm thử thủ công là tốn rất nhiều thời gian và công sức của người kiểm thử viên, việc kiểm thử càng sớm là càng tốt, sẽ tiết kiệm chi phí sản xuất. Vậy nên chúng tôi xây dựng chương trình theo hướng từ khóa nhằm giúp việc kiểm thử nhanh chóng và đầy đủ hơn. Trong chương trình gồm có 2 chức năng chính: Quản lý từ khóa và Thực thi kiểm thử.
+    
+    Hình  3.2: Mô hình Use case tổng quát cho chương trình
+➢ Chức năng Quản lý từ khóa: Cho phép quản lý những từ khóa (Key word) của ứng dụng. Mỗi từ khóa sẽ tương ứng với một hành động trên đối tượng kiểm thử. Tùy từng môi trường kiểm thử, các yếu tố ngôn ngữ và các yếu tố khác mà một hành động có thể có các cụm từ khác nhau để biểu diễn.
+Ví dụ: Ví dụ hành động người dùng nhập dữ liệu có thể là các cụm từ: SetText, Enter, InputText…
+   Vậy nên một trình quản lý từ khóa sẽ bao gồm các hoạt động thêm, sửa và xóa từ khóa cũng như dạng thể hiện của chúng.
+
+
+    Hình  3.3: Use case phân rã của chức năng Quản lý từ khóa
+
+    Hình  3.4: Use case phân rã của chức năng Quản lý từ thay thế
+➢ Chức năng Thực thi kiểm thử: Thực thi kiểm thử tự động các chức năng của ứng dụng web theo hướng từ khóa sau khi áp dụng phương pháp xác định các Test case từ Use case. Việc thực thi kiểm thử cho phép thực thi đơn lẻ từng kịch bản kiểm thử hoặc nhiều kịch bản kiểm thử với nhiều bộ giá trị dữ liệu cho từng ca kiểm thử thuộc kịch bản kiểm thử. Chi tiết mô tả chức năng Thực thi kiểm thử sẽ được trình bày ở các mục dưới đây.
+3.2 Các bước thực hiện Thiết kế kiểm thử
+Trong phạm vi đồ án lần này, chúng tôi thực hiện kiểm thử thực nghiệm website https://www.topcv.vn/
+
+    Hình  3.5: Giao diện trang chủ của website TopCV
+    Từ giao diện trang chủ website ta có thể thấy các chức năng chính của website cần thực hiện kiểm thử. Ta có thể trình bày chúng dưới dạng mô hình use case như dưới dây:
+    
+    Hình  3.6: Mô hình Use case tổng quát cho website TopCV
+    Từ mô hình Use case tổng quát trên, ta có thể thấy website có nhiều Use case khác nhau, mỗi Use case thực hiện một chức năng riêng. Áp dụng phương pháp xác định các Test case từ Use case ta tiến hành thực hành các bước sau:
+Bước 1: Xây dựng sheet tổng quan các UC cần thực hiện kiểm thử
+
+    Hình  3.7: Bảng Kịch bản kiểm thử toàn hệ thống
+Trong đó: 
+- UCID: Thể hiện từng UC riêng biệt ứng với từng chức năng có trong website TopCV, ID là thành phần phân biệt giữa UC này với UC khác và giúp dễ dàng quản lý từng chức năng
+- UCName: Tên chức năng
+- TSName: Tên sheet kịch bản
+- TDName: Tên sheet chứa dữ liệu cho từng kịch bản
+    Áp dụng phương pháp xác định các Test case từ Use case như đã trình bày ở trên, từ kịch bản kiểm thử ta xác định được các ca kiểm thử. 
+Bước 2: Sheet ca kiểm thử chứa các bước thực hiện:
+Từ đặc tả Use case tổng quát ta xác định được các kịch bản riêng biệt của từng chức năng của website
+➢ Chức năng Đăng nhập
+    Bảng 1: Kịch bản Use case đăng nhập
+1. Pre-Condition
+Người dùng truy cập vào trang web của TopCV
+2. Pos-Condition
+Nếu đăng nhập hệ thống thành công, hệ thống hiển thị trang chủ của web TopCV, nếu không thành công đưa ra các thông báo cho người dùng biết.
+3. Trigger
+Use Case này được thực hiện khi Người dùng thực hiện chức năng Đăng nhập ngay trên trang chủ.Basic flow1. Hệ thống hiển thị giao diện trang chủ
+2. Người dùng nhập Email
+3. Người dùng nhập Mật khẩu
+4. Click “Đăng nhập”
+5. Hệ thống kiểm tra tài khoản của người dùng có trong hệ thống không
+6. Hệ thống hiển thị trang làm việc của TopCV và cho phép Người dùng tùy chọn chức năng làm việc.Alternate flow5   5.1 Email không hợp lệ, Mật khẩu hợp lệ
+     5.2.Email hợp lệ, Mật khẩu không hợp lệ
+     5.3. Email và Mật khẩu không hợp lệ
+Xóa trắng trường Email và Mật khẩu, con trỏ đặt tại trường Email và quay lại 2.
+➢ Chức năng Đăng ký
+    Bảng 2: Kịch bản Use case Đăng ký
+1. Pre-Condition
+Người dùng truy cập vào trang web của TopCV
+2. Pos-Condition
+Nếu đăng ký hệ thống thành công, hệ thống hiển thị trang chủ của web TopCV, nếu không thành công đưa ra các thông báo cho người dùng biết.
+3. Trigger
+Use Case này được thực hiện khi Người dùng thực hiện chức năng Đăng ký.Basic flow1.  Hệ thống hiển thị giao diện trang chủ
+2. Người dùng nhập Họ và tên
+3 Người dùng nhập Email
+4. Người dùng nhập Mật khẩu
+5. Người dùng nhập Mật khẩu xác nhận
+6. Click “Đăng ký”
+7. Hệ thống kiểm tra tài khoản của người dùng có trong hệ thống không
+8. Hệ thống hiển thị trang làm việc của TopCV và cho phép Người dùng tùy chọn chức năng làm việc.Alternate flow7   7.1 Họ và tên không hợp lệ, các trường Emai, Mật khẩu và Mật khẩu xác nhận đều hợp lệ
+     7.2 Họ và tên, Mật khẩu, Mật khẩu xác nhận đều hợp lệ, Email không hợp lệ
+     7.3. Họ và tên, Email, Mật khẩu xác nhận đều hợp lệ và Mật khẩu không hợp  lệ
+     7.4. Họ và tên, Email, Mật khẩu đều hợp lệ và Mật khẩu xác nhận không hợp lệ
+Xóa trắng tất cả các trường Họ và tên, Email, Mật khẩu và Mật khẩu xác nhận, con trỏ đặt tại trường Họ và tên và quay lại 2.
+Từ kịch bản Use case thông thường ta xây dựng được kịch bản kiểm thử được cấu trúc theo mẫu Excel gồm:
+- UCID: Tên Usecase đang xét đến, mỗi một sheet sẽ là 1 kịch bản UC
+- Pre-condition: Tiền điều kiện cần có trước khi thực hiện hành động trên website.
+- TSID: Trong 1 kịch bản kiểm thử có nhiều ca kiểm thử, để phân biệt ta đặt ID riêng cho từng ca kịch bản.
+- TestNum: Thứ tự các bước thực hiện hết 1 ca kiểm thử
+- Des: Mô tả từng bước thực hiện ca kiểm thử
+- ObjectName: Chứa địa chỉ website cần kiểm thử, tên đối tượng được đặt trong website ( có thể được xác định bằng id, name, css, xpath…)
+- Action: Chứa các hành động thực thi theo hướng từ khóa. 
+➢ Chức năng Đăng nhập
+
+    Hình  3.8: Kịch bản Use case Đăng nhập trên Excel
+    
+    
+    
+    
+    
+    
+    
+    
+➢ Chức năng Đăng ký
+
+    Hình  3.9: Kịch bản Use case Đăng ký trên Excel
+Bước 3: Xây dựng các bộ giá trị cho các ca kiểm thử theo cấu trúc Excel dưới đây
+Trong đó:
+- TestNum: Thứ tự các bước thực hiện cho 1 ca kịch bản
+- Des: Mô tả chi tiết cho từng bước thực hiện
+- Case1->CaseN: Các bộ giá trị cho từng ca kịch bản
+    
+    
+    
+    
+    
+    
+    
+➢ Chức năng Đăng nhập
+
+    Hình  3.10: Dữ liệu cho các ca kịch bản Đăng nhập
+➢ Chức năng Đăng ký
+
+    Hình  3.11: Dữ liệu cho các ca kịch bản Đăng ký
+3.3 Phương pháp xây dựng Framework 
+    Sau khi đã chuẩn bị các sheet tài liệu bao gồm các kịch bản, ca kịch bản và các bộ dữ liệu cho các ca kịch bản thì ta tiến hành xây dựng từng bước trong Framework. Chương trình được xây dựng là ứng dụng winform thực thi tự động các Test case dựa trên các bảng Excel.
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Chrome;
+using System.IO;
+namespace Project5_ct
+{
+    public partial class Main : Form
+    {
+        DataTable dtUC;
+        public Main()
+        {
+            InitializeComponent();
+        }
+        /// <summary>
+        /// hàm này xử lý cho trường hợp chạy tất cả các UC
+        /// </summary>
+
+        public void RunAll()
+        {
+            StreamWriter f = new StreamWriter("result.txt", false);
+            DataTable dtSc; DataTable dtd;
+            DataTable dtsid;
+            DataTable dtsteps;
+            DataTable dtstepd;
+            //Program.driver = new ChromeDriver();
+            Program.driver = new FirefoxDriver();
+
+            Program.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+
+            for (int i = 0; i < dtUC.Rows.Count; i++)  //Cac UseCase 
+            {
+                dtSc = readData.GetTable(dtUC.Rows[i]["TSName"].ToString());  //sheet Scenario
+                dtsid = readData.getScenarioId(dtUC.Rows[i]["TSName"].ToString()); //lấy các scenarioID
+
+                dtd = readData.GetTable(dtUC.Rows[i]["TDName"].ToString());  //sheet data
+                for (int j = 0; j < dtsid.Rows.Count; j++)  //scerioid
+                {
+                    if (dtsid.Rows[j][0].ToString().Trim() != "")
+                    {
+                        dtsteps = readData.GetTestScenario(dtSc, dtsid.Rows[j][0].ToString()); //scenario
+
+                        dtstepd = readData.GetTestScenario(dtd, dtsid.Rows[j][0].ToString());  //data
+
+                        for (int d = 3; d < dtstepd.Columns.Count; d++)  // từ cột test case
+                        {
+
+                            if (KiemTra(dtstepd, d) == true) break;
+                            {
+                                // MessageBox.Show(dtsteps.Rows[0][5].ToString());
+                                for (int k = 0; k < dtsteps.Rows.Count; k++)  //steps
+                                {
+
+                                    string kq = runTest.runTestStep(dtsteps.Rows[k]["ObjectName"].ToString(), dtsteps.Rows[k]["Action"].ToString(), dtstepd.Rows[k][d].ToString());
+                                    f.WriteLine(dtUC.Rows[i]["UCID"] + "|| " + dtsid.Rows[j][0] + "||" + dtstepd.Columns[d].ColumnName + "||" + "Result: " + kq);
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            f.Close();
+            Program.driver.Quit();
+        }
+        public void RunSelect()
+        {
+            StreamWriter f = new StreamWriter("resultselect.txt", false);
+            DataTable dtSc; DataTable dtd;
+            DataTable dtsid;
+            DataTable dtsteps;
+            DataTable dtstepd;
+
+            DataTable dtt = readData.getUCRecord(dtUC, cbxUC.SelectedValue.ToString()); //lấy các UC có trong hệ thống
+            if (dtt.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có dữ liệu");
+            }
+            else
+            {
+               // Program.driver = new ChromeDriver();
+                Program.driver = new FirefoxDriver();
+                Program.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+                string tsName = dtt.Rows[0]["TSName"].ToString();
+                string tdName = dtt.Rows[0]["TDName"].ToString();
+
+                dtSc = readData.GetTable(tsName);  //sheet Scenario
+                dtsid = readData.getScenarioId(tsName); //lấy các scenarioID
+
+                dtd = readData.GetTable(tdName);  //sheet data
+                for (int j = 0; j < dtsid.Rows.Count; j++)  //scerioid
+                {
+                    if (dtsid.Rows[j][0].ToString().Trim() != "")
+                    {
+
+                        dtsteps = readData.GetTestScenario(dtSc, dtsid.Rows[j][0].ToString()); //scenario
+
+                        dtstepd = readData.GetTestScenario(dtd, dtsid.Rows[j][0].ToString());  //data
+
+                        for (int d = 3; d < dtstepd.Columns.Count; d++)  // từ cột test case
+                        {
+
+                            if (KiemTra(dtstepd, d) == false)
+                            {
+                                // MessageBox.Show(dtsteps.Rows[0][5].ToString());
+                                for (int k = 0; k < dtsteps.Rows.Count; k++)  //steps
+                                {
+
+                                    string kq = runTest.runTestStep(dtsteps.Rows[k]["ObjectName"].ToString(), dtsteps.Rows[k]["Action"].ToString(), dtstepd.Rows[k][d].ToString());
+                                    f.WriteLine(dtUC.Rows[0]["UCID"] + "|| " + dtsid.Rows[j][0] + "||" + dtstepd.Columns[d].ColumnName + "||" + "Result: " + kq);
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            f.Close();
+            Program.driver.Quit();
+        }
+//Load các UC có trong toàn hệ thống lên Combobox
+private void button2_Click_1(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            txtPath.Text = openFileDialog1.FileName;
+            button1.Enabled = true;
+            readData.fileName = txtPath.Text;
+            dtUC = readData.getUC();
+            cbxUC.DataSource = dtUC;
+
+            cbxUC.DisplayMember = "UCName";
+            cbxUC.ValueMember = "UCID";
+        }
+
+      }
+  }
+
+
+
+Trên đây là mã lệnh xây dựng chương trình dùng để thực hiện các hoạt động sau:
+1. Đọc các UC cần kiểm thử có trong sheet excel
+2. Mỗi UC đọc sẽ có nhiều kịch bản cần kiểm thử
+3. Xây dựng các TC bằng cách kết hợp các kịch bản kiểm thử và các bộ giá trị cho các ca kiểm thử.
+4. Thực thi từng bước kiểm thử đối với các đối tượng của website, các hành động thực hiện trên chúng cũng như dữ liệu
+    Sau đây là các giao diện của chương trình cũng như giao diện hoạt động kiểm thử theo các chức năng và thực thi kiểm thử:
+
+    Hình  3.12: Màn hình chính chọn chức năng của Framework
+
+    Hình  3.13: Giao diện chính thực hiện kiểm thử
+
+    Hình  3.14: Giao diện quản lý từ khóa
+    
+    Chọn trình quản lý tại Form Home thì chương trình sẽ thực hiện chạy chức năng tương ứng. 
+    Ví dụ khi chọn chức năng Thực thi kiểm thử thì màn hình sẽ hiển thị chức năng giao diện chính của form, sau khi chọn tệp chứa dữ liệu màn hình sẽ như sau:
+
+    Hình  3.15: Màn hình chính thực thi kiểm thử
+
+    Hình  3.16: Màn hình tiến trình chạy 
+
+    Hình  3.17: Màn hình thực thi chạy các ca kiểm thử
+
+    Hình  3.18: Màn hình thông báo hoàn thành kiểm thử
+
+    Hình  3.19: Màn hình kết quả thực thi kiểm thử
+    Khi chọn chức năng Quản lý từ khóa tại form Chức năng, màn hình sẽ hiển thị giao diện hoạt động của chức năng Quản lý từ khóa như sau:
+
+    Hình  3.20: Màn hình thực thi Quản lý từ khóa
+    Tại form chức năng Quản lý từ khóa và Quản lý dạng thể hiện có thể tùy ý thêm, sửa, xóa, cập nhật từ khóa trong tệp text.
+
+    Hình  3.21: Màn hình sau khi thêm từ khóa
+    Sau khi thêm từ khóa ta có thể tiếp tục thêm các từ thay thế có thể dùng của từ khóa đó tại trình Quản lý từ thay thế
+
+    Hình  3.22: Màn hình sau khi thêm từ thay thế
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau thời gian nghiên cứu và phát triển tôi đã thực hiện được:
+- Thực thi kiểm thử tự động cho các Use case của 1 website
+- Thực thi được nhiều kịch bản cho mỗi Use case
+- Mỗi kịch bản thực thi nhiều bộ dữ liệu
+- Đã đánh giá được kết quả thực thi kiểm thử.
+4.2 Hạn chế của đề tài
+Các hạn chế của đề tài: 
+- Mới triển khai được cho một môi trường web,
+- Chưa thực thi kiểm thử trên nhiều trình duyệt web,
+- Chưa kiểm thử toàn diện các khía cạnh cho ứng dụng.
+- Kết quả mới hiển thị file text đơn giản.
+4.3 Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, tác giả đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+- Mở rộng các khía cạnh kiểm thử cho ứng dụng webform: Kiểm thử chức năng và phi chức năng một cách tự động hóa.
+- Phát triển framework để có thể thực hiện kiểm tra được cả ứng dụng webform và winform.
+- Xây dựng framework tích hợp với nhiều trình duyệt và các phiên bản của các trình duyệt đó.
+TÀI LIỆU THAM KHẢO
+    [1].  Chu Thị Minh Huệ, Đặng Đức Hạnh, Nguyễn Ngọc Bình, “Một số vấn đề tổng quan về kiểm thử dựa trên mô hình”, ĐH Công Nghệ, ĐHQG.
+    [2]. Chu Thị Minh Huệ, Đặng Đức Hạnh, Nguyễn Ngọc Bình, “Phương pháp sinh tự động ca kiểm thử từ mô hình ca sử dụng”, ĐH Công Nghệ, ĐHQG.
+    [3] Đào Anh Hiển, “Đề cương Kiểm thử phần mềm tự động”, ĐH SPKTHY.
+    [4]. Satya Avasarala, “Selenium Webdriver Practial Guide”,  Packt Publishing Ltd, 2014
+    [5]. Mark Utting and Bruno Legeard. Practical Model-Based Testing: A Tools Approach. Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 2007.
+    [6]. Clémentine Nebut, Franck Fleurey, Yves Le Traon, and Jean-marc Jézéquel. Automatic Test Generation: A Use Case Driven Approach. IEEE Transactions on Software Engineering, 32:140–155, 2006.
+    [7]. Glenford J. Myers, Corey Sandler, and Tom Badgett. The Art of Software Testing. Wiley Publishing, 3rd edition, 2011.
+    [8]. J. Heumann, Generating test cases from use cases, Tech. rep., Rational Software (2001)
+     [9] Kshirasagar Naik and Priyadarshi Tripathy. Wiley: Software Testing and Quality Assurance: Theory and Practice. A JOHN WILEY & SONS, INC., Canada, August 2008.
+     [10]http://toolsqa.com/selenium-webdriver/keyword-driven framework/introduction         [11]https://www.guru99.com/creating-keyword-hybrid-frameworks-with-selenium.html
+    [12] http://www.testingvn.com/
+    
+x
+x
+    
+PHỤ LỤC
+    
+    
+Kiểm thử hướng Use case tự động
+    
+    
+20
+    
+    

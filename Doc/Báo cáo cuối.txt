@@ -1,0 +1,449 @@
+﻿CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI
+1.1 Thực trạng và tính khả thi của đề tài 
+    Năm 1997 Internet bắt đầu du nhập vào Việt Nam, từ những năm đầu đó Internet ở Việt Nam vẫn là một dịch vụ cao cấp và hạn chế đối với phần đông người dùng. Trải qua hơn 20 năm phát triển đến nay Internet từ một dịch vụ cao cấp đã trở thành một dịch vụ bình dân, phổ biến trong mọi gia đình, công sở, trường học, làm thay đổi cuộc sống của người dân và xã hội ở Việt Nam. Việc sử dụng Internet để phục vụ cho cuộc sống đã trở lên phổ biến như giao tiếp với nhau qua email, sử dụng Internet để tra cứu thông tin phục vụ cho công việc hay học tập, sử dụng Internet để giải trí, giao lưu, kết bạn.... 
+    Ngày 7/11/2006 Việt Nam gia nhập tổ chức thương mại thế giới WTO, từ đó Internet được nhìn nhận là công cụ mũi nhọn hỗ trợ, thúc đấy tích cực cho sự phát triển của nền kinh tế. Đa số các doanh nghiệp và các tổ chức đều có hệ thống mạng và website để quảng bá thương hiệu và sản phẩm. Cùng với sự phát triển của Internet thì thương mại điện tử cũng phát triển theo. Đối với các doanh nghiệp và tổ chức việc sử dụng thư điện tử (email), thanh toán trực tuyến, trao đổi dữ liệu điện tử, số hóa dữ liệu, lưu trữ dự liệu, hỗ trợ cho công việc kinh doanh đã không còn quá xa lạ. Ngoài ra, chính phủ và các tổ chức khác cũng sử dụng Internet để thông báo, trao đổi, giao tiếp với người dân. 
+    Tóm lại, Internet và hệ thống mạng máy tính đã trở thành một phần không thể thiếu để phục vụ cho cá nhân người dùng, cho các tổ chức, doanh nghiệp kinh tế và cả cho các tổ chức chính phủ... 
+    Cùng với sự phát triển đó và những lợi ích mà Internet và máy tính đem lại, nó cũng tạo ra những nguy cơ và rủi ro cho nền kinh tế và xã hội hiện đại. Các vấn đề về truy cập bất hợp pháp, virus, rò rỉ thông tin, lỗ hổng trên hệ thống...đã trở thành mối lo ngại cho các nhà quản lý ở bất kỳ một quốc gia nào từ các cơ quan, bộ, ngành đến từng doanh nghiệp, đơn vị hay cá nhân người dùng. 
+    Tin tặc đã và đang phát triển với tốc độ nhanh hơn bao giờ hết về cả quy mô, tính chuyên nghiệp, trình độ kỹ thuật và cả tiềm lực về tài chính. Điều đáng báo động là sự phá hoại của tin tắc hiện nay không nhằm mục đích trục lợi cá nhân hay khoe khoang nữa mà đã chuyển sang hướng tấn công các tổ chức doanh nghiệp kinh tế và đặc biệt hơn nữa là hạ tầng công nghiệp các quốc gia. 
+    Từ những số liệu và cảnh báo trên nên vấn đề bảo vệ an ninh mạng ngày càng nóng bỏng hơn nữa. Đối với cá nhân người dùng việc bảo vệ thông tin cá nhân của mình trước những kẻ đánh cắp. Đối với tổ chức chính phủ, sở ban ngành, doanh nghiệp bảo vệ hệ thống mạng của mình về dữ liệu, về thông tin khách hàng, về website, về tài chính, về uy tín.... Chính vì lý do đó chúng em chọn đề tài "Tìm hiểu về Firewall và triển khai trên mã nguồn mở" nhằm mục đích nghiên cứu về một giải pháp an toàn cho mạng máy tính.
+    Nhờ sự gợi ý và định hướng của thầy Vũ Xuân Thắng em đã chọn đề tài “Tìm hiểu về Firewall và triển khai trên mã nguồn mở”. Hi vọng với sự góp ý của thầy đồ án của em có được nhiều cơ hội ứng dụng trong tương lai cho việc triển khai hệ thống Firewall trên nhiều nền tảng khác.
+1.2 Mục tiêu và nhiệm vụ của đề tài
+    Trước khi tìm hiểu chúng em cũng hiểu rằng không có một giải pháp nào là toàn diện cho an ninh mạng, một hệ thống dù vững chắc tới đâu rồi cũng sẽ bị vô hiệu hóa bởi những kẻ tấn công. Vì không thể có một giải pháp an toàn tuyệt đối nên để bảo vệ thông tin trên mạng máy tính thì cần xây dựng nhiều "lớp" bảo vệ khác nhau. Và Firewall là lớp ngoài cùng của hệ thống đó. Mục đích của đề tài là: 
+      Tìm hiểu các mối đe dọa đối với một hệ thống mạng máy tính. 
+      Tìm hiểu về các khái niệm cơ bản của firewall. 
+      Nghiên cứu về các công nghệ firewall và cách làm việc của chúng. 
+      Giới thiệu một số sản phẩm firewall đang được sử dụng trên thị trường và cách là việc của chúng. 
+      Demo triển khai sản phẩm firewall trên mã nguồn mở. 
+1.3 Giới hạn phạm vi của đề tài
+	Trong đồ án này em tập chung nghiên cứu các vấn đề sau:
+    - Tập trung vào cách thức hoạt động của các loại firewall 
+    - Triển khai thành công Firewall trên nền tảng IPCop 
+1.4 Nội dung thực hiện
+    Tìm hiểu kiến thức lý thuyết về các loại firewall, cách phân loại chúng một cách tổng quan. Các thành phần tạo lên một firewall và cách làm việc của chúng. 
+    Tìm hiểu về các loại firewall trên nền tảng mã nguồn mở Linux cụ thể là trên IPcop, cách làm việc, những ưu nhược điểm so với các sản phẩm khác. 
+    Tìm hiểu về các kiến trúc Firewall, một số mô hình dành cho hệ thống mạng. Sản phẩm IPcop triển khai trên nền tảng Linux. 
+1.5 Phương pháp tiếp cận
+- Cách tiếp cận : Tìm hiểu Firewall trên nền tảng hệ điều hành mã nguồn 
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu;
+o Phương pháp phân tích mẫu;
+      Phương pháp thực nghiệm.
+    
+
+
+CHƯƠNG 2: GIỚI THIỆU VỀ FIREWALL & IPCOP FIREWALL
+2.1 Khái niệm và chức năng của Tường lửa
+2.1.1 Khái niệm
+    Thuật ngữ Firewall có nguồn gốc từ một kỹ thuật thiết kế trong xây dựng để ngăn chặn, hạn chế các tin tặc tấn công. Trong công nghệ thông tin, Firewall là một kỹ thuật được tích hợp vào hệ thống mạng để chống sự truy nhập trái phép nhằm bảo vệ các nguồn thông tin nội bộ và hạn chế sự xâm nhập không mong muốn vào hệ thống. Cũng có thể hiểu Firewall là một cơ chế để bảo vệ mạng tin tưởng khỏi các mạng không tin tưởng. 
+    Thông thường Firewall được đặt giữa mạng bên trong (Intranet) của một công ty, tổ chức, ngành hay một quốc gia và Internet. Vài trò chính là bảo mật thông tin, ngăn chặn sự truy nhập không mong muốn từ bên ngoài và cấm truy nhập từ bên trong tới một số địa chỉ nhất định trên Internet.	
+
+Hình 2- 1: Mô hình tường lửa đơn giản
+    Một cách vắn tắt, Firewall là hệ thông ngăn chặn vệc truy nhập trái phép từ bên ngoài vào mạng cũng như những kết nối không hợp lệ từ bên trong ra. Firewall thực hiện lọc bỏ những địa chỉ không hợp lệ dựa theo các quy tắc hay chỉ tiêu định trước. 
+    Firewall có thể là hệ thống phần cứng, phần mềm hoặc kết hợp cả hai. 
+* Firewall cứng: Là những firewall được tích hợp sẵn trên Router hoặc trên các thiết bị chuyên dụng. 
+    + Hoạt tính cao hơn so với firewall mềm. 
+    + Tốc độ xử lý nhanh hơn. 
+    + Bảo mật cao hơn. 
+    + Chi phí đắt hơn so với firewall mềm. 
+* Firewall mềm: Là những firewall được cài sẵn trên Server. 
+    + Hoạt tính không cao bằng firewall cứng. 
+    + Tốc độ xử lý chậm, phụ thuộc hệ điều hành. 
+    + Tiện lợi, có thể cài đặt dễ dàng trên các máy server. 
+    + Đa dạng, chi phí thấp hơn so với firewall cứng. 
+2.1.2 Chức năng của Firewall
+    Chức năng chính của Firewall là kiểm soát luồng thông tin giữa Intranet và Internet. Thiết lập cớ chế điều khiển dòng thông tin giữa Intranet và mạng Internet. 
+    Cụ thể: 
+    - Cho phép hoặc cấm những dịch vụ truy nhập ra ngoài. 
+    - Cho phép hoặc cấm những dịch vụ từ ngoài truy nhập vào trong. 
+    - Theo dõi luồng dữ liệu giữa mạng Internet và LAN. 
+    - Kiểm soát địa chỉ truy nhập, cấm địa chỉ truy nhập. 
+    - Kiểm soát người sử dụng và việc truy nhập của người sử dụng. 
+    - Kiểm soát nội dung thông tin lưu chuyển trên mạng. 
+    Một Firewall khảo sát tất cả các luồng lưu lượng giữa hai mạng để xem nó có đạt chuẩn hay không. Nếu nó đạt, nó được định tuyến giữa các mạng, ngược lại nó bị hủy. Một bộ lọc firewall lọc cả lưu lượng ra lẫn lưu lượng vào. Nó cũng có thể quản lý việc truy cập từ bên ngoài vào nguồn tài nguyên mạng bên trong. Nó có thể được sử dụng để ghi lại tất cả các cố gắng để vào mạng riêng và đưa ra cảnh báo nhanh chóng khi kẻ thù hoặc kẻ không được phân quyền đột nhập. 
+    Firewall có thể lọc các gói dựa vào địa chỉ nguồn, địa chỉ đích và số cổng của chúng. Điều này còn được gọi là lọc địa chỉ. Firewall cũng có thể lọc các loại đặc biệt của lưu lượng mạng. Điều này được gói là lọc giao thức bởi vì việc ra quyết định cho chuyển tiếp hoặc từ chối lưu lượng phụ thuộc vào giao thức được sử dụng. Ví dụ: http, ftp, hoặc telnet. Firewall cũng có thể lọc luồng lưu lượng thông qua thuộc tính và trạng thái của gói
+2.2 Cấu trúc, thành phần và cơ chế hoạt động của tường lửa
+2.2.1 Cấu trúc
+      Firewall bao gồm: 
+    - Một hoặc nhiều hệ thống máy chủ kết nối với các bộ định tuyến (router) hoặc là có chức năng router. 
+    - Các phần mềm quản lý an ninh chạy trên hệ thông máy chủ. Thông thường là các hệ quản trị xác thực (Authentication), cấp quyền (Authorization) và kế toán (Accounting).
+2.2.2 Thành phần và cơ chế hoạt động
+    a, Thành phần: 
+      Firewall chuẩn gồm một hay nhiều các thành phần sau đây: 
+    - Bộ lọc packet (packet - filtering router). 
+    - Cổng ứng dụng (application - level gateway hay proxy server). 
+    - Cổng mạch (Circuite level gateway). 
+
+
+    b. Cơ chế hoạt động 
+   • Bộ lọc packet: 
+    Firewall hoạt động chặt chẽ với giao thức TCP/IP vì giao thức này làm việc theo thuật toán chia nhỏ các dữ liệu nhân được từ các ứng dụng trên mạng, hay nói chính xác hơn là các dịch vụ chạy trên các giao thức (Telnet, SMTP, DNS, …) thành các gói dữ liệu (data packet) rồi gán cho các gói này những địa chỉ có thể nhận dạng, tái lập lại ở đich cần gửi đến, do đó các loại Firewall cũng liên quan rất nhiều đến các packet và những con số địa chỉ của chúng.
+
+Hình 2- 2: Phương thức lọc gói tin
+    Bộ lọc packet cho phép hay từ chối mỗi packet mà nó nhận được. Nó kiểm tra toàn bộ đoạn dữ liệu để quyết định xem đoạn dữ liệu đó có thỏa mãn một trong số các luật lệ của lọc packet hay không. Các luật lệ lọc packet này là dựa trên các thông tin ở đầu mỗi packet (header), dùng để cho phép truyền các packet đó ở trên mạng. Bao gồm: 
+    - Địa chỉ IP nguồn (Source). 
+    - Địa chỉ IP nơi nhận (Destination). 
+    - Những thủ tục truyền tin (TCP, UDP, ICMP, …). 
+    - Cổng TCP/UDP nơi xuất phát. 
+    - Công TCP/UDP nơi nhận. 
+    - Dạng thông báo ICMP. 
+    - Giao diện packet đến. 
+    - Giao diện packet đi. 
+    Nếu packet thỏa các luật lệ đã được thiết lập trước cảu Firewall thì packet đó được chuyển qua, nếu không thỏa thì sẽ bị loại bỏ. Việc kiểm soát các công làm cho Firewall có khả năng chỉ cho phép một số loại kết nối nhất định được phép mới vào được hệ thống mạng cục bộ.
+• Ưu điểm:
+     - Đa số các hệ thông Firewall đều sử dụng bộ lọc packet. Một trong những ưu điểm của phương pháp này là đảm bảo thông qua lưu lượng mạng. 
+    - Bộ lọc packet là trong suốt đối với người sử dụng và các ứng dụng, vì vậy nó không yêu cầu sự huẩn luyện đặc biệt nào cả. 
+• Hạn chế: 
+    Việc định nghĩa các chế độ lọc packet là một việc khá phức tạp, nó đòi hỏi người quản trị mạng cần phải có hiểu biết chi tiết về các dịch vụ Internet, các dạng packet header và các giá trị cụ thể mà họ có thể nhận trên mỗi trường. Khi đòi hỏi về sự lọc càng lớn, các luật lệ lọc càng trở nên dài và phức tạp, rất khó để quản lý và điều khiển. 
+   • Cổng ứng dụng:
+    Đây là một loại Firewall được thiết kế để tăng cường chức năng kiểm soát các loại dịch vụ, giao thức được cho phép truy nhập vào hệ thông mạng. Cơ chế hoạt động của nó dựa trên các thức gọi là Proxy server (Dịch vụ ủy quyền). Proxy service là các bộ code đặc biệt cài đặt trên gateway cho từng ứng dụng. Nếu người quản trị mạng không cài đặt proxy code cho một ứng dụng nào đó, dịch vụ tương ứng sẽ không được cung cấp và do đó không thể chuyển thông tin qua firewall. Ngoài ra, proxy code (Mã ủy nhiệm) có thể được định cấu hình để hỗ trợ chỉ một số đặc điểm trong ứng dụng mà người quản trị mạng cho là chấp nhận được trong khi từ chối những đặc điểm khác. 
+    Một cổng ứng dụng thường được coi như là môt pháo đài chủ (bastion host), bởi vì nó được thiết kế đặc biết để chống lại sư tấn công từ bên ngoài. Những biện pháp an ninh của một bastiton host là:
+    - Bastion host luôn chạy các version (phiên bản) an toàn cảu các phần mền hệ thống (Operating system). Các version an toàn này được thiết kế chuyển cho mục đích chống lại sự tấn công vào OS, cũng như là đảm bảo sự tích hợp firewall. 
+    - Chỉ những dịch vụ mà người quản trị mạng cho là cần thiết mới được cài đặt trên bastition host, đơn giản chỉ vì nếu một dịch vụ được cài đặt, nó không thể dẽ bị tấn công. 
+    - Thông thường chỉ một số giới hạn các ứng dụng cho các dịch vụ Telnet, DNS, FTP, SMTP và xác thực user là được cài đặt trên Bastiton host. 
+    - Bastiton host có thể yêu cầu nhiều mức độ xác thực khác nhau, ví dụ như user password hay smart card. 
+    - Mỗi proxy được cài đặt cấu hình để cho phép truy nhập chỉ một số các máy chủ nhất định. Điều này có nghĩa rằng bộ lệnh và đặc điểm thiết lập cho mỗi proxy chỉ đúng với một số máy chủ trên toàn hệ thống. 
+    - Mỗi proxy duy trì một quyển nhật ký ghi chép lại toàn bộ chi tiết của giao thông qua nó, mỗi sự kết nối, khoảng thời gian kết nối. Nhật kí này rất có ích trong việc tìm theo dấu vết hay ngăn chặn kẻ phá hoại. 
+    - Mỗi proxy đều độc lập với các proxy khác trên bastion host. Điều này cho phép dễ dàng trong quá trình cài đặt một proxy mới, hay tháo gỡ một proxy đang có vấn đề. 
+    
+
+• Ưu điểm:
+    - Cho phép người quản trị mạng hoàn toàn điều khiển được từn dịch vụ trên mạng, bởi vì ứng dụng proxy hạn chế bộ lệnh và quyết định những máy chủ nào có thể truy nhập được các dịch vụ. 
+    - Cho phép người quản trị mạng hoàn toàn điều khiển được những dịch vụ nào đó cho phép, bởi vì sự vắng mặt của các proxy cho các dịch vụ tương ứng có nghĩa là các dịch vụ ấy bị khóa. 
+    - Cổng ứng dụng cho phép kiểm tra độ xác thực rất tốt và nó có ghi nhật ký thông tin về truy nhập hệ thống. 
+    - Luật lệ lọc cho cổng ứng dụng là dễ dàng cấu hình và kiểm tra hơn so với bộ lọc packet. 
+• Hạn chế 
+    Yêu cầu các user thực hiện các thao tác chỉnh sửa phần mềm đã cài đặt trên máy client cho truy nhập các dịch vụ proxy. Tuy nhiên, cũng đã có một số phần mềm client cho phép ứng dụng trên cổng ứng dụng là trong suốt, bằng cách cho phép user chỉ ra máy đích chứ không phải cổng ứng dụng trên lệnh Telnet. 
+• Cổng mạch:
+    Cổng mạch là một chức năng đặc biệt có thể thực hiện được bởi một cổng ứng dụng. Cổng mạch đơn giản chi chuyển tiếp các kết nối TCP mà không thực hiện bất kỳ hành động xử lý hay lọc packet nào.
+
+Hình 2- 3: Mô hình cổng mạch
+    Cổng mạch thường được sử dụng cho những kết nối ra ngoài, nơi mà các quản trị mạng thật sự tin tưởng những người sử dụng bên trong. Ưu điểm lớn nhất là một Bastion host có thể được cấu hình như là một hỗn hợp cung cấp. Cổng ứng dụng cho những kết nối đến và cổng mạch cho các kết nối đi. Điều này làm cho hệ thống bức tường lửa dễ dàng sử dụng cho những người trong mạch nội bộ muốn trực tiếp truy nhập tới các dịch vụ Internet, trong khi vẫn cung cấp chức năng tường lửa để bảo vệ mạng nội bộ từ những sự tấn công bên ngoài.
+
+
+2.3 Phân loại, kỹ thuật và hạn chế của tường lửa
+2.3.1 Các loại tường lửa
+    Có 3 loại tường lửa cơ bản tùy theo: 
+    - Truyền thông được thực hiện giữa một nút đơn và mạng, hay giữa một số mạng. 
+    - Truyền thông được chặn tại tầng mạng, hay tại tầng ứng dụng. 
+    - Tường lửa có theo dõi trạng thái của truyền thông hay không. 
+    Phân loại theo phạm vi của các truyền thông được lọc, có các loại sau: 
+    - Tường lửa cá nhân, một ứng dụng phân mềm với chức năng thông thường là lọc dữ liệu ra vào một máy tính đơn. 
+    - Tường lửa mạng, thường chạy trên một thiết bị mạng hay máy tính chuyên dụng đặt tại ranh giới của hai hay nhiều mạng hoặc các khu vực phi quân sự (mạng con trung gian giữa các mạng nội bộ và mạng bên ngoài). Một tường lửa thuộc loại này lọc tất cả giao thông dữ liệu vào hoặc ra các mạng được kết nối qua nó
+    Loại tường lửa mạng tương ứng với nghĩa truyền thông của thuật ngữ “tường lửa” trong ngành mạng máy tính. 
+    Khi phân loại theo các tầng giao thức nơi giao thông dữ liệu có thể bị chặn, có 3 loại tường lửa chính: 
+    - Tường lửa tầng mạng. Ví dụ iptables. 
+    - Tường lửa tầng ứng dụng. Ví dụ: TCP Wrappers. 
+    - Tường lửa ứng dụng. Ví dụ: Hạn chế các dịch vụ ftp bằng việc định cấu hình tại tệp /etc/ftpaccess. 
+    Các loại tường lửa tầng mạng và tường lửa tầng ứng dụng thường trùm lên nhau, mặc dù tường lửa cá nhân không phục vụ mạng, nhưng một số hệ thống đơn đã cài đặt chung cả hai.
+    Cuối cùng, nếu phân loại theo tiêu chí rằng tường lửa theo dõi trạng thái của các kết nối mạng, hay chỉ quan tâm đến từng gói tin một các riêng rẽ, có hai loại tường lửa: 
+    - Tường lửa có trạng thái (Stateful firewall).
+    - Tường lửa phi trạng thái (Stacteless firewall). 
+2.3.2 Kỹ thuật của tường lửa 
+    a. Lọc khung (Frame Filering) 
+    Hoạt động trong hai tầng của mô hình OSI, có thể lọc, kiểm tra được mức bit và nội dung của khung tin. Trong tầng này các khung dữ liệu không tin cậy sẽ bị từ chối ngay trước khi vào mạng. 
+    b. Lọc gói (Packet Fitering) 
+    Kiểu firewall chung nhất là dựa trên tầng mạng của mô hình OSI. Lọc gói cho phép hay từ chối gói tin mà nó nhận được. Nó kiểm tra toàn bộ đoạn dữ liệu để quyết định xem đoạn dữ liệu đó có thỏa mãn một trong số các quy định của lọc packet hay không. Các quy tắc lọc packet dựa vào các thông tin trong Packet header. 
+    Nếu quy tắc lọc packet được thỏa mãn thì gói tin được chuyển qua Firewall. Nếu không sẽ bị bỏ đi. Như vậy, firewall có thể ngăn cản các kết nối vào hệ thống hoặc khóa việc truy nhập vào hệ thống mạng nội bộ từ những địa chỉ không cho phép. 
+    Một số firewall hoạt động ở tầng mạng thường cho phép tốc độ xử lý nhanh vì chỉ kiểm tra địa chi IP nguồn mà không thực hiện lệnh trên router, không xác định địa chỉ sai hay bị cấm. Nó sử dụng địa chi IP nguồn làm chỉ thị, nếu một gói tin mạng địa chỉ nguồn là địa chỉ giá thì nó sẽ chiếm được quyền truy nhập hệ thống. Tuy nhiên có nhiều biện pháp kỹ thuật có thể áp dụng cho việc lọc gói tin nhắm khắc phục nhược điểm trên, ngoài trường địa chỉ IP được kiểm tra còn có các thông tin khác được kiểm tra với các quy tắc được tạo ra trên firewall, các thông tin này có thể là thời gian truy nhập, giao thức sử dụng, cổng. 
+    Firewall kiểu Packet Filtering có hai loại: 
+• Packet filtering firewall: Hoạt động tại tầng mạng của mô hình OSI hay tầng IP trong mô hình TCP/IP. Kiểu firewall này không quản lý được các giao dịch trên mạng. 
+• Circuit level gateway: Hoạt động tại tầng phiên của mô hình OSI hay tầng TCP/IP. Là loại firewall xử lý bảo mật giao dịch giữa hệ thống và người dùng cuối. 
+2.3.3 Những hạn chế của tường lửa 
+    - Firewall không đủ thông minh như con người để có thể đọc hiểu từng loại thông tin và phân tích nội dung tốt hay xấu của nó. Firewall chỉ có thể ngăn chặn sự xâm nhập của những nguồn thông tin không mong muốn nhưng phải xác định rõ các thông số địa chỉ. 
+    - Firewall không thể ngăn chặn một cuộc tấn công nếu cuộc tấn công này không đi qua nó. Một cách cụ thể: Firewall không thể chống lại một cuộc tấn công từ một đường dial-up, hoặc sự rò rỉ thông tin do dữ liệu bị sao chép bất hợp pháp lên đĩa các thiết bị lưu trữ. 
+    - Firewall cũng không thể chống lại các cuộc tấn công bằng dữ liệu. Khi có một số chương trình được chuyển theo thư điện tử, vượt qua firewall vào trong mạng được bảo vệ và bắt đầu hoạt động ở đây. 
+    Ví dụ với các virus máy tính, firewall không thể làm nhiệm vụ rà quét virus trên các dữ liệu được chuyển qua nó, do tốc độ làm việc và sự xuất hiện liên tục của các virus mới và do có rất nhiều các để mã hóa dữ liệu thoát khỏi khả năng kiểm soát của firewall. 
+    Tuy nhiên, Firewall vẫn là giải pháp hữu hiệu được áp dụng rộng rãi. 
+2.4 Một số mô hình tường lửa 
+2.4.1 Packet-Filtering Router (Bộ trung chuyển có lọc gói tin) 
+    Hệ thống Internet firewall phổ biến nhất chỉ bao gồm một packet-filtering router đặt giữa mạng nội bộ và Internet. Một packet-filtering router có hai chức năng: chuyển tiếp truyền thông giữa hai mạng và sử dụng các quy luật về lọc gói để cho phép hay từ chối truyền thông.
+
+Hình 2- 4: Mô hình Packet-filtering router
+    Căn bản, các quy luật lọc được định nghĩa sao cho các host trên mạng nội bộ được quyền truy nhập trực tiếp tới Internet, trong khi các host trên Internet chỉ có một số giới hạn các truy nhập vào các máy tính trên mạng nội bộ. Tư tưởng của mô hình cấu trúc firewall này là tất cả những gì không được chỉ ra rõ ràng thì có nghĩa là bị từ chối. 
+• Ưu điểm:
+- Giá thành thấp, cấu hình đơn giản. 
+- Trong suốt đối với user. 
+
+
+• Hạn chế:
+    - Dễ bị tấn công vào các bộ lọc mà cấu hình được đặt không hoàn hảo hoặc bị tấn công ngầm dưới những dịch vụ đã được phép. 
+    - Do các packet được trao đổi trực tiếp giữa hai mạng thông qua router, nguy cơ bị tấn công quyết định với số lượng các host và dịch vụ được phép. Điều đó dẫn đến mỗi một host được phép truy nhập vào Internet cần phải được cung cấp một hệ thống xác thực phức tạp và thường xuyên kiểm tra bởi người quản trị mạng xem có dấu hiệu sự tấn công nào không. 
+    - Nếu một packet-filtering router do một sự cố nào đó ngừng hoạt động, tất cả hệ thống trên mạng nội bộ có thể bị tấn công. 
+2.4.2 Screened Host 
+    Hệ thống bao gồm một packet-filtering router và một bastion host (pháo đài chủ). Hệ thống này cung cấp độ bảo mật cao hơn hệ thông trên, vì nó thực hiện cả bảo mật ở tầng Network và tầng ứng dụng. Đồng thời kẻ tấn công phải phá vỡ cả hai tầng bảo mật để tấn công vào mạng nội bộ. 
+
+Hình 2- 5: Mô hình Screend Host
+    Trong hệ thống này, bastion host được cấu hình ở trong mạng nội bộ. Quy luật filtering router được định nghĩa sao cho tất cả các hệ thống ở bên ngoài chỉ có thể truy nhập bastion host. Việc truyền thông tới tất cả các hệ thống bên trong đều bị khóa, bởi vì các hệ thống nội bộ và bastion host ở trên cùng một mạng, chính sách bảo mật của một tổ chức sẽ quyết định xem các hệ thống nội bộ được phép truy nhập trực tiếp vào bastion Internet hay là chúng phải được sử dụng dịch vụ proxy trên bastion host. Việc bắt buộc những user nội bộ thực hiện bằng cách đặt cấu hình lọc của router sao cho chỉ chấp nhận những truyền thông nội bộ xuất phát từ bastion host. 
+• Ưu điểm:
+    Máy chủ cung cấp các thông tin công cộng qua dịch vụ Web và FTP có thể đặt trên Packet-filtering router và bastion. Trong trường hợp yêu cầu độ an toàn cao nhất, bastion host có thể chạy các dịch vụ proxy yêu cầu tất cả các user cả trong và ngoài truy nhập qua bastion host trước khi kết nối với máy chủ. Trường hợp không yêu cầu độ an toàn cao thì các máy nội bộ có thể nối thẳng tới máy tính. 
+    Nếu cần độ bảo mật cao hơn nữa thì có dùng hệ thống firewall dual-home (hai chiều) bastion host. Một hệ thống bastion host như vậy có 2 giao diện mạng (Network Interface), nhưng khi đó khả năng truyền thông trực tiếp giữa hai giao diện đó qua dịch vụ proxy là bị cấm.
+
+    Hình 2- 6: Mô hình Dual - Screend Host
+    
+• Hạn chế:
+    Bởi vì bastion host là hệ thống bên trong duy nhất có thể truy nhập được từ Internet, sự tấn công cũng chỉ giới hạn đến bastion host mà thôi. Tuy nhiên, nếu như người dùng truy nhập được vào bastion host thì họ có thể dễ dàng truy nhập toàn bộ mạng nội bộ. Vì vậy cần phải cấm không cho người dùng truy nhập vào Bastion host.
+2.4.3 Proxy Server 
+    Chúng ta sẽ xây dựng Firewall theo kiến trúc application-level gateway (cổng vào mức ứng dụng), theo đó một chương trình proxy (ủy quyền) được đặt ở gateway cách một mạng bên trong tới Internet. 
+    Bộ chương trình proxy được phát triển dựa trên bộ công cụ xây dựng Internet Firewall TIS (Trusted Information System – Hệ thống thông tin tin cậy), bao gồm một bộ các chương trình và đặt lại cấu hình hệ thống để nhằm mục đích xây dựng một Firewall. Bộ chương trình được thiết kế để chạy trên Unix sử dụng TCP/IP với giao diện socket Berkeley.
+    Bộ chương trình proxy được thiết kế cho một số cấu hình firewall, theo các dạng cơ bản: dual-home gateway, screened host gateway và screened subnet gateway. 
+    Thành phần bastion host trong firewall đóng vai trò như một người chuyển tiếp thông tin, ghi nhật ký truyền thông và cung cấp các dịch vụ, đòi hỏi độ an toàn cao. 
+    Proxy server giống như một vệ sĩ bảo vệ khỏi những rắc rồi trên Internet. Một proxy server thường nằm bên trong tường lửa, giữa trình duyệt web và server thật, làm chức năng tạm giữ những yêu cầu Internet của các máy khách để chúng không giao tiếp trực tiếp với Internet. Người dùng sẽ không thể truy cập được những trang web cho không cho phép (bị công ty cấm). 
+    Mọi yêu cầu của khách máy khách phải qua Proxy server, nếu địa chỉ IP có trên proxy, nghĩa là Website này được lưu trữ cục bộ, thì trang này sẽ được truy cập mà không cần phải kết nối Internet, nếu không có trên proxy server và trang này không bị cấm yêu cầu sẽ được chuyển đến server thật và ra Internet. Proxy server lưu trữ cục bộ các trang Web thường truy cập nhất trong bộ đệm dẫn đến giảm chi phí mà tốc độ hiển thị trang Web nhanh. 
+    Proxy server bảo vệ mạng nội bộ khỏi bị xác định bởi bên ngoài bằng cách mang lại cho mạng hai định danh: một cho nội bộ, một cho bên ngoài. Điều này tạo ra một bí danh đối với thế giới bên ngoài gây khó khăn đối với người dùng hay những người muốn xâm nhập mày nào đó. 
+    Proxy server làm cho việc sử dụng băng thông hiệu quả. 
+2.5 Giới thiệu và mục đích của IPCop Firewall
+2.5.1 Giới thiệu IPCop Firewall
+    - IPCop là một phần mềm được cắt ra từ Linux và có khả năng hoạt động như một firewall. Nó có những tính năng cao cấp của firewall, bao gồm VPN sử dụng IPSec. 
+    - Phần mềm mã nguồn mở (Open Soure Software), bản quyền của GNU Grneral Public License (GPL) và được miễn phí khi sử dụng.
+2.5.2 Mục đích của IPCop
+    - IPCop firewall là một firewall ứng dụng cho doanh nghiệp vừa và nhỏ (Small Office/ Home Office - SOHO). 
+    - IPCop có thể được phát triển như một add-on để một hệ điều hành theo cách mà Shorewall là một ứng dụng được cài đặt trên hệ thống linux hoặc máy chủ ISA trên hệ thống windows. 
+    - Nếu máy chủ của bạn với mục đích chỉ là một tường lửa cho mạng của bạn, bạn cần có một sự hiểu biết đầy đủ và cơ bản về hệ hiều hành Linux để có được những phần mêm cài đặt và nếu muốn hoạt động tốt thì bạn phải cấu hình cả hai hệ điều hành và IPCop. Tuy bản thân IPCop là một điều hành riêng bạn không cần thiết phải biết Linux để sử dụng hệ thống trên. 
+2.6 Những thành phần và tính năng của IPCop Firewall 
+2.6.1 Các thành phần 
+    a. Giao diện web 
+    Nhiều tưởng lửa phức tạp đối với người dùng. Nó đòi hỏi phải có kĩ năng và kinh nghiệm để làm quen. Giao diện máy chủ ISO là một ví dụ điển hình. Giao diện để cấu hình IPCop là giao diện Web, đây là giao diện khá dễ sử dụng và trực quan cho người quản trị. 
+    b. Giao diện mạng 
+    IPCop cung cấp bốn giao diện mạng bao gồm: Green, Blue, Orange, Red. Mỗi giao diện mạng được sử dụng để kết nối đến một mạng riêng biệt. 
+    - Green Network Interface - Giao diện mạng này kết nối với mạng cục bộ (mạng bên trong) của bạn. IPCop sẽ tự động cho phép tất cả các kết nối từ giao diện mạng này đến tất cả các mạng khác. 
+    - Red Network Interface: 
+    + Giao diện mạng Red đại diện cho mạng ngoài Internet. Mục đích của mạng Red này nhằm bảo vệ các nguy cơ đối với mạng Green, Blue và Orange. 
+    + Các phân đoạn Red có thể là một mạng Ethernet giao diện tĩnh hoặc sử dụng DHCP, nó có thể là một USB ADSL modem, một card ISDN hoặc có thể là một dial-up, anolog modem kết nối với điện thoại chuyển mạch công cộng. 
+    - Orange Network Interface - Giao diện mạng Orange được thiết kế như một mạng DMZ (demilitized zone). DMZ mạng ý nghĩa như một phân đoạn mạng giữa mạng nội bộ và một mạng bên ngoài. Trong khu vực DMZ thường đặt các máy chủ dịch vụ như Web, Mail, … 
+    - Blue Network Interface - Mạng Blue được thêm vào IPCop phiên bản 1.4. Mạng này được kết nối với các thiết bị không dây và bảo vệ các thiết bị này. 
+
+
+    c. Ưu điểm của IPCop Firewall 
+    - Dễ quản lý và giám sát 
+    Các nhà phát triển IPCop đã xây dựng một hệ thống giúp cho việc nâng cấp hệ thống đơn giản hơn. Điều này được thực hiện hoàn toàn trên giao diện Web. Tuy nhiên, nếu người dùng không muốn đăng nhập vào Linux Console thì việc thay đổi này có thể thực hiện đơn giản bằng các sử dụng phím và màn hình được gắn liền với máy tính hoặc sử dụng SSH từ một máy tính trên mạng nội bộ (Giao diện Green). Mặc định SSH bị tắt, vì vậy muốn sử dụng phải bật nó lên. 
+    Với những trạng thái được cung cấp trên giao diện Web, chúng ta có thể biết hệ thống đang làm việc như thế nào. Chúng ta có thể nhìn thấy những dịch vụ đang chạy trên tường lửa, bộ nhớ và tình trạng sử dụng ổ đĩa cũng như lưu lượng đang ra vào.
+    Hoàn toàn miễn phí, yêu cầu thiết bị cấu hình thấp, có thể chạy trên thẻ nhớ SD. 
+    Cài đặt dễ dàng và nhanh chóng hỗ trợ giao diện đã ngôn ngữ. 
+    Quản trị từ xa thông qua Web hoặc SSH tunel. 
+
+    Hình 2- 7: Giao diện trang chủ IPCop
+2.6.2 Các tính năng quan trọng của IPCop Firewall 
+    a. Web proxy 
+    IPCop được dùng như một proxy cũng như tường lửa. Bạn có thể dễ dàng quản lý bộ nhớ cache và cấu hình proxy trên giao diện Green. Tất cả những gì bạn làm là kích vào các ô trong giao diện để cấu hình proxy trên IPCop.
+
+Hình 2- 8: Giao diện của Web Proxy trên IPCop
+    Các dịch vụ proxy cho phép người dùng truy cập các dịch vụ internet, với dịch vụ này người dùng luôn nghĩ mình đang tương tác trực tiếp với internet. Tuy nhiên, khi Client muốn truy xuất đến các dịch vụ internet thì phải qua proxy. Proxy có nhiệm vụ xác định các yêu cầu của người dùng rồi quyết định có đáp ứng hay không. Nếu có đáp ứng thì proxy sẽ kết nối với Server thật thay cho Client và tiếp tục chuyển tiếp các yêu cầu đến chi client cũng như đáp ứng những yêu cầu của Server đến client. 
+    Vì vậy, proxy giống như trung gian giữa Server và Client. 
+
+
+    b. DHCP và Dynamic DNS 
+• DHCP: 
+IPCop được cung cấp thêm tính năng cấp phát IP động tương tự trên Windows Server của Microsoft. 
+
+Hình 2- 9:Giao diện DHCP trên IPCop
+• Dynamic DNS:
+    Dynamic DNS là phương thức ánh xạ tên miền tới địa chỉ IP có tần suất thay đổi cao (do không phải mọi máy đều sử dụng IP tĩnh). Dịch vụ DNS động (Dynamic DNS) cung cấp một chương trình đặc biệt chạy trên máy tính của người sử dụng dịch vụ Dynamic DNS gọi là Dynamic DNS Client.
+    Chương trình này giám sát sự thay đổi địa chỉ IP tại host và liên hệ với hệ thống DNS mỗi khi địa chỉ IP của host (vốn được cung cấp bởi ISP bằng phương pháp động) thay đổi và sau đó update thông tin vào CSDL DNS về sự thay đổi địa chỉ đó. Bằng các này, cho dù máy chủ có thường xuyên bị thay đổi địa chỉ thì tên miền vẫn được hệ thống máy chủ DNS trỏ về đúng địa chỉ cấp IP mới đó. 
+
+
+    c. Time server và Port Forwarding 
+• Time server 
+    IPCop cung cấp dịch vụ Network Time Protocol dùng để đồng bộ các host trên Internet.
+• Port Forwarding
+     Đây là chức năng khá phổ biến trong tường lửa từ doanh nghiệp vừa và nhỏ đến những doanh nghiệp lớn. Có hai thuận lợi trong IPCop. Thứ nhất là chúng ta không có hạn chế số lượng chuyển tiếp. Thứ hai, nó rất dễ cài đặt. Đối với những thiết bị của doanh nghiệp vừa và nhỏ không chỉ chúng ta bị hạn chế về số lượng cổng mà còn tìm thấy những cấu hình phức tạp xung quanh nó. 
+    Trong mô hình trên, IPCop kết nối với Client trên 2 cổng 25 (Mail) và 80 (Web) nhưng kết nối đến cổng 25 và 80 đã được chuyển tiếp đến các dịch vụ tương ứng.
+
+
+    d. Traffic Shaping và Vitual Private Network – VPN 
+• Trafic Shaping 
+    Thiết lập mức ưu tiên về tốc đô theo port, hỗ trợ cả 2 giao thức là TCP và UDP. Giúp quản lý hiệu quả băng thông Internet theo nhu cầu sử dụng của từng nhóm ứng dụng. 
+• VPN (Vitual Private Network – Mạng riêng ảo) 
+    Tính năng này cho phép bạn tham gia nhiều mạng hơn trên internet với một liên kết riêng.
+
+Hình 2- 10: Giao diện VPN trên IPCop
+    
+
+CHƯƠNG 3: TÌM HIỂU VÀ CÀI ĐẶT IPCOP FIREWALL
+3.1 Cài đặt IPCop Firewall
+3.1.1 Mô hình
+Mô hình IPCop Firewall được mô tả như hình:
+
+Hình 3- 1: Mô hình IPCop Firewall
+3.1.2 Cài đặt
+    Bước 1:  Ấn phím bất kì để bắt đầu cài đặt IPCop
+
+Hình 3- 2: Chương trình cài đặt IPCop Firewall
+
+
+    Bước 2: Lựa chọn ngôn ngữ để cài đặt
+
+Hình 3- 3:Thiết lập ngôn ngữ 
+    Bước 3: Chọn OK để bắt đầu cài đặt
+
+Hình 3- 4: Lời chào khi cài đặt IPCop Firewall
+	
+    Bước 4: Lựa chọn ngôn ngữ cho bàn phím. 
+
+Hình 3- 5: Thiết lập kiểu bàn phím
+    Bước 5: Chọn múi giờ “Etc/GMT +7” 
+
+Hình 3- 6: Cài đặt múi giờ
+    
+Bước 6: Cài đặt ngày & giờ cho hệ thống
+
+Hình 3- 7: Cài đặt ngày và giờ
+    Bước 7: Lựa chọn ổ đĩa
+
+Hình 3- 8: Chọn ổ cứng để cài đặt
+
+
+    Bước 8: Chọn OK  
+
+Hình 3- 9: Xác nhận chọn ổ đĩa
+    Bước 9: Chọn HardDisk
+
+Hình 3- 10: Chọn cài đặt ổ cứng
+    
+
+
+    Bước 10: Chọn Skip
+
+Hình 3- 11: Bỏ qua cài mật khẩu để “sao lưu”
+    Bước 11: Chọn Congretulations! 
+
+Hình 3- 12: Chọn “Congretulations!”
+
+
+    Bước 12: Đặt tên cho machine hostname 
+
+Hình 3- 13: Đặt tên cho Hostname
+    Bước 13: Đặt tên cho Domain
+
+Hình 3- 14: Đặt tên cho Domain
+
+
+    Bước 14:  Chọn loại cấu hình cho RED Interface. Chọn “Static”
+
+Hình 3- 15: Chọn kiểu cài đặt cho “RED interface”
+    Bước 15: Chọn card mạng cho LAN(Green) và WAN (Red)
+
+Hình 3- 16: Chọn card mạng cho 2 mạng
+    
+
+    Bước 16: Nhập địa chỉ IP cho GREEN Interface (Mạng LAN)
+
+Hình 3- 17: Cài đặt địa chỉ IP cho mạng LAN
+    Bước 17: Nhập địa chỉ IP cho RED Interface (Mạng WAN)
+
+Hình 3- 18: Thiết lập địa chỉ IP cho mạng WAN
+    
+
+    Bước 18: Cấu hình IP cho DNS và Gateway.
+
+Hình 3- 19: Cấu hình IP cho DNS và Gateway
+    Bước 19: Cấu hình IP cho DHCP
+
+Hình 3- 20: Cấu hình địa chỉ IP cho DHCP
+    
+
+    Bước 20: Đặt mật khẩu cho tài khoản truy cập “Admin”
+
+Hình 3- 21: Đặt mật khẩu cho tài khoản truy cập
+    Bước 21: Kết thúc quá trình cài đặt chọn OK để khởi động lại
+
+Hình 3- 22: Hoàn tất cài đặt
+
+
+    Bước 22: Sau khi khởi động lại chúng ta tiến hành đăng nhập
+
+Hình 3- 23: Đăng nhập vào hệ thống server IPCopFirewall
+    Bước 23: Dùng lệnh “ifconfig | more” để hiển thị các địa chỉ IP đã cài đặt
+
+Hình 3- 24: Địa chỉ IP của từng dịch vụ đã cài đặt
+3.2 
+Triển khai một số dịch vụ trên IPCOP
+3.2.1 Chặn dải địa chỉ IP 
+    Bước 1: Thực hiện lệnh “tracert 8.8.8.8” để kiểm tra đường đi của gói tin tới máy client. Nhằm mục đích tìm chính xác 1 địa chỉ IP đang kết nối với máy client.
+
+Hình 3- 25: Thực hiện lệnh “tracert 8.8.8.8”
+    Bước 2: Test ping với một địa chỉ trong số những địa chỉ vừa tìm được để kiểm tra.
+
+Hình 3- 26: Kiểm tra liên kết với một địa chỉ đã tìm
+    Bước 3: Thực hiện chặn IP. Đăng nhập vào IPCop. Vào “Firewall” -> “Firewall Rules” -> “Outgoing Traffic” để tiến hành chặng IP
+
+Hình 3- 27: Thực hiện chặn địa chỉ IP bằng IPCop
+    Bước 4: Đặt địa chỉ IP tại “Destination IP or Net”, bỏ chọn “Use Service”, tích chọn “Log rule”, tại “Rule Action” đặt tùy chọn “DROP” và cuối cùng là mô tả. và chọn “Save” để lưu. 
+
+Hình 3- 28: Cấu hình “chặn” địa chỉ IP IPCop
+    Bước 5: Tiến hành kiểm tra liên kết lại
+
+Hình 3- 29: Kiểm tra ping lại đến địa chỉ IP đã chặn
+
+
+3.2.2 Cho phép trình duyệt truy cập internet
+    Bước 1: Kiểm tra truy cập của trình duyệt Internet Explorer 
+
+Hình 3- 30: Kiểm tra truy cập của trình duyệt Internet Explorer 
+    Bước 2: Tại IPCop chọn “Services” -> “Proxy” -> Tích chọn “Enabled on GREEN” và “Transparent on GREEN” trong mục “Common settings” rồi chọn “Save”.
+
+    Hình 3- 31: Thiết lập “Web proxy”
+    Bước 3: Tiếp theo, tại mục “Web browser” tích chọn “Enable browser check”, tại “Allowed clients for web access” tích chọn trình duyệt Google Chrome.
+
+    Hình 3- 32: Tùy chọn Google Chrome là trình duyệt truy cập duy nhất
+    Bước 4: Kiểm tra lại truy cập các trình duyệt khác (ngoài Google chrome và Cốc cốc)
+
+Hình 3- 33: Internet Explorer thông báo không thể truy cập internet
+
+
+3.2.3 Giới hạn tải xuống
+    Bước 1: Kiểm tra tải xuống với các thư mục có dung lượng khác nhau. Có thể thấy chúng ta đang có thể tải 2 file với dung lượng 100MB – 1GB. 
+
+    Hình 3- 34: Kiểm tra tải xuống trước khi giới hạn
+    Bước 2: Tại “Services” -> “Proxy” -> “Transfer limits” -> “Max download size (KB)”. Ở đây ta nhập 105000 (để tải file 100MB và từ chối file 1GB). 
+    
+    Hình 3- 35: Đặt giới hạn tải xuống trên IPCop 
+    Bước 3: Kéo xuống dưới mục “Redirectors” tích chọn “Enabled” rồi “Save”
+
+    Hình 3- 36: Lưu thiết lập giới hạn tải xuống
+    Bước 4: Quay lại kiểm tra tải xuống đã được giới hạn hay chưa.
+
+    Hình 3- 37: File 100Mb vẫn tải xuống bình thường
+
+    Hình 3- 38: Tại file 1GB đã bị giới hạn
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được
+    	Sau quá trình tìm hiểu và nghiên cứu, đề tài đã đạt được một số kết quả như sau: 
+    - Đã hiểu được thế nào là Firewall trong lĩnh vực tin học, bản chất của Firewall là như thế nào. 
+    - Chức năng của Firewall trong việc bảo mật cho mạng máy tính.
+    - Những thành phần chính hình thành nên một Firewall.
+    - Tìm hiểu được an toàn và bảo mật mạng 
+    - Các yêu cầu về Firewall của doanh nghiệp nói chung cũng như đối với doanh nghiệp nhỏ nói riêng.
+    - Những giải pháp Firewall đưa ra cho doanh nghiệp và hướng doanh nghiệp vào một giải pháp Firewall cụ thể. 
+    - Thiết lập một Firewall cho doanh nghiệp. 
+4.2 Hạn chế của đề tài:
+    Vì kinh nghiệm chưa có nhiều và kiến thức còn hạn hẹp nên đồ án của em không tránh khỏi được những thiếu sót như:
+    - Chưa tìm hiểu hết được các kĩ thuật lập trình Firewall. 
+    - Chưa áp dụng thực tiễn phần mềm IpcopFirewall vào thực tiễn
+    - Việc triển khai và tìm hiểu chưa có nhiều điều kiện thực tế, nhiều vấn đề chỉ mới qua các tài liệu. 
+    - Chưa tiếp cận được thực tế một giải pháp Firewall nào để đề ra cách triển khai hệ thống chính xác. 
+    
+4.3 Hướng phát triển
+	Trên cơ sở những việc đã làm  được và chưa làm được ở trên khi thực hiện đề tài. Để khắc phục được một số mặt hạn chế của đề tài thì có một số hướng phát triển như sau:
+    - Tiếp tục đi sâu và tìm hiểu các tính năng và cách thức hoạt động của một hệ thống tường lửa.
+    - Tìm hiểu thêm các kỹ thuật lập trình Firewall, cũng như đề xuất phương án và giải pháp tốt. 
+    - Tiếp thu kinh nghiệm từ những người đi trước
+    - Xây dựng một chương trình Firewall có tính thực tiễn cao.
+
+
+
+TÀI LIỆU THAM KHẢO
+    [1]. Bài giảng Khoa CNTT- Đại học Duy Tân, Lưu hành nội bộ. 
+    [2]. Nguyễn Bá Quang, “Thiết kế cài đặt mạng “, Đại học Cần Thơ - Khoa CNTT.
+     [3]. Nguyễn Minh Nhật, “ An ninh mạng ”, bài giảng Khoa CNTT - Đại học Duy Tân, Lưu hành nội bộ. 
+    [4]. Nguyễn Gia Như “ Thiết kế mạng “, bài giảng Khoa CNTT - Đại học Duy Tân, Lưu hành nội bộ. 
+    Tài liệu trên Internet: 
+    [5]. https://quantrimang.com/
+    [6]. https://www.cisco.com/
+
+    
+Tìm hiểu về firewall và triển khai trên mã nguồn mở 
+    
+    
+24
+    
+    

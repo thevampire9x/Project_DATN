@@ -1,0 +1,911 @@
+﻿CHƯƠNG 1: MỞ ĐẦU
+1.1 Lý do chọn đề tài
+    Sự phát triển của công nghệ thông tin đã đem lại những bước tiến nhảy vọt trong nhiều nghành kinh tế cũng như mọi mặt của đời sống xã hội. Ở nước ta, công nghệ thông tin đã có những bước phát triển đáng kể từng bước khẳng định vị trí của mình là một ngành kinh tế công nghệ mũi nhọn. Cùng với việc ứng dụng rộng rãi của công nghệ thông tin trong các ngành kinh tế, xã hội thì nó cũng đang trở thành công cụ đắc lực hỗ trợ cho công tác quản lý của các đơn vị trong mọi cấp mọi ngành.
+    Ngày nay, nhu cầu tìm kiếm nhân sự của các doanh nghiệp cũng như tìm kiếm việc làm của các ứng viên ngày càng trở lên cấp thiết. Với sự phát triển mạnh mẽ của công nghệ thông tin như hiện nay thì xu hướng các doanh nghiệp tìm kiếm nhân sự và ứng viên tìm kiếm nhà tuyển dụng thông qua mạng internet ngày càng trở lên phổ biến.
+    Nhận thấy nhu cầu ngày càng tăng của thị trường đối với nhu cầu về tìm kiếm ứng viên và tìm kiếm việc làm, em đã xây dựng cổng thông tin việc làm cùng với mục đích giúp tiết kiệm thời gian và công sức là cầu nối trung gian giữa nhà tuyển dụng và ứng viên.
+1.2 Phát biểu bài toán
+    Hiện nay, để đáp ứng nhu cầu của cả người tuyển dụng và người tìm việc các website tìm kiếm việc làm online đã ra đời và ngày càng phát triển mạnh. Thông qua những trang web tìm việc làm này, các nhà tuyển dụng sẽ tăng cơ hội tìm kiếm các ứng viên phù hợp cho công ty, ngược lại các ứng viên đi xin việc sẽ dễ dàng tiếp cận được nhà tuyển dụng tiềm năng.
+    Có khá nhiều trang tìm việc làm với quy mô lớn, đạt được hàng triệu lượt truy cập hàng tuần và chiếm được sự tin tưởng của người tìm việc. Tuy nhiên, cũng chính vì vậy mà gây không ít khó khăn cho người dùng trong việc lựa chọn đâu mới là website tìm việc làm tốt nhất hiện nay? Do vậy em muốn xây dựng một cổng thông tin việc làm để giúp cho  người đang tìm việc, nhất là các bạn sinh viên mới tốt nghiệp ra trường có được những thông tin nhà tuyển dụng cũng như đăng tải thông tin cá nhân của mình để tìm được công việc phù hợp và tốt nhất.
+    Các hoạt động cơ bản cổng thông tin việc làm:
+- Quản lý User.
+- Quản lý việc làm.
+- Quản lý ứng viên.
+- Quản lý nhà tuyển dụng.
+- Quản lý tin tuyển dụng.
+- Quản lý giá.
+- Thiết lập báo cáo.
+1.3 Phương pháp xây dựng/nghiên cứu
+- Tham khảo các website tuyển dụng như timviec365.vn, timviec24h.vn…
+     - Sử dụng ASP.NET MVC, MySQL Server, HTML, CSS( Bootstrap), Javascript (Jquery, VueJs) .
+1.4 Kế hoạch thực hiện
+     Bảng 1.1: Kế hoạch
+STTNội dung thực hiệnThời gianKết quả dự kiến1Tìm hiểu đề tài.4 tuầnHoàn thành chương 1 của cuốn báo cáo.2Tìm hiểu về nội dung lý thuyết về phát triển trang web, khảo sát yêu cầu bài toán, thiết kế cơ sở dữ liệu.3 tuần    - Hoàn thành Mục 2.1, Mục 2.2 trong cuốn báo cáo
+    - Hoàn thành mô tả các yêu cầu chức năng, biểu đồ lớp thực thể trong Mục 3.1 của cuốn báo cáoCơ sở dữ liệu được cài đặt trên hệ quản trị .
+- CSDL và hoàn thành Mục 3.2.2, 3.2.3 của cuốn báo cáo.3Thiết kế giao diện website, triển khai hoàn thiện trang web phía người dùng.4 tuần- Các biểu đồ lớp VOPC cho các ca sử dụng và hoàn thiện Mục 3.2.1 của cuốn báo cáo 
+- Hoàn thành Mục 2.4 của cuốn báo cáo.
+- Giao diện website  và hoàn thành Mục 3.2.2, 3.2.3 của cuốn báo cáo.
+-Trang web phía người dùng4Tìm hiểu và hoàn thành nội dung ký thuyết lập trình phía front – end và back- end, trang web phía quản trị..4 tuần-Hoàn thành Mục 2.5, 2.6 của cuốn báo cáo .
+- Trang Web phía quản trị.
+- Hoàn thành Chương 4. Trang web chạy trên môi trường Interner.5Hoàn thiện báo cáo và triển khai website, chuẩn bị slide báo cáo đồ án.2 tuần-Hoàn thành Chương 5, slide báo cáo, cuốn báo cáo đã được duyệt, và chương trình.1.5 Kết quả dự kiến của đồ án
+• Yêu cầu về mặt giao diện:
+- Giao diện trang web thân thiện, dễ sử dụng.
+- Hiển thị đúng trên các trình duyệt khác nhau.
+- Cách trình bày nội dung hợp lý.
+- Dễ thay đổi tùy chỉnh giao diện Website theo ý muốn.
+- Giao diện tùy biến với thiết bị sử dụng như smartphone, máy tính, laptop…
+• Yêu cầu về mặt chức năng:
+- Quản lý user: Thêm sửa xóa user, cấp quyền user.
+- Quản lý việc làm: Thêm, sửa, xóa việc làm.
+- Quản lý nhà tuyển dụng: Thêm, xóa thông tin nhà tuyển dụng.
+- Quản lý ứng viên: Thêm, xóa ứng viên nhân viên.
+- Quản lý giá: Thêm, sửa, xóa thông tin giá.
+- Chức năng tìm kiếm: Tìm kiếm việc là, ứng viên, nhà tuyển dụng.
+1.6 Kết luận chương 1
+    Trong chương 1 đã nêu nên lý do chọn đề tài xây dựng “ Cổng thông tin việc làm”. Cũng như mục tiêu và phương pháp thực hiện. Chương tiếp theo là tìm hiểu và giới thiệu về công nghệ với ASP.Net MVC , Web API và MySQL.
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+Dựa trên nền .NET hỗ trợ đa ngôn ngữ như C#, VB.NET,…  
+Microsoft hướng đến việc giấu đi giao thức HTTP (ẩn đi bản chất bên trong) và  code HTML bằng việc đưa ra mô hình UI (user interface) như là các đối tượng control phía server (mỗi control có trạng thái của riêng mình, tự động sinh mã HTML khi cần, và tự động kết nối với các sự kiện phía client).  
+Các nhà phát triển Web không còn phải làm việc với các request và response  trong từng HTTP độc lập. Thay thế nó chính là thuật ngữ StateFull UI (tạm dịch là trạng thái giao diện người dùng). Các nhà phát triển Web chỉ cần kéo-thả, và tưởng tượng ra điều gì sẽ xảy ra trên server khi thiết kế giao diện Web. 
+2.1	Giới thiệu ASP.NET MVC
+    	ASP.NET MVC là nền tảng công nghệ mới nhất của Microsoft hiện nay là ASP.NET MVC, nó được thiết kế từ suy nghĩ là làm thế nào để xây dựng một phần mềm tốt (phần mềm tốt là phần mềm bạn muốn tạo ra và nó dễ dàng được thay đổi - Stephen Walther).  ASP.NET MVC được thiết kế để làm sao có thể bổ sung các nguyên lý và các patterns phát triển phần mềm khi xây dựng các ứng dụng web. Bên cạnh đó, nó được thiết kế để hổ trợ trong việc kiểm thử.  
+2.1 Nguồn gốc ASP.NET MVC 
+    ASP.NET MVC 1.0:  
+    -	Công nghệ ASP.NET MVC là mới, tuy nhiên nó có lịch sử lâu đời. Nền tảng MVC được phát minh bởi Trygve Renskaug, ông đã viết trang giấy đầu tiên nói về MVC vào năm 1978. Ban đầu nó được gọi là Thing Model View Editor pattern, nhưng sau đó nó được đặt tên lại là Model View Controller pattern.  
+    -	ASP.NET MVC lần đầu tiên xuất hiện đó là trong dự án mã nguồn mở MonoRail.
+    -	Và nguồn gốc thật sự để cho ra đời công nghệ Microsoft.
+    ASP.NET MVC là do Scott Guthrie (một trong những nhà sáng tạo ra ASP.NET) trên chuyến bay đến Austin, Texas để nói về hội thảo Alt.NET vào tháng 10-2007.  
+    -	Cuối cùng thì đầu năm 2009 phiên bản ASP.NET MVC 1.0 (released) được ra đời.  
+    -	Điều kiện cần để xây dựng ứng dụng ASP.NET MVC: 
+    + Microsoft ASP.NET MVC.  
+    + Visual Studio 2019.  
+    + MySQL Workbench.
+2.2 Các thành phần cấu thành ASP.NET MVC 
+    Ứng dụng MVC (là từ viết tắt  của Model – View – Controler) được chia ra làm 3 phần:  
+    -	Model: Model của MVC chứa tất cả các logic của ứng dụng (ví dụ: xử lý  
+cơ sở dữ liệu,…), không chứa trong view hay controller. Model chứa gồm các logic ứng dụng, các  logic nghiệp vụ, và logic truy xuất cơ sở dữ liệu. Model của MVC chứa mô hình các lớp ( mô hình đối tượng trong miền ứng dụng ).  
+    -	View: View của MVC chứa các thẻ HTML và view logic.  
+    -	Controller: Controller của MVC chứa tính logic trong lưu đồ điều khiển. 
+    
+    
+    
+    
+    
+    Hình 2.1: Mô hình MVC
+     * Lợi ích của ứng dụng web dựa trên mô hình MVC:  
+    -	Có tính mở rộng do có thể thay thế từng thành phần một cách dễ dàng  - Không sử dụng viewstate, điều này làm các nhà phát triển dễ dàng điều khiển ứng dụng của mình.  
+    -	Hệ thống định tuyến mới mạnh mẽ. 
+    -	Hỗ trợ tốt hơn cho test-driven development (TDD) cài đặt các unit tests tự động, xác định và kiểm tra lại các yêu cầu trước khi bắt tay vào viết code.  
+    -	Hỗ trợ kết hợp rất tốt giữa người lập trình và người thiết kế giao diện.  
+    -	Sử dụng các tính năng tốt nhất đã có của ASP.NET.  
+    * Nhược điểm của ASP.NET MVC:  
+    -	Không hướng đến sự kiện làm cho các nhà phát triển ASP.NET webform khó khăn.  
+    -	Yêu cầu hiểu biết về HTTP, HTML, CSS và JavaScript. 
+    - Thư viện của nhà phân phối thứ ba không mạnh bằng.  
+2.3 Cấu trúc mặc định của một dự án ASP.NET MVC
+    * Ý nghĩa từng thư mục ứng dụng của ASP.NET MVC  
+    -	App_Data: chứa các file dữ liệu, thư mục App_Data có thể chứa một cơ sở dữ liệu cục bộ.  
+    -	Content: chứa nội dung tĩnh như hình ảnh và các file css.  
+    -	Controllers: chứa các lớp controller của ASP.NET MVC.  
+    -	Models: chứa các lớp model của ASP.NET MVC.  
+    -	Scripts: chứa các file javascript bao gồm thư viện ASP.NET Ajax và jQuery.  
+    -	Views: chứa các views của ASP.NET MVC.  
+    *Tạo ứng dụng đầu tiên:
+     Bạn mở Visual 2015, chọn File -> New -> Project, một cửa sổ New Project sẽ hiện lên. Trong cửa sổ này, phần bên trái, bạn chọn Visual C#, phần bên phải chọn ASP.NET Web Application, đặt tên dự án là DammioMVC.
+
+     Hình 2.2: Tạo dự án với visual
+Ở hộp thoại New ASP.NET Project, chọn dự án là kiểu MVC và nhấn OK.
+    
+     Hình 2.3: Chọn dự án là kiểu MVC
+    Visual Studio sẽ tự động tạo một template mặc định của ASP.NET MVC bạn vừa tạo ra, vì vậy bạn có ngay 1 dự án đơn giản mà không cần làm gì hết.
+    
+    Trong ứng dụng mặc định, bạn có 3 trang chính Home, About và Contact nằm thanh menu, bạn có thể nhấn vào 3 liên kết để thử nghiệm. Ứng dụng mặc định cũng dùng giao diện Bootstrap, do đó khi bạn phóng to, thu nhỏ hay chạy trên các màn hình có kích thước khác nhau, bạn sẽ thấy giao diện thay đổi đáp ứng theo độ rộng màn hình.
+    
+    
+    
+    Tạm thời dừng Debug (Shift + F5), bạn mở Solution Explorer (View -> Solution Explorer hoặc phím tắt Ctrl + Alt + L) để xem cấu trúc thư mục web.
+    
+     Hình 2.4: Cấu trúc thư mục Web
+2.4  Tìm hiểu về web API
+2.4.1 API là gì?
+    API là các phương thức, giao thức kết nối với các thư viện và ứng dụng khác. Nó là viết tắt của Application Programming Interface – giao diện lập trình ứng dụng. API cung cấp khả năng cung cấp khả năng truy xuất đến một tập các hàm hay dùng. Và từ đó có thể trao đổi dữ liệu giữa các ứng dụng.
+    
+API thường ứng dụng vào đâu?
+• Web API: là hệ thống API được sử dụng trong các hệ thống website. Hầu hết các website đều ứng dụng đến Web API cho phép bạn kết nối, lấy dữ liệu hoặc cập nhật cơ sở dữ liệu. Ví dụ: Bạn thiết kế chức nằng login thông Google, Facebook, Twitter, Github… Điều này có nghĩa là bạn đang gọi đến API của. Hoặc như các ứng dụng di động đều lấy dữ liệu thông qua API.
+• API trên hệ điều hành: Windows hay Linux có rất nhiều API, họ cung cấp các tài liệu API là đặc tả các hàm, phương thức cũng như các giao thức kết nối. Nó giúp lập trình viên có thể tạo ra các phần mềm ứng dụng có thể tương tác trực tiếp với hệ điều hành.
+• API của thư viện phần mềm hay framework: API mô tả và quy định các hành động mong muốn mà các thư viện cung cấp. Một API có thể có nhiều cách triển khai khác nhau và nó cũng giúp cho một chương trình viết bằng ngôn ngữ này có thể sử dụng thư viện được viết bằng ngôn ngữ khác. Ví dụ bạn có thể dùng Php để yêu cầu một thư viện tạo file PDF được viết bằng C++.
+2.4.2 Web API là gì?
+    Web API là một phương thức dùng để cho phép các ứng dụng khác nhau có thể giao tiếp, trao đổi dữ liệu qua lại. Dữ liệu được Web API trả lại thường ở dạng JSON hoặc XML thông qua giao thức HTTP hoặc HTTPS.
+2.4.3 Những điểm nổi bật của Web API?
+    Web API hỗ trợ restful đầy đủ các phương thức: Get/Post/put/delete dữ liệu. Nó giúp bạn xây dựng các HTTP service một cách rất đơn giản và nhanh chóng. Nó cũng có khả năng hỗ trợ đầy đủ các thành phần HTTP: URI, request/response headers, caching, versioning, content forma.
+    Hỗ trợ đầy đủ các thành phần MVC như: routing, controller, action result, filter, model binder, IoC container, dependency injection, unit test.
+2.4.4 Web API hoạt động như thế nào?
+1. Đầu tiên là xây dựng URL API để bên thứ ba có thể gửi request dữ liệu đến máy chủ cung cấp nội dung, dịch vụ thông qua giao thức HTTP hoặc HTTPS.
+2. Tại web server cung cấp nội dung, các ứng dụng nguồn sẽ thực hiện kiểm tra xác thực nếu có và tìm đến tài nguyên thích hợp để tạo nội dung trả về kết quả.
+3. Server trả về kết quả theo định dạng JSON hoặc XML thông qua giao thức HTTP/HTTPS.
+4. Tại nơi yêu cầu ban đầu là ứng dụng web hoặc ứng dụng di động , dữ liệu JSON/XML sẽ được parse để lấy data. Sau khi có được data thì thực hiện tiếp các hoạt động như lưu dữ liệu xuống Cơ sở dữ liệu, hiển thị dữ liệu…
+2.5 Tìm hiểu về VueJS
+    Vue.js là một framework linh động (nguyên bản tiếng Anh: progressive – tiệm tiến) dùng để xây dựng giao diện người dùng (user interfaces). Khác với các framework nguyên khối (monolithic), Vue được thiết kế từ đầu theo hướng cho phép và khuyến khích việc phát triển ứng dụng theo từng bước. Khi phát triển lớp giao diện (view layer), người dùng chỉ cần dùng thư viện lõi (core library) của Vue, vốn rất dễ học và tích hợp với các thư viện hoặc dự án có sẵn. Cùng lúc đó, nếu kết hợp với những kĩ thuật hiện đại như SFC (single file components) và các thư viện hỗ trợ, Vue cũng đáp ứng được dễ dàng nhu cầu xây dựng những ứng dụng một trang (SPA - Single-Page Applications) với độ phức tạp cao hơn nhiều.
+    Bắt đầu
+    Để dùng thử Vue.js, không gì dễ hơn là bắt đầu với một ví dụ Hello World trên JSFiddle. Hãy mở ví dụ này trong một tab khác và làm theo những ví dụ cơ bản mà chúng tôi sẽ nhắc đến dần sau đây. Bạn cũng có thể tạo một file index.html và nhúng thư viện Vue vào:
+    
+    
+    
+    
+    
+    
+
+    Render theo hướng khai báo
+    Tại trung tâm của Vue.js là một hệ thống cho phép chúng ta render (kết xuất) dữ liệu lên DOM theo hướng khai báo (declarative, thay vì hướng mệnh lệnh – imperative) sử dụng một cú pháp đơn giản:
+    
+    
+    
+
+
+
+
+
+
+
+
+    Ngoài việc quản lí và chỉnh sửa văn bản, chúng ta cũng có thể bind (ràng buộc) các thuộc tính của phần tử web, như sau:
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    Thuộc tính v-bind mà bạn thấy trên đây được gọi là một directive. Một directive trong Vue được bắt đầu với v- để chỉ định rõ rằng đây là một thuộc tính riêng do Vue cung cấp, đồng thời thuộc tính này sẽ áp dụng một hành vi (behavior) đặc biệt lên kết quả DOM được render ra. Trong ví dụ này, directive v-bind về cơ bản là đang giữ thuộc tính title của phần tử web luôn luôn đồng nhất với property message của đối tượng Vue được khởi tạo.
+    Bây giờ nếu bạn mở console JavaScript lần nữa và nhập vào app2.message = 'Cái gì đó khác', bạn sẽ thấy HTML được bind – trong trường hợp này là thuộc tính title – được cập nhật tương ứng.
+    Điều kiện và vòng lặp
+    Giấu hoặc hiện một phần tử web với Vue cũng rất dễ dàng:
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    Bây giờ nếu nhập app3.seen = false vào console, bạn sẽ thấy thông điệp trên đây biến mất.
+    Ví dụ này cho thấy rằng chúng ta có thể bind dữ liệu vào không chỉ văn bản và thuộc tính, mà còn cả vào cấu trúc của DOM. Hơn thế nữa, Vue còn cung cấp một hệ thống mạnh mẽ để áp dụng các hiệu ứng chuyển đổi khi một phần tử web được thêm vào, cập nhật, hoặc gỡ bỏ khỏi DOM.
+    Ngoài v-bind và v-if chúng ta còn có thêm nhiều directive nữa, với các tính năng đặc biệt khác nhau. Ví dụ, directive v-for có thể được dùng để trình bày một danh sách các item sử dụng dữ liệu từ một mảng:
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    Xử lí thông tin đầu vào của người dùng.
+Để người dùng tương tác với ứng dụng, chúng ta có thể dùng directive v-on để đính kèm các event listener (phần tử lắng nghe sự kiện) và gọi các method (phương thức) trên đối tượng Vue.
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    Nếu để ý bạn sẽ thấy trong method này chúng ta đã thay đổi trạng thái của ứng dụng (app state) mà không hề động đến DOM - mọi thao tác trên DOM đều được Vue xử lí một cách hoàn toàn tự động, và code bạn viết chỉ cần tập trung vào phần logic bên dưới.
+    Vue cũng cung cấp directive v-model giúp cho việc ràng buộc hai chiều (two-way binding) giữa form input và trạng thái ứng dụng trở nên vô cùng dễ dàng:
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    Biên soạn với các component.
+    Hệ thống component (phần tử cấu thành) là một khái niệm quan trọng trong Vue, vì nó cho phép chúng ta xây dựng những ứng dụng quy mô lớn được tạo thành từ những phần tử nhỏ, độc lập, và thường là tái sử dụng được. Nếu bạn để ý, gần như bất kì một loại giao diện ứng dụng nào cũng có thể được trừu tượng hóa thành một tập hợp dạng cây của các phần tử con:
+    Một component trong Vue về bản chất là một đối tượng Vue với các tùy chọn cho trước. Đăng kí một component trong Vue rất đơn giản:
+
+    
+    
+    
+    
+    Giờ thì bạn có thể sử dụng component todo-item trong template của các component khác:
+
+    
+    
+    
+    
+    Có điều ví dụ này chưa được thú vị cho lắm, vì các đề mục todo hiện đang giống nhau hoàn toàn. Chúng ta có thể truyền dữ liệu từ scope (phạm vi) cha vào các component con bằng cách sử dụng một prop:
+
+    
+    
+    
+    
+    
+    
+
+    Bây giờ chúng ta có thể truyền todo vào mỗi component bằng cách sử dụng v-bind:
+
+    
+    
+    
+
+    Ở đây chúng ta cung cấp một object "todo" cho mỗi component "todo-item". Bằng cách này nội dung của từng component trở nên động.
+    Mỗi component cũng sẽ nhận một thuộc tính "key". Chúng ta sẽ nói thêm về thuộc tính này sau.
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+2.6 Hệ quản trị cơ sở dữ liệu
+2.6.1 MySQL là gì ?
+    MySQL là một cơ sở dữ liệu quan hệ miễn phí hiện nay đã được hãng Oracle mua lại từ hãng Sun. Nó thường được sử dụng kết hợp với PHP để lưu trữ dữ liệu của ứng dụng website khi người dùng thao tác trên website của chúng ta. SQL Server - một hệ cơ sở dữ liệu quan hệ của Microsoft - và MySQL được xây dựng giống nhau về tư tưởng, kiến trúc.
+• DataBase: là một CSDL (cơ sở dữ liệu), trong CSDL bao gồm các table.
+• Table: là bảng dữ liệu, trong table bao gồm các field.
+• Field: là trường dữ liệu.
+2.6.2	Lịch sử phát triển của MySQL
+Công ty Thuy Điển MySQL AB phát triển MySQL vào năm 1994.
+Phiên bản đầu tiên của MySQL phát hành năm 1995.
+Công ty Sun Microsystems mua lại MySQL AB trong năm 2008,
+năm 2010 tập đoàn Oracle thâu tóm Sun Microsystems. Ngay lúc đó, đội ngũ phát triển của MySQL tách MySQL ra thành 1 nhánh riêng gọi là MariaDB. Oracle tiếp tục phát triển MySQL lên phiên bản 5.5.
+2013 MySQL phát hành phiên bản 5.6.
+2015 MySQL phát hành phiên bản 5.7.
+MySQL đang được phát triển lên phiên bản 8.0.
+MySQL hiện nay có 2 phiên bản miễn phí (MySQL Community Server) và có phí (Enterprise Server).
+MySQL là một hệ quản trị cơ sở dữ liệu quan hệ rất phổ biến hiện nay.
+2.6.3	Lợi ích của MySQL
+- MySQL là CSDL có tốc độ khá cao, ổn định và khá dễ sử dụng có thể hoạt động được trên khá nhiều hệ điều hành.
+- Tính bảo mật mạnh và sử dụng được trên nhiều ứng dụng mà MySQL còn hoàn toàn được sử dụng miễn phí..
+- MySQL không chỉ dừng lại ở bổ trợ cho ASP.NET và PHP, mà nó còn bổ trợ cho nhiều ngôn ngữ khác, Nó là nơi để lưu trữ thông tin trên các trang web được viết bằng nhiều ngôn ngữ khác nhau.
+2.7 Kết luận chương 2
+    Trong chương 2 của đồ án đã nêu nên được nội dung lý thuyết quá trình tìm hiểu công nghệ mới với về ngôn ngữ lập trình ASP.NET MVC, Web API và hệ quản trị cơ sở dữ liệu MySQL. Chương tiếp theo tiến hành xây dựng “ Cổng thông tin việc làm”.
+CHƯƠNG 3: PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG
+3.1 Khảo sát phân tích yêu cầu
+3.1.1 Thời gian địa điểm khảo sát
+- Tham khảo một số website tuyển dụng trên mạng như: Mywork.vn, Vieclam24h.vn,..
+3.1.2 Thông tin liên hệ
+- Bộ môn CNPM – Khoa Công Nghệ Thông Tin – Trường ĐHSPKT Hưng Yên - Hưng Yên.
+3.1.3 Thông tin dự án
+- Tên dự án: “ XÂY DỰNG CỔNG THÔNG TIN VIỆC LÀM”.
+- Người thực hiện: Ngô Thị Nhung
+- Người hướng dẫn: Tiến Sĩ Nguyễn Văn Hậu
+- Ngày thực hiện: 30/06/2020
+3.1.4 Yêu cầu của hệ thống sau khảo sát
+     Bảng 3.1: Yêu cầu của bài toán
+STTTên yêu cầu1Đăng ký tài khoản2Đăng nhập vào trang quản trị của nhà tuyển dụng 3Đăng tin tuyển dụng4Quản lí tuyển dụng(thêm, xóa)5Xem thông tin ứng viên và các nhà tuyển dụng khác6Đăng ký hồ sơ cá nhân7Xem thông tin ứng viên và các nhà tuyển dụng khác8Đăng ký, đăng nhập vào trang quản trị9Quản lí User (thêm, sửa, xóa)10Quản lí nhà tuyển dụng (xóa)11Quản lí ứng viên(xóa)12Quản lí công việc(thêm, sửa, xóa)13Quản lí tin tuyển dụng(duyệt, không duyệt)14Quản lý giá(thêm, sửa, xóa)3.1.5 Các yêu cầu chức năng
+a) Xác định các yêu cầu chức năng 
+Bảng 3.2: Các yêu cầu chức năng
+STTTên yêu cầu    Mô tả yêu cầuICác yêu cầu chức năng nghiệp vụLà các chức năng của phần mềm tương ứng với các công việc có thực.1Module việc làmHiển thị thông tin của nhà tuyển dụng, ứng viên, tin tuyển dụng. Sản phẩm hiển thị trên website được hiện thị đầy đủ thông tin về đối tượng đó: Tên, địa chỉ liên hệ, …..2Module đăng nhậpMỗi ứng viên hoặc nhà tuyển dụng có quyền đăng ký một tài khoản riêng. Tài khoản này được sử dụng khi hệ thống yêu cầu. Mọi tài khoản khách hàng đăng ký sẽ lưu trữ các thông tin của khách hàng.3Module tìm kiếm ứng viên, công việc, nhà tuyển dungMỗi ứng viên hoặc nhà tuyển dụng có thể tìm kiếm theo ngành nghề mà họ mong muốn.4Module đăng ký + Ứng viên: Ứng viên có thể đăng ký hồ sơ cá nhân của mình.
++ Nhà tuyển dụng: Nhà tuyển dụng có thể đăng ký tài khoản để tham gia đăng tuyển , quản lý đăng tuyển và tìm ứng viên.IICác yêu cầu chức năng của hệ thốngLà các chức năng của phần mềm được phát sinh thêm khi thực hiện một công việc trên máy tính.1Quản lý hệ thống+ Quản lý tài khoản cần cấp quyền.
++ Quản lý thông tin tài khoản.
++ Thêm, sửa, xóa tài khoản. 2Quản lý tài khoản+ Quản lý người dùng.
++ Quản lý tài khoản ứng viên.
++  Quản lý tài khoản nhà tuyển dụng3Quản lý ứng viên, nhà tuyển dụng+ Quản lý danh mục ứng viên.
++ Quản lý danh mục nhà tuyển dụng.
++ Quản lý danh mục tin tuyển dụng.
++ Quản lý thông tinb) Các yêu cầu phi chức năng
+     Bảng 3.3: Các yêu cầu phi chức năng
+STTTên yêu cầuMô tả yêu cầu    1Giao diệnGiao diện hệ thống phải dễ sử dụng, trực quan, thân thiện với mọi người dùng.    2Tốc độ xử lýHệ thống phải xử lý nhanh chóng và chính xác.    3Bảo mật dữ liệuTính bảo mật và độ an toàn cao.    4Tương thíchTương thích với đa phần các trình duyệt web hiện tại.3.1.6 Tổng quan về UML
+• UML (Unified Model Language) là một ngôn ngữ dùng cho phân tích thiết kế hướng đối tượng (OOAD – Object Oriented Analys and Design)
+• UML được duy trì và phát triển bởi OMG (Object Management Group), do Jacobson, Booch, Rumbaugh sáng lập. Ngoài ra còn có hàng trăm các tập đoàn lớn khác bảo trợ phát triển.
+• Các biểu đồ UML cho ta cái nhìn rõ hơn về hệ thống (cái nhìn tĩnh và động)
+• Hiện nay UML được sử dụng rất phổ biến trong các dự án phần mềm.
+• UML thể hiện phương pháp phân tích hướng đối tượng nên không lệ thuộc ngôn ngữ lập trình.
+• Có rất nhiều công cụ phần mềm hỗ trợ phân tích thiết kế dùng UML.
+• Nhiều công cụ có thể sinh ra mã từ UML và ngược lại.
+•  UML không phải là ngôn ngữ lập trình.
+• UML là một ngôn ngữ dùng để:
+- Trực quan hóa (Visualizing):
+    + Dùng tập các ký hiệu đồ họa phong phú để biểu diễn hệ thống đang được nghiên cứu.
+    + Hệ thống ký hiệu đều có ngữ nghĩa chặt chẽ, có thể hiểu bởi nhiều công cụ khác nhau.
+    + Giúp cho các nhà thiết kế, nhà lập trình khác biệt về ngôn ngữ đều có thể hiểu được. 
+- Đặc tả (Specifying):
+  + UML giúp xây dựng các mô hình chính xác, đầy đủ và không nhập nhằng. 
+    + Tất cả các công đoạn từ phân tích, thiết kế cho đến triển khai đều có các biểu đồ UML biểu diễn. 
+    + Use case (dùng cho phân tích); Class, Sequence, Activity... (cho thiết kế); Component, Deployment (cho triển khai).
+- Xây dựng (Constructing):
+    + Các mô hình của UML có thể kết nối với nhiều ngôn ngữ lập trình. Tức là có thể ánh xạ các mô hình UML về một ngôn ngữ lập trình như C++, Java...
+    + Việc chuyển các mô hình trong UML thành Code trong ngôn ngữ lập trình →Forward engineering.
+    + Việc chuyển ngược trở lại code trong một ngôn ngữ lập trình thành UML  → Reverse Engineering.
+      + Cần công cụ để chuyển đổi “xuôi” & “ngược”. 
+- Viết tài liệu (Documenting):
+      + Giúp xây dựng tài liệu đặc tả - requirements.
+      + Tài liệu kiến trúc (architecture).
+      + Tài liệu thiết kế.
+      + Source code.
+      + Tài liệu để kiểm thử - Test.
+      + Tài liệu mẫu – Prototype.
+      + Tài liệu triển khai – Deployment ...
+• Một số biểu đồ UML cơ bản
+• Biểu đồ Ca sử dụng Use Case Diagram
+- Use case (Use Case Diagram) cung cấp một bức tranh toàn cảnh về những gì đang xảy ra trong hệ thống hiện tại hoặc những gì sẽ xảy ra trong hệ thống mới.
+- Use case mô tả một chuỗi các hành động mà hệ thống sẽ thực hiện để đạt được kết quả có ý nghĩa đối với một tác nhân.
+- Các use case được tạo ra ở giai đoạn đầu của một dự án. Các use case cũng có thể được dung ở giai đoạn sau của qui trình phát triển dự án, ví dụ để đặc tả các tình huống kiểm tra. Use case đưa ra cơ sở để xác định giao tiếp người-máy đối với hệ thống. Để người dùng cuối có thể hiểu được  và có thể giao tiếp với hệ thống ở mức tổng thể.
+- Actor là người hoặc hệ thống tương tác với các use case. Thường actor là người dùng hệ thống. Trong biểu đồ use case, mỗi actor được vẽ bằng một biểu tượng hình người với tên vai trò (role name) đặt bên dưới.
+- Khi actor là người thì tên actor là tên vai trò mà actor đảm nhiệm chứ   không phải là tên công việc.
+• Biểu đồ lớp Class Diagram
+- Biểu đồ lớp (Class Diagram) cho ta một khung nhìn tĩnh của các lớp trong mô hình hoặc một phần của mô hình. Nó chỉ cho ta thấy các thuộc tính và các thao tác của lớp, cũng như các loại quan hệ giữa các lớp.
+- Có rất nhiều kiểu lớp dùng trong biểu đồ lớp, ở đây chúng ta chỉ xét đến và sử dụng 3 loại lớp chính là : lớp biên (phần giao diện), lớp điều khiển và lớp cơ sở dữ liệu:
+    + Lớp biên: là lớp thể hiện phần giao diện mà người dùng trực tiếp tương tác với hệ thống qua những giao diện của lớp này.
+    + Lớp thực thể (lớp cơ sở dữ liệu): là lớp biểu diễn cho những thực thể có mối quan hệ với nhau và liên quan đến hệ thống.
+    + Lớp điều khiển: là lớp trung gian giữa lớp biên và lớp thực thể. Lớp này đóng vai trò lấy và xử lý dữ liệu để hiện thị ra lớp biên.
+• Biểu đồ tuần tự Sequence Diagram
+    Biểu đồ tuần tự (Sequence Diagram) mô tả sự tương tác của các đối tượng theo trình tự về thời gian.Có sự liên kết chặt chẽ với biểu đồ lớp và mô tả thứ tự của tương tác bằng cách đánh số thứ tự các thông điệp. Mỗi biểu đồ tuần tự mô tả một tình huống xử lý.
+a) Các ký hiệu:
+     Bảng 3.4: Biểu diễn mô tả các ký hiệu
+         Biểu diễn các Actor (tác nhân) biểu diễn người hay hệ thống khác tương tác với hệ thống hiện tại.         Biểu diễn các Use Case (tình huống sử dụng) biểu diễn chuỗi hành động mà hệ thống thực hiện.        Biểu diễn mối quan hệ giữa Actor (người dùng) và UseCase (chức năng của hệ thống).        Quan hệ <<Include>> thể hiện Use Case này chứa Use Case khác.
+    Use case A được gọi là Include B nếu trong xử lý của A có gọi đến B ít nhất 1 lần.
+            Quan hệ <<Extend>> thể hiện User Case này mở rộng Use Case khác.
+    Use case B được gọi là Exntend A nếu use case B được gọi bởi A nếu thỏa mãn điều kiện nào đó.        Quan hệ tổng quát hóa (thừa kế):
+    Use case A được gọi là Generalization Use Case B nếu Use Case B là một trường hợp riêng của Use Case A.
+            
+     Biểu đồ Lớp ClassDiagram:
+    -  Mô tả các đối tượng và mối quan hệ của chúng trong hệ thống.
+    - Mô tả các thuộc tính và các hành vi (Behavior) của đối tượng.        Quan hệ Generalization: Thể hiện rằng một lớp A kế thừa từ một lớp B (Hay Class A là trường hợp riêng của Class B; Class B là tổng quát của Class A). Gọi là quan hệLà một (Is a).
+            Quan hệ Composition: 
+    Thể hiện rằng một lớp A bao hàm lớp B. Nhưng lớp B không thể tồn tại độc lập (tức không thuộc lớp nào). Tức là, nếu có B thì phải suy ra được A.Biểu đồ tuần tự: 
+    - Mô tả sự tương tác của các đối tượng theo trình tự về thời gian.
+    - Có sự liên kết chặt chẽ với biểu đồ lớp.
+    - Mỗi biểu đồ tuần tự mô tả một tình huống xử lý nhất định.
+    b) Xác định tác nhân
+    Qua khảo sát hiện trạng thực tế, kết hợp với việc tham khảo tài liệu và phân tích ý kiến của người dùng, hệ thống có các tác nhân sau:
+     Bảng 3.5: Xác định tác nhân.
+STT    Tác Nhân    Diễn Giải    
+    
+    
+    1    
+    d
+       Những người thuộc nhóm quyền này có quyền truy xuất những chức năng của hệ thống, có nhiệm vụ bảo trì hệ thống: quản lý việc làm, nhà tuyển dụng, ứng viên, kết xuất báo cáo,... Ngoài ra họ có thể phân quyền người sử dụng hệ thống.2       Những người thuộc quyền này có quyền được thực hiện: thêm , sửa , xóa thông tin hồ sơ của bản thân.      3        Những người thuộc quyền này có quyền thực hiện: sửa thông tin, thêm tuyển dụng việc làm, xóa tuyển dụng việc làm.      4        Những người thuộc quyền này có quyền thực hiện: phê duyệt tin tuyển dụng.3.1.7 Biểu đồ lớp thực thể
+    a, Biểu đồ use-case tổng quát
+
+     Hình 3.1: Biểu đồ use-case hệ thống
+3.1.8 Chức năng của phân hệ quản trị nội dung
+    a, Biểu đồ user_case “Chức năng đăng nhập”
+    
+     Hình 3.2: Biểu đồ use-case đăng nhập
+Mô tả tóm tắt:
+o Tên ca sử dụng: Đăng nhập.
+o Mục đích: Đảm bảo xác thực người dùng, người quản lý và các yêu cầu về bảo mật của hệ thống.
+o Tác nhân: Admin.
+o Tóm lược: Người dùng muốn sử dụng các dịch vụ của hệ thống thì bắt buộc phải đăng nhập vào hệ thống thông qua username và password. Hệ thống sẽ kiểm tra thông tin xem người dùng có đúng là thành viên của hệ thống không, nếu đúng thì người dùng có thể truy cập vào hệ thống với quyền nhất định đã được quy định.
+Mô tả quá trình:
+o Thông tin đầu vào là : Username , password.
+o Dòng sự kiện chính:
+Bảng 3.6: Mô tả dòng sự kiện chính cho chức năng đăng nhập
+Hành động của tác nhânPhản ứng của hệ thống  Chọn chức năng đăng nhập khi đã có tài khoản hoặc sau khi đăng kí xong hệ thống tự động cho thành viên vào trang đăng nhập.   Hiển thị trang chủ, tại đây người dùng có thể đăng nhập vào hệ thống.   Nhập thông tin tài khoản.   Gửi thông tin đăng nhập tới hệ thống.   Kiểm tra thông tin đăng nhập, nếu đúng thì cho phép truy cập hệ thống, sai thì thông báo lỗi.Dòng sự kiện phụ:
+- Nếu người dùng nhập tên truy cập và mật khẩu không đúng thì hệ thống sẽ yêu cầu nhập lại.
+- Khi người dùng nhập chính xác thông tin tài khoản của mình, hệ thống xử lý và thông báo đăng nhập thành công, tự động bật lên admin cho người dùng thao tác với các chức năng đã định.
+- Đối với người quản lý, nếu dùng username và password không đúng, hệ thống thông báo thông tin đăng nhập sai. Nếu thông tin đăng nhập chính xác thì thông báo đăng nhập thành công và chuyển đến trang quản trị.
+    b, Biểu đồ user_case “ Chức năng đăng nhập của nhà tuyển dụng”
+
+     Hình 3.3: Biểu đồ use-case đăng nhập nhà tuyển dụng
+Mô tả tóm tắt:
+o Tên ca sử dụng: Đăng nhập.
+o Mục đích: Đảm bảo xác thực người dùng, nhà tuyển dụng và các yêu cầu về bảo mật của hệ thống.
+o Tác nhân: Nhà tuyển dụng.
+o Tóm lược: Người dùng muốn sử dụng các dịch vụ của hệ thống thì bắt buộc phải đăng nhập vào hệ thống thông qua username và password. Hệ thống sẽ kiểm tra thông tin xem người dùng có đúng là thành viên của hệ thống không, nếu đúng thì người dùng có thể truy cập vào hệ thống với quyền nhất định đã được quy định.
+Mô tả quá trình:
+o Thông tin đầu vào là : Username , password.
+o Dòng sự kiện chính:
+Bảng 3.7: Mô tả dòng sự kiện chính cho chức năng đăng nhập
+Hành động của tác nhânPhản ứng của hệ thốngChọn chức năng đăng nhập khi đã có tài khoản hoặc sau khi đăng kí xong hệ thống tự động cho thành viên vào trang đăng nhập.Hiển thị trang chủ, tại đây người dùng có thể đăng nhập vào hệ thống.Nhập thông tin tài khoản.Gửi thông tin đăng nhập tới hệ thống.Kiểm tra thông tin đăng nhập, nếu đúng thì cho phép truy cập hệ thống, sai thì thông báo lỗi.Dòng sự kiện phụ:
+- Nếu người dùng nhập tên truy cập và mật khẩu không đúng thì hệ thống sẽ yêu cầu nhập lại.
+- Khi người dùng nhập chính xác thông tin tài khoản của mình, hệ thống xử lý và thông báo đăng nhập thành công, tự động bật lên admin cho người dùng thao tác với các chức năng đã định.
+- Đối với nhà tuyển dụng, nếu dùng username và password không đúng, hệ thống thông báo thông tin đăng nhập sai. Nếu thông tin đăng nhập chính xác thì thông báo đăng nhập thành công và chuyển đến trang quản trị.
+c, Biểu đồ use-case “ Quản lý nhà tuyển dụng”
+
+     Hình 3.4: Biểu đồ use-case quản lý nhà tuyển dụng
+Mô tả tóm tắt:
+o Tên ca sử dụng: quản lý nhà tuyển dụng.
+o Mục đích: giúp cho người quản lý dễ dàng quản lý thông tin nhà tuyển dụng.
+o Tác nhân: Quản trị viên.
+o Tóm lược: Khi người quản lý đăng nhập thành công vào hệ thống thì use case sẽ được gọi để giúp người quản lý tùy chọn các chức năng có liên quan: xóa nhà tuyển dụng. 
+o Mô tả quá trình:
+o Thông tin đầu vào là các thông tin về tài khoản như:
+- Username
+- Password
+o Điều kiện đầu vào quản trị viên cần phải đăng nhập vào hệ thống thành công.
+o Dòng sự kiện chính:
+Bảng 3.8: Mô tả dòng sự kiện chính cho chức năng quản lý nhà tuyển dụng
+Hành động của tác nhânPhản ứng của hệ thốngQuản lý yêu cầu xóa nhà tuyển dụng.Hệ thống yêu cầu quản trị viên đăng nhập vào tài khoản.Quản lý đăng nhập vào hệ thống bằng tài khoản của mình.Hệ thống kiểm tra tài khoản.Quản lý lựa chọn chức năng xóa nhà tuyển dụng.Hệ thống cập nhật lại thông tin và lưu dữ liệu về CSDL.o Dòng sự kiện phụ:
+- Khi người quản lý nhập sai các thông tin về tài khoản, hệ thống sẽ gửi thông báo lỗi và yêu cầu nhập lại các thông tin.
+- Người quản lý nhập lại các thông tin cần thiết theo yêu cầu của hệ thống, hệ thống sẽ tiến hành kiểm tra lại các thông tin mới nhập, nếu thành công thì chuyển sang trang chức năng theo yêu cầu của người quản lý.
+d, Biểu đồ use-case “ Quản lý ứng viên”
+
+     Hình 3.5: Biểu đồ use-case quản lý ứng viên
+Mô tả tóm tắt:
+o Tên ca sử dụng: quản lý ứng viên.
+o Mục đích: giúp cho người quản lý dễ dàng quản lý thông tin ứng viên.
+o Tác nhân: Quản trị viên.
+o Tóm lược: Khi người quản lý đăng nhập thành công vào hệ thống thì use case sẽ được gọi để giúp người quản lý tùy chọn các chức năng có liên quan: xóa ứng viên. 
+o Mô tả quá trình:
+o Thông tin đầu vào là các thông tin về tài khoản như:
+- Username
+- Password
+o Điều kiện đầu vào quản trị viên cần phải đăng nhập vào hệ thống thành công.
+o Dòng sự kiện chính:
+Bảng 3.9: Mô tả dòng sự kiện chính cho chức năng quản lý ứng viên
+Hành động của tác nhânPhản ứng của hệ thốngQuản lý yêu cầu xóa ứng viên.Hệ thống yêu cầu quản trị viên đăng nhập vào tài khoản.Quản lý đăng nhập vào hệ thống bằng tài khoản của mình.Hệ thống kiểm tra tài khoản.Quản lý lựa chọn chức năng xóa ứng viên.Hệ thống cập nhật lại thông tin và lưu dữ liệu về CSDL.o Dòng sự kiện phụ:
+- Khi người quản lý nhập sai các thông tin về tài khoản, hệ thống sẽ gửi thông báo lỗi và yêu cầu nhập lại các thông tin.
+- Người quản lý nhập lại các thông tin cần thiết theo yêu cầu của hệ thống, hệ thống sẽ tiến hành kiểm tra lại các thông tin mới nhập, nếu thành công thì chuyển sang trang chức năng theo yêu cầu của người quản lý.
+e, Biểu đồ use-case “Quản lý công việc”
+
+     Hình 3.6: Biểu đồ use-case quản lý việc làm
+Mô tả tóm tắt:
+o Tên ca sử dụng: quản lý việc làm.
+o Mục đích: giúp cho người quản lý dễ dàng quản lý thông tin việc làm.
+o Tác nhân: Quản trị viên.
+o Tóm lược: Khi người quản lý đăng nhập thành công vào hệ thống thì use case sẽ được gọi để giúp người quản lý tùy chọn các chức năng có liên quan: quản lý ứng viên. 
+o Mô tả quá trình:
+o Thông tin đầu vào là các thông tin về tài khoản như:
+- Username
+- Password
+o Điều kiện đầu vào quản trị viên cần phải đăng nhập vào hệ thống thành công.
+o Dòng sự kiện chính:
+Bảng 3.10: Mô tả dòng sự kiện chính cho chức năng quản lý việc làm
+Hành động của tác nhânPhản ứng của hệ thốngQuản lý yêu cầu thêm, sửa, xóa việc làm.Hệ thống yêu cầu quản trị viên đăng nhập vào tài khoản.Quản lý đăng nhập vào hệ thống bằng tài khoản của mình.Hệ thống kiểm tra tài khoản.Quản lý lựa chọn các chức năng thêm, sửa, xóa việc làm.Hệ thống cập nhật lại thông tin và lưu dữ liệu về CSDL.o Dòng sự kiện phụ:
+- Khi người quản lý nhập sai các thông tin về tài khoản, hệ thống sẽ gửi thông báo lỗi và yêu cầu nhập lại các thông tin.
+- Người quản lý nhập lại các thông tin cần thiết theo yêu cầu của hệ thống, hệ thống sẽ tiến hành kiểm tra lại các thông tin mới nhập, nếu thành công thì chuyển sang trang chức năng theo yêu cầu của người quản lý.
+f, Biểu đồ use- case “ Quản lý tin tuyển dụng” 
+     Hình 3.7: Biểu đồ use-case quản lý tin tuyển dụng
+Mô tả tóm tắt:
+o Tên ca sử dụng: quản lý tin tuyển dụng.
+o Mục đích: giúp cho người quản lý dễ dàng quản lý thông tin tuyển dụng.
+o Tác nhân: Quản trị viên.
+o Tóm lược: Khi người quản lý đăng nhập thành công vào hệ thống thì use case sẽ được gọi để giúp người quản lý tùy chọn các chức năng có liên quan:. 
+o Mô tả quá trình:
+o Thông tin đầu vào là các thông tin về tài khoản như:
+- Username
+- Password
+o Điều kiện đầu vào quản trị viên cần phải đăng nhập vào hệ thống thành công.
+o Dòng sự kiện chính:
+Bảng 3.11: Mô tả dòng sự kiện chính cho chức năng quản lý tin tuyển dụng
+Hành động của tác nhânPhản ứng của hệ thốngQuản lý yêu cầu duyệt tin tuyển dụng.Hệ thống yêu cầu quản trị viên đăng nhập vào tài khoản.Quản lý đăng nhập vào hệ thống bằng tài khoản của mình.Hệ thống kiểm tra tài khoản.Quản lý lựa chọn các chức năng duyệt tin tuyển dụng.Hệ thống cập nhật lại thông tin và lưu dữ liệu về CSDL.o Dòng sự kiện phụ:
+- Khi người quản lý nhập sai các thông tin về tài khoản, hệ thống sẽ gửi thông báo lỗi và yêu cầu nhập lại các thông tin.
+- Người quản lý nhập lại các thông tin cần thiết theo yêu cầu của hệ thống, hệ thống sẽ tiến hành kiểm tra lại các thông tin mới nhập, nếu thành công thì chuyển sang trang chức năng theo yêu cầu của người quản lý.
+g, Biểu đồ use-case “Quản lý giá”
+
+     Hình 3.8: Biểu đồ use-case quản lý giá
+Mô tả tóm tắt:
+o Tên ca sử dụng: quản lý giá.
+o Mục đích: giúp cho người quản lý dễ dàng quản lý thông tin giá.
+o Tác nhân: Quản trị viên.
+o Tóm lược: Khi người quản lý đăng nhập thành công vào hệ thống thì use case sẽ được gọi để giúp người quản lý tùy chọn các chức năng có liên quan.
+o Mô tả quá trình:
+o Thông tin đầu vào là các thông tin về tài khoản như:
+- Username
+- Password
+o Điều kiện đầu vào quản trị viên cần phải đăng nhập vào hệ thống thành công.
+o Dòng sự kiện chính:
+Bảng 3.12: Mô tả dòng sự kiện chính cho chức năng quản lý giá
+Hành động của tác nhânPhản ứng của hệ thốngQuản lý yêu cầu thêm, sửa, xóa thông tin giá.Hệ thống yêu cầu quản trị viên đăng nhập vào tài khoản.Quản lý đăng nhập vào hệ thống bằng tài khoản của mình.Hệ thống kiểm tra tài khoản.Quản lý lựa chọn các chức năng thêm, sửa, xóa thông tin giá.Hệ thống cập nhật lại thông tin và lưu dữ liệu về CSDL.o Dòng sự kiện phụ:
+  - Khi người quản lý nhập sai các thông tin về tài khoản, hệ thống sẽ gửi thông báo lỗi và yêu cầu nhập lại các thông tin.
+  - Người quản lý nhập lại các thông tin cần thiết theo yêu cầu của hệ thống, hệ thống sẽ tiến hành kiểm tra lại các thông tin mới nhập, nếu thành công thì chuyển sang trang chức năng theo yêu cầu của người quản lý.
+h, Biểu đồ use- case “ Quản lý User”
+
+     Hình 3.9: Biểu đồ use-case quản lý user
+Mô tả tóm tắt:
+o Tên ca sử dụng: quản lý user
+o Mục đích: giúp cho người quản lý dễ dàng quản lý thông tin user
+o Tác nhân: Quản trị viên
+o Tóm lược: Khi người quản lý đăng nhập thành công vào hệ thống thì use case sẽ được gọi để giúp người quản lý tùy chọn các chức năng có liên quan:. 
+o Mô tả quá trình:
+o Thông tin đầu vào là các thông tin về tài khoản như:
+- Username
+- Password
+o Điều kiện đầu vào quản trị viên cần phải đăng nhập vào hệ thống thành công.
+o Dòng sự kiện chính:
+Bảng 3.13: Mô tả dòng sự kiện chính cho chức năng quản lý user
+Hành động của tác nhânPhản ứng của hệ thốngQuản lý yêu cầu thêm, sửa, xóa thông tin userHệ thống yêu cầu quản trị viên đăng nhập vào tài khoảnQuản lý đăng nhập vào hệ thống bằng tài khoản của mìnhHệ thống kiểm tra tài khoảnQuản lý lựa chọn các chức năng thêm, sửa, xóa thông tin userHệ thống cập nhật lại thông tin và lưu dữ liệu về CSDLo Dòng sự kiện phụ:
+    - Khi người quản lý nhập sai các thông tin về tài khoản, hệ thống sẽ gửi thông báo lỗi và yêu cầu nhập lại các thông tin.
+    - Người quản lý nhập lại các thông tin cần thiết theo yêu cầu của hệ thống, hệ thống sẽ tiến hành kiểm tra lại các thông tin mới nhập, nếu thành công thì chuyển sang trang chức năng theo yêu cầu của người quản lý.
+i, Biểu đồ use-case “Quản lý tin tuyển dụng” của nhà tuyển dụng
+
+     Hình 3.10: Biểu đồ use-case quản lý tin tuyển dụng của nhà tuyển dụng
+Mô tả tóm tắt:
+o Tên ca sử dụng: quản lý tin tuyển dụng của nhà tuyển dụng
+o Mục đích: giúp cho nhà tuyển dụng dễ dàng quản lý thông tin tuyển dụng
+o Tác nhân: Nhà tuyển dụng
+o Tóm lược: Khi nhà tuyển dụng đăng nhập thành công vào hệ thống thì use case sẽ được gọi để giúp nhà tuyển dụng tùy chọn các chức năng có liên quan:. 
+o Mô tả quá trình:
+o Thông tin đầu vào là các thông tin về tài khoản như:
+- Username
+- Password
+o Điều kiện đầu vào nhà tuyển dụng cần phải đăng nhập vào hệ thống thành công.
+o Dòng sự kiện chính:
+Bảng 3.14: Mô tả dòng sự kiện chính cho chức năng quản lý tin tuyển dụng
+Hành động của tác nhânPhản ứng của hệ thốngQuản lý yêu cầu thêm, sửa, xóa thông tin tuyển dụngHệ thống yêu cầu quản trị viên đăng nhập vào tài khoảnQuản lý đăng nhập vào hệ thống bằng tài khoản của mìnhHệ thống kiểm tra tài khoảnQuản lý lựa chọn các chức năng thêm, sửa, xóa thông tin tuyển dụngHệ thống cập nhật lại thông tin và lưu dữ liệu về CSDLo Dòng sự kiện phụ:
+    - Khi nhà tuyển dụng nhập sai các thông tin về tài khoản, hệ thống sẽ gửi thông báo lỗi và yêu cầu nhập lại các thông tin.
+    - Người nhà tuyển dụng các thông tin cần thiết theo yêu cầu của hệ thống, hệ thống sẽ tiến hành kiểm tra lại các thông tin mới nhập, nếu thành công thì chuyển sang trang chức năng theo yêu cầu của nhà tuyển dụng. 
+k, Biểu đồ use-case “Quản lý nhà tuyển dụng” của nhà tuyển dụng
+
+     Hình 3.11: Biểu đồ use-case quản lý nhà tuyển dụng
+Mô tả tóm tắt:
+o Tên ca sử dụng: quản lý tin tuyển dụng của nhà tuyển dụng
+o Mục đích: giúp cho nhà tuyển dụng dễ dàng quản lý thông tin tuyển dụng
+o Tác nhân: Nhà tuyển dụng
+o Tóm lược: Khi nhà tuyển dụng đăng nhập thành công vào hệ thống thì use case sẽ được gọi để giúp nhà tuyển dụng tùy chọn các chức năng có liên quan:. 
+o Mô tả quá trình:
+o Thông tin đầu vào là các thông tin về tài khoản như:
+- Username
+- Password
+o Điều kiện đầu vào nhà tuyển dụng cần phải đăng nhập vào hệ thống thành công.
+o Dòng sự kiện chính:
+Bảng 3.15: Mô tả dòng sự kiện chính cho chức năng quản lý nhà tuyển dụng
+Hành động của tác nhânPhản ứng của hệ thốngQuản lý yêu cầu thêm, sửa nhà tuyển dụng.Hệ thống yêu cầu quản trị viên đăng nhập vào tài khoản.Quản lý đăng nhập vào hệ thống bằng tài khoản của mình.Hệ thống kiểm tra tài khoản.Quản lý lựa chọn các chức năng thêm, sửa nhà tuyển dụng.Hệ thống cập nhật lại thông tin và lưu dữ liệu về CSDL.o Dòng sự kiện phụ:
+    - Khi nhà tuyển dụng nhập sai các thông tin về tài khoản, hệ thống sẽ gửi thông báo lỗi và yêu cầu nhập lại các thông tin. 
+    - Người nhà tuyển dụng các thông tin cần thiết theo yêu cầu của hệ thống, hệ thống sẽ tiến hành kiểm tra lại các thông tin mới nhập, nếu thành công thì chuyển sang trang chức năng theo yêu cầu của nhà tuyển dụng. 
+
+
+
+
+
+
+
+
+
+
+
+
+3.1.9 Biểu đồ lớp
+• Biểu đồ lớp
+
+Hình 3.12: Biểu đồ thực thể của hệ thống
+• Danh sách các lớp đối tượng
+Bảng 3.16: Danh sách các lớp
+STTTên thực thểMô tả1Job Mô tả thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý công việc.2Pricelist Mô tả thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý giá.              3Permission Mô tả thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý quyền4Permissiondetail Mô tả thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý quyền5User Mô tả thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý tài khoản6Signupemployeraccount Mô tả thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý nhà tuyển dụng.7Signupemployeraccountdetail Mô tả thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý tin tuyển dụng.8Submissionapplication Mô tả thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý ứng viên.9Userpermission Mô tả thuộc tính và các phương thức liên quan tới nghiệp vụ quản lý quyền.3.1.10 Biểu đồ tuần tự
+1, Biểu đồ tuần tự cho quá trình “Đăng nhập”
+
+Hình 3.13:  Biểu đồ tuần tự cho quá trình “Đăng nhập”
+2, Biểu đồ tuần tự “ Chức năng thêm nhà tuyển dụng”
+    
+     Hình 3.14:  Biểu đồ tuần tự “Chức năng thêm nhà tuyển dụng”
+3. Biểu đồ tuần tự “ Chức năng sửa thông tin nhà tuyển dụng”
+Hình 3.15:  Biểu đồ tuần tự “Chức năng sửa thông tin nhà tuyển dụng”
+4. Biểu đồ tuần tự “ Chức năng xóa thông tin nhà tuyển dụng”
+Hình 3.16:  Biểu đồ tuần tự “Chức năng xóa thông tin nhà tuyển dụng”
+5. Biểu đồ tuần tự “ Chức năng thêm thông tin ứng viên”
+Hình 3.17:  Biểu đồ tuần tự “Chức năng thêm ứng viên”
+6. Biểu đồ tuần tự “ Chức năng xóa thông tin ứng viên”
+Hình 3.18:  Biểu đồ tuần tự “Chức năng xóa ứng viên”
+7. Biểu đồ tuần tự “ Chức năng thêm việc làm”
+Hình 3.19:  Biểu đồ tuần tự “Chức năng thêm việc làm”
+8. Biểu đồ tuần tự “ Chức năng sửa việc làm”
+Hình 3.20:  Biểu đồ tuần tự “Chức năng sửa việc làm”
+9. Biểu đồ tuần tự “ Chức năng xóa việc làm”
+
+Hình 3.21:  Biểu đồ tuần tự “Chức năng xóa việc làm”
+10.  Biểu đồ tuần tự “ Chức năng thêm giá”
+Hình 3.22:  Biểu đồ tuần tự “Chức năng thêm giá”
+11.  Biểu đồ tuần tự “ Chức năng sửa giá”
+Hình 3.23:  Biểu đồ tuần tự “Chức năng sửa giá”
+12.  Biểu đồ tuần tự “ Chức năng xóa giá”
+Hình 3.24:  Biểu đồ tuần tự “Chức năng xóa giá”
+13. Biểu đồ tuần tự “ Chức năng thêm user”
+Hình 3.25:  Biểu đồ tuần tự “Chức năng thêm user”
+14. Biểu đồ tuần tự “ Chức năng sửa user”
+Hình 3.26:  Biểu đồ tuần tự “Chức năng sửa user”
+15.  Biểu đồ tuần tự “ Chức năng xóa user”
+Hình 3.27:  Biểu đồ tuần tự “Chức năng xóa user”
+3.2 Thiết kế cơ sở dữ liệu
+3.2.1 Biểu đồ quan hệ cơ sở dữ liệu
+
+Hình 3.28:  Biểu đồ quan hệ cơ sở dữ liệu
+3.2.2 Các bảng dữ liệu
+• Bảng tblpermissiondetail
+Bảng 3.17: tblpermissiondetail
+STTTên thực thểKiểu dữ liệuRàng buộcMô Tả1Action_nameNvarchar(255)Not nullTên hành động2Action_codeNvarchar(10)Not nullMã hành động3Check_actionBoolNot nullKiểm tra hành động4IdNvarchar(10)Not nullMã chi tiết quyền5Permission_codeNvarchar(10)Not nullMã cho phép• Bảng tblpermission
+
+Bảng 3.18: tblpermission
+STTTên thực thểKiểu dữ liệuRàng buộcMô Tả1CodeNvarchar(10)Not nullMã quyền người dùng2IdNvarchar(10)Not nullMã  quyền3Name_permissionNvarchar(255)Not nullTên quyền• Bảng tbluserpermission
+Bảng 3.19: tbluserpermission
+STTTên thực thểKiểu dữ liệuRàng buộcMô Tả1IdNvarchar(10)Not nullMã quyền người dùng2Permission_codeNvarchar(10)Not nullMã quyền3User_codeNvarchar(255)Not nullMã người dùng• Bảng tbluser
+Bảng 3.20: tbluser
+STTTên thực thểKiểu dữ liệuRàng buộcMô Tả1CodeNvarchar(10)Not nullMã quyền2IdNvarchar(10)Not nullMã người dùng3PasswordNvarchar(50)Not nullMật khẩu4RoleNvarchar(50)Not nullVai trò5UsernameNvarchar(50)Not nullTên người dùng
+
+
+• Bảng tblsignupemployeraccount
+Bảng 3.21: tblsignupemployeraccount
+STTTên thực thểKiểu dữ liệuRàng buộcMô Tả1ContactNvarchar(255)Not nullLiên hệ2Company_nameNvarchar(255)Not nullTên công ty3Company_addressNvarchar(255)Not nullĐịa chỉ4CodeNvarchar(10)Not nullMã quyền5CityNvarchar(255)Not nullThành phố6EmailNvarchar(50)Not nullĐịa chỉ email7IdNvarchar(10)Not nullMã nhà tuyển dụng8PasswordNvarchar(50)Not nullMật khẩu9Phone_numberNvarchar(50)Not nullSDT10Personnel_scaleNvarchar(255)Not nullQuy mô nhân sự• Bảng tblsubmisstionapplications
+Bảng 3.22: tblsubmisstionapplications
+STTTên thực thểKiểu dữ liệuRàng buộcMô Tả1AddressNvarchar(10)Not nullNơi ở2Career_goalsNvarchar(10)Not nullMục tiêu nghề3CarrerNvarchar(255)Not nullYêu cầu 4Company_addressNvarchar(10)Not nullĐịa chỉ
+5DegreeNvarchar(10)Not nullHoạt động6EmailNvarchar(255)Not nullĐịa chỉ email7FileNvarchar(50)Not nullMô tả8Form_of_workNvarchar(255)Not nullHình thức làm việc9GenderNvarchar(10)Not nullGiới tính10Job_requirementsNvarchar(10)Not nullYêu cầu công việc11Language_levelNvarchar(10)Not nullNgoại ngữ12LevelNvarchar(10)Not nullTrình độ13NameNvarchar(255)Not nullVị trí tuyển14Phone_numberNvarchar(50)Not nullSDT15Request_degreeNvarchar(255)Not nullBằng cấp16Signup_employer_
+account_codeNvarchar(10)Not nullMã 17SkillNvarchar(10)Not nullKỹ năng18Time1Nvarchar(10)Not nullThời gian19WageNvarchar(10)Not nullMức lương
+
+
+•  Bảng tblsignupemployeraccountdetail
+Bảng 3.23: tblsignupemployeraccountdetail
+STTTên thực thểKiểu dữ liệuRàng buộcMô Tả1AddressNvarchar(10)Not nullNơi ở2BenefitNvarchar(255)Not nullQuyền lợi3Career_goalsNvarchar(10)Not nullMục tiêu nghề4CarrerNvarchar(255)Not nullYêu cầu 5Code_masterNvarchar(10)Not nullMã nhà tuyển dụng6Company_addressNvarchar(10)Not nullĐịa chỉ7Deadline_submissionNvarchar(10)Not nullThời gian tuyển8DegreeNvarchar(10)Not nullHoạt động9Email_contactNvarchar(10)Not nullEmail người liên hệ10ExperienceNvarchar(10)Not nullKinh nghiệm11Form_of_workNvarchar(255)Not nullHình thức làm việc12IdNvarchar(10)Not nullMã 13GenderNvarchar(10)Not nullGiới tính14Job_descriptionNvarchar(50)Not nullMô tả công việc15Job_requirementsNvarchar(10)Not nullYêu cầu công việc16Name_contactNvarchar(10)Not nullTên người liên hệ
+17PositionNvarchar(50)Not nullVị trí tuyển18Phonenumber_contactNvarchar(10)Not nullSDT người liên hệ19Profile_languageNvarchar(10)Not nullNgôn ngữ hồ sơ20Request_degreeNvarchar(255)Not nullBằng cấp21Status_publicNvarchar(10)Not nullTrạng thái22WageNvarchar(10)Not nullMức lương• Bảng tbljob
+Bảng 3.24: tbljob
+STTTên thực thểKiểu dữ liệuRàng buộcMô Tả1CodeNvarchar(10)Not nullMã 2IdNvarchar(10)Not nullMã  quyền3Name_jobNvarchar(255)Not nullTên công việc• Bảng tblpricelist
+Bảng 3.25: tblpricelist
+STTTên thực thểKiểu dữ liệuRàng buộcMô Tả1CodeNvarchar(10)Not nullMã 2DatetimeNvarchar(255)Not nullThời gian3IdNvarchar(10)Not nullMã  giá4NameNvarchar(255)Not nullTên giá5PriceNvarchar(255)Not nullGiá
+3.2.3 Thiết kế giao diện
+a, Chức năng hiện thị trang chủ
+• Mục đích
+   Chức năng này cho phép người dùng khi truy cập vào website sẽ hiển thị giao diện với nội dung danh sách sản phẩm, menu, slide...
+• Phạm vi
+   Chức năng này sẽ cho phép người dụng truy cập vào website có thê sử dụng.
+• Ràng buộc
+   Người dùng phải truy cập vào website.
+• Giao diện của chức năng
+
+
+Hình 3.29:  Giao diện trang chủ
+b, Chức năng hiện thị chi tiết
+• Mục đích
+   Chức năng này hiển thị thông tin chi tiết ứng viên khi người dụng click vào ứng viên nào đó nào đó trên trang chủ để xem thông tin chi tiết về ứng viên đó.
+• Phạm vi
+   Chức năng này cho phép người dùng truy cập vào website có thê sử dụng.
+• Ràng buộc
+Người dùng phải truy cập vào website và click vào ứng viên để xem thông tin chi tiết.
+• Giao diện chức năng
+
+
+   Hình 3.30:  Giao diện trang chi tiết
+c, Giao diện chức năng đăng ký nhà tuyển dụng
+• Mục đích
+   Giúp người dùng có thể đăng ký tài khoản nhà tuyển dụng.
+• Phạm vi
+   Chức năng này cho phép người dùng đăng ký tài khoản để thực hiện quản lí hoặc đăng tin tuyển dụng.
+• Ràng buộc
+   Người dùng phải truy cập vào website và nhập thông tin theo yêu cầu.
+• Giao diện  chức năng
+
+
+   Hình 3.31:  Giao diện đăng ký nhà tuyển dụng
+d, Giao diện chức năng đăng nhập nhà tuyển dụng
+• Mục đích
+   Giúp người dùng có thể đăng nhập tài khoản nhà tuyển dụng.
+• Phạm vi
+   Chức năng này cho phép người dùng đăng nhập tài khoản để thực hiện quản lí hoặc đăng tin tuyển dụng.
+• Ràng buộc
+   Người dùng phải truy cập vào website và nhập user và password.
+• Giao diện chức năng
+
+   Hình 3.32:  Giao diện đăng nhập tài khoản nhà tuyển dụng
+e, Giao diện chức năng đăng ký ứng viên
+• Mục đích
+   Giúp ứng viên có thể tạo hồ sơ cá nhân.
+• Phạm vi
+   Chức năng này cho phép người dùng tạo hồ sơ cá nhân giúp cho việc nhà tuyển dụng liên hệ.
+• Ràng buộc
+   Người dùng phải truy cập vào website và nhập thông tin theo yêu cầu.
+• Giao diện chức năng
+
+
+   Hình 3.33:  Giao diện tạo hồ sơ ứng viên
+f, Giao diện quản lý của nhà tuyển dụng
+• Mục đích
+   Giúp nhà tuyển dụng quản lý thông tin tin tuyển dụng.
+• Phạm vi
+   Chức năng này cho phép người dùng quản lý thông tin cá nhân(thêm, sửa, xóa tin tuyển dụng)
+• Ràng buộc
+   Người dùng phải truy cập vào website và đăng nhập tài khoản của mình.
+• Giao diện chức năng
+
+   Hình 3.34:  Giao diện quản lí của nhà tuyển dụng
+g, Giao diện thêm tin tuyển dụng
+• Mục đích
+   Giúp người dùng có thể đăng nhập tài khoản nhà tuyển dụng.
+• Phạm vi
+   Chức năng này cho phép người dùng đăng nhập tài khoản để thực hiện quản lí hoặc đăng tin tuyển dụng.
+• Ràng buộc
+Người dùng phải truy cập vào website và nhập user và password.
+• Giao diện chức năng
+
+
+   Hình 3.35:  Giao diện thêm tin tuyển dụng
+h, Giao diện danh sách tin tuyển dụng
+• Mục đích
+   Giúp nhà tuyển dụng quản lý tin tuyển dụng.
+• Phạm vi
+   Chức năng này cho phép người dùng quản lý thông tin tuyển dụng.
+• Ràng buộc
+   Người dùng phải truy cập vào website và đăng nhập tài khoản của mình và chọn chức năng danh sách tin tuyển dụng. 
+• Giao diện chức năng
+
+   Hình 3.36:  Giao diện danh sách tin tuyển dụng
+i, Giao diện đăng nhập của Admin, nhân viên
+• Mục đích
+   Giúp người dùng có thể đăng nhập tài khoản Admin, nhân viên.
+• Phạm vi
+   Chức năng này cho phép người dùng đăng nhập tài khoản để thực hiện quản lí hệ thống.
+• Ràng buộc
+Người dùng phải truy cập vào website và nhập user và password.
+• Giao diện chức năng
+
+   Hình 3.37:  Giao diện đăng nhập tài khoản Admin
+k, Giao diện quản lí User
+• Mục đích
+   Giúp người dùng thực hiện các chức năng thêm, sửa xóa, cập nhật đối với các tài khoản.
+• Phạm vi
+   Chức năng này chỉ cho phép Admin thực hiện thao tác thêm, sửa, xóa user, tài khoản nhân viên chỉ được phép xem danh sách.
+• Ràng buộc
+   Người dùng phải truy cập vào website và nhập user và password sau đó chọn chức năng quản lý user.
+• Giao diện chức năng
+
+   Hình 3.38:  Giao diện quản lý user
+l, Giao diện quản lí Giá
+• Mục đích
+   Giúp người dùng thực hiện các chức năng quản lý thông tin giá.
+• Phạm vi
+   Chức năng này chỉ cho phép cả admin và nhân viên thực hiện quản lý giá.
+• Ràng buộc
+Người dùng phải truy cập vào website và nhập user và password sau đó chọn chức năng quản lý giá.
+• Giao diện chức năng
+
+
+   Hình 3.39:  Giao diện quản lý giá
+m, Giao diện quản lí việc làm
+• Mục đích
+   Giúp người dùng thực hiện các chức năng thêm, sửa xóa, cập nhật đối với thông tin việc làm.
+• Phạm vi
+   Chức năng này chỉ cho phép cả admin và nhân viên thực hiện các thao tác thêm, sửa, xóa.
+• Ràng buộc
+Người dùng phải truy cập vào website và nhập user và password sau đó chọn chức năng quản lý việc làm.
+• Giao diện chức năng
+
+   Hình 3.40:  Giao diện quản lý việc làm
+n, Giao diện quản lí tin tuyển dụng
+• Mục đích
+   Giúp người dùng thực hiệnchức năng phê duyệt tin tuyển dụng.
+• Phạm vi
+   Chức năng này chỉ cho phép cả admin và nhân viên thực hiện thao tác phê duyệt tin tuyển dụng.
+• Ràng buộc
+Người dùng phải truy cập vào website và nhập user và password sau đó chọn chức năng quản lý tin tuyển dụng.
+• Giao diện chức năng
+
+   Hình 3.41:  Giao diện phê duyệt tin tuyển dụng
+o, Giao diện quản lí nhà tuyển dụng
+• Mục đích
+   Giúp người dùng thực hiện  chức năng xóa nhà tuyển dụng.
+• Phạm vi
+   Chức năng này chỉ cho phép cả admin và nhân viên thực hiện  thao tác xóa nhà tuyển dụng.
+• Ràng buộc
+Người dùng phải truy cập vào website và nhập user và password sau đó chọn chức năng quản lý nhà tuyển dụng.
+• Giao diện chức năng
+
+   Hình 3.42:  Giao diện quản lí nhà tuyển dụng
+o, Giao diện quản lí ứng viên
+• Mục đích
+   Giúp người dùng thực hiện  chức năng xóa ứng viên.
+• Phạm vi
+   Chức năng này chỉ cho phép cả admin và nhân viên thực hiện  thao tác xóa ứng viên.
+• Ràng buộc
+Người dùng phải truy cập vào website và nhập user và password sau đó chọn chức năng quản lý ứng viên.
+• Giao diện chức năng
+
+   Hình 3.43:  Giao diện quản lí ứng viên
+p, Giao diện chức năng thêm
+• Mục đích
+   Giúp người dùng thực hiện  chức năng thêm.
+• Phạm vi
+   Chức năng này chỉ cho phép cả admin và nhân viên thực hiện  thao tác thêm.
+• Ràng buộc
+Người dùng phải truy cập vào website và nhập user và password sau đó chọn chức năng thêm.
+• Giao diện chức năng
+
+   Hình 3.44:  Giao diện chức năng thêm
+q, Giao diện chức năng sửa
+• Mục đích
+   Giúp người dùng thực hiện  chức năng sửa.
+• Phạm vi
+   Chức năng này chỉ cho phép cả admin và nhân viên thực hiện  thao tác sửa.
+• Ràng buộc
+Người dùng phải truy cập vào website và nhập user và password sau đó chọn chức năng sửa.
+• Giao diện chức năng
+
+
+   Hình 3.45:  Giao diện chức năng sửa
+3.3 Kết luận chương 3
+    Trong chương 3 của báo cáo đã thực hiện việc xây dựng cổng thông tin việc làm. Từ các kết quả đã thực hiện, có thể tóm tắt quá trình xây dựng hệ thống đã cài đặt như sau:
+- Tiến hành quá trình khảo sát và phân tích yêu cầu bài toán xây dựng cổng thông tin việc làm. Chỉ ra đupwjc yêu cầu của hệ thống khảo sát và mô tả chi tiết các yêu cầu.
+- Đã sử dụng ULM để phân tích thiết kế hệ thống với các biểu đồ use-cse tổng quát, use-case chi tiết cho từng chức năng. Các định được các lớp cần quản lý tương ứng với các bảng trong cơ sở dữ liệu. Và sử dụng biểu đồ tuần tự để mô tả luồng đi của hệ thống trong từng sự kiện.
+- Thiết kế được cơ sở dữ liệu từ các yêu cầu của khách hàng.
+- Đã thiết kế và đặc tả được giao diện của website.
+   
+
+
+
+
+
+
+CHƯƠNG 4: KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN
+4.1 Kết quả đạt được của đề tài
+   Quá trình nghiên cứu và thực hiện cài đặt chương trình theo sự khảo sát và yêu cầu của người dùng đã hoàn thành và đạt một số kết quả sau:
+• Hiểu được nghiệp vụ của một trang bán hàng online:
+- Nghiệp vụ quản lý quyền.
+- Nghiệp vụ quản lý nhà tuyển  dụng.
+- Nghiệp vụ quản lý ứng viên.
+- Nghiệp vụ quản lý việc làm.
+- Nghiệp vụ quản lý tin tuyển dụng.
+- Nghiệp vụ quản lý giá.
+Thông qua nghiệp vụ kết hợp với mục đích thực hiện tin học hóa, mô tả chức
+năng của từng hệ thống, xây dựng các biểu đồ UML và cơ sở dữ liệu thông qua công cụ Visual Diagram.
+• Xây dựng chương trình thông qua kết quả thu thập được qua quá trình khảo sát,phân tích hệ thống và đặc tả giao diện.
+• Ngoài những kết quả trên, qua quá trình thực hiện đề tài “Xây dựng cổng thông tin việc làm” em đã có được:
+- Những kinh nghiệm quý báu về quy trình và nghiệp vụ quản lý cổng thông tin việc làm.
+- Trau dồi kiến thức về ASP.NET MVC , Web API và MySql workbench.
+- Rèn luyện kỹ năng làm việc cá nhân, khả năng tư duy và sáng tạo.
+4.2 Hạn chế của đề tài
+    -	CSDL của hệ thống chưa được đầy đủ và tối ưu.
+    -	Tốc độ chưa hiệu quả.
+    -	Chưa thực hiện được một số chức năng như thống kê.
+    - Tìm kiếm trong trang chủ chưa được tối ưu hóa
+    - Chưa xây dựng được chức năng nộp hồ sơ online.
+4.3 Hướng phát triển của đề tài
+    - Với sự nỗ lực, em đã cố gắng hoàn thành yêu cầu đề tài. Do thời gian có hạn, khả năng còn hạn chế nên đề tài mới chỉ đáp ứng được yêu cầu của khách hàng ở mức độ đơn giản và chưa tối ưu.
+    - Mở rộng bài toán để đáp ứng nhiều hơn các chức năng còn thiếu.
+    - Cài đặt hệ thống hoàn chỉnh hơn, để chương trình thực sự hữu ích hơn, đáp ứng những nghiệp vụ phức tạp hơn, dữ liệu lớn hơn.
+TÀI LIỆU THAM KHẢO
+• Giáo trình ASP .NET MVC 5 - Nhất Nghệ.
+• Tài liệu lập trình ASP.NET – Nhà xuất bản tổng hợp TP. Hồ Chí Minh(2005).
+• Tài liệu lập trình Web với ASP.NET- Đại học Sư phạm TP. Hồ Chí Minh(2014).
+• Pro ASP.NET MVC 4- Adam Freeman và Steve Sanderson.
+• Beginning Database Program Using ASP.NET Core 3- Joshi và Bipin
+• Murach’s ASP.NET Core MVC -  Mary Delamater và Joel Murach(1/2020)
+• Các giảng viên trường UTEHY, Giáo trình Lập trình Web với PHP. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY, 2019.
+• Các giảng viên trường UTEHY, Giáo trình Lập trình Web với HTML & CSS. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY, 2018.
+• Các giảng viên trường UTEHY, Cấu trúc dữ liệu và giải thuật. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY, 2018.
+• Murach’s MySql - Joel Murach(1/2012).
+    
+
+    
+
+    
+    
+    
+    
+Xây dựng Cổng thông tin việc làm
+    
+    
+    
+    
+3
+    
+    
+    
+    
+    
+    

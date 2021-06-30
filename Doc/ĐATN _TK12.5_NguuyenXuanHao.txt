@@ -1,0 +1,500 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+      Hiện nay,chúng ta đang sống trong thời kỳ phát triển rất nhanh chóng và sôi động của công nghệ thông tin. Sự phát triển mạnh mẽ không ngừng của công nghệ thông tin trên khắp thế giới đã làm thay đổi cản bản đời sống kkinh tế của các quốc gia. Công nghệ thông tin đã và đang đi sâu vào mọi lĩnh vực của đời sống xã hội và ngày càng khẳng định được tính phổ dụng, tiện lợi, nhanh chóng và rẻ tiền mà không một hình thức xử lý thông tin nào khác có được. Một trong những vấn đề khó khăn nhất đối với các doanh nghiệp và nhà hàng đó là công đoạn quản lý. 
+      Ngày nay, ứng dụng công nghệ thông tin và việc tin học hóa được xem là một trong những yếu tố mang tính quyết định trong cuộc sống hàng ngày, nó đóng vai trò hết sức quan trọng, có thể tạo ra những bước đột phá. Việc xây dựng hệ thống quản lý để hỗ trợ cho công việc là nhu cầu tất yếu. Việc quản lý nhà hàng sẽ trở nên dễ dàng và nhanh hơn nếu có sự hỗ trợ từ hệ thống quản lý có thể hỗ trợ cho việc đó.
+      Đặc biệt trong nhà hàng vừa và nhỏ thì việc khách gọi đồ ăn, thức uống thì nhân viên sẽ phải nhận order của khách và ghi ra giấy sau đó chuyển order cho quầy chế biến, rồi sau chuyển order lên cho khách, khi khách dùng xong sẽ thanh toán. Việc quản lý thực đơn, nhân viên, hóa đơn,….. Tất cả những việc đó đều phải làm một cách thủ công dẫn đến mất rất nhiều thời gian và chi phí cho nhân công và khách hàng cũng không hài long khi phải chờ lâu. 
+→ Chính vì vậy:
+    Là sinh viên ngành CNTT, em luôn mong muốn mình sẽ làm được gì đó để ứng dụng những kiến thức đã học xây dựng được những sản phẩm có ứng dụng thực tế. Với mong muốn áp dụng những kiến thức mình đã học được tạo ra sản phẩm hoàn thiện có tính thực tế, đồng thời giúp nâng cao khả năng lập trình và đúc rút được nhiều kinh nghiệm cho những công việc trong tương lai sau khi ra trường, cùng với sự đồng ý của giáo viên hướng dẫn đề tài, em quyết định lựa chọn đề tài “Xây dựng Website và ứng dụng di động quản lý nhà hàng vừa và nhỏ” để làm đề tài đồ án tốt nghiệp.
+1.2 Mục tiêu của đề tài
+      Hệ thống quản lý nhà hàng vừa và nhỏ cần đạt được những mục tiêu sau:
+1. Hệ thống phải quản lý thực đơn của nhà hàng
+2. Hệ thống phải quản lý được nhân viên.
+3. Hệ thống phải quản lý hóa đơn
+4. Hệ thống phải quản lý được sơ đồ bàn ghế trong nhà hàng.
+5. Hệ thống phải phân quyền rõ ràng: người quản lý, nhân viên chạy bàn, nhân viên bếp.
+6. Hệ thống phải có tìm kiếm.
+7. Hệ thống phải có chức năng nhân viên chạy bàn nhận order của khách sau đó gửi order cho nhân viên chế biến
+1.3 Giới hạn và phạm vi của đề tài
+    Đề tài xây dựng dựng một hệ thống quản lý nhà hàng sử dụng các công nghệ mới trong lập trình như Java, Firebase, Sqlite, Spring MVC, Maven, Hibernate, JSP và Servlet và Công cụ lập trình Android Studio, IntelliJ IDEA, SQL Server 2016.
+1.4 Nội dung thực hiện
+    Hệ thống quản lý nhà hàng thực hiện/ nghiên cứu như sau:
+- Tìm hiểu về hoạt động quản lý và cách làm việc của các nhân viên trong các nhà hàng vừa và nhỏ.
+- Nghiên cứu công nghệ lập trình Website với Java web xử dụng các Framework như: Spring, Maven, Hibernate…và trên nền tảng android.
+- Phân tích các nghiệp vụ, chức năng của hệ thống.
+- Tìm hiểu các công nghệ ứng dụng vào hệ thống.
+- Xây dựng cơ sở dữ liệu
+- Xây dựng phác thảo giao diện của hệ thống
+- Lập trình cho hệ thống.
+- Test hệ thống.
+1.5 Phương pháp tiếp cận
+- Cách tiếp cận : 
+• Nghiên cứu các ngôn nghữ lập trình Website như JSP và Servlet, Java, Jquery, HTML, CSS, JavaScritp, Ajax...
+• Công nghệ ứng dụng vào hệ thống như Firebase, Spring, Maven, Hibernate. 
+• Mô hình phát triển MVC và MVP.
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu;
+o Phương pháp thực nghiệm.
+o Phương pháp phân tích mẫu
+   CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Android
+2.1.1 Android là gì?
+      Android là một hệ điều hành dựa trên nền tảng Linux được thiết kế dành cho các thiết bị di động có màn hình cảm ứng như điện thoại thông minh và máy tính bảng. Ban đầu, Android được phát triển bởi Tổng công ty Android, với sự hỗ trợ tài chính từ Google và sau này được chính Google mua lại vào năm 2005. Android ra mắt vào năm 2007 cùng với tuyên bố thành lập Liên minh thiết bị cầm tay mở: một hiệp hội gồm các công ty phần cứng, phần mềm, và viễn thông với mục tiêu đẩy mạnh các tiêu chuẩn mở cho các thiết bị di động. Chiếc điện thoại đầu tiên chạy Android được bán vào năm 2008. 
+      Android có mã nguồn mở và Google phát hành mã nguồn theo Giấy phép Apache. Chính mã nguồn mở cùng với một giấy phép không có nhiều ràng buộc đã cho phép các nhà phát triển thiết bị, mạng di động và các lập trình viên nhiệt huyết được điều chỉnh và phân phối Android một cách tự do. Ngoài ra, Android còn có một cộng đồng lập trình viên đông đảo chuyên viết các ứng dụng để mở rộng chức năng của thiết bị, bằng một loại ngôn ngữ lập trình Java có sửa đổi. Vào tháng 10 năm 2012, có khoảng 700.000 ứng dụng trên Android, và số lượt tải ứng dụng từ Google Play, cửa hàng ứng dụng chính của Android, ước tính khoảng 25 tỷ lượt.
+      Android cung cấp một phương pháp tiếp cận thống nhất để lập trình ứng dụng cho các thiết bị di động, nghĩa là các lập trình viên chỉ cần lập trình cho Android, và các ứng dụng của họ sẽ có thể chạy trên các thiết bị khác nhau được hỗ trợ bởi Android.
+      Những yếu tố này đã giúp Android trở thành nền tảng điện thoại thông minh phổ biến nhất thế giới, vượt qua Symbian OS vào quý 4 năm 2010, và được các công ty công nghệ lựa chọn khi họ cần một hệ điều hành không nặng nề, có khả năng tinh chỉnh, và giá rẻ chạy trên các thiết bị công nghệ cao thay vì tạo dựng từ đầu. Kết quả là mặc dù được thiết kế để chạy trên điện thoại và máy tính bảng, Android đã xuất hiện trên TV, máy chơi game và các thiết bị điện tử khác. Bản chất mở của Android cũng khích lệ một đội ngũ đông đảo lập trình viên và những người đam mê sử dụng mã nguồn mở để tạo ra những dự án do cộng đồng quản lý. Những dự án này bổ sung các tính năng cao cấp cho những người dùng thích tìm tòi hoặc đưa Android vào các thiết bị ban đầu chạy hệ điều hành khác.
+      Android chiếm 87,7% thị phần điện thoại thông minh trên toàn thế giới vào thời điểm quý 2 năm 2017, với tổng cộng 2 tỷ thiết bị đã được kích hoạt và 1,3 triệu lượt kích hoạt mỗi ngày. Sự thành công của hệ điều hành cũng khiến nó trở thành mục tiêu trong các vụ kiện liên quan đến bằng phát minh, góp mặt trong cái gọi là "cuộc chiến điện thoại thông minh" giữa các công ty công nghệ. 
+2.1.2 Các tính năng của hệ điều hành android
+    Giao diện người dùng đẹp: Màn hình cơ bản hệ điều hành Android cung cấp một giao diện người dùng đẹp và trực quan.
+    Kết nối: GSM/EDGE, IDEN, CDMA, EV-DO, UMTS, Bluetooth, Wi-Fi, LTE, NFC and WiMAX.
+    Lưu trữ: SQLite, một cơ sở dữ liệu quan hệ nhẹ, được sử dụng cho mục đích lưu trữ dữ liệu.
+    Hỗ trợ phương tiện truyền thông: H.263, H.264, MPEG-4 SP, AMR, AMR-WB, AAC, HE-AAC, AAC 5.1, MP3, MIDI, Ogg Vorbis, WAV, JPEG, PNG, GIF, and BMP.
+    Tin nhắn: SMS and MMS
+    Trình duyệt web: Dựa vào cơ chế WebKit mã nguồn mở, kết hợp với công cụ V8 JavaScript của Chrome hỗ trợ HTML5 và CSS3.
+    Cảm ứng đa điểm: Android có hỗ trợ cho cảm ứng đa điểm mà ban đầu đã được thực hiện có sẵn trong điện thoại như HTC Hero.
+     Multi-tasking: Người dùng có thể nhảy từ một nhiệm vụ nàyđến nhiệm vụ khác và cùng một thời gian, các ứng dụng khác nhau có thể chạy đồng thời.
+     Resizable widgets: Widget là thay đổi kích thước, vì vậy người dùng có thể mở rộng chúng để hiển thị nội dung nhiều hơn hoặc thu nhỏ chúng để tiết kiệm không gian.
+    Đa ngôn ngữ: Hỗ trợ thư mục đơn và văn bản hai chiều.
+    GCM: Google Cloud Messaging (GCM) là một dịch vụ cho phép các nhà phát triển gửi tin nhắn dữ liệu lên user của họ trên các thiết bị Android, mà không cần một giải pháp đồng bộ hóa độc quyền.
+    Wi-Fi Direct: Một công nghệ cho phép các ứng dụng Tìm thấy và ghép đôi trực tiếp, qua một băng thông cao kết nối peer-to-peer.
+    Android Beam: Một công nghệ NFC cho phép người dùng chia sẻ ngay lập tức, chỉ bằng cách chạm hai điện thoại NFC với nhau.
+2.1.3 Kiến trúc hệ điều hành Android
+    Kiến trúc hệ điều hành Android gồm 4 phần chính, mô hình dưới đây sẽ cho ta cái nhìn tổng quan về kiến trúc Android. Nhân của Android được phát triển dựa vào Kernel Linux 2.6. Mỗi tầng trong kiến trúc Android hoạt động dựa vào tầng bên dưới nó.
+
+    Hình 2.1– Kiến trúc hệ điều hành android
+    Có thể ban đầu bạn thấy sơ đồ hơi rối mắt nhưng không sao, chúng ta sẽ lần lượt tìm hiểu theo thứ tự từ dưới lên.
+    Nhân Linux (Linux kernel)
+    Nằm ở tầng dưới cùng là lớp Linux kernal – Linux 3.6 với khoảng 115 patches. Lớp này liên hệ với phần cứng và nó chứa tất cả driver phần cứng cần thiết như camera, bàn phím, màn hình…
+    Thư viện Android (Android libraries) và Android Runtime
+    Phía trên tầng Linux kernel là tầng libraries, chứa những thư viện hỗ trợ. Một số có thể kể đến như là bộ máy trình duyệt web mã nguồn mở WebKit, thư viện libc, cơ sở dữ liệu SQLite tiện lợi cho việc lưu trữ và chia sẻ dữ liệu, thư viện hỗ trợ thu phát âm thanh và video, thư viện SSL giúp bảo mật mạng…
+    Tầng này chứa tất cả các thư viện Java, được viết đặc biệt cho Android như các thư viện framework, các thư viện xây dựng giao diện, đồ họa và cơ sở dữ liệu. Dưới đây là một số thư viện quan trọng mà các lập trình viên nên biết:
+• android.app − Cung cấp quyền truy cập tới mô hình ứng dụng và là nền tảng của mọi ứng dụng Android applications.
+• android.content − Cho phép truy cập nội dung, phát hành và tin nhắn giữa các ứng dụng và các thành phần trong một ứng dung.
+• android.database −  Được dùng để truy cập vào dữ liệu được đưa ra bởi bộ phận cung cấp nội dung, bao gồm các lớp quản lý cơ sở dữ liệu SQLite.
+• android.opengl − Cho phép tương tác với thư viện đồ họa OpenGL ES 3D.
+• android.os − Giúp ứng dụng truy cập những dịch vụ cơ bản của hệ điều hành bao gồm tin nhắn, dịch vụ hệ thống và liên lạc nội bộ (inter-process communication).
+• android.text − Được dùng để vẽ và thao tác văn bản trên màn hình.
+• android.view − Các khối xây dựng cơ bản của giao diện người dùng.
+• android.widget − Một tập hợp rất nhiều thành phần giao diện được xây dựng sẵn như nút bấm (button), nhãn (label), danh sách hiển thị (list views), quản lý bố cục (layout managers)…
+• android.webkit − Tập hợp các lớp (classes) cho phép trình duyệt web được nhúng vào ứng dụng.
+    Trong tầng này còn có một phần không kém phần quan trọng là Android runtime, bây giờ chúng ta sẽ tìm hiểu các thư viện C/C++ trong tầng này.
+    Android Runtime chứa Dalvik Virtual Machine (DVM) – một biến thể của Java Virtual Machine, đặc biêt thiết kế và tối ưu hóa cho Android. DVM giúp mỗi ứng dụng Android chạy trong chính tiến trình (process) của nó với một đại diện (instance) của DVM.
+    Ngoài ra, Android Runtime cũng chứa tập hợp các thư viện quan trong cho phép người lập trình viết ứng dụng sử dụng ngôn ngữ lập trình Java.
+    Application Framework
+    Application Framework cung cấp nhiều dịch vụ cấp cao dưới dạng các lớp viết bằng Java (Java classes) Lập trình viên được phép sử dụng các lớp này để tạo ra các ứng dụng.
+    Android framework chứa các dịch vụ quan trọng như:
+• Activity Manager − Quản lý tất cả các phần của vòng đời (lifecycle) ứng dụng và các hoạt động ngăn xếp (activity stack).
+• Content Providers − Cho phép ứng dụng phát hành và chia sẻ dữ liệu với ứng dụng khác.
+• Resource Manager − Cho phép truy cập tới những tài nguyên không phải là mã nguồn như chuỗi, cài đặt màu, bố cục giao diện.
+• Notifications Manager − Giúp ứng dụng hiển thị thông báo và nhắc nhở người dùng.
+• View System − Một tập hợp mở rộng giúp tạo giao diện người dùng.
+    Ứng dụng (applications)
+    Ở tầng trên cùng là các ứng dụng Android đi kèm với hệ điều hành như Contacts Books, Browser, Games… Thiết nghĩ không cần nói nhiều thêm về tầng này.
+2.2 Tổng quan về Google Firebase
+2.2.1 Google Firebase là gì?
+    Google Firebase là gì: Đó là một dịch vụ cơ sở dữ liệu thời gian thực hoạt động trên nền tảng đám mây được cung cấp bởi Google nhằm giúp các lập trình phát triển nhanh các ứng dụng bằng cách đơn giản hóa các thao tác với cơ sở dữ liệu.
+    GG FireBase bao gồm việc
+• Lưu trữ dữ liệu thời gian thực.
+• Xác thực người dùng
+• Firebase hosting
+Chi tiết:
+1. Dữ liệu thời gian thực - Firebase Realtime Database
+o Bạn đăng ký 1 tài khoản trên firebase, tạo một ứng dụng và bạn đã có 1 cơ sở dữ liệu thời gian thực.
+o Dữ liệu sẽ được cung cấp cho bạn dưới dạng JSON và luôn đồng bộ thời gian thực đến mọi kết nối client.
+o Với các ứng dụng đa nền tảng tất cả các client sẽ đề sử dụng chung 1 DB và luôn được tự động cập nhật dữ liệu mới nhất.
+o Tất cả dữ liệu được truyền qua một kết nối an toàn SSL với một chứng nhận 2048-bit.
+o Làm việc offline: Đừng lo nếu mất mạng bởi dữ liệu luôn được lưu trữ trước ở local mỗi khi có sự thay đổi nào sẽ được tự động cập nhật lên server của Firebase và ngược lại khi dữ liệu ở local là cũ hơn với server nó cũng sẽ được tự động cập nhật để dữ liệu luôn là mới nhất.
+2. Xác thực người dùng: Firebase đã xây dựng chức năng cho việc xác thực người dùng với Email, Facebook, Twitter, GitHub, Google, và xác thực nạc danh. Nó giúp bạn nhiều trong việc xác thực người dùng.
+3. Firebase Hosting: Firebase cung cấp các hosting và được phân phối qua SSL từ CDN sẽ giúp bạn tiết kiệm được rất nhiều thời gian trong việc xây dựng ứng dụng.
+
+2.3 Tổng quan về Spring Framework
+2.3.1  Sự ra đời của Spring Framework
+    Vào năm 2002, Spring Framework phát hành phiên bản đầu tiên bởi Rod Johnson. Việc xây dựng các ứng dụng doanh nghiệp trở nên đơn giản và dễ dàng hơn. Rod Johnson đã cho xuất bản một cuốn sách được phổ biến rộng rãi có nhan đề "J2EE Development without EJB". Điều này đã cho Spring Framework rất nhiều động lực để thay thế EJB.
+    Ngày nay, Spring đã trở thành framework mã nguồn mở phổ biến nhất để xây dựng các ứng dụng doanh nghiệp. Cách tiếp cận thực tế ban đầu của Rod Johnson tiếp tục được phát triển và hướng tới một bộ công cụ hoàn chỉnh dành cho xây dựng các ứng dụng doanh nghiệp. Theo một số nguồn, trên 50% các ứng dụng web Java hiện nay đang sử dụng Spring.
+- Để ngăn chặn sự phức tạp trong phát triển các ứng dụng, Spring Framework thường dựa trên các quan điểm như sau:
+- Đơn giản hóa công việc phát triển thông qua việc sử dụng các đối tượng Java đơn giản hay còn được gọi là POJO (Plain Old Java Object)
+- Nới lỏng ràng buộc giữa các thành phần thông qua việc sử dụng Dependency Injection và viết các interface
+- Tiếp cận lập trình khai báo bằng cách sử dụng các quy tắc (convention) và các khía cạnh (aspect) chung
+- Giảm thiểu các mã nghi thức và soạn sẵn (boilerplate) thông qua việc sử dụng các khuôn mẫu (template) và các khía cạnh
+2.3.2 Các thành phần trong Spring Framework
+• Spring core
+   	Spring Core chính là thành phần trung tâm, cốt lõi của Spring Framework. Đây chính là nền tảng để xây dựng nên các thành phần khác.
+   Lược đồ dưới đây mô tả mối quan hệ giữa Spring Core với các thành phần khác trong Spring Framework:
+   
+    Hình 2.2 – Các thành phần trong Spring Framework
+• Spring bean
+   Spring Bean là trung tâm của Spring Core và là trái tim của một ứng dụng Spring. Trái ngược với EJB, Spring Framework được thiết kế từ lõi bằng cách sử dụng các POJO hay các Spring Bean. Spring Bean có thể được hiểu là các đối tượng Java đơn giản. Điều này khá tương đồng với nguyên lý thiết kế "Đơn trách nhiệm" (single responsibility) của Robert C Martin trong lập trình hướng đối tượng.
+
+
+• Dependency Injection (DI)
+   Dependency Injection (có thể dịch tiêm các thành phần phụ thuộc) là một sức mạnh nổi bật của Spring Framework. Trong các phiên bản gốc của EJB người ta không thấy sự xuất hiện của Dependency Injection, nhưng có lẽ do nhận thấy sự thành công từ Spring khi sử dụng Dependency Injection, các phiên bản EJB 3.x đã cung cấp các annotation để thực hiện inject các dependency. Dependency Injection là một mẫu thiết kế phần mềm mà các đối tượng phụ thuộc sẽ được inject vào một lớp nào đó. Dependency Injection là một implementation cụ thể của khái niệm Inversion of Control (đảo ngược điều khiển).
+   Ta sẽ có một ví dụ đơn giản về Dependency Injection như sau: Bạn có một web controller có nhiệm vụ lưu thông tin gửi từ form người dùng. Theo nguyên lý Đơn trách nhiệm, bạn không muốn lớp controller tương tác với cơ sở dữ liệu. Thay vào đó, bạn sẽ sử dụng một lớp service để làm công việc này. Như vậy, controller của bạn sẽ chỉ phải xử lý dữ liệu của form (get form data, validate data, ...) rồi gọi một phưong thức của lớp service được inject để lưu dữ liệu. Controller không cần phải quan tâm hay lo lắng về kết nối cơ sở dữ liệu, pooling hay bảng nào sẽ được update. Cũng như service không cần phải biết request có những thông tin gì.
+• Spring Context
+   Spring Context mang mọi thứ lại với nhau. Spring Context kế thừa các tính năng của Spring Bean và bổ sung các hỗ trợ cho internationalization (ví dụ như các resource bundle), event propagation, resource loading ... Ngoài ra, Spring Context cũng hỗ trợ các tính năng của Java EE như EJB, JMX và truy cập từ xa cơ bản. Interface ApplicationContext là tiêu điểm của Spring Context.
+• Spring Expression Language (SpEL)
+   Spring Expression Language là một ngôn ngữ ngắn gọn giúp cho việc cấu hình Spring Framework trở nên linh hoạt hơn.
+   
+2.3.3 Các dự án trong Spring Framework
+   Trên thực tế Spring Framework là một tập hợp của nhiều dự án con. Spring Core như chúng ta đã tìm hiểu là nền tảng của các dự án trong Spring Framework. Một một dự án sẽ đảm nhận một chức năng riêng trong việc xây dựng các ứng dụng doanh nghiệp. Chúng ta sẽ cùng điểm qua các dự án lớn trong Spring.
+• Spring MVC
+   Spring MVC được thiết kế dành cho việc xây dựng các ứng dụng nền tảng web. Đây là một dự án chúng ta không thể bỏ qua khi xây dựng các ứng dụng Java web.
+• Spring Data
+   Cung cấp một cách tiếp cận đúng đắn để truy cập dữ liệu từ cơ sở dữ liệu quan hệ, phi quan hệ, map-reduce và thậm chí còn hơn thế nữa.
+• Spring Security
+   Dự án này cung cấp các cơ chế xác thực (authentication) và phân quyền (authorization) cho ứng dụng của bạn.
+• Spring Boot
+   Spring Boot là một framework giúp chúng ta phát triển cũng như chạy ứng dụng một cách nhanh chóng.
+• Spring Batch
+   Dự án này giúp chúng ta dễ dàng tạo các lịch trình (scheduling) và tiến trình (processing) cho các công việc xử lý theo mẻ (batch job).
+• Spring Integration
+   Spring Integration là một implementation của Enterprise Integration Patterns (EIP). Dự án này thiết kế một kiến trúc hướng thông điệp hỗ trợ việc tích hợp các hệ thống bên ngoài.
+• Spring XD
+   Bạn đang băn khoăn về Big Data, tại sao không thử tìm hiểu Spring XD - mục tiêu của dự án này là đơn giản hóa công việc phát triển các ứng dụng Big Data.
+• Spring Social
+   Dự án này sẽ kết nối ứng dụng của bạn với các API bên thứ ba của Facebook, Twitter, Linkedin .
+2.4 Tổng quan về Hibernate Framework
+2.4.1 Hibernate Framework là gì?
+    Hibernate là 1 ORM Framework: thực hiện mapping cơ sở dữ liệu quan hệ sang các object trong ngôn ngữ hướng đối tượng.
+    Hibernate là 1 Framework cho persistence layer: Thực hiện giao tiếp giữa tầng ứng dụng với tầng dữ liệu (kết nối, truy xuất, lưu trữ…)
+2.4.2 Kiến trúc của Hibernate Framework
+    
+    Hình 2.3 – Kiến trúc của Hibernate Framework
+    Mỗi table trong database là một object trong Hibernate. Do đó, bạn cần có một java bean cho mỗi table trong database. Các java bean này sẽ có các getters/setters và một số ngoại lệ theo quy ước của Hibernate.
+    Mỗi file mapping (ánh xạ) có dạng ***.hbm.xml có nhiệm vụ đặc tả mỗi quan hệ giữa các thuộc tính của đối tượng và các trường trong bảng CSDL (cột nào ứng với thuộc tính nào của class, kiểu giá trị là gì, quan hệ giữa các bảng chuyển thành quan hệ giữa các lớp ra sao…).
+    File Hibernate.cfg.xml : Đây là tập tin được load đầu tiên khi khởi chạy ứng dụng Hibernate. Nó chứa các thông tin về kết nối (database kết nối là gì (MySQL, Oracle, SQL server…), username và password kết nối với database là gì, tên database được kết nối), driver kết nối…
+2.5 Tổng quan về Maven Apache
+2.5.1 Maven là gì?
+    Maven là công cụ quản lý và thiết lập tự động 1 dự án phần mềm. Chủ yếu dùng cho các lập trình viên java, nhưng nó cũng có thể được dùng để xây dựng và quản lý các dự án dùng C#, Ruby, Scala hay ngôn ngữ khác.
+    Maven phục vụ mục đích tương tự như Apache Ant, nhưng nó dựa trên khái niệm khác và cách hoạt động khác.
+    Maven hỗ trợ việc tự động hóa các quá trình tạo dự án ban đầu, thực hiện biên dịch, kiểm thử, đóng gói và triển khai sản phẩm.
+    Được phát triển bằng ngôn ngữ Java cho phép Maven chạy trên nhiều nền tảng khác nhau: Windows, Linux và Mac OS...
+2.5.2 Maven hoạt động như thế nào
+    Maven dùng khái niệm Project Object Model (POM) để mô tả việc build project, các thành phần phụ thuộc và các module. Nó định nghĩa trước các target cho việc khai báo task, trình biên dịch, đóng gói và thứ tự hoạt động để mọi việc diến ra tốt nhất.
+    Trong mỗi project Maven tạo ra một file .pom, trong file này định nghĩa ra những task như task khi chạy test, task khi build và khi chạy Maven sẽ dựa vào những định nghĩa này để thao tác với project.
+2.6 Tổng quan về mô hình MVC
+
+    Hình 2.4 – Hoạt động của mô hình MVC
+    Khi bắt tay vào việc học lập trình web và php .Chắc hẳn chúng ta ai cũng muốn làm một website thật đẹp và lập trình thật dễ hiểu và dễ sửa chữa lỗi khi có lỗi xảy ra vì vậy các bạn nên chọn mô hình mvc để làm cho website của mình.
+    Mô hình MVC là viết tắc của 3 từ (Model-View-Controller) là một kiến trúc phần mềm hay còn gọi là mô hình thiết kế được sử dụng trong kỹ thuật phần mềm nó giúp cho các developer tách ứng dụng của học ra làm 3 thành phần khác nhau là:Model,View,Controller.Mỗi thành phần có từng chức năng riêng và có các đặc điểm riêng độc lập với các thành phần khác.
+    Trong 3 thành phần Model,View,Controller đều có những chức năng riêng bây giờ chúng ta sẽ cùng tìm hiểu từng phần và công dụng của từng phần .
+    Trước tiên là lớp Model : nói đơn giản cho các bạn dễ hiểu là model là thành phần mà thao tác với các database là chính,Model thông báo đến các view và controller có liên quan khi thay đổi trạng thái .Thông báo này cho phép các view tạo ra các hiển thị được cập nhật và cho phép các controller thay đổi
+    Lớp thứ 2 trong mô hình MVC là View:yêu cầu các model gửi các thông tin mà nó cần để tạo ra các hiển thị trên view nói dễ hiểu là lớp view là lớp để hiển thị nội dung ra website của chúng ta.
+    Lớp cuối cùng trong mô hình Controller :Controller có thể gửi yêu cầu đến các view liên kết của nó có thể thay đổi hiển thị trên view nó cũng có thể gửi yêu cầu đến model để cập nhật trạng thái của model.
+2.7 Tổng quan về mô hình MVP
+
+    Hình 2.5 – Hoạt động của mô hình MVP
+    MVP là một mô hình kiến trúc hướng giao diện người dùng, được thiết kế để tạo thuận lợi cho việc kiểm thử đơn vị (unit testing) và tăng tính tách biệt giữa tầng dữ liệu và tầng hiển thị dữ liệu trong mô hình MVC.
+    Mô hình MVP cho phép tách tầng trình diễn (Presenter) ra khỏi tầng dữ liệu (Model), vì vậy tương tác với giao diện được tách biệt với cách chúng ta biểu diễn nó trên màn hình (View), hay nói cách khác, tất cả logic khi người dùng tương tác được tách ra và đưa vào tầng trình diễn. Thiết kế lý tưởng nhất là với cùng một logic được áp dụng cho nhiều View khác nhau và hoán đổi được cho nhau.
+    M – Model: lớp xử lí dữ liệu. Lớp này sẽ chịu trách nhiệm lấy dữ liệu từ database hoặc network một cách bất đồng bộ. Sau đó sẽ trả về dữ liệu cho Presenter thông qua các hàm callback.
+    V- View: lớp xử lí view. Lớp này chịu trách nhiệm tìm view (bind view), đưa dữ liệu vào view, animation, kiểm soát các input event của user và gửi cho present các event.
+    P – Presenter: lớp này sẽ là lớp xử lí các bussiness logic. Đây là sẽ lớp trung gian có thể giao tiếp được với hai lớp Model & View (chú ý Model – View không  giao tiếp trực tiếp với nhau). Khi lớp View nhận một input event sẽ gửi sự kiện xuống lớp Presenter, lớp Presenter lấy sẽ liệu từ lớp Model và gửi lại cho lớp View và hướng dẫn lớp View cách hiển thị.
+    
+   
+   CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Phát biểu bài toán
+3.1.1 Tổng quan về hệ thống mới
+Hệ thống quản lý nhà hàng vừa và nhỏ cung cấp các chức năng:
+a. Phân hệ website
+• Chức năng chính
+o Quản lý thực đơn
+Quản lý thông tin của các sản phẩm trong thực đơn .
+Bao gồm: Thêm, sửa, xóa sản phẩm trong thực đơn, hiển thị chi tiết của từng sản phẩm.
+o Quản lý hóa đơn
+Quản lý các thông tin hóa đơn, chi tiết hóa đơn của khách hàng.
+Bao gồm: Kiểm tra hóa đơn và thống kê báo cáo.
+o Quản lý nhân viên
+Quản lý tất cả các nhân viên làm việc tại nhà hàng.
+Bao gồm: Thêm, sửa, xóa nhân viên và phân quyền cho nhân viên.
+o Quản lý sơ đồ nhà hang
+Quản lý các khu vực trong nhà hàng có đặt các bàn cho khách.
+Bao gồm: Thêm, sửa, xóa bàn và khu vực. mỗi bàn gồm có số lượng người cho 1 bàn.
+• Chức năng khác
+o Đăng nhập
+Đăng nhập theo tài khoản của mỗi nhân viên
+o Thống kê
+Thống kê hóa đơn theo ngày
+Thống kê doanh thu theo ngày.
+
+o Tìm kiếm
+Tìm kiếm thông tin thực đơn
+Tìm kiếm thông tin nhân viên làm tại nhà hàng
+Tìm kiếm hóa đơn
+b. Phân hệ mobile
+• Chức năng chính
+o Nhận order của khách
+Khi khách gọi món thì nhân viên sẽ nhận order từ khách hàng
+Bao gồm: gửi order cho nhân viên chế biến và nhận order đã được chế biến xong.
+o Lập hóa đơn thanh toán gửi lên server
+Kiểm tra lại order và lập hóa đơn toán và gửi thông tin kên server.
+3.1.2 Môi trường phát triển
+Môi trường phần cứng
+○ CPU: Snapdragon 410 hoặc cao hơn
+○ RAM: tối thiểu 512 MB
+○ Bộ nhớ trong: tối thiểu 12MB
+Môi trường phần mềm
+○ Hệ điều hành: Android 4.4 trở lên
+○ Công cụ phát triển: Android Studio
+
+
+3.2 Biểu đồ Use-case
+3.2.1 Biểu đồ Use-case tổng quát
+
+    Hình 3.1 - UseCase mức tổng quát
+
+
+3.2.2 Đặc tả Use-case “Quản lý nhân viên”
+
+    Hình 3.2 - UseCase quản lý nhân viên
+
+STTTên ActorÝ nghĩa/ Ghi chú1AdminNgười quản lý, sử dụng toàn bộ use-case
+STTChức năng, nghiêp vụÝ nghĩa/ Ghi chú1Thêm nhân viênThêm nhân viên2Sửa nhân viênSửa thông tin nhân viên3Xóa nhân viênXóa nhân viên4Hiển thị nhân viênHiển thị thông tin nhân viên    Bảng 3.1  – Chức năng và nghiệp vụ của usecase quản lý nhân viên
+
+
+• Đặc tả usecase quản lý nhân viên:
+UseCase- Quản lý nhân viênMô tả- Thêm, sửa, xóa, hiên thị thông tin nhân viênNgười dùng- Người dùng đã đăng nhậpĐiều kiện đầu- Truy cập vào WebsiteSự kiện chính- Hiển thị bài thông nhân viên: Chọn chức năng quản lý nhân viên thì sẽ có danh sách nhân viên.
+- Thêm nhân viên: Nhấn chọn “Thêm nhân viên” và điền các thông tin cần thiết. Sau đó nhấn chọn “Thêm nhân viên”
+- Sửa thông tin nhân viên: Nhấn chọn “Sửa” trên danh sách các nhân viên, trang cập nhật thông tin của nhân viên sẽ hiển thị với các trường tương tự như thêm mới nhân viên. Sau khi cập nhật nhấn “Cập nhật” để lưu thay đổi.
+- Xóa nhân viên: Nhấn chọn “xóa” trên danh sách các nhân viên để xóa nhân viên cùng các thông tin của nhân viên đó.Sự kiện phụ- Người dùng nhập sai kiểu dữ liệu các trường nhập liệu bắt buộc thì sẽ không cho submit.Điều kiện cuối- Thêm: Hiển thị lại danh sách nhân viên khi thêm thành công.
+-  Sửa: Hiển thị lại danh sách nhân viên khi cập nhật thành công
+- Xóa: thông báo xóa thành công xuất hiện.    Bảng 3.2 – Đặc tả UseCase Quản lý nhân viên
+
+
+3.2.3 Đặc tả Use-case “Quản lý thực đơn”
+
+    Hình 3.3 - UseCase quản lý thực đơn
+
+STTTên ActorÝ nghĩa/ Ghi chú1Nhân viênNhân viên có quyền thực hiện chức năng quản lý thực đơn.
+STTChức năng, nghiêp vụÝ nghĩa/ Ghi chú1Thêm sản phẩmThêm sản phẩm 2Sửa sản phẩmSửa thông tin sản phẩm3Xóa sản phẩm Xóa sản phẩm4Hiển thị sản phẩmHiển thị danh sách sản phẩm    Bảng 3.3 – Chức năng và nghiệp vụ của usecase quản lý thực đơn
+
+
+• Đặc tả usecase quản lý thực đơn:
+UseCase- Quản lý thực đơnMô tả- Thêm, sửa, xóa, hiên thị thông tin sản phẩmNgười dùng- Người dùng đã đăng nhậpĐiều kiện đầu- Truy cập vào WebsiteSự kiện chính- Hiển thị thông sản phẩm: Chọn chức năng quản lý sản phẩm thì sẽ có danh sách sản phẩm.
+- Thêm sản phẩm: Nhấn chọn “Thêm sản phẩm” và điền các thông tin cần thiết. Sau đó nhấn chọn “Thêm sản phẩm”
+- Sửa thông tin sản phẩm: Nhấn chọn “Sửa” trên danh sách các sản phẩm, trang cập nhật thông tin của sản phẩm sẽ hiển thị với các trường tương tự như thêm mới sản phẩm. Sau khi cập nhật nhấn “Cập nhật” để lưu thay đổi.
+- Xóa sản phẩm: Nhấn chọn “xóa” trên danh sách các sản phẩm để xóa sản phẩm cùng các thông tin của sản phẩm đó.Sự kiện phụ- Người dùng nhập sai kiểu dữ liệu các trường nhập liệu bắt buộc thì sẽ không cho submit.Điều kiện cuối- Thêm: Hiển thị lại danh sách sản phẩm khi thêm thành công.
+-  Sửa: Hiển thị lại danh sách sản phẩm khi cập nhật thành công
+- Xóa: thông báo xóa thành công xuất hiện.    Bảng 3.4 – Đặc tả UseCase Quản lý thông tin thực đơn
+
+
+3.2.4 Đặc tả Use-case “Quản lý loại sản phẩm”
+
+    Hình 3.4 – UseCase quản lý loại sản phẩm
+STTTên ActorÝ nghĩa/ Ghi chú1Nhân viênNhân viên có quyền thực hiện chức năng này
+STTChức năng, nghiêp vụÝ nghĩa/ Ghi chú 1Thêm loại sản phẩmThêm loại sản phẩm 2Sửa loại sản phẩmSửa thông tin loại sản phẩm3Xóa loại sản phẩmXóa loại sản phẩm4Hiển thị loại sản phẩmHiên thị loại sản phẩm    Bảng 3.5 – Chức năng và nghiệp vụ của usecase quản lý loại sản phẩm
+
+
+• Đặc tả usecase quản lý loại sản phẩm:
+UseCase- Quản lý loại sản phẩmMô tả- Thêm, sửa, xóa, hiên thị thông tin loại sản phẩmNgười dùng- Người dùng đã đăng nhậpĐiều kiện đầu- Truy cập vào WebsiteSự kiện chính- Hiển thị thông loại sản phẩm: Chọn chức năng quản lý loại sản phẩm thì sẽ có danh sách loại sản phẩm.
+- Thêm loại sản phẩm: Nhấn chọn “Thêm loại sản phẩm” và điền các thông tin cần thiết. Sau đó nhấn chọn “Thêm loại  sản phẩm”
+- Sửa thông tin loại sản phẩm: Nhấn chọn “Sửa” trên danh sách các loại sản phẩm, trang cập nhật thông tin của loại sản phẩm sẽ hiển thị với các trường tương tự như thêm mới loại sản phẩm. Sau khi cập nhật nhấn “Cập nhật” để lưu thay đổi.
+- Xóa loại sản phẩm: Nhấn chọn “xóa” trên danh sách các loại sản phẩm để xóa loại sản phẩm cùng các thông tin của loại sản phẩm đó.Sự kiện phụ- Người dùng nhập sai kiểu dữ liệu các trường nhập liệu bắt buộc thì sẽ không cho submit.Điều kiện cuối- Thêm: Hiển thị lại danh sách loại sản phẩm khi thêm thành công.
+-  Sửa: Hiển thị lại danh sách loại sản phẩm khi cập nhật thành công
+- Xóa: thông báo xóa thành công xuất hiện.    Bảng 3.6 – Đặc tả UseCase Quản lý thông tin loại sản phẩm
+
+
+3.2.5 Đặc tả Use-case “Quản lý hóa đơn”
+
+    Hình 3.5 – UseCase quản lý hóa đơn
+STTTên ActorÝ nghĩa/ Ghi chú1Nhân viênNhân viên có quyền thực hiện chức năng này
+STTChức năng, nghiêp vụÝ nghĩa/ Ghi chú 1Thêm hóa đơnThêm hóa đơn 2Sửa hóa đơnSửa thông tin hóa đơn3Xóa hóa đơnXóa hóa đơn4Hiển thị hóa đơnHiên thị hóa đơn    Bảng 3.7 – Chức năng và nghiệp vụ của usecase quản lý hóa đơn
+
+
+• Đặc tả usecase quản lý hóa đơn:
+UseCase- Quản lý hóa đơnMô tả- Thêm, sửa, xóa, hiên thị thông tin hóa đơnNgười dùng- Người dùng đã đăng nhậpĐiều kiện đầu- Truy cập vào Website và ứng dụng trên mobileSự kiện chính- Hiển thị thông hóa đơn: Chọn chức năng quản lý hóa đơn thì sẽ có danh sách hóa đơn.
+- Thêm hóa đơn: Sau khi order xong trên thiết bị mobile thì hóa đơn sẽ được thiết lập và thêm vào hệ thống.
+- Sửa thông tin hóa đơn: Nhấn chọn “Sửa” trên danh sách các hóa đơn, trang cập nhật thông tin của loại sản phẩm sẽ hiển thị với các của hóa đơn. Sau khi cập nhật nhấn “Cập nhật” để lưu thay đổi.
+- Xóa hóa đơn: Nhấn chọn “xóa” trên danh sách hóa đơn để xóa hóa đơn cùng các thông tin của hóa đơn đó.Sự kiện phụ- Người dùng nhập sai kiểu dữ liệu các trường nhập liệu bắt buộc thì sẽ không cho submit.Điều kiện cuối- Thêm: Hiển thị lại danh sách hóa đơn khi thêm thành công.
+-  Sửa: Hiển thị lại danh sách hóa đơn khi cập nhật thành công
+- Xóa: thông báo xóa thành công xuất hiện.    Bảng 3.8 – Đặc tả UseCase Quản lý thông tin loại hóa đơn
+
+
+3.2.6 Đặc tả Use-case “Quản lý sơ đồ”
+
+    Hình 3.6 – UseCase quản lý sơ đồ
+
+STTTên ActorÝ nghĩa/ Ghi chú1Nhân viênNhân viên có quyền thực hiện chứ năng
+STTChức năng, nghiêp vụÝ nghĩa/ Ghi chú 1Thêm khu vực và bànThêm khu vực và bàn2Sửa khu vực và bànSửa thông tin khu vực và bàn3Xóa khu vực và bànXóa khu vực và bàn4Hiển thị khu vực và bànHiên thị khu vực và bàn    Bảng 3.9 – Chức năng và nghiệp vụ của usecase quản lý sơ đồ
+
+
+• Đặc tả usecase quản lý sơ đồ:
+UseCase- Quản lý loại khu vực và bànMô tả- Thêm, sửa, xóa, hiên thị thông tin khu vực và bànNgười dùng- Người dùng đã đăng nhậpĐiều kiện đầu- Truy cập vào WebsiteSự kiện chính- Hiển thị thông loại sản phẩm: Chọn chức năng quản khu vực và bàn thì sẽ có danh sách khu vực và bàn.
+- Thêm loại khu vực và bàn: Nhấn chọn “Thêm khu vực và bàn” và điền các thông tin cần thiết. Sau đó nhấn chọn “Thêm khu vực và bàn”
+- Sửa thông tin khu vực và bàn: Nhấn chọn “Sửa” trên danh sách các khu vực và bàn, trang cập nhật thông tin của khu vực và bàn sẽ hiển thị với các trường tương tự như thêm mới loại sản phẩm. Sau khi cập nhật nhấn “Cập nhật” để lưu thay đổi.
+- Xóa khu vực và bàn: Nhấn chọn “xóa” trên danh sách các khu vực và bàn để xóa khu vực và bàn cùng các thông tin của khu vực và bàn đó.Sự kiện phụ- Người dùng nhập sai kiểu dữ liệu các trường nhập liệu bắt buộc thì sẽ không cho submit.Điều kiện cuối- Thêm: Hiển thị lại danh sách khu vực và bàn khi thêm thành công.
+-  Sửa: Hiển thị lại danh sách khu vực và bàn khi cập nhật thành công
+- Xóa: thông báo xóa thành công xuất hiện.    Bảng 3.10 – Đặc tả UseCase Quản lý sơ đồ
+
+
+3.2.7 Đặc tả Use-case “Tìm kiếm”
+
+    Hình 3.7 – UseCase tìm kiếm
+Tóm tắt
+STTTên ActorÝ nghĩa/ Ghi chú1AdminNgười quản trị, sử dụng toàn bộ use-case
+STTChức năng, nghiêp vụÝ nghĩa/ Ghi chú1Tìm kiếm sản phẩmTìm kiếm thông tin sản phẩm theo tên2Tìm kiếm nhân viênTìm kiếm thông tin nhân viên theo tên    Bảng 3.11 – Chức năng và nghiệp vụ của usecase tìm kiếm
+
+
+• Đặc tả usecase tìm kiếm:
+UseCase- Tìm kiếmMô tả- Tìm kiếm tất cả sản phẩm và nhân viên trên Website bằng các từ khóaNgười dùng- Tất cả các loại userSự kiện chính- Người dùng nhập từ khóa vào ô tìm kiếm dữ liệu và nhất nút “Tìm kiếm”Sự kiện phụ- Người dùng bỏ trống ô tìm kiếm, hệ thống gửi thông báo yêu cầu nhập liệu.Điều kiện cuối- Kết quả tìm kiếm sẽ hiển thị.    Bảng 3.12 – Đặc tả UseCase Tìm kiếm
+
+
+3.2.8 Đặc tả Use-cae “Thống kê”
+
+    Hình 3.8 – UseCase thống kê
+• Đặc tả usecase thống kê:
+Tóm tắt
+STTTên ActorÝ nghĩa/ Ghi chú1AdminNgười quản lý, sử dụng toàn bộ use-case
+STTChức năng, nghiêp vụÝ nghĩa/ Ghi chú1Thống kê hóa đơn theo ngàyThống kê hóa đơn theo ngày3Thống kế doanh thu theo ngàyThống kế doanh thu theo ngày    Bảng 3.13  – Chức năng và nghiệp vụ của usecase thống kê
+    
+
+UseCase- Thống kêMô tả- Thống kê hóa đơn và doanh thu theo ngàyNgười dùng- Người dùng đã đăng nhậpĐiều kiện đầu- Truy cập vào WebsiteSự kiện chính- Thống kê hóa đơn theo ngày: Chọn chức năng thống kê thì sẽ có danh sách các hóa đơn trong ngày.
+- Thống kê doanh thu theo ngày: Chọn chức năng thống kê thì sẽ có danh sách các hóa đơn trong ngày.    Bảng 3.14 – Đặc tả UseCase Quản lý thống kê
+3.3 Biểu đồ lớp
+
+    Hình 3.9 – Biểu đồ lớp mức phân tích
+    
+    
+    
+    Danh sách các lớp đối tượng và quan hệ
+STTTên lớp/quan hệLoạiÝ nghĩa/Ghi chú1Nhân viênPublicLớp nhân viên2Phân quyềnPublicLớp phân quyền3Loại sản phẩmPublicLớp loại sản phẩm4Sản phẩmPublicLớp sản phẩm5Khu vựcPublicLớp khu vực6Bàn ănPublicLớp bàn ăn7Hóa đơnPublicLớp hóa đơn8Chi tiết hóa đơnPublicLớp chi tiết hóa đơn    Mô tả chi tiết từng lớp đối tượng
+o Lớp nhân viên
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IdPrivatePrimary keyMã nhân viên2TenNVPrivateNot nullTên nhân viên3PasswordPrivateNot nullMật khẩu4UserNamePrivateNot nullTên tài khoản5DiaChiPrivateNot nullĐịa chỉ6EmailPrivateNot nullEmail7SDTPrivateNot nullSố điện thoại8HinhAnhPrivateNot nullHình ảnh9TrangThaiPrivateNot nullTrạng thái
+o Lớp Sản phẩm
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IdPrivatePrimary keyMã sản phẩm2TenSPPrivateNot nullTên sản phẩm3LoaiSPPrivateForeign keyLoại sản phẩm4GiaPrivateNot nullGiá 5SoLuongPrivateNot nullSố lượng6DVTPrivateNot nullĐơn vị tính7MoTaPrivateNot nullMô tả
+o Lớp Loại sản phẩm
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IdPrivatePrimary keyMã loại sản phẩm2TenLoaiSPPrivateNot nullTên loại sản phẩm3HinhAnhPrivateNot nullHình ảnh
+o Lớp hóa đơn
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IdPrivatePrimary keyMã hóa đơn2BanPrivateForeign keyBàn ăn3NgayLapPrivateNot nullNgày lập hóa đơn4TongTienPrivateNot nullTổng tiền5NhanVienPrivateForeign keyNhân viên lập
+o Lớp khu vực
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IdPrivatePrimary keyMã khu vực2TenKhuVucPrivateNot nullTên khu vực
+o Lớp chi tiết hóa đơn
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IdPrivatePrimary keyMã chi tết hóa đơn2SanPhamPrivateForeign keySản phẩm3HoaDonPrivateForeign keyHóa đơn4SoLuongPrivateNot nullSố lượng5GiaPrivateNot nullGiá 
+o Lớp phân quyền
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IdPrivatePrimary keyMã quyền2TenQuyenPrivateNot nullTên quyền3VietTatPrivateNot nullViết tắt
+3.4 Biểu đồ tuần tự
+3.4.1 Thêm nhân viên
+
+    Hình 3.10 – Biểu đồ tuần tự thêm nhân viên
+
+3.4.2 Sửa nhân viên
+
+    Hình 3.11 – Biểu đồ tuần tự sửa nhân viên
+3.4.3 Xóa nhân viên
+
+    Hình 3.12 – Biểu đồ tuần tự xóa nhân viên
+
+
+
+
+3.5 Các module hệ thống
+3.5.1 Module Quản lý thực đơn
+- Thêm sản phẩm
+- Sửa thông tin sản phẩm
+- Xóa sản phẩm
+- Hiển thị danh sách sản phẩm
+3.5.2 Module Quản lý hóa đơn
+- Thêm hóa đơn
+- Sửa thông tin hóa đơn
+- Xóa hóa đơn
+- Hiển thị danh sách hóa đơn
+3.5.3 Module quản lý sơ đồ
+- Thêm khu vực và bàn
+- Sửa thông tin khu vực và bàn
+- Xóa khu vực và bàn
+- Hiển thị khu vực và bàn
+3.5.4 Module quản lý loại sản phẩm
+- Thêm loại sản phẩm
+- Sửa thông tin loại sản phẩm
+- Xóa loại sản phẩm
+- Hiển thị loại sản phẩm
+3.5.5 Module Tìm kiếm
+- Tìm kiếm nhân viên
+- Tìm kiếm sản phẩm
+3.5.6 Module Thống kê
+- Thống kê hóa đơn hàng ngày
+- Thống kê doanh thu hàng ngày
+3.6 Thiết kế cơ sở dữ liệu
+    
+    Hình 3.13 – Lược đồ E-R
+o Bảng tbl_employee
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1employeeIDPrivatePrimary keyMã nhân viên2employeeNamePrivateNot nullTên nhân viên3passWordPrivateNot nullMật khẩu4userNamePrivateNot nullTên tài khoản5AddressPrivateNot nullĐịa chỉ6phonePrivateNot nullSố điện thoại7roleIdPrivateNot nullQuyền nhân viên    Bảng 3.15  - Bảng nhân viên
+o Bảng tbl_product
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1productIDPrivatePrimary keyMã sản phẩm2productNamePrivateNot nullTên sản phẩm3categoryIDPrivateForeign keyMã loại sản phẩm4productPricePrivateNot nullGiá 5productUnitPrivateNot nullSố lượng6productUnitPrivateNot nullĐơn vị tính7productDetailsPrivateNot nullMô tả8productImagePrivateNot nullHình ảnh9productStatusPrivateNot nullTrạng thái    Bảng 3.16 – Bảng sản phẩm
+o Bảng tbl_category
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1categoryIDPrivatePrimary keyMã loại sản phẩm2categoryNamePrivateNot nullTên loại sản phẩm3categoryImagePrivateNot nullHình ảnh    Bảng 3.17 – Bảng loại sản phẩm
+o Bảng tbl_bill
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1billIDPrivatePrimary keyMã hóa đơn2dinnerTableIDPrivateForeign keyMã bàn ăn3billDatePrivateNot nullNgày lập hóa đơn4grand_totalPrivateNot nullTổng tiền5employeeIDPrivateForeign keyMã Nhân viên lập    Bảng 3.18 – Bảng hóa đơn
+
+
+o Bảng tbl_area
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1areaIDPrivatePrimary keyMã khu vực2areaNamePrivateNot nullTên khu vực    Bảng 3.19 – Bảng khu vực
+o Bảng tbl_billDetail
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1billDetailIDPrivatePrimary keyMã chi tết hóa đơn2productIDPrivateForeign keyMã sản phẩm3billIDPrivateForeign keyMã hóa đơn4billDetailQuanityPrivateNot nullSố lượng5billDetailPricePrivateNot nullGiá     Bảng 3.20 – Bảng chi tiết hóa đơn
+o Bảng tbl_role
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1roleIdPrivatePrimary keyMã quyền2rolenamePrivateNot nullTên quyền3roleValuePrivateNot nullViết tắt    Bảng 3.21 – Bảng quyền nhân viên
+o Bảng tbl_dinnerTable
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1dinnerTableIDPrivatePrimary keyMã bàn2areaIDPrivateNot nullMã khu vực3dinnerTableNamePrivateNot nullTên bàn4dinnerTableQuanitySố lượng ghế    Bảng 3.22  - Bảng bàn ăn
+3.7 Thiết kế giao diện
+3.7.1 Giao diện web
+a. Trang Login
+
+    Hình 3.14 – Trang đăng nhập
+
+
+b. Trang quản lý sản phẩm
+  
+  
+    Hình 3.15 – Giao diện trang quản lý sản phẩm
+- Giao diện trang quản lý sản phẩm hiển thị danh sách tất cả các sản phẩm có trng nhà hàng. Và bao gồm các chức năng : thêm sản phẩm, sửa sản phẩm, xóa sản phẩm, và xem chi tiết sản phẩm.
+- Người dùng click vào “thêm sản phẩm” để chuyển sang trang thêm sản phẩm
+- Người dùng click vào “Edit” để chuyển sang trang sửa sản phẩm.
+- Người dùng click vào “Delete” để xóa sản phẩm
+c. Trang thêm sản phẩm
+
+    Hình 3.16 – Giao diện trang thêm sản phẩm
+- Người dùng nhập đẩy đủ thông tin sản phẩm sau đó lick vào “Thêm sản phẩm” để thêm sản phẩm sau đó trang sẽ được chuyển về trang quản lý sản phẩm.
+d. Trang sửa sản phẩm
+
+    Hình 3.17  - Trang sửa sản phẩm
+- Với trang sửa sản phẩm người dùng điền đầy đủ thông tin và nhấn “Cập nhật sản phẩm” để cập nhật sản phẩm và quay về trang quản lý sản phẩm.
+3.7.2 Giao diện mobile
+a. Giao diện sơ đồ nhà hàng
+    
+    Hình 3.18 – Giao diện sơ đồ nhà hàng
+- Giao diện sơ đồ hiển thị sơ đồ nhà hàng gồm các bàn ăn. Khi người dùng click vào bàn ăn đó thì sẽ chuyển sang trang thực đơn.
+b. Giao diện trang thực đơn
+
+    Hình 3.19 – Giao diện trang thực đơn
+- Trang thực đơn sẽ có các món để nhân viên order cho khách, người dùng click vào từng món để order.
+- Người dùng click vào “đồng ý” để order.
+- Người dùng click vào “Hủy bỏ ” để quay lại.
+c. Trang đăng nhập
+
+    Hình 3.20 – Trang đăng nhập
+- Với trang đăng nhập người dùng điền đúng và đây đủ user và password sau đó nhần button “Sign In” để sử dụng ứng dụng.
+d. Trang danh sách order
+
+Với trang danh sách order để hiển thại các order chưa được thanh toán.
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+    Sau thời gian nghiên cứu và phát triển, tác giả đã hoàn thành cơ bản các mục tiêu ban đầu đề ra của đề tài. Nhóm đã thực hiện nghiên cứu và đề ra giải pháp thiết kế web trên nền tảng SpringMVC bao gồm giải pháp về thiết kế cơ sở dữ liệu, tổ chức dữ liệu trên Host, giải pháp tùy biến giao diện trang web bằng các APIs do tác giả lập trình.
+    Tác giả cũng đã kết nối được từ ứng dụng android đến web của hệ thống. Và về cơ bản đã hoàn thành được mục tiêu đề ra lúc đầu trên ứng dụng android.
+4.2 Hạn chế của đề tài
+• Hệ thống quản lý nhà hàng mới dừng lại ở giải các module cơ bản của hệ thống tin tức, chưa có nhiều module tiện ích cho người dùng như: Thống kê lượt truy cập theo tháng, thăm dò ý kiến, hỏi đáp,…
+• Hệ thống website còn sơ sài, ít chức năng, thao tác của người dùng trên web vẫn còn khó khăn.
+• Ứng dụng trên android giao diện còn xấu và chạy không được mượt.
+• Hệ thống vẫn bắt buộc phải có mạng mới hoạt động được.
+4.3 Hướng phát triển của đề tài
+    Trong thời gian nghiên cứu và thực hiện đề tài, tác giả đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+• Xây dựng thêm các Control làm phong phú trên việc tùy biến giao diện của website.
+• Bổ sung các Module hỗ trợ cho các website giới thiệu sản phẩm và thương mại điện tử.
+• Cập nhật lại giao diện web để người dùng có thể thao tác dễ dàng và nhanh chóng hơn
+• Cho hệ thống vẫn hoạt động khi không có mạng.
+TÀI LIỆU THAM KHẢO
+x
+[1]Nguyễn Hoàng Điệp, Lập trình mạng trên android. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY.[2]Hoàng Quốc Việt, Lập trình cơ bản Android. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY.x
+ [3] Paul Deitel, Java how to program 8 th Edition, 2009
+[4] Shawn Van Every, Pro Android Media - Developing Graphics, Music, Video And Rich Media App for Smartphones and Tablets, 2009
+[5] Ashish Sarin, Getting started with Spring Framework Second Edition.
+Xây dựng website và ứng dựng quản lý nhà hàng
+    
+9
+    

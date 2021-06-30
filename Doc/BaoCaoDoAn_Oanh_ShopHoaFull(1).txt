@@ -1,0 +1,1052 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+    Ngày nay, các ứng dụng Web đã trở thành một thứ hiện hữu ở khắp mọi nơi trên thế giới, khi mà máy tính trở thành công cụ tùy thân cho cả công việc và hoạt động vui chơi giải trí của con người. Các ứng dụng Web ngày càng phát triển đa dạng về tính năng cũng như hình thức, đi theo đó là nhu cầu kiểm định các ứng dụng Web.
+    Hiện tại hầu như tất cả các tổ chức, công ty phát triển phần mềm đều lựa chọn kiểm thử thủ công cho mọi sản phẩm. Tuy nhiên, thời điểm hiện tại, tự động hóa được áp dụng vào hầu hết các lĩnh vực với mục đích đa dạng khác nhau. Việc tự động hóa này giúp giảm được thời gian, sự sai sót, và nguồn nhân lực cho mỗi dự án. Ngành công nghệ thông tin cũng không ngoại lệ. Như chúng ta biết, để tạo ra sản phẩm công nghệ thông tin hay phần mềm có chất lượng thì hoạt động kiểm thử phần mềm đóng vai trò rất quan trọng, do vậy nhu cầu tự động hoá quy trình kiểm thử phần mềm được đặt ra.
+    Qua thực tế cho thấy, việc áp dụng kiểm thử tự động hợp lý sẽ mang lại thành công cho hoạt động kiểm thử phần mềm. Kiểm thử tự động giúp giảm bớt công sức thực hiện, tăng độ tin cậy, giảm sự nhàm chán và rèn luyện kỹ năng lập trình cho người kiểm thử.
+    Nhận thấy công cụ kiểm thử Katalon studio là một công cụ mã nguồn mở, dễ sử dụng và cũng rất phù hợp để  kiểm tra theo hướng dữ liệu vì vậy em đã chọn đề tài “KIỂM THỬ WEBSITE SIÊU THỊ HOA ONLINE SỬ DỤNG CÔNG CỤ KATALON STUDIO”
+1.2 Mục tiêu của đề tài
+- Tìm hiểu công cụ Katalon Studio.
+- Xây dựng Framework kiểm thử dữ liệu tự động với Katalon Studio.
+- Xây dựng bộ tài liệu kiểm thử dự án.
+- Ứng dụng phương pháp và sử dụng công cụ kiểm thử tự động Katalon Studio kiểm thử vào Website Siêu Thị Hoa Online
+1.3 Giới hạn và phạm vi của đề tài
+- Tập trung vào các chức năng chính của Website “Siêu Thị Hoa Online”
+- Xây dựng được các testcase kiểm thử trên Website “Siêu Thị Hoa Online”. 
+- Xây dựng được bộ dữ liệu kiểm thử tự động trên Website “Siêu Thị Hoa Online”.
+- Triển khai kiểm thử Website “Siêu Thị Hoa Online”.
+1.4 Nội dung thực hiện
+- Xây dựng được các testcase kiểm thử trên Website “Siêu Thị Hoa Online”.
+- Xây dựng được bộ dữ liệu kiểm thử tự động trên Website “Siêu Thị Hoa Online”.
+- Chạy tự dộng được các testcase trên công cụ kiểm thử Katalon Studio.
+- Xuất được kết quả test ra màn hình bằng các định dạng khác nhau
+1.5 Phương pháp tiếp cận
+    Sử dụng các phương pháp nghiên cứu: 
+- Phương pháp đọc tài liệu;
+- Phương pháp phân tích mẫu;
+- Phương pháp thực nghiệm.
+    
+CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Kiểm Thử Tự Động
+2.1.1 Khái niệm
+   Là sử dụng một công cụ kiểm thử tự động để thực thi các test case thay cho con người để kiểm tra một hệ thống nào đó một cách tự động với dữ liệu đầu vào và đầu ra đã được xác định.
+2.1.2 Ưu điểm của việc kiểm thử tự động
+- Độ tin cậy cao (Reliability): Nhờ sự ổn định vượt trội của công cụ kiểm thử tự động so với con người, đặc biệt trong trường hợp có quá nhiều test cases cần được thực thi, nên độ tin cậy của kiểm thử tự động thường cao hơn so với kiểm thử thủ công.
+- Khả năng lặp (Repeatability): Khi dùng kiểm thử tự động, dù có lặp đi lặp lại bao nhiêu lần thì cũng cho ra các thao tác và kết quả giống nhau. Do đó tránh được những rủi ro không cần thiết.Ngoài ra, nếu một lỗi được tìm thấy, nó có thể được tái tạo bằng cách đơn giản là thực hiện cùng một kịch bản tự động, dẫn đến cải thiện khả năng tái lỗi. Kiểm thư tự động còn có tính năng các thao tác test được lưu lại tự động, dễ dàng kiểm tra và cưỡng chế lỗi trong thời gian kiểm thử.
+- Khả năng tái sử dụng (Reusability): Với một bộ kiểm thử tự động, chúng ta có thể sử dụng cho nhiều phiển bản ứng dụng khác nhau, đây được gọi là tính tái sử dụng.
+- Nhanh (Fast): Đây là điều không cần phải bàn cãi, nếu cần 5 phút để thực thi một test case cách thủ công, có thể bạn cần chưa đầy 30s để thực thi cách tự động.
+- Chi phí thấp (Cost Reduction): Nếu áp dụng kiểm thử tự động đúng cách, chúng ta có thể tiết kiệm được rất nhiều chi phí, thời gian và nhân lực.
+2.1.3 Nhược điểm của việc kiểm thử tự động
+    Các công cụ kiểm thử tự động mặc dù rất thuận tiện về nhiều phương diện nhưng thực tế dù như thế nào đi chăng nữa thì nó cũng không phải là một công cụ có thể thay thế hoàn toàn quá trình kiểm thử. Để thực hiện các thiếp lập tự động thì vẫn cần có con người, phải bỏ công sức, tiền bạc và thời gian.
+- Mất thời gian và công sức để tạo mới và chỉnh sửa script test.
+- Mất chi phí cho các các công cụ tự động hóa như phí bản quyền, bảo trì, tìm hiểu, giáo dục.
+- Khó mở rộng, khó bảo trì (Poor scalability and maintainability): Trong cùng một dự án, để mở rộng phạm vi cho kiểm thử tự động là khó hơn nhiều so với kiểm thử cách thủ công. Số lượng công việc phải làm để mở rộng phạm vi cho kiểm thử tự động là nhiều hơn và khó hơn kiểm thử thủ công. Cũng vậy, để cập nhật một test case thủ công, chúng ta chỉ cần mở ra và gõ, rất đơn giản. Nhưng kiểm thử tự động lại không đơn giản như vậy, cập nhật hay chỉnh sửa yêu cầu rất nhiều công việc như debug, thay đổi dữ liệu đầu vào, và cập nhật code mới.
+- Khả năng bao phủ thấp (Low coverage): Chính vì việc khó ứng dụng, khó mở rộng, cũng như đòi hỏi quá nhiều kỷ năng lập trình nên độ bao phủ của kiểm thử tự động khá thấp (xét trên góc nhìn toàn dự án).
+- Vấn đề công cụ và nhân lực (Technology vs. people issues): Cho đến nay công cụ hỗ trợ kiểm thử tự động đã có những bước phát triển mạnh mẽ, chúng ta có các công cụ rất tốt như QTP, Selenium, Test Complete, LoadTest, Jmeter, Visual Studio, Katalon Studio … Nhưng nhìn chung vẫn còn rất nhiều mặt hạn chế. Ngoài ra nguồn nhân lực đạt yêu cầu cũng không nhiều.
+2.1.4 Vì sao cần kiểm thử tự động
+- Tiết kiệm tiền bạc vời thời gian: Nhận định này đặc biệt đúng nếu xét trong giai đoạn bảo trì của các dự án lớn. Mỗi tuần chúng ta phải thực hiện regression test từ 1 đến 2 lần với số lượng test case rất lớn trong 1 đến 2 ngày. Gần như không thể thực hiện cách thủ công, trong khi với kiểm thử tự động chúng ta hoàn toàn có thể với nguồn nhân lực vô cùng khiêm tốn.
+- Chính xác hơn: Nhờ độ ổn định cao, kiểm thử tự động có thể thực thi các test case với độ chính xác cao hơn.
+- Độ bao phủ cao: Như đã nói ở trên, khi sử dụng kiểm thử tự động, chúng ta có thể thực thi số lượng lớn test case trong một thời gian ngắn. Điều này giúp chúng ta tăng độ bao phủ trong giai đoạn regression test (một ví dụ điển hình).
+- Hoàn thành các công việc mà con người không thể làm được: Nếu chúng ta muốn thực thi load test, performance test, thì kiểm thử tự động là cách duy nhất.
+2.1.5 Khi nào nên sử dụng kiểm thử tự động
+- Lý do thường xuyên nhất dẫn đến quyết định sử dụng kiểm thử tự động là thường xuyên phải thực thi regression test. Từ khi DEV đưa ra bản build mới cho tới khi phiên bản mới tới tay khách hàng chỉ từ 1 đến 2 ngày. Trong thời gian ngắn ngủi này, regression test sẽ được thực thi, nghĩa là một số lượng test case lớn phải được thực thi trong một khoảng thời gian ngắn. Đây là lúc lý tưởng để sử dụng kiểm thử tự động.
+- Xây dựng một bộ kiểm thử tự động cho những function chính, để thực thi smoke test mỗi khi có build mới cũng là một ý tưởng hay. Đây là công việc rất thường xuyên trước khi thực hiện regression test.
+- Khi số lượng đầu vào của 1 test case quá nhiều (như ví dụ 50 bộ dữ liệu test), chúng ta cũng nên xem xét khả năng thực hiện kiểm thử tự động.
+2.1.6 Các kiểm nghiệm phù hợp và không phù hợp cho tự động hóa
+Kiểm thử thích hợp cho tự động hóa:
+- Những kiểm tra cần thực hiện nhiều lần.
+- Thực hiện kiểm tra ở nhiều môi trường.
+- Đặc điểm kĩ thuật được xác định, test màn hình・chức năng không thay đổi trong tương lai.
+- Thường xuyên thực hiện test xác nhận hoạt động cơ bản( chẳng hạn như di chuyển hệ thống).
+- Test sự kết hợp của nhiều giá trị đầu vào ở một bước nào đó.
+- Kiểm tra nhiều màn hình của dữ liệu đầu vào.
+- Mục đầu vào ở nhiều màn hình đăng kí.
+- Kiểm thử thích hợp cho tự động hóa:
+- Kiểm tra không có tính hồi quy.
+- Kiểm tra những hoạt động như test độ tin cây, giới hạn, cạnh tranh…
+2.2 Kiểm thử hướng dữ liệu
+2.2.1 Khái niệm
+   Data driven testing: là tạo các tập lệnh kiểm tra, nơi dữ liệu thử nghiệm và / hoặc các giá trị đầu ra được đọc từ các tệp dữ liệu thay vì sử dụng các giá trị mã hoá giống nhau mỗi khi chạy thử. Bằng cách này, người kiểm tra có thể kiểm tra cách ứng dụng xử lý nhiều đầu vào hiệu quả. Nó có thể là bất kỳ tệp dữ liệu dưới đây:
+- Datapools
+- Tệp Excel
+- Đối tượng ADO
+- Tệp CSV
+- Nguồn ODBC
+2.2.2 Quy trình thực hiện Data drien testing
+
+    Hình 21: Quy trình thực hiện Data-driven testing
+• B1:Đọc dữ liệu từ các nguồn dữ liệu được lưu trữ ở bộ nhớ ngoài
+• B2: Điền dữ liệu tương ứng với các kịch bản kiểm thử
+• B3: Xác minh kết quả kiểm thử
+2.2.3 Đặc điểm
+- Dữ liệu kiểm thử (giá trị đầu vào và đầu ra) được tách khỏi mã nguồn và lưu trong một tập tin bên ngoài. Nó có thể là một tập tin CSV, một bảng Excel hay một cơ sở dữ liệu.
+- Data-driven testing cho phép thực hiện cùng một thử nghiệm (hoặc nhiều thử nghiệm) nhiều lần với các bộ dữ liệu khác nhau.
+- Khi mã kiểm thử thực thi, các giá trị này được lấy ra từ tập tin, chứa vào biến và thay thế các giá trị cứng (nếu có) trong mã nguồn.
+2.2.4 Ưu nhược điểm
+a) Ưu điểm
+- Chúng ta có thể tạo ra các kịch bản của chúng ta ngay cả khi sự phát triển ứng dụng vẫn đang tiếp tục.
+- Phân biệt rõ ràng giữa Test case/Test data:
+- Test case/script bị thay đổi cũng không ảnh hưởng đến test data
+- Chỉ đoạn mã đại diện cho “business function” cần được thay đổi trong trường hợp có bất kỳ thay đổi nào trong chức năng
+- Tính lặp và tái sử dụng:Các thử nghiệm tương tự có thể được thực hiện nhiều lần với nhiều bộ dữ liệu
+- Giảm số lượng các TestCase/Scripts Data-driven Scripts result in less amount of code
+b) Nhược điểm
+- Chất lượng và độ bao phủ phụ thuộc vào kỹ năng tự động hoá của người thực hiện
+- Xác nhận dữ liệu là bắt buộc: quá trình kiểm thử bằng tay trên quy trình kiểm thử hướng dữ liệu tốn nhiều thời gian, đặc biệt khi kiểm tra các vùng dữ liệu lớn
+- Bảo trì liên tục các vấn đề do một số lượng lớn mã code
+2.3 Công cụ kiểm thử Katalon studio
+2.3.1 Khái niệm
+- Katalon studio là một bộ công cụ toàn diện cho thử nghiệm tự động hóa ứng dụng trên web và điện thoại di động. Công cụ này bao gồm một gói đầy đủ các tính năng mạnh mẽ giúp vượt qua những thách thức phổ biến trong tự động hóa thử nghiệm giao diện web, ví dụ như pop-up, iFrame, wait-time.. Giải pháp thân thiện và linh hoạt này giúp người kiểm tra kiểm tra tốt hơn, làm việc nhanh hơn và khởi chạy phần mềm chất lượng cao nhờ vào sự thông minh mà nó cung cấp cho toàn bộ quá trình tự động hóa bài kiểm tra.
+- Katalon Studio được xây dựng như là một gói thống nhất bao gồm hầu như tất cả những thứ cần thiết như Java, Android SDK, trình điều khiển Web để điều khiển trình duyệt và yêu cầu phụ thuộc. Tất cả bạn phải làm là tải về và cài đặt nó trên máy tính của bạn. 
+- Katalon Studio sử dụng Groovy, một ngôn ngữ được xây dựng trên đầu Java và phải tải nhiều thư viện để phân tích cú pháp dữ liệu thử nghiệm, kiểm tra các đối tượng, logging. Vì vậy, nó có thể chậm hơn một chút so với Java cho trường hợp thử nghiệm dài với hàng trăm bước.
+2.3.2 Yêu cầu hệ thống
+    Bảng 21: Yêu cầu hệ thống.
+Hệ điều hànhWindows 7, Windows 8, Windows 10, macOS 10.11+CPUBộ xử lý 32-bit (x86) hoặc 64-bit (x64) 1 GHz hoặc cao hơnRAMRAM 1 GB (32-bit) hoặc 2 GB RAM (64-bit)ổ cứngÍt nhất 1 GB có sẵn không gian đĩa cứng2.3.3 Môi trường được hỗ trợ
+a) Trình duyệt
+    Bảng 22: Môi trường test ứng dụng web được hỗ trợ
+    Trình duyệt dành cho máy tính để bàn    Phiên bản trên Windows    Phiên bản trên macOS    trình duyệt web IE    9, 10, 11    Không có    Microsoft Edge    Hiện hành    Không có    Firefox    53+    Google Chrome    58+    Opera    Không được hỗ trợ    Safari    5.1+    9
+b) Điện thoại di động
+    Bảng 23: Môi trường test ứng dụng di động được hỗ trợ.
+Cài đặtPhiên bản trên WindowsPhiên bản trên macOS    chú thíchAppium1.6.51.6.5    Thực hiện theo Điện thoại di động trên Windows và Điện thoại di động trên macOS để biết thêm chi tiết.Android6.x, 7.x6.x, 7.x     IOSKhông có9, 10     2.3.4 Cài đặt
+    B1. Tải Katalon Studio
+  Katalon Studio có sẵn miễn phí, hỗ trợ cả Windows và Mac. Truy cập trang web Katalon Studio để tải xuống phiên bản mới nhất.
+    B2. Cấu hình Môi trường
+ Đầu tiên bạn cần phải xác minh xem máy tính của bạn có đáp ứng Yêu cầu hệ thống  để tự động hoá bằng cách sử dụng Studio Katalon.
+    B3. Bắt đầu Katalon Studio
+Để bắt đầu Studio Katalon, nhấp đúp vào katalon.exe (Microsoft Windows)
+ 
+    Hình 22: Katalon với Microsoft Windows
+ hoặc tệp Katalon Studio (macOS) trong thư mục nơi bạn giải nén Studio Katalon. 
+
+    Hình 23: Katalon với macOS
+Khi bắt đầu, ứng dụng sẽ hiển thị màn hình splash tương tự như hình bên dưới:
+    Hình 24: Màn hình bắt đầu Katalon
+ 
+    B4. Kích hoạt Studio Katalon
+Sau khi khởi chạy Katalon Studio, cung cấp tên đăng nhập đã đăng ký và mật khẩu của bạn để kích hoạt Studio Katalon của bạn. Tên người dùng và mật khẩu giống với tên đăng nhập đã tải xuống Katalon Studio từ https://www.katalon.com/ .
+
+    Hình 25: Đăng nhập Katalon
+Khi xây dựng của bạn được kích hoạt, màn hình Hướng dẫn Nhanh được hiển thị để hướng dẫn bạn qua tất cả các tính năng chính. Bạn có thể bỏ qua điều này và xem Hướng dẫn Nhanh sau đó từ trình đơn Trợ giúp .
+     
+    Hình 26: Màn hình hướng dẫn nhanh Katalon
+ Bạn đã cài đặt và kích hoạt thành công Katalon Studio
+CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Mô tả Website “Siêu Thị Hoa Online”
+    Siêu Thị Hoa Online là website cung cấp dịch vụ bán hoa trực tuyến với các loại hoa đa dạng, phong phú về mẫu mã và chất lượng. Shop cũng cung cấp các dịch vụ đi kèm như dạy cắm hoa, giao hàng nhanh, giao hàng tận nơi, tư vấn miễn phí đến những khách hàng cần tư vấn
+3.2 Đặc tả Website
+3.2.1 Chức năng “Quản Lý Loại Hoa”
+
+    Hình 31: Màn hình Quản Lý Loại Hoa 
+    Thông tin chung của chức năng
+    Bảng 31: Thông tin chung chức năng Quản Lý Loại Hoa
+    Tên chức năng    Quản lý loại hoa    Mô tả
+        Là chức năng cho phép người quản trị hệ thống truy cập vào và quản lý các loại hoa.    Tác nhân    Người quản trị    Điều kiện trước    Truy cập vào trang quản trị website    Điều kiện sau    N/A    Ngoại lệ    N/A    Các yêu cầu đặc biệt    N/A
+    Mô tả dòng sự kiện chính
+    Bảng 32: Dòng sự kiện chính chức năng “Quản Lý Loại Hoa”
+    Hành động của tác nhân    Phản ứng của hệ thống    Truy cập trang Quản lý Loại Hoa của website SIÊU THỊ HOA ONLINE    Hiển thị trang web    Click [Thêm Loại Hoa Mới]    Hiển thị màn hình [Thêm Loại Hoa]    Nhập [Tên Loại Hoa]    Tên Loại Hoa: Textbox
+- Không được trống
+- Không được dài quá 30 ký tự
+- Không được trùng lên loại hoa đã tồn tại    Click [Thêm]    Thêm Loại Hoa vào cơ sở dữ liệu    Click [Sửa]    Hiển thị màn hình [Sửa     Nhập [Tên Loại Hoa]    Tên Loại Hoa: Textbox
+- Không được trống
+- Không được dài quá 30 ký tự
+    Không được trùng lên loại hoa đã tồn tại    Click [Sửa]    Cập nhật tên loại hoa vào cơ sở dữ liệu    Click [Xóa]    Hiển thị cảnh báo xóa    Click [OK]    Xóa Loại Hoa khỏi cơ sở dữ liệu    Nội dung thông báo
+    Bảng 33: Nội dung thông báo
+    TT    Tình huống    Thông báo    1    Trường hợp bỏ trống dữ liệu trường [Tên Loại Hoa]    Hệ thống hiển thị cảnh báo: “Thông tin bắt buộc”    2    Trường hợp nhập [Tên Loại Hoa] đã có trong cơ sở dữ liệu    Hệ thống hiển thị thông báo “Loại Hoa Này Đã Tồn Tại! Bạn Hãy Chon Tên Khác”    3    Trường hợp chọn  xóa loại hoa đã có sản phẩm trong cơ sở dữ liệu    Hệ thống hiển thị “Không Thể Xóa Loại Hoa Đã Có Sản Phẩm.”3.2.2 Chức năng “Quản Lý Hoa”
+ 
+    Hình 32: Màn hình “Quản Lý Hoa”
+ 
+    Hình 33: Màn hình “Thêm Hoa Mới”
+ 
+    Hình 34: Màn hình “Sửa Thông Tin Hoa”
+    Thông tin chung của chức năng
+    Bảng 34: Thông tin chung chức năng Quản lý Hoa
+    Tên chức năng    Quản lý loại hoa    Mô tả
+        Là chức năng cho phép người quản trị hệ thống truy cập vào và quản lý thông tin về sản phẩm hoa    Tác nhân    Người quản trị    Điều kiện trước    Truy cập vào trang quản trị website    Điều kiện sau    N/A    Ngoại lệ    N/A    Các yêu cầu đặc biệt    N/A    Mô tả dòng sự kiện chính
+    Bảng 35:Dòng sự kiện chính chức năng “Quản Lý Hoa”
+    Hành động của tác nhân    Phản ứng của hệ thống    Truy cập trang Quản lý Loại Hoa của website SIÊU THỊ HOA ONLINE    Hiển thị trang web    Click [Thêm Hoa Mới]    Hiển thị màn hình [Thêm Hoa Mới]    Nhập [Tên Hoa]    Tên Hoa: Textbox
+- Không được trống
+- Không được là một loạt ký tự space
+- Không được dài quá 30 ký tự
+- Không được trùng lên hoa đã tồn tại    Click chọn [Loại Hoa]    Hiển thị Loại Hoa được chọn lên màn hình    Nhập [Giá]    Giá: Textbox:
+- Không được trống
+- Không được là ký tự space
+- Là kiểu dữ liệu số thực    Click chọn [Trạng Thái]    Hiển thị trạng thái được chọn lên màn hình    Nhập [Mô Tả]    Mô Tả: Textbox:
+- Không được trống
+- Không được dài quá 300 ký tự    Click [Upload] ảnh    Hiển thị màn hình upload ảnh    Click [Thêm Mới]    Thêm chi tiết hoa vào cơ sở dữ liệu    Click [Sửa]    Hiển thị màn hình [Sửa     Sửa trường dữ liệu cần thay đổi theo giá trị như chức năng [Thêm Hoa Mới]    Hiển thị giá trị được sửa ra màn hình    Click [Cập Nhật]    Cập nhật chi tiết hoa vào cơ sở dữ liệu    Click [Xóa]    Hiển thị cảnh báo xóa    Click [OK]    Xóa Chi Tiết Hoa khỏi cơ sở dữ liệu    Nội dung thông báo
+    Bảng 36: Nội dung thông báo
+    TT    Tình huống    Thông báo    1    Trường hợp bỏ trống các trường dữ liệu bắt buộc    Hệ thống hiển thị cảnh báo: “Thông tin bắt buộc”    2    Trường hợp nhập [Tên Hoa] đã có trong cơ sở dữ liệu    Hệ thống hiển thị thông báo “Tên Hoa Này Đã Tồn Tại! Bạn Hãy Chọn Tên Khác”    
+3.2.3 Chức năng “Đăng ký Khách hàng”
+
+    Hình 35: Màn hình Đăng Ký Khách hàng
+    Thông tin chung của chức năng
+    Bảng 37: Thông tin chung chức năng “Đăng ký khách hàng”
+    Tên chức năng    Đăng ký    Mô tả
+        Là chức năng cho phép người dùng tạo tài khoản mới để tham gia mua bán trên Website.    Tác nhân    Người dùng    Điều kiện trước    Người dung chưa có tài khoản trong hệ thống    Điều kiện sau    N/A    Ngoại lệ    N/A    Các yêu cầu đặc biệt    N/A    Mô tả dòng sự kiện chính
+    Bảng 38: Dòng sự kiện chính chức năng “Đăng ký khách hàng”
+    Hành động của tác nhân    Phản ứng của hệ thống    Truy cập trang SIÊU THỊ HOA ONLINE Click vào mục “Đăng ký” trên menu chọn    Hệ thống hiển thị màn hình đăng ký    Nhập [Tên Đăng Nhập]    Tên Đăng Nhập: Textbox:
+- Không được để trống hoặc ký tự space.
+- Tối đa 15 ký tự
+- Chưa có trong cơ sở dữ liệu    Nhập [Mật Khẩu]    Mật Khẩu: Textbox:
+- Không được để trống hoặc ký tự space
+- Tối đa 15 ký tự.    Nhập [Họ]    Họ: Textbox:
+- Không được để trống.
+- Tối đa 30 ký tự.    Nhập [Tên]    Tên: Textbox:
+- Không được để trống
+- Tối đa 30 ký tự.    Nhập [Số Điện Thoại]    Số Điện Thoại: Textbox:
+- Không được để trống
+- Nằm trong khoảng từ 10-11 ký tự
+- Là kiểu số    Nhập [Email]    Email: Textbox:
+- Không được để trống.
+- Tối đa 50 ký tự
+- Phải đúng định dạng tenban@tenmien.com.    Nhập [Địa Chỉ Nhà]    Địa Chỉ Nhà: Textbox:
+- Không được để trống
+- Tối đa 200 ký tự.    Click chọn [Giới Tính]    Giới Tính: Option    Nhập [Mã Xác Nhận]    Mã xác Nhận: textbox:
+- Không được để trống
+- Phải đúng với mã xác nhận trên màn hình    Click [Đăng Ký]    Lưu thông tin đăng ký vào cơ sở dữ liệu    Nội dung thông báo
+    Bảng 39: Nội dung thông báo.
+    STT    Tình huống    Thông báo    1    Trường hợp bỏ trống dữ liệu các trường bắt buộc nhập    Hệ thống hiển thị cảnh báo: “ thông tin bắt buộc”    2    Trường hợp nhập [Tên Đăng Nhập] đã tồn tại trong hệ thống    Hệ thống hiển thị cảnh báo : “Tên đăng nhập đã tồn tại trong hệ thống”    3    Trường hợp nhập [Số Điện Thoại] không phải là số    Hệ thống hiển thị cảnh báo: “bạn phải nhập bằng số có từ 10 đến 11 ký tự!”    4    Trường hợp nhập [Email] không đúng định dạng    Hệ thống hiển thị cảnh báo: “bạn nhập sai dạng email - dạng email vd: tenban@yahoo.com”    5    Trường hợp nhập sai [Mã Xác Nhận]    Hệ thống hiển thị cảnh báo: “Bạn Nhập Sai Mã Xác Nhận Vui Lòng Nhập Lại”    6    Trường hợp nhập dữ liệu hợp lệ cho tất cả các trường    Hệ thống hiển thị thông báo “Đăng ký thành công”3.3 Test Design
+3.3.1 Chức năng “Quản Lý Loại Hoa”
+    
+
+    Hình 36: Common interface chức năng “Quản Lý Loại Hoa”
+
+
+    Hình 37: Function “Quản Lý Loại Hoa”
+3.3.2 Chức năng “Quản Lý Hoa”
+
+    Hình 38: Common Interface chức năng “Quản Lý Hoa”
+    
+      
+    Hình 39: Function “Quản Lý Hoa
+3.3.3 Chức năng “Đăng Ký Khách Hàng”
+
+    Hình 310: Common interface chức năng “Đăng ký Khách Hàng”
+
+      
+    Hình 311: Function “Đăng Ký Khách Hàng”
+3.4 Test Case
+3.4.1 Test case chức năng “Quản Lý Loại Hoa”
+    Bảng 310: Test report chức năng “Quản Lý Loại Hoa”
+Module CodeQuản Lý Loại HoaTest requirement TesterTrịnh Thị Kim OanhPassFailUntestedN/ANumber of Test cases1460024    Bảng 311: Test case chức năng “Quản Lý Loại Hoa”
+IDTest Case DescriptionTest Case ProcedureExpected OutputResult                        COMMON INTERFACEQLLH-1
+    
+    Kiểm tra tổng thể giao diện màn hình1. Click vào Linktext [Quản Lý Loại Hoa] trên màn hình [Trang Chủ]
+2. Kiểm tra về bố cục, font chữ, chính tả, màu chữ
+3. Kiểm tra trường bắt buộc phải có dấu *
+4. Kiểm tra về tính hợp lý dễ sử dụng của màn hình.
+5. Kiểm tra các textbox khi mới vào màn hình1. Hiển thị màn hình [Quản Lý Loại Hoa]
+2. Các label, textbox, combo có độ dài, rộng và khoảng cách bằng nhau, không xô lệch. Các label sử dụng cùng 1 loại font, cỡ chữ, căn lề trái; không có lỗi về chính tả, cấu trúc câu, ngữ pháp.
+3. Các trường hợp bắt buộc nhập phải có dấu (*)
+4. Form được bố trí hợp lý và dễ sử dụng
+5. Các textbox phải được xóa trắng khi mới vào màn hìnhPassQLLH-2Kiểm tra thứ tự tab, tab-shift, di chuyển của chuột1. Mở màn hình [Quản Lý Loại Hoa]
+2. Kiểm tra thứ tự tab, tab-shift, di chuyển của chuộtKhi người dùng nhấn phím Tab, con trỏ di chuyển từ trái sang phải, từ trên xuống dướiPassQLLH-2Kiểm tra giao diện khi thu nhỏ, phóng to1. Mở màn hình [Quản Lý Loại Hoa]
+2. Nhấn phím Ctrl -
+3. Nhấn phim Ctrl + Màn hình thu nhỏ, phóng to tương ứng và không bị vỡ giao diệnPassQLLH-3Kiểm tra căn lề các trường1. Mở màn hình [Quản Lý Loại Hoa]
+2. Kiểm tra căn lề các trường-Các kí tự chữ được căn trái và kí tự số được căn phải
+ -Các trường được căn giữaFailQLLH-4Kiểm tra căn lề các trườngKiểm tra căn lề các trường-Các kí tự chữ được căn trái và kí tự số được căn phải
+ -Các trường được căn giữaFail    FUNCTIONQLLH-6Kiểm tra textbox [Tên Loại Hoa] cho chức năng Thêm Loại Hoa1. Mở màn hình [Thêm Loại Hoa]
+2. Để trống trường [Tên Loại Hoa] sau đó nhấn [Thêm]Hiện thị thông báo"Bạn chưa nhập tên loại hoa"FailQLLH-7 Kiểm tra textbox [Tên Loại Hoa] cho chức năng Thêm Loại Hoa1. Mở màn hình [Thêm Loại Hoa]
+2. Nhập trường [Tên Loại Hoa] = "           "
+3. Nhấn [Thêm]Hiện thị thông báo"Bạn chưa nhập tên loại hoa"FailQLLH-8 Kiểm tra textbox [Tên Loại Hoa] cho chức năng Thêm Loại Hoa1. Mở màn hình [Thêm Loại Hoa]
+2. Nhập trường [Tên Loại Hoa] = "Hoa Cưới"( một loại hoa đã có trong cơ sở dữ liệu)
+3. Nhấn [Thêm]Hiện thị thông báo"Loại Hoa Này Đã Tồn Tại! Bạn Hãy Chon Tên Khác" và hiển thị lựa chọn quay về màn hình quản lýPassQLLH-9 Kiểm tra textbox [Tên Loại Hoa] cho chức năng Thêm Loại Hoa1. Mở màn hình [Thêm Loại Hoa]
+2. Nhập trường [Tên Loại Hoa] = "Hoa Mới"( tên loại hoa này chưa tồn tại trong cơ sở dữ liệu)
+3. Nhấn [Thêm]Hiện thị thông báo"Thêm Thành Công Loai Hoa: Hoa Mới Vào Cơ Sở Dữ Liệu!" và hiển thị lựa chọn quay về màn hình quản lýPassQLLH-10 Kiểm tra các button khi thực hiên chức năng Thêm Loại Hoa1. Mở màn hình [Thêm Loại Hoa]
+2. Lần lượt nhấn các button [Thêm Loại Hoa Mới], [Sửa], [Xóa]
+3. Quan sátHiển thị các màn hình tương ứngPassQLLH-11 Kiểm tra textbox [Tên Loại Hoa] cho chức năng Sửa Loại Hoa1. Mở màn hình [Sửa Loại Hoa]
+2. Để trống trường [Tên Loại Hoa]
+3. Nhấn [Thêm]Hiện thị thông báo"Bạn chưa nhập tên loại hoa"FailQLLH-12 Kiểm tra textbox [Tên Loại Hoa] cho chức năng Sửa Loại Hoa1. Mở màn hình [Sửa Loại Hoa]
+2. Nhập trường [Tên Loại Hoa] = "         "
+3. Nhấn [Thêm]Hiện thị thông báo"Bạn chưa nhập tên loại hoa"FailQLLH-13 Kiểm tra textbox [Tên Loại Hoa] cho chức năng Sửa Loại Hoa1. Mở màn hình [Sửa Loại Hoa]
+2. Nhập trường [Tên Loại Hoa] = "Hoa Cưới" ( tên loại hoa đã có trong cơ sở dữ liệu
+3. Nhấn [Thêm]Hiện thị thông báo"Loại Hoa Này Đã Tồn Tại! Bạn Hãy Chon Tên Khác" và hiển thị lựa chọn quay về màn hình quản lýPassQLLH-14 Kiểm tra textbox [Tên Loại Hoa] cho chức năng Sửa Loại Hoa1. Mở màn hình [Sửa Loại Hoa]
+2. Nhập trường [Tên Loại Hoa] = "Hoa Làm Đẹp"
+3. Nhấn [Thêm]Hiện thị thông báo"Sửa Thành Công!". Và hiển thị tùy chọn quay về màn hình trang chủPassQLLH-15Kiểm tra các button khi thực hiên chức năng Sửa Loại Hoa1. Mở màn hình [Sửa Loại Hoa]
+2. Lần lượt nhấn các button [Thêm Loại Hoa Mới], [Sửa], [Xóa]
+3. Quan sátHiển thị các màn hình tương ứngPassQLLH-16Kiểm tra các linktext khi thực hiên chức năng Sửa Loại Hoa1. Mở màn hình [Sửa Loại Hoa]
+2. Nhấn vào các linktext tên loại hoa trên màn hình
+3. Quan sátHiển thị màn hình sửa loại hoa với tên loại hoa cần sửa tương ứngPassQLLH-17Kiểm tra chức năng Xóa Loại Hoa1. Mở màn hình [Quản Lý Loại Hoa]
+2. Nhấn button [Xóa] ở loại hoa "Hoa Cưới"
+3. Quan sátHiển thị cảnh báo "bạn có muốn xóa mục này không..!"PassQLLH-18Kiểm tra chức năng Xóa Loại Hoa1. Mở màn hình [Quản Lý Loại Hoa]
+2. Nhấn button [Xóa]  ở loại hoa "Hoa Cưới"
+3. Nhấn [Hủy]Đóng cảnh báo và trở về màn hình [Quản Lý Loại Hoa]PassQLLH-19Kiểm tra chức năng Xóa Loại Hoa1. Mở màn hình [Quản Lý Loại Hoa]
+2. Nhấn button [Xóa]  ở loại hoa "Hoa Cưới"
+3. Nhấn [OK]- Hiển thị thông báo "Xóa thành công Loại Hoa" với điều kiện Loại Hoa chưa có sản phẩm trong cơ sở dữ liệu
+- Hiển thị thông báo "Không Thể Xóa Loại Hoa Đã Có Sản Phẩm" với điều kiện loại hoa đã có sản phẩm trong cơ sở dữ liệuPassQLLH-20Kiểm tra chức năng Xóa Loại Hoa1. Mở màn hình [Quản Lý Loại Hoa]
+2. Nhấn button [Xóa]  ở loại hoa "Hoa Cưới"
+3. Nhấn các button, linktext khác trong khi hiển thị cảnh báo xóa loại hoaKhông thể thực hiện các thao tác nhấn button, linktext khác trong khi hiển thị cảnh báo xóaPassQLLH-21 Kiểm tra textbox [Tên Loại Hoa] cho chức năng Thêm Loại Hoa1. Mở màn hình [Thêm Loại Hoa]
+2. Nhập [Tên Loại Hoa] = "Hoaa Cưới Hoaa Cưới Hoaa Cướiii"Chỉ cho nhập tối đa 30 kí tự, hiển thị thông báo "Thêm Thành Công Loai Hoa: Hoaa Cưới Hoaa Cưới Hoaa Cướii Vào Cơ Sở Dữ Liệu!"PassQLLH-22 Kiểm tra textbox [Tên Loại Hoa] cho chức năng Sửa Loại Hoa1. Mở màn hình [Sửa Loại Hoa] của "Hoaa Cưới Hoaa Cưới Hoaa Cướii"
+2. Nhập trường [Tên Loại Hoa] = "Hoa Khô Hoa Khô Hoa Khô Hoa Khô"
+3. Nhấn [Thêm]Chỉ cho nhập tối đa 30 kí tự, hiển thị thông báo " Thêm Thành Công Loại Hoa: Hoa Khô Hoa Khô Hoa Khô Hoa Kh Vào Cơ Sở Dữ Liệu!"PassQLLH-23Kiểm tra chức năng Xóa Loại Hoa1. Mở màn hình [Quản Lý Loại Hoa]
+2. Nhấn button [Xóa] ở loại hoa "Hoaa Cưới Hoaa Cưới Hoaa Cướii"
+3. Nhấn [Ok]Hiển thị thông báo "Xóa Thành Công Loại Hoa" và hiển thị tùy chọn quay về màn hình quản lý loại hoaPassQLLH-24Kiểm tra Mã Loại HoaQuan sát màn hình hiển thịMã Loại Hoa phải được đánh số tự động từ 1 tăng dần, là số nguyên và phải được sắp xếp ở màn hình hiển thị theo thứ tự tăng dầnPass3.4.2 Test case chức năng “Quản Lý Hoa”
+    Bảng 312: Test report chức năng “Quản Lý Hoa”
+Module CodeQuản Lý HoaTest requirementTesterTrịnh Thị Kim OanhPassFailUntestedN/ANumber of Test cases28200048    Bảng 313: Test case chức năng “Quản Lý Hoa”
+IDTest Case DescriptionTest Case ProcedureExpected OutputResult                        COMMON INTERFACEQLH-1Kiểm tra tổng thể giao diện màn hình1. Click vào Linktext [Quản Lý  Hoa] trên màn hình [Trang Chủ]
+2. Kiểm tra về bố cục, font chữ, chính tả, màu chữ
+3. Kiểm tra trường bắt buộc phải có dấu *
+4. Kiểm tra về tính hợp lý dễ sử dụng của màn hình.
+5. Kiểm tra các textbox khi mới vào màn hình1. Hiển thị màn hình [Quản Lý Hoa]
+2. Các label, textbox, combo có độ dài, rộng và khoảng cách bằng nhau, không xô lệch. Các label sử dụng cùng 1 loại font, cỡ chữ, căn lề trái; không có lỗi về chính tả, cấu trúc câu, ngữ pháp.
+3. Các trường hợp bắt buộc nhập phải có dấu (*)
+4. Form được bố trí hợp lý và dễ sử dụng
+5. Các textbox phải được xóa trắng khi mới vào màn hìnhFailQLH-2Kiểm tra thứ tự tab, tab-shift, di chuyển của chuột1. Mở màn hình [Quản Lý Hoa]
+2. Kiểm tra thứ tự tab, tab-shift, di chuyển của chuộtKhi người dùng nhấn phím Tab, con trỏ di chuyển từ trái sang phải, từ trên xuống dướiPassQLH-2Kiểm tra giao diện khi thu nhỏ, phóng to1. Mở màn hình [Quản Lý Hoa]
+2. Nhấn phím Ctrl -
+3. Nhấn phim Ctrl + Màn hình thu nhỏ, phóng to tương ứng và không bị vỡ giao diệnPassQLH-3Kiểm tra căn lề các trường1. Mở màn hình [Quản Lý Hoa]
+2. Kiểm tra căn lề các trường-Các kí tự chữ được căn trái và kí tự số được căn phải
+ -Các trường được căn giữaFailQLH-4Kiểm tra căn lề các trườngKiểm tra căn lề các trường-Các kí tự chữ được căn trái và kí tự số được căn phải
+ -Các trường được căn giữaFail    COMMON INTERFACEQLH-5Kiểm tra textbox [Tên Hoa] cho chức năng Thêm Hoa Mới1. Mở màn hình [Thêm Hoa Mới]
+2. Để trống trường [Tên Hoa]
+3. Nhập dữ liệu cho các trường còn lại:
+[Loại Hoa] = "Hoa Cướii"
+[Giá] = "10000"
+[Trạng Thái] = "Bình Thường"
+[Mô Tả] = "Không có mô tả"
+[Hình Ảnh] = "20180331_151324.jpg"
+4. Click [Thêm Mới]Hiển thị thông báo "Bạn chưa nhập tên hoa"FailQLH-6Kiểm tra textbox [Tên Hoa] cho chức năng Thêm Hoa Mới1. Mở màn hình [Thêm Hoa Mới]
+2. Nhập dữ liệu trường [Tên Hoa] = "     "
+3. Nhập dữ liệu cho các trường còn lại:
+[Loại Hoa] = "Hoa Cướii"
+[Giá] = "10000"
+[Trạng Thái] = "Bình Thường"
+[Mô Tả] = "Không có mô tả"
+[Hình Ảnh] = "20180331_151324.jpg"
+4. Click [Thêm Mới]Hiển thị thông báo "Bạn chưa nhập tên hoa"FailQLH-7Kiểm tra textbox [Tên Hoa] cho chức năng Thêm Hoa Mới1. Mở màn hình [Thêm Hoa Mới]
+2. Nhập dữ liệu trường [Tên Hoa] = "Hoaa đẹppHoaa đẹppHoaa đẹpp" (tên hoa = 30 ký tự)
+3. Nhập dữ liệu cho các trường còn lại:
+[Loại Hoa] = "Hoa Cướii"
+[Giá] = "10000"
+[Trạng Thái] = "Bình Thường"
+[Mô Tả] = "Không có mô tả"
+[Hình Ảnh] = "20180331_151324.jpg"
+4. Click [Thêm Mới] Hiển thị thông báo “ Đã Thêm Thành Công Hoa Vào Cơ Sở Dữ Liệu" và hiển thị lựa  chọn quay lại màn hình quản lý hoaPassQLH-8Kiểm tra textbox [Tên Hoa] cho chức năng Thêm Hoa Mới1. Mở màn hình [Thêm Hoa Mới]
+2. Nhập dữ liệu trường [Tên Hoa] = "Hoaa đẹppHoaa đẹppHoaa đẹppp" (tên hoa > 30 ký tự)
+3. Nhập dữ liệu cho các trường còn lại:
+[Loại Hoa] = "Hoa Cướii"
+[Giá] = "10000"
+[Trạng Thái] = "Bình Thường"
+[Mô Tả] = "Không có mô tả"
+[Hình Ảnh] = "20180331_151324.jpg"
+4. Click [Thêm Mới]2. Không thể nhập tên hoa quá 30 ký tựFailQLH-10Kiểm tra textbox [Giá] cho chức năng Thêm Hoa Mới1. Mở màn hình [Thêm Hoa Mới]
+2. Để trống trường dữ liệu [Giá]
+3. Nhập dữ liệu cho các trường còn lại:
+[Loại Hoa] = "Hoa Cướii"
+[Tên Hoa] = "Hoa Lạ"
+[Trạng Thái] = "Bình Thường"
+[Mô Tả] = "Không có mô tả"
+[Hình Ảnh] = "20180331_151324.jpg"
+4. Click [Thêm Mới]2. Hiển thị thông báo “ Bạn chưa nhập giá"FailQLH-11Kiểm tra textbox [Giá] cho chức năng Thêm Hoa Mới1. Mở màn hình [Thêm Hoa Mới]
+2. Nhập [Giá] = "             "
+3. Nhập dữ liệu cho các trường còn lại:
+[Loại Hoa] = "Hoa Cướii"
+[Tên Hoa] = "Hoa Lan"
+[Trạng Thái] = "Bình Thường"
+[Mô Tả] = "Không có mô tả"
+[Hình Ảnh] = "20180331_151324.jpg"
+4. Click [Thêm Mới]2. Hiển thị thông báo “ Bạn chưa nhập giá"FailQLH-12Kiểm tra textbox [Giá] cho chức năng Thêm Hoa Mới1. Mở màn hình [Thêm Hoa Mới]
+2. Nhập [Giá] = "một trăm nghìn đồng"
+3. Nhập dữ liệu cho các trường còn lại:
+[Loại Hoa] = "Hoa Cướii"
+[Tên Hoa] = "Hoa Lan tím"
+[Trạng Thái] = "Bình Thường"
+[Mô Tả] = "Không có mô tả"
+[Hình Ảnh] = "20180331_151324.jpg"
+4. Click [Thêm Mới]Không thể nhập dữ liệu dạng chữFailQLH-13Kiểm tra textbox [Giá] cho chức năng Thêm Hoa Mới1. Mở màn hình [Thêm Hoa Mới]
+2. Nhập [Giá] = "/@^"
+3. Nhập dữ liệu cho các trường còn lại:
+[Loại Hoa] = "Hoa Cướii"
+[Tên Hoa] = "Hoa Lan Trắng"
+[Trạng Thái] = "Bình Thường"
+[Mô Tả] = "Không có mô tả"
+[Hình Ảnh] = "20180331_151324.jpg"
+4. Click [Thêm Mới]Không thể nhập dữ liệu dạng ký tự  đặc biệtFailQLH-14Kiểm tra textbox [Giá] cho chức năng Thêm Hoa Mới1. Mở màn hình [Thêm Hoa Mới]
+2. Nhập [Giá] = "12000"
+3. Nhập dữ liệu cho các trường còn lại:
+[Loại Hoa] = "Hoa Cướii"
+[Tên Hoa] = "Hoa Lan Đỏ"
+[Trạng Thái] = "Bình Thường"
+[Mô Tả] = "Không có mô tả"
+[Hình Ảnh] = "20180331_151324.jpg"
+4. Click [Thêm Mới] Hiển thị thông báo “ Đã Thêm Thành Công Hoa Vào Cơ Sở Dữ Liệu" và hiển thị lựa  chọn quay lại màn hình quản lý hoaPassQLH-15Kiểm tra textbox [Mô Tả] cho chức năng Thêm Hoa Mới1. Mở màn hình [Thêm Hoa Mới]
+2. Để trống trường [Mô Tả]
+3. Nhập dữ liệu cho các trường còn lại:
+[Loại Hoa] = "Hoa Cướii"
+[Tên Hoa] = "Hoa Lan Đỏ"
+[Trạng Thái] = "Bình Thường"
+[Giá] = "10000"
+[Hình Ảnh] = "20180331_151324.jpg"
+4. Click [Thêm Mới]Hiển thị thông báo "Bạn chưa nhập mô tả"FailQLH-16Kiểm tra textbox [Mô Tả] cho chức năng Thêm Hoa Mới1. Mở màn hình [Thêm Hoa Mới]
+2. Nhập [Mô Tả] = "Mô tả/hoa lan cưới 1"
+3. Nhập dữ liệu cho các trường còn lại:
+[Loại Hoa] = "Hoa Cướii"
+[Tên Hoa] = "Hoa Lan Xanh"
+[Trạng Thái] = "Bình Thường"
+[Giá] = "10000"
+[Hình Ảnh] = "20180331_151324.jpg"
+4. Click [Thêm Mới] Hiển thị thông báo “ Đã Thêm Thành Công Hoa Vào Cơ Sở Dữ Liệu" và hiển thị lựa  chọn quay lại màn hình quản lý hoaPassQLH-17Kiểm tra option [Loại Hoa] cho chức năng Thêm Hoa Mới1. Mở màn hình [Thêm Hoa Mới]
+2. Mở option Loại Hoa
+3. Quan sátOption Loại Hoa là những loại hoa đã được thêm trong cơ sở dữ liệuPassQLH-18Kiểm tra button [Thêm Mới] cho chức năng Thêm Hoa Mới1. Mở màn hình [Thêm Hoa Mới]
+2. Click [Thêm Mới] 
+3. Quan sátHiển thị thông báo "Bạn chưa nhập dữ liệu"FailQLH-19Kiểm tra button [Làm Lại] cho chức năng Thêm Hoa Mới1. Mở màn hình [Thêm Hoa Mới]
+2. Nhập dữ liệu cho các trường:
+[Tên Hoa] = "Hoa Huệ"
+[Loại Hoa] = "Hoa Tươi Bó"
+[Giá] = "100"
+[Trạng Thái] = "Đặc Biệt]
+3. Click [Làm Lại]Hệ thống xóa trắng các trường text và các trường đưa option trở về trạng thái mặc địnhPassQLH-20Kiểm tra button [Sửa] khi đang thực hiện chức năng Thêm Hoa Mới1. Mở màn hình [Thêm Hoa Mới]
+2. Click [Sửa] tên hoa bất kì
+3. Quan sátHiển thị màn hình thay đổi thông tin hoaPassQLH-21Kiểm tra button [Xóa] khi đang thực hiện chức năng Thêm Hoa Mới1. Mở màn hình [Thêm Hoa Mới]
+2. Click [Xóa] tên hoa bất kì
+3. Quan sátHiển thị màn hình Xóa thông tin hoaPassQLH-22Kiểm tra Linktext Tên Hoa bất kì khi đang thực hiện chức năng Thêm Hoa Mới1. Mở màn hình [Thêm Hoa Mới]
+2. Click linktext tên hoa bất kì
+3. Quan sátHiển thị màn hình thay đổi thông tin hoa với tên hoa tương ứngPassQLH-23Kiểm tra textbox [Tên Hoa] cho chức năng Thay Đổi Thông Tin Hoa1. Mở màn hình [Thay Đổi Thông Tin Hoa]
+2. Để trống trường [Tên Hoa]
+3. Nhập dữ liệu cho các trường còn lại:
+[Loại Hoa] = "Hoa Cướii"
+[Giá] = "10000"
+[Trạng Thái] = "Bình Thường"
+[Mô Tả] = "Không có mô tả"
+[Hình Ảnh] = "20180331_151324.jpg"
+4. Click [Thêm Mới]Hiển thị thông báo "Bạn chưa nhập tên hoa"FailQLH-24Kiểm tra textbox [Tên Hoa] cho chức năng Thay Đổi Thông Tin Hoa1. Mở màn hình [Thay Đổi Thông Tin Hoa]
+2. Nhập dữ liệu trường [Tên Hoa] = "     "
+3. Nhập dữ liệu cho các trường còn lại:
+[Loại Hoa] = "Hoa Cướii"
+[Giá] = "10000"
+[Trạng Thái] = "Bình Thường"
+[Mô Tả] = "Không có mô tả"
+[Hình Ảnh] = "20180331_151324.jpg"
+4. Click [Thêm Mới]Hiển thị thông báo "Bạn chưa nhập tên hoa"FailQLH-25Kiểm tra textbox [Tên Hoa] cho chức năng Thay Đổi Thông Tin Hoa1. Mở màn hình [Thay Đổi Thông Tin Hoa]
+2. Nhập dữ liệu trường [Tên Hoa] = "Hoaa đẹppHoaa đẹppHooa đẹpp" (tên hoa = 30 ký tự)
+3. Nhập dữ liệu cho các trường còn lại:
+[Loại Hoa] = "Hoa Cướii"
+[Giá] = "10000"
+[Trạng Thái] = "Bình Thường"
+[Mô Tả] = "Không có mô tả"
+[Hình Ảnh] = "20180331_151324.jpg"
+4. Click [Thêm Mới] Hiển thị thông báo “ Đã Thêm Thành Công Hoa Vào Cơ Sở Dữ Liệu" và hiển thị lựa  chọn quay lại màn hình quản lý hoaPassQLH-26Kiểm tra textbox [Tên Hoa] cho chức năng Thay Đổi Thông Tin Hoa1. Mở màn hình [Thay Đổi Thông Tin Hoa]
+2. Nhập dữ liệu trường [Tên Hoa] = "Hoaa đẹppHoaa đẹppHoaa đẹppp" (tên hoa > 30 ký tự)
+3. Nhập dữ liệu cho các trường còn lại:
+[Loại Hoa] = "Hoa Cướii"
+[Giá] = "10000"
+[Trạng Thái] = "Bình Thường"
+[Mô Tả] = "Không có mô tả"
+[Hình Ảnh] = "20180331_151324.jpg"
+4. Click [Thêm Mới]2. Không thể nhập tên hoa quá 30 ký tựFailQLH-27Kiểm tra textbox [Giá] cho chức năng Thay Đổi Thông Tin Hoa1. Mở màn hình [Thay Đổi Thông Tin Hoa]
+2. Để trống trường dữ liệu [Giá]
+3. Nhập dữ liệu cho các trường còn lại:
+[Loại Hoa] = "Hoa Cướii"
+[Tên Hoa] = "Hoa Lạ"
+[Trạng Thái] = "Bình Thường"
+[Mô Tả] = "Không có mô tả"
+[Hình Ảnh] = "20180331_151324.jpg"
+4. Click [Thêm Mới] Hiển thị thông báo “ Bạn chưa nhập giá"FailQLH-28Kiểm tra textbox [Giá] cho chức năng Thay Đổi Thông Tin Hoa1. Mở màn hình [Thay Đổi Thông Tin Hoa]
+2. Nhập [Giá] = "             "
+3. Nhập dữ liệu cho các trường còn lại:
+[Loại Hoa] = "Hoa Cướii"
+[Tên Hoa] = "Hoa Lan"
+[Trạng Thái] = "Bình Thường"
+[Mô Tả] = "Không có mô tả"
+[Hình Ảnh] = "20180331_151324.jpg"
+4. Click [Thêm Mới]Hiển thị thông báo “ Bạn chưa nhập giá"FailQLH-29Kiểm tra textbox [Giá] cho chức năng Thay Đổi Thông Tin Hoa1. Mở màn hình [Thay Đổi Thông Tin Hoa]
+2. Nhập [Giá] = "một trăm nghìn đồng"
+3. Nhập dữ liệu cho các trường còn lại:
+[Loại Hoa] = "Hoa Cướii"
+[Tên Hoa] = "Hoa Lan tím"
+[Trạng Thái] = "Bình Thường"
+[Mô Tả] = "Không có mô tả"
+[Hình Ảnh] = "20180331_151324.jpg"
+4. Click [Thêm Mới]Không thể nhập dữ liệu dạng chữFailQLH-30Kiểm tra textbox [Giá] cho chức năng Thay Đổi Thông Tin Hoa1. Mở màn hình [Thay Đổi Thông Tin Hoa]
+2. Nhập [Giá] = "/@^"
+3. Nhập dữ liệu cho các trường còn lại:
+[Loại Hoa] = "Hoa Cướii"
+[Tên Hoa] = "Hoa Lan Trắng"
+[Trạng Thái] = "Bình Thường"
+[Mô Tả] = "Không có mô tả"
+[Hình Ảnh] = "20180331_151324.jpg"
+4. Click [Thêm Mới]Không thể nhập dữ liệu dạng ký tự  đặc biệtFailQLH-31Kiểm tra textbox [Giá] cho chức năng Thay Đổi Thông Tin Hoa1. Mở màn hình [Thay Đổi Thông Tin Hoa]
+2. Nhập [Giá] = "12000"
+3. Nhập dữ liệu cho các trường còn lại:
+[Loại Hoa] = "Hoa Cướii"
+[Tên Hoa] = "Hoa Lan Đỏ"
+[Trạng Thái] = "Bình Thường"
+[Mô Tả] = "Không có mô tả"
+[Hình Ảnh] = "20180331_151324.jpg"
+4. Click [Thêm Mới] Hiển thị thông báo “ Đã Thêm Thành Công Hoa Vào Cơ Sở Dữ Liệu" và hiển thị lựa  chọn quay lại màn hình quản lý hoaPassQLH-32Kiểm tra textbox [Mô Tả] cho chức năng Thay Đổi Thông Tin Hoa1. Mở màn hình [Thay Đổi Thông Tin Hoa]
+2. Để trống trường [Mô Tả]
+3. Nhập dữ liệu cho các trường còn lại:
+[Loại Hoa] = "Hoa Cướii"
+[Tên Hoa] = "Hoa Lan Đỏ"
+[Trạng Thái] = "Bình Thường"
+[Giá] = "10000"
+[Hình Ảnh] = "20180331_151324.jpg"
+4. Click [Thêm Mới]Hiển thị thông báo "Bạn chưa nhập mô tả"FailQLH-33Kiểm tra textbox [Mô Tả] cho chức năng Thay Đổi Thông Tin Hoa1. Mở màn hình [Thay Đổi Thông Tin Hoa]
+2. Nhập [Mô Tả] = "Mô tả/hoa lan cưới 1"
+3. Nhập dữ liệu cho các trường còn lại:
+[Loại Hoa] = "Hoa Cướii"
+[Tên Hoa] = "Hoa Lan Xanh"
+[Trạng Thái] = "Bình Thường"
+[Giá] = "10000"
+[Hình Ảnh] = "20180331_151324.jpg"
+4. Click [Thêm Mới]Hiển thị thông báo “ Đã Thêm Thành Công Hoa Vào Cơ Sở Dữ Liệu" và hiển thị lựa  chọn quay lại màn hình quản lý hoaPassQLH-34Kiểm tra option [Loại Hoa] cho chức năng Thay Đổi Thông Tin Hoa1. Mở màn hình [Thay Đổi Thông Tin Hoa]
+2. Mở option Loại Hoa
+3. Quan sátOption Loại Hoa là những loại hoa đã được thêm trong cơ sở dữ liệuPassQLH-35Kiểm tra button [Cập Nhật] cho chức năng Thay Đổi Thông Tin Hoa1. Mở màn hình [Thay Đổi Thông Tin Hoa]
+2. Click [Cập Nhật] 
+3. Quan sátHiển thị thông báo "Đã Lưu Thành Công Thay Đỗi Của Bạn"PassQLH-36Kiểm tra button [Thêm Hoa Mới] khi đang thực hiện  chức năng Thay Đổi Thông Tin Hoa1. Mở màn hình [Thay Đổi Thông Tin Hoa]
+2. Nhập dữ liệu cho các trường:
+[Tên Hoa] = "Hoa Huệ"
+[Loại Hoa] = "Hoa Tươi Bó"
+[Giá] = "100"
+[Trạng Thái] = "Đặc Biệt]
+3. Click [Thêm Hoa Mới]Hiển thị màn hình [Thêm Hoa Mới]PassQLH-37Kiểm tra button [Sửa] khi đang thực hiện chức năng Thay Đổi Thông Tin Hoa1. Mở màn hình [Thay Đổi Thông Tin Hoa]
+2. Click [Sửa] tên hoa bất kì
+3. Quan sátHiển thị màn hình thay đổi thông tin hoaPassQLH-38Kiểm tra button [Xóa] khi đang thực hiện chức năng Thay Đổi Thông Tin Hoa1. Mở màn hình [Thay Đổi Thông Tin Hoa]
+2. Click [Xóa] tên hoa bất kì
+3. Quan sátHiển thị màn hình Xóa thông tin hoaPassQLH-39Kiểm tra Linktext Tên Hoa bất kì khi đang thực hiện chức năng Thay Đổi Thông Tin Hoa1. Mở màn hình [Thay Đổi Thông Tin Hoa]
+2. Click linktext tên hoa bất kì
+3. Quan sátHiển thị màn hình thay đổi thông tin hoa với tên hoa tương ứngPassQLH-40Kiểm tra Button [Upload]1. Mở màn hình [Thay Đổi Thông Tin Hoa]
+2. Click [Upload]Hiển thị màn hình Upload PicturePass    QLH-41    Kiểm tra chức năng Tìm Kiếm    1. Mở màn hình [Quản Lý Hoa]
+2. Nhập vào Textbox [Tên Hoa] = " Hoa lan"
+Không chọn dữ liệu cho trường [Tên Loại Hoa]
+3. Click [Tìm]    Hiển thị tất cả kết quả tìm kiếm trong tất cả các loại hoa trong tên hoa có chứa cum từ "Hoa lan"    PassQLH-42Kiểm tra chức năng Tìm Kiếm1. Mở màn hình [Quản Lý Hoa]
+2. Để trống Textbox [Tên Hoa]
+[Tên Loại Hoa] = "Hoa Cướii"
+3. Click [Tìm]Hiển thị tất cả kết quả tìm kiếm có Tên Loại Hoa = Hoa CướiiPassQLH-43Kiểm tra chức năng Tìm Kiếm1. Mở màn hình [Quản Lý Hoa]
+2. Nhập Textbox [Tên Hoa] = "Hoa Cài Áo"
+[Tên Loại Hoa] = "Hoa Cướii"
+3. Click [Tìm]Hiển thị tất cả kết quả tìm kiếm có Tên Loại Hoa = Hoa Cướii và Tên Hoa có chứa cụm từ "Hoa Cài Áo"PassQLH-44Kiểm tra chức năng Xóa1. Mở màn hình [Quản Lý Hoa]
+2. Click [Xóa] ở tên hoa "Lẵng Hoa Hồng"
+3. Quan sátHiển thị cảnh báo xóa thông tin hoaPassQLH-45Kiểm tra chức năng Xóa1. Mở màn hình [Quản Lý Hoa]
+2. Click [Xóa] ở tên hoa "Lẵng Hoa Hồng"
+3. Click [Hủy]Đóng cảnh báo, hiển thị màn hình Quản Lý HoaPassQLH-46Kiểm tra chức năng Xóa1. Mở màn hình [Quản Lý Hoa]
+2. Click [Xóa] ở tên hoa "Lẵng Hoa Hồng"
+3. Click [OK]Hiển thị thông báo "Đã Xóa Thành Công" và hiển thị lựa chọn quay về màn hình Quản Lý HoaPassQLH-47Kiểm tra chức năng Xóa1. Mở màn hình [Quản Lý Hoa]
+2. Click [Xóa] ở tên hoa "Hoa "
+3. Click các Button, Linktext khác ngoài cảnh báoKhông thể thực hiệnPassQLH-48Kiểm tra Phân trang màn hình1. Mở màn hình [Quản Lý Hoa]
+2. Nhập dữ liệu cho màn hình Quản Lý Hoa gồm trên 10 thông tin hoaHiển thị màn hình phân trang, mỗi trang bao gồm 10 thông tin hoa được hiển thị, có các button trang và option phân trangPass3.4.3 Test case chức năng “Đăng Ký Khách Hàng”
+    Bảng 314: Test report chức năng “Đăng Ký Khách Hàng”
+Module CodeĐăng KýTest requirement TesterTrịnh Thị Kim OanhPassFailUntestedN/ANumber of Test cases3680044    
+
+    
+    
+    Bảng 315: Test case chức năng “Đăng Ký Khách Hàng”
+IDTest Case DescriptionTest Case ProcedureExpected OutputResult                        Common InterfaceĐăng ký-1Kiểm tra tổng thể giao diện màn hình1. Click vào Linktext [Đăng Ký] trên màn hình [Trang Chủ]
+2. Kiểm tra về bố cục, font chữ, chính tả, màu chữ
+3. Kiểm tra trường bắt buộc phải có dấu *
+4. Kiểm tra về tính hợp lý dễ sử dụng của màn hình.
+5. Kiểm tra các textbox khi mới vào màn hình1. Hiển thị màn hình [Đăng Ký Khách Hàng]
+2. Các label, textbox, combo có độ dài, rộng và khoảng cách bằng nhau, không xô lệch. Các label sử dụng cùng 1 loại font, cỡ chữ, căn lề trái; không có lỗi về chính tả, cấu trúc câu, ngữ pháp.
+3. Các trường hợp bắt buộc nhập phải có dấu (*)
+4. Form được bố trí hợp lý và dễ sử dụng
+5. Các textbox phải được xóa trắng khi mới vào màn hìnhFailĐăng ký-2Kiểm tra thứ tự tab, tab-shift, di chuyển của chuột1. Mở màn hình [Đăng Ký]
+2. Kiểm tra thứ tự tab, tab-shift, di chuyển của chuộtKhi người dùng nhấn phím Tab, con trỏ di chuyển từ trái sang phải, từ trên xuống dướiPassĐăng ký-3Kiểm tra giao diện khi thu nhỏ, phóng to1. Mở màn hình [Đăng Ký]
+2. Nhấn phím Ctrl -
+3. Nhấn phim Ctrl +Màn hình thu nhỏ, phóng to tương ứng và không bị vỡ giao diệnPassĐăng ký-4Kiểm tra căn lề các trường1. Mở màn hình [Đăng Ký]
+2. Kiểm tra căn lề các trường-Các kí tự chữ được căn trái và kí tự số được căn phải
+ -Các trường được căn giữaFail    Common FunctionĐăng ký-5Kiểm tra textbox [Tên Đăng Nhập]1. Mở màn hình [Đăng Ký]
+2. Để trống trường [Tên Đăng Nhập]
+3. Nhập dữ liệu cho các trường còn lại:
+[Mật Khẩu] = 12345
+[Họ] = Trịnh
+[Tên] = Oanh
+[Số Điện Thoại] = 0973546691
+[Email] = oanh.@gmail.com
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký] Hệ thống hiển thị cảnh báo: "Bạn chưa nhập vào tên đăng nhập"PassĐăng ký-6Kiểm tra textbox [Tên Đăng Nhập]1. Mở màn hình [Đăng Ký]
+2. Nhập dữ liệu [Tên Đăng Nhập] = o
+3. Nhập dữ liệu cho các trường còn lại:
+[Mật Khẩu] = 12345
+[Họ] = Trịnh
+[Tên] = Oanh
+[Số Điện Thoại] = 0973546691
+[Email] = oanh.@gmail.com
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: “Bạn Đã Đăng Ký Thành Công..!” và hiển thị lựa chọn quay về trang chủPassĐăng ký-7Kiểm tra textbox [Tên Đăng Nhập]1. Mở màn hình [Đăng Ký]
+2. Nhập dữ liệu [Tên Đăng Nhập] = Trinh Thi Kim T
+3. Nhập dữ liệu cho các trường còn lại:
+[Mật Khẩu] = 12345
+[Họ] = Trịnh
+[Tên] = Oanh
+[Số Điện Thoại] = 0973546691
+[Email] = oanh.@gmail.com
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: “Bạn Đã Đăng Ký Thành Công..!” và hiển thị lựa chọn quay về trang chủPassĐăng ký-8Kiểm tra textbox [Tên Đăng Nhập]1. Mở màn hình [Đăng Ký]
+2. Nhập dữ liệu [Tên Đăng Nhập] = Trinh Thi Kim ThKhông thể nhập dữ liệu [Tên Đăng Nhập] quá 15 ký tựPassĐăng ký-9Kiểm tra textbox [Tên Đăng Nhập]1. Mở màn hình [Đăng Ký]
+2. Nhập dữ liệu [Tên Đăng Nhập] = Trịnh Thị Kim O
+3. Nhập dữ liệu cho các trường còn lại:
+[Mật Khẩu] = 12345
+[Họ] = Trịnh
+[Tên] = Oanh
+[Số Điện Thoại] = 0973546691
+[Email] = oanh.@gmail.com
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị cảnh báo: " Tên đăng nhập đã tồn tại trong hệ thống" và hiển thị lựa chọn "Quay về trang chủ" hoặc "nhấn vào đây để nhập lại"PassĐăng ký-10Kiểm tra textbox [Mật Khẩu]1. Mở màn hình [Đăng Ký]
+2. Để trống trường [Mật Khẩu]
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = 12345
+[Họ] = Trịnh
+[Tên] = Oanh
+[Số Điện Thoại] = 0973546691
+[Email] = oanh.@gmail.com
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị cảnh báo: "Bạn chưa nhập vào  mật khẩu"PassĐăng ký-11Kiểm tra textbox [Mật Khẩu]1. Mở màn hình [Đăng Ký]
+2. Để nhập dữ liệu trường [Mật Khẩu] = 1
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = 12345
+[Họ] = Trịnh
+[Tên] = Oanh
+[Số Điện Thoại] = 0973546691
+[Email] = oanh.@gmail.com
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: “Bạn Đã Đăng Ký Thành Công..!” và hiển thị lựa chọn quay về trang chủPassĐăng ký-12Kiểm tra textbox [Mật Khẩu]1. Mở màn hình [Đăng Ký]
+2. Để nhập dữ liệu trường [Mật Khẩu] = 123456789012345
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = 123456
+[Họ] = Trịnh
+[Tên] = Oanh
+[Số Điện Thoại] = 0973546691
+[Email] = oanh.@gmail.com
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: “Bạn Đã Đăng Ký Thành Công..!” và hiển thị lựa chọn quay về trang chủPassĐăng ký-13Kiểm tra textbox [Mật Khẩu]1. Mở màn hình [Đăng Ký]
+2. Để nhập dữ liệu trường [Mật Khẩu] = 1234567890123456
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = 123456
+[Họ] = Trịnh
+[Tên] = Oanh
+[Số Điện Thoại] = 0973546691
+[Email] = oanh.@gmail.com
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Không thể nhập dữ liệu [Mật Khẩu] quá 15 ký tựPassĐăng ký-14Kiểm tra textbox [Họ]1. Mở màn hình [Đăng Ký]
+2. Để trống trường dữ liệu [Họ]
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = Oanh
+[Mật Khẩu] = 12345
+[Tên] = Oanh
+[Số Điện Thoại] = 0973546691
+[Email] = oanh.@gmail.com
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị cảnh báo: "Bạn chưa nhập vào họ"PassĐăng ký-15Kiểm tra textbox [Họ]1. Mở màn hình [Đăng Ký]
+2. Nhập dữ liệu cho [Họ] = t
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = Oanh
+[Mật Khẩu] = 12345
+[Tên] = Oanh
+[Số Điện Thoại] = 0973546691
+[Email] = oanh.@gmail.com
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: “Bạn Đã Đăng Ký Thành Công..!” và hiển thị lựa chọn quay về trang chủPassĐăng ký-16Kiểm tra textbox [Họ]1. Mở màn hình [Đăng Ký]
+2. Nhập dữ liệu cho [Họ] = 123456789012345678901234567890
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = OanhTrinh
+[Mật Khẩu] = 12345
+[Tên] = Oanh
+[Số Điện Thoại] = 0973546691
+[Email] = oanh.@gmail.com
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: “Bạn Đã Đăng Ký Thành Công..!” và hiển thị lựa chọn quay về trang chủPassĐăng ký-17Kiểm tra textbox [Họ]1. Mở màn hình [Đăng Ký]
+2. Nhập dữ liệu cho [Họ] = 1234567890123456789012345678901
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = OanhTrinhT
+[Mật Khẩu] = 12345
+[Tên] = Oanh
+[Số Điện Thoại] = 0973546691
+[Email] = oanh.@gmail.com
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Không thể nhập dữ liệu [Họ] quá 30 ký tựFailĐăng ký-18Kiểm tra textbox [Tên]1. Mở màn hình [Đăng Ký]
+2. Để trống trường dữ liệu [Tên]
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = Oăn
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Số Điện Thoại] = 0973546691
+[Email] = oanh.@gmail.com
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]4. Hệ thống hiển thị cảnh báo: "Bạn chưa nhập vào tên"PassĐăng ký-19Kiểm tra textbox [Tên]1. Mở màn hình [Đăng Ký]
+2. Nhập [Tên] = a
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = Oăn
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Số Điện Thoại] = 0973546691
+[Email] = oanh.@gmail.com
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: “Bạn Đã Đăng Ký Thành Công..!” và hiển thị lựa chọn quay về trang chủPassĐăng ký-20Kiểm tra textbox [Tên]1. Mở màn hình [Đăng Ký]
+2. Nhập [Tên] = 123456789012345678901234567890
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = Oănn
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Số Điện Thoại] = 0973546691
+[Email] = oanh.@gmail.com
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: “Bạn Đã Đăng Ký Thành Công..!” và hiển thị lựa chọn quay về trang chủPassĐăng ký-21Kiểm tra textbox [Tên]1. Mở màn hình [Đăng Ký]
+2. Nhập [Tên] = 1234567890123456789012345678901
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = Oănnn
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Số Điện Thoại] = 0973546691
+[Email] = oanh.@gmail.com
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Không thể nhập dữ liệu [Tên] quá 30 ký tựFailĐăng ký-22Kiểm tra textbox [Số Điện Thoại]1. Mở màn hình [Đăng Ký]
+2. Để trống trường [Số Điện Thoại]
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = Oănnnn
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Tên] = Trịnh
+[Email] = oanh.@gmail.com
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: "bạn phải nhập bằng số có từ 10 đến 11 ký tự!"PassĐăng ký-23Kiểm tra textbox [Số Điện Thoại]1. Mở màn hình [Đăng Ký]
+2. Nhập [Số Điện Thoại] = 123456789
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = Oănnnn
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Tên] = Trịnh
+[Email] = oanh.@gmail.com
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: "bạn phải nhập bằng số có từ 10 đến 11 ký tự!"PassĐăng ký-24Kiểm tra textbox [Số Điện Thoại]1. Mở màn hình [Đăng Ký]
+2. Nhập [Số Điện Thoại] = 12h/juo9h
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = Oănnnn
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Tên] = Trịnh
+[Email] = oanh.@gmail.com
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: "bạn phải nhập bằng số có từ 10 đến 11 ký tự!"PassĐăng ký-25Kiểm tra textbox [Số Điện Thoại]1. Mở màn hình [Đăng Ký]
+2. Nhập [Số Điện Thoại] = 123456789012
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = Oănnnn
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Tên] = Trịnh
+[Email] = oanh.@gmail.com
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: "bạn phải nhập bằng số có từ 10 đến 11 ký tự!"PassĐăng ký-26Kiểm tra textbox [Số Điện Thoại]1. Mở màn hình [Đăng Ký]
+2. Nhập [Số Điện Thoại] = 1234567890
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = Oănnnn
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Tên] = Trịnh
+[Email] = oanh.@gmail.com
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: “Bạn Đã Đăng Ký Thành Công..!” và hiển thị lựa chọn quay về trang chủPassĐăng ký-27Kiểm tra textbox [Số Điện Thoại]1. Mở màn hình [Đăng Ký]
+2. Nhập [Số Điện Thoại] = 12345678901
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = Oănnnnn
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Tên] = Trịnh
+[Email] = oanh.@gmail.com
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: “Bạn Đã Đăng Ký Thành Công..!” và hiển thị lựa chọn quay về trang chủPassĐăng ký-28Kiểm tra textbox [Email]1. Mở màn hình [Đăng Ký]
+2. Để trống trường [Email]
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = BaOanh
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Tên] = Trịnh
+[Số Điện Thoại] = 0973546691
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký] Hệ thống hiển thị thông báo: "bạn chưa nhập email!"PassĐăng ký-29Kiểm tra textbox [Email]1. Mở màn hình [Đăng Ký]
+2. Nhập dữ liệu [Email] = oanh
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = BaOanh
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Tên] = Trịnh
+[Số Điện Thoại] = 0973546691
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký] Hệ thống hiển thị thông báo: "bạn nhập sai dạng email - dạng email vd: tenban@yahoo.com"PassĐăng ký-30Kiểm tra textbox [Email]1. Mở màn hình [Đăng Ký]
+2. Nhập dữ liệu [Email] = trinhthikimoanh.27041995_K12utehy_geminii@gmail.com
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = BaOanh
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Tên] = Trịnh
+[Số Điện Thoại] = 0973546691
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Không thể nhập dữ liệu [Email] quá 50 ký tựPassĐăng ký-31Kiểm tra textbox [Email]1. Mở màn hình [Đăng Ký]
+2. Nhập dữ liệu [Email] = trinhthikimoanh.27041995_K12utehy_gemini@gmail.com
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = BaOanh
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Tên] = Trịnh
+[Số Điện Thoại] = 0973546691
+[Địa Chỉ Nhà] = 99-Nguyễn Chí Thanh
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: “Bạn Đã Đăng Ký Thành Công..!” và hiển thị lựa chọn quay về trang chủPassĐăng ký-32Kiểm tra textbox [Địa Chỉ Nhà]1. Mở màn hình [Đăng Ký]
+2. Để trống trường [Địa Chỉ Nhà]
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = BaOanhh
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Tên] = Trịnh
+[Số Điện Thoại] = 0973546691
+[Email] = oanhgemini.2795@gmail.com
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: "bạn chưa nhập vào địa chỉ!"PassĐăng ký-33Kiểm tra textbox [Địa Chỉ Nhà]1. Mở màn hình [Đăng Ký]
+2. Nhập [Địa Chỉ Nhà] = a
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = BaOanhh
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Tên] = Trịnh
+[Số Điện Thoại] = 0973546691
+[Email] = oanhgemini.2795@gmail.com
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: “Bạn Đã Đăng Ký Thành Công..!” và hiển thị lựa chọn quay về trang chủPassĐăng ký-34Kiểm tra textbox [Địa Chỉ Nhà]1. Mở màn hình [Đăng Ký]
+2. Nhập [Địa Chỉ Nhà] gồm 200 ký tự
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = BaOanhhh
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Tên] = Trịnh
+[Số Điện Thoại] = 0973546691
+[Email] = oanhgemini.2795@gmail.com
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: “Bạn Đã Đăng Ký Thành Công..!” và hiển thị lựa chọn quay về trang chủPassĐăng ký-35Kiểm tra textbox [Địa Chỉ Nhà]1. Mở màn hình [Đăng Ký]
+2. Nhập [Địa Chỉ Nhà] gồm nhiều hơn 200 ký tự
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = BaOanhhhh
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Tên] = Trịnh
+[Số Điện Thoại] = 0973546691
+[Email] = oanhgemini.2795@gmail.com
+[Giới Tính] = Nữ
+[Mã Xác Nhận] = 'nhập đúng mã xác nhận ngẫu nhiên bên cạnh
+4. Nhấn enter hoặc click nút [Đăng Ký]Không thể nhập dữ liệu [Địa Chỉ Nhà] quá 200 ký tựFailĐăng ký-36Kiểm tra textbox [Mã Xác Nhận]1. Mở màn hình [Đăng Ký]
+2. Để trống [Mã Xác Nhận]
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = BaOanhhhh
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Tên] = Trịnh
+[Số Điện Thoại] = 0973546691
+[Email] = oanhgemini.2795@gmail.com
+[Giới Tính] = Nữ
+[Địa Chỉ Nhà] = 99 Nguyễn Chí Thanh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: “Bạn Nhập Sai Mã Xác Nhận Vui Lòng Nhập Lại!"PassĐăng ký-37Kiểm tra textbox [Mã Xác Nhận]1. Mở màn hình [Đăng Ký]
+2. Nhập [Mã Xác Nhận] khác với mã xác nhận hiển thị
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = BaOanhhhh
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Tên] = Trịnh
+[Số Điện Thoại] = 0973546691
+[Email] = oanhgemini.2795@gmail.com
+[Giới Tính] = Nữ
+[Địa Chỉ Nhà] = 99 Nguyễn Chí Thanh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: “Bạn Nhập Sai Mã Xác Nhận Vui Lòng Nhập Lại!"PassĐăng ký-38Kiểm tra textbox [Mã Xác Nhận]1. Mở màn hình [Đăng Ký]
+2. Nhập [Mã Xác Nhận] đúng với mã xác nhận hiển thị
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = BaOanhhhh
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Tên] = Trịnh
+[Số Điện Thoại] = 0973546691
+[Email] = oanhgemini.2795@gmail.com
+[Giới Tính] = Nữ
+[Địa Chỉ Nhà] = 99 Nguyễn Chí Thanh
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: “Bạn Đã Đăng Ký Thành Công..!” và hiển thị lựa chọn quay về trang chủPassĐăng ký-39Kiểm tra Option [Giới Tính]1. Mở màn hình [Đăng Ký]
+2. Click chọn [Giới Tính] = Nam
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = BBaOanh
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Tên] = Trịnh
+[Số Điện Thoại] = 0973546691
+[Email] = oanhgemini.2795@gmail.com
+[Giới Tính] = Nữ
+[Địa Chỉ Nhà] = 99 Nguyễn Chí Thanh
+[Mã Xác Nhận] = 'mã xác nhận đang hiển thị
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: “Bạn Đã Đăng Ký Thành Công..!” và hiển thị lựa chọn quay về trang chủPassĐăng ký-40Kiểm tra Option [Giới Tính]1. Mở màn hình [Đăng Ký]
+2. Click chọn [Giới Tính] = Nữ
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = BBBaOanh
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Tên] = Trịnh
+[Số Điện Thoại] = 0973546691
+[Email] = oanhgemini.2795@gmail.com
+[Giới Tính] = Nữ
+[Địa Chỉ Nhà] = 99 Nguyễn Chí Thanh
+[Mã Xác Nhận] = 'mã xác nhận đang hiển thị
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: “Bạn Đã Đăng Ký Thành Công..!” và hiển thị lựa chọn quay về trang chủPassĐăng ký-41Kiểm tra Option [Giới Tính]1. Mở màn hình [Đăng Ký]
+2. Click chọn [Giới Tính] = Không Xác Định
+3. Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = BBBaOanh
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Tên] = Trịnh
+[Số Điện Thoại] = 0973546691
+[Email] = oanhgemini.2795@gmail.com
+[Giới Tính] = Nữ
+[Địa Chỉ Nhà] = 99 Nguyễn Chí Thanh
+[Mã Xác Nhận] = 'mã xác nhận đang hiển thị
+4. Nhấn enter hoặc click nút [Đăng Ký]Hệ thống hiển thị thông báo: “Bạn Đã Đăng Ký Thành Công..!” và hiển thị lựa chọn quay về trang chủPassĐăng ký-42Kiểm tra button [Làm Trắng Form]1. Mở màn hình [Đăng Ký]
+2. Click chọn [Giới Tính] = Không Xác Định
+Nhập dữ liệu cho các trường còn lại:
+[Tên Đăng Nhập] = BBBaOanh
+[Mật Khẩu] = 12345
+[Họ] = Oanh
+[Tên] = Trịnh
+[Số Điện Thoại] = 0973546691
+[Email] = oanhgemini.2795@gmail.com
+[Giới Tính] = Nữ
+[Địa Chỉ Nhà] = 99 Nguyễn Chí Thanh
+[Mã Xác Nhận] = 'mã xác nhận đang hiển thị
+4. Click Button [Làm Trắng Form]Các trường text được xóa trắng, trường option được hiển thị mặc địnhFailĐăng ký-43Kiểm tra button [Làm Trắng Form]1. Mở màn hình [Đăng Ký]
+2. Click Button [Làm Trắng Form]Các trường text được xóa trắng, trường option được hiển thị mặc địnhFailĐăng ký-44Kiểm tra button [Quay Lại]1. Mở màn hình [Đăng Ký]
+2. Click Button [Làm Trắng Form]button [Quay Lại] thực hiện đúng chức năng quay về màn hình trước đóFail3.5 Chuẩn bị dữ liệu test
+3.5.1 Dữ liệu cho chức năng “Quản Lý Loại Hoa”
+    Bảng 316: Dữ liệu cho test case “Thêm Loại Hoa”
+
+    Bảng 317: Dữ liệu cho test case “Sửa Loại Hoa”
+ 
+    Bảng 318: Dữ liệu cho test case “Xóa Loại Hoa”
+ 
+3.5.2 Dữ liệu cho chức năng “Quản Lý Hoa”
+    
+    
+Bảng 319: Dữ liệu cho test case “Thêm Hoa Mới”
+IDTenHoaLoaiHoaGiaTrangThaiMoTaHinhAnhExpectedResultQLH-5Hoa Cướii10000Bình ThườngKhông có mô tả20180331_151324.jpgBạn Chưa Nhập Tên HoaQLH-6                Hoa Cướii10000Bình ThườngKhông có mô tả20180331_151324.jpgBạn Chưa Nhập Tên HoaQLH-7Hoaa đẹppHoaa đẹppHoaa đẹppHoa Cướii10000Bình ThườngKhông có mô tả20180331_151324.jpgĐã Thêm Thành Công Hoa Vào Cơ Sở Dữ LiệuQLH-8Hoa xanh Hoa xanh Hoa xanhhhhhhHoa Tình Yêu10000Bình ThườngKhông có mô tả20180331_151324.jpgĐã Thêm Thành Công Hoa Vào Cơ Sở Dữ LiệuQLH-9Hoa lạHoa Tình YêuĐặc BiệtMô tả20180331_151324.jpgBạn chưa nhập giáQLH-10Hoa HoaHoa Sinh Nhật                      Đặc BiệtMô tả20180331_151324.jpgBạn chưa nhập giáQLH-11Hoa Phong LanHoa Tươi GiỏMột Trăm nghìn đồngBình ThườngMô tả20180331_151324.jpgBạn chưa nhập giáQLH-12Hoa CàHoa Khô/@^Bình ThườngMô tả20180331_151324.jpgBạn chưa nhập giáQLH-13Hoa Bằng LăngHoa Khô123000Đặc BiệtMô tả20180331_151324.jpgĐã Thêm Thành Công Hoa Vào Cơ Sở Dữ LiệuQLH-14Hoa CỏHoa Khô12300Bình Thường20180331_151324.jpgBạn chưa nhập mô tảQLH-15Hoa Lan CướiHoa Cưới130000Đặc BiệtMô tả/hoa lan cưới 120180331_151324.jpgĐã Thêm Thành Công Hoa Vào Cơ Sở Dữ Liệu3.6 Các bước xây dựng một frameword cho Data Driven testing trên Katalon Studio
+    B1: khởi động Katalon Studio và mở một dự án thử nghiệm
+    Hình 312: Màn hình khởi động
+B2:  Sử dụng chức năng Spy Web để lấy về các đối tượng cần thiết bằng tổ hợp phím “Alt+`”
+
+    Hình 313: Màn hình Spy Web.
+    Các đối tượng đã lấy vê sẽ được lưu trong Object Repository
+    Hình 314: Màn hình Object Repository.
+B3:  Viết Test  Script  dựa trên Test case và những đối tượng vừa lấy về
+
+    Hình 315: Màn hình Script.
+    Các thư viện của Katalon Studio đều được tự động hóa nên việc viết Script rất đơn giản, đây là một ví dụ dễ hiểu:
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl(GlobalVariable.URL)
+
+WebUI.setText(findTestObject('QLLH/Page_br  bNoticeb Undefined index t/input_txttendangnhap'), GlobalVariable.TenDN)
+
+WebUI.setText(findTestObject('QLLH/Page_br  bNoticeb Undefined index t/input_txtpass'), GlobalVariable.Pass)
+
+WebUI.click(findTestObject('QLLH/Page_br  bNoticeb Undefined index t/input_Submit'))
+
+WebUI.click(findTestObject('QLLH/Page_quanlyloaihoa/a_Qun L Loi Hoa'))
+
+for (def index : (1..1)) {
+    WebUI.click(findTestObject('QLLH/Page_quanlyloaihoa/a_Thm Loi Hoa Mi'))
+
+    WebUI.setText(findTestObject('QLLH/Page_quanlyloaihoa/input_tenloaihoa'), GlobalVariable.TenLoaiHoa)
+
+    WebUI.click(findTestObject('QLLH/Page_quanlyloaihoa/input_Submit'))
+
+    WebUI.verifyElementText(findTestObject('QLLH/Page_xlloaihoa/span_Thm Thnh Cng Loai Hoa hoa'), GlobalVariable.Expectedresult, 
+        FailureHandling.CONTINUE_ON_FAILURE)
+
+    WebUI.verifyElementText(findTestObject('QLLH/Page_xlloaihoa/span_Loi Hoa Ny  Tn Ti Bn Hy C'), GlobalVariable.Expectedresult, 
+        FailureHandling.CONTINUE_ON_FAILURE)
+
+    WebUI.click(findTestObject('QLLH/Page_xlloaihoa/a_Bm Vo y  V Trang Qun L Loi H'))
+}
+
+WebUI.closeBrowser()
+     
+ B4: Tạo các File dữ liệu theo Test case và add vào Data File
+    Đây là ví dụ về File Excel
+
+    Hình 316: Màn hình Data file
+B5: Tạo một New Test Suites và add các test case muốn chạy thử nghiệm và các File Data tương ứng vào một bộ
+   
+    Hình 317: Màn hình Test Suite
+    Cuối cùng nhấn vào Run, chọn trình duyệt và chạy thử nghiệm đã tạo ra
+
+Hình 318: Màn hình run test
+3.7 Kết quả thực thi thử nghiệm
+    Sau khi chạy các thử nghiệm, click vào Report để xem lại kết quả chi tiết và có thể Export kết quả ra các định dạng khác nhau 
+
+    Hình 319: Màn hình Test Report
+
+
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+- Hiểu được kiểm thử tự động và những lợi ích của kiểm thử tự động
+- Hiểu và sử dụng được công cụ Katalon Studio
+- Xây dựng được bộ tài liệu đặc tả cho website Shop Hoa Online.
+- Xây dựng được bộ Test design, Testcase cho website Shop Hoa Online
+- Áp dụng được công cụ kiểm thử tự động hướng dữ liệu vào một số chức năng của website
+4.2 Hạn chế của đề tài
+- Số lượng Testcase còn hạn chế, chưa bao phủ được toàn bộ case của website.
+- Số lượng Testcase được áp dụng kiểm thử tự động ít, chưa toát lên được hết ưu điểm nổi bật của công cụ.
+- Chưa khai thác triệt để được bộ dữ liệu đầu vào được tích hợp với công cụ như SQL, CSV
+4.3 Hướng phát triển của đề tài
+- Viết được nhiều Testcase hơn, áp dụng kiểm thử tự động cho nhiều Testcse hơn.
+- Kiểm thử hướng tích hợp được với các công cụ khác.
+- Khai thác nhiều hơn các thư viện, bộ dữ liệu đầu vào của công cụ.
+TÀI LIỆU THAM KHẢO
+
+[1] N. V. Quyết, Giáo trình Công nghệ Web và ứng dụng, Hưng Yên: Khoa Công nghệ Thông tin - UTEHY, 2010. [2] Bộ môn Công nghệ phần mềm, Kiểm thử tự động, Khoa Công nghệ thông tin trường Đại học sư phạm kỹ thuật Hưng Yên, 2013. [3] Bộ môn Công nghệ phần mềm, Kiểm thử phần mềm, Khoa Công nghệ thông tin trường Đại học sư phạm kỹ thuật Hưng Yên, 2013. [4] Bộ môn Công nghệ phần mềm, Phân tích thiết kế phần mềm, Khoa công nghệ thông tin trường Đại học sư phạm kỹ thuật Hưng yên. , 2013. [5] KMS, "Katalon Studio," [Online]. Available: https://www.katalon.com/.[6] KMS, "Katalon tudio - Katalon Q&A," [Online]. Available: https://forum.katalon.com/categories/katalon-studio.[7] "QA Testing Tool - KatalonStudio," [Online]. Available: http://www.qatestingtools.com/testing-tool/katalon_studio.[8] [Online]. Available: https://seleniumbycharan.wordpress.com/2017/05/05/katalon-studio-for-test-automation-simple-powerful/.[9] [Online]. Available: http://groovy-lang.org/semantics.html#_looping_structures.[10] [Online]. Available: https://www.softwaretestinghelp.com/katalon-studio-tutorial/.[11] [Online]. Available: https://github.com/katalon-studio.    
+PHỤ LỤC
+Kiểm thử website Siêu Thị Hoa Online sử dụng công cụ Katalon Studio
+    
+79
+    
+    

@@ -1,0 +1,718 @@
+﻿CHƯƠNG 1:	TỔNG QUAN VỀ ĐỀ TÀI 
+1.1. Lý do chọn đề tài
+      Cùng với sự phát triển không ngừng về kỹ thuật máy tính và mạng điện tử, công nghệ thông tin cũng được những công nghệ có đẳng cấp cao và lần lượt chinh phục hết đỉnh cao này đến đỉnh cao khác. Mạng Internet là một trong những Thuốc có giá trị hết sức lớn lao và ngày càng trở nên một công cụ không thể thiếu, là nền tảng chính cho sự truyền tải, trao đổi thông tin trên toàn cầu.
+      Bằng internet, chúng ta đã thực hiện được nhiều công việc với tốc độ nhanh hơn và chi phí thấp hơn nhiều so với cách thức truyền thống.Chính điều này, đã thúc đẩy sự khai sinh và phát triển của thương mại điện tử và chính phủ điện tử trên khắp thế giới, làm biến đổi đáng kể bộ mặt văn hóa, nâng cao chất lượng cuộc sống con người.
+Ứng dụng công nghệ thông tin vào thực tiễn đời sống xã hội giảm thiểu được sức lao động của con người, tăng hiệu quả kinh tế. Bán hàng online cũng là lĩnh vực đang được rất nhiều người quan tâm và được ứng dụng vào thực tế.
+      Từ những lý do trên nên em quyết định chọn đề tài:
+      “Xây dựng Website bán thuốc Huy Nghĩa”
+1.2. Mục tiêu của đề tài.
+- Xây dựng Website bán thuốc Huy Nghĩa .
+1.3. Giới hạn và phạm vi của đề tài.
+Đề tài Xây dựng. Các kiến thức được sử dụng bao gồm: 
+- Lập trình PHP laravel, MYSQL, sử dụng Javascript vào việc xử lý và thiết kế website.
+- Công cụ lập trình được sử dụng bao gồm: Subline Text.
+1.4. Mục đích
+- Hiểu được cách sử dụng cơ bản của ngôn ngữ php, trong đó có các đối tượng, biến, hàm, phương thức, thuộc tính…
+- Biết cách sử dụng hệ quản trị CSDL bằng MySql.
+- Thiết kế và đặc tả hệ thống.
+- Xây dựng cơ sở dữ liệu.
+- Lập trình các module của hệ thống.
+1.5. Kết quả dự kiến đạt được
+Mã nguồn Website bán thuốc Huy Nghĩa.
+- Tài liệu thiết kế hệ thống (Tài liệu bản mềm, bao gồm tệp thiết kế UML và đặc tả chức năng trình bày trên Microsoft Word).
+- Tài liệu thiết kế cơ sở dữ liệu. (Tài liệu bản mềm, bao gồm tệp phân tích cơ sở dữ liệu trình bày trên Microsoft Word và tệp mã nguồn cơ sở dữ liệu).
+- Tài liệu thiết kế giao diện. (Bao gồm một tệp PSD chứa khung sườn trang web, một tệp trình bày đặc tả giao diện trên Microsoft Word).
+
+CHƯƠNG 2:	PHP VÀ FRAMEWORK LARAVEL
+2.1	Tổng quan về ngôn ngữ php
+2.1.1	PHP là gì?
+	PHP (viết tắt của PHP: Hypertext Preprocessor) là ngôn ngữ lập trình kịch bản được phát triển bởi Rasmus Lerdorf. Phiên bản đầu của PHP được giới thiệu vào năm 1995. PHP có thể được sử dụng cho nhiều mục đích khác nhau nhưng chủ yếu được dùng để phát triển các trang web động chạy trên server. 
+2.1.2	Đặc điểm của PHP
+- PHP là một mã nguồn mở 
+- Thư viện phong phú.
+- Ngôn ngữ lập trình thuần hướng đối tượng
+- Tính bảo mật cao.
+2.2	Tổng quan về Framework Laravel
+2.2.1	Laravel là gì?
+	Laravel là 1 framework PHP được phát triển bởi Taylor Otwell vào năm 2011. Là 1 mã nguồn mở và hoàn toàn miễn phí, laravel được sinh ra nhằm mục đích hỗ trợ các ứng dụng web sử dụng mô hình MVC. Ưu điểm của laravel là các bạn hoàn toàn có thể học laravel1 cách dễ dàng, vì cú pháp của nó cũng rất rõ ràng, dể hiểu.
+- Đến nay phiên bản của laravrel đã cập nhật đến phiên bản laravel 5.7, đã đi qua rất nhiều phiên bản và cập nhật thêm nhiều tính năng mới.
+-	Model giúp lưu trữ dữ liệu của ứng dụng và trạng thái của nó. Nó là một cơ sở dữ liệu hoặc cũng có thể chỉ là một tập tin XML.
+-	View được coi là một giao diện người dùng được sử dụng bởi khách truy cập trang web của bạn để thấy các dữ liệu
+-  	Controller chịu trách nhiệm xử lý các tương tác của người dùng với trang web. Nó được sử dụng để xác định loại view nào cần phải được hiển thị. Controller cũng được sử dụng cho mục đích giao tiếp với model.
+2.2.2	Ưu điểm của ASP.NET MVC
+- Tốc độ sử lý nhanh.
+- Dễ sử dụng.
+- Mã nguồn mở.
+- Được xây dựng trên đúng chuẩn MVC.
+- Có tích hợp săn nhiều tính năng.
+- Modun đa dạng.
+- Tính bảo mật cao.
+- Cộng đồng người dùng lớn.
+2.3	Hệ quản trị Cơ sở dữ liệu MYSQL 
+2.2.1	MYSQL là gì?
+     MySQL là hệ quản trị cơ sở dữ liệu tự do nguồn mở phổ biến nhất thế giới và được các nhà phát triển rất ưa chuộng trong quá trình phát triển ứng dụng. Vì MySQL là cơ sở dữ liệu tốc độ cao, ổn định và dễ sử dụng, có tính khả chuyển, hoạt động trên nhiều hệ điều hành cung cấp một hệ thống lớn các hàm tiện ích rất mạnh. Với tốc độ và tính bảo mật cao, MySQL rất thích hợp cho các ứng dụng có truy cập CSDL trên internet. Người dùng có thể tải về MySQL miễn phí từ trang chủ. MySQL có nhiều phiên bản cho các hệ điều hành khác nhau.
+2.2.2	Vai trò của MYSQL.
+- MYSQL là ngôn ngữ hỏi có tính tương tác: Người sử dụng có thể dễ dàng thông qua các tiện ích để gởi các yêu cầu dưới dạng các câu lệnh SQL đến cơ sở dữ liệu và nhận kết quả trả về từ cơ sở dữ liệu.
+- MYSQL là ngôn ngữ lập trình cơ sở dữ liệu: Các lập trình viên có thể nhúng các  câu  lệnh SQL  vào  trong  các  ngôn  ngữ   lập  trình để  xây  dựng  nên  các chương trình ứng dụng giao tiếp với cơ sở dữ liệu.
+- MYSQL là ngôn ngữ quản trị cơ sở dữ liệu: Thông qua SQL, người quản trị cơ sở dữ liệu có thể quản lý được cơ sở dữ liệu, định nghĩa các cấu trúc lưu trữ dữ liệu, điều khiển truy cập cơ sở dữ liệu.
+- MYSQL là ngôn ngữ cho các hệ thống khách/chủ (client/server): Trong các hệ thống cơ sở dữ liệu khách/chủ, SQL được sử dụng như là công cụ để giao tiếp giữa các trình ứng dụng phía máy khách với máy chủ cơ sở dữ liệu.
+- MYSQL là ngôn ngữ truy cập dữ liệu trên Internet: Cho đến nay, hầu hết các máy chủ Web cũng như các máy chủ trên Internet sử dụng SQL với vai trò là ngôn ngữ để tương tác với dữ liệu trong các cơ sở dữ liệu.
+- MYSQL là ngôn ngữ cơ sở dữ liệu phân tán: Đối với các hệ quản trị cơ sở dữ liệu phân tán, mỗi một hệ thống sử dụng SQL để giao tiếp với các hệ thống khác tr ên mạng, gởi và nhận các yêu cầu truy xuất dữ liệu với nhau.
+- MYSQL là ngôn ngữ sử dụng cho các cổng giao tiếp cơ sở dữ liệu: Trong một hệ thống mạng máy tính với nhiều hệ quản trị cơ sở dữ liệu khác nhau, SQL thường được sử dụng như là một chuẩn ngôn ngữ để giao tiếp giữa các hệ quản trị c ơ sở dữ liệu.
+
+CHƯƠNG 3:	PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG
+3.1	Khảo sát và đặc tả yêu cầu	
+3.1.1	Mô tả hệ thống
+      Hoạt động của website bán thuốc Huy Nghĩa có thể mô tả như sau:
+• Khách hàng khi truy cập website có thể xem được các nội dung như các Thuốc và tin tức liên quan đến những Thuốc mới.
+• Thuốc bao gồm các loại thuốc bổ, thuốc da liễu,thuốc gây mê,thuốc dạ dày,kháng sinh, …Thông tin về Thuốc: mã Thuốc, tên Thuốc, ảnh, giá, thuộc loại Thuốc nào và các mô tả chi tiết.
+• Tin tức bao gồm các thông tin: mã tin tức, tiêu đề, ảnh, mô tả, chi tiết.
+• Khi khách hàng chọn một Thuốc sẽ chuyển tới trang chi tiết Thuốc, tại đây khách hàng có thể xem các thông tin chi tiết về Thuốc và có thể đặt Thuốc đó vào giỏ hàng với số lượng mặc định là 1 và sẽ tăng thêm số lượng nếu khách hàng cập nhật trong giỏ hàng.
+• Khách hàng có thể chuyển đến giỏ hàng để xem danh mục các Thuốc đã đặt vào. Và khách hàng có thể thay đổi số lượng Thuốc hoặc xóa bỏ Thuốc nào đó ra khỏi giỏ hàng.
+• Khi đã xác định được các mặt hàng và số lượng, khách hàng sẽ tiến hành thanh toán. Khi thanh toán, khách hàng phải điền đầy đủ thông tin vào mẫu, bao gồm: tên người nhận, địa chỉ nhận, email người nhận, thành phố cần chuyển tới, ngày mua Thuốc,… Sau đó các thông tin sẽ được gửi lại cho nhân viên để nhân viên kiểm tra.
+• Nhân viên sẽ kiểm tra yêu cầu và nếu còn Thuốc và có điều kiện vận chuyển thì in hóa đơn và chuyển xuống bộ phận vận chuyển.
+• Website còn có nhóm người quản lý, quản lý tất cả nội dụng trên trang web như: quản lý tin tức, quản lý Thuốc, quản lý người dùng, quản lý hóa đơn.
+• Nhân viên sẽ kết xuất các thống kê, báo cáo theo ngày, theo tuần và theo tháng.
+3.1.2	Tổng quan về hệ thống mới
+• Cửa hàng thuốc Huy Nghĩa mới được thành lâp nên có nhu cầu lâp website bán Thuốc của mình trên mạng để cửa hàn của mình được biết đến nhiều hơn, đem được sẳn phẩm của mình đến tay người tiêu dùng.
+• Thiết kế website với giao diện thuận tiện cho người dung trong việc xem mặt hàng và mua bán
+• Các tính năng thân thiện với người sử dụng.
+• Trang quản trị có các chức năng năng quản lý Thuốc, quản lý hóa đơn, tìm kiếm… dễ dàng sử dụng, thiết kê bắt mắt.
+• Giao diện giỏ hàng thân thiên, thuận tiện cho việc đặt hàng, mua hàng qua website.
+3.1.3	Các mục tiêu chính của hệ thống
+• Yêu cầu về mặt giao diện:
+- Củng cố kiến thức, phân tích thiết kế mô hình dữ liệu UML.
+- Giao diện trang web thân thiện, dễ sử dụng.
+- Hiển thị đúng trên các trình duyệt khác nhau.
+- Cách trình bày nội dung hợp lý, tùy biến trên các thiết bị.
+• Yêu cầu về mặt chức năng:
+- Quản lý Thuốc: thêm, sửa, xóa thông tin các Thuốc.
+- Quản lý loại Thuốc: thêm, sửa, xóa thông tin loại Thuốc.
+- Quản lý user: thêm, sửa, xóa user.
+- Quản lý khách hàng: thêm, sửa, xóa thông tin khách hàng.
+- Quản lý hóa đơn: xem, sửa, xóa thông tin hóa đơn.
+- Quản lý bài viết: thêm, sửa, xóa thông tin bài viết.
+- Chức năng tìm kiếm thông tin Thuốc, loại Thuốc.
+- Chức năng thống kê, báo cáo: báo cáo doanh thu hàng tháng.
+- Phân, cấp quyền.
+3.1.4	Môi trường phát triển.
+• Môi trường phần cứng
+o CPU: intel core i3 trở lên.
+o RAM: tối thiểu 4G.
+o HDD: dung lượng tối thiểu trống 10GB.
+• Môi trường phần mềm
+o Hệ điều hành: Windows 7 hoặc cao hơn.
+o Công cụ phát triển: Visual Studio Code, Sublime text.
+o Hệ quản trị cơ sở dữ liệu: Mysql.
+3.1.5	Xác định yêu cầu khách hàng
+a) Danh sách các yêu cầu trên trang hiển thị
+• Hiển thị menu
+o Hiển thị menu cho người dùng lựa chọn.
+o Menu bao gồm: Trang chủ, ô tìm kiếm Thuốc, danh mục loại Thuốc.
+• Hiển thị content website
+o Hiển thị Thuốc, loại Thuốc, thông tin chi tiết Thuốc
+o Hiển thị Thuốc mới nhất được nhập về.
+• Chức năng tìm kiếm Thuốc
+o Người dùng có thể tìm kiếm các Thuốc đang bày bán trên website, trong hệ thống và các bài viết thông qua các từ khóa tìm kiếm.
+o Kết quả tìm kiếm sẽ được hiển thị tại trang search để người dùng thao tác.
+• Chức năng thống kê, báo cáo
+o Thống kê doanh thu hàng tháng.
+• Hiển thị Thuốc mới nhất
+o Hiển thị tối đa 12 Thuốc.
+
+• Quản lý giỏ hàng
+o Khi khách hàng vào trang web có thể xem thông tin các Thuốc và giá cả. Sau đó thêm vào giỏ hàng. Thông tin Thuốc trong giỏ hàng bao gồm: Tên Thuốc, đơn giá, số lượng (mặc định là 1 khi thêm vào giỏ hàng), thành tiền.
+o Khách hàng có thể sửa đổi số lượng Thuốc muốn mua.
+o Khách hàng cũng có thể bỏ Thuốc không cần thiết ra khỏi giỏ hàng.
+o Khách hàng sẽ được thông báo về tổng giá trị các Thuốc có trong giỏ hàng
+• Chức năng đặt hàng
+o Khách hàng xem thông tin các Thuốc mình đã mua trong giỏ hàng và tiến hàng ấn đặt hàng. Hệ thống xẽ chuyển sang trang đặt hàng.
+o Trong trang đặt hàng có Form đặt hàng để khách hàng nhập thông tin cần thiết. Thông tin bao gồm: Tên khách hàng, số điện thoại khách hàng và địa chỉ của khách hàng. Ngoài ra trong trang đặt hàng còn có thông tin chi tiết về các sản phầm mà khách hàng đã đặt mua trong giỏ hàng.
+o Sau đó khách hàng nhấn nút thanh toán, hệ thống sẽ thông báo cho khách hàng là đã đặt hàng thành. 
+    
+b) Danh sách các yêu cầu trên trang quản trị
+• Quản lý dữ liệu khách hàng
+o Hiển thị danh sách khách hàng: Hiển thị danh sách khách hàng hiện có trong hệ thống. Bao gồm các thông tin: Mã khách hàng (primary key), tên khách hàng, số điện thoại, địa chỉ.
+• Chức năng thống kê, báo cáo
+o Thống kê các Thuốc bán được, các Thuốc nhập về.
+o Thống kê doanh thu theo ngày, theo tháng, theo năm.
+o Kết xuất các báo cáo cần thiết.
+• Quản lý loại Thuốc
+o Thêm mới thông tin loại Thuốc: Loại bao gồm tên các loại Thuốc như: thuốc bổ, da liễu,thuốc tim mạch…Thông tin loại Thuốc bao gồm: Id (primary Key), product type name (not null)...
+o Cập nhật thông tin loại: Sửa đổi thông tin loại Thuốc.
+o Hiển thị danh sách loại: Hiển thị danh sách thông tin các loại Thuốc đang có.
+o Xóa loại : Xóa những loại Thuốc khi mà cửa hàng không còn bày bán.
+• Quản lý Thuốc
+o Thêm mới thông tin Thuốc: Thêm thông tin Thuốc bày bán với những thông tin như: Id (primary key), product_type_id (foreign key), product name (not null), size (not null), quantity (not null), price (not null), describe...
+o Cập nhật thông tin Thuốc: Sửa đổi thông tin Thuốc khi có sự thay đổi mới
+o Hiển thị danh sách Thuốc: Hiển thị danh sách Thuốc đang bán trên website.
+o Xóa Thuốc: Xóa những Thuốc khi mà cửa hàng không còn bày bán.
+• Quản lý thông tin hóa đơn
+o Thêm hóa đơn: Khi có khách hàng tiến hành thanh toán hàng tại giỏ hàng. Hệ thông sẽ hiên thị form để khách hàng nhập thông tin cần thiết để tiến hành thanh toán thông tin Order sẽ được lưu vào hệ thống dựa trên những thông tin mà khách hàng đã cung cấp. Thông tin bao gồm: mã order (primary key), mã khách hàng (foreign key), ngày tạo, tổng tiền, trạng thái.
+o Xóa hóa đơn: Xóa bỏ order khi không cần thiết.
+o Hiển thị danh sách hóa đơn: Hiển thị danh sách các hóa đơn nhập hiện có trong hệ thống.
+
+• Quản lý thông tin bài viết.
+o Thêm mới bài viết: Bài viết chứa các thông tin giới thiệu đánh giá trực về riêng từng Thuốc mà hệ thống đang quản lý. Thông tin bài viết bao gồm: Mã Thuốc (primary key, foreign key), nội dung bài viết (not null), trạng thái.
+o Cập nhập thông tin bài viết: Sửa đổi thông tin bài viết khi có những thông tin mới cần cập nhập.
+o Hiên thị danh sách bài viết: Hiển thị danh sách các bài của Thuốc mà hệ thống đang quản lý.
+o Xóa thông tin bài viết: Xóa bài viết khi hệ thống không cần quản lý.
+• Quản lý nhà sản xuất.
+o Thêm mới nhà sản xuất: Thêm mới thông tin nhà sản xuất khi hệ thống cần quản lý Thuốc nhập của nhà sản xuất mới chưa có trong hệ thống. Thông tin quản lý nhà sản xuất bao gồm: Mã nhà sản xuất( primary key), tên nhà sản xuất( not null),  số điện thoại( not null), email( not null), địa chỉ, trạng thái( not null).
+o Cập nhập thông tin nhà sản xuất: Sửa đổi thông nhà sản xuất khi có những thông tin mới cần cập nhập.
+o Hiên thị danh sách nhà sản xuất: Hiển thị danh sách nhà sản xuất mà hệ thống đang quản lý.
+o Xóa thông tin bài viết: Xóa thông tin nhà sản xuất khi hệ thống không cần quản lý.
+• Quản lý hóa đơn nhập.
+o Thêm mới hóa đơn nhập: Khi hệ thống nhập thêm Thuốc mới vào để quản lý. Thông tin quản lý hóa đơn nhập bao gồm: Mã hóa đơn( primary key), mã nhà sản xuất( foreign key),  ngày nhập( not null), tổng tiền( not null).
+o Cập nhập thông tin hóa đơn nhập: Sửa đổi hóa đơn nhập khi có những thông tin mới cần cập nhập.
+o Hiên thị danh sách hóa đơn nhập: Hiển thị danh sách nhà hóa đơn mà hệ thống đang quản lý.
+o Xóa thông tin hóa đơn nhập: Xóa thông tin hóa đơn khi hệ thống không cần quản lý.
+
+
+3.2	Phân tích và thiết kế hệ thống
+3.2.1 Phân tích các chức năng
+      a)  Phân tích yêu cầu
+• Xác định các tác nhân
+      Qua khảo sát hiện trạng thực tế, kết hợp với việc tham khảo tài liệu và phân tích ý kiến của người dùng, hệ thống có các tác nhân sau:
+    Bảng 1: Xác định tác nhân.
+STTTác NhânDiễn Giải
+
+
+1
+       Những người thuộc nhóm quyền này có quyền truy xuất những chức năng của hệ thống có nhiệm vụ bảo trì hệ thống: đăng nhập đổi mật khẩu; thay đổi thông tin cá nhân, sao lưu phục hồi dữ liệu; quản lý điện thoại, quản lý loại điện thoại, quản lý user, quản lý thông tin khách hàng ,quản lý hóa order – oder detail, quản lý hình ảnh, quản lý bài viết, loại Thuốc, nhà sản xuất, hóa đơn nhập... Ngoài ra họ có thể phân quyền người sử dụng hệ thống.2Những người thuộc quyền này có quyền với những chức năng xem, sửa, xóa hiền thị sản phầm, order, orderDetail, hình ảnh, bài viết, loại Thuốc, nhà sản xuất, hóa đơn nhập,…
+
+3
+        Những người thuộc nhóm quyền này có thể xem và tìm kiếm thông tin điện thoại; gửi ý kiến phản hồi, bình luận; Mua hàng, xem sửa xóa thông tin giỏ hàng, thanh toán;
+
+    b) Xác định các tình huống sử dụng ( usecase)
+    Bảng 2: Xác định các ca sử dụng (Usecase)
+STTTác nhân chínhTên Use case1Admin, EmployeeĐăng nhập2Admin, EmployeeQuản lý Thuốc3Admin, EmployeeQuản lý loại Thuốc4AdminQuản lý thông tin User5Admin, EmployeeThống kê6Admin, EmployeeQuản lý hóa đơn bán7Admin, EmployeeQuản lý bài viết8Admin, EmployeeQuản lý khách hàng9Khách hàngQuản lý giỏ hàng10Khác hàngĐặt hàng11Khách hàngXem thông tin Thuốc12Khách hàngTìm kiếm
+
+
+3.3	Biểu đồ Use Case
+3.3.1	Biểu đồ Use Case tổng quát cho hệ thống
+
+  
+ 
+    Hình 1: Biều đồ Useccase tổng quát
+
+
+
+
+3.3.2	Biểu đồ Use Case “Chức năng tìm kiếm”
+➢ Biểu đồ Usecase:
+    
+	
+    Hình 2: Biểu đồ use-case tìm kiếm
+Mô tả tóm tắt:
+o Tên ca sử dụng: Tìm kiếm
+o Mục đích: Giúp người sử dụng tìm kiếm thông tin về sản phầm một cách nhanh chóng và chính sác hơn.
+o Tác nhân: Customer
+o Tóm lược: Người dùng muốn sử dụng chức năng tìm kiếm thì cần nhập thông tin cần tìm kiếm vào thanh tìm kiếm sao đó nhấn nút tìm kiếm hoặc nhấn phím Enter. Hệ thống sẽ kiểm tra thông tin mà người dùng nhập vào thanh tìm kiếm, nếu đúng hoặc có thông tin gần đúng thì hệ thông sẽ trả lại kêt quả mà người dùng cần. Nếu không có thì hệ thống thông báo không có thông tin bạn cần tìm.
+
+
+
+
+
+Mô tả quá trình:
+o Thông tin đầu vào nội dung cần tra cứu
+o Dòng sự kiện chính:
+    Bảng 3: Mô tả dòng sự kiện chính cho chức năng tìm kiếm
+Hành động của tác nhânPhản ứng của hệ thốngChọn chức năng tìm kiếm , nhập nội dung tìm kiếm và ấn nút tìm kiếm hoặc nhấn phím EnterHệ thống tìm kiếm thông tin gần giống hoặc trong khoảng giá hơn kém 1 triệu với thông tin bạn cần tìm kiếm và đưa kêt quả ra màn hình.
+o Dòng sự kiện phụ:
+- Nếu người dùng nhập từ khóa tìm kiếm thuốc không có thông tin trong hệ thống thì thông báo ra màn hình không có kết quả tìm kiếm.
+3.3.3	Biểu đồ use-case “Đăng nhập”
+➢ Biểu đồ Usecase:
+      
+    Hình 3: Biểu đồ use-case đăng nhập
+
+
+
+Mô tả tóm tắt:
+o Tên ca sử dụng: Đăng nhập
+o Mục đích: Đảm bảo xác thực người dùng, người quản lý và các yêu cầu về bảo mật của hệ thống.
+o Tác nhân: Admin, Employee
+o Tóm lược: Người dùng muốn sử dụng các dịch vụ của hệ thống thì bắt buộc phải đăng nhập vào hệ thống thông qua username và password. Hệ thống sẽ kiểm tra thông tin xem người dùng có đúng là thành viên của hệ thống không, nếu đúng thì người dùng có thể truy cập vào hệ thống với quyền nhất định đã được quy định.
+Mô tả quá trình:
+o Thông tin đầu vào là : Username , password
+o Dòng sự kiện chính:
+    Bảng 4: Mô tả dòng sự kiện chính cho chức năng đăng nhập
+Hành động của tác nhânPhản ứng của hệ thốngChọn chức năng đăng nhập khi đã có tài khoản hoặc sau khi đăng kí xong hệ thống tự động cho thành viên vào trang đăng nhập.Hiển thị trang chủ, tại đây người dùng có thể đăng nhập vào hệ thống.Nhập thông tin username, password.Gửi thông tin đăng nhập tới hệ thống.Kiểm tra thông tin đăng nhập, nếu đúng thì cho phép truy cập hệ thống, sai thì thông báo lỗi và yêu cầu nhập lại thông tin.
+
+
+
+Dòng sự kiện phụ:
+- Đối với người quản lý, nếu dùng username và password không đúng, hệ thống thông báo thông tin đăng nhập sai. Nếu thông tin đăng nhập chính xác thì thông báo đăng nhập thành công và chuyển đến trang quản trị.
+- Người quản lý hay người dùng muốn thay đổi thông tin tài khoản, chọn chức năng thay đổi mật khẩu, hệ thống hiển thị trang thay đổi mật khẩu.
+- Người quản lý hay người dùng muốn thay đổi thông tin tài khoản, chọn chức năng thay đổi mật khẩu, hệ thống hiển thị trang thay đổi mật khẩu.
+3.3.4	Biểu đồ use-case “Chức năng thống kê”
+➢ Biểu đồ Usecase:
+
+    Hình 4: Biểu đồ use-case thống kê
+
+Mô tả tóm tắt:
+o Tên ca sử dụng: Thống kê
+o Mục đích: thống kê theo tháng
+o Tác nhân: Admin
+o Tóm lược: Quản trị viên muốn sử dụng chức năng thống của hệ thống thì bắt buộc phải đăng nhập vào hệ thống thông qua username và password. Hệ thống sẽ kiểm tra thông tin xem người dùng có đúng là thành viên của hệ thống không, nếu đúng thì người dùng có thể truy cập vào hệ thống với quyền nhất định đã được quy định.Và bắt đầu thực chức năng thống kê theo yêu cầu.
+Mô tả quá trình:
+o Thông tin đầu vào:  Username, Password để đăng nhập và yêu cầu loại báo cáo thống kê
+o Dòng sự kiện chính:
+	 Bảng 5: Mô tả dòng sự kiên chính cho chức năng Thống kê
+Hành động của tác nhânPhản ứng của hệ thốngChọn chức năng đăng nhập khi đã có tài khoản , mật khẩuHiển thị trang chủ, tại đây người dùng có thể đăng nhập vào hệ thống.Nhập thông tin tài khoản.Gửi thông tin đăng nhập tới hệ thống.Nêu tài khoản , mật khẩu đúng thông báo thành công, không yêu cầu nhập lại tài khoản , mật khẩu.Chọn chức năng báo cáo thống kêKiêm tra chức năng chọn và hệ thông chiết xuất dữ liệu đưa ra bàn báo cáo thống kê
+o Dòng sự kiện phụ:
+- Nếu người dùng nhập tên truy cập và mật khẩu không đúng thì hệ thống sẽ yêu cầu nhập lại.
+- Khi người dùng nhập chính xác thông tin tài khoản của mình, hệ thống xử lý và thông báo đăng nhập thành công, tự động bật lên trang chủ cho người dùng thao tác với các chức năng đã định.
+- Người dùng chọn mục thống kê báo cáo chưa có dữ liệu hệ thống thông báo ra mà hình và gợi ý cho người dùng những bản thống kê khác.
+
+3.3.5	Biểu đồ use-case “Quản lý Thuốc”
+➢ Biểu đồ Usecase:
+
+    Hình 5: Biểu đồ use-case quản lý Thuốc
+Mô tả tóm tắt:
+o Tên ca sử dụng: Quản lý Thuốc
+o Mục đích: giúp cho người quản lý dễ dàng quản lý và theo dõi điện thoại trên website
+o Tác nhân: Admin
+o Tóm lược: Khi người quản lý đăng nhập thành công vào hệ thống thì use case sẽ được gọi để giúp người quản lý tùy chọn các chức năng có liên quan: thêm, sửa, xóa Thuốc. 
+o Mô tả quá trình:
+o Thông tin đầu vào là các thông tin về tài khoản như:
+- Username
+- Password
+o Điều kiện đầu vào Nhân viên cần phải đăng nhập vào hệ thống thành công.
+
+
+o Dòng sự kiện chính:
+Bảng 6: Mô tả dòng sự kiện chính cho chức năng quản lý Thuốc
+Hành động của tác nhânPhản ứng của hệ thốngĐăng nhập vào trang quản trịHiển thị giao diện trang quản trịChọn chức năng quản lý ThuốcHiển thị danh sách ThuốcChọn chức năng nhập ThuốcHiển thị giao diện nhập ThuốcNhập dữ liệu ThuốcKiểm tra tính hợp lệ của dữ liệuChọn chức năng SaveAdd dữ liệu vưa nhập và database.
+o Dòng sự kiện phụ:
+- Khi người quản lý nhập sai các thông tin về tài khoản, hệ thống sẽ gửi thông báo lỗi và yêu cầu nhập lại các thông tin.
+- Người quản lý nhập lại các thông tin cần thiết theo yêu cầu của hệ thống, hệ thống sẽ tiến hành kiểm tra lại các thông tin mới nhập, nếu thành công thì chuyển sang trang chức năng theo yêu cầu của người quản lý.
+
+
+
+
+3.3.6	Biểu đồ use-case “Quản lý loại Thuốc”
+➢ Biểu đồ Usecase:
+
+    Hình 6:	 Biểu đồ use-case quản lý loại Thuốc
+
+Mô tả tóm tắt:
+o Tên ca sử dụng: quản lý loại Thuốc
+o Mục đích: giúp cho người quản lý dễ dàng quản lý và theo dõi loại Thuốc 
+o Tác nhân: Admin
+o Tóm lược: Khi người quản lý đăng nhập thành công vào hệ thống thì use case sẽ được gọi để giúp admin tùy chọn các chức năng có liên quan: thêm, sửa, xóa loại Thuốc. 
+o Mô tả quá trình:
+o Thông tin đầu vào là các thông tin về tài khoản như:
+- Username
+- Password
+o Điều kiện đầu vào: Nhân viên cần phải đăng nhập vào hệ thống thành công.
+
+o Dòng sự kiện chính:
+Hành động của tác nhânPhản ứng của hệ thốngĐăng nhập trang quản trịHiển thị giao diện trang quản trịChọn chức năng quản lý ThuốcHiển thị danh sách quản lý ThuốcChọn chức năng thêm loại ThuốcHiên thị giao diện nhập dữ liệuNhập thông tin loại ThuốcKiểm tra dữ liệu nhâp vàoChọn chứa năng SaveAdd dữ liệu vưa nhập và database.Bảng 7: Mô tả dòng sự kiện chính cho chức năng quản lý loại Thuốc
+o Dòng sự kiện phụ:
+- Khi người quản lý nhập sai các thông tin về tài khoản, hệ thống sẽ gửi thông báo lỗi và yêu cầu nhập lại các thông tin.
+- Người quản lý nhập lại các thông tin cần thiết theo yêu cầu của hệ thống, hệ thống sẽ tiến hành kiểm tra lại các thông tin mới nhập, nếu thành công thì chuyển sang trang chức năng theo yêu cầu của người quản lý.
+
+
+
+
+
+3.3.7	Biểu đồ use-case “Quản lý khách hàng”
+➢ Biểu đồ Usecase:
+
+    Hình 7: Biểu đồ use-case Quản lý khách hàng
+
+Mô tả tóm tắt:
+o Tên ca sử dụng: Quản lý khách hàng
+o Mục đích: giúp cho người quản lý dễ dàng quản lý và theo dõi các thông tin về khách hàng (thêm thông tin khách hàng, sửa thông tin khách hàng, xóa thông tin khách hàng)
+o Tác nhân: Admin
+o Tóm lược: Khi người quản lý đăng nhập thành công vào hệ thống thì use case sẽ được gọi để giúp người quản lý tùy chọn các chức năng có liên quan: thêm, sửa, xóa, tìm kiếm thông tin về một hay nhiều khách hàng trong hệ thống. Khi người quản lý thao tác với chứng năng nhập, hệ thống sẽ kiểm tra thông tin người quản lý nhập vào, nếu sai hoặc không hợp lệ thì liệt kê lỗi và thông báo cho người quản lý và cho phép nhập lại.
+
+
+
+Mô tả quá trình:
+o Thông tin đầu vào là các thông tin về tài khoản như:
+- Username
+- Password
+o Điều kiện đầu vào: Nhân viên cần phải đăng nhập vào hệ thống thành công.
+o Dòng sự kiện chính:
+    Bảng 8: Mô tả dòng sự kiện chính cho chức năng quản lý khách hàng
+
+Hành động của tác nhânPhản ứng của hệ thốngQuản lý yêu cầu thêm, sửa, xóa… thông tin khách hàngHệ thống yêu cầu nhân viên đăng nhập vào tài khoảnQuản lý đăng nhập vào hệ thống bằng tài khoản của mìnhHệ thống kiểm tra tài khoảnQuản lý lựa chọn các chức năng thêm, sửa thông tin khách hàngHệ thống cập nhật lại thông tin khách hàng và lưu vào CSDL
+o Dòng sự kiện phụ:
+- Khi người quản lý nhập sai các thông tin về khách hàng, hệ thống sẽ gửi thông báo lỗi và yêu cầu nhập lại các thông tin.
+- Người quản lý nhập lại các thông tin cần thiết theo yêu cầu của hệ thống, hệ thống sẽ tiến hành kiểm tra lại các thông tin mới nhập, nếu thành công thì chuyển sang trang chức năng theo yêu cầu của người quản lý.
+- Khi người quản lý lựa chọn các chức năng sửa, xóa đối với thông tin thì hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu sau đó cập nhật lại thông tin trong CSDL theo yêu cầu.
+
+3.3.8	Biểu đồ use-case “Quản lý hóa đơn”
+➢ Biểu đồ Usecase:
+
+    Hình 8: Biểu đồ use-case Quản lý hóa đơn nhập
+Mô tả tóm tắt:
+o Tên ca sử dụng: quản lý hóa đơn
+o Mục đích: giúp cho người quản lý dễ dàng quản lý và theo dõi các thông tin order (thêm thông tin order, sửa thông tin order, xóa thông tin order)
+o Tác nhân: Admin
+o Tóm lược: Khi người quản lý đăng nhập thành công vào hệ thống thì use case sẽ được gọi để giúp người quản lý tùy chọn các chức năng có liên quan: thêm, sửa, xóa order trong hệ thống. Khi người quản lý thao tác với chứng năng nhập, hệ thống sẽ kiểm tra thông tin người quản lý nhập vào, nếu sai hoặc không hợp lệ thì liệt kê lỗi và thông báo cho người quản lý và cho phép nhập lại.
+
+
+
+
+Mô tả quá trình:
+o Thông tin đầu vào là các thông tin về tài khoản như:
+- Username
+- Password
+o Điều kiện đầu vào: Nhân viên cần phải đăng nhập vào hệ thống thành công.
+o Dòng sự kiện chính:
+    Bảng 9: Mô tả dòng sự kiện chính cho chức năng quản lý hóa đơn
+
+Hành động của tác nhânPhản ứng của hệ thốngQuản lý yêu cầu thêm, sửa, xóa… thông tin order. Hệ thống yêu cầu nhân viên đăng nhập vào tài khoảnQuản lý đăng nhập vào hệ thống bằng tài khoản của mìnhHệ thống kiểm tra tài khoảnQuản lý lựa chọn các chức năng thêm, sửa thông tin orderHệ thống cập nhật lại thông tin hóa đơn và lưu vào CSDL
+o Dòng sự kiện phụ:
+- Khi người quản lý nhập sai các thông tin về hóa đơn, hệ thống sẽ gửi thông báo lỗi và yêu cầu nhập lại các thông tin.
+- Người quản lý nhập lại các thông tin cần thiết theo yêu cầu của hệ thống, hệ thống sẽ tiến hành kiểm tra lại các thông tin mới nhập, nếu thành công thì chuyển sang trang chức năng theo yêu cầu của người quản lý.
+- Khi người quản lý lựa chọn các chức năng sửa, xóa đối với thông tin thì hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu sau đó cập nhật lại thông tin trong CSDL theo yêu cầu.
+
+3.3.9	Biểu đồ use-case “Quản lý bài viết”
+➢ Biểu đồ Usecase:
+
+    Hình 9: Biểu đồ use-case quản lý bài viết
+Mô tả tóm tắt:
+o Tên ca sử dụng: quản lý bài viết
+o Mục đích: giúp cho người quản lý dễ dàng quản lý và theo dõi các thông tin bài viết  (thêm thông tin bài viết , sửa thông tin bài viết , xóa thông tin bài viết )
+o Tác nhân: Admin
+o Tóm lược: Khi admin đăng nhập thành công vào hệ thống thì use case sẽ được gọi để giúp người quản lý tùy chọn các chức năng có liên quan: thêm, sửa, xóa bài viết  trong hệ thống. Khi người quản lý thao tác với chứng năng nhập, hệ thống sẽ kiểm tra thông tin người quản lý nhập vào, nếu sai hoặc không hợp lệ thì liệt kê lỗi và thông báo cho người quản lý và cho phép nhập lại.
+Mô tả quá trình:
+o Thông tin đầu vào là các thông tin về tài khoản như:
+- Username
+- Password
+o Điều kiện đầu vào: Nhân viên cần phải đăng nhập vào hệ thống thành công.
+
+
+o Dòng sự kiện chính:
+    Bảng 10: Mô tả dòng sự kiện chính cho chức năng quản lý bài viết
+Hành động của tác nhânPhản ứng của hệ thốngQuản lý yêu cầu thêm, sửa, xóa… thông tin bài viết.Hệ thống yêu cầu nhân viên đăng nhập vào tài khoảnQuản lý đăng nhập vào hệ thống bằng tài khoản của mìnhHệ thống kiểm tra tài khoảnQuản lý lựa chọn các chức năng thêm, sửa thông tin bài viếtHệ thống cập nhật lại thông tin hóa đơn và lưu vào CSDL
+o Dòng sự kiện phụ:
+- Khi người quản lý nhập sai các thông tin về bài viết, hệ thống sẽ gửi thông báo lỗi và yêu cầu nhập lại các thông tin.
+- Người quản lý nhập lại các thông tin cần thiết theo yêu cầu của hệ thống, hệ thống sẽ tiến hành kiểm tra lại các thông tin mới nhập, nếu thành công thì chuyển sang trang chức năng theo yêu cầu của người quản lý.
+- Khi người quản lý lựa chọn các chức năng sửa, xóa đối với thông tin thì hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu sau đó cập nhật lại thông tin trong CSDL theo yêu cầu.
+
+
+
+
+
+
+3.4	Biểu đồ lớp
+      Biểu đồ lớp mô tả các lớp, là các viên gạch để xây dựng bất kì hệ thống hướng đối tượng nào.Khả năng cộng tác giữa chúng, bằng cách truyền thông điệp, được chỉ ra trong các mối quan hệ giữa chúng.
+      Biểu đồ lớp cho ta một khung nhìn tĩnh của các lớp trong mô hình hoặc một phần của mô hình.Nó chỉ cho ta thấy các thuộc tính và các thao tác của lớp, cũng như các loại quan hệ giữa các lớp.Biểu đồ lớp giống như một tấm bản đồ, với các lớp là các thành phố còn các mối quan hệ là các đường nối giữa chúng.
+3.4.1	Xác định các lớp
+      Từ việc phân tích biểu đồ UseCase ta có các đối tượng sau:
+- Product: Lưu thông tin Thuốc.
+- ProductType: Lưu thông tin loại Thuốc.
+- Export_invoices: Lưu thông tin hóa đơn xuất.
+- Export _invoice_detail: Lưu thông tin chi tiết hóa đơn xuất.
+- Customer: Lưu thông tin khách hàng.
+- Suppliers: Lưu thông tin nhà sản xuất.
+- Import_Invoice: Lưu thông tin hóa đơn nhập.
+- Import_Invoice_detail: Lưu thông tin chi tiết hóa đơn nhập.
+- User: : Lưu thông tin user.
+- Role:  Lưu thông quyền.
+- Permission_role: Lưu thông quyền và phạm vi truy cập.
+- Permission: Lưu thông phạm vi truy cập. 
+
+
+    
+
+3.4.2	Thê hiện biểu đồ lớp.
+
+
+    Hình 10: Biểu đồ lớp website
+
+
+3.5	Biểu đồ tuần tự Biểu đồ tuần 
+3.5.1 Biểu đồ tuần tự cho quá trình “Đăng nhập”
+
+    Hình 11: Biểu đồ tuần tự cho quá trình “Đăng nhập”
+    
+
+
+Mô tả:
+- Admin gửi thông tin đăng nhập cho hệ thống đăng nhập, form đăng nhập gửi yêu cầu nhập thông tin Username và Password. 
+- Admin nhập username, password.
+- Form login kiểm tra thông tin Login có đúng hay không, nếu sai yêu cầu nhập lại thông tin, nếu đúng thi gửi thông tin đi.
+- Lớp control Login gửi yêu cầu tới cơ sở dữ liệu để kiểm tra và truy vấn. Nếu thông tin sai sẽ thông báo tới form đăng nhập yêu cầu nhập lại thông tin tới Admin.
+- Nếu thông tin đúng sẽ thông báo đăng nhập thành công tới form đăng nhập cho Admin.
+
+3.5.2 Biểu đồ tuần tự cho chức năng “Thống kê”
+
+    Hình 12: Biểu đồ tuần tự cho “chức năng thống kê”
+Mô tả: 
+- Admin yêu cầu chức năng thống kê báo cáo.
+- From thống kê báo cáo hiểu thị list chức năng thống kê báo cáo.
+- Admin chọn tiêu chí cần làm thống kê báo cáo. Và form gửi yêu cầu đi.
+- Form Control thực hiệu kiểm tra tiêu chí, truy vấn CSDL. Và trả về thông tin kết quả truy vấn.
+
+3.5.3. Biểu đồ tuần tự cho chức năng “Tìm kiếm”
+
+    Hình 13: Biểu đồ tuần tự cho chức năng tìm kiếm
+
+Mô tả: 
+- Customer chọn chưc năng tim kiếm và nhập thông tin.
+- From tìm kiếm kiểm tra thông tin Customer nhập vào nếu đúng thì tiến hành gửi thông tin đi.
+- Form Control tiến hành truy vấn thông tin tìm kiếm, nếu có trong cơ sở dữ liệu thi thông báo tim kiếm thành công và hiển thị kết quả tìm kiếm ra màn hình. Nếu không tìm thấy thì thồn báo không tìm thấy.
+
+
+3.5.4. Biểu đồ tuần tự cho chức năng “Thêm thông tin Thuốc”	
+
+    Hình 14: Biểu đồ tuần tự cho chức năng “Thêm thông tin Thuốc”
+Mô tả: 
+- Admin đăng nhập vào hệ thống.
+- Sau khi lựa chọn chức năng nhập Thuốc, form nhập Thuốc sẽ gửi yêu cầu nhập Thuốc tới lớp control nhập danh mục Thuốc.
+- Tiếp theo Admin sẽ nhập thông tin Thuốc mới, và form nhập danh mục Thuốc sẽ gửi yêu cầu tới lớp control nhập danh mục Thuốc mới để kiểm tra dữ liệu.
+- Nếu thiếu thông tin, hoặc thông tin không hợp lệ sẽ gửi yêu cầu nhập lại thông tin tới form nhập Thuốc cho Admin.
+- Admin nhập lại thông tin Thuốc qua form nhập danh mục Thuốc, lớp control nhập danh mục Thuốc sẽ gửi thông tin Thuốc mới tới cơ sở dữ liệu , để kiểm tra dữ liệu và tiền hành cập nhật.
+- CSDL cập nhật thành công sẽ gửi trả lại thông tin hiển thị ra ngoài form Thuốc cho Admin.
+
+3.5.5. Biểu đồ tuần tự cho chức năng “Sửa thông tin Thuốc”
+
+    Hình 15: Biểu đồ tuần tự cho chức năng “sửa thông tin Thuốc”
+Mô tả: 
+• Admin đăng nhập vào hệ thống thành công.
+• Admin sẽ chọn chức năng sửa Thuốc, chọn thông tin cần sửa cà thực thi trên form sửa Thuốc. Form sửa Thuốc sẽ gửi yêu cầu sửa Thuốc tới lớp control sửa Thuốc để kiểm tra dữ liệu.
+• Nếu sai sẽ thông báo lỗi và yêu cầu nhập lại tới form sửa Thuốc cho Admin.
+• Admin nhập lại thông tin muốn sửa vào form sửa Thuốc, với điều kiện hợp lệ lớp control sẽ gửi thông tin để cập nhật lại cơ sở dữ liệu.
+• CSDL cập nhật thành công sẽ gửi trả lại thông tin hiển thị ra ngoài form Thuốc cho Admin.
+
+
+
+3.5.6. Biểu đồ tuần tự cho chức năng “Xóa thông tin Thuốc”
+
+    Hình 16: Biểu đồ tuần tự cho chức năng“ xóa thông tin Thuốc”
+Mô tả: 
+- Admin đăng nhập hệ thống.
+- Sau khi lựa chọn Thuốc cần xóa tại form xóa Thuốc.
+- Admin sẽ lựa chọn chức năng xóa Thuốc, form xóa Thuốc sẽ gửi yêu cầu xóa tới lớp control xóa Thuốc, khi đã xác nhận yêu cầu xóa, lớp control xóa sẽ gửi thông tin Thuốc cần xóa tới cơ sở dữ liệu.
+- Nếu xóa thành công hệ thống sẽ gửi trả lại thông tin ra ngoài form xóa Thuốc cho quản trị viên.
+- Nếu quản trị viên muốn hủy yêu cầu xóa thì form xóa Thuốc cũng gửi yêu cầu tới lớp control xóa Thuốc để yêu cầu hủy.
+
+
+
+3.5.7. Biểu đồ tuần tự cho chức năng “Đặt hàng”
+
+    Hình 16: Biểu đồ tuần tự cho chức năng“đặt hàng”
+Mô tả: 
+- Khách hàng chọn chức năng đặt hàng và chọn Thuốc cần mua
+- Hệ thống kiểm tra xem trong giỏ hàng có Thuốc hay ko và phẩn hồi lại
+- Khách hàng chọn số lượng và giá Thuốc
+- Hệ thống phản hồi lại số lượng,giá bá và tổng tiền
+
+
+
+
+
+
+
+
+
+
+3.5.8. Biểu đồ tuần tự cho chức năng “Thêm loại Thuốc”
+
+    Hình 16: Biểu đồ tuần tự cho chức năng“Thêm loại Thuốc”
+Mô tả: 
+- Admin đăng nhập vào hệ thống.
+- Sau khi lựa chọn chức năng nhập loại Thuốc, form nhập loại Thuốc sẽ gửi yêu cầu nhập Thuốc tới lớp control nhập danh mục loại Thuốc.
+- Tiếp theo Admin sẽ nhập thông tin loại Thuốc mới, và form nhập danh mục loại Thuốc sẽ gửi yêu cầu tới lớp control nhập danh mục Thuốc mới để kiểm tra dữ liệu.
+- Nếu thiếu thông tin, hoặc thông tin không hợp lệ sẽ gửi yêu cầu nhập lại thông tin tới form nhập loại Thuốc cho Admin.
+- Admin nhập lại thông tin loại Thuốc qua form nhập danh mục loại Thuốc, lớp control nhập danh mục loại Thuốc sẽ gửi thông tin Thuốc mới tới cơ sở dữ liệu , để kiểm tra dữ liệu và tiền hành cập nhật.
+- CSDL cập nhật thành công sẽ gửi trả lại thông tin hiển thị ra ngoài form loại Thuốc cho Admin.
+
+
+
+3.5.9. Biểu đồ tuần tự cho chức năng “Sửa loại Thuốc”
+
+    Hình 16: Biểu đồ tuần tự cho chức năng“Sửa loại Thuốc”
+Mô tả: 
+- Admin đăng nhập vào hệ thống thành công.
+- Admin sẽ chọn chức năng sửa loại Thuốc, chọn thông tin cần sửa cà thực thi trên form sửa loại Thuốc. Form sửa Thuốc sẽ gửi yêu cầu sửa Thuốc tới lớp control sửa Thuốc để kiểm tra dữ liệu.
+- Nếu sai sẽ thông báo lỗi và yêu cầu nhập lại tới form sửa loại Thuốc cho Admin.
+- Admin nhập lại thông tin muốn sửa vào form sửa loại Thuốc, với điều kiện hợp lệ lớp control sẽ gửi thông tin để cập nhật lại cơ sở dữ liệu.
+- CSDL cập nhật thành công sẽ gửi trả lại thông tin hiển thị ra ngoài form loại Thuốc cho Admin.
+    
+    
+    
+    
+    
+3.5.10. Biểu đồ tuần tự cho chức năng “Xóa loại Thuốc”
+
+    Hình 16: Biểu đồ tuần tự cho chức năng“Xóa loại Thuốc”
+Mô tả: 
+- Admin đăng nhập vào hệ thống thành công.
+- Sau khi lựa chọn Thuốc cần xóa tại form xóa loại Thuốc.
+- Admin sẽ lựa chọn chức năng xóa Thuốc, form xóa loại Thuốc sẽ gửi yêu cầu xóa tới lớp control xóa Thuốc, khi đã xác nhận yêu cầu xóa, lớp control xóa sẽ gửi thông tin Thuốc cần xóa tới cơ sở dữ liệu.
+- Nếu xóa thành công hệ thống sẽ gửi trả lại thông tin ra ngoài form xóa loại Thuốc cho quản trị viên.
+    Nếu quản trị viên muốn hủy yêu cầu xóa thì form xóa loại Thuốc cũng gửi yêu cầu tới lớp control xóa loại Thuốc để yêu cầu hủy
+    
+    
+    
+    
+
+    
+3.5.11. Biểu đồ tuần tự cho chức năng “Thêm Khách Hàng”
+
+    Hình 16: Biểu đồ tuần tự cho chức năng“Thêm Khách Hàng”
+
+3.5.12. Biểu đồ tuần tự cho chức năng “Sửa Khách Hàng”
+
+Hình 16: Biểu đồ tuần tự cho chức năng“Thêm Khách Hàng
+    
+    
+3.5.13. Biểu đồ tuần tự cho chức năng “Xóa Khách Hàng”
+
+    Hình 16: Biểu đồ tuần tự cho chức năng“Xóa Khách Hàng”
+
+3.5.14. Biểu đồ tuần tự cho chức năng “Thêm Hóa Đơn”
+
+Hình 16: Biểu đồ tuần tự cho chức năng“Thêm Hóa Đơn”
+
+
+
+
+
+3.5.15. Biểu đồ tuần tự cho chức năng “Sửa Hóa Đơn”
+
+    Hình 16: Biểu đồ tuần tự cho chức năng“Xóa Khách Hàng”
+
+3.5.16. Biểu đồ tuần tự cho chức năng “Xóa Hóa Đơn”
+
+Hình 16: Biểu đồ tuần tự cho chức năng“Xóa Hóa Đơn”
+
+
+
+
+3.6. Thiết kế cơ sở dữ liệu cho hệ thống
+Các bảng dữ liệu
+- Product: Lưu thông tin Thuốc.
+- Product_Type: Lưu danh mục Thuốc.
+- Export_invoices: Lưu thông tin hóa đơn xuất..
+- Export _invoice_detail: Lưu thông tin chi tiết hóa đơn xuất.
+- 	Customer: Lưu thông tin khách hàng.
+-	Suppliers: Lưu thông tin nhà sản xuất.
+-	Import_Invoice: Lưu thông tin hóa đơn nhập.
+-	Import_Invoice_detail: Lưu thông tin chi tiết hóa đơn nhập.
+-	User: : Lưu thông tin user.
+-	Role:  Lưu thông quyền.
+-	Permission_role: Lưu thông quyền và phạm vi truy cập.
+-	Permission: Lưu thông phạm vi truy cập. 
+3.6.1. Lớp Customers:
+    Bảng 11: Bẳng lớp Customers
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IdINTEGERPRIMARY KEY, AUTOINCREMENTMã khách hàng2nameVARCHAR( 255)Họ tên khách hàng3sđtINTEGERSố điện thoại 4emailVARCHAR(255)Email khách hàng4addressVARCHAR(255)Địa chỉ khách hàng
+3.6.2. Lớp Product:
+    Bảng 12: Bảng lớp Products
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IdINTEGERPRIMARYKEY, AUTOINCREMENTMã Thuốc2codeVARCHAR(255)FOREIGNKY Mã loại Thuốc3nameVARCHAR( 255)Tên Thuốc4import_priceINTEGERGiá nhập5export_priceINTEGERGiá bán6quantityINTEGERSố lượng7sizeINTEGER Kích cỡ mặt8trademarkVARCHAR(255)Thương hiệu9countryVARCHAR(255)Quốc giá10modelINTEGERKiểu máy11framesINTEGERKhung vỏ12strapINTEGERChất liệu dây13glassesINTEGERChất liệu kính14ipINTEGERĐộ kháng nước15guaranteeINTEGERBảo hành16imageVARCHAR(255)Hình ảnh17describeVARCHAR(255)Mô tả18product_type_idINTEGERFOREIGN KEYLoại Thuốc
+3.6.3. Lớp Product_type.
+    Bảng 13: Bảng lớp Product_type.
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IdINTEGERPRIMARYKEY, AUTOINCREMENTMã loại Thuốc2nameVARCHAR(255)Tên loại Thuốc
+
+3.6.4. Lớp Import_invoice:
+    Bảng 14: Bảng lớp Import_invoice
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IdINTEGERPRIMARY KEY, AUTOINCREMENTMã hóa đơn2codeINTEGERMã code3supplier_idINTEGERFOREIGN KEYMã nhà cung cấp4date Date timeNgày nhập5total_priceINTEGERTổng tiền6user_idINTEGERFOREIGN KEYNgười nhập
+
+3.6.5. Lớp Import_invoice_details:
+    Bảng 15: Bảng lớp Import_invoice_details
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IdINTEGERPRIMARY KEY, AUTOINCREMENTMã chi tiết hóa đơn2product_IdINTEGERFOREIGN KEYMã Thuốc3import_invoice_idINTEGERFOREIGN KEYMã hóa đơn4quantityINTEGERSố lượng Thuốc
+3.6.6. Lớp Export_invoice:
+    Bảng 16: Bảng lớp Export_invoice.
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IdINTEGERPRIMARY KEY, AUTOINCREMENTId hóa đơn nhập2codeVARCHAR(255)Mã code3date DATETIMENgày nhập4total_price INTEGERTổng giá5customer_idINTEGERFOREIGN KEYMã khách hàng
+3.6.7. Lớp Export_invoice_details:
+    Bảng 17: Bảng lớp export_invoice_details.
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IdINTEGERPRIMARY KEY, AUTOINCREMENTMã chi tiết hóa đơn nhập2product_idINTEGERFOREIGN KEYMã Thuốc3id_export_invoiceINTEGERFOREIGN KEYMã hóa đơn xuất3quantityINTERGERSô lượng4priceINTERGERGiá 
+
+3.6.8. Lớp Supplier:
+    Bảng 18: Bảng lớp Supplier.
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IdINTEGERPRIMARY KEY, AUTOINCREMENTMã nhà sản xuất2nameVARCHAR(255)Tên nhà sản xuất3sđtINTEGERSố điện thoại4emailVARCHAR(255)Email5addressVARCHAR(500)Địa chỉ
+3.6.9. Lớp User:
+    Bảng 19: Bảng lớp user.
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IdINTEGERPRIMARY KEY, AUTOINCREMENTMã user2user_nameVARCHAR(255)Tên nhà sản xuất3passwordINTEGERSố điện thoại4role_idINTEGERFOREIGN KEYQuyền5statusINTEGERTrạng thái6full_nameVARCHAR(255)Họ và tên7sdtINTEGERSố điện thoại8date_of_birthDate timeNgày sinh9addressVARCHAR(255)Địa chỉ
+3.6.10. Lớp Role:
+    Bảng 20: Bảng lớp role.
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IdINTEGERPRIMARY KEY, AUTOINCREMENTMã quyền2nameVARCHAR(255)Tên quyền3describeINTEGERMô tả
+3.6.11. Lớp Permission_role:
+    Bảng 21: Bảng lớp permission_role.
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IdINTEGERPRIMARY KEY, AUTOINCREMENTMã quyền-vai trò2permission_idINTEGERFOREIGN KEYMã vai trò3roles_idINTEGERFOREIGN KEYMã quyền
+3.6.12. Lớp Permission:
+    Bảng 22: Bảng lớp permissio.
+STTTên thuộc tínhLoạiRàng buộcÝ nghĩa/ghi chú1IdINTEGERPRIMARY KEY, AUTOINCREMENTMã vai trò2nameI VARCHAR(255)FOREIGN KEYTên vai trò3describeVARCHAR(255)FOREIGN KEYMô tả4permissions_groupVARCHAR(255)Nhóm vai trò
+
+
+3.7. Biểu đồ cơ sở dữ liệu
+Biểu đồ cơ sở dữ liệu
+
+
+    Hình 17: Biểu đồ cơ sở dữ liệu
+
+3.8. Thiết kế Giao diện website
+3.8.1. Giao điện trang HOME. 
+		
+    Hình 18: Giao diện trang HOME.
+3.8.2. Giao diện trang Chi tiết Thuốc. 
+
+    Hình 19: Giao diện trang Chi tiết Thuốc.
+3.8.3. Giao điện trang loại Thuốc
+
+    Hình 20: Giao diện trang loại Thuốc.
+
+3.8.4. Giao điện trang Tìm Kiếm
+
+    Hình 21: Giao diện trang tìm kiếm.
+3.8.5. Giao điện trang Giỏ Hàng
+
+    Hình 22: Giao diện trang giỏ hàng.
+3.6.6. Giao điện trang login 
+
+    Hình 23: Giao diện trang login.
+
+3.6.7. Giao điện trang loại Thuốc
+
+    Hình 24: Giao diện trang loại Thuốc
+3.6.8. Giao điện trang Thuốc
+
+    Hình 25: Giao diện trang Thuốc
+
+3.6.9. Giao điện trang user
+
+    Hình 26: Giao diện trang user
+3.6.10. Giao điện trang nhà cung cấp
+
+Hình 27: Giao diện trang nhà cung cấp
+3.6.11. Giao điện trang khách hàng
+
+    Hình 28: Giao diện trang user
+3.6.12. Giao điện trang khách hàng
+
+Hình 29: Giao diện trang khách hàng
+3.6.13. Giao điện trang quyền
+
+    Hình 30: Giao diện trang quyền
+
+CHƯƠNG 4: KẾT LUẬN
+2. 
+4.1. Kết quả đạt được của đề tài
+    - Hoàn thành một số chức năng cơ bản của website.
+    - Xây dựng website giúp cho khách hàng có thể quản lý Thuốc và giúp tiết kiệm thời gian công sức hơn.
+    - Hàng hóa được trình bày 1 cách rõ ràng và dễ sử dụng.
+4.2. Hạn chế của đề tài
+    - Một số chức năng còn nhiều hạn chế.
+    - Chưa thực sự xử lý được việc nhập nhiều thông tin trong một lần cập nhật các thông tin.
+    - Tốc độ load trang còn chậm.
+4.3. Hướng phát triển của đề tài
+Đề tài này có thể phát triển theo các hướng như sau:
+- Phát triển thêm đa ngôn ngữ dễ dàng cho người sử dụng.
+
+TÀI LIỆU THAM KHẢO
+
+
+
+
+
+
+Xây dựng Website bán thuốc Huy Nghĩa
+    
+

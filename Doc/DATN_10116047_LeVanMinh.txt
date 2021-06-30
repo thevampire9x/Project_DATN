@@ -1,0 +1,727 @@
+﻿CHƯƠNG 1: TỔNG QUAN VỀ ĐỀ TÀI
+1.1 Lý do chọn đề tài
+      Hiện nay,chúng ta đang sống trong thời kỳ phát triển rất nhanh chóng và sôi động của công nghệ thông tin. Sự phát triển mạnh mẽ không ngừng của công nghệ thông tin trên khắp thế giới đã làm thay đổi cản bản đời sống kinh tế của các quốc gia. Công nghệ thông tin đã và đang đi sâu vào mọi lĩnh vực của đời sống xã hội và ngày càng khẳng định được tính phổ dụng, tiện lợi, nhanh chóng và rẻ tiền mà không một hình thức xử lý thông tin nào khác có được. Một trong những vấn đề quan trọng nhất đối với các doanh nghiệp dù lớn hay nhỏ đó là làm sao đưa sản phẩm của mình tới khách hàng và bày ra được các ưu thế của nó. 
+      Ngày nay, ứng dụng công nghệ thông tin và việc tin học hóa được xem là một trong những yếu tố mang tính quyết định trong cuộc sống hàng ngày, nó đóng vai trò hết sức quan trọng, có thể tạo ra những bước đột phá. Việc xây dựng hệ thống tiếp thị để hỗ trợ cho công việc bán hàng là nhu cầu tất yếu. Doanh thu của doanh nghiệp sẽ tăng nhanh nếu có sự hỗ trợ từ hệ thống tiếp thị.
+      Đặc biệt trong lĩnh vực smartphone luôn cạnh tranh gay gắt. Việc tiếp thị sản phẩm tới được nhiều khách hàng hơn và bay ra chi được cách điểm mạnh của sản phẩm sẽ luôn là nhân tố quyết định doanh thu….. Tất cả những việc đó đều phải làm một cách thủ công dẫn đến mất rất nhiều thời gian và chi phí cho nhân công và khách hàng cũng không hài long khi phải chờ lâu. 
+    Với mong muốn áp dụng những kiến thức mình đã học được tạo ra sản phẩm hoàn thiện có tính thực tế, đồng thời giúp nâng cao khả năng lập trình và đúc rút được nhiều kinh nghiệm cho những công việc trong tương lai sau khi ra trường, cùng với sự đồng ý của giáo viên hướng dẫn đề tài, em quyết định lựa chọn đề tài “Hệ thống giới thị và bán điện thoại online SSPO” để làm đề tài đồ án tốt nghiệp.
+1.2 Mục tiêu của đề tài
+      Hệ thống quản lý cần đạt được những mục tiêu sau:
+1. Phải có chức năng đăng nhập 
+2. Phải có chức năng tra cứu sản phẩm
+3. Phải có chức năng quản lý giỏ hàng
+4. Phải có chức năng cập nhật tài khoản 
+5. Phải có chức năng quản lý đơn hàng
+6. Phải có chức năng quản lý sản phẩm
+7. Phải có chức năng quản lý tài khoản
+8. Phải có chức năng quản lý quảng cáo
+1.3 Giới hạn và phạm vi của đề tài
+    Đề tài xây dựng dựng một hệ thống quản lý nhà hàng sử dụng các công nghệ phổ biến nhất trong lập trình như Android Studio, IntelliJ IDEA, cơ sở dữ liệu MySQL và xây dựng webservice PHP.
+1.4 Nội dung thực hiện
+- Xâu dựng được server chạy trên local host
+- Đối với server bán hàng hoàn thiện được các chức năng:
+* Đăng nhập
+* Đăng ký
+* Quản lý tài khoản
+* Quản lý quầy hàng
+* Quản lý đơn hàng
+* Thống kê 
+- Đối với app người mua trên Android hoàn thiện được các chức năng:
+* Đăng nhập
+* Đăng ký
+* Quản lý tài khoản
+* Tra cứu
+* Quản lý giỏ hàng
+* Xem đơn hàng
+1.5 Phương pháp tiếp cận
+- Cách tiếp cận : 
+• Nghiên cứu ngôn ngữ lập trình Android 
+• Công nghệ ứng dụng vào hệ thống như PHP, MySQL. 
+• Mô hình phát triển MVC.
+- Sử dụng các phương pháp nghiên cứu: 
+o Phương pháp đọc tài liệu;
+o Phương pháp thực nghiệm.
+o Phương pháp phân tích mẫu
+   CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
+2.1 Tổng quan về Android
+2.1.1 Android là gì?
+      Android là một hệ điều hành dựa trên nền tảng Linux được thiết kế dành cho các thiết bị di động có màn hình cảm ứng như điện thoại thông minh và máy tính bảng. Ban đầu, Android được phát triển bởi Tổng công ty Android, với sự hỗ trợ tài chính từ Google và sau này được chính Google mua lại vào năm 2005. Android ra mắt vào năm 2007 cùng với tuyên bố thành lập Liên minh thiết bị cầm tay mở: một hiệp hội gồm các công ty phần cứng, phần mềm, và viễn thông với mục tiêu đẩy mạnh các tiêu chuẩn mở cho các thiết bị di động. Chiếc điện thoại đầu tiên chạy Android được bán vào năm 2008. 
+      Android có mã nguồn mở và Google phát hành mã nguồn theo Giấy phép Apache. Chính mã nguồn mở cùng với một giấy phép không có nhiều ràng buộc đã cho phép các nhà phát triển thiết bị, mạng di động và các lập trình viên nhiệt huyết được điều chỉnh và phân phối Android một cách tự do. Ngoài ra, Android còn có một cộng đồng lập trình viên đông đảo chuyên viết các ứng dụng để mở rộng chức năng của thiết bị, bằng một loại ngôn ngữ lập trình Java có sửa đổi. Vào tháng 10 năm 2012, có khoảng 700.000 ứng dụng trên Android, và số lượt tải ứng dụng từ Google Play, cửa hàng ứng dụng chính của Android, ước tính khoảng 25 tỷ lượt.
+      Android cung cấp một phương pháp tiếp cận thống nhất để lập trình ứng dụng cho các thiết bị di động, nghĩa là các lập trình viên chỉ cần lập trình cho Android, và các ứng dụng của họ sẽ có thể chạy trên các thiết bị khác nhau được hỗ trợ bởi Android.
+      Những yếu tố này đã giúp Android trở thành nền tảng điện thoại thông minh phổ biến nhất thế giới, vượt qua Symbian OS vào quý 4 năm 2010, và được các công ty công nghệ lựa chọn khi họ cần một hệ điều hành không nặng nề, có khả năng tinh chỉnh, và giá rẻ chạy trên các thiết bị công nghệ cao thay vì tạo dựng từ đầu. Kết quả là mặc dù được thiết kế để chạy trên điện thoại và máy tính bảng, Android đã xuất hiện trên TV, máy chơi game và các thiết bị điện tử khác. Bản chất mở của Android cũng khích lệ một đội ngũ đông đảo lập trình viên và những người đam mê sử dụng mã nguồn mở để tạo ra những dự án do cộng đồng quản lý. Những dự án này bổ sung các tính năng cao cấp cho những người dùng thích tìm tòi hoặc đưa Android vào các thiết bị ban đầu chạy hệ điều hành khác.
+      Android chiếm 87,7% thị phần điện thoại thông minh trên toàn thế giới vào thời điểm quý 2 năm 2017, với tổng cộng 2 tỷ thiết bị đã được kích hoạt và 1,3 triệu lượt kích hoạt mỗi ngày. Sự thành công của hệ điều hành cũng khiến nó trở thành mục tiêu trong các vụ kiện liên quan đến bằng phát minh, góp mặt trong cái gọi là "cuộc chiến điện thoại thông minh" giữa các công ty công nghệ. 
+2.1.2 Các tính năng của hệ điều hành android
+    Giao diện người dùng đẹp: Màn hình cơ bản hệ điều hành Android cung cấp một giao diện người dùng đẹp và trực quan.
+    Kết nối: GSM/EDGE, IDEN, CDMA, EV-DO, UMTS, Bluetooth, Wi-Fi, LTE, NFC and WiMAX.
+    Lưu trữ: SQLite, một cơ sở dữ liệu quan hệ nhẹ, được sử dụng cho mục đích lưu trữ dữ liệu.
+    Hỗ trợ phương tiện truyền thông: H.263, H.264, MPEG-4 SP, AMR, AMR-WB, AAC, HE-AAC, AAC 5.1, MP3, MIDI, Ogg Vorbis, WAV, JPEG, PNG, GIF, and BMP.
+    Tin nhắn: SMS and MMS
+    Trình duyệt web: Dựa vào cơ chế WebKit mã nguồn mở, kết hợp với công cụ V8 JavaScript của Chrome hỗ trợ HTML5 và CSS3.
+    Cảm ứng đa điểm: Android có hỗ trợ cho cảm ứng đa điểm mà ban đầu đã được thực hiện có sẵn trong điện thoại như HTC Hero.
+    Multi-tasking: Người dùng có thể nhảy từ một nhiệm vụ nàyđến nhiệm vụ khác và cùng một thời gian, các ứng dụng khác nhau có thể chạy đồng thời.
+    Resizable widgets: Widget là thay đổi kích thước, vì vậy người dùng có thể mở rộng chúng để hiển thị nội dung nhiều hơn hoặc thu nhỏ chúng để tiết kiệm không gian.
+    Đa ngôn ngữ: Hỗ trợ thư mục đơn và văn bản hai chiều.
+    GCM: Google Cloud Messaging (GCM) là một dịch vụ cho phép các nhà phát triển gửi tin nhắn dữ liệu lên user của họ trên các thiết bị Android, mà không cần một giải pháp đồng bộ hóa độc quyền.
+    Wi-Fi Direct: Một công nghệ cho phép các ứng dụng Tìm thấy và ghép đôi trực tiếp, qua một băng thông cao kết nối peer-to-peer.
+    Android Beam: Một công nghệ NFC cho phép người dùng chia sẻ ngay lập tức, chỉ bằng cách chạm hai điện thoại NFC với nhau.
+2.1.3 Kiến trúc hệ điều hành Android
+    Kiến trúc hệ điều hành Android gồm 4 phần chính, mô hình dưới đây sẽ cho ta cái nhìn tổng quan về kiến trúc Android. Nhân của Android được phát triển dựa vào Kernel Linux 2.6. Mỗi tầng trong kiến trúc Android hoạt động dựa vào tầng bên dưới nó.
+
+Hình 2.1  Kiến trúc hệ điều hành android
+    Có thể ban đầu bạn thấy sơ đồ hơi rối mắt nhưng không sao, chúng ta sẽ lần lượt tìm hiểu theo thứ tự từ dưới lên.
+    Nhân Linux (Linux kernel)
+    Nằm ở tầng dưới cùng là lớp Linux kernal – Linux 3.6 với khoảng 115 patches. Lớp này liên hệ với phần cứng và nó chứa tất cả driver phần cứng cần thiết như camera, bàn phím, màn hình…
+    Thư viện Android (Android libraries) và Android Runtime
+    Phía trên tầng Linux kernel là tầng libraries, chứa những thư viện hỗ trợ. Một số có thể kể đến như là bộ máy trình duyệt web mã nguồn mở WebKit, thư viện libc, cơ sở dữ liệu SQLite tiện lợi cho việc lưu trữ và chia sẻ dữ liệu, thư viện hỗ trợ thu phát âm thanh và video, thư viện SSL giúp bảo mật mạng…
+    Tầng này chứa tất cả các thư viện Java, được viết đặc biệt cho Android như các thư viện framework, các thư viện xây dựng giao diện, đồ họa và cơ sở dữ liệu. Dưới đây là một số thư viện quan trọng mà các lập trình viên nên biết:
+• android.app − Cung cấp quyền truy cập tới mô hình ứng dụng và là nền tảng của mọi ứng dụng Android applications.
+• android.content − Cho phép truy cập nội dung, phát hành và tin nhắn giữa các ứng dụng và các thành phần trong một ứng dung.
+• android.database −  Được dùng để truy cập vào dữ liệu được đưa ra bởi bộ phận cung cấp nội dung, bao gồm các lớp quản lý cơ sở dữ liệu SQLite.
+• android.opengl − Cho phép tương tác với thư viện đồ họa OpenGL ES 3D.
+• android.os − Giúp ứng dụng truy cập những dịch vụ cơ bản của hệ điều hành bao gồm tin nhắn, dịch vụ hệ thống và liên lạc nội bộ (inter-process communication).
+• android.text − Được dùng để vẽ và thao tác văn bản trên màn hình.
+• android.view − Các khối xây dựng cơ bản của giao diện người dùng.
+• android.widget − Một tập hợp rất nhiều thành phần giao diện được xây dựng sẵn như nút bấm (button), nhãn (label), danh sách hiển thị (list views), quản lý bố cục (layout managers)…
+• android.webkit − Tập hợp các lớp (classes) cho phép trình duyệt web được nhúng vào ứng dụng.
+    Trong tầng này còn có một phần không kém phần quan trọng là Android runtime, bây giờ chúng ta sẽ tìm hiểu các thư viện C/C++ trong tầng này.
+    Android Runtime chứa Dalvik Virtual Machine (DVM) – một biến thể của Java Virtual Machine, đặc biêt thiết kế và tối ưu hóa cho Android. DVM giúp mỗi ứng dụng Android chạy trong chính tiến trình (process) của nó với một đại diện (instance) của DVM.
+    Ngoài ra, Android Runtime cũng chứa tập hợp các thư viện quan trong cho phép người lập trình viết ứng dụng sử dụng ngôn ngữ lập trình Java.
+    Application Framework
+    Application Framework cung cấp nhiều dịch vụ cấp cao dưới dạng các lớp viết bằng Java (Java classes) Lập trình viên được phép sử dụng các lớp này để tạo ra các ứng dụng.
+    Android framework chứa các dịch vụ quan trọng như:
+• Activity Manager − Quản lý tất cả các phần của vòng đời (lifecycle) ứng dụng và các hoạt động ngăn xếp (activity stack).
+• Content Providers − Cho phép ứng dụng phát hành và chia sẻ dữ liệu với ứng dụng khác.
+• Resource Manager − Cho phép truy cập tới những tài nguyên không phải là mã nguồn như chuỗi, cài đặt màu, bố cục giao diện.
+• Notifications Manager − Giúp ứng dụng hiển thị thông báo và nhắc nhở người dùng.
+• View System − Một tập hợp mở rộng giúp tạo giao diện người dùng.
+    Ứng dụng (applications)
+    Ở tầng trên cùng là các ứng dụng Android đi kèm với hệ điều hành như Contacts Books, Browser, Games… Thiết nghĩ không cần nói nhiều thêm về tầng này.
+2.2 Tổng quan về WebService
+2.2.1 WebService là gì?
+    Web Service là một khái niệm rộng hơn so với khái niệm web thông thường. Nó là sự kết hợp các máy tính cá nhân với các thiết bị khác, các cơ sở dữ liệu và các mạng máy tính để tạo thành một cơ cấu tính toán ảo mà người sử dụng có thể làm việc thông qua các trình duyệt mạng. Các Web Service thường cung cấp các dữ liệu thô mà nó khó hiểu đối với đa số người dùng thông thường, chúng thường được trả về dưới dạng XML hoặc JSON. Hiện nay, web service trở thành dịch vụ mạnh mẽ, cung cấp lợi ích cho cả doanh nghiepj, khách hàng, cá nhân, trong nhiều lĩnh vực thực tế: thông tin thương mại, dịch vụ du lịch, tỉ giá, chứng khoán...
+2.2.2 So sánh WebSevice và API
+    API và Web Service hoạt động như một phương tiện giao tiếp. Sự khác biệt duy nhất là một Web Service là tạo điều kiện cho sự tương tác giữa hai máy trên mạng. API hoạt động như một giao diện giữa hai ứng dụng khác nhau để chúng có thể giao tiếp với nhau. API là phương thức tạo điều kiện cho các nhà cung cấp bên thứ ba có thể viết các chương trình giao diện dễ dàng giao tiếp với các chương trình khác. Một Web Service được thiết kế để có một giao diện được mô tả trong một định dạng có thể xử lý bằng máy thường được chỉ định trong ngôn ngữ mô tả dịch vụ web (WSDL). Thông thường, "HTTP" là giao thức được sử dụng phổ biến nhất để giao tiếp. Web Service cũng sử dụng SOAP, REST và XML-RPC như một phương tiện giao tiếp. API có thể sử dụng bất kỳ phương tiện giao tiếp nào để bắt đầu tương tác giữa các ứng dụng. Ví dụ, các lời gọi hệ thống được gọi bằng cách sử dụng các ngắt chương trình (interrupt) của API hạt nhân Linux.
+    Một API xác định chính xác các phương thức cho một chương trình phần mềm để tương tác với một chương trình phần mềm khác. Khi hành động này (API) liên quan đến việc gửi dữ liệu qua mạng, thì đó chính là bạn đã sử dụng một Web Service. Một API thường liên quan đến các chức năng gọi từ bên trong một chương trình phần mềm.
+    Trong trường hợp các ứng dụng Web, API được sử dụng là dựa trên web. Các ứng dụng dành cho máy tính để bàn như bảng tính và tài liệu từ sử dụng VBA và API dựa trên COM không liên quan đến Web Service. Một ứng dụng máy chủ như Joomla có thể sử dụng một API dựa trên nền PHP trong máy chủ không yêu cầu Web Service.
+    Một Web Service chỉ đơn thuần là một API được bao bọc trong HTTP. API không phải lúc nào cũng cần dựa trên web. Một API bao gồm một bộ đầy đủ các quy tắc và thông số kỹ thuật cho một chương trình phần mềm làm theo để tạo điều kiện tương tác. Web Service có thể không chứa một bộ thông số kỹ thuật hoàn chỉnh và đôi khi có thể không thực hiện được tất cả các tác vụ có thể thực hiện được từ API hoàn chỉnh.
+    
+Hình 2.2 Mô hình Client -Web Service
+    
+
+2.2.3 Một số thư viện xử lý Server- client cho Android
+    2.2.3.1 Retrofit
+• Retrofit là gì?
+    Retrofit là một type-safe HTTP client cho Android và Java. Retrofit giúp dễ dàng kết nối tới một dịch vụ REST ở trên web bằng cách dịch API thành các Interface của Java
+    Thư viện mạnh mẽ này giúp bạn lấy dữ liệu trả về dạng JSON hoặc XML, sau đó phần tích cú pháp thành Plain Old Java Objects (POJOs). Các request GET, POST, PUT, PATCH, DELETE đều có thể được thực thi
+    Retrofit được xây dựng trên nền một số thư viện mạnh mẽ và công cụ khác, đằng sau nó có sử dụng OkHttp. Ngoài ra Retrofit không tích hợp sẵn bộ chuyển đổi JSON -> Java, thay vào đó ta có thể sử dụng các thư viện sau:
+o Gson: com.squareup.retrofit:converter-gson
+o Jackson: com.squareup.retrofit:converter-jackson
+o Moshi: com.squareup.retrofit:converter-moshi
+o Vs Protocol buffers, Retrofit hỗ trợ
+o Protobuf: com.squareup.retrofit2:converter-protobuf
+o Wire: com.squareup.retrofit2:converter-wire
+    Và đối với XML, Retrofit hỗ trợ:
+    Simple Framework: com.squareup.retrofit2:converter-simpleframework
+• Tại sao lại dung Retrofit
+o Retrofit đơn giản trong việc setup và sử dụng : phát triển thư viện type-safe HTTP của riêng của bạn để giao tiếp với một REST API có thể thật sự rất khó: bạn phải xử lý nhiều khía cạnh, chẳng hạn như kết nối, bộ nhớ đệm, thử lại yêu cầu sai, luồng, phân tích phản hồi, xử lý lỗi và nhiều thứ khác. Mặt khác, Retrofit là một thư viện được tổ chức tốt, tài liệu hướng đầy đủ và đã thử nghiệm sẽ giúp bạn tiết kiệm rất nhiều thời gian quý báu và những đau đầu không cần thiết.
+o Retrofit là một type-safe HTTP client: trình biên dịch sẽ xác nhận hợp lệ các kiểu dữ liệu trong khi biên dịch và ném một lỗi nếu bạn cố gán kiểu sai cho một biến.
+o Retrofit nhanh hơn rất nhiều so với việc sử dụng Volley, AysncTask
+    2.2.3.2 Volley
+• Volley là gì?
+    Volley là một HTTP library giúp các app Android kết nối mạng đơn giản, developer viết code ít hơn. Đặc biệt là thư viện Volley giúp tăng tốc độ ứng dụng nhờ hỗ trợ cache.
+    
+Hình 2.3 Thư viện Volley
+• Một số tính năng nổi bật của Volley
+o Hỗ trợ lên schedule để tạo request
+o Cho phép cùng lúc thực hiện nhiều request trên các thread khác nhau theo độ ưu tiên.
+o Cache trên Disk hay RAM
+o Cho phép hủy một request.
+o Dễ dàng tùy chỉnh cho phù hợp với yêu cầu của ứng dụng. Như thiết lập retry, back off.
+o Dễ debug.
+2.3 Tổng quan về JPA (Java Persistence API)
+2.3.1 Khái quát về JPA
+    JPA là một đặc tả của Sun, ra đời cùng với bản đặc tả J2EE 5. JPA không phải là một sản phẩm và không thể nó như thành phần persistence. Nó cần phải có một cài đặt ORM để hoạt động và persist các đối tượng Java. Các Framework ORM có thể sử dụng cho JPA như Hibernate, Toplink, Open JPA, …
+    Ngày nay đa số các nhà cung cấp đều hỗ trợ cài đặt JPA cho Framework persistence của họ. Vì vây, người lập trình có thể lựa chọn nhà cung cấp tốt nhất tùy thuộc yêu cầu ứng dụng của mình.
+    Lợi ích của JPA:
+• Đơn giản hóa công nghệ cho tầng persistence (tầng dữ liệu)
+• Không phụ thuộc vào các Framework ORM
+• Có nhiều nhà cung cấp hỗ trợ cài đặt JPA
+• Dữ liệu có thể được lưu trữ thông qua việc ORM
+    Phiên bản hiện tại của JPA: Hiện tại JPA đã có phiên bản 2.2, cung cấp nhiều tính năng hữu ích cho người lập trình.
+2.3.2 Kiến trúc JPA
+    JPA sử dụng metadata để ánh xạ các đối tượng persistence với các bảng trong cơ sở dữ liệu. JPA hỗ trợ SQL như là một ngôn ngữ truy vấn để dễ dàng xử lý các truy vấn cơ sở dữ liệu. Ngôn ngữ truy vấn JPA có thể dùng thực thi cả truy vấn tĩnh và truy vấn động.
+    Các khái niệm JPA: 
+• Entity: Entity là các đối tượng persistence thể hiện một mẫu tin trong cơ sở dữ liệu. Entity chỉ là các lớp POJO đơn giản, dễ dàng tạo. 
+Dưới đây là một số đặc điểm của một Entity:
+o Entity có thể tương tác với cơ sở dữ liệu quan hệ.
+o Entity được xác định thông qua một định danh (tương đương với khóa chính trong table của cơ sở dữ liệu quan hệ).
+o Entity hỗ trợ giao tác (transaction).
+o Entity hỗ trợ kế thừa giống như những lớp thường khác.
+• EntityManager: EntityManager là một giao diện (interface) cung cấp các API cho việc tương tác với các Entity. 
+Một số chức năng cơ bản của EntityManager như:
+o Persist: phương thức này dùng để lưu một thực thể mới tạo vào cơ sở dữ liệu.
+o Merge: dùng để cập nhật trạng thái của entity vào cơ sở dữ liệu.
+o Remove: xóa một thể hiện của entity.
+• EnityManagerFactory: EntityManagerFactory được dùng để tạo ra một thể hiện của EntityManager.
+    Các tính năng của JPA: Việc giới thiệu JPA vào trong đặc tả J2EE 5 là một bước tiến lớn trong việc đơn giản hóa các quy trình phát triển ứng dụng. JPA đơn giản hóa mô hình thực thể dữ liệu và cộng thểm một số tính năng mới mà phiên bản EJB trước (EJB 2.0) không có. Giờ đây người lập trình có thể ánh xạ trực tiếp các đối tượng persistence với cơ sở dữ liệu quan hệ. JPA có thể sử dụng bên ngoài container, điều này không dễ thực hiện trong EJB 2.1. Bạn cũng có thể sử dụng JPA trong các ứng dụng swing.
+    Một số tính năng của JPA:
+• JPA hỗ trợ pluggable, tức là có thể sử dụng nhiều nhà hãng cung cấp thứ ba như Hibernate hay Toplink.
+• Hỗ trợ annotation.
+• Giảm bớt số lớp yêu cầu cho việc phát triển persistence.
+• Không cần phải viết các mô tả triển khai trong xml. Annotation dựa trên metadata đã hỗ trợ trong các ứng dụng JPA.
+• Đã chuẩn hóa ORM và dễ dàng phát triển hơn.
+• JPA hỗ trợ truy vấn động và tĩnh.
+• Nhiều IDE hỗ trợ phát triển ứng dụng JPA và có thể tự động sinh code ánh xạ từ cơ sở dữ liệu thành các entity và ngược lại.
+2.3.3 Các JPA anotation chính
+• Các anotation liên quan đến khai báo Entity
+o @Entity: Biến một JavaBean trở thành một entity để chúng ta có thể thao tác với Database thông qua việc sử dụng entity này.
+o @Table: Định nghĩa một entity tương ứng với một bảng trong cơ sở dữ liệu. Nếu một entity không có anotation này, mặc định tên bảng trong database được map có tên tương ứng với tên của entity.
+o @Column: Định nghĩa một thuộc tính trong một entity sẽ tương ứng là một trường của một bảng tương ứng trong cơ sở dữ liệu
+o @Id: Định nghĩa một thuộc tính trong một entity sẽ là trường khóa chính tương ứng trong cơ sở dữ liệu.
+o @GeneratedValue: Định nghĩa một thuộc tính có giá trị tăng tự động tương ứng với trường tăng tự động trong cơ sở dữ liệu. Tùy cơ sở dữ liệu khác nhau, các strategy truyền vào cũng khác nhau.
+o @Embeddable: Định nghĩa một composite key chứa các thuộc tính là các khóa chính của một bảng trong cơ sở dữ liệu.
+o @IdClass: Chức năng tương tự như @Embeddable, tuy nhiên, nó chỉ khai báo một class khác là composite key của một entity và class khác đó có định nghĩa các thuộc tính là khóa chính.
+• Các anotation liên quan đến Relationship:
+o @ManyToOne: Định nghĩa mối quan hệ nhiều - một giữa các Entity tương ứng với mối quan hệ gữa các bảng trong cơ sở dữ liệu.
+o @OneToMany: Định nghĩa mối quan hệ một - nhiều giữa các Entity tương ứng với mối quan hệ gữa các bảng trong cơ sở dữ liệu.
+o @OneToOne: Định nghĩa mối quan hệ một – một giữa các Entity tương ứng với mối quan hệ gữa các bảng trong cơ sở dữ liệu.
+o @ManyToMany: Định nghĩa mối quan hệ nhiều – nhiều giữa các Entity tương ứng với mối quan hệ gữa các bảng trong cơ sở dữ liệu.
+
+    Hình 2.1 Ví dụ về định nghĩa một entity với các JPA anotation
+2.4 Hibernate Framework
+2.4.1 Khái quát về Hibernate
+• Hibernate ra đời năm 2001 bởi nhà sáng lập Gavin King như một sự thay thế cho EJB2 kiểu thực thể bean. Hiện nay, phiên bản mới nhất của Hibernate là 5.3.0.Final.
+• Hibernate Framework là một giải pháp ORM mã nguồn mở, gọn nhẹ. Hibernate giúp đơn giản hóa sự phát triển của ứng dụng Java để tương tác với cơ sở dữ liệu, giúp đơn giản hóa việc tạo dữ liệu, thao tác dữ liệu và truy cập dữ liệu. Đó là một kĩ thuật lập trình để ánh xạ đối tượng vào dữ liệu được lưu trữ trong cơ sở dữ liệu.
+       Các tool ORM sử dụng JDBC API để tương tác với cơ sở dữ liệu.
+
+Hình 2.4 Mô hình tương tác của Hibernate trong ứng dụng
+2.4.2 Lợi ích của Hibernate Framework
+    Hibernate Framework có các lợi ích như dưới đây
+• Mã nguồn mở và nhẹ: Hibernate Framework là mã nguồn mở có giấy phép LGPL và nhẹ.
+• Hiệu suất nhanh: Hiệu suất của Hibernate Freameworj là nhanh bởi vì bộ nhớ cache được sử dụng trong nội bộ Framework. Có hai loại bộ nhớ cahce trong Hibernate, gồm bộ nhớ cache cấp một và bộ nhớ cache cấp hai. Bộ nhớ cache cấp một được bật bằng lệnh mặc định.
+• Truy vấn cơ sở dữ liệu đọc lập: HQL là phiên bản hướng đối tượng cả SQL. Nó tạo ra các truy vấn dữ liệu độc lập. Vì vậy, bạn không cần phải viết các truy vấn cơ sở dữ liệu cụ thể. Trước Hibernate, nếu dự án có cơ sở dữ liệu bị thay đổi, chúng ta cần phải thay đổi truy vấn SQL dẫn đến sự cố bảo trì.
+• Tạo bảng tự động: Hibernate Framework cung cấp phương tiện để tạo ra các bảng cơ sở dữ liệu tự động. Vì vậy, không cần phải tạo ra các bảng trong cơ sở dữ liệu bằng tay.
+• Đơn giản lệnh join phức tạp: Có thể lấy dữ liệu từ nhiều bảng một cách dễ dàng với Hibernate Framework.
+• Cung cấp thống kê truy vấn và trạng thái cơ sở dữ liệu: Hibernate hỗ trợ bộ nhớ cache truy vấn và cung cấp số liệu thống kê về truy vấn và trạng thái cơ sở dữ liệu. 
+2.4.3 Nhược điểm của Hibernate
+• Không hỗ trợ các câu truy vấn phức tạp.
+• Một số trường hợp vẫn phải dùng native SQL do Hibernate không thể cover hết tất cả các cú pháp của các hệ quản trị cơ sử dữ liệu.
+• Bị hạn chế sự can thiệp vào câu lệnh SQl do nó được tự động sinh ra.
+2.4.4 Các database mà Hibernate hỗ trợ
+Hibernate hỗ trợ hầu hết các RBDMS chính. Dưới đây là danh sách vài cơ sở dữ liệu quan hệ được hỗ trợ bới Hibernate:
+• HSQL Database Engine
+• DB2/NT
+• MySQL
+• PostgreSQL
+• Oracle
+• Microsoft SQL Server Database
+• Sybase SQL Server
+• Informix Dynamic Server
+
+2.4.5 Kiến trúc của Hibernate
+    Kiến trúc Hibernate bao gồm nhiều đối tượng như đối tượng persistent, session factory, transaction factory, connection factory, session, transaction, …
+    Có 4 tầng trong kiến trúc hibernate đó là tầng ứng dụng java, tầng hibernate Framework, tầng backhand api và tầng database. Dưới đây là sơ đồ kiến trúc hibernate:
+    
+Hình 2.5 Kiến trúc của Hibernate
+	
+
+    Dưới đây là một hình ảnh chi tiết về Kiến trúc ứng dụng Hibernate với vài lớp core quan trọng.
+    
+Hình 2.6 Kiến trúc chi tiết của Hibernate
+Hibernate sử dụng các API Java hiện có, như JDBC, Java Transaction API (JTA) và JNDI. JDBC cung cấp một mức độ trừu tượng cơ bản của cơ sở dữ liệu quan hệ, cho phép hầu hết các cơ sở dữ liệu với trình điều khiển JDBC được hỗ trợ bởi Hibernate. JNDI và JTA cho phép Hibernate được tích hợp với các máy chủ ứng dụng J2EE.
+2.4.6 Các thành phần trong kiến trúc của Hibernate
+    Để tạo ứng dụng hibernate đầu tiên, chúng ta phải biết các thành phần của kiến trúc Hibernate. Chúng là như sau:
+• Đối tượng Configuration: là đối tượng Hibernate đầu tiên bạn tạo trong bất kỳ ứng dụng Hibernate nào và chỉ cần tạo một lần trong quá trình khởi tạo ứng dụng. Nó đại diện cho một tập tin cấu hình hoặc thuộc tính yêu cầu của Hibernate. Đối tượng Configuration cung cấp hai thành phần chính:
+o Database Connection: Thao tác này được xử lý thông qua một hoặc nhiều tệp cấu hình được Hibernate hỗ trợ. Các tệp này là hibernate.properties và hibernate.cfg.xml.
+o Class Mapping Setup: Thành phần này tạo ra kết nối giữa các lớp Java và các bảng cơ sở dữ liệu.
+• SessionFactory: là một đối tượng luồng an toàn và được sử dụng bởi tất cả các luồng của một ứng dụng. SessionFactory là đối tượng nặng nên thường nó được tạo ra trong quá trình khởi động ứng dụng và lưu giữ để sử dụng sau này. Bạn sẽ cần một đối tượng SessionFactory cho mỗi cơ sở dữ liệu bằng cách sử dụng một tập tin cấu hình riêng biệt. Vì vậy, nếu bạn đang sử dụng nhiều cơ sở dữ liệu thì bạn sẽ phải tạo nhiều đối tượng SessionFactory.
+• Session: sử dụng để có được một kết nối vật lý với một cơ sở dữ liệu. Đối tượng Session là nhẹ và được thiết kế để được tạo ra thể hiện mỗi khi tương tác với cơ sở dữ liệu. Các đối tượng liên tục được lưu và truy xuất thông qua một đối tượng Session.
+• Transaction: đại diện cho một đơn vị làm việc với cơ sở dữ liệu và hầu hết các RDBMS hỗ trợ chức năng transaction. Các Transaction trong Hibernate được xử lý bởi trình quản lý transaction và transaction (từ JDBC hoặc JTA). Đây là một đối tượng tùy chọn và các ứng dụng Hibernate có thể chọn không sử dụng interface này, thay vào đó quản lý transaction trong code ứng dụng riêng.
+• Query: Các đối tượng Query sử dụng chuỗi truy vấn SQL hoặc HQL để lấy dữ liệu từ cơ sở dữ liệu và tạo các đối tượng. Ví dụ truy vấn được sử dụng để ràng buộc các tham số truy vấn, giới hạn số lượng kết quả được trả về bởi truy vấn và cuối cùng thực hiện truy vấn.
+• Criteria: Đối tượng Criteria được sử dụng để tạo và thực hiện truy vấn các tiêu chí định hướng đối tượng để lấy các đối tượng.
+2.4.7 Cấu hình Hibernate
+    Khi tích hợp Hibernate vào trong ứng dụng, các cấu hình của Hibernate phải được thiết lập mặc định trong 1 file xml với tên mặc định là hibernate.cfg.xml. 
+    Cấu trúc của file hibernate.cfg.xml gồm 3 phần chính:
+• Phần khai báo thẻ head, thẻ <hibernate-configuration> và thẻ <sesion-factory>: Là các thẻ bắt buộc của 1 file xml phục vụ cho việc cấu hình của Hibernate.
+• Các thẻ <property>: Là các thẻ thực hiện cấu hình cho Hibernate bao gồm cấu hình các thuộc tính như tên driver class, url của database, username của database, password, dialect, …
+• Các thẻ mapping: Các thẻ này sẽ khai báo các Entity đã được cấu hình bởi JPA anotation.
+    
+Hình 2.7 Nội dung một file cấu hình cho kết với MySQL database
+2.4.8 Mapping dữ liệu với JPA Anotation trong Hibernate
+    Như đã nói trong phần 2, Java Persistence API hay JPA là một đăc tả Java cho việc ánh xạ giữa các đối tượng Java tới cơ sở dữ liệu quan hệ sử dụng cộng nghệ phổ biến là ORM (Object Relational Mapping). JPA API cung cấp đầy đủ các công cụ cho phép người lập trình có thể tạo cơ sở dữ liệu một cách đơn giản và nhanh chóng. JPA API có thể dùng để persist một đối tượng business (POJO) vào trong cơ sở dữ liệu hoặc lấy dữ liệu từ cơ sở dữ liệu và ánh xạ ra các đối tượng business một cách đơn giản.
+    Bất kỳ một ứng dụng doanh nghiệp(enterprise) nào cũng đều cần phải thực hiện các tháo tác(CRUD) đến database bằng việc lưư trữ, trích rút lượng lớn dữ liệu. Các nhà phát triển(developers) cần phải viết nhiều code để thực hiện các việc này.
+    Với công nghệ JDBC trước đây, developers sẽ phải chủ động thực hiện các việc: từ mở kết nối vào Database, tạo các Statement, ResultSet cho đến đóng tất cả các thứ đó lại, và code sẽ trở nên cồng kềnh. Developers cần phải làm việc với cả java code và SQL. Thực tế, từng Database khác nhau thì câu SQL có một số phần khác nhau, nên đòi hỏi developers phải nắm được sự khác biệt này để viết code cho phù hợp. Khi ứng dụng muốn chuyển từ database sang database khác (ví dụ từ Oracle sang MS SQL Server) thì chắc chắn sẽ có một số phần của câu SQL cần phải đổi. Công việc sửa code lại đòi hỏi developers phải test lại ứng dụng. Điều này sẽ tốn thời gian phát triển. Để khắc phục nhược điểm này, đã có rất nhiều Frameworks ra đời với mục đích giúp xóa đi vấn để về tương thích giữa các Database, giúp developers tập trung vào phần xử lý nghiệp vụ.
+2.5 Tổng quan về Servlet
+2.5.1 Định Servlet
+    Servlet có thể xem như là một sự mở rộng của CGI.
+    Tùy vào ngữ cảnh, Sevlet có thể được mô tả bằng nhiều cách:
+• Servlet là một công nghệ được sử dụng để tạo ra ứng dụng web.
+• Servlet là một API cung cấp các interface và lớp bao gồm các tài liệu.
+• Servlet là một thành phần web được triển khai trên máy chủ để tạo ra trang web động.
+    Có nhiều interface và các lớp trong API servlet như Servlet, GenericServlet, HttpServlet, ServletRequest, ServletResponse, …
+2.5.2 Kiến trúc của Servlet
+    
+Hình 2.8 Vị trí của Servlet trong một ứng dụng web
+    Trong công nghệ Servlet, có hai gói quan trọng là javax.servlet và javax.servlet.http. Hai gói này cung cấp các interface và lớp để tạo ra các Servlet:
+• Interface Servlet: định nghĩa các phương thức trong vòng đời của một Servlet.
+• Lớp GenericServlet: thực thi Servlet.
+• Lớp HttpServlet: kế thừa GenericServlet, cung cấp các phương thức để xử lý các phương thức HTTP như doGet() xử lý GET, doPost() xử lý POST, …
+    Để tạo một Servlet, chúng ta cần phải thực thi interface Servlet trực tiếp hoặc gián tiếp thông qua GenericServlet hoặc HttpServlet. Trong thực tế, lớp Servlet của chúng ta thường kế thừa HttpServlet để có thể xử lý các phương thức HTTP.
+2.5.3 Nhiệm vụ của Servlet
+    Servlet thực hiện các nhiệm vụ chính sau đây:
+• Đọc dữ liệu rõ ràng do khách hàng (trình duyệt) gửi. Điều này bao gồm một mẫu HTML trên một trang Web hoặc nó cũng có thể đến từ một applet hoặc một chương trình khách hàng HTTP tùy chỉnh.
+• Đọc dữ liệu yêu cầu HTTP ẩn được gửi bởi khách hàng (trình duyệt). Điều này bao gồm các cookie, loại phương tiện truyền thông và các chương trình nén mà trình duyệt hiểu được, …
+• Xử lý dữ liệu và tạo ra các kết quả. Quá trình này có thể yêu cầu nói chuyện với một cơ sở dữ liệu, thực hiện một cuộc gọi RMI hoặc CORBA, gọi một dịch vụ Web, hoặc tính trực tiếp phản hồi.
+• Gửi dữ liệu rõ ràng (tức là tài liệu) tới khách hàng (trình duyệt). Tài liệu này có thể được gửi bằng nhiều định dạng, bao gồm văn bản (HTML hoặc XML), nhị phân (hình ảnh GIF), Excel, …
+• Gửi phản hồi HTTP ẩn cho khách hàng (trình duyệt). Điều này bao gồm nói với trình duyệt hoặc các trình khách khác loại tài liệu đang được trả về (ví dụ, HTML), thiết lập cookie và các tham số bộ nhớ đệm, và các tác vụ khác.
+2.5.4 Nhược điểm của Servlet
+    Lập trình viên phải code và html trong cùng một Java file, làm cho việc phát triển cũng như bảo trì phần mềm trở nên khó khăn.
+2.6 Tổng quan về JSP
+2.6.1 Giới thiệu về JSP
+    JSP (JavaServer Pages) là một công nghệ để phát triển các trang web động. JSP giúp các nhà phát triển chèn java code vào các trang HTML bằng cách sử dụng các thẻ JSP đặc biệt.
+    JSP là một kiểu Java servlet được thiết kế để tạo ra giao diện người dùng cho một ứng dụng Java web. Các nhà phát triển web viết các JSP như các tệp văn bản kết hợp mã HTML hoặc XHTML, các phần tử XML, các action và lệnh JSP.
+    Sử dụng JSP, bạn có thể thu thập dữ liệu đầu vào từ người dùng thông qua các Form của trang web, trình bày các bản ghi từ một cơ sở dữ liệu hoặc một nguồn khác, và tạo các trang web động.
+    Các thẻ JSP có thể được sử dụng cho nhiều mục đích khác nhau, chẳng hạn như truy xuất thông tin từ cơ sở dữ liệu hoặc đăng ký mới, truy cập các thành phần JavaBeans, kiểm soát giữa các trang và chia sẻ thông tin giữa các request, các trang, …
+    Các trang JavaServer thường phục vụ cùng một mục đích như các chương trình được thực hiện bằng cách sử dụng CGI. Nhưng JSP cung cấp một số lợi thế so với CGI:
+• Hiệu suất tốt hơn đáng kể vì JSP cho phép nhúng các thành phần động trong các trang HTML thay vì có các tệp CGI riêng biệt.
+• JSP luôn được biên soạn trước khi chúng được xử lý bởi máy chủ không giống như CGI / Perl, yêu cầu máy chủ tải một trình thông dịch và tập lệnh đích mỗi khi trang được request.
+• Giống như Servlet, JSP cũng có quyền truy cập vào tất cả các Enterprise Java APIs, bao gồm JDBC, JNDI, EJB, JAXP, …
+• Các trang JSP có thể được sử dụng kết hợp với các servlet xử lý logic nghiệp vụ, model được hỗ trợ bởi Java servlet.
+    JSP là một phần của Java EE, một nền tảng hoàn chỉnh cho các ứng dụng enterprise.
+
+2.6.2 Kiến trúc của JSP
+    Sơ đồ sau cho thấy vị trí của JSP container và các tệp JSP trong một ứng dụng Web:
+    
+Hình 2.9 Kiến trúc của JSP
+    Quá trình xử lý của một trang JSP:
+• Giống như trang bình thường, trình duyệt của bạn gửi một HTTP request đến máy chủ web.
+• Máy chủ web nhận ra rằng yêu cầu HTTP là dành cho một trang JSP và chuyển nó tới một công cụ JSP. Điều này được thực hiện bằng cách sử dụng URL hoặc trang JSP kết thúc bằng .jsp thay vì .html.
+• Công cụ JSP tải trang JSP từ đĩa và chuyển nó sang một nội dung servlet. Chuyển đổi này rất đơn giản, trong đó tất cả các văn bản được chuyển đổi thành các câu lệnh println() và tất cả các phần tử JSP được chuyển đổi sang mã Java. Mã này thực hiện hành vi tương ứng của trang.
+• Công cụ JSP biên dịch servlet thành một lớp thực thi và chuyển tiếp yêu cầu ban đầu đến một công cụ servlet.
+• Một phần của máy chủ web được gọi là công cụ servlet nạp lớp Servlet và thực thi nó. Trong quá trình thực thi, servlet tạo ra một đầu ra ở định dạng HTML. Kết quả đầu ra được chuyển tiếp đến máy chủ web bằng servlet engine bên trong HTTP response.
+• Máy chủ web chuyển tiếp phản hồi HTTP tới trình duyệt của bạn về nội dung HTML.
+• Cuối cùng, trình duyệt web xử lý và hiển thị trang HTML tới người dùng.
+    
+Hình 2.10 Sơ đồ xử lý một trang JSP
+Thông thường, JSP container kiểm tra xem liệu một servlet cho tệp JSP đã tồn tại và liệu ngày sửa đổi trên JSP cũ hơn servlet hay không. Nếu JSP lớn hơn servlet được tạo ra của nó, JSP container giả định rằng JSP không thay đổi và servlet được tạo ra vẫn phù hợp với nội dung của JSP. Điều này làm cho quá trình này hiệu quả hơn với các ngôn ngữ kịch bản khác (như PHP) và do đó nhanh hơn.
+Vì vậy, nói cách khác, một trang JSP thực sự là một cách khác để viết một servlet mà không cần phải là một chương trình lập trình Java. Ngoại trừ giai đoạn dịch từ JSP sang Servlet, một trang JSP được xử lý chính xác như một servlet thông thường.
+2.6.3 Ưu điểm của JSP
+    Các lợi ích khác của việc sử dụng JSP đối với các công nghệ khác:
+• Active Server Pages (ASP): Có 2 lợi thế của JSP so với ASP. Thứ nhất, phần động được viết bằng Java, không phải Visual Basic hoặc ngôn ngữ cụ thể khác, vì vậy nó mạnh hơn và dễ sử dụng hơn. Thứ hai, nó là khả chuyển cho hệ điều hành khác và máy chủ Web không phải của Microsoft.
+• Servlet thuần: JSP thuận tiện hơn Servlet thuần để viết (và để sửa đổi) HTML hơn là sử dụng lệnh println() để tạo ra HTML rối rắm.
+• Server-Side Includes (SSI): SSI thực sự chỉ dành cho những thứ đơn giản, không phải cho các chương trình “thực” sử dụng form dữ liệu, tạo các kết nối cơ sở dữ liệu và những thứ tương tự.
+2.7 Tổng quan về Spring Framework
+2.7.1 Giới thiệu về Spring Framework
+    Spring Framework là một Framework phát triển các ứng dụng Java Enterprise. Ban đầu nó được viết bới Rod Johnson và lần đầu tiên được phát hành theo giấy phép Apache 2.0 vào tháng 6 năm 2003. Spring có kích thước thường nhẹ, phiên bản cơ bản của nó có kích thước khoảng 2MB.
+    Ngoài ra nó còn là một Java Platform mã nguồn mở, một giải pháp gọn nhẹ dành cho Java Enterprise. Với Spring Framework, các nhà phát triển có thể tạo ra các mã có hiệu suất cao, dễ kiểm thử và có thể sử dụng lại được.
+    Các tính năng core của Spring có thể sử dụng trong việc phát triển bất kì các ứng dụng Java. Bên cạnh đó, phần mở rộng được sử dụng để xây dựng các ứng dụng web trên nền tảng Java EE. Mục tiêu của Spring là làm cho việc phát triển ứng dụng J2EE dễ dàng hơn và thúc đẩy việc lập trình tốt hơn bằng mô hình POJO-based.
+2.7.2 Lợi ích của Spring
+• Spring cho phép các nhà phát triển tạo các ứng dụng cấp Enterprise sử dụng các POJO. Lợi ích của việc sử dụng các POJO là bạn không cần một sản phẩm chứa EJB như một máy chủ ứng dụng, mà bạn chỉ có thể sử dụng một bộ chứa servlet mạnh mẽ như Tomcat hoặc một số sản phẩm thương mại khác
+• Spring được tổ chức theo kiểu module. Mặc dù số lượng các gói và các lớp là khá nhiều, nhưng bạn chỉ cần quan tâm đến những gì bạn cần và không cần quan tâm đến phần còn lại
+• Spring sử dụng một số công nghệ hiện có như một số ORM Framework, logging Frameworks, JEE, Quartz, JDK timers và các công nghệ View khác.
+• Dễ dàng kiểm thử một chương trình được viết bằng Spring.
+• Web Framework của Spring là một Web MVC Framework có thiết kế tốt, nó là một thay thế tuyệt vời cho Struts và các công nghệ kém phổ biến khác.
+• Spring cung cấp một API thuận tiện để dịch các ngoại lệ công nghệ cụ thể (ném bởi JDBC, Hibernate, hoặc JDO chẳng hạn) vào các trường hợp ngoại lệ nhất quán, không được kiểm soát.
+• IoC Container có trọng lượng nhẹ. Điều này có lợi cho việc phát triển và triển khai các ứng dụng trên các máy tính có bộ nhớ và tài nguyên CPU hạn chế.
+• Spring cung cấp một giao diện quản lý transaction nhất quán có thể mở rộng đến một local transaction (ví dụ như sử dụng một cơ sở dữ liệu) và mở rộng lên các global transaction (sử dụng JTA).
+2.7.3 Sơ qua về DI và IoC
+    DI (Dependency Injection) là một design pattern để loại bỏ sự phụ thuộc vào mã lập trình, vì vậy nó giúp rễ ràng quản lý và test ứng dụng. Dependency Injection giúp mã lập trình liên kết lỏng với nhau.
+    IoC (Inversion of Control) hay IoC Container có trách nhiệm khởi tạo, configure, gắn kết các đối tượng. Có hai kiểu của IoC containers là BeanFactory và ApplicationContext.
+2.7.4 Các module của Spring Framework
+    Spring Framework bao gồm nhiều tính năng được tổ chức thành khoảng 20 module. Các module này được phân nhóm thành Core Container, Data Access/Integration, Web, AOP, Instrumentation, Messaging, và Test.
+    Spring được chia làm nhiều module khác nhau, tùy theo mục đích sử dụng mà ta dùng trong 1 trong các module đó.
+    Dưới đây là kiến trúc tổng thể của Spring Framework:
+   
+   
+    Hình 2.9 Các module của Spring Framework
+• Core Container: bao gồm các module: spring-core , spring-beans, spring-context, springcontext-support, và spring-expression (Spring Expression Language).
+o Module spring-core và spring-beans cung cấp những phần cơ bản của Framework, bao gồm IoC và Dependency Injection.
+o Module spring-context xây dựng trên một nền tảng vững chắc được cung cấp bởi các module Core và Beans, được sử dụng để truy cập vào các đối tượng trong Framework-style tương tự như việc đăng ký một JNDI. spring-context-support hỗ trợ tích hợp libraries của bên thứ 3 (third-party) vào ứng dụng Spring như caching (EhCache, Guava, JCache), mailing (JavaMail), schedule (CommonJ, Quatz) và các template engine (FreeMarker, JasperReports, Velocity)).
+o Module spring-expression cung cấp một Expression Language mạnh mẽ cho việc truy vấn và tính toán một đồ thị đối tượng lúc runtime. Nó được kế thừa và mở rộng từ unified expression language (unified EL). Ngôn ngữ này hỗ trợ setting và getting giá trị các property, gọi phương thức, truy cập vào nội dung của mảng, tập hợp và chỉ mục, operator logic và tính toán, đặt tên biến, và truy xuất các đối tượng theo tên từ IoC container của Spring.
+• Core Container: bao gồm các module JDBC, ORM, OXM, JMS và Transaction:
+o Module spring-jdbc cung cấp một lớp JDBC-abstraction để loại bỏ những code tẻ nhạt cả JDBC và phân tích những mã lỗi cụ thể của database-vendor.
+o Module spring-orm cung cấp lớp tích hợp với các orm API phổ biến như JPA, JDO và Hibernate.
+o Module spring-oxm cung cấp lớp abstraction hỗ trợ triển khai Object/XML mapping.
+o Module spring-jms chứa các tính năng tạo và sử dụng các message. Từ Spring Framework 4.1, nó được tích hợp với spring-messaging.
+o Module spring-transaction hỗ trợ quản lý giao dịch theo chương trình và khai báo cho các lớp mà thực hiện các giao diện đặc biệt và cho tất cả các POJO của bạn.
+• Web: Tầng này bao gồm các module spring-web , spring-webmvc, spring-websocket và springwebmvc-portlet:
+o Module spring-web cung cấp tính năng tích hợp web theo định hướng cơ bản như chức năng tập tin tải lên nhiều phần dữ liệu và khởi tạo các container IoC sử dụng nghe servlet và một bối cảnh ứng dụng web theo định hướng.
+o Module spring-webmvc bao gồm việc triển khai Model-View-Controller (MVC) của Spring cho các ứng dụng web.
+o Module spring-websocket cung cấp hỗ trợ cho WebSocket-based, giao tiếp hai chiều giữa client và server trong các ứng dụng web.
+o Module springwebmvc-portlet cung cấp việc triển khai MVC được sử dụng trong môi trường portlet và ánh xạ chức năng của module Web-Servlet.
+• Các module khác: Có vài module quan trọng khác như module AOP, Các khía cạnh, Instrumentation, Web và Test mô tả chi tiết như sau:
+o Module AOP cung cấp một thực hiện lập trình hướng khía cạnh cho phép bạn xác định phương pháp-chặn và pointcuts để sạch tách mã thực hiện chức năng đó nên được tách ra.
+o Module Aspects cung cấp tích hợp với AspectJ, mà lại là một khuôn khổ AOP mạnh mẽ và trưởng thành.
+o Module Instrumentation cung cấp thiết bị đo đạc lớp hỗ trợ và triển khai lớp bộ nạp được sử dụng trong các máy chủ ứng dụng nhất định.
+o Module Messaging cung cấp hỗ trợ cho STOMP như WebSocket sub-protocol để sử dụng trong các ứng dụng. Nó cũng hỗ trợ một mô hình lập trình chú thích cho việc định tuyến và xử lý tin nhắn STOMP từ các máy khách WebSocket.
+o Module Test hỗ trợ việc kiểm tra các thành phần mùa xuân với JUnit hoặc TestNG khuôn khổ.
+2.7.5 Các project trong hệ sinh thái của Spring:
+    Spring MVC: Giúp cho các nhà phát triển xây dựng ứng dụng web thao mô hình MVC mà vẫn giữ được các đặc điểm của Spring. Dựa trên mô hình MVC kinh điển, Spring MVC sẽ giúp các nhà phát triển xấy dựng các web.
+    Spring Security: Cung cấp các cơ chế xác thực (authentication) và phân quyền (authorization) cho ứng dụng web.
+    Spring Boot: Dựa vào Spring, sử dụng automatic configuration để loại bỏ configuration truyền thống, chuyển đổi application thành dạng executable.
+    Spring Test: Với Unit Test, bạn có một tập hợp các mock implementation để viết unit test tương thích với JNDI, servlet, portlets. Còn với Integration Test, module này hỗ trợ việc load các bean theo nhiều context khác nhau.
+    Ngoài ra còn rất nhiều các dự án khác như Spring Integration, Spring IO, Spring Cload, Spring Mobile, Spring RESTFuL Service, Spring Social,...
+2.8 Tổng quan về Spring MVC
+2.8.1 Giới thiệu về Spring MVC
+    Spring MVC là một Framework / 1 Project mã nguồn mở của Spring Framework.
+    MVC lần lượt là ba chữ cái đầu tiên của ba từ Model, View và Controller. MVC là một mô hình ứng dụng mà ở đó các thành phần được phân tách ra thành các lớp riêng biệt với các nhiệm vụ đặc trưng. View sẽ là lớp cho các thành phần có chức năng hiển thị, giao tiếp trực tiếp với người dùng. Nhiệm vụ của các thành phần trong View là trình bày các dữ liệu từ Model đến người dùng cuối. Model là các thành phần có khả năng lưu trữ và vận chuyển thông tin. Quá trình ném dữ liệu vào Model sẽ được thực hiện bởi Controller. Controller là các thành phần giúp cho việc xử lý logic các thao tác nghiệp vụ. Nhiệm vụ của Controller là lấy dữ liệu từ Model, xử lý dữ liệu, và cập nhật lại dữ liệu vào Model.
+    Đối với Spring MVC, View sẽ là các trang .jsp giúp cho việc hiển thị dữ liệu lên browser. Dữ liệu được lấy ra từ Model là các POJO hay ta còn gọi là các Domain Object. Cụ thể hơn, nó là các đối tượng có các thuộc tính có khả năng mang vác dữ liệu trong các luồng nghiệp vụ của ứng dụng. Cuối cùng là Controller, là các lớp đặc biệt, có chứa các phương thức có khả năng nhận yêu cầu, xử lý yêu cầu, cập nhật dữ liệu, và chuyển tiếp dữ liệu trong ứng dụng.
+
+2.8.2 Flow trong Spring MVC
+    
+    
+Hình 2.11 Luồng thực thi trong Spring MVC
+• Bất kỳ request nào tới ứng dụng web đều sẽ được gửi tới Front Controller (Dispatcher Servlet)
+• Front Controller sẽ sử dụng Handler Mapping để biết được controller nào sẽ xử lý request đó
+• Controller nhận request, gọi tới các class service thích hợp xử lý yêu cầu.
+• Sau khi xử lý xong, Controller sẽ nhận được model từ tầng Service hoặc tầng DAO.
+• Controller gửi model vừa nhận tới Front Controller (Dispatcher Servlet)
+• Dispatcher Servlet sẽ tìm các mẫu view, sử dụng view resolver và truyền model vào nó.
+• View template, model, view page được build và gửi trả lại Front Controller
+• Front Controller gửi một page view tới trình duyệt để hiển thị nó cho người dùng.
+    Trong Mô hình MVC thì:
+• Model: là các file POJO, Service, DAO thực hiện truy cập database, xử lý business
+• View: là các file JSP, HTML, …
+• Control: là Dispatcher Controller, Handler Mapping, Controller – thực hiện điều hướn các request.
+2.8.3 Lợi ích của Spring MVC
+    Các tầng trong Spring MVC độc lập nên việc unit test dễ dàng hơn.
+    Phần view có thể tích hợp với nhiều Framework về giao diện như JSF, Freemarker, Themeleaf…
+    Spring MVC base trên các POJO class nên các hành động của nó khá đơn giản.
+    Hỗ trợ cả Annotation và XML config giúp việc phát triển nhanh hơn, sạch hơn.
+    Cung cấp việc phân chia một cách rõ ràng, linh hoạt giữa controller, service, data access layer.
+
+   
+   CHƯƠNG 3: NỘI DUNG THỰC HIỆN
+3.1 Phát biểu bài toán
+3.1.1 Tổng quan về hệ thống mới
+       Hệ thống được mô tả như sau:
+➢ Ứng dụng chia làm 2 giao diện(một cho khách sử dụng, một cho người quản lý) tương ứng với loại tài khoản đăng nhập.
+➢ Đối với giao diện  cho khách hàng:
+- Khi muốn đặt mua sản phẩm thì khách hàng cần đăng nhập, nếu chưa có tài khoản người dùng chọn đăng ký. Thông tin đăng ký bao gồm: tên tài khoản, mật khẩu, họ tên người dùng, địa chỉ, số điện thoại.
+- Sau khi đăng nhập sẽ vào giao diện khách. Giao diện khách có các chức năng: 
+- Chức năng tra cứu sản phẩm. Sản phẩm gồm 2 loại: Điện thoại và phụ kiện.
+• Đối với điện thoại, trang chủ sẽ hiển thị 3 mục:Bán chạy nhất, giảm giá nhiều nhất và mới nhất.
+• Đối với linh kiện chia thành: pin sạc, cáp sạc, tai nghe, thẻ nhớ. 
+• Phầm mềm hỗ trợ tìm kiếm theo tên, sắp xếp theo giá, bộ lọc.
+- Khi khách hàng nhấn vào một sản phẩm loại hàng điện thoại sẽ hiển thị thông tin gồm: 
+• Tên điện thoại, giá tiền, số sao, ảnh.
+• Mô tả: mô tả về sản phẩm.
+• Đặt mua: sau khi chọn đặt mua sản phẩm sẽ được thêm vào giỏ hàng.
+• Thông tin chi tiết: gồm hãng sản xuất, phụ kiện đi kèm, công nghệ màn hình, kích thước màn hình, độ phân giải màn hình, camera trước, camera sau, đèn flash, chip, ram, bộ nhớ trong, hỗ trợ thẻ nhớ ngoài, hệ điều hành, dung lượng pin, kết nối dữ liệu, loại sim, FM radio, chức năng khác.
+• Đánh giá sản phẩm: khách hàng bình chọn số sao về sản phẩm.
+- Khi khách hàng nhấn vào một phụ kiện sẽ hiển thị thông tin gồm:
+• Tên linh kiện, giá tiền, số sao, ảnh.
+• Đặt mua.
+• Thông số kỹ thuật
+• Đánh giá sản phẩm: khách hàng bình chọn số sao về sản phẩm.
+- Chức năng quản lý giỏ hàng: Khi khách hàng vào giỏ hàng sẽ hiển thị danh sách các sản phẩm đặt mua và tổng giá. Khách hàng có thể điểu chỉnh số lượng sản phẩm đặt mua, xóa sản phẩm khỏi giỏ hàng, tiến hành đặt hàng.
+- Chức năng cập nhật tài khoản: cập nhật thông tin tài khoản, đổi mật khẩu, đăng xuất.
+- Chức năng xem đơn hàng:  xem lại danh sách đơn hàng đã đặt.
+➢ Đối với giao diện cho người quản lý:
+- Giao diện quản lý gồm các chức năng:
+• Quản lý sản phẩm: thêm, sửa  sản phẩm. 
+• Quản lý đơn hàng: hiển thị danh sách tất cả đơn hàng theo tình trạng, cập nhật trình trạng đơn hàng.
+• Cập nhật tài khoản: cập nhật thông tin tài khoản, đổi mật khẩu.
+• Quản lý tài khoản: thay đổi mật khẩu hoặc xóa tài khoản người dùng. 
+• Quản lý quảng cáo: thêm, sửa, xóa quảng cáo.
+3.1.2 Môi trường phát triển
+Môi trường phần cứng
+○ CPU: Snapdragon 410 hoặc cao hơn
+○ RAM: tối thiểu 512 MB
+○ Bộ nhớ trong: tối thiểu 12MB
+Môi trường phần mềm
+○ Hệ điều hành: Android 4.4 trở lên
+○ Công cụ phát triển: Android Studio
+
+
+3.2 Biểu đồ Use-case
+3.2.1 Biểu đồ Use-case tổng quát
+
+Hình 3.1 UseCase mức tổng quát
+3.2.2  Đặc tả Use-case “DangNhap”
+    Biểu đồ Use case của Use case đặc tả
+
+Hình 3.2 UC DangNhap
+    3.2.2.1 Tóm tắt
+      Use-case này để đăng nhập vào ứng dụng
+    3.2.2.2 Dòng sự kiện
+    Dòng sự kiện chính
+1. Khách hàng chọn đăng ký
+2. Khách hàng điền thông tin và chọn đăng ký
+3. SYSTEM Hệ thống lưu thông tin về tài khoản mới đăng ký này
+4. Người dùng điền tài khoản, mật khẩu rồi đăng nhập
+5. SYSTEM Nếu thông tin tài khoản mật khẩu đúng và loại tài khoản admin thì vào giao diện quản lý, nếu thông tin tài khoản mật khẩu đúng và không là admin thì vào giao diện khách hàng , nếu không thông báo đăng nhập không thành công. 
+    3.2.2.4 Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+      Khi chọn vào cập nhật tài khoản sẽ hiện lên use-case này
+    3.2.2.5 Trạng thái hệ thống sau khi thực hiện Use-case
+      Sau khi đăng nhập thành người dùng sẽ tiến giao diện chính của phần mềm.
+3.2.3 Đặc tả Use-case “TraCuuSanPham”
+    Biểu đồ Use case của Use case đặc tả
+
+Hình 3.3 UC TraCuuSanPham
+    3.2.3.1 Tóm tắt
+    Use-case này hỗ trợ khách hàng tra cứu thông tin sản phẩm 
+    3.2.3.2 Dòng sự kiện
+    Dòng sự kiện chính
+1. Người dùng chọn vào một danh mục sản phẩm
+2. Người dùng chọn sắp xếp
+3. Người dùng chọn lọc
+4. Người dùng chọn tìm kiếm
+5. Người dùng nhập từ khóa
+6. SYSTEM Hệ thống hiển thị danh sách sản phẩm thỏa mãn
+7. Người dùng chọn vào 1 sản phẩm
+8. SYSTEM Hệ thống hiển thị giao diện thông tin chi tiết sản phẩm
+9. Người dùng chọn đánh giá 
+10. Người dùng chọn số sao
+11. SYSTEM Hệ thống lưu đánh giá và cập nhật lại số sao của sản phẩm.
+    3.2.3.4 Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+    Danh sách các sản phẩm theo mục
+    3.2.3.5 Trạng thái hệ thống sau khi thực hiện Use-case
+    Hệ thống hiển thị danh sách sản phẩm thỏa mãn các tiêu chí người dùng đã sàng lọc.
+3.2.4 Đặc tả Use-case “QuanLyGioHang”
+    Biểu đồ Use case của Use case đặc tả
+
+Hình 3.4 UC QuanLyGioHang
+    3.2.4.1 Tóm tắt
+    Use-case này để người dùng điều chỉnh các mặt hàng muốn mua và tiến hành đặt hàng.
+    3.2.4.2 Dòng sự kiện
+    Dòng sự kiện chính
+1. Người dùng chọn biểu tượng giỏ hàng
+2. Người điều chỉnh số lượng các sản phẩm đã cho vào giỏ
+3. SYSTEM Hệ thống tính giá tiền tổng
+4. Người dùng hủy bỏ sản phẩm khỏi giỏ
+5. SYSTEM Hệ thống tính giá tiền tổng
+6. Người dùng chọn đặt hàng
+7. SYSTEM Nếu khách hàng chưa đăng nhập thì hệ thống yêu cầu khách hàng đăng nhập
+8. SYSTEM Hệ thống khởi tạo đơn hàng theo thông tin của tài khoản.
+    3.2.4.4 Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+    Sau khi sản phẩm được thêm vào giỏ hàng.
+    3.2.4.5 Trạng thái hệ thống sau khi thực hiện Use-case
+    Sau khi khi xác nhận hệ thống sẽ tạo đơn hàng và các sản phẩm trong giỏ sẽ biến mất.
+3.2.5 Đặc tả Use-case “CapNhatTaiKhoan”
+    Biểu đồ Use case của Use case đặc tả
+
+Hình 3.5 UC CapNhatTaiKhoan
+    3.2.5.1 Tóm tắt
+    Use-case này để thay đổi thông tin của người dùng hoặc đổi mật khẩu tài khoản.
+    3.2.5.2 Dòng sự kiện
+    Dòng sự kiện chính
+1. Người dùng chọn cập nhật tài khoản
+2. Người dùng chọn cập nhật thông tin
+3. Người dùng điền thông tin mới
+4. Người dùng chọn ok
+5. SYSTEM Hệ thống lưu thông tin mới của người dùng
+6. Người dùng chọn đổi mật khẩu
+7. Người dùng điền mật khẩu mới và xác thực
+8. SYSTEM Hệ thống cập nhật mật khẩu mới của người dùng. 
+    3.2.5.4 Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+    Thông tin của người dùng chưa cập nhật
+    3.2.5.5 Trạng thái hệ thống sau khi thực hiện Use-case
+    Thông tin mới của người dùng đã được hệ thống cập nhật.
+3.2.6 Đặc tả Use-case “QuanLyDonHang”
+    Biểu đồ Use case của Use case đặc tả
+
+Hình 3.6 UC QuanLyDonHang
+    3.2.6.1 Tóm tắt
+    Use-case này khách hàng xem lại đơn hàng mình đã đặt, còn đối với người quản lý thì để xem danh sách các đơn hàng được đặt theo ngày.
+    3.2.6.2 Dòng sự kiện
+    Dòng sự kiện chính
+1. Người dùng chọn xem đơn hàng
+2. SYSTEM Hệ thống kiểm tra loại tài khoản.
+3. SYSTEM Hệ thống trả về danh sách đơn hàng tương ứng với loại tài khoản.
+4. Người quản lý chọn cập nhật tình trạng đơn hàng
+5. SYSTEM Hệ thống cập nhật tình trạng đơn hàng.
+    3.2.6.4 Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+    Người dùng đã đăng nhập.
+    3.2.6.5 Trạng thái hệ thống sau khi thực hiện Use-case
+    Danh sách đơn hàng tương ứng với loại tài khoản.
+3.2.7 Đặc tả Use-case “QuanLySanPham”
+    Biểu đồ Use case của Use case đặc tả
+
+Hinh 3.7 UC QuanLySanPham
+    3.2.7.1 Tóm tắt
+    Use-case này để thêm sản phẩm mới.
+    3.2.7.2 Dòng sự kiện
+    Dòng sự kiện chính
+1. Người quản lý chọn quản lý sản phẩm
+2. Người quản lý chọn thêm 
+3. Người quản lý chọn nhập thông tin sản phẩm mới
+4. Người quản lý xác nhận thêm sản phẩm
+5. SYSTEM Hệ thống lưu thông tin về sản phẩm mới 
+6. Người quản lý chọn chọn một sản phẩm 
+7. Người quản lý chọn chọn sửa
+8. Người quản lý nhập thông tin mới cho sản phẩm
+9. SYSTEM Hệ thống lưu thông tin mới của sản phẩm
+    3.2.7.4 Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+    Người quản lý trong giao diện quản lý sản phẩm
+    3.2.7.5 Trạng thái hệ thống sau khi thực hiện Use-case
+    Thông tin sản phẩm được cập nhật.
+3.2.8 Đặc tả Use-case “QuanLyTaiKhoan”
+    Biểu đồ Use case của Use case đặc tả
+
+Hình 3.8 UC QuanLyTaiKhoan
+    3.2.8.1 Tóm tắt
+    Use-case này để admin quản lý nhân viên
+    3.2.8.2 Dòng sự kiện
+    Dòng sự kiện chính
+1. Người quản lý chọn quản lý tài khoản
+2. Người quản lý chọn tìm kiếm
+3. Người quản lý nhập tên tài khoản
+4. SYSTEM Hệ thống hiển thị tài khoản cần tìm 
+5. Người quản lý chọn đổi mật khẩu
+6. Người quản lý nhập mật khẩu mới và xác nhận
+7. SYSTEM Hệ thống cập nhật mật khẩu mới cho tài khoản khách 
+8. Người quản lý chọn xóa tài khoản
+9. SYSTEM Hệ thống xóa tài khoản được chọn. 
+    3.2.8.4 Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+    Danh sách tài khoản của khách hàng 
+    3.2.8.5 Trạng thái hệ thống sau khi thực hiện Use-case
+    Danh sách tài khoản khách hàng được cập nhật.
+3.2.9 Đặc tả Use-case “QuanLyQuangCao”
+    Biểu đồ Use case của Use case đặc tả
+
+Hình 3.9 UC QuanLyQuangCao
+    3.2.9.1 Tóm tắt
+    Use-case này để người quản lý thêm, sửa, xóa quảng cáo.
+    3.2.9.2 Dòng sự kiện
+    Dòng sự kiện chính
+1. Người quản lý chọn quản lý quảng cáo
+2. Người quản lý chọn thêm
+3. Người quản lý dán link hình ảnh quảng cáo
+4. SYSTEM Quảng cáo được thêm 
+5. Người quản lý chọn sửa
+6. Người quản lý nhập lại link hình ảnh quảng cáo
+7. SYSTEM Quảng cáo được cập nhật 
+8. Người quản lý chọn xóa 
+9. SYSTEM Hệ thống xóa quảng cáo được chọn. 
+    3.2.9.4 Trạng thái hệ thống khi bắt đầu thực hiện Use-case
+    Người quản lý đang ở giao diện quản lý quảng cáo
+    3.2.9.5 Trạng thái hệ thống sau khi thực hiện Use-case
+    Danh sách quảng cáo được cập nhật .
+
+3.3 Biểu đồ lớp
+
+Hình 3.10 Biểu đồ lớp mức phân tích
+
+    Danh sách các lớp đối tượng và quan hệ
+STTTên lớp/quan hệLoạiÝ nghĩa/Ghi chú1TaiKhoanEntityTài khoản2NguoiQuanLyEntityTài khoản người quản lý3KhachHangEntityTài khoản khách hàng4SanPhamEntitySản phẩm5DienThoaiEntityĐiện thoại6PhuKienEntityPhụ kiện7CTPhuKienEntityChi tiết phụ kiện8CTDienThoaiEntityChi tiết điện thoại9TongHopDanhGiaEntityĐánh giá10QuangCaoEntityQuảng cáo3.4 Biểu đồ tuần tự
+3.4.1 UC Đăng nhập
+
+Hình 3.11 Biểu đồ tuần tự UC DangNhap
+
+3.4.2 UC Tra cứu sản phẩm
+
+Hình 3.12 Biểu đồ tuần tự UC TraCuuSanPham
+3.4.3 UC Quản lý giỏ hàng
+
+Hình 3.13 Biểu đồ tuần tự UC QuanLyGioHang
+
+3.4.4 UC Cập nhật tài khoản
+
+Hình 3.14 Biểu đồ tuần tự UC CapNhatTaiKhoan khách hàng
+
+Hình 3.15 Biểu đồ tuần tự UC CapNhatTaiKhoan admin
+
+3.4.5 UC Quản lý đơn hàng
+
+Hình 3.16 Biểu đồ tuần tự UC QuanLyDonHang khách hàng
+
+Hình 3.17 Biểu đồ tuần tự UC QuanLyDonHang admin
+
+3.4.6 UC Quản lý sản phẩm
+
+Hình 3.18 Biểu đồ tuần tự UC QuanLySanPham
+
+3.4.7 UC Quản lý tài khoản
+
+Hình 3.19 Biểu đồ tuần tự UC QuanLyTaiKhoan
+3.4.8 UC Quản lý quảng cáo
+
+Hình 3.20 Biểu đồ tuần tự UC QuanLyQuangCao
+3.5 Thiết kế cơ sở dữ liệu
+    
+Hình 3.21 Lược đồ quan hệ
+    Bảng 3.1  TaiKhoan
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1tentaikhoanvarchar(50)Not nullKhóa chính2matkhauvarchar(50)Not null    3hotenTextNot null    4diachiTextNot null    5sodienthoaiTextNot null    6loaitaikhoanTextNot null    
+    Bảng 3.2 TongHopDanhGia
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1maspvarchar(50)Not nullKhóa ngoại2tentaikhoanvarchar(50)Not nullKhóa ngoại3sosaofloatNot null    
+    Bảng 3.2 SanPham
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1maspnvarchar(50)Not nullKhóa chính2tenspTextNot null3loaispTextNot null4giaintegerNot null5motaTextNot null6ngaythemdateNot null7giamgiaintegerNot null8sosaodoubleNot nullSố sao được đánh giá9soluongxuatintegerNot null10soluonghientaiintegerNot null11urlTextNot nullurl hình ảnh    
+    Bảng 3.4 CTPhuKien
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1mactspvarchar(50)Not nullKhóa chính2maspvarchar(50)Not nullKhóa ngoại3thongsokythuatTextNot null        
+    
+    Bảng 3.5 Quangcao
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1maqcvarchar(50)Not nullKhóa chính2urlTextNot null        
+    Bảng 3.6 CTDienThoai
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1mactspvarchar(50)Not nullKhóa chính2maspvarchar(50)Not nullKhóa ngoại3hangsxTextNot null    4phukiendikemTextNot null    5congngheMHTextNot null    6kichthuocMHTextNot null    7dophangiaiMHTextNot null    8cameratruocTextNot null    9camerasauTextNot null    10denflashTextNot null    11chipTextNot null    12ramTextNot null    13bonhotrongTextNot null    14hotrothenhongoaiTextNot null    15hedieuhanhTextNot null    16dungluongpinTextNot null    17KetnoidulieuTextNot null    18loaisimTextNot null    19FMradioTextNot null    20chucnangkhacTextNot null        
+    Bảng 3.7 DonHang
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1madonhangvarchar(50)Not nullKhóa chính2tentaikhoanvarchar(50)Not nullKhóa ngoại3thoigianTextNot null    4tinhtrangTextNot null        
+    Bảng 3.8 CTDonHang
+STTTên trườngKiểu dữ liệuRàng buộcMô tả1mactdonhangvarchar(50)Not nullKhóa chính2madonhangvarchar(50)Not nullKhóa ngoại3maspvarchar(50)Not nullKhóa ngoại4soluongintegerNot null    5giaintegerNot null    3.6 Thiết kế giao diện
+    
+    
+    
+Hình 3.22 Giao diện trang chủ app khách hàng
+    
+    
+Hình 3.23 Giao diện TraCuuSanPham
+
+    
+    
+
+    
+Hình 3.24 Giao diện QuanLyGioHang
+    
+    
+Hình 3.25 Giao diện DangNhap
+    
+
+
+    
+Hình 3.26 Giao diện CapNhatTaiKhoan
+
+    
+    
+
+Hình 3.27 Giao diện QuanLySanPham
+    
+    
+Hình 3.28 Giao diện QuanLyQuangCao
+
+    
+- Khách:
+
+Hình 3.29 Giao diện XemDonHang khách hàng
+- Người quản lý:
+
+Hình 3.30 Giao diện XemDonHang admin
+CHƯƠNG 4: KẾT LUẬN
+4.1 Kết quả đạt được của đề tài
+Sau thời gian nghiên cứu và phát triển, ứng dụng đã hoàn thành cơ bản các mục tiêu ban đầu đề ra của đề tài.
+* Chức năng đăng nhập: đã hoàn thành đăng nhập cho tài khoản khách, tài khoản người quản lý và chức năng đăng ký cho khách.
+* Chức năng tra cứu sản phẩm: đã hoàn thành chức năng sắp xếp, tìm kiếm, lọc và hiển thị chi tiết.
+* Chức năng quản lý giỏi hàng: quản lý được các sản phẩm trong giỏ hàng và tiến hành đặt hàng.
+* Chức năng cập nhật tài khoản: đã hoản thành cập nhật thông tin, đổi mật khẩu và đăng xuất cho người dùng.
+* Chức năng xem đơn hàng: đã hiển thị danh sách đơn hàng của khách hàng, người quản lý có thể cập nhật tình trạng đơn hàng.
+* Chức năng quản lý sản phẩm: quản lý được danh sách sản phẩm.
+* Chức năng quản lý tài khoản: người quản lý đã có thể quản lý tài khoản của khách hàng.
+* Chức năng quản lý quảng cáo: người quản lý đã có thể quản lý danh sách quảng cáo..
+4.2 Hạn chế của đề tài
+- Xây dựng trên localhost nên phạm vi sử dụng còn hạn chế.
+- Tốc độ tải còn chậm.
+- Chưa có module hỗ trợ trao đổi trực tuyến với khác hàng
+    
+4.3 Hướng phát triển của đề tài
+  Trong thời gian nghiên cứu và thực hiện đề tài, tác giả đã vạch ra được hướng phát triển tiếp theo của đề tài như sau:
+• Nghiên cứu và triển khai ứng dụng trên hệ thống web
+• Thêm các module chăm sóc khách hàng
+• Xây dựng thành hệ thống bán điện thoại cho doanh nghiệp lớn.
+TÀI LIỆU THAM KHẢO
+1. Khoa CNTT, “Giáo trình lập trình hướng đối tượng”, Đại Học Sư Phạm Kỹ Thuật Hưng Yên. 
+2. Nguyễn Văn Hậu, “Giáo trình Java nâng cao”. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin- UTEHY.
+3. Nguyễn Hoàng Điệp, “Lập trình mạng trên android”. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY.4. Nguyễn Thị Hải Năng, “Giáo trình Lập trình đa phương tiện”. Hưng Yên, Việt Nam: Khoa Công nghệ Thông tin - UTEHY, 2017.
+5. Youtobe:  Lập trình android: Demo ứng dụng bán hàng online . Link: https://www.youtube.com/watch?v=JeQ3bWwW3sM&list=PLzrVYRai0riTN9jdZdV-FxIcsAZ4mYPrN&index=1
+
+Hệ thống giới thiệu và bán điện thoại online SSPO
+    
+65
+    

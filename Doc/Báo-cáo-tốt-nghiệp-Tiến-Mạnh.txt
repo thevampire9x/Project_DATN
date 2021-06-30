@@ -1,0 +1,794 @@
+﻿PHẦN GIỚI THIỆU
+
+1. ĐẶT VẤN ĐỀ
+      Công nghệ thông tin đã được ứng dụng rộng rãi trong mọi lĩnh vực và đã chứng minh được tiện ích, tính hiệu quả và tính thực tế của nó. Để xử lý thông tin một cách nhanh chóng, chính xác và có hiệu quả thì ngành công nghệ thông tin đã phát triển tương đối phổ biến trên thế giới nói chung và Việt Nam nói riêng, nó đã cung cấp cho chúng ta những biện pháp cần thiết đó. Đã qua thi thời tính toán, lưu trử dữ liệu bàng các phương pháp thủ công truyền thống mang nặng tính lạc hậu, lỗi thời.
+      Việc ứng dụng công nghệ thông tin đã mang lại bước đột phá mới cho công tác quản lý kho, giúp danh nghiệp, công ty nắm bắt được thông tin về vật tư, hàng hóa, nguyên vật liệu và sản phẩm một cách chính xác kịp thời.
+      Mọi công việc quản lý bằng giấy tờ rắc rồi, kém khoa học, thiếu hiệu quả trước đây giờ đã được thay thế bằng các phần mềm quản lý. Đặt điển của các phần mềm quản lý là dễ thao tác, nhanh gọn và tiện ích, tính hiểu quả cao,… nay phần mềm quản lý này còn được chạy trên nền website. Vì thế mà chúng ngày càng được các công ty, danh nghiệp ưa chuộng sử dụng.
+              
+2. LỊCH SỬ GIẢI QUYẾT VẤN ĐỀ
+      Hiện nay, do nhu cầu phát triển của Cửa Hàng thiết bị cơ khí TM, đã khiến cho các công cụ hổ trợ quản lý cũng như các hệ thống cũ trở nên lỗi thời và lạc hậu. Chi phí bảo trì nâng cấp cùng nhiều nhược điểm đã khiến việc quản lý bằng công cụ cũ trở nên khó khăn. Vì vậy nó còn một số hạn chế, nên việc tạo ra đề tài “Xây dựng phần mềm quản lý Cửa Hàng linh kiện cơ khí TM trên nền tảng laravel framework” để khắc phục những khó khăn mà các phần mềm quản lý kho hiện tại còn thiếu xót.
+              
+3. MỤC TIÊU ĐỀ TÀI
+      Đề tài “Xây dựng phần mềm quản lý Cửa Hàng linh kiện cơ khí TM trên nền nền tảng laravel framework” được hình thành nhầm mục đích khắc phục những hạn chế trên và bổ sung thêm một số chức năng nhập, xuất, thống kê diễn nhanh chóng và hoạt động tốt hơn.
+      Các chức năng mà phần mềm cần bổ sung thêm:
+• Giao diện thiết kế hiện đại, có thể co giản (Responsive) trên mọi thiết bị di động.
+• Giao diện đơn giản, dễ sữ dụng.
+• Áp dụng các công nghệ hổ trợ phù hợp để tăng tốt độ truy xuất của phần mềm tốt hơn.
+• Phù hợp với các nghiệp vụ quản lý kho của các công ty.
+• Bổ sung thêm các tính năng của trợ giúp để cho người dùng có thể tương tác được với nhau.
+• …
+
+4. PHẠM VI ĐỀ TÀI
+- Tìm hiểu quy trình nghiệp vụ quản lý Cửa Hàng linh kiện cơ khí TM được xây dựng nhầm mục đích sau:
+• Đáp ứng nhu cầu quản lý , tối ưu hóa việc lưu kho, chống sai sót thất thoát trong quá trình nhập xuất kho.
+• Đảm bảo tính chuyên nghiệp, thống nhất cao trong việc quản lý các bộ phần liên quan đến kho.
+• Vật tư được quản lý chi tiết đến từng kho, từng thuộc tính, đơn vị,… sẽ giảm tình trạng thất thoát, hư hao trong do công tác quản lý kho lõng lẽo.
+- Xây dựng các chức năng cơ bản cho một phần mềm quản lý kho trên nền web hiện nay còn đang thiếu hoặc chưa hoàn thiện.
+
+5. PHƯƠNG PHÁP NGHIỂN CỨU
+- Xây dựng đề tài để khắc phục những hạn chế mà các phần mềm quản lý kho hiện nay còn thiếu sót.
+- Tạo giao diện phần mềm dễ sử dụng cho người dùng.
+- Cần có những kiến thức cần thiết khi thiết kế một đề tài trên nền web:
+• Nắm vững kiến thức phân tích hệ thống thông tin, CSDL: Phân tích dữ liệu, sơ đồ, thiết kế CSDL.
+• Hiễu biết và có khả năng sử dụng thành thạo về lập trình web: PHP, HTML, Javascript, Jquery, Ajax,…
+• Sử dụng Laravel Framework 5.0.
+
+6. BỐ CỤC CỦA LUẬN VĂN
+   Nội dung chính của luận văn gồm có 3 phần:
+- Phần 1: Phần Giới thiệu gồm có: Đặt vấn đề, lịch sử giải quết vấn đề, mục tiêu, phạm vi đề tài, phương pháp nghiên cứu.
+- Phần 2: Nội dung gồm có 3 chương: Mô tả tổng quan, thiết kế và cài đặt các giải pháp, kiểm thử chức năng.
+- Phần 3: Kết luận: Nêu ra những kết quả đạt được, hạn chế và hướng phát triển.
+
+PHẦN NỘI DUNG
+
+CHƯƠNG 1: MÔ TẢ BÀI TOÁN
+1. MÔ TẢ TỔNG QUAN
+1.1. Mô tả các chức năng của hệ thống
+STTMÃ CHỨC NĂNGTÊN CHỨC NĂNGCHI TIẾT1RQ01Đăng nhập2RQ02Đăng xuất3RQ03Tạo tài khoản4RQ04Đổi mật khẩu5RQ05Phân quyền 6RQ06Thông tin công ty7RQ07Khu vực8RQ08Nhà sản xuất9RQ09Nhà phân phối10RQ010Vật tư11RQ011Nhóm vật tư12RQ012Đơn vị tính13RQ013Chất lượng14RQ014Kho15RQ015Công trình 16RQ016Phòng ban17RQ017Nhân viên18RQ018Nhập kho19RQ019Xuất kho20RQ020Thẻ kho21RQ021Chuyển kho22RQ022Kho hàng23RQ023Thống kê24RQ024Hướng dẫn 25RQ025Liên hệ26RQ026Thông tin 27RQ027Phản hồi
+1.2. Đặc điểm người sử dụng
+Dựa vào phân quyền ta có thể chia nhóm người sử dụng thành 4 nhóm chính:
+• Nhóm người dùng có quyền quản trị (Admin): Có khả năng đăng nhập để tra cứu thông tin nhân viên, quản lý thông tin nhân viên, quản lý nhà cung cấp, nhập kho, xuất kho,…
+• Nhóm người dùng có quyền quản lý (Lãnh đạo, Trưởng phòng, Phó phòng): Có khả năng đăng nhập để tra cứu thông tin nhân viên, nhà cung cấp, nhà phân phối, thống kê kho, xem báo cáo,…
+•  Nhóm người dùng Thủ kho: Có khả năng đăng nhập để kiểm kê vật tư trong kho, lập phiếu nhập, xuất kho, thống kê, báo cáo về vật tư trong kho. Quản lý các thông tin liên quan như: Nhà phân phối, nhà sản xuất, Khu vực tính Vật tư, vật tư, chất lượng.
+• Nhóm người dùng Nhân viên: Có khả năng đăng nhập để làm việc với các danh mục nhưng không có quyển quản lý các chức năng như: nhập, xuất kho,…
+• Giao diện người dùng thân thiện, dễ sử dụng, thuận tiện cho việc đặt hàng.
+
+1.3. Môi trường vận hành
+      Hệ thống được cài đặt trên các máy tính của Cửa Hàng thiết bị cơ khí TM. Cơ sở dữ liệu của hệ thống được cài đặt theo kiến trúc Client/Server và trên hệ quản trị MySQL. Các tập tin dữ liệu lưu thông tin các đối tượng được đặt trên server.
+
+Hình 1.1.3: Sơ đồ môi trường vận hành của hệ thống
+
+1.4. Ràng buộc về thực thi và thiết kế
+- Ràng buộc về thực thi: 
+• Giao diện đơn giản, thân thiện với người dùng.
+• Phần mềm chạy trên tất cả các trình duyệt web.
+• Sử dụng các đặt điểm tốt của Laravel Framework 5.0.
+• Công cụ lập trình chính: Sublime Text 3.0
+• Công cụ hổ trợ: XAMPP
+• CSDL được lưu trên phpMyadminr.
+- Ràng buộc thực thi: Đáp ứng nhanh nhu cầu của người dùng, trong thời gian chờ vượt quá giới hạn hệ thống phải hiện thông báo đến người dùng.
+- Yêu cầu ngôn ngữ: tiếng Việt, ngắn gọn, dễ hiễu.
+
+2. CÁC YÊU CẦU GIAO TIẾP NGOÀI
+2.1.	Giao diện người sử dụng
+- Các điều khiển trên trang web cần quen thuộc, dễ thao tác với người dùng.
+- Giao diện gồm ít nhất một thứ tiếng: tiếng Việt. Ngôn ngữ dễ sử dụng.
+- Tên các trường thông tin, chức năng phải thống nhất toàn bộ giao diện. Font chữ Arial đơn giản và không vướng mắt người dùng.
+- Màu sắc sử dụng hài hòa.
+
+2.2.	Giao tiếp phần mềm
+- Phải đảm bảo hoạt động tốt trên mọi hệ điều hành khác nhau: Window, Ubuntu, IOS, MAC OS, Android,…
+- Đảm bảo hệ thống hoạt động tốt trên tất cả các trình duyệt web phổ biến hiện nay.
+- Ngôn ngữ lập trình chính PHP (Được tùy biến trên Laravel Framework) kết hợp với ngôn ngữ khác: HTML, Javascript, CSS,…
+
+2.3.	Giao tiếp truyền thông tin
+- Sử dụng giao tiếp truyền thông tin HTTP, HTTPs.
+- Hổ trợ tất cả các trình duyệt phổ biến hiện nay: IE, Chorme, FireFox, Cốc Cốc,…
+
+3. CÁC TÍNH NĂNG CỦA HỆ THỐNG
+3.1.	Đăng nhập
+Mã chức năngRQ01Tên chức năngĐăng nhậpĐối tượng sử dụngĐối tượng được cấp quyềnTiền điều kiệnKhôngNội dungCho phép người dùng truy cập vào hệ thống.Cách xử lý• Bước 1: Sau khi truy cập vào phần mềm “Xây dựng phần mềm quản lý kho vật tư của Cửa Hàng linh kiện cơ khí TM trên nền tảng laravel framework” hệ thống hiện lên khung đăng nhập bao gồm 2 Textbox và một checkbox.
+• Bước 2: Người dùng nhập Email và Mật khẩu vào Textbox tương ứng. Nếu muốn chọn Ghi nhớ tài khoản và mật khẩu thì nhấn vào checkbox. Sau khi nhập xong người dùng nhấn chọn button “Đồng ý”. Hệ thống kiểm tra sự tồn tại và trùng khớp thông tin email và mật khẩu và nhập và hiện lên thông báo đăng nhập thành công hay thất bại.Kết quảĐăng nhập thành công hay thất bại.Ghi chúEmail đăng nhập là email được cung cấp từ quản lý và không thể thay đổi.
+3.2.	Đăng xuất
+Mã chức năngRQ02Tên chức năngĐăng xuấtĐối tượng sử dụngTất cả người dùng.Tiền điều kiệnNgười dùng đã đăng nhập thành công trước đó.Nội dungCho phép tất cả các nhóm người dùng thực hiện đăng xuất ra khỏi hệ thống, kết thúc pHiển làm việc.Cách xử lý• Bước 1: Người dùng nhấp vào ô “Đăng xuất” trong “Hệ thống”.
+• Bước 2: Hệ thống đăng xuất, xóa lịch sử của pHiển làm việc và chuyển người dùng trở lại trang Đăng nhậpKết quảĐăng xuất thành công.Ghi chú
+3.3.	Tạo tài khoản
+Mã chức năngRQ03Tên chức năngTạo tài khoảnĐối tượng sử dụngAdmin, Phòng lãnh đạo.Tiền điều kiệnĐã đăng nhập vào phần mềm “Xây dựng phần mềm quản lý kho vật tư của Cửa Hàng linh kiện cơ khí TM trên nền tảng laravel framework” thành công với tài khoản Admin hoặc quản lý.Nội dungCho phép tất cả các nhóm người dùng thực hiện đăng xuất ra khỏi hệ thống, kết thúc pHiển làm việc.Cách xử lýKết quảGhi chú
+3.4.	Đổi mật khẩu
+Mã chức năngRQ04Tên chức năngĐổi mật khẩuĐối tượng sử dụngTất cả người dùng.Tiền điều kiệnĐã đăng nhập vào phần mềm “Xây dựng phần mềm quản lý kho vật tư của Cửa Hàng linh kiện cơ khí TM trên nền tảng laravel framework” thành công.Nội dungCho phép tất cả các nhóm người dùng thực hiện đăng xuất ra khỏi hệ thống, kết thúc pHiển làm việc.Cách xử lýNgười dùng chọn chức năng Đồi mật khẩu trong menu chính cửa sổ Đổi mật khẩu hiện lên bao gồm 3 Textbox (Mật khẩu cũ, Mật khẩu mới và xác nhận mật khẩu mới )và thực hiện lần lượt các bước:
+• Bước 1: Lần lượt nhập Mật khẩu cũ, Mật khẩu mới và xác nhận mật khẩu mới vào cửa sổ.
+• Bước 2: Người dùng có thể kết thúc việc đổi mật khẩu bằng một trong hai cách sau:
+➢ Người dùng nhấn nút “Lưu”: Hệ thống sẽ kiểm tra tính hợp lệ của các thông tin vừa nhập và thay đổi mật khẩu của người dùng rồi lưu vào CSDL .Hệ thống tự đăng xuất ra ngoài.
+➢ Người dùng không muốn thay đổi thì có thể chọn button “Hủy” hoặc chọn chức năng khác.Kết quảĐổi mật khẩu thành công hay thất bại.Ghi chúCác Textbox trong chức năng Đổi mật khẩu mặc định là rỗng.
+3.5.	Phân quyền
+Mã chức năngRQ05Tên chức năngPhân quyềnĐối tượng sử dụngAdmin, Phòng lãnh đạo.Tiền điều kiệnĐã đăng nhập vào phần mềm “Xây dựng phần mềm quản lý kho vật tư của Cửa Hàng linh kiện cơ khí TM trên nền tảng laravel framework” thành công.Nội dungCho phép Admin, Phòng lãnh đạo có quyền Phân quyền cho hệ thống.Cách xử lýAdmin hoặc quản lý chọn chức năng Phân quyền trong menu “Hệ thống” bảng Phần quyền hiện lên khi trong đó các checkbox tương ứng với mỗi quyền mà hệ thống có:
+• Bước 1: Nếu muốn phân quyền cho người dùng (Nhân viên, thủ kho,…) có quyền đó thì nhấp vào checkbox đó.
+• Bước 3:Chọn quyền và kết thúc chức năng Phân quyền Admin hoặc quản lý có thể thực hiện một trong hai cách sau:
+➢ Admin hoặc quản lý nhấn nút “Lưu”: Hệ thống lưu toàn bộ vào thông tin vào CSDL.
+➢ Người dùng không muốn thay đổi thì có thể chọn button “Hủy” hoặc chọn chức năng khác.Kết quảPhân quyền thành công hay thất bại.Ghi chúMỗi quyền tương ứng với mỗi checkbox.
+3.6.	Thông tin công ty
+Mã chức năngRQ06Tên chức năngThông tin công tyĐối tượng sử dụngTất cả người dùngTiền điều kiệnĐã đăng nhập vào phần mềm “Xây dựng phần mềm quản lý kho vật tư của Cửa Hàng linh kiện cơ khí TM trên nền tảng laravel framework” thành công.Nội dungCho phép người dùng có thể xem thông tin công ty. Riêng đối với Admin và quản lý có thể chỉnh sửa thông tin công ty.Cách xử lýNgười dùng chọn chức năng “Thông tin công ty” có trong “Hệ thống”. Đối với Admin và quản lý có thể chỉnh sửa lại thông tin công ty, đối với người dùng khác chỉ có thể xem.Kết quảSửa thành công hay thất bại.Ghi chúChỉ có admin và quản lý mới đc chỉnh sửa.
+3.7.	Khu vực
+Mã chức năngRQ07Tên chức năngKhu vựcĐối tượng sử dụngAdmin, Phòng lãnh đạo, Nhân viên.Tiền điều kiệnĐã đăng nhập vào phần mềm “Xây dựng phần mềm quản lý kho vật tư của Cửa Hàng linh kiện cơ khí TM trên nền tảng laravel framework” thành công.Nội dungCho phép Admin, Phòng lãnh đạo, nhân viên có thể thay đổi thông tin khu vực.Cách xử lýSau khi đăng nhập vào hệ thống và chọn “Khu vực” có trong “Danh mục” thành công, cửa sổ khu vực xuất hiện người dùng có thể:
+- Thêm Khu vực:
+• Bước 1: Người dùng nhấn nút “Thêm” trên cửa sổ danh mục Khu vực. Trang Thêm khu vực xuất hiện, người dùng lần lượt nhập Mã khu vực, Tên khu vực. 
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và hướng dẫn nhập lại. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ “Khu vực ”. 
+- Sửa Khu vực:
+• Bước 1: Người dùng tiến hành kiểm tra thông Khu vực cần sửa. Nhấn nút “Sửa”. Trang “Sửa Khu vực” xuất hiện, Mã Khu vực sẽ bị ẩn vì không được phép chỉnh sửa. Người dùng tiến hành chỉnh sửa các dữ liệu cho phép sửa về Khu vực . 
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và giữ nguyên các dữ liệu ban đầu. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ “Khu vực”. 
+-  Xóa Khu vực: 
+• Bước 1: Người dùng tiến hành kiểm tra thông Khu vực cần xóa. Chọn Khu vực cần xóa. Nhấn nút “Xóa”.
+• Bước 2: Thông báo xác nhận việc Xóa Khu vực hiện lên. Nếu chọn “Có” hệ thống sẽ xóa dữ liệu về Khu vực khỏi CSDL. Nếu chọn “Không” hệ thống không thực hiện việc xóa và trở về cửa sổ “Khu vực”. 
+- Tìm kiếm : 
+• Bước 1: Người dùng tiến hành chọn loại tìm kiếm (Mã Khu vực, Tên Khu vực) và nhập từ khóa tìm kiếm. Nhấn nút “Tìm kiếm”. 
+• Bước 2: Hệ thống sẽ kiểm tra tính hợp lệ của từ khóa và tiến hành truy xuất dữ liệu trong CSDL.Nếu từ khóa hợp lệ và tồn tại trong CSDL: Hệ thống sẽ hiển thị kết quả tìm được trong cửa sổ Danh mục Khu vực. Nếu từ khóa sai hoặc không tồn tại trong CSDL: Hệ thống thông báo không tìm thấy.
+• Bước 3: Để kết thúc tìm kiếm người dùng chọn loại tìm kiếm “Tất cả” và nhấn nút “Tìm kiếm”.Hệ thống sẽ trở về cửa sổ Khu vực ban đầu.  
+- In danh sách Khu vực: Nhấn nút “In”.Hệ thống hiện ra một biểu mẫu để người dùng tiến hành in. Người dùng chọn vào biểu tượng “In” để bắt đầu in.Kết quảThêm, sửa, xóa, in thành công hay thất bại.Ghi chúMỗi quyền tương ứng với mỗi checkbox.
+3.8.	Nhà sản xuất
+Mã chức năngRQ08Tên chức năngNhà sản xuấtĐối tượng sử dụngAdmin, Phòng lãnh đạo, Thủ kho.Tiền điều kiệnĐã đăng nhập vào phần mềm “Xây dựng phần mềm quản lý kho vật tư của Cửa Hàng linh kiện cơ khí TM trên nền tảng laravel framework” thành công.Nội dungCho phép người dùng có thể thay đổi thông tin Nhà sản xuất.Cách xử lýSau khi đăng nhập vào hệ thống và chọn chức năng “Nhà sản xuất” trong menu Danh mục thành công, Nhà sản xuất xuất hiện người dùng có thể: 
+- Thêm Nhà sản xuất: 
+• Bước 1: Người dùng nhấn nút “Thêm” trên cửa sổ Nhà sản xuất. Hộp thoại Thêm nhà sản xuất xuất hiện, người dùng lần lượt nhập Mã nhà sản xuất, Tên nhà sản xuất. 
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và hướng dẫn nhập lại. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ “Danh mục nhà sản xuất”. 
+- Sửa Nhà sản xuất: 
+• Bước 1: Người dùng tiến hành kiểm tra thông Nhà sản xuất cần sửa: tìm Nhà sản xuất cần chỉnh sửa. Nhấn nút “Sửa”. Hộp thoại Sửa nhà sản xuất xuất hiện, Mã Nhà sản xuất sẽ bị ẩn vì không được phép chỉnh sửa Mã Nhà sản xuất. Người dùng tiến hành chỉnh sửa các dữ liệu cho phép sửa về Nhà sản xuất. 
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và giữ nguyên các dữ liệu ban đầu. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ Nhà sản xuất. 
+- Xóa Nhà sản xuất: 
+• Bước 1: Người dùng tiến hành kiểm tra thông Nhà sản xuất cần xóa. Chọn Nhà sản xuất cần xóa. Nhấn nút “Xóa”. 
+• Bước 2: Thông báo xác nhận việc Xóa Nhà sản xuất hiện lên. Nếu chọn “Có” hệ thống sẽ xóa dữ liệu về Nhà sản xuất khỏi CSDL. Nếu chọn “Không” hệ thống không thực hiện việc xóa và trở về cửa sổ Danh mục nhà sản xuất. 
+- Tìm kiếm : 
+• Bước 1: Người dùng tiến hành chọn loại tìm kiếm (Mã nhà sản xuất hoặc Tên nhà sản xuất) và nhập từ khóa tìm kiếm. Nhấn nút “Tìm kiếm”. 
+• Bước 2: Hệ thống sẽ kiểm tra tính hợp lệ của từ khóa và tiến hành truy xuất dữ liệu trong CSDL.Nếu từ khóa hợp lệ và tồn tại trong CSDL: Hệ thống sẽ hiển thị kết quả tìm được trong cửa sổ Danh mục nhà sản xuất. Nếu từ khóa sai hoặc không tồn tại trong CSDL: Hệ thống thông báo không tìm thấy.
+• Bước 3: Để kết thúc tìm kiếm người dùng chọn loại tìm kiếm “Tất cả” và nhấn nút “Tìm kiếm”.Hệ thống sẽ trở về cửa sổ Danh mục nhà sản xuất ban đầu. 
+- In danh sách Nhà sản xuất: Nhấn nút “In”. Hệ thống hiện ra một biểu mẫu để người dùng tiến hành in. Người dùng chọn vào biểu tượng “In” để bắt đầu in.Kết quảThêm, sửa, xóa, in, tìm kiếm thành công hay thất bại.Ghi chú
+3.9.	Nhà phân phối
+Mã chức năngRQ05Tên chức năngPhân quyềnĐối tượng sử dụngAdmin, Phòng lãnh đạo, Thủ kho.Tiền điều kiệnĐã đăng nhập vào phần mềm “Xây dựng phần mềm quản lý kho vật tư của Cửa Hàng linh kiện cơ khí TM trên nền tảng laravel framework” thành công.Nội dungCho phép người dùng có thể thay đổi thông tin Nhà sản xuất.Cách xử lýSau khi đăng nhập vào hệ thống và chọn chức năng “Nhà phân phối” trong menu Danh mục thành công, cửa sổ Nhà phân phối xuất hiện người dùng có thể: 
+- Thêm Nhà phân phối: Nhà phân phối có thể là Tổng cục điện lực hoặc là địa điểm Công ty Điện lực và các Đơn vị trực tiếp mua. 
+• Bước 1: Người dùng nhấn nút “Thêm” trên cửa sổ Nhà phân phối. Hộp thoại Thêm nhà phân phối xuất hiện, người dùng lần lượt nhập Mã nhà phân phối, Tên nhà phân phối, Địa chỉ, Điện thoại, Fax, Số tài khoản, Nhân viên đại diện, Số điện thoại nhân viên đại diện. 
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và hướng dẫn nhập lại. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ Nhà phân phối.
+- Sửa Nhà phân phối: 
+• Bước 1: Người dùng tiến hành kiểm tra thông tin Nhà phân phối cần sửa. Tìm Nhà phân phối cần chỉnh sửa. Nhấn nút “Sửa”. Hộp thoại Sửa nhà phân phối xuất hiện, Mã Nhà phân phối sẽ bị ẩn vì không được phép chỉnh sửa Mã Nhà phân phối. Người dùng tiến hành chỉnh sửa các dữ liệu cho phép sửa về Nhà phân phối 
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và giữ nguyên các dữ liệu ban đầu. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ Nhà phân phối. 
+- Xóa Nhà phân phối: 
+• Bước 1: Người dùng tiến hành kiểm tra thông Nhà phân phối cần xóa. Chọn Nhà phân phối cần xóa. Nhấn nút “Xóa”.
+• Bước 2: Thông báo xác nhận việc Xóa Nhà phân phối hiện lên. Nếu chọn “Có” hệ thống sẽ xóa dữ liệu về Nhà phân phối khỏi CSDL; nếu chọn “Không” hệ thống không thực hiện việc xóa và trở về cửa sổ Nhà phân phối.
+- Tìm kiếm : 
+• Bước 1: Người dùng tiến hành chọn loại tìm kiếm (Mã nhà phân phối hoặc Tên nhà phân phối,...) và nhập từ khóa tìm kiếm. Nhấn nút “Tìm kiếm”. 
+• Bước 2: Hệ thống sẽ kiểm tra tính hợp lệ của từ khóa và tiến hành truy xuất dữ liệu trong CSDL.Nếu từ khóa hợp lệ và tồn tại trong CSDL: Hệ thống sẽ hiển thị kết quả tìm được trong cửa sổ Danh mục nhà phân phối. Nếu từ khóa sai hoặc không tồn tại trong CSDL: Hệ thống thông báo không tìm thấy.
+• Bước 3: Để kết thúc tìm kiếm người dùng chọn loại tìm kiếm “Tất cả” và nhấn nút “Tìm kiếm”.Hệ thống sẽ trở về cửa sổ Danh mục nhà phân phối ban đầu. 
+- In danh sách Nhà phân phối: Nhấn nút “In”. Hệ thống hiện ra một biểu mẫu để người dùng tiến hành in. Người dùng chọn vào biểu tượng “In” để bắt đầu in.Kết quảThêm, sửa, xóa, in, tìm kiếm thành công hay thất bại.Ghi chú
+3.10.	Vật tư
+Mã chức năngRQ010Tên chức năngVật tưĐối tượng sử dụngAdmin, Phòng lãnh đạo, Thủ kho.Tiền điều kiệnĐã đăng nhập vào phần mềm “Xây dựng phần mềm quản lý kho vật tư của Cửa Hàng linh kiện cơ khí TM trên nền tảng laravel framework” thành công.Nội dungCho phép người dùng có thể thay đổi thông tin Vật tư.Cách xử lýSau khi đăng nhập vào hệ thống và chọn chức năng “Vật tư” thành công, cửa sổ Vật tư xuất hiện người dùng có thể: 
+-  Thêm vật tư: 
+• Bước 1: Người dùng nhấn nút “Thêm” trên cửa sổ Vật tư. Hộp thoại Thêm vật tư xuất hiện, người dùng lần lượt nhập Mã vật tư, Tên vật tư, Đơn vị tinh, Số lượng,.... 
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và hướng dẫn nhập lại. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ Vật tư. 
+-  Sửa Vật tư: 
+• Bước 1: Người dùng tiến hành kiểm tra thông Vật tư cần sửa. Chọn Vật tư cần chỉnh sửa. Nhấn nút “Sửa”. Hộp thoại “Sửa Vật tư” xuất hiện, Mã Vật tư sẽ bị ẩn vì không được phép chỉnh sửa. Người dùng tiến hành chỉnh sửa các dữ liệu cho phép sửa về Vật tư. 
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và giữ nguyên các dữ liệu ban đầu. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ Vật tư. 
+- Tìm kiếm : 
+• Bước 1: Người dùng tiến hành chọn loại tìm kiếm (Mã Vật tư, Tên Vật tư, Đơn vị tinh, Số lượng,…) và nhập từ khóa tìm kiếm. Nhấn nút “Tìm kiếm”. 
+• Bước 2: Hệ thống sẽ kiểm tra tính hợp lệ của từ khóa và tiến hành truy xuất dữ liệu trong CSDL.Nếu từ khóa hợp lệ và tồn tại trong CSDL: Hệ thống sẽ hiển thị kết quả tìm được trong cửa sổ Vật tư. Nếu từ khóa sai hoặc không tồn tại trong CSDL: Hệ thống thông báo không tìm thấy.
+• Bước 3: Để kết thúc tìm kiếm người dùng chọn loại tìm kiếm “Tất cả” và nhấn nút “Tìm kiếm”.Hệ thống sẽ trở về cửa sổ Vật tư ban đầu.  
+-  Xóa Vật tư: 
+• Bước 1: Người dùng tiến hành kiểm tra thông Vật tư cần xóa. Chọn Vật tư cần xóa. Nhấn nút “Xóa”. 
+• Bước 2: Thông báo xác nhận việc Xóa Vật tư hiện lên. Nếu chọn “Có” hệ thống sẽ xóa dữ liệu về Vật tư khỏi CSDL; nếu chọn “Không” hệ thống không thực hiện việc xóa và trở về cửa sổ Danh mục Vật tư. 
+-  In danh sách Vật tư: Nhấn nút “In”. Hệ thống hiện ra một biểu mẫu để người dùng tiến hành in. Người dùng chọn vào biểu tượng “In” để bắt đầu in. Kết quảThêm, sửa, xóa, in, tìm kiếm thành công hay thất bại.Ghi chú
+3.11.	Nhóm vật tư
+Mã chức năngRQ011Tên chức năngVật tưĐối tượng sử dụngAdmin, Phòng lãnh đạo, Thủ kho.Tiền điều kiệnĐã đăng nhập vào phần mềm “Xây dựng phần mềm quản lý kho vật tư của Cửa Hàng linh kiện cơ khí TM trên nền tảng laravel framework” thành công.Nội dungCho phép người dùng có thể thay đổi thông tin Nhóm vật tư.Cách xử lýSau khi đăng nhập vào hệ thống và chọn chức năng Nhóm vật tư” thành công, cửa sổ Nhóm vật tư xuất hiện người dùng có thể: 
+-  Thêm Nhóm vật tư: 
+• Bước 1: Người dùng nhấn nút “Thêm” trên cửa sổ Nhóm vật tư. Hộp thoại Thêm Nhóm vật tư xuất hiện, người dùng lần lượt nhập Mã nhóm vật tư, Tên nhóm vật tư. 
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và hướng dẫn nhập lại. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ Nhóm vật tư. 
+-  Sửa Nhóm vật tư: 
+• Bước 1: Người dùng tiến hành kiểm tra thông Nhóm vật tư cần sửa. Chọn Nhóm vật tư cần chỉnh sửa. Nhấn nút “Sửa”. Hộp thoại Sửa Nhóm vật tư xuất hiện, Mã Nhóm vật tư sẽ bị ẩn vì không được phép chỉnh sửa. Người dùng tiến hành chỉnh sửa các dữ liệu cho phép sửa về Nhóm vật tư. 
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và giữ nguyên các dữ liệu ban đầu. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ Nhóm vật tư. 
+- Tìm kiếm : 
+• Bước 1: Người dùng tiến hành chọn loại tìm kiếm (Mã nhóm vật tư, Tên nhóm vật tư) và nhập từ khóa tìm kiếm. Nhấn nút “Tìm kiếm”. 
+• Bước 2: Hệ thống sẽ kiểm tra tính hợp lệ của từ khóa và tiến hành truy xuất dữ liệu trong CSDL.Nếu từ khóa hợp lệ và tồn tại trong CSDL: Hệ thống sẽ hiển thị kết quả tìm được trong cửa sổ Danh mục nhóm vật tư. Nếu từ khóa sai hoặc không tồn tại trong CSDL: Hệ thống thông báo không tìm thấy.
+• Bước 3: Để kết thúc tìm kiếm người dùng chọn loại tìm kiếm “Tất cả” và nhấn nút “Tìm kiếm”.Hệ thống sẽ trở về cửa sổ Danh mục nhóm vật tư ban đầu.  
+-  Xóa Nhóm vật tư: 
+• Bước 1: Người dùng tiến hành kiểm tra thông Nhóm vật tư cần xóa. Chọn Nhóm vật tư cần xóa. Nhấn nút “Xóa”. 
+• Bước 2: Thông báo xác nhận việc Xóa Nhóm vật tư hiện lên. Nếu chọn “Có” hệ thống sẽ xóa dữ liệu về Nhóm vật tư khỏi CSDL; nếu chọn “Không” hệ thống không thực hiện việc xóa và trở về cửa sổ Nhóm vật tư. 
+-  In danh sách Nhóm vật tư: Nhấn nút “In”. Hệ thống hiện ra một biểu mẫu để người dùng tiến hành in. Người dùng chọn vào biểu tượng “In” để bắt đầu in. Kết quảThêm, sửa, xóa, in, tìm kiếm thành công hay thất bại.Ghi chúMỗi quyền tương ứng với mỗi checkbox.
+3.12.	Đơn vị tính
+Mã chức năngRQ012Tên chức năngĐơn vị tínhĐối tượng sử dụngAdmin, Phòng lãnh đạo, Thủ kho.Tiền điều kiệnĐã đăng nhập vào phần mềm “Xây dựng phần mềm quản lý kho vật tư của Cửa Hàng linh kiện cơ khí TM trên nền tảng laravel framework” thành công.Nội dungCho phép người dùng có thể thay đổi thông tin Đơn vị tính.Cách xử lýSau khi đăng nhập vào hệ thống và chọn chức năng “Đơn vị tính” thành công, cửa sổ Đơn vị tính xuất hiện người dùng có thể: 
+- Thêm Đơn vị tính: 
+• Bước 1: Người dùng nhấn nút “Thêm” trên cửa sổ Đơn vị tính. Hộp thoại “Thêm đơn vị tính” xuất hiện, người dùng lần lượt nhập Mã đơn vị tính, Tên Đơn vị tính. 
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và hướng dẫn nhập lại. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ Đơn vị tính. 
+- Sửa Đơn vị tính: 
+• Bước 1: Người dùng tiến hành kiểm tra thông Đơn vị tính cần sửa: tìm Đơn vị tính cần chỉnh sửa. Nhấn nút “Sửa”. Hộp thoại “Sửa Đơn vị tính” xuất hiện, Mã Đơn vị tính sẽ bị ẩn vì không được phép chỉnh sửa. Người dùng tiến hành chỉnh sửa các dữ liệu cho phép sửa về Đơn vị tính. 
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và giữ nguyên các dữ liệu ban đầu. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ Đơn vị tính. 
+- Xóa Đơn vị tính: 
+• Bước 1: Người dùng tiến hành kiểm tra thông Đơn vị tính cần xóa. Chọn Đơn vị tính cần xóa. Nhấn nút “Xóa”.
+• Bước 2: Thông báo xác nhận việc Xóa Đơn vị tính hiện lên. Nếu chọn “Có” hệ thống sẽ xóa dữ liệu về Đơn vị tính khỏi CSDL. Nếu chọn “Không” hệ thống không thực hiện việc xóa và trở về cửa sổ Đơn vị tính. 
+- Tìm kiếm : 
+• Bước 1: Người dùng tiến hành chọn loại tìm kiếm (Mã đơn vị tính hoặc Tên đơn vị tính) và nhập từ khóa tìm kiếm. Nhấn nút “Tìm kiếm”. 
+• Bước 2: Hệ thống sẽ kiểm tra tính hợp lệ của từ khóa và tiến hành truy xuất dữ liệu trong CSDL.Nếu từ khóa hợp lệ và tồn tại trong CSDL: Hệ thống sẽ hiển thị kết quả tìm được trong cửa sổ Đơn vị tính. Nếu từ khóa sai hoặc không tồn tại trong CSDL: Hệ thống thông báo không tìm thấy.
+• Bước 3: Để kết thúc tìm kiếm người dùng chọn loại tìm kiếm “Tất cả” và nhấn nút “Tìm kiếm”.Hệ thống sẽ trở về cửa sổ Đơn vị tính ban đầu. 
+- In danh sách Đơn vị tính: Nhấn nút “In”.Hệ thống hiện ra một biểu mẫu để người dùng tiến hành in. Người dùng chọn vào biểu tượng “In” để bắt đầu in.Kết quảThêm, sửa, xóa, in, tìm kiếm thành công hay thất bại.Ghi chú
+3.13.	Chất lượng
+Mã chức năngRQ013Tên chức năngChất lượngĐối tượng sử dụngAdmin, Phòng lãnh đạo, Thủ kho.Tiền điều kiệnĐã đăng nhập vào phần mềm “Xây dựng phần mềm quản lý kho vật tư của Cửa Hàng linh kiện cơ khí TM trên nền tảng laravel framework” thành công.Nội dungCho phép người dùng có thể thay đổi thông tin Nhà sản xuất.Cách xử lýSau khi đăng nhập vào hệ thống và chọn chức năng Chất lượng thành công, cửa sổ Chất lượng xuất hiện người dùng có thể: 
+- Thêm Chất lượng: 
+• Bước 1: Người dùng nhấn nút “Thêm” trên cửa sổ Chất lượng. Hộp thoại Thêm Chất lượng xuất hiện, người dùng lần lượt nhập Mã chất lượng, Tên chất lượng. 
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và hướng dẫn nhập lại. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ Chất lượng. 
+- Sửa Chất lượng: 
+• Bước 1: Người dùng tiến hành kiểm tra thông Chất lượng cần sửa. Chọn Chất lượng cần chỉnh sửa. Nhấn nút “Sửa”. Hộp thoại “Sửa Chất lượng” xuất hiện, Mã chất lượng sẽ bị ẩn vì không được phép chỉnh sửa. Người dùng tiến hành chỉnh sửa các dữ liệu cho phép sửa về Chất lượng. 
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và giữ nguyên các dữ liệu ban đầu. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ Chất lượng. 
+- Xóa Chất lượng: 
+• Bước 1: Người dùng tiến hành kiểm tra thông Chất lượng cần xóa. Chọn Chất lượng cần xóa. Nhấn nút “Xóa”.
+• Bước 2: Thông báo xác nhận việc Xóa Chất lượng hiện lên. Nếu chọn “Có” hệ thống sẽ xóa dữ liệu về Chất lượng khỏi CSDL; nếu chọn “Không” hệ thống không thực hiện việc xóa và trở về cửa sổ Chất lượng. 
+- Tìm kiếm Chất lượng: 
+• Bước 1: Người dùng tiến hành chọn loại tìm kiếm(Mã Chất lượng hoặc Tên Chất lượng) và nhập từ khóa tìm kiếm . Nhấn nút “Tìm kiếm”. 
+• Bước 2: Hệ thống sẽ kiểm tra tính hợp lệ của từ khóa và tiến hành truy xuất dữ liệu trong CSDL.Nếu từ khóa hợp lệ và tồn tại trong CSDL: Hệ thống sẽ hiển thị kết quả tìm được trong cửa sổ Chất lượng. Nếu từ khóa sai hoặc không tồn tại trong CSDL: Hệ thống thông báo không tìm thấy.
+• Bước 3: Để kết thúc tìm kiếm người dùng chọn loại tìm kiếm “Tất cả” và nhấn nút “Tìm kiếm”.Hệ thống sẽ trở về cửa sổ Chất lượng ban đầu.
+- In danh sách Chất lượng: Nhấn nút “In”. Hệ thống hiện ra một biểu mẫu để người dùng tiến hành in. Người dùng chọn vào biểu tượng “In” để bắt đầu in. Kết quảThêm, sửa, xóa, in, tìm kiếm thành công hay thất bại.Ghi chú
+3.14.	Kho
+Mã chức năngRQ014Tên chức năngKhoĐối tượng sử dụngAdmin, Phòng lãnh đạo, Thủ kho.Tiền điều kiệnĐã đăng nhập vào phần mềm “Xây dựng phần mềm quản lý kho vật tư của Cửa Hàng linh kiện cơ khí TM trên nền tảng laravel framework” thành công.Nội dungCho phép người dùng có thể thay đổi thông tin Kho.Cách xử lýSau khi đăng nhập vào hệ thống và chọn chức năng “Kho” thành công, cửa sổ Kho xuất hiện người dùng có thể: 
+- Thêm Kho: 
+• Bước 1: Người dùng nhấn nút “Thêm” trên cửa sổ Kho. Hộp thoại “Thêm Kho” xuất hiện, người dùng lần lượt nhập Mã mục đích, Tên Mục đích. 
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và hướng dẫn nhập lại. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ “Kho”. 
+- Sửa Kho: 
+• Bước 1: Người dùng tiến hành kiểm tra thông Mục đích cần sửa. Chọn Mục đích cần chỉnh sửa. Nhấn nút “Sửa”. Hộp thoại “Sửa Kho” xuất hiện, Mã Kho sẽ bị ẩn vì không được phép chỉnh sửa. Người dùng tiến hành chỉnh sửa các dữ liệu cho phép sửa về Mục đích. 
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và giữ nguyên các dữ liệu ban đầu. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ “Kho”. 
+- Xóa Kho: 
+• Bước 1: Người dùng tiến hành kiểm tra thông Kho cần xóa. Chọn Kho cần xóa. Nhấn nút “Xóa”.
+• Bước 2: Thông báo xác nhận việc Xóa Kho hiện lên. Nếu chọn “Có” hệ thống sẽ xóa dữ liệu về Kho khỏi CSDL; nếu chọn “Không” hệ thống không thực hiện việc xóa và trở về cửa sổ Kho. 
+- Tìm kiếm Kho: 
+• Bước 1: Người dùng tiến hành chọn loại tìm kiếm (Mã Kho hoặc Tên Kho) và nhập từ khóa tìm kiếm. Nhấn nút “Tìm kiếm”. 
+• Bước 2: Hệ thống sẽ kiểm tra tính hợp lệ của từ khóa và tiến hành truy xuất dữ liệu trong CSDL.Nếu từ khóa hợp lệ và tồn tại trong CSDL: Hệ thống sẽ hiển thị kết quả tìm được trong cửa sổ Kho. Nếu từ khóa sai hoặc không tồn tại trong CSDL: Hệ thống thông báo không tìm thấy.
+• Bước 3: Để kết thúc tìm kiếm người dùng chọn loại tìm kiếm “Tất cả” và nhấn nút “Tìm kiếm”.Hệ thống sẽ trở về cửa sổ Kho ban đầu.
+- In danh sách Kho: Nhấn nút “In”. Hệ thống hiện ra một biểu mẫu để người dùng tiến hành in. Người dùng chọn vào biểu tượng “In” để bắt đầu in. 
+Kết quảThêm, sửa, xóa, in, tìm kiếm thành công hay thất bại.Ghi chú
+3.15.	Công trình
+Mã chức năngRQ015Tên chức năngKhoĐối tượng sử dụngAdmin,Thủ kho.Tiền điều kiệnĐã đăng nhập vào phần mềm “Xây dựng phần mềm quản lý kho vật tư của Cửa Hàng linh kiện cơ khí TM trên nền tảng laravel framework” thành công.Nội dungCho phép người dùng có thể thay đổi thông tin Công trình.Cách xử lýSau khi đăng nhập vào hệ thống và chọn chức năng “Công trình” thành công, cửa sổ Công trình xuất hiện người dùng có thể: 
+- Thêm Công trình: 
+• Bước 1: Người dùng nhấn nút “Thêm” trên cửa sổ Công trình. Hộp thoại Thêm Công trình xuất hiện, người dùng lần lượt nhập Mã công trình, Tên Công trình, Địa chỉ,.... 
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và hướng dẫn nhập lại. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ “Công trình”. 
+- Sửa Công trình: 
+• Bước 1: Người dùng tiến hành kiểm tra thông Công trình cần sửa. Chọn Công trình cần chỉnh sửa. Nhấn nút “Sửa”. Hộp thoại Sửa Công trình xuất hiện, Mã Công trình sẽ bị ẩn vì không được phép chỉnh sửa. Người dùng tiến hành chỉnh sửa các dữ liệu cho phép sửa về Công trình. 
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và giữ nguyên các dữ liệu ban đầu. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ “Công trình”. 
+- Xóa Công trình: 
+• Bước 1: Người dùng tiến hành kiểm tra thông Công trình cần xóa. Chọn Công trình cần xóa. Nhấn nút “Xóa”.
+• Bước 2: Thông báo xác nhận việc Xóa Công trình hiện lên. Nếu chọn “Có” hệ thống sẽ xóa dữ liệu về Công trình khỏi CSDL; nếu chọn “Không” hệ thống không thực hiện việc xóa và trở về cửa sổ Công trình. 
+- Tìm kiếm Công trình: 
+• Bước 1: Người dùng tiến hành chọn loại tìm kiếm (Mã Công trình hoặc Tên Công trình) và nhập từ khóa tìm kiếm. Nhấn nút “Tìm kiếm”. 
+• Bước 2: Hệ thống sẽ kiểm tra tính hợp lệ của từ khóa và tiến hành truy xuất dữ liệu trong CSDL.Nếu từ khóa hợp lệ và tồn tại trong CSDL: Hệ thống sẽ hiển thị kết quả tìm được trong cửa sổ Công trình. Nếu từ khóa sai hoặc không tồn tại trong CSDL: Hệ thống thông báo không tìm thấy.
+• Bước 3: Để kết thúc tìm kiếm người dùng chọn loại tìm kiếm “Tất cả” và nhấn nút “Tìm kiếm”.Hệ thống sẽ trở về cửa sổ Công trình ban đầu.
+- In danh sách Công trình: Nhấn nút “In”. Thông báo Hệ thống hiện ra một biểu mẫu để người dùng tiến hành in. Người dùng chọn vào biểu tượng “In” để bắt đầu in. Kết quảThêm, sửa, xóa, in, tìm kiếm thành công hay thất bại.Ghi chú
+3.16.	Phòng ban
+Mã chức năngRQ016Tên chức năngPhòng banĐối tượng sử dụngAdminTiền điều kiệnĐã đăng nhập vào phần mềm “Xây dựng phần mềm quản lý kho vật tư của Cửa Hàng linh kiện cơ khí TM trên nền tảng laravel framework” thành công.Nội dungCho phép người dùng có thể thay đổi thông tin Phòng ban.Cách xử lýSau khi đăng nhập vào hệ thống và chọn chức năng “Phòng ban” thành công, cửa sổ Phòng ban xuất hiện người dùng có thể: 
+- Thêm Phòng ban: 
+• Bước 1: Người dùng nhấn nút “Thêm” trên cửa sổ Phòng ban. Hộp thoại Thêm Phòng ban xuất hiện, người dùng lần lượt nhập Mã Phòng ban, Tên Phòng ban.
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và hướng dẫn nhập lại. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ Phòng ban. 
+- Sửa Phòng ban: 
+• Bước 1: Người dùng tiến hành kiểm tra thông Phòng ban cần sửa. Chọn Phòng ban cần chỉnh sửa. Nhấn nút “Sửa”. Hộp thoại “Sửa Phòng ban” xuất hiện, Mã Phòng ban sẽ bị ẩn vì không được phép chỉnh sửa. Người dùng tiến hành chỉnh sửa các dữ liệu cho phép sửa về Phòng ban. 
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và giữ nguyên các dữ liệu ban đầu. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ Phòng ban. 
+- Xóa Phòng ban: 
+• Bước 1: Người dùng tiến hành kiểm tra thông Phòng ban cần xóa. Chọn Phòng ban cần xóa. Nhấn nút “Xóa”.
+• Bước 2: Thông báo xác nhận việc Xóa Phòng ban hiện lên. Nếu chọn “Có” hệ thống sẽ xóa dữ liệu về Phòng ban khỏi CSDL; nếu chọn “Không” hệ thống không thực hiện việc xóa và trở về cửa sổ Phòng ban. 
+- Tìm kiếm Phòng ban: 
+• Bước 1: Người dùng tiến hành chọn loại tìm kiếm (Mã Phòng ban ,Tên Phòng ban) và nhập từ khóa tìm kiếm. Nhấn nút “Tìm kiếm”. 
+• Bước 2: Hệ thống sẽ kiểm tra tính hợp lệ của từ khóa và tiến hành truy xuất dữ liệu trong CSDL.Nếu từ khóa hợp lệ và tồn tại trong CSDL: Hệ thống sẽ hiển thị kết quả tìm được trong cửa sổ Phòng ban. Nếu từ khóa sai hoặc không tồn tại trong CSDL: Hệ thống thông báo không tìm thấy.
+• Bước 3: Để kết thúc tìm kiếm người dùng chọn loại tìm kiếm “Tất cả” và nhấn nút “Tìm kiếm”. Hệ thống sẽ trở về cửa sổ Phòng ban ban đầu.
+- In danh sách Phòng ban: Nhấn nút “In”. Hệ thống hiện ra một biểu mẫu để người dùng tiến hành in. Người dùng chọn vào biểu tượng “In” để bắt đầu in.Kết quảThêm, sửa, xóa, in, tìm kiếm thành công hay thất bại.Ghi chú
+3.17.	Nhân viên
+Mã chức năngRQ017Tên chức năngNhân viênĐối tượng sử dụngAdminTiền điều kiệnĐã đăng nhập vào phần mềm “Xây dựng phần mềm quản lý kho vật tư của Cửa Hàng linh kiện cơ khí TM trên nền tảng laravel framework” thành công.Nội dungCho phép người dùng có thể thay đổi thông tin Nhân viên.Cách xử lýSau khi đăng nhập vào hệ thống và chọn chức năng “Nhân viên” thành công, cửa sổ Nhân viên xuất hiện người dùng có thể: 
+-  Thêm Nhân viên: 
+• Bước 1: Người dùng nhấn nút “Thêm” trên cửa sổ Nhân viên. Hộp thoại “Thêm Nhân viên” xuất hiện, người dùng lần lượt nhập Mã nhân viên, Tên Nhân viên, Giới tính, Số CMND, Ngày sinh, Địa chỉ,….
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và hướng dẫn nhập lại. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ “Nhân viên”. 
+-  Sửa Nhân viên: 
+• Bước 1: Người dùng tiến hành kiểm tra thông Nhân viên cần sửa. Chọn Nhân viên cần chỉnh sửa. Nhấn nút “Sửa”. Hộp thoại Sửa Nhân viên xuất hiện, Mã Nhân viên sẽ bị ẩn vì không được phép chỉnh sửa. Người dùng tiến hành chỉnh sửa các dữ liệu cho phép sửa về Nhân viên. 
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và giữ nguyên các dữ liệu ban đầu. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ Nhân viên. 
+-  Xóa Nhân viên: 
+• Bước 1: Người dùng tiến hành kiểm tra thông Nhân viên cần xóa. Chọn Nhân viên cần xóa. Nhấn nút “Xóa”. 
+• Bước 2: Thông báo xác nhận việc Xóa Nhân viên hiện lên. Nếu chọn “Có” hệ thống sẽ xóa dữ liệu về Nhân viên khỏi CSDL; nếu chọn “Không” hệ thống không thực hiện việc xóa và trở về cửa sổ Nhân viên. 
+- Tìm kiếm : 
+• Bước 1: Người dùng tiến hành chọn loại tìm kiếm (Mã nhân viên, Tên nhân viên, Địa chỉ, Ngày vào làm) và nhập từ khóa tìm kiếm. Nhấn nút “Tìm kiếm”. 
+• Bước 2: Hệ thống sẽ kiểm tra tính hợp lệ của từ khóa và tiến hành truy xuất dữ liệu trong CSDL.Nếu từ khóa hợp lệ và tồn tại trong CSDL: Hệ thống sẽ hiển thị kết quả tìm được trong cửa sổ Nhân viên. Nếu từ khóa sai hoặc không tồn tại trong CSDL: Hệ thống thông báo không tìm thấy.
+• Bước 3: Để kết thúc tìm kiếm người dùng chọn loại tìm kiếm “Tất cả” và nhấn nút “Tìm kiếm”.Hệ thống sẽ trở về cửa sổ Nhân viên ban đầu.  
+-  In danh sách Nhân viên: Nhấn nút “In”. Hệ thống hiện ra một biểu mẫu để người dùng tiến hành in. Người dùng chọn vào biểu tượng “In” để bắt đầu in.Kết quảThêm, sửa, xóa, in, tìm kiếm thành công hay thất bại.Ghi chúTrường Số điện thoại chỉ được nhập chữ số, độ dài không quá 12 ký tự.
+Trường Số CMND chỉ được nhập số có độ dài là 9 ký tự.
+3.18.	Nhập kho
+Mã chức năngRQ018Tên chức năngNhập khoĐối tượng sử dụngThủ kho.Tiền điều kiệnĐã đăng nhập vào phần mềm “Quản lý kho vật tư của Cửa Hàng linh kiện cơ khí TM trên nền tảng laravel framework” thành công.Nội dungCho phép người dùng có thể tạo, chỉnh sửa, xóa phiếu Nhập kho.Cách xử lýSau khi đăng nhập vào hệ thống và chọn chức năng “Nhập kho” thành công, cửa sổ Nhập kho xuất hiện người dùng có thể: 
+- Nhập kho: 
+• Bước 1: Người dùng nhấn nút “Nhập kho” trong hộp thoại Chức năng. Hộp thoại Nhập kho xuất hiện, người dùng lần lượt nhập(chọn) đầy đủ các thông tin yêu cầu: Thông tin chứng từ, Thông tin vật tư. 
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và hướng dẫn nhập lại. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và thông báo nhập kho thành công. 
+- Xem theo chứng từ: 
+Người dùng nhấn nút “Xem theo chứng từ” trong hộp thoại Chức năng. Hộp thoại Xem theo chứng từ xuất hiện với danh sách các chứng từ nhập xuất kho. Tại đây người dùng có thể tiến hành các chức năng như:
+- Sửa:
+• Bước 1: Người dùng tiến hành kiểm tra thông tin Chứng từ nhập kho cần sửa. Chọn Chứng từ cần chỉnh sửa. Nhấn nút “Sửa”. Hộp thoại nhập kho xuất hiện với phần thông tin chứng từ được phép chỉnh sửa. Người dùng tiến hành chỉnh sửa các dữ liệu cho phép sửa về Chứng từ nhập kho.
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và giữ nguyên các dữ liệu ban đầu. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ Xem theo chứng từ.
+- Xóa:
+• Bước 1: Người dùng tiến hành kiểm tra thông tin Chứng từ xuất kho cần xóa. Chọn Chứng từ cần chỉnh xóa và nhấn nút “Xóa”. 
+• Bước 2: Thông báo xác nhận việc Xóa nhập kho hiện lên. Nếu chọn “Có” hệ thống sẽ xóa dữ liệu về phiếu nhập kho khỏi CSDL; nếu chọn “Không” hệ thống không thực hiện việc xóa và trở về cửa sổ Xem theo chứng từ. 
+- Xem theo vật tư: 
+Người dùng nhấn nút “Xem theo vật tư” trong hộp thoại Chức năng. Hộp thoại Xem theo vật tư xuất hiện với danh sách các vật tư nhập kho. Tại đây người dùng có thể tiến hành các chức năng như:
+- Sửa:
+• Bước 1: Người dùng tiến hành kiểm tra thông tin vật tư nhập kho cần sửa. Chọn ký hiệu chứng từ chứa vật tư cần chỉnh sửa. Nhấn nút “Sửa”. Hộp thoại nhập kho xuất hiện với phần thông tin vật tư được phép chỉnh sửa. Người dùng tiến hành chỉnh sửa các dữ liệu cho phép sửa về vật tư nhập kho.
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và giữ nguyên các dữ liệu ban đầu. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ Xem theo vật tư.
+- Xóa:
+• Bước 1: Người dùng tiến hành kiểm tra thông tin vật tư nhập kho cần xóa. Chọn vật tư cần chỉnh xóa và nhấn nút “Xóa”. 
+• Bước 2: Thông báo xác nhận việc Xóa nhập kho hiện lên. Nếu chọn “Có” hệ thống sẽ xóa dữ liệu về phiếu chuyển kho khỏi CSDL; nếu chọn “Không” hệ thống không thực hiện việc xóa và trở về cửa sổ Xem theo vật tư.Kết quảTiến hành nhập kho thành công hay thất bại.Ghi chúPhải có xác nhận khi tiến hành xóa.
+Cung cấp chức năng tìm kiếm để dễ dàng tìm kiếm phiếu nhập kho.
+3.19.	Xuất kho
+Mã chức năngRQ019Tên chức năngXuất khoĐối tượng sử dụngThủ kho.Tiền điều kiệnĐã đăng nhập vào phần mềm “Quản lý kho vật tư của Cửa Hàng linh kiện cơ khí TM trên nền tảng laravel framework” thành công.Nội dungCho phép người dùng có thể tạo, chỉnh sửa, xóa phiếu Xuất kho.Cách xử lýSau khi đăng nhập vào hệ thống và chọn chức năng “Xuất kho” thành công, cửa sổ Xuất kho xuất hiện người dùng có thể: 
+- Xuất kho: 
+• Bước 1: Người dùng nhấn nút “Xuất kho” trong hộp thoại Chức năng. Hộp thoại Xuất kho xuất hiện, người dùng lần lượt nhập(chọn) đầy đủ các thông tin yêu cầu: Thông tin chứng từ, Thông tin vật tư. 
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và hướng dẫn nhập lại. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và thông báo Xuất kho thành công. 
+- Xem theo chứng từ: 
+Người dùng nhấn nút “Xem theo chứng từ” trong hộp thoại Chức năng. Hộp thoại Xem theo chứng từ xuất hiện với danh sách các chứng từ xuất kho. Tại đây người dùng có thể tiến hành các chức năng như:
+- Sửa:
+• Bước 1: Người dùng tiến hành kiểm tra thông tin Chứng từ xuất kho cần sửa. Chọn Chứng từ cần chỉnh sửa. Nhấn nút “Sửa”. Hộp thoại xuất kho xuất hiện với phần thông tin chứng từ được phép chỉnh sửa. Người dùng tiến hành chỉnh sửa các dữ liệu cho phép sửa về vật tư xuất kho.
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và giữ nguyên các dữ liệu ban đầu. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ Xem theo chứng từ.
+- Xóa:
+• Bước 1: Người dùng tiến hành kiểm tra thông tin Chứng từ xuất kho cần xóa. Chọn Chứng từ cần chỉnh xóa và nhấn nút “Xóa”. 
+• Bước 2: Thông báo xác nhận việc Xóa xuất kho hiện lên. Nếu chọn “Có” hệ thống sẽ xóa dữ liệu về phiếu xuất kho khỏi CSDL; nếu chọn “Không” hệ thống không thực hiện việc xóa và trở về cửa sổ Xem theo chứng từ. 
+- Xem theo vật tư: 
+Người dùng nhấn nút “Xem theo vật tư” trong hộp thoại Chức năng. Hộp thoại Xem theo vật tư xuất hiện với danh sách các vật tư xuất kho. Tại đây người dùng có thể tiến hành các chức năng như:
+- Sửa:
+• Bước 1: Người dùng tiến hành kiểm tra thông tin vật tư xuất kho cần sửa. Chọn ký hiệu chứng từ chứa vật tư cần chỉnh sửa. Nhấn nút “Sửa”. Hộp thoại xuất kho xuất hiện với phần thông tin vật tư được phép chỉnh sửa. Người dùng tiến hành chỉnh sửa các dữ liệu cho phép sửa về Chứng từ xuất kho.
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và giữ nguyên các dữ liệu ban đầu. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ Xem theo vật tư.
+- Xóa:
+• Bước 1: Người dùng tiến hành kiểm tra thông tin vật tư xuất kho cần xóa. Chọn vật tư cần chỉnh xóa và nhấn nút “Xóa”. 
+• Bước 2: Thông báo xác nhận việc Xóa xuất kho hiện lên. Nếu chọn “Có” hệ thống sẽ xóa dữ liệu về phiếu chuyển kho khỏi CSDL; nếu chọn “Không” hệ thống không thực hiện việc xóa và trở về cửa sổ Xem theo vật tư.Kết quảTiến hành xuất kho thành công hay thất bại.Ghi chúPhải có xác nhận khi tiến hành xóa.
+Cung cấp chức năng tìm kiếm để dễ dàng tìm kiếm phiếu xuất kho.
+3.25.	Chuyển kho
+Mã chức năngRQ025Tên chức năngChuyển khoĐối tượng sử dụngThủ kho.Tiền điều kiệnĐã đăng nhập vào phần mềm “Quản lý kho vật tư của Cửa Hàng thiết bị cơ khí TM” thành công.Nội dungCho phép người dùng có thể tiến hành chuyển vật tư từ kho này sang kho khác.Cách xử lýSau khi đăng nhập vào hệ thống và chọn chức năng “Chuyển kho” thành công, cửa sổ Chuyển kho xuất hiện người dùng có thể: 
+- Chuyển kho: 
+• Bước 1: Người dùng nhấn nút “Chuyển kho” trong hộp thoại Chức năng. Hộp thoại Chuyển kho xuất hiện, người dùng lần lượt nhập(chọn) đầy đủ các thông tin yêu cầu: Thông tin chứng từ, Thông tin vật tư. 
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và hướng dẫn nhập lại. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và thông báo chuyển kho thành công. 
+- Xem theo chứng từ: 
+• Bước 1: Người dùng nhấn nút “Xem theo chứng từ” trong hộp thoại Chức năng. Hộp thoại Xem theo chứng từ xuất hiện với danh sách các chứng từ chuyển kho. Tại đây người dùng có thể tiến hành các chức năng như:
+- Sửa:
+• Bước 1: Người dùng tiến hành kiểm tra thông tin Chứng từ chuyển kho cần sửa. Chọn Chứng từ cần chỉnh sửa. Nhấn nút “Sửa”. Hộp thoại chuyển kho xuất hiện với phần thông tin chứng từ được phép chỉnh sửa. Người dùng tiến hành chỉnh sửa các dữ liệu cho phép sửa về Chứng từ chuyển kho.
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và giữ nguyên các dữ liệu ban đầu. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ Xem theo chứng từ.
+- Xóa:
+• Bước 1: Người dùng tiến hành kiểm tra thông tin Chứng từ chuyển kho cần xóa. Chọn Chứng từ cần chỉnh xóa và nhấn nút “Xóa”. 
+• Bước 2: Thông báo xác nhận việc Xóa Chuyển kho hiện lên. Nếu chọn “Có” hệ thống sẽ xóa dữ liệu về phiếu chuyển kho khỏi CSDL; nếu chọn “Không” hệ thống không thực hiện việc xóa và trở về cửa sổ Xem theo chứng từ. 
+- Xem theo vật tư: 
+• Bước 1: Người dùng nhấn nút “Xem theo vật tư” trong hộp thoại Chức năng. Hộp thoại Xem theo vật tư xuất hiện với danh sách các vật tư chuyển kho. Tại đây người dùng có thể tiến hành các chức năng như:
+- Sửa:
+• Bước 1: Người dùng tiến hành kiểm tra thông tin vật tư chuyển kho cần sửa. Chọn ký hiệu chứng từ chứa vật tư cần chỉnh sửa. Nhấn nút “Sửa”. Hộp thoại chuyển kho xuất hiện với phần thông tin vật tư được phép chỉnh sửa. Người dùng tiến hành chỉnh sửa các dữ liệu cho phép sửa về Chứng từ chuyển kho.
+• Bước 2: Người dùng nhấn nút “Lưu” để kết thúc. Hệ thống sẽ kiểm tra tính hợp lệ của dữ liệu nhập vào, nếu chưa đúng hệ thống sẽ hiển thông báo và giữ nguyên các dữ liệu ban đầu. Nếu đúng, dữ liệu được lưu vào cơ sở dữ liệu và hiện thị trong cửa sổ Xem theo vật tư.
+- Xóa:
+• Bước 1: Người dùng tiến hành kiểm tra thông tin vật tư chuyển kho cần xóa. Chọn vật tư cần chỉnh xóa và nhấn nút “Xóa”. 
+• Bước 2: Thông báo xác nhận việc Xóa Chuyển kho hiện lên. Nếu chọn “Có” hệ thống sẽ xóa dữ liệu về phiếu chuyển kho khỏi CSDL; nếu chọn “Không” hệ thống không thực hiện việc xóa và trở về cửa sổ Xem theo vật tư. Kết quảTiến hành chuyền kho thành công hay thất bại.Ghi chúPhải có xác nhận khi tiến hành xóa.
+Cung cấp chức năng tìm kiếm để dễ dàng tìm kiếm phiếu chuyển kho.3.26.	Liên hệ
+Mã chức năngRQ026Tên chức năngLiên hệĐối tượng sử dụngTất cả người dùngTiền điều kiệnĐã đăng nhập vào phần mềm “Quản lý kho vật tư của Cửa Hàng thiết bị cơ khí TM” thành công.Nội dungCho phép người dùng có thể tiến hành gửi liên hệ đến công ty.Cách xử lýNgười dùng chọn Liên hệ trong Trợ giúp và tiến hành điền nội dung liên hệ (báo cáo lỗi, góp ý và tùy chỉnh chức năng của phần mềm). Người dùng nhấn Gửi liên hệđể kết thúc liên hệ.Kết quảPhản hồi ý kiến cá nhân thành công hay thất bại.Ghi chúCác ý kiến phản hồi sẽ được chuyển vào hộp thư của công ty nhầm tiết kiệm tài nguyên.
+3.27.	Phản hồi
+Mã chức năngRQ027Tên chức năngPhản hồiĐối tượng sử dụngTất cả người dùngTiền điều kiệnĐã đăng nhập vào phần mềm “Quản lý kho vật tư của Cửa Hàng thiết bị cơ khí TM” thành công.Nội dungCho phép người dùng có thể tiến hành để lại ý kiến của mình về phần mềm.Cách xử lýNgười dùng chọn Phản hồi trong Trợ giúp và tiến hành chọn (nhập) để tiến hành trả lời các câu hỏi liên quan đến phần mềm. Người dùng nhấn Gửi Phản hồi để kết thúc phản hồi.Kết quảPhản hồi ý kiến cá nhân thành công hay thất bại.Ghi chúCác ý kiến phản hồi sẽ được chuyển vào hộp thư của công ty nhầm tiết kiệm tài nguyên.
+4. CÁC YÊU CẦU PHI CHỨC NĂNG
+4.1.	Yêu cầu thực thi
+- Phản hồi nhanh chóng các yêu cầu của người dùng (không bao gồm các yếu tố khách quan như kết nối internet chậm, giám đoạn).
+- Số lượng người truy cập tối đa: 200 người.
+- Phần mềm chạy tốt trên các trình duyệt: IE, Google Chorme, FireFox, Cốc Cốc, Opera,…
+- Hệ thống phải hoạt động mượt mà, hạn chế tối đa việc xung đột với các phần mềm khác.
+4.2.	Yêu cầu an toàn
+- Khuyến khích người dùng sử dụng phần mềm diệt virus để an toàn cho dữ liệu trong CSDL và hệ thống phần mềm.
+- Mỗi người dùng được cung cấp một tài khoản truy cập vào hệ thống.
+- Cần có thông báo với các thao tác mang tính chất “phá hủy” của người dùng như: Xóa dữ liệu, hủy bỏ,…
+4.3.	Yêu cầu bảo mật
+- Người dùng chỉ được thao tác một số chức năng nằm trong phạm vi cho phép được định sẵn.
+- Thông tin người dùng khi đăng nhập (gồm email và mật khẩu) được mã hóa và bảo mật trong CSDL.
+4.4.	Các đặt điểm chất lượng phần mềm
+- Tính đúng đắn: Các chức năng của hệ thống phải hoạt động đúng theo yêu cầu.
+- Tính khoa học: Cách xây dựng, tổ chức các chức năng phải khoa học. Xây dựng CSDL hợp lý, khoa học nhằm nâng cao tốc độ truy CSDL, giảm tài nguyên lưu trữ dữ liệu.
+- Tính tinh cậy: Dữ liệu phần mềm có thể đặt offline, online hoặc offline – đồng bộ online và sao lưu thường xuyên để đảm bảo an toàn và bảo mật.
+- Tính thích nghi: Tương thích, sử dụng được nhiều trình duyệt web, dễ dàng bảo trì và nâng cấp các chức năng.
+
+
+
+CHƯƠNG 2: THIẾT KẾ VÀ CÀI ĐẶT GIẢI PHÁP
+
+1. KIẾN TRÚC HỆ THỐNG
+1.1. Thiết kế kiến trúc
+
+Hình 2.1.1.1: Mô hình MVC kiến trúc hệ thống
+
+1.2. Mô tả sự phân rả
+- Mô tả ngữ cảnh:
+
+- Phân rã cấp 1:
+
+- Phân rã cấp 2:
+
+2. THIẾT KẾ DỮ LIỆU
+2.1. Mô hình dữ liệu CDM
+
+
+2.2. Từ điển dữ liệu
+Bảng dữ liệu USERS
+STTTHUỘC TÍNHKIỂURÀNG BUỘCÝ NGHĨA1idInt(10)Khóa chính2nameVarchar(10)Tên người dùng3emailVarchar(100)Email người dùng4passwordVarchar(60)Mật khẩu người dùng5remember_tokenVarchar(100)Ghi nhớ mật khẩu
+Bảng dữ liệu CHATLUONG
+STTTHUỘC TÍNHKIỂURÀNG BUỘCÝ NGHĨA1idInt(10)Khóa chính2cl_maVarchar(10)Mã chất lượng3cl_tenVarchar(100)Tên chất lượng	
+	Bảng dữ liệu CONGTRINH
+STTTHUỘC TÍNHKIỂURÀNG BUỘCÝ NGHĨA1idInt(10)Khóa chính2ct_maVarchar(10)Mã công trìnhct_tenVarchar(100)Tên công trình
+	Bảng dữ liệu DONVITINH
+STTTHUỘC TÍNHKIỂURÀNG BUỘCÝ NGHĨA1idInt(10)Khóa chính2dvt_maVarchar(10)Mã Khu vực tính3dvt_tenVarchar(100)Tên Khu vực tính	
+	Bảng dữ liệu KHO
+STTTHUỘC TÍNHKIỂURÀNG BUỘCÝ NGHĨA1idInt(10)Khóa chính2kho_maVarchar(10)Mã kho3kho_tenVarchar(100)Tên kho4kho_lienheVarchar(100)Liên hệ kho5kho_diachiVarchar(200)Địa chỉ kho6kho_sdtChar(20)Số điện thoại kho7kho_quanlyChar(20)Quản lý kho8kho_ghichuVarchar(200)Ghi chú kho
+	Bảng dữ liệu NHANVIEN
+STTTHUỘC TÍNHKIỂURÀNG BUỘCÝ NGHĨA1idInt(10)Khóa chính2nv_maVarchar(10)Mã nhân viên3nv_tenVarchar(100)Tên nhân viên4nv_gioitinhVarchar(10)Giới tính nhân viên5nv_ngaysinhDateNgày sinh nhân viên6nv_diachiVarchar(200)Địa chỉ nhân viên7nv_cmndChar(15)Chứng minh nhân dân8nv_sdtChar(20)Số điện thoại9nv_emailVarchar(255)Email10nv_ngayvaolamDate Ngày vào làm11pb_idInt(10)Khóa ngoạiMã phòng ban12user_idInt(11)Khóa ngoạiMã người dùng	
+	Bảng dữ liệu KHUVUC
+STTTHUỘC TÍNHKIỂURÀNG BUỘCÝ NGHĨA1idInt(10)Khóa chính2kv_maVarchar(10)Mã khu vực3kv_tenVarchar(100)Tên khu vực
+	Bảng dữ liệu NHAPHANPHOI
+STTTHUỘC TÍNHKIỂURÀNG BUỘCÝ NGHĨA1idInt(10)Khóa chính2npp_maVarchar(10)Mã nhà phân phối3npp_tenVarchar(100)Tên nhà phân phối4npp_diachiVarchar(200)Địa chỉ5npp_sdtChar(20)Số điện thoại6npp_faxChar(20)FAX7npp_taikhoanVarchar(50)Tài khoản8npp_emailVarchar(255)Email 9npp_nhanviendaidienVarchar(200)Nhân viên đại diện10kv_idInt(10)Khóa ngoạiMã khu vực
+	Bảng dữ liệu NHASANXUAT
+STTTHUỘC TÍNHKIỂURÀNG BUỘCÝ NGHĨA1idInt(10)Khóa chính2nsx_maVarchar(10)Mã nhà sản xuất3nsx_tenVarchar(100)Tên nhà sản xuất4kv_idInt(10)Khóa ngoạiMã khu vực
+	Bảng dữ liệu NHOMVATTU
+STTTHUỘC TÍNHKIỂURÀNG BUỘCÝ NGHĨA1idInt(10)Khóa chính2nvt_maVarchar(10)Mã Vật tư3nvt_tenVarchar(100)Tên Vật tư
+	Bảng dữ liệu VATTU
+STTTHUỘC TÍNHKIỂURÀNG BUỘCÝ NGHĨA1idInt(10)Khóa chính2vt_maVarchar(10)Mã vật tư3vt_tenVarchar(100)Tên vật tư4vt_giaDecimal(10,0)Giá vật tư5dvt_idInt(10)Khóa ngoạiMã Khu vực tính6nvt_idInt(10)Khóa ngoạiMã Vật tư7cl_idInt(10)Khóa ngoạiMã chất lượng8npp_idInt(10)Khóa ngoạiMã nhà phân phối9nsx_idInt(10)Khóa ngoạiMã nhà sản xuất10imageVarchar(255)Hình ảnh
+	Bảng dữ liệu PHONGBAN
+STTTHUỘC TÍNHKIỂURÀNG BUỘCÝ NGHĨA1idInt(10)Khóa chính2pb_maVarchar(10)Mã phòng ban3pb_tenVarchar(100)Tên phòng ban
+	Bảng dữ liệu THONGTINCONGTY
+STTTHUỘC TÍNHKIỂURÀNG BUỘCÝ NGHĨA1idInt(10)Khóa chính2cty_tenVarchar(100)Tên công ty3cty_diachiVarchar(200)Địa chỉ công ty4cty_sdtChar(20)Số điện thoại5cty_faxChar(20)FAX6cty_webVarchar(50)Website 7cty_emailVarchar(255)Emial 
+	Bảng dữ liệu NHAPKHO
+STTTHUỘC TÍNHKIỂURÀNG BUỘCÝ NGHĨA1idInt(10)Khóa chính2nk_maVarchar(10)Mã nhập kho3nk_lydoVarchar(100)Lý do nhập kho4nk_ngaylapDate Ngày lập5nk_tongtienDecimal(10,2)Tổng tiền6npp_idInt(10)Khóa ngoạiMã nhà phân phối7nv_idInt(10)Khóa ngoạiMã nhân viên	
+	Bảng dữ liệu CHITIETNHAPKHO
+STTTHUỘC TÍNHKIỂURÀNG BUỘCÝ NGHĨA1idInt(10)Khóa chính2ctnk_soluongInt(11)Số lượng nhập kho3ctnk_thanhtienDecimal(10,2)Thành tiền4vt_idInt(10)Khóa ngoạiMã vật tư5nk_idInt(10)Khóa ngoạiMã nhập kho
+	Bảng dữ liệu XUATKHO
+STTTHUỘC TÍNHKIỂURÀNG BUỘCÝ NGHĨA1idInt(10)Khóa chính2xk_maVarchar(10)Mã xuất kho3xk_ngaylapDateNgày lập4xk_diachiVarchar(200)Địa chỉ xuất kho5xk_lydoVarchar(100)Lý do xuất kho6xk_tongtienDecimal(10,2)Tổng tiền7ct_idInt(10)Khóa ngoạiMã công trình8nv_idInt(10)Khóa ngoạiMã nhân viên
+	Bảng dữ liệu CHITIETXUATKHO
+STTTHUỘC TÍNHKIỂURÀNG BUỘCÝ NGHĨA1idInt(10)Khóa chính2ctxk_soluongInt(11)Số lượng xuất kho3ctxk_thanhtienDecimal(10,2)Thành tiền4vt_idInt(10)Khóa ngoạiMã vật tư5xk_idInt(10)Khóa ngoạiMã xuất kho
+      Bảng dữ liệu VATTUKHO
+STTTHUỘC TÍNHKIỂURÀNG BUỘCÝ NGHĨA1idInt(10)Khóa chính2vt_idInt(10)Khóa ngoạiMã vật tư3kho_idInt(10)Khóa ngoạiMã kho4sl_nhapInt(11)Số lượng nhập5sl_xuatInt(11)Số lượng xuất6sl_tonInt(11)Số lượng tồn
+	Bảng dữ liệu CHUYENKHO
+STTTHUỘC TÍNHKIỂURÀNG BUỘCÝ NGHĨA1idInt(10)Khóa chính2ck_maVarchar(10)Mã chuyễn cho3ck_ngayDate Ngày chuyể kho4ck_lydoVarchar(200)Lý do5ck_tongtienDecimal(10,2)Tổng tiền6nv_idInt(10)Khóa ngoạiMã nhân viên
+	Bảng dữ liệu CHITIETCHUYENKHO
+STTTHUỘC TÍNHKIỂURÀNG BUỘCÝ NGHĨA1idInt(10)Khóa chính2ctck_soluongInt(11)Số lượng chuyển kho3ctck_thanhtienDecimal(10,2)Thành tiền4vt_idInt(10)Khóa ngoạiMã vật tư5ck_idInt(10)Khóa ngoạiMã chuyển kho6khocu_idInt(10)Khóa ngoạiMã kho cũ7khomoi_idInt(10)Khóa ngoạiMã kho mới
+3. THIẾT KẾ CÁCH SỬ LÝ
+3.1. Đăng nhập
+- Mục đích: Xác định người dùng có thể truy cập vào hệ thống.
+- Cách xữ lý:
+
+
+3.2. Đăng xuất
+- Mục đích: Người dùng có thể thoát khỏi hệ thống.
+- Cách xử lý:
+
+3.3. Tạo tài khoản 
+- Mục đích: Tạo tài khoản cho người dùng có thể truy cập vào hệ thống.
+- Cách xử lý:
+
+
+3.4. Đổi mật khẩu 
+- Mục đích: Giúp người dùng thay đổi mật khẩu khi có nhu cầu.
+- Cách xử lý:
+
+3.5. Phân quyền
+- Mục đích: Phân quyền cho người dùng.
+- Cách xử lý:
+
+
+3.6. Khu vực
+- Mục đích: Giúp người dùng quản lý các khu vực thông qua các thao tác: thêm, sửa, xóa, in, tìm kiếm.
+- Cách xử lý:
+• Xem 
+
+• Thêm 
+
+• Sửa
+
+• Xóa
+
+• In 
+
+• Tìm kiếm
+
+3.7. Nhà sản xuất
+- Mục đích: giúp người dùng quản lý các nhà sản xuất thông qua các thao tác: thêm, sửa, xóa, in, tìm kiếm. Hiện thị thông tin đầy đủ của nhà sản xuất.
+- Cách xử lý:
+• Xem
+
+• Thêm
+
+• Sửa
+
+• Xóa
+
+• In
+
+• Tìm kiếm
+
+3.8. Nhà phân phối
+- Mục đích: giúp người dùng quản lý các nhà phân phối thông qua các thao tác: thêm, sửa, xóa, in, tìm kiếm. Hiện thị thông tin đầy đủ của nhà phân phối.
+- Cách xử lý:
+• Xem
+
+• Thêm
+
+• Sửa
+
+• Xóa
+
+• In
+
+• Tìm kiếm
+
+3.9. Vật tư
+- Mục đích: giúp người dùng quản lý vật tư thông qua các thao tác: thêm, sửa, xóa, in, tìm kiếm. Hiện thị thông tin đầy đủ của vật tư.
+- Cách xử lý: 
+• Xem 
+
+• Thêm
+
+• Sửa
+
+• Xóa
+
+• In
+
+• Tìm kiếm
+
+3.10. Nhóm vật tư
+- Mục đích: giúp người dùng quản lý nhóm vật tư thông qua các thao tác: thêm, sửa, xóa, in, tìm kiếm. Hiện thị thông tin đầy đủ của nhóm vật tư.
+- Cách xử lý:
+• Xem
+
+• Thêm
+
+• Sửa
+
+• Xóa
+
+• In
+
+• Tìm kiếm
+
+
+3.11. Đơn vi tính
+- Mục đích: giúp người dùng quản lý đơn vị tính thông qua các thao tác: thêm, sửa, xóa, in, tìm kiếm. Hiện thị thông tin đầy đủ của đơn vị tính.
+- Cách xử lý
+• Xem 
+
+• Thêm
+
+• Sửa
+
+• Xóa
+
+• In
+
+• Tìm kiếm
+
+
+3.12. Chất lượng
+- Mục đích: giúp người dùng quản lý chất lượng thông qua các thao tác: thêm, sửa, xóa, in, tìm kiếm. Hiển thị thông tin đầy đủ của chất lượng.
+- Cách xử lý:
+• Xem 
+
+• Thêm
+
+• Sửa
+
+• Xóa
+
+• In
+
+• Tìm kiếm
+
+3.13. Công trình
+- Mục đích: giúp người dùng quản lý công trình thông qua các thao tác: thêm, sửa, xóa, in, tìm kiếm. Hiện thị thông tin đầy đủ của công trình.
+- Cách xử lý:
+• Xem 
+
+• Thêm
+
+• Sửa
+
+• Xóa
+
+• In
+
+• Tìm kiếm
+
+3.14. Nhân viên
+- Mục đích: giúp người dùng quản lý nhân viên thông qua các thao tác: thêm, sửa, xóa, in, tìm kiếm. Hiện thị thông tin đầy đủ của nhân viên.
+- Cách xử lý:
+• Xem:
+
+• Thêm:
+
+• Sửa:
+
+• Xóa:
+
+• In:
+
+• Tìm kiếm:
+
+3.15. Nhập kho:
+- Mục đích: giúp người dùng có thể lập phiếu nhập kho.
+- Cách xử lý: 
+• Lập:
+
+• Sửa:
+
+
+3.16. Xuất kho:
+- Mục đích: giúp người dùng có thể lập phiếu xuất kho.
+- Cách xử lý:
+• Lập:
+
+
+
+
+• Sửa:
+
+
+3.17. Hướng dẫn
+- Mục đích: giúp người dùng có thể xem được hướng dẫn của hệ thống.
+- Cách xử lý:
+
+3.18. Liên hệ
+- Mục đích: giúp người dùng có thể gửi liên hệ đến công ty
+- Cách xử lý:
+
+3.19. Thông tin
+- Mục đích: giúp người dùng có thể xem thông tin công ty.
+- Cách xử lý:
+
+3.20. Phản hồi
+- Mục đích: giúp người dùng có thể gửi phản hồi đến công ty.
+- Cách xử lý:
+
+
+4. KẾT QUẢ XÂY DỰNG MỘT SỐ GIAO DIỆN CHÍNH
+4.1. Giao diện quản trị:
+- Trang đăng nhập:
+
+
+- Trang giao diện Kho:
+
+- Trang giao diện Nhập kho:
+
+- Trang giao diện Kho hàng:
+
+- Trang giao diện Chuyển kho:
+
+
+
+
+4.2. Giao diện người dùng:
+- Trang giao diện danh sách sản phẩm:
+
+
+- Trang giao diện chi tiết sản phẩm:
+- Trang giỏ hàng:
+
+
+
+
+- Trang thanh toán:
+
+
+
+
+CHƯƠNG 3: KIỂM THỬ
+
+1. MỤC TIÊU
+- Tài liệu giúp cho người phát triển tìm ra lỗi (nếu có) với chi phí thấp nhất.
+- Chứng minh phần mềm hoạt động đúng như thiết kế.
+- Tài liệu kiểm thử giúp cho giai đoạn bảo trì, nâang cấp hệ thống trở nên dễ dàng hơn
+- Từ kết quả kiểm thử đưa ra nhận xét của phần mềm.
+2. CÁC TRƯỜNG HỢP KIỂM THỬ
+2.1.	Trường hợp 1: Đăng nhập
+- Muc tiêu: Kiểm thử chức năng đăng nhập có hoạt đông đúng như đặc tả hay không.
+- Kết nhập:
+Trường hợpInput1Email: admin@gmail.com,
+Mật khẩu: 1234562Email: admin@gmail.com,
+Mật khẩu: abc1233Email: abc@gmail.com,
+Mật khẩu: abc1234Email: abc,
+Mật khẩu: 867579
+- Kết xuất:
+Trường hợpKết quả mong đợiKết quả1Đăng nhập thành côngThành công 2Xuất thông báo: “Mật khẩu không chính xác”Thất bại3Xuất thông báo: “Tài khoản mật khẩu không tồn tại”Thất bại4Xuất thông báo: “Vui lòng nhập đúng email”Thất bại
+2.2.     Tạo tài khoản
+- Mục tiêu: Kiểm thử chức năng Tạo tài khoản có đúng với đặc tả hay không.
+- Kết nhập:
+Trường hợpInput1Chọn Nhân viên: Nguyễn Văn A
+Nhập Mật khẩu: 123456
+Nhập lại mật khẩu: 1234562Chọn Nhân viên: Nguyễn Văn A
+Nhập Mật khẩu: abc123
+Nhập lại mật khẩu: 1234563Chọn Nhân viên: Nguyễn Văn A
+Nhập Mật khẩu: 123456
+Nhập lại mật khẩu: 123abc4Chọn Nhân viên: --Chọn--
+Nhập Mật khẩu: 123456
+Nhập lại mật khẩu: 123456- Kết xuất:
+Trường hợpKết quả mong đợiKết quả1Xuất thông báo: “Tạo tài khoản Thành công”Thành công2Xuất thông báo: “Nhập lại mật khẩu không chính xác”Thất bại3Xuất thông báo: “Nhập lại mật khẩu không chính xác”Thất bại4Xuất thông báo: “Vui lòng chọn Nhân viên”Thất bại
+2.3.     Trường hợp 3: Đổi mật khẩu
+- Mục tiêu: Kiểm thử chức năng Tạo tài khoản có đúng với đặc tả hay không.
+- Kết nhập:
+Trường hợpInput1Nhập lại mật khẩu cũ: 123456
+Nhập mật khẩu mới: abc123
+Nhập lại mật khẩu mới: abc1232Nhập lại mật khẩu cũ: abcdef
+Nhập mật khẩu mới: abc123
+Nhập lại mật khẩu mới: abc1233Nhập lại mật khẩu cũ: 123456
+Nhập mật khẩu mới: abc123
+Nhập lại mật khẩu mới: abcbef4Nhập lại mật khẩu cũ: 123456
+Nhập mật khẩu mới: abcbef
+Nhập lại mật khẩu mới: abc123- Kết xuất:
+Trường hợpKết quả mong đợiKết quả1Xuất thông báo: “Đổi mật khẩu Thành công”Thành công2Xuất thông báo: “Nhập lại mật khẩu cũ không chính xác”Thất bại3Xuất thông báo: “Nhập lại mật khẩu mới không chính xác”Thất bại4Xuất thông báo: “Nhập lại mật khẩu mới không chính xác”Thất bại
+2.4.	Trường hợp 4:  Thêm khu vực
+- Mục tiêu: Kiểm thử chức năng thêm khu vực có đúng với đặc tả hay không.
+- Kết nhập:
+Trường hợpInput1Không nhập tất của các trường2Không nhập một trường bất kì3Nhập sai một trường bất kì4Nhập đúng tất cả các trường- Kết xuất:
+Trường hợpKết quả mong đợiKết quả1Hiển thị thông báo không thành công, các trường không được bỏ trốngThất bại2Hiển thị thông báo không thành công, trường nhập không được bỏ trốngThất bại3Hiển thị thông báo không thành công, phải nhập đúng tất cả các trườngThất bại4Hiển thị thông báo thêm thành công.Thành công
+2.5.	Trường hợp 5: Sửa khu vực
+- Mục tiêu: Kiểm thử chức năng sửa khu vực có đúng với đặc tả hay không.
+- Kết nhập:
+Trường hợpInput1Không nhập tất cả các trường2Không nhập một trường bất kì3Nhập sai một trường bất kì4Nhập đúng tất cả các trường- Kết xuất:
+Trường hợpKết quả mong đợiKết quả1Hiển thị thông báo không thành công, tất cả các trường không được bỏ trốngThất bại2Hiển thị thông báo không thành công, trường nhập không được bỏ trốngThất bại3Hiển thị thông báo không thành công, phải nhập đúng tất cả các trườngThất bại4Hiển thị thông tin vừa nhập lên cửa sổ khu vựcThành công
+2.6.	Trường hợp 6: Xóa khu vực
+- Mục tiêu: Kiểm thử chức năng xóa khu vực có đúng với đặc tả hay không.
+- Kết nhập:
+Trường hợpInput1Không chọn2Chọn một khu vực3Chọn tất cả khu vực- Kết xuất:
+Trường hợpKết quả mong đợiKết quả1Hiển thị thông báo bắt buộc đánh dấu checkThất bại2Dữ liệu đánh dấu check được xóaThành công3Dữ liệu của tất cả khu vực được xóaThành công
+2.7.	Trường hợp 7: Tìm kiếm khu vực
+- Mục tiêu: Kiểm thử chức năng Tìm kiếm khu vực có đúng với đặc tả hay không.
+- Kết nhập:
+Trường hợpInput1Nhập vào ô Tim kiếm: 0012Nhập vào ô Tim kiếm: 0023123Nhập vào ô Tim kiếm: Ninh Kiều4Nhập vào ô Tim kiếm: abc5Nhập vào ô Tim kiếm: - Kết xuất:
+Trường hợpKết quả mong đợiKết quả1Hiển thị thông tin Khu vực có mã 001Thành công2Không hiển thị được kết quả tìm kiếmThất bại3Hiển thị thông tin Khu vực có tên Khu vực là Ninh KiềuThành công4Không hiển thị được kết quả tìm kiếmThất bại5Không hiển thị được kết quả tìm kiếmThất bại	
+	2.8.	Trường hợp 8: Nhập kho
+- Mục tiêu: Kiểm thử chức năng Nhập kho có đúng với đặc tả hay không.
+- Kết nhập:
+Trường hợpInput1Chọn Nhà phân phối: Công ty TNHH ABC
+Nhập Lý do: Nhập vật tư vào kho
+Chọn Mã VT: 001
+Chọn số lượng: 102Chọn Nhà phân phối: --Chọn--
+Nhập Lý do: Nhập vật tư vào kho
+Chọn Mã VT: 001
+Chọn số lượng: 103Chọn Nhà phân phối: Công ty TNHH ABC
+Nhập Lý do: 
+Chọn Mã VT: 001
+Chọn số lượng: 104Chọn Nhà phân phối: Công ty TNHH ABC
+Nhập Lý do: Nhập vật tư vào kho
+Chọn Mã VT: 
+Chọn số lượng: 105Chọn Nhà phân phối: Công ty TNHH ABC
+Nhập Lý do: Nhập vật tư vào kho
+Chọn Mã VT: 001
+Chọn số lượng: -106Chọn Nhà phân phối: Công ty TNHH ABC
+Nhập Lý do: Nhập vật tư vào kho
+Chọn Mã VT: 001
+Chọn số lượng: - Kết xuất:
+Trường hợpKết quả mong đợiKết quả1Xuất thông báo: “Nhập kho thành công !”Thành công2Xuất thông báo: “Vui lòng chọn Nhà phân phối !”Thất bại3Xuất thông báo: “Vui lòng nhập lý do nhập kho !”Thất bại4Xuất thông báo: “Vui lòng nhập mã vật tư!”Thất bại5Xuất thông báo: “Số lượng vật tư không được âm!”Thất bại6Xuất thông báo: “Vui lòng nhập nhập số lượng !”Thất bại
+
+PHẦN KẾT LUẬN
+
+1. KẾT QUẢ ĐẠT ĐƯỢC
+Về lý thuyết:
+• Nâng cao khả năng tự tìm tòi, học hỏi, khả năng đọc hiểu tài liệu bằng tiếng Anh.
+• Hiểu sâu hơn về Laravel Framework - php framework lớn nhất hiện nay.
+• Hiểu và vận dụng thành thạo mô hình MVC, các kiến thức hỗ trợ trong quá trình xây dựng hệ thống: CSS, HTML, MySQL, Javascript, Ajax,…
+• Khả năng lập trình, xây dựng mộ hệ thống đáp ứng được nhu cầu thực tế được nâng cao. Ngoài ra, còn tích lũy được thêm kinh nghiệm về xây dựng kế hoạch cho việc phát triển một phần mềm hoàn chỉnh, cách bố trí và quản lý thời gian sao cho hợp lý
+• Nâng cao khả năng thuyết trình, trình bày vấn đề. Rèn luyện được thêm kỹ năng viết tài liệu phần mềm đúng chuẩn.
+- Về ứng dụng: 
+• Xây dựng thành công phần mềm“ Xây dựng phần mềm quản lý kho vật tư của Cửa Hàng linh kiện cơ khí TM trên nền tảng laravel framework” đáp ứng được quy trình nghiệp vụ của Cửa Hàng linh kiện cơ khí TM.
+• Hệ thống được đưa vào hoạt động thử nghiệm thành công trên hosting, tốc độ xử lý ở mức chấp nhận được và vẫn chưa thấy phát sinh lỗi nào nghiêm trọng.
+• Các module của hệ thống đa phần là code tự viết nên an toàn hơn.
+2. HẠN CHẾ
+- Khả năng làm việc thực tế của bản thân còn hạn chế nên gặp không ích khó khăn trong quá trình xây dựng hệ thống sao cho thân thiện, gần gũi với người dùng.
+- Thời gian thực hiện còn khá ít nên một số vấn đề vẫn chưa được giải quyết hoặc giải quyết chưa được tối ưu triệt để nhất.
+- Hệ thống chỉ đáp ứng được nghiệp vụ của Cửa Hàng linh kiện cơ khí TM nhưng còn một số hạn chế chưa được đáp ứng vào thực tế.
+- Một số chức năng của hệ thống chỉ đáp ứng một phần yêu cầu của người dùng, chưa có tính sáng tạo, đột phá trong cách giải quyết vấn đề.
+
+3. HƯỚNG PHÁT TRIỂN
+- Hoàn thiện một số chức năng còn hạn chế của hệ thống.
+- Tìm hiểu thêm các quy trình nghiệp vụ của các công ty khác về quản lý kho có quy mô phức tạp hơn để áp dụng Cửa Hàng linh kiện cơ khí TM 
+- fHoàn thiện giao diện hệ thống có thể co giãn tốt trên mọi thiết bị di động.
+
+
+TÀI LIỆU THAM KHẢO
+
+[1]  Laravel Framework 5.0 - https://laravel.com/docs/5.0
+[4]  HTML, Javascript, CSS,.. - http://www.w3schools.com/
+[5]  Bootstrap - http://getbootstrap.com/
+[9]  Học Laravel qua video http://khoapham.vn/
+[10] Các diễn đàn, forum: https://laracasts.com/ , http://stackoverflow.com/  
+[11] Trình diễn hình ảnh : http://www.owlcarousel.owlgraphic.com/
+[12] Jquery: https://jquery.com/
+[13] Icon: https://fortawesome.github.io/Font-Awesome/
+
+  [14] Github: https://github.com
+
+6
+
+
